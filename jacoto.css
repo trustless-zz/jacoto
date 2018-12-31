@@ -1,5 +1,4 @@
-﻿@import url(z.css);
-@import url(x.css);
-@import url(y.css);
+﻿@import url(core.css);
+@import url(svg.css);
 
 @import url(https://gazellegames.net/static/styles/game_room/holidayeffects.css);
