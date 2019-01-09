@@ -15,14 +15,7 @@
 #nav_donate a:hover {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 22"><title>heart</title><path d="M26,7.43966h-.013A7.55646,7.55646,0,0,0,18.68751,0,7.20793,7.20793,0,0,0,13,2.94319,7.20808,7.20808,0,0,0,7.31249,0,7.55646,7.55646,0,0,0,.013,7.43966H0l.00486.07051L0,7.56469l.03252.29975C.39,17.88984,12.89764,22,12.89764,22S25.58887,17.89463,25.9659,7.88048L26,7.56469l-.00486-.05452Z" fill="#c12323"/></svg>');}
 
-/** username dropdown **/
-#nav_userinfo a.username:after {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 62"><title>userinfo_sub</title><path d="M98.15186,2.15732l-.02517.025A5.77665,5.77665,0,0,0,93.6398,0H6.36482A5.92177,5.92177,0,0,0,1.9031,2.09529l-.07511.062a7.40832,7.40832,0,0,0,0,9.74539L45.472,59.72457l.14982.24812a5.80081,5.80081,0,0,0,8.81138,0l43.73128-48.07A7.36642,7.36642,0,0,0,98.15186,2.15732Z" fill="#323232"/></svg>');}
-#nav_userinfo a.username:hover:after,
-#userinfo_username .sub:hover + #nav_userinfo a.username:after {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 62"><title>userinfo_sub</title><path d="M98.15186,2.15732l-.02517.025A5.77665,5.77665,0,0,0,93.6398,0H6.36482A5.92177,5.92177,0,0,0,1.9031,2.09529l-.07511.062a7.40832,7.40832,0,0,0,0,9.74539L45.472,59.72457l.14982.24812a5.80081,5.80081,0,0,0,8.81138,0l43.73128-48.07A7.36642,7.36642,0,0,0,98.15186,2.15732Z" fill="#12c9c2"/></svg>');}
-
-/** logout dropdown **/
+/** logout button **/
 #nav_logout a {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><title>logoff</title><polygon points="0 50 33.333 83.333 33.333 63.333 73.333 63.333 73.333 36.667 33.333 36.787 33.333 16.667 0 50" fill="#323232"/><polygon points="46.667 0 46.667 26.667 60 26.667 60 13.333 86.667 13.333 86.667 86.667 60 86.667 60 73.333 46.667 73.333 46.667 100 100 100 100 0 46.667 0" fill="#323232"/></svg>');}
 

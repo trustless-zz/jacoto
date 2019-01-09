@@ -250,25 +250,24 @@ li.active {
     top: 40px;
     right: 0;
     height: 36px;
-    display: flex;
-    flex-flow: wrap;
-    width: 305px;}
+    width: 200px;}
 
 #nav_userinfo {
     text-align: center;
     order: 4;}
 #nav_userinfo a.username {
     font-weight: 600;
-    padding: 5px 25px 5px 5px;
+    font-size: 20px;
     position: relative;}
 #userinfo_username .sub {
     order: 5;
-    width: 150px;
-    margin: 0 0 0 auto;
+    width: 200px;
     line-height: 26px;
     text-align: center;
-    transition-delay: .1s;
-    overflow: hidden;}
+    visibility: visible !important;
+    right: 0;
+    top: 72px;
+    position: absolute;}
 #userinfo_username .sub a {
     width: 100%;
     display: block;}
@@ -291,20 +290,11 @@ li.active {
 
 #logo a,
 #nav_logout a,
-#nav_userinfo a.username:after,
 #toplink a,
 #nav_donate a,
 #nav_useredit a {
     background-repeat: no-repeat;
     background-position: center;}
-
-#nav_userinfo a.username:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 10px;
-    height: 100%;
-    width: 10px;}
 
 #toplink a {
     background-size: 150px 24px;
@@ -380,37 +370,6 @@ img {
     line-height: 1.25;}
 .main_column {
     margin: 0 315px 0 0;}
-
-/** header hover **/
-#userinfo_username .sub a {
-	position: relative;
-	transition: .1s}
-#nav_userinfo:before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    z-index: -99;
-    top: -147px;
-    width: 150px;
-    height: 182px;
-    left: unset;
-    right: 0;
-    border-left: var(--main-border);
-    border-bottom: var(--main-border);
-    background-color: var(--box);}
-
-#userinfo_username .sub:hover + #nav_userinfo:before,
-#nav_userinfo:hover:before {
-    transform: translateY(100%);}
-
-#nav_userinfo:before,
-#nav_userinfo:hover:before {
-    transition: .1s linear;}
-#nav_userinfo a.username:after,
-#nav_userinfo:before {
-    transition-delay: .8s;}
-#nav_userinfo a.username:hover:after {
-    transition-delay: 0s;}
 
 #nav_logout,
 #nav_donate,
