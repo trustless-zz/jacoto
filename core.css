@@ -74,14 +74,14 @@ body, html {
     width: 100%;}
 
 #logo {
-    height: 236px;
+    height: 240px;
     width: 200px;
     top: 0px;
     left: 0;
     position: fixed;}
 #logo a {
     display: block;
-    height: 236px;
+    height: 240px;
     width: 200px;}
 #logo a:hover{
     opacity: 1;}
@@ -115,7 +115,6 @@ body, html {
 .sidebar ul {
     list-style:none;}
 
-#menu,
 #nav_userinfo,
 #toplink,
 #nav_logout,
@@ -123,9 +122,10 @@ body, html {
 #nav_donate a,
 #nav_useredit a {
     font-size: 0;}
+
 #menu ul li a,
 #nav_userinfo a.username {
-    font-size: 21px;}
+    font-size: 1.4em;}
 
 b, strong {
     font-weight: bold;}
@@ -145,38 +145,47 @@ li {
     border-bottom: var(--main-border);
     display: flex;
     font-size: 1em;
-    height: 72px;
+    height: 40px;
     text-align: center;
     z-index: 10;
-    margin-bottom: 15px;
-    flex-flow: column;
-    position: relative;}
+    margin-bottom: 20px;
+    flex-flow: column;}
 
 #menu ul li a {
-    display: inline-table;
-    padding: 0 15px;
-    line-height: 36px;}
+    line-height: 34px;
+    width: 100%;
+    display: block;}
 
-#header:before {
-    background-color: var(--box);
-    -webkit-box-shadow: var(--header-shadow);
-    box-shadow: var(--header-shadow);
-    border-right: var(--main-border);
+#header:before,
+#header:after {
+    background-color: var(--body);
+    -webkit-box-shadow: inset var(--main-shadow);
+    box-shadow: inset var(--main-shadow);
     content: '';
     width: 200px;
-    left: 0;
     top: 0;
     position: fixed;
     z-index: -10;
     height: 100vh;}
+#header:before {
+    left: 0;
+    border-right: var(--main-border);}
+#header:after {
+    right: 0;
+    border-left: var(--main-border);}
 
 #menu {
-    background-color: var(--box);
-    width: 100%;
+    width: 200px;
     order: 2;
-    z-index: -10;}
+    position: fixed;
+    top: 240px;
+    left: 0;}
 #menu ul li {
-    display: inline-block;}
+    display: inline-block;
+    width: 200px;}
+#menu >ul {
+    position: sticky;
+    top: 200px;}
 
 li.active {
     font-weight: 600;}
@@ -185,11 +194,12 @@ li.active {
     background: var(--searchbar-gradient);
     text-align: center;
     width: 100%;
-    height: 36px;
+    height: 40px;
     order: 1;}
 #searchbars ul {
     margin: 0 auto;
-    max-width: 1320px;}
+    max-width: 1320px;
+    padding: 2px;}
 #searchbars ul li {
     display: inline;}
 #searchbars ul li form {
@@ -227,17 +237,17 @@ li.active {
     order: 1;
     width: 200px;
     position: fixed;
-    top: 236px;
+    top: 596px;
     left: 0;}
 #userinfo_stats {
     order: 2;
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: 0;
     width: 200px;}
 #userinfo_username {
     position: absolute;
-    top: 36px;
+    top: 40px;
     right: 0;
     height: 36px;
     display: flex;
@@ -350,8 +360,7 @@ a {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;
-    background-color: transparent;
-    -webkit-text-decoration-skip: objects;}
+    background-color: transparent;}
 a:hover {
     color: var(--anchor-hover);}
 a:hover:active {
