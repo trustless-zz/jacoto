@@ -142,6 +142,7 @@ li {
 
 #header {
     font-size: 1em;
+    width: 100%;
     height: 100%;
     text-align: center;
     z-index: 1;
@@ -189,7 +190,6 @@ li.active {
     font-weight: 600;}
 
 #searchbars {
-    position: relative;
     text-align: center;
     width: 100%;
     height: 40px;
@@ -222,12 +222,6 @@ li.active {
     position: relative;
     width: 15.55%;}
 
-#userinfo {
-    order: 3;
-    width: 200px;
-    display: flex;
-    flex-flow: column;}
-
 #userinfo_minor a {
     color: var(--text);
     font-size: 1.2em;
@@ -239,28 +233,35 @@ li.active {
     order: 1;
     width: 200px;
     position: absolute;
-    top: 581px;
+    top: 583px;
     left: 0;}
 #userinfo_stats {
-    order: 2;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    top: 297px;
     right: 0;
     width: 200px;}
 #userinfo_username {
     position: absolute;
     top: 40px;
     right: 0;
-    height: 36px;
-    width: 200px;}
+    width: 200px;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;}
 
 #nav_userinfo {
     text-align: center;
-    order: 4;}
+    order: 4;
+    line-height: 36px;
+    height: 36px;
+    width: 100%;}
 #nav_userinfo a.username {
     font-weight: 600;
+    width: 100%;
     font-size: 20px;
-    position: relative;}
+    height: 100%;
+    display: inline-block;}
 #userinfo_username .sub {
     order: 5;
     width: 200px;
@@ -268,7 +269,7 @@ li.active {
     text-align: center;
     visibility: visible !important;
     right: 0;
-    top: 72px;
+    top: 73px;
     position: absolute;}
 #userinfo_username .sub a {
     width: 100%;
@@ -279,16 +280,19 @@ li.active {
 #userinfo_username li:not(.sub) a {
     color: var(--text);}
 
-#nav_userinfo,
 #nav_useredit,
 #nav_logout,
 #nav_donate {
+    padding-top: 1px;
     height: 36px;
-    line-height: 36px;}
-#nav_logout {
-    margin-left: auto;}
+    line-height: 36px;
+    width: calc(100%/3);}
 #nav_useredit {
+    order: 1;}
+#nav_donate {
     order: 2;}
+#nav_logout {
+    order: 3;}
 
 #logo a,
 #nav_logout a,
@@ -307,7 +311,7 @@ li.active {
 #nav_logout a,
 #nav_donate a,
 #nav_useredit a {
-    width: 36px;
+    width: 100%;
     display: block;
     background-size: 26px 26px;}
 
@@ -387,8 +391,12 @@ img {
 #userinfo_minor li:hover:active,
 #userinfo_username .sub span:hover:active,
 #userinfo_username >li:hover:active,
-#nav_donate a:hover:active {
+#nav_donate:hover:active {
     transition: 0s;}
+
+#menu li:last-child,
+#userinfo_username .sub span:last-child {
+    border-bottom: 2px solid var(--main-border-color);}
 
 #menu li:nth-child(1):not(.active):hover:active,
 #userinfo_minor li:nth-child(1):not(.active):hover:active,
@@ -440,7 +448,7 @@ img {
 #userinfo_minor li:nth-child(7).active,
 #userinfo_username .sub span:nth-child(4).active {
     background-color: var(--b7);}
-#nav_donate a:hover:active,
+#nav_donate:hover:active,
 #menu li:nth-child(8):not(.active):hover:active,
 #userinfo_minor li:nth-child(8):not(.active):hover:active,
 #userinfo_username .sub span:nth-child(3):not(.active):hover:active,
@@ -495,7 +503,7 @@ img {
 #userinfo_minor li:nth-child(7):not(.active):hover,
 #userinfo_username .sub span:nth-child(4):not(.active):hover {
     background-color: var(--b507);}
-#nav_donate a:hover,
+#nav_donate:hover,
 #menu li:nth-child(8):not(.active):hover,
 #userinfo_minor li:nth-child(8):not(.active):hover,
 #userinfo_username .sub span:nth-child(3):not(.active):hover {
@@ -510,8 +518,6 @@ img {
 #userinfo_minor li:nth-child(10):not(.active):hover,
 #userinfo_username .sub span:nth-child(1):not(.active):hover {
     background-color: var(--b5010);}
-
-/** /header hover **/
 
 #toplink {
     position: absolute;
