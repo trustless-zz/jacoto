@@ -131,7 +131,7 @@ body, html {
 
 #menu ul li a,
 #nav_userinfo a.username {
-    font-size: 1.4285714em;}
+    font-size: 20px;}
 
 b, strong {
     font-weight: bold;}
@@ -154,6 +154,15 @@ li {
     margin-bottom: 20px;
     position: sticky;
     top: -41px;}
+
+#header #announcement {
+    width: 100%;
+    padding: 5px 0;
+    background-color: var(--box);
+    border-bottom: var(--main-border);
+    box-shadow: var(--header-shadow);
+    z-index: -11;
+    position: relative;}
 
 #menu ul li a {
     line-height: 34px;
@@ -227,7 +236,7 @@ li.active {
 
 #userinfo_minor a {
     color: var(--text);
-    font-size: 1.2142857em;
+    font-size: 17px;
     width: 100%;
     display: inline-block;
     line-height: 30px;}
@@ -263,7 +272,6 @@ li.active {
 #nav_userinfo a.username {
     font-weight: 600;
     width: 100%;
-    font-size: 20px;
     height: 100%;
     display: inline-block;}
 #userinfo_username .sub {
@@ -274,12 +282,12 @@ li.active {
     right: 0;
     top: 73px;
     position: absolute;
-    font-size: 1.1428571em;}
+    font-size: 16px;}
 #userinfo_stats {
     display: flex;
     flex-flow: column;
     line-height: 26px;
-    font-size: 1.0714285em;}
+    font-size: 15px;}
 #userinfo_username .sub a {
     width: 100%;
     display: block;}
@@ -368,7 +376,7 @@ li.active {
     font-size: 1em;}
 .head {
     background: var(--header-gradient);
-    font-size: 1.4em;
+    font-size: 20px;
     padding: 10px;}
 .sidebar .head {
     margin: -10px -10px 0;
