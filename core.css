@@ -117,6 +117,7 @@ body, html {
 .sidebar ul {
     list-style:none;}
 
+#userinfo_stats #connectable,
 #stats_ratio,
 #stats_seeding a,
 #stats_leeching a,
@@ -246,11 +247,6 @@ li.active {
     position: absolute;
     top: 583px;
     left: 0;}
-#userinfo_stats {
-    position: absolute;
-    top: 311px;
-    right: 0;
-    width: 200px;}
 #userinfo_username {
     position: absolute;
     top: 40px;
@@ -259,7 +255,7 @@ li.active {
     z-index: 10;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;}
+    flex-wrap: wrap-reverse;}
 
 #userinfo_stats li, #userinfo_stats li a {
     height: 26px;}
@@ -284,10 +280,16 @@ li.active {
     position: absolute;
     font-size: 16px;}
 #userinfo_stats {
+    position: absolute;
+    top: 311px;
+    right: 0;
+    width: 200px;
     display: flex;
     flex-flow: column;
     line-height: 26px;
-    font-size: 15px;}
+    font-size: 15px;
+    flex-direction: row;
+    flex-wrap: wrap;}
 #userinfo_username .sub a {
     width: 100%;
     display: block;}
@@ -308,23 +310,25 @@ li.active {
 #stats_ratio,
 #nav_useredit {
     order: 1;}
-#stats_seeding,
 #nav_donate {
     order: 2;}
-#stats_leeching,
+#stats_seeding,
 #nav_logout {
     order: 3;}
- #stats_hnr {
+#stats_leeching {
     order: 4;}
- #stats_share_score {
+ #stats_hnr {
     order: 5;}
-#stats_gold {
+ #stats_share_score {
     order: 6;}
-#online_irc {
+#stats_gold {
     order: 7;}
-#connectable {
+#online_irc {
     order: 8;}
+#connectable {
+    order: 2;}
 
+#userinfo_stats #connectable .stat span,
 #stats_ratio:before,
 #stats_seeding a,
 #stats_leeching a,
@@ -413,7 +417,10 @@ img {
     margin: 0 315px 0 0;}
 
 #userinfo_stats li {
+    width: 100%;
     transition: .1s linear;}
+#userinfo_stats #stats_ratio, #userinfo_stats #connectable {
+    width: 50%;}
 #stats_ratio,
 #stats_gold,
 #stats_leeching,
@@ -422,6 +429,8 @@ img {
     justify-content: center;
     position: relative;
     overflow: hidden;}
+#stats_seeding {
+    border-top: 2px solid var(--main-border-color);}
 #stats_ratio:before,
 #stats_ratio a,
 #stats_gold a,
@@ -430,6 +439,11 @@ img {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
+#userinfo_stats #connectable .stat span {
+    height: 26px;
+    background-size: 28px 18px;
+    display: inline-block;
+    width: 28px;}
 #stats_gold a {
     filter: grayscale(0.5);}
 #stats_gold a:hover{
