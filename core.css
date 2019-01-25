@@ -13,6 +13,8 @@
     --main-shadow-color: rgba(0,0,0,0.2);
     --main-border-color: #d2d2d2;
     --input-border-color: #ccc;
+    --on: #3f932a;
+    --off: #910000;
 /** 10 stages, bar1 to bar2 **/
     --b1: #12c9c2; --b2: #19c9bf; --b3: #20cabc; --b4: #27cab8; --b5: #2ecab5; --b6: #35cbb2; --b7: #3ccbaf; --b8: #43cbab; --b9: #4acca8; --b10: #51cca5;
 /** 50% opacity vs --box **/
@@ -117,6 +119,7 @@ body, html {
 .sidebar ul {
     list-style:none;}
 
+#index #freeleech .group_torrent span:first-child,
 #userinfo_stats #connectable,
 #stats_ratio,
 #stats_seeding a,
@@ -307,16 +310,24 @@ li.active {
     line-height: 36px;
     width: calc(100%/3);}
 
+#index #freeleech .group_torrent >span:not(:first-child) {
+    padding: 0 2px;}
+
+#index #freeleech .group_torrent >span:first-child,
 #stats_ratio,
 #nav_useredit {
     order: 1;}
+#index #freeleech .group_torrent span.tor_size,
 #nav_donate {
     order: 2;}
+#index #freeleech .group_torrent >a,
 #stats_seeding,
 #nav_logout {
     order: 3;}
+#index #freeleech .group_torrent span.platform,
 #stats_leeching {
     order: 4;}
+#index #freeleech .group_torrent span.tor_info,
  #stats_hnr {
     order: 5;}
  #stats_share_score {
@@ -328,6 +339,7 @@ li.active {
 #connectable {
     order: 2;}
 
+#index #freeleech .group_torrent >span:first-child a,
 #userinfo_stats #connectable .stat span,
 #stats_ratio:before,
 #stats_seeding a,
@@ -340,6 +352,9 @@ li.active {
 #nav_useredit a {
     background-repeat: no-repeat;
     background-position: center;}
+
+#index #freeleech .group_torrent >span:first-child a {
+    display: inline-block;}
 
 #toplink a {
     background-size: 150px 24px;
@@ -416,6 +431,9 @@ img {
 .main_column {
     margin: 0 315px 0 0;}
 
+#index #freeleech .group_torrent {
+    display: flex;}
+
 #userinfo_stats li {
     width: 100%;
     transition: .1s linear;}
@@ -431,6 +449,7 @@ img {
     overflow: hidden;}
 #stats_seeding {
     border-top: 2px solid var(--main-border-color);}
+#index #freeleech .group_torrent >span:first-child a,
 #stats_ratio:before,
 #stats_ratio a,
 #stats_gold a,
@@ -441,9 +460,9 @@ img {
     background-size: 18px 18px;}
 #userinfo_stats #connectable .stat span {
     height: 26px;
-    background-size: 28px 18px;
+    background-size: 18px 18px;
     display: inline-block;
-    width: 28px;}
+    width: 18px;}
 #stats_gold a {
     filter: grayscale(0.5);}
 #stats_gold a:hover{
@@ -459,6 +478,24 @@ img {
     position: absolute;}
 #stats_ratio span.stat {
     font-size: 15px;}
+
+#userinfo_stats #connectable span.stat >span:after {
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0 5px;
+    background-color: var(--body);
+    opacity: 0;
+    transition: .1s;}
+#userinfo_stats #connectable .r50:after {
+    color: var(--on);
+    content: 'Connectable';}
+#userinfo_stats #connectable .r00:after {
+    color: var(--off);
+    content: 'Not Connectable';}
+#userinfo_stats #connectable span.stat >span:hover:after {
+    opacity: 1;}
 
 #stats_ratio span.stat span,
 #stats_gold span,
