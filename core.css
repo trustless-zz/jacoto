@@ -28,7 +28,12 @@
     --main-shadow: 0 0 4px var(--main-shadow-color);
     --main-border: 1px solid var(--main-border-color);
     --input-border: 1px solid var(--input-border-color);
-    --input-shadow: inset 1px 1px 2px var(--header-shadow-color);}
+    --input-shadow: inset 1px 1px 2px var(--header-shadow-color);
+    --expand-hover: linear-gradient(to top, var(--bar1) 0%, var(--bar01));
+    --expand-active: linear-gradient(to top, var(--bar1) 0%, var(--bar2));
+    --img-border: 3px solid var(--main-border-color);
+    --img-hover: 3px solid var(--bar3);
+    --poll-gradient: linear-gradient(to bottom, var(--bar01), var(--anchor)), linear-gradient(to right, var(--bar1), var(--bar2));}
 
 @font-face {
     font-family: "OpenSans";
@@ -46,6 +51,10 @@
     src: url(OpenSans-Bold.ttf);
     font-weight: bold;}
 
+@keyframes expandWidth {
+	0% {transform: scaleX(0);}
+	100% {transform: scaleY(1);}}
+
 /* delete later */
 .error_message,
 .global_buffs,
@@ -54,7 +63,7 @@
 /* /delete later */
 
 html {
-    line-height: 1.1428571em;
+    line-height: 16px;
     font-size: 14px;
     scroll-behavior: smooth;}
 body {
@@ -108,7 +117,8 @@ html {
 #nav_donate,
 .sidebar ul,
 #userinfo_stats li,
-.sidebar .head li {
+.sidebar .head li,
+.sidebar #polcont .pad {
     padding:0;}
 #menu ul,
 #menu ul li a,
@@ -156,6 +166,9 @@ li {
 
 .sub {
     visibility: hidden;}
+
+#slides img {
+    cursor: pointer;}
 
 #header {
     font-size: 1em;
@@ -224,13 +237,15 @@ li.active {
     border-bottom: var(--main-border);}
 #searchbars ul {
     margin: 0 auto;
-    max-width: 1320px;
-    padding: 2px;}
+    max-width: 1314px;
+    padding: 2px 0;
+    display: flex;}
 #searchbars ul li {
-    display: inline;}
+    width: 100%;
+    padding: 0;
+    margin: 0 7px;}
 #searchbars ul li form {
-    display: inline;
-    margin: 0 5px;}
+    width: 100%;}
 #searchbars input {
     -webkit-box-shadow: var(--input-shadow);
     box-shadow: var(--input-shadow);
@@ -244,7 +259,7 @@ li.active {
     margin: 5px 0;
     padding: 2px 9px 0;
     position: relative;
-    width: 15.55%;}
+    width: 100%;}
 
 #userinfo_minor a {
     color: var(--text);
@@ -431,7 +446,8 @@ a,
 #userinfo_minor li,
 #userinfo_username .sub span,
 .box.news_post .head:before,
-#index #recommended .head:before {
+#index #recommended .head:before,
+#slides img {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -462,7 +478,7 @@ img {
     text-align: center;}
 .pad {
     padding: 10px;
-    line-height: 1.2142857em;}
+    line-height: 17px;}
 .main_column {
     margin: 0 315px 0 0;}
 
@@ -649,7 +665,8 @@ a:hover:active,
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;}
+    margin: auto;
+    border: var(--img-border);}
 .curtain {
     background-color: var(--text);
     position: fixed;
@@ -671,7 +688,7 @@ a:hover:active,
     line-height: 15px;
     position: absolute;
     right: 15px;
-    top: 10px;}
+    top: 11px;}
 #index #recommended .head a,
 .box.news_post .head a:not(#markread) {
     width: 100%;
@@ -693,7 +710,7 @@ a:hover:active,
 #index #recommended .head:before,
 .box.news_post .head:before {
     content: '';
-    background: linear-gradient(to top, var(--bar1) 0%, var(--bar01));
+    background: var(--expand-hover);
     position: absolute;
     left: 0;
     top: 0;
@@ -705,8 +722,50 @@ a:hover:active,
     opacity: 1;}
 #index #recommended .head:hover:active:before,
 .box.news_post .head:hover:active:before {
-    background: linear-gradient(to top, var(--bar1) 0%, var(--bar2));}
+    background: var(--expand-active);}
 /** /close/expand head **/
 
 .box.news_post >.pad img {
     max-width: 100% !important;}
+
+.slides_control {
+    height: 345px !important}
+#slides ul {
+    width: 300px;
+    margin: 0;}
+#dailygazelle img,
+#slides img {
+    max-height: 280px !important;
+    max-width: 278px !important;
+    margin: 7px auto;
+    border: var(--img-border);}
+#dailygazelle img {
+    margin-left: -3px;}
+#dailygazelle img:hover,
+#slides img:hover {
+    border: var(--img-hover);}
+.slides_container.staff_pick {
+    width: 300px;
+    left: -11px;}
+#slides >.nobullet {
+    margin-left: -11px;}
+#slides .slides_control .center {
+    width: 280px;
+    margin: 0 auto;}
+#dailygazelle #gazelletitle a {
+    text-align: center;
+    width: 100%;
+    display: block;}
+
+#center_poll {
+    background-image: var(--poll-gradient);
+    display: block;
+    position: relative;
+    animation: expandWidth 2s;
+    transform-origin: left;
+    height: 14px;
+    float: left;
+    margin: 0;
+    padding: 0;}
+.sidebar #polcont .pad li:not(.graph):not(:first-child) {
+    margin-top: 2px;}
