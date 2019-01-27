@@ -33,7 +33,8 @@
     --expand-active: linear-gradient(to top, var(--bar1) 0%, var(--bar2));
     --img-border: 3px solid var(--main-border-color);
     --img-hover: 3px solid var(--bar3);
-    --poll-gradient: linear-gradient(to bottom, var(--bar01), var(--anchor)), linear-gradient(to right, var(--bar1), var(--bar2));}
+    --poll-gradient: linear-gradient(to bottom, var(--bar01), var(--anchor)), linear-gradient(to right, var(--bar1), var(--bar2));
+    --lsfl-pulse: linear-gradient(to right,var(--bar02) 20%, var(--bar1) 60%, var(--bar2) 100%);}
 
 @font-face {
     font-family: "OpenSans";
@@ -54,6 +55,9 @@
 @keyframes expandWidth {
 	0% {transform: scaleX(0);}
 	100% {transform: scaleY(1);}}
+@-webkit-keyframes lsfl-pulse-a {
+    0% {background-position: 0 0;} 
+    100% {background-position: 900px 0;}}
 
 /* delete later */
 .error_message,
@@ -730,9 +734,13 @@ a:hover:active,
 
 .slides_control {
     height: 345px !important}
-#slides ul {
+#slides >ul,
+#slides .slides_container,
+#slides .slides_container ul {
     width: 300px;
     margin: 0;}
+#slides .slides_container {
+    left: -11px;}
 #dailygazelle img,
 #slides img {
     max-height: 280px !important;
@@ -744,9 +752,6 @@ a:hover:active,
 #dailygazelle img:hover,
 #slides img:hover {
     border: var(--img-hover);}
-.slides_container.staff_pick {
-    width: 300px;
-    left: -11px;}
 #slides >.nobullet {
     margin-left: -11px;}
 #slides .slides_control .center {
@@ -769,3 +774,29 @@ a:hover:active,
     padding: 0;}
 .sidebar #polcont .pad li:not(.graph):not(:first-child) {
     margin-top: 2px;}
+.sidebar #freeleech_time_left {
+    height: 36px;
+    -webkit-box-shadow: var(--main-shadow);
+    box-shadow: var(--main-shadow);
+    border: var(--main-border);
+    background: var(--header-gradient);
+    margin: 0 0 15px;}
+.sidebar #freeleech_time_left #progress_bar {
+    position: relative;}
+.sidebar #freeleech_time_left #progress_bar .main_bar {
+    background: var(--lsfl-pulse);
+    display: block;
+    animation: lsfl-pulse-a linear 2s infinite;
+    transform-origin: left;
+    height: 36px;
+    background-repeat: repeat-x;
+    background-size: 900px 36px;}
+.sidebar #freeleech_time_left .points {
+    display: block;
+    position: absolute;
+    line-height: 36px;
+    left: 10px;
+    top: 0;
+    font-weight: 600;
+    z-index: 1;}
+
