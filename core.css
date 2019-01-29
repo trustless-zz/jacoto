@@ -1,6 +1,7 @@
 ﻿:root {
 /** COLORS **/
     --text: #323232;
+    --less-important: #646464;
     --body: #e6e6e6;
     --box: #f5f5f5;
     --input: #f0f0f0;
@@ -14,7 +15,9 @@
 	--header-shadow-color: rgba(0,0,0,.1);
     --main-shadow-color: rgba(0,0,0,0.2);
     --main-border-color: #d2d2d2;
+    --table-border-color: #dcdcdc;
     --input-border-color: #ccc;
+    --near-img-anchor: #E6F2F2;
     --on: #3f932a;
     --off: #910000;
 /** 10 stages, bar1 to bar2 **/
@@ -27,13 +30,17 @@
     --header-shadow: 0 0px 4px var(--header-shadow-color);
     --main-shadow: 0 0 4px var(--main-shadow-color);
     --main-border: 1px solid var(--main-border-color);
+    --table-border: 1px solid var(--table-border-color);
     --input-border: 1px solid var(--input-border-color);
     --input-shadow: inset 1px 1px 2px var(--header-shadow-color);
     --expand-hover: linear-gradient(to top, var(--bar1) 0%, var(--bar01));
     --expand-active: linear-gradient(to top, var(--bar1) 0%, var(--bar2));
     --img-border: 3px solid var(--main-border-color);
     --img-hover: 3px solid var(--bar3);
+    --img-anchor-border: 3px solid var(--bar4);
+    --img-anchor-border-hover: 3px solid var(--bar1);
     --poll-gradient: linear-gradient(to bottom, var(--bar01), var(--anchor)), linear-gradient(to right, var(--bar1), var(--bar2));
+    --colhead-tr-bcg: var(--box) linear-gradient(to top,var(--table-border-color),var(--box));
     --lsfl-pulse: linear-gradient(to right,var(--bar02) 20%, var(--bar1) 60%, var(--bar2) 100%);}
 
 @font-face {
@@ -122,14 +129,16 @@ html {
 .sidebar ul,
 #userinfo_stats li,
 .sidebar .head li,
-.sidebar #polcont .pad {
+.sidebar #polcont .pad,
+#dailygazelle {
     padding:0;}
 #menu ul,
 #menu ul li a,
 #userinfo_minor,
 #userinfo_stats,
 #userinfo_username,
-.sidebar .head ul {
+.sidebar .head ul,
+#dailygazelle .colhead_dark {
     margin:0;}
 #menu ul,
 #searchbars ul,
@@ -167,6 +176,15 @@ li:first-of-type {
     padding-top: 0px;}
 li {
     padding: 2px 0;}
+table {
+    border: 0;
+    border-collapse: collapse;
+    width: 100%;}
+td, th {
+    padding: 5px;
+    text-align: left;}
+td, th, tr {
+    border: 0;}
 
 .sub {
     visibility: hidden;}
@@ -246,8 +264,7 @@ li.active {
     display: flex;}
 #searchbars ul li {
     width: 100%;
-    padding: 0;
-    margin: 0 7px;}
+    padding: 0 7px;}
 #searchbars ul li form {
     width: 100%;}
 #searchbars input {
@@ -265,6 +282,27 @@ li.active {
     position: relative;
     width: 100%;}
 
+.autocomplete_list {
+    background: var(--box);
+    border: var(--main-border);
+    -webkit-box-shadow: var(--main-shadow);
+    box-shadow: var(--main-shadow);
+    position: absolute;
+    text-align: left;
+    top: 40px;
+    z-index: -1;
+    padding: 0 14px 0 0 !important;}
+.autocomplete_list li {
+    cursor: pointer;
+    color: var(--anchor);
+    line-height: 24px;}
+.autocomplete_list li:hover {
+    background-color: var(--bar3);
+    color: var(--text);}
+.autocomplete_list li:hover:active {
+    background-color: var(--bar1);
+    color: var(--anchor-hover-active);}
+
 #userinfo_minor a {
     color: var(--text);
     font-size: 17px;
@@ -272,10 +310,12 @@ li.active {
     display: inline-block;
     line-height: 30px;}
 
+#nav_index {
+    display: none !important;}
 #userinfo_minor {
     width: 200px;
     position: absolute;
-    top: 583px;
+    top: 549px;
     left: 0;}
 #userinfo_username {
     position: absolute;
@@ -451,7 +491,11 @@ a,
 #userinfo_username .sub span,
 .box.news_post .head:before,
 #index #recommended .head:before,
-#slides img {
+#slides img,
+#recommended #vanityhouse a:first-child:before,
+#recommended #vanityhouse img,
+.autocomplete_list li,
+.torrent_table tr:not(.colhead):not(.colhead_dark) td {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -594,7 +638,9 @@ a:hover:active,
 #nav_donate:hover:active,
 #index #freeleech .group_torrent >span:first-child a:hover:active,
 .box.news_post .head:hover:active:before,
-#index #recommended .head:hover:active:before {
+#index #recommended .head:hover:active:before,
+#recommended #vanityhouse a:first-child:hover:active:before,
+.autocomplete_list li:hover:active {
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;}
@@ -748,7 +794,7 @@ a:hover:active,
     margin: 7px auto;
     border: var(--img-border);}
 #dailygazelle img {
-    margin-left: -3px;}
+    display: block;}
 #dailygazelle img:hover,
 #slides img:hover {
     border: var(--img-hover);}
@@ -760,7 +806,8 @@ a:hover:active,
 #dailygazelle #gazelletitle a {
     text-align: center;
     width: 100%;
-    display: block;}
+    display: block;
+    margin: 8px 0 10px 0;}
 
 #center_poll {
     background-image: var(--poll-gradient);
@@ -799,4 +846,76 @@ a:hover:active,
     top: 0;
     font-weight: 600;
     z-index: 1;}
+#low_seed_fl_more a {
+    display: block;
+    text-align: center;
+    margin: 5px 0 -10px 0;}
 
+#recommended #vanityhouse {
+    position: relative;
+    z-index: 1;}
+#recommended #vanityhouse td {
+    border: var(--table-border);
+    text-align: center;
+    width: 25%;
+    padding: 6px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--near-img-anchor);
+    z-index: -2;}
+#recommended #vanityhouse img {
+    max-width: calc(100% - 6px);
+    height: auto;
+    border: var(--img-anchor-border);
+    position: relative;
+    margin-bottom: -10px;}
+#recommended #vanityhouse a:nth-child(2) {
+    margin-bottom: 1px;
+    display: inline-block;}
+#recommended #vanityhouse a:nth-child(2):hover {
+    text-decoration: underline;}
+#recommended #vanityhouse a:first-child {
+    padding: 500px;
+    margin: -500px;}
+#recommended #vanityhouse a:first-child:before {
+    background-color: var(--bar3);
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;}
+#recommended #vanityhouse a:first-child:hover {
+    color: var(--text);}
+#recommended #vanityhouse a:first-child:hover img {
+    border: var(--img-anchor-border-hover);}
+#recommended #vanityhouse a:first-child:hover:before {
+    opacity: 1;}
+#recommended #vanityhouse a:first-child:hover:active:before {
+    background-color: var(--bar1);}
+
+.colhead td {
+    font-size: 16px;
+    line-height: 32px;
+    vertical-align: middle;
+    background: var(--colhead-tr-bcg);
+    font-weight: normal;
+    padding: 0 8px 0 25px;}
+.torrent_table tr td.center {
+    text-align: center;
+    vertical-align: middle;}
+
+.torrent_table {
+    width: 100%;
+    -webkit-box-shadow: var(--main-shadow);
+    box-shadow: var(--main-shadow);
+    border: var(--main-border);}
+.torrent_table td {
+    border-top: var(--table-border);}
+.torrent_table tr.group {
+    background-color: var(--body);}
+.torrent_table tr:not(.colhead):not(.colhead_dark) td {
+    color: var(--less-important);
+    vertical-align: middle;}
