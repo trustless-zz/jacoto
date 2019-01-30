@@ -43,6 +43,328 @@
     --colhead-tr-bcg: var(--box) linear-gradient(to top,var(--table-border-color),var(--box));
     --lsfl-pulse: linear-gradient(to right,var(--bar02) 20%, var(--bar1) 60%, var(--bar2) 100%);}
 
+.amigacd32 {
+    background: url(caticons/amigacd32_dark.svg);}
+.amstradcpc {
+    background: url(caticons/amstradcpc_dark.svg);}
+.atarist {
+    background: url(caticons/atarist_dark.svg);}
+.fairchildchannelf {
+    background: url(caticons/fairchildchannelf_dark.svg);}
+.gameboycolor {
+    background: url(caticons/gameboycolor_dark.svg);}
+.gamegear {
+    background: url(caticons/gamegear_dark.svg);}
+.nes {
+    background: url(caticons/nes_dark.svg);}
+.newnintendo3ds {
+    background: url(caticons/newnintendo3ds_dark.svg);}
+.nintendo3ds {
+    background: url(caticons/nintendo3ds_dark.svg);}
+.nokian-gage {
+    background: url(caticons/nokian-gage_dark.svg);}
+.rcastudioii {
+    background: url(caticons/rcastudioii_dark.svg);}
+.tangerineoric {
+    background: url(caticons/tangerineoric_dark.svg);}
+.v\.smile {
+    background: url(caticons/v.smile_dark.svg);}
+.watarasupervision {
+    background: url(caticons/watarasupervision_dark.svg);}
+.wiiu {
+    background: url(caticons/wiiu_dark.svg);}
+.Amazon {
+    background-image: url("weblinks/svg/Amazon_dark.svg");}
+#torrents #torrentbrowse #torrent_table td.center.cats_col >div[title=""][class=""] {
+    background: url(caticons/missing.svg);}
+.\33 do {
+    background: url(caticons/3do.svg);}
+.android {
+    background: url(caticons/android.svg);}
+.applebandaipippin {
+    background: url(caticons/applebandaipippin.svg);}
+.apps {
+    background: url();}
+.atari2600 {
+    background: url(caticons/atari2600.svg);}
+.atari5200 {
+    background: url(caticons/atari5200.svg);}
+.atari7800 {
+    background: url(caticons/atari7800.svg);}
+.atarijaguar {
+    background: url(caticons/atarijaguar.svg);}
+.atarilynx {
+    background: url(caticons/atarilynx.svg);}
+.bandaiwonderswan,
+.wonderswan {
+    background: url(caticons/bandaiwonderswan.svg);}
+.bandaiwonderswancolor {
+    background: url(caticons/bandaiwonderswancolor.svg);}
+.boardgame {
+    background: url(caticons/boardgame.svg);}
+.cardgame {
+    background: url(caticons/cardgame.svg);}
+.casioloopy {
+    background: url(caticons/casioloopy.svg);}
+.casiopv-1000 {
+    background: url(caticons/casiopv-1000.svg);}
+.colecovision {
+    background: url(caticons/colecovision.svg);}
+.commodore128 {
+    background: url(caticons/commodore128.svg);}
+.commodore64 {
+    background: url(caticons/commodore64.svg);}
+.commodoreamiga {
+    background: url(caticons/commodoreamiga.svg);}
+.commodoreplus-4 {
+    background: url(caticons/commodoreplus-4.svg);}
+.commodorevic-20 {
+    background: url(caticons/commodorevic-20.svg);}
+.creativision {
+    background: url(caticons/creativision.svg);}
+.dos {
+    background: url(caticons/dos.svg);}
+.dreamcast {
+    background: url(caticons/dreamcast.svg);}
+.dsiware {
+    background: url();}
+.dvd {
+    background: url();}
+.emersonarcadia2001 {
+    background: url(caticons/emersonarcadia2001.svg);}
+.entexadventurevision {
+    background: url(caticons/entexadventurevision.svg);}
+.epochsupercasettevision {
+    background: url(caticons/epochsupercasettevision.svg);}
+.ex-bgcollections {
+    background: url();}
+.ex-bgfullsets {
+    background: url();}
+.ex-bggoldens {
+    background: url();}
+.funtechsuperacan {
+    background: url(caticons/funtechsuperacan.svg);}
+.game\.com,
+.game.com,
+.gamecom {
+    background-image: url(icon/gamecom56.png);}
+.gameboy {
+    background: url(caticons/gameboy.svg);}
+.gameboyadvance {
+    background: url(caticons/gameboyadvance.svg);}
+.gameparkgp32 {
+    background: url(caticons/gameparkgp32.svg);}
+.generalcomputervectrex {
+    background: url(caticons/generalcomputervectrex.svg);}
+.gizmondo {
+    background-image: url(caticons/gizmondo.svg);}
+.hartungamemaster,
+.hartunggamemaster {
+    background: url(caticons/hartunggamemaster.svg);}
+.intellivision {
+    background: url(caticons/interactivedvd.svg);}
+.interactivedvd {
+    background: url(caticons/interactivedvd.svg);}
+.ios {
+    background: url(caticons/ios.svg);}
+.linux {
+    background: url(caticons/linux.svg);}
+.mac {
+    background: url(caticons/mac.svg);}
+.magnavox-phillipsodyssey {
+    background: url(caticons/magnavox-phillipsodyssey.svg);}
+.mastersystem {
+    background: url(caticons/mastersystem.svg);}
+.mattelintellivision {
+    background: url(caticons/mattelintellivision.svg);}
+.megadrive {
+    background: url(caticons/megadrive.svg);}
+.memotechmtx {
+    background: url(caticons/memotechmtx.svg);}
+.milesgordonsamcoupe {
+    background: url(caticons/milesgordonsamcoupe.svg);}
+.miniaturewargames {
+    background: url(caticons/miniaturewargames.svg);}
+.msx {
+    background: url(caticons/msx.svg);}
+.msx2 {
+    background: url(caticons/msx2.svg);}
+.music,
+.cats_ost {
+    background: url(caticons/music.svg);}
+.necpc-fx {
+    background: url(caticons/necpc-fx.svg);}
+.necpc-98 {
+    background: url(caticons/necpc-98.svg);}
+.necsupergrafx {
+    background: url(caticons/necsupergrafx.svg);}
+.necturbografx-16 {
+    background: url(caticons/necturbografx-16.svg);}
+.newnintendo3dsvc {
+    background: url();}
+.nintendo3dsvc {
+    background: url();}
+.nintendo64 {
+    background: url(caticons/nintendo64.svg);}
+.nintendods {
+    background: url(caticons/nintendods.svg);}
+.nintendogamecube {
+    background: url(caticons/nintendogamecube.svg);}
+.penandpaperrpg {
+    background: url(caticons/penandpaperrpg.svg);}
+.philipsvideopac {
+    background: url();}
+.philipsvideopac\+ {
+    background: url(caticons/philipsvideopac+.svg);}
+.phonepda {
+    background: url(caticons/phonepda.svg);}
+.pico {
+    background: url(caticons/pico.svg);}
+.playstation1 {
+    background: url(caticons/playstation.svg);}
+.playstation2 {
+    background: url(caticons/playstation2.svg);}
+.playstation3 {
+    background: url(caticons/playstation3.svg);}
+.playstation4 {
+    background: url(caticons/playstation4.svg);}
+.playstationportable {
+    background: url(caticons/playstationportable.svg);}
+.playstationvita {
+    background: url(caticons/playstationvita.svg);}
+.pokemonmini {
+    background: url(caticons/pokemonmini.svg);}
+.psonpsp {
+    background: url();}
+.psponps3 {
+    background: url();}
+.retro-other {
+    background: url(caticons/retro-other.svg);}
+.saturn {
+    background: url(caticons/saturn.svg);}
+.sg-1000 {
+    background: url(caticons/sg-1000.svg);}
+.sharpx1 {
+    background: url(caticons/sharpx1.svg);}
+.sharpx68000 {
+    background: url(caticons/sharpx68000.svg);}
+.snkneogeo {
+    background: url(caticons/snkneogeo.svg);}
+.snkneogeopocket {
+    background: url(caticons/snkneogeopocket.svg);}
+.snes,
+.supernes {
+    background: url(caticons/snes.svg);}
+.switch {
+    background: url(caticons/switch.svg);}
+.taitotypex {
+    background: url(caticons/taitotypex.svg);}
+.tandycolorcomputer {
+    background: url(caticons/tandycolorcomputer.svg);}
+.thomsonmo5 {
+    background: url(caticons/thomsonmo5.svg);}
+.turbografx {
+    background: url();}
+.vectrex {
+    background: url(caticons/vectrex.svg);}
+.virtualboy {
+    background: url(caticons/virtualboy.svg);}
+.wii {
+    background: url(caticons/wii.svg);}
+.wiiuvc {
+    background: url();}
+.wiivc {
+    background: url();}
+.wiiware {
+    background: url();}
+.windows {
+    background: url(caticons/windows.svg);}
+.windows95 {
+    background: url();}
+.windowsxp {
+    background: url();}
+.xbla {
+    background: url();}
+.xbox {
+    background: url(caticons/xbox.svg);}
+.xbox360 {
+    background: url(caticons/xbox360.svg);}
+.xboxon360 {
+    background: url();}
+.zxspectrum {
+    background: url(caticons/zxspectrum.svg);}
+.cats_guides,
+.cats_ebooks,
+.ebook {
+    background: url(caticons/ebook.svg);}
+.cats_applications {
+    background: url(caticons/applications.svg);}
+
+.ign {
+	background: url(weblinks/ign.svg);}
+.meta {
+	background: url(weblinks/metacritic.svg);}
+.gamespot {
+	background: url(weblinks/gamespot.svg);}
+
+.Bandcamp {
+    background-image: url("weblinks/Bandcamp.svg");}
+.Discogs {
+    background-image: url("weblinks/Discogs.svg");}
+.MusicBrainz {
+    background-image: url("weblinks/MusicBrainz.svg");}
+.VGMdb {
+    background-image: url("weblinks/VGMdb.svg");
+    filter: drop-shadow(0px 0 1px black);}
+.GamesWebsite {
+    background-image: url("weblinks/GamesWebsite.svg");}
+.BoardGameGeek {
+    background-image: url("weblinks/BoardGameGeek.png");}
+.Desura {
+    background-image: url("weblinks/Desura.svg");}
+.DriveThruRPG {
+    background-image: url("weblinks/DriveThruRPG.png");}
+.GameFAQs {
+    background-image: url("weblinks/GameFAQs.svg");}
+.Giantbomb {
+    background-image: url("weblinks/Giantbomb.svg");}
+.GOG {
+    background-image: url("weblinks/GOG.svg");}
+.GooglePlay {
+    background-image: url("weblinks/GooglePlay.svg");}
+.HowLongToBeat {
+    background-image: url("weblinks/HowLongToBeat.svg");}
+.HumbleBundle {
+    background-image: url("weblinks/HumbleBundle.svg");}
+.Itch {
+    background-image: url("weblinks/Itch.svg");}
+.iTunes {
+    background-image: url("weblinks/iTunes.svg");}
+.MobyGames {
+    background-image: url("weblinks/MobyGames.svg");}
+.NexusMods {
+    background-image: url("weblinks/NexusMods.svg");}
+.Origin {
+    background-image: url("weblinks/Origin.svg");}
+.Ouya {
+    background-image: url("weblinks/Ouya.svg");}
+.PSN {
+    background-image: url("weblinks/PSN.svg");}
+.RPGGeek {
+    background-image: url("weblinks/RPGGeek.png");}
+.RPGnet {
+    background-image: url("weblinks/RPGnet.svg");}
+.Steam {
+    background-image: url("weblinks/Steam.svg");}
+.VNDB {
+    background-image: url("weblinks/VNDB.png");}
+.Wikipedia {
+    background-image: url("weblinks/Wikipedia.png");}
+.XboxStore {
+    background-image: url("weblinks/XboxStore.svg");}
+.PCGamingWiki {
+    background-image: url("weblinks/PCGamingWiki.svg");}
+
 @font-face {
     font-family: "OpenSans";
     src: url(OpenSans-Regular.ttf);}
@@ -417,7 +739,40 @@ li.active {
 #nav_logout a,
 #toplink a,
 #nav_donate a,
-#nav_useredit a {
+#nav_useredit a,
+.torrent_table .show_torrents_link,
+.ign,
+.meta,
+.gamespot,
+.Bandcamp,
+.Discogs,
+.MusicBrainz,
+.VGMdb,
+.GamesWebsite,
+.Amazon,
+.BoardGameGeek,
+.Desura,
+.DriveThruRPG,
+.GameFAQs,
+.Giantbomb,
+.GOG,
+.GooglePlay,
+.HowLongToBeat,
+.HumbleBundle,
+.Itch,
+.iTunes,
+.MobyGames,
+.NexusMods,
+.Origin,
+.Ouya,
+.PSN,
+.RPGGeek,
+.RPGnet,
+.Steam,
+.VNDB,
+.Wikipedia,
+.XboxStore,
+.PCGamingWiki {
     background-repeat: no-repeat;
     background-position: center;}
 
@@ -495,7 +850,7 @@ a,
 #recommended #vanityhouse a:first-child:before,
 #recommended #vanityhouse img,
 .autocomplete_list li,
-.torrent_table tr:not(.colhead):not(.colhead_dark) td {
+.torrent_table .show_torrents_link {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -621,7 +976,8 @@ img {
 #nav_userinfo,
 #menu li,
 #userinfo_minor li,
-#userinfo_username .sub span {
+#userinfo_username .sub span,
+.torrent_table .show_torrents_link {
     display: block;}
 
 a:hover:active,
@@ -896,13 +1252,151 @@ a:hover:active,
 #recommended #vanityhouse a:first-child:hover:active:before {
     background-color: var(--bar1);}
 
+#torrent_table td.center.cats_col >div[title=""][class=""],
+.\33 do,
+.amigacd32,
+.amstradcpc,
+.android,
+.applebandaipippin,
+.apps,
+.atari2600,
+.atari5200,
+.atari7800,
+.atarijaguar,
+.atarilynx,
+.atarist,
+.bandaiwonderswan,
+.bandaiwonderswancolor,
+.boardgame,
+.cardgame,
+.casioloopy,
+.casiopv-1000,
+.colecovision,
+.commodore128,
+.commodore64,
+.commodoreamiga,
+.commodoreplus-4,
+.commodorevic-20,
+.creativision,
+.dos,
+.dreamcast,
+.dsiware,
+.dvd,
+.ebook,
+.emersonarcadia2001,
+.entexadventurevision,
+.epochsupercasettevision,
+.ex-bgcollections,
+.ex-bgfullsets,
+.ex-bggoldens,
+.fairchildchannelf,
+.funtechsuperacan,
+.game\.com,
+.game.com,
+.gameboy,
+.gameboyadvance,
+.gameboycolor,
+.gamecom,
+.gamegear,
+.gameparkgp32,
+.generalcomputervectrex,
+.gizmondo,
+.hartungamemaster,
+.hartunggamemaster,
+.intellivision,
+.interactivedvd,
+.ios,
+.linux,
+.mac,
+.magnavox-phillipsodyssey,
+.mastersystem,
+.mattelintellivision,
+.megadrive,
+.memotechmtx,
+.milesgordonsamcoupe,
+.miniaturewargames,
+.msx,
+.msx2,
+.music,
+.necpc-fx,
+.necpc-98,
+.necsupergrafx,
+.necturbografx-16,
+.nes,
+.newnintendo3ds,
+.newnintendo3dsvc,
+.nintendo3ds,
+.nintendo3dsvc,
+.nintendo64,
+.nintendods,
+.nintendogamecube,
+.nokian-gage,
+.penandpaperrpg,
+.philipsvideopac,
+.philipsvideopac\+,
+.phonepda,
+.pico,
+.playstation1,
+.playstation2,
+.playstation3,
+.playstation4,
+.playstationportable,
+.playstationvita,
+.pokemonmini,
+.psonpsp,
+.psponps3,
+.rcastudioii,
+.retro-other,
+.saturn,
+.sg-1000,
+.sharpx1,
+.sharpx68000,
+.snkneogeo,
+.snkneogeopocket,
+.snes,
+.supernes,
+.switch,
+.taitotypex,
+.tandycolorcomputer,
+.tangerineoric,
+.thomsonmo5,
+.turbografx,
+.vectrex,
+.virtualboy,
+.v\.smile,
+.watarasupervision,
+.wii,
+.wiiu,
+.wiiuvc,
+.wiivc,
+.wiiware,
+.windows,
+.windows95,
+.windowsxp,
+.wonderswan,
+.xbla,
+.xbox,
+.xbox360,
+.xboxon360,
+.zxspectrum,
+.cats_guides,
+.cats_ebooks,
+.cats_applications,
+.cats_ost,
+.torrent_table .show_torrents_link {
+    background-size: 28px 28px;
+    height: 28px;
+	width: 28px;
+    background-repeat: no-repeat;
+    background-position: center;}
+
 .colhead td {
     font-size: 16px;
     line-height: 32px;
     vertical-align: middle;
     background: var(--colhead-tr-bcg);
     font-weight: normal;
-    padding: 0 8px 0 25px;}
+    padding: 0 5px;}
 .torrent_table tr td.center {
     text-align: center;
     vertical-align: middle;}
@@ -919,3 +1413,26 @@ a:hover:active,
 .torrent_table tr:not(.colhead):not(.colhead_dark) td {
     color: var(--less-important);
     vertical-align: middle;}
+.torrent_table td:not(#displayname):not([colspan="4"]) {
+    white-space: nowrap;}
+.torrent_table .show_torrents,
+.torrent_table .hide_torrents {
+    cursor: pointer;
+    display: block;
+    height: 28px;
+    width: 28px;}
+.torrent_table .show_torrents .show_torrents_link {
+    transform: rotateX(0deg);}
+.torrent_table .hide_torrents .show_torrents_link {
+    transform: rotateX(180deg);}
+.torrent_table td:first-child {
+    width: 1px;
+    overflow: hidden;
+    position: relative;}
+.torrent_table .show_torrents_link:before {
+    content: '';
+    position: absolute;
+    left: -100px;
+    top: -150px;
+    width: 300px;
+    height: 300px;}
