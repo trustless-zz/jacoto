@@ -2,8 +2,9 @@
 /** COLORS **/
     --text: #323232;
     --less-important: #646464;
-    --body: #e6e6e6;
+    --body: #e1e1e1;
     --box: #f5f5f5;
+    --edition: #ebebeb;
     --input: #f0f0f0;
     --bar1: #12c9c2; --bar3: #83dfdb; /* 60% #6cdad6 */
     --bar2: #51cca5; --bar4: #a2e0cd; /* 60% #92dcc5 */
@@ -20,7 +21,7 @@
     --near-img-anchor: #E6F2F2;
     --on: #3f932a;
     --off: #910000;
-    --show-hide-bcg: #ebebeb;
+    --show-hide-bcg: #e6e6e6;
 /** 10 stages, bar1 to bar2 **/
     --b1: #12c9c2; --b2: #19c9bf; --b3: #20cabc; --b4: #27cab8; --b5: #2ecab5; --b6: #35cbb2; --b7: #3ccbaf; --b8: #43cbab; --b9: #4acca8; --b10: #51cca5;
 /** 50% opacity vs --box **/
@@ -1284,7 +1285,7 @@ a:hover:active,
 .torrent_table td.center:hover:first-child {
     background-color: var(--show-hide-bcg);}
 .torrent_table td.center:hover:active:first-child {
-    background-color: var(--input);}
+    background-color: var(--edition);}
 .torrent_table .show_torrents_link:before {
     content: '';
     position: absolute;
@@ -1293,6 +1294,6 @@ a:hover:active,
     width: 300px;
     height: 300px;}
 .edition_info {
-    background-color: var(--input);}
+    background-color: var(--edition);}
 .torrent_table tr.group_torrent {
     background-color: var(--box);}
