@@ -11,17 +11,18 @@
     --bar01: rgba(18, 201, 194, 0);
     --bar02: rgba(81, 204, 165, 0);
     --anchor: #0b7a76; /* #bd002c */
-    --anchor-hover: #053d3b; /* #630017 */
-    --anchor-hover-active: #000;
+    --anchor-hover: #000; /* #053d3b #630017 */
+    --anchor-hover-bcg: rgba(18, 201, 194, .1);
 	--header-shadow-color: rgba(0,0,0,.1);
-    --main-shadow-color: rgba(0,0,0,0.2);
-    --main-border-color: #d2d2d2;
-    --table-border-color: #dcdcdc;
-    --input-border-color: #ccc;
+    --main-shadow-color: rgba(0,0,0,.2);
+    --main-border-color: #cdcdcd;
+    --table-border-color: #d7d7d7;
+    --input-border-color: #c8c8c8;
     --near-img-anchor: #E6F2F2;
     --on: #3f932a;
     --off: #910000;
     --show-hide-bcg: #e6e6e6;
+    --colhead-clickable: rgba(255, 255, 255, 0.1);
 /** 10 stages, bar1 to bar2 **/
     --b1: #12c9c2; --b2: #19c9bf; --b3: #20cabc; --b4: #27cab8; --b5: #2ecab5; --b6: #35cbb2; --b7: #3ccbaf; --b8: #43cbab; --b9: #4acca8; --b10: #51cca5;
 /** 50% opacity vs --box **/
@@ -470,8 +471,7 @@ li.active {
     background-color: var(--bar3);
     color: var(--text);}
 .autocomplete_list li:hover:active {
-    background-color: var(--bar1);
-    color: var(--anchor-hover-active);}
+    background-color: var(--bar1);}
 
 #userinfo_minor a {
     color: var(--text);
@@ -589,6 +589,8 @@ li.active {
 #nav_donate a,
 #nav_useredit a,
 .torrent_table .show_torrents_link,
+.torrent_table #snatches_icon img,
+.torrent_table #user_rating_icon img,
 .ign,
 .meta,
 .gamespot,
@@ -680,7 +682,14 @@ a {
     border: 0;
     background-color: transparent;}
 a:hover {
+    background-color: var(--anchor-hover-bcg);
     color: var(--anchor-hover);}
+.torrent_table .show_torrents_link,
+.colhead_dark a,
+.colhead a,
+#toplink a,
+#header a {
+    background-color: transparent;}
 
 a,
 #userinfo_stats li,
@@ -699,12 +708,12 @@ a,
 #recommended #vanityhouse img,
 .autocomplete_list li,
 .torrent_table .show_torrents_link,
-.torrent_table td.center:first-child {
+.torrent_table td.center:first-child,
+.torrent_table .colhead img {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
 
-a:hover:active,
 #userinfo_stats li:not(#stats_ratio):not(#connectable):hover,
 #userinfo_stats li:not(#stats_ratio):not(#connectable):hover a,
 #userinfo_username .sub a:hover,
@@ -717,7 +726,7 @@ a:hover:active,
 #userinfo_username .welcome.active a,
 #userinfo_username .sub span.active a,
 .box.news_post .head:hover {
-    color: var(--anchor-hover-active);}
+    color: var(--anchor-hover);}
 
 .sidebar img {
     height: unset;
@@ -751,12 +760,14 @@ img {
     overflow: hidden;}
 #stats_seeding {
     border-top: 2px solid var(--main-border-color);}
+.torrent_table #snatches_icon img,
+.torrent_table #user_rating_icon img,
 #index #freeleech .group_torrent >span:first-child a,
 #stats_ratio:before,
 #stats_ratio a,
 #stats_gold a,
 #stats_leeching a,
-#stats_seeding a{
+#stats_seeding a {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
@@ -829,7 +840,6 @@ img {
 .torrent_table .show_torrents_link {
     display: block;}
 
-a:hover:active,
 #stats_seeding:hover:active,
 #stats_leeching:hover:active,
 #stats_gold:hover:active,
@@ -841,7 +851,6 @@ a:hover:active,
 #userinfo_username .sub span:hover:active,
 #userinfo_username >li:hover:active,
 #nav_donate:hover:active,
-#index #freeleech .group_torrent >span:first-child a:hover:active,
 .box.news_post .head:hover:active:before,
 #index #recommended .head:hover:active:before,
 #recommended #vanityhouse a:first-child:hover:active:before,
@@ -1245,7 +1254,8 @@ a:hover:active,
     vertical-align: middle;
     background: var(--colhead-tr-bcg);
     font-weight: normal;
-    padding: 0 5px;}
+    padding: 0 5px;
+    overflow: hidden;}
 .torrent_table tr td.center {
     text-align: center;
     vertical-align: middle;}
@@ -1297,3 +1307,19 @@ a:hover:active,
     background-color: var(--edition);}
 .torrent_table tr.group_torrent {
     background-color: var(--box);}
+
+.torrent_table #snatches_icon img,
+.torrent_table #user_rating_icon img {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 18px;}
+.torrent_table .colhead a {
+    padding: 100px;
+    margin: -100px;}
+.torrent_table #user_rating_icon,
+.torrent_table #snatches_icon,
+.torrent_table #seeders_icon,
+.torrent_table #leechers_icon {
+    line-height: 0;}
+.torrent_table .colhead a:hover {
+    background-color: var(--colhead-clickable);}
