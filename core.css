@@ -2,7 +2,8 @@
 /** COLORS **/
     --text: #323232;
     --less-important: #646464;
-    --body: #e1e1e1;
+    --body: #e1e1e1; /*rowa*/
+    --rowb: #dcdcdc;
     --box: #f5f5f5;
     --edition: #ebebeb;
     --input: #f0f0f0;
@@ -21,8 +22,9 @@
     --near-img-anchor: #E6F2F2;
     --on: #3f932a;
     --off: #910000;
-    --show-hide-bcg: #e6e6e6;
-    --colhead-clickable: rgba(255, 255, 255, 0.1);
+    --row-hover: #e6e6e6;
+    --colhead-clickable: rgba(255, 255, 255, .15);
+    --colhead-active: rgba(255, 255, 255, .3);
 /** 10 stages, bar1 to bar2 **/
     --b1: #12c9c2; --b2: #19c9bf; --b3: #20cabc; --b4: #27cab8; --b5: #2ecab5; --b6: #35cbb2; --b7: #3ccbaf; --b8: #43cbab; --b9: #4acca8; --b10: #51cca5;
 /** 50% opacity vs --box **/
@@ -45,7 +47,8 @@
     --poll-gradient: linear-gradient(to bottom, var(--bar01), var(--anchor)), linear-gradient(to right, var(--bar1), var(--bar2));
     --colhead-tr-bcg: var(--box) linear-gradient(to top,var(--table-border-color),var(--box));
     --lsfl-pulse: linear-gradient(to right,var(--bar02) 20%, var(--bar1) 60%, var(--bar2) 100%);
-    --show-hide-border-shadow: inset -1px 0 0px var(--table-border-color);}
+    --show-hide-border-shadow: inset -1px 0 0px var(--table-border-color);
+    --sticky-border: 1px solid var(--bar1);}
 
 .amigacd32 {background: url(caticons/amigacd32_dark.svg);}
 .amstradcpc {background: url(caticons/amstradcpc_dark.svg);}
@@ -709,7 +712,8 @@ a,
 .autocomplete_list li,
 .torrent_table .show_torrents_link,
 .torrent_table td.center:first-child,
-.torrent_table .colhead img {
+.torrent_table .colhead img,
+.torrent_table .group {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -855,7 +859,8 @@ img {
 #index #recommended .head:hover:active:before,
 #recommended #vanityhouse a:first-child:hover:active:before,
 .autocomplete_list li:hover:active,
-.torrent_table td.center:hover:active:first-child {
+.torrent_table td.center:hover:active:first-child,
+.torrent_table .colhead a:hover:active {
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;}
@@ -1265,8 +1270,10 @@ img {
     -webkit-box-shadow: var(--main-shadow);
     box-shadow: var(--main-shadow);
     border: var(--main-border);}
-.torrent_table tr.group {
+.torrent_table .group.rowa {
     background-color: var(--body);}
+.torrent_table .group.rowb {
+    background-color: var(--rowb);}
 .torrent_table tr:not(.colhead):not(.colhead_dark) td {
     border-top: var(--table-border);
     color: var(--less-important);
@@ -1293,9 +1300,9 @@ img {
     position: relative;
     box-shadow: var(--show-hide-border-shadow);}
 .torrent_table td.center:hover:first-child {
-    background-color: var(--show-hide-bcg);}
+    background-color: var(--colhead-clickable);}
 .torrent_table td.center:hover:active:first-child {
-    background-color: var(--edition);}
+    background-color: var(--colhead-active);}
 .torrent_table .show_torrents_link:before {
     content: '';
     position: absolute;
@@ -1323,3 +1330,30 @@ img {
     line-height: 0;}
 .torrent_table .colhead a:hover {
     background-color: var(--colhead-clickable);}
+.torrent_table .colhead a:hover:active {
+    background-color: var(--colhead-active);}
+
+.torrent_table .group.rowa .empty_group {
+    background-color: var(--body);
+    width: calc(100% - 1px);
+    height: 100%;
+    cursor: default;
+    position: absolute;
+    top: 0;
+    left: 0;}
+.torrent_table .group.rowb .empty_group {
+    background-color: var(--rowb);
+    width: calc(100% - 1px);
+    height: 100%;
+    cursor: default;
+    position: absolute;
+    top: 0;
+    left: 0;}
+.torrent_table .group.sticky {
+    background-color: var(--edition);}
+.torrent_table .group:hover .empty_group,
+.torrent_table .group:hover {
+    background-color: var(--row-hover) !important;}
+.sticky td {
+    border-bottom: var(--sticky-border) !important;
+    border-top: var(--sticky-border) !important;}
