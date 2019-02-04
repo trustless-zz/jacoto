@@ -25,6 +25,8 @@
     --row-hover: #e6e6e6;
     --colhead-clickable: rgba(255, 255, 255, .15);
     --colhead-active: rgba(255, 255, 255, .3);
+    
+    --fl: #6441a5;
 /** 10 stages, bar1 to bar2 **/
     --b1: #12c9c2; --b2: #19c9bf; --b3: #20cabc; --b4: #27cab8; --b5: #2ecab5; --b6: #35cbb2; --b7: #3ccbaf; --b8: #43cbab; --b9: #4acca8; --b10: #51cca5;
 /** 50% opacity vs --box **/
@@ -239,13 +241,6 @@ filter: drop-shadow(0px 0 1px black);}
 @-webkit-keyframes lsfl-pulse-a {
     0% {background-position: 0 0;} 
     100% {background-position: 900px 0;}}
-
-/* delete later */
-.error_message,
-.global_buffs,
-.clan_trophy {
-    display: none;}
-/* /delete later */
 
 html {
     line-height: 16px;
@@ -636,7 +631,10 @@ li.active {
     background-size: 150px 24px;
     opacity: 0.3;}
 #toplink a:hover {
-    opacity: 1;}
+    opacity: 1;
+    background-color: var(--colhead-clickable);}
+#toplink a:hover:active {
+    background-color: var(--colhead-active);}
 
 #nav_logout a,
 #nav_donate a,
@@ -684,9 +682,11 @@ a {
     color: var(--anchor);
     border: 0;
     background-color: transparent;}
+#index #freeleech .group_torrent >span:first-child:hover,
 a:hover {
     background-color: var(--anchor-hover-bcg);
     color: var(--anchor-hover);}
+#index #freeleech .group_torrent >span:first-child a,
 .torrent_table .show_torrents_link,
 .colhead_dark a,
 .colhead a,
@@ -713,7 +713,10 @@ a,
 .torrent_table .show_torrents_link,
 .torrent_table td.center:first-child,
 .torrent_table .colhead img,
-.torrent_table .group {
+.torrent_table .group,
+#index #clans .large_progress_bar,
+#header .global_buffs span,
+#header .global_buffs i {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -841,7 +844,9 @@ img {
 #menu li,
 #userinfo_minor li,
 #userinfo_username .sub span,
-.torrent_table .show_torrents_link {
+.torrent_table .show_torrents_link,
+.global_buffs a,
+#header .clan_trophy a {
     display: block;}
 
 #stats_seeding:hover:active,
@@ -860,7 +865,11 @@ img {
 #recommended #vanityhouse a:first-child:hover:active:before,
 .autocomplete_list li:hover:active,
 .torrent_table td.center:hover:active:first-child,
-.torrent_table .colhead a:hover:active {
+.torrent_table .colhead a:hover:active,
+#index #clans .large_progress_bar:hover:active,
+#header .global_buffs a:hover:active,
+#toplink a:hover:active,
+#header .clan_trophy:hover:active a {
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;}
@@ -870,9 +879,11 @@ img {
     border-bottom: 2px solid var(--main-border-color);}
 
 #menu li:not(.active):hover,
-#userinfo_minor li:not(.active):hover {
+#userinfo_minor li:not(.active):hover,
+#header .clan_trophy:hover a {
     background-color: var(--bar3);}
 
+#header .global_buffs a:hover,
 #userinfo_username li:hover,
 #userinfo_username .sub span:not(.active):hover,
 #stats_seeding:hover,
@@ -883,6 +894,7 @@ img {
 #online_irc:hover {
     background-color: var(--bar4);}
 
+#header .global_buffs a:hover:active,
 #userinfo_username li:hover:active,
 #userinfo_username .donateico.active,
 #userinfo_username .welcome.active,
@@ -896,6 +908,7 @@ img {
 #online_irc:hover:active {
     background-color: var(--bar2);}
 
+#header .clan_trophy:hover:active a,
 #menu li:not(.active):hover:active,
 #userinfo_minor li:not(.active):hover:active,
 #menu li.active,
@@ -1115,6 +1128,122 @@ img {
     opacity: 1;}
 #recommended #vanityhouse a:first-child:hover:active:before {
     background-color: var(--bar1);}
+
+.global_buffs {
+    position: fixed !important;
+    top: unset !important;
+    left: unset !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 200px !important;
+    border-top: 2px solid var(--main-border-color);
+    filter: none !important;}
+i.fa.fa-fl-pots {
+    color: #6441a5 !important;
+	font-family: OpenSans, Helvetica, Arial, sans-serif;
+    filter: none !important;}
+.global_buffs .buff_text {
+    text-shadow: none !important;}
+.global_buffs .buff_text .buff_multiplier {
+    font-size: 17px !important;}
+.global_buffs>div {
+    width: calc(200px / 3);
+    padding: 0 !important;}
+.global_buffs a {
+    padding: 5px !important;}
+.global_buffs .color_green .fa,
+.global_buffs .color_purple .fa,
+.global_buffs .color_yellow .fa,
+.global_buffs .color_green .buff_text,
+.global_buffs .color_purple .buff_text,
+.global_buffs .color_yellow .buff_text {
+    color: var(--text);}
+#header .global_buffs a:hover span,
+#header .global_buffs a:hover i {
+    color: var(--anchor-hover) !important;}
+
+#header .clan_trophy {
+    position: absolute !important;
+    top: 819px !important;
+    right: unset !important;
+    left: 0 !important;
+    bottom: unset !important;
+    width: 200px !important;
+    border-top: 2px solid var(--main-border-color);}
+#header .clan_trophy img {
+    height: 100px !important;
+    filter: none !important;
+    padding: 10px 0;}
+
+#header .clan_trophy {
+    opacity: .7;}
+#header .global_buffs a {
+    opacity: .9;}
+#header .global_buffs a:hover,
+#header .clan_trophy:hover {
+    opacity: 1;}
+
+.large_progress_bar .main_bar {
+    animation: expandWidth 2s;
+    transform-origin: left;}
+
+#index #clans {
+    margin: 0 0 15px 0;
+    -webkit-box-shadow: var(--main-shadow);
+    box-shadow: var( --main-shadow);
+    border: var( --main-border);
+    background-color: var(--near-img-anchor);}
+.large_progress_bar, #progress_bar {
+    border: 10px solid var(--bar3);
+    height: 14px;
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;}
+#index #clans .large_progress_bar:hover {
+    border: 10px solid var(--bar1);
+    background-color: var(--bar3);}
+#index #clans .large_progress_bar:hover:active {
+    background-color: var(--bar2);}
+#clans .large_progress_bar .main_bar.clan_1_bar {
+    animation: expandWidth 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;}
+#clans .large_progress_bar .main_bar.clan_2_bar {
+    animation: expandWidth 0.5s;
+    animation-delay: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;}
+#clans .large_progress_bar .main_bar.clan_3_bar {
+    animation: expandWidth 0.5s;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;}
+#clans .large_progress_bar .main_bar.clan_4_bar {
+    animation: expandWidth 0.7s;
+    animation-delay: 1.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;}
+#clans .large_progress_bar .main_bar {
+    display: inline-block;
+    border-radius: 0;
+    animation-fill-mode: forwards;
+    transform: scaleX(0);}
+#clans .large_progress_bar .main_bar {
+    height: 14px;
+    vertical-align: top;}
+
+#clans .large_progress_bar .main_bar.clan_1_bar {
+    background-color: #6a4028;
+    background-image: linear-gradient(to top, #5c3823, #aa897d);}
+#clans .large_progress_bar .main_bar.clan_2_bar {
+    background-color: #6b6b6b;
+    background-image: linear-gradient(to top, #6b6b6b, #e8e8e8);}
+#clans .large_progress_bar .main_bar.clan_3_bar {
+    background-color: #ff0000;
+    background-image: linear-gradient(to top, #ff0000 0%, #ff5a00 40%, #ff9a00 65%, #ffce00 90%, #ffe70a 100%);}
+#clans .large_progress_bar .main_bar.clan_4_bar {
+    background-color: #000d6b;
+    background-image: linear-gradient(to top, #000d6b 0%, #0038ff 15%, #0078ff 40%, #009fff 65%, #00dfff 100%);}
 
 #torrent_table td.center.cats_col >div[title=""][class=""],
 .\33 do,
