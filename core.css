@@ -246,7 +246,7 @@ filter: drop-shadow(0px 0 1px black);}
     100% {background-position: 900px 0;}}
 
 html {
-    line-height: 16px;
+    line-height: 19px;
     font-size: 14px;
     scroll-behavior: smooth;}
 body {
@@ -758,8 +758,7 @@ img {
 #footer {
     text-align: center;}
 .pad {
-    padding: 10px;
-    line-height: 17px;}
+    padding: 10px;}
 .main_column {
     margin: 0 315px 0 0;}
 
@@ -1152,7 +1151,8 @@ img {
     bottom: 0 !important;
     width: 200px !important;
     border-top: 2px solid var(--main-border-color);
-    filter: none !important;}
+    filter: none !important;
+    line-height: 17px;}
 i.fa.fa-fl-pots {
     color: #6441a5 !important;
 	font-family: OpenSans, Helvetica, Arial, sans-serif;
@@ -1186,7 +1186,7 @@ i.fa.fa-fl-pots {
     width: 200px !important;
     border-top: 2px solid var(--main-border-color);}
 #header .clan_trophy img {
-    height: 100px !important;
+    height: 60px !important;
     filter: none !important;
     padding: 10px 0;}
 
