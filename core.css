@@ -5,6 +5,7 @@
     --body: #e1e1e1; /*rowa*/
     --rowb: #dcdcdc;
     --box: #f5f5f5;
+    --box-hvr: #fff;
     --edition: #ebebeb;
     --input: #f0f0f0;
     --bar1: #12c9c2; --bar3: #83dfdb; /* 60% #6cdad6 */
@@ -14,14 +15,14 @@
     --anchor: #0b7a76; /* #bd002c */
     --anchor-hover: #000; /* #053d3b #630017 */
     --anchor-hover-bcg: rgba(18, 201, 194, .1);
-	--header-shadow-color: rgba(0,0,0,.1);
+	--head-shadow-color: rgba(0,0,0,.1);
     --main-shadow-color: rgba(0,0,0,.2);
     --main-border-color: #cdcdcd;
     --table-border-color: #d7d7d7;
     --input-border-color: #c8c8c8;
     --near-img-anchor: #E6F2F2;
-    --on: #3f932a;
-    --off: #910000;
+    --on: #1D9100; /* #1E9400 */
+    --off: #A30000; /* #910000 */
     --row-hover: #e6e6e6;
     --colhead-clickable: rgba(255, 255, 255, .15);
     --colhead-active: rgba(255, 255, 255, .3);
@@ -36,13 +37,13 @@
     --b501: #83dfdb; --b502: #86dfda; --b503: #8adfd8; --b504: #8ddfd6; --b505: #91dfd5; --b506: #94e0d3; --b507: #98e0d2; --b508: #9be0d0; --b509: #9fe0ce; --b5010: #a2e0cd;
 /** /COLORS **/
     --searchbar-gradient: linear-gradient(155deg,var(--bar1),var(--bar2));
-    --header-gradient: linear-gradient(155deg,var(--bar3),var(--bar4));
-    --header-shadow: 0 0px 4px var(--header-shadow-color);
+    --head-gradient: linear-gradient(155deg,var(--bar3),var(--bar4));
+    --head-shadow: 0 0px 4px var(--head-shadow-color);
     --main-shadow: 0 0 4px var(--main-shadow-color);
     --main-border: 1px solid var(--main-border-color);
     --table-border: 1px solid var(--table-border-color);
     --input-border: 1px solid var(--input-border-color);
-    --input-shadow: inset 1px 1px 2px var(--header-shadow-color);
+    --input-shadow: inset 1px 1px 2px var(--head-shadow-color);
     --expand-hover: linear-gradient(to top, var(--bar1) 0%, var(--bar01));
     --expand-active: linear-gradient(to top, var(--bar1) 0%, var(--bar2));
     --img-border: 3px solid var(--main-border-color);
@@ -53,7 +54,8 @@
     --colhead-tr-bcg: var(--box) linear-gradient(to top,var(--table-border-color),var(--box));
     --lsfl-pulse: linear-gradient(to right,var(--bar02) 20%, var(--bar1) 60%, var(--bar2) 100%);
     --show-hide-border-shadow: inset -1px 0 0px var(--table-border-color);
-    --sticky-border: 1px solid var(--bar1);}
+    --sticky-border: 1px solid var(--bar1);
+    --edition-hvr: linear-gradient(to top,var(--box),var(--edition));}
 
 .amigacd32 {background: url(caticons/amigacd32_dark.svg);}
 .amstradcpc {background: url(caticons/amstradcpc_dark.svg);}
@@ -320,6 +322,8 @@ html {
 .sidebar ul {
     list-style:none;}
 
+.torrent_table .addbookmark,
+.torrent_table .removebookmark,
 #index #recommended .head a,
 .box.news_post .head a:not(#markread),
 #index #freeleech .group_torrent span:first-child,
@@ -366,8 +370,8 @@ td, th, tr {
 	border: var(--table-border) !important;
 	background: var(--box) !important;
 	color: var(--anchor-hover) !important;
-    -webkit-box-shadow: var(--header-shadow);
-    box-shadow: var(--header-shadow);}
+    -webkit-box-shadow: var(--head-shadow);
+    box-shadow: var(--head-shadow);}
 .tooltipster-default .tooltipster-content {
 	font-family: OpenSans, Helvetica, Arial, sans-serif !important;
 	font-size: 12px !important;}
@@ -387,8 +391,8 @@ td, th, tr {
     padding: 5px 0;
     background-color: var(--box);
     border-bottom: var(--main-border);
-    -webkit-box-shadow: var(--header-shadow);
-    box-shadow: var(--header-shadow);
+    -webkit-box-shadow: var(--head-shadow);
+    box-shadow: var(--head-shadow);
     z-index: -11;
     position: relative;}
 
@@ -435,8 +439,8 @@ li.active {
     width: 100%;
     height: 40px;
     background: var(--searchbar-gradient);
-    -webkit-box-shadow: var(--header-shadow);
-    box-shadow: var(--header-shadow);
+    -webkit-box-shadow: var(--head-shadow);
+    box-shadow: var(--head-shadow);
     border-bottom: var(--main-border);}
 #searchbars ul {
     margin: 0 auto;
@@ -587,6 +591,8 @@ li.active {
 #connectable {
     order: 2;}
 
+.torrent_table .addbookmark,
+.torrent_table .removebookmark,
 #index #freeleech .group_torrent >span:first-child a,
 #userinfo_stats #connectable .stat span,
 #stats_ratio:before,
@@ -599,6 +605,8 @@ li.active {
 #nav_donate a,
 #nav_useredit a,
 .torrent_table .show_torrents_link,
+.torrent_table #leechers_icon img,
+.torrent_table #seeders_icon img,
 .torrent_table #snatches_icon img,
 .torrent_table #user_rating_icon img,
 .ign,
@@ -632,7 +640,8 @@ li.active {
 .VNDB,
 .Wikipedia,
 .XboxStore,
-.PCGamingWiki {
+.PCGamingWiki,
+.torrent_table td[colspan="4"] >span:first-child >a {
     background-repeat: no-repeat;
     background-position: center;}
 
@@ -680,7 +689,7 @@ li.active {
 .box {
     font-size: 1em;}
 .head {
-    background: var(--header-gradient);
+    background: var(--head-gradient);
     font-size: 20px;
     padding: 10px;}
 .sidebar .head {
@@ -698,6 +707,9 @@ a {
 a:hover {
     background-color: var(--anchor-hover-bcg);
     color: var(--anchor-hover);}
+.torrent_table .addbookmark,
+.torrent_table .removebookmark,
+.torrent_table td[colspan="4"] >span:first-child >a,
 #index #freeleech .group_torrent >span:first-child a,
 .torrent_table .show_torrents_link,
 .colhead_dark a,
@@ -729,7 +741,9 @@ a,
 #index #clans .large_progress_bar,
 #header .global_buffs span,
 #header .global_buffs i,
-.error_message {
+.error_message,
+.edition_info:before,
+.torrent_table tr.group_torrent {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -779,6 +793,8 @@ img {
     overflow: hidden;}
 #stats_seeding {
     border-top: 2px solid var(--main-border-color);}
+.torrent_table #leechers_icon img,
+.torrent_table #seeders_icon img,
 .torrent_table #snatches_icon img,
 .torrent_table #user_rating_icon img,
 #index #freeleech .group_torrent >span:first-child a,
@@ -786,7 +802,8 @@ img {
 #stats_ratio a,
 #stats_gold a,
 #stats_leeching a,
-#stats_seeding a {
+#stats_seeding a,
+.torrent_table td[colspan="4"] >span:first-child >a {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
@@ -882,7 +899,8 @@ img {
 #header .global_buffs a:hover:active,
 #toplink a:hover:active,
 #header .clan_trophy:hover:active a,
-.error_message:hover:active {
+.error_message:hover:active,
+.edition_info:hover:active:before {
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;}
@@ -1073,7 +1091,7 @@ img {
     -webkit-box-shadow: var(--main-shadow);
     box-shadow: var(--main-shadow);
     border: var(--main-border);
-    background: var(--header-gradient);
+    background: var(--head-gradient);
     margin: 0 0 15px;}
 .sidebar #freeleech_time_left #progress_bar {
     position: relative;}
@@ -1202,14 +1220,23 @@ i.fa.fa-fl-pots {
     animation: expandWidth 2s;
     transform-origin: left;}
 
+.save_message,
 .error_message {
+    display: inline-block;
+    width: calc(100% - 12px);
     padding: 5px;
-    color: var(--em-txt);
-    margin: -21px 0 15px 0;
-    background-color: var(--em-bcg);
     text-align: center;
-    box-shadow: var( --main-shadow);
-    border: var( --main-border);}
+    margin: -21px 0 20px 0;
+    -webkit-box-shadow: var(--head-shadow);
+    box-shadow: var(--head-shadow);
+    border: var(--main-border);
+    -webkit-clip-path: polygon(-10px 0, calc(100% + 10px) 0, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
+    clip-path: polygon(-10px 0, calc(100% + 10px) 0, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));} /* shadow cut off */
+.save_message {
+    background: var(--searchbar-gradient);}
+.error_message {
+    color: var(--em-txt);
+    background-color: var(--em-bcg);}
 a .error_message:hover {
     color: var(--anchor-hover);
     background-color: var(--em-hvr);}
@@ -1220,7 +1247,7 @@ a .error_message:hover:active {
 #index #clans {
     margin: 0 0 15px 0;
     -webkit-box-shadow: var(--main-shadow);
-    box-shadow: var( --main-shadow);
+    box-shadow: var(--main-shadow);
     border: var( --main-border);
     background-color: var(--near-img-anchor);}
 .large_progress_bar, #progress_bar {
@@ -1439,6 +1466,9 @@ a .error_message:hover:active {
     vertical-align: middle;}
 .torrent_table td:not(#displayname):not([colspan="4"]) {
     white-space: nowrap;}
+.torrent_table #displayname {
+    font-size: 15px;
+    line-height: 20px;}
 .torrent_table .show_torrents,
 .torrent_table .hide_torrents {
     display: block;
@@ -1447,11 +1477,23 @@ a .error_message:hover:active {
 .torrent_table .show_torrents_link {
     height: 20px;
     width: 20px;
-    background-size: contain;}
+    background-size: contain;
+    cursor: default;}
+.torrent_table tr.group_torrent[class*="edition_"] >td {
+    padding: 4px 5px;
+    font-size: 13px;
+    line-height: 18px;}
+.torrent_table td[colspan="4"] >span:first-child {
+    font-size: 0;
+    display: inline-block;
+    vertical-align: top;}
+.torrent_table td[colspan="4"] >span:first-child >a {
+    margin-right: 5px;
+    display: inline-block;}
 .torrent_table .show_torrents .show_torrents_link {
-    transform: rotateX(0deg);}
+    transform: rotate(-90deg);}
 .torrent_table .hide_torrents .show_torrents_link {
-    transform: rotateX(180deg);}
+    transform: rotate(0deg);}
 .torrent_table td.center:first-child {
     width: 1px;
     overflow: hidden;
@@ -1469,10 +1511,38 @@ a .error_message:hover:active {
     width: 300px;
     height: 300px;}
 .edition_info {
+    height: 19px;
+    position: relative;
     background-color: var(--edition);}
+.edition_info strong {
+    position: absolute;
+    max-width: calc(100% - 10px);
+    left: 0;
+    top: 0;
+    line-height: 30px;
+    padding-left: 5px;
+    cursor: default;}
+.edition_info:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--edition-hvr);
+    opacity: 0;}
+.edition_info:hover:before {
+    opacity: 1;}
+.edition_info:hover:active:before {
+    background: var(--box);}
+
 .torrent_table tr.group_torrent {
     background-color: var(--box);}
+.torrent_table tr.group_torrent:hover {
+        background-color: var(--box-hvr);}
 
+.torrent_table #leechers_icon img,
+.torrent_table #seeders_icon img,
 .torrent_table #snatches_icon img,
 .torrent_table #user_rating_icon img {
     -webkit-box-sizing: border-box;
@@ -1515,3 +1585,18 @@ a .error_message:hover:active {
 .sticky td {
     border-bottom: var(--sticky-border) !important;
     border-top: var(--sticky-border) !important;}
+.torrent_table .addbookmark,
+.torrent_table .removebookmark {
+    background-size: 16px 22px;
+    display: inline-block;
+    width: 16px;
+    height: 22px;}
+.torrent_table #upvote,
+.torrent_table #downvote,
+.torrent_table #novote {
+    font-size: 17px;
+    font-weight: bold;}
+.torrent_table #upvote {
+    color: var(--on);}
+.torrent_table #downvote {
+    color: var(--off);}
