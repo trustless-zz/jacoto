@@ -1197,14 +1197,14 @@ i.fa.fa-fl-pots {
 
 #header .clan_trophy {
     position: absolute !important;
-    top: 819px !important;
+    top: 819px;
     right: unset !important;
     left: 0 !important;
     bottom: unset !important;
     width: 200px !important;
     border-top: 2px solid var(--main-border-color);}
 #header .clan_trophy img {
-    height: 60px !important;
+    height: 65px;
     filter: none !important;
     padding: 10px 0;}
 
@@ -1600,3 +1600,46 @@ a .error_message:hover:active {
     color: var(--on);}
 .torrent_table #downvote {
     color: var(--off);}
+
+
+@media (min-width: 1766px) {
+    @media (min-height: 937px) and (max-height: 941px) {
+        #header .clan_trophy img {
+            height: 60px;}
+    }
+    @media (max-height: 936px) {
+        #userinfo_minor {
+            clip: rect(274px, 200px, 304px, 0px);
+            display: flex;
+            flex-flow: column-reverse;
+            top: 275px;
+            z-index: 9;
+            background-color: var(--rowb);
+            padding-bottom: 2px;
+            border-top: 2px solid var(--main-border-color);
+            border-right: var(--main-border);
+            -webkit-box-shadow: inset var(--main-shadow);
+            box-shadow: inset var(--main-shadow);
+            transition: .2s;
+            transition-delay: .5s;}
+        #userinfo_minor:before {
+            content: 'Menu';
+            width: 200px;
+            height: 30px;
+            margin-top: 2px;
+            font-size: 17px;
+            line-height: 30px;
+            font-weight: 600;
+            background-color: var(--body);}
+        #userinfo_minor.highlighted:before {
+            background-color: var(--bar3);
+            font-weight: 700;}
+        #userinfo_minor:hover:before {
+            background-color: var(--bar1);}
+        #userinfo_minor:hover {
+            transition-delay: 0s;
+            clip: rect(0, 200px, 306px, 0);}
+        #header .clan_trophy {
+            top: 579px;}
+    }
+}
