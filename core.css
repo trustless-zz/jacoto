@@ -340,9 +340,10 @@ html {
 #nav_useredit a {
     font-size:0;}
 
-#menu ul li a,
-#nav_userinfo a.username {
+#menu ul li a {
     font-size: 20px;}
+#nav_userinfo a.username {
+    font-size: 17px;}
 
 b, strong {
     font-weight: bold;}
@@ -1667,7 +1668,7 @@ a .error_message:hover:active {
             border-left: var(--main-border);
             -webkit-box-shadow: inset var(--main-shadow);
             box-shadow: inset var(--main-shadow);
-            clip: rect(154px, 200px, 220px, 0px);}
+            clip: rect(158px, 200px, 220px, 0px);}
         #userinfo_stats:hover {
             transition-delay: 0s;
             clip: rect(0px, 200px, 220px, 0px);}
