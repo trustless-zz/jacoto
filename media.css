@@ -1,0 +1,95 @@
+﻿@media (min-width: 1761px) {
+    @media (min-height: 937px) and (max-height: 941px) {
+        #header .clan_trophy img {
+            height: 60px;}
+    }
+    @media (max-height: 936px) {
+        #userinfo_stats:before,
+        #userinfo_minor:before {
+            -webkit-transition: all .1s linear;
+            -o-transition: all .1s linear;
+            transition: all .1s linear;}
+        #userinfo_minor {
+            clip: rect(272px, 200px, 302px, 0px);
+            display: flex;
+            flex-flow: column-reverse;
+            top: 277px;
+            z-index: 9;
+            background-color: var(--rowb);
+            border-top: 2px solid var(--main-border-color);
+            border-right: var(--main-border);
+            -webkit-box-shadow: inset var(--main-shadow);
+            box-shadow: inset var(--main-shadow);
+            -webkit-transition: all .2s linear;
+            -o-transition: all .2s linear;
+            transition: all .2s linear;
+            transition-delay: .5s;}
+        #userinfo_minor:before {
+            position: absolute;
+            bottom: -30px;
+            content: 'Menu';
+            width: 200px;
+            height: 30px;
+            font-size: 17px;
+            line-height: 30px;
+            font-weight: 600;}
+        #userinfo_minor.highlighted:before {
+            background-color: var(--bar3);
+            font-weight: 700;}
+        #userinfo_minor:hover:before {
+            background-color: var(--bar1);}
+        #userinfo_minor:hover {
+            transition-delay: 0s;
+            clip: rect(0, 200px, 302px, 0);}
+        #header .clan_trophy {
+            top: 579px;}
+        #userinfo_stats:before {
+            content: 'Stats';
+            width: 200px;
+            height: 30px;
+            font-size: 17px;
+            line-height: 30px;
+            font-weight: 600;
+            position: absolute;
+            bottom: -32px;
+            border-top: 2px solid var(--main-border-color);
+            border-bottom: 2px solid var(--main-border-color);}
+        #userinfo_stats {
+            padding-bottom: 2px;
+            -webkit-transition: all .15s linear;
+            -o-transition: all .15s linear;
+            transition: all .15s linear;
+            transition-delay: .5s;
+            background: linear-gradient(to top, var(--body) 15%, var(--rowb) 16%);
+            z-index: 99;
+            top: 151px;
+            border-left: var(--main-border);
+            -webkit-box-shadow: inset var(--main-shadow);
+            box-shadow: inset var(--main-shadow);
+            clip: rect(158px, 200px, 220px, 0px);}
+        #userinfo_stats:hover {
+            transition-delay: 0s;
+            clip: rect(0px, 200px, 220px, 0px);}
+        #userinfo_stats:hover:before {
+        background-color: var(--bar2);}
+        #connectable {
+            order: 8;}
+        #stats_ratio {
+            order: 7;}
+        #stats_seeding {
+            order: 6;
+            border-top: none;
+            border-bottom: 2px solid var(--main-border-color);}   
+        #stats_leeching {
+            order: 5;}   
+        #stats_hnr {
+            order: 4;}
+        #stats_share_score {
+            order: 3;}
+        #stats_gold {
+            order: 2;}
+        #online_irc {
+            border-top: 2px solid var(--main-border-color);
+            order: 1;}
+    }
+}

@@ -55,7 +55,8 @@
     --lsfl-pulse: linear-gradient(to right,var(--bar02) 20%, var(--bar1) 60%, var(--bar2) 100%);
     --show-hide-border-shadow: inset -1px 0 0px var(--table-border-color);
     --sticky-border: 1px solid var(--bar1);
-    --edition-hvr: linear-gradient(to top,var(--box),var(--edition));}
+    --edition-hvr: linear-gradient(to top,var(--box),var(--edition));
+    --lh-5px: calc(100% + 5px);}
 
 .amigacd32 {background: url(caticons/amigacd32_dark.svg);}
 .amstradcpc {background: url(caticons/amstradcpc_dark.svg);}
@@ -248,7 +249,7 @@ filter: drop-shadow(0px 0 1px black);}
     100% {background-position: 900px 0;}}
 
 html {
-    line-height: 19px;
+    line-height: var(--lh-5px);
     font-size: 14px;
     scroll-behavior: smooth;}
 body {
@@ -566,17 +567,21 @@ li.active {
 #index #freeleech .group_torrent >span:not(:first-child) {
     padding: 0 2px;}
 
+.tags,
 #index #freeleech .group_torrent >span:first-child,
 #stats_ratio,
 #nav_useredit {
     order: 1;}
+.rating_container:nth-child(1),
 #index #freeleech .group_torrent span.tor_size,
 #nav_donate {
     order: 2;}
+.rating_container:nth-child(2),
 #index #freeleech .group_torrent >a,
 #stats_seeding,
 #nav_logout {
     order: 3;}
+.rating_container:nth-child(3),
 #index #freeleech .group_torrent span.platform,
 #stats_leeching {
     order: 4;}
@@ -746,7 +751,8 @@ a,
 .error_message,
 .edition_info:before,
 .torrent_table tr.group_torrent,
-#userinfo_stats {
+#userinfo_stats,
+.rating_container {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1471,7 +1477,7 @@ a .error_message:hover:active {
     white-space: nowrap;}
 .torrent_table #displayname {
     font-size: 15px;
-    line-height: 20px;}
+    line-height: var(--lh-5px);}
 .torrent_table .show_torrents,
 .torrent_table .hide_torrents {
     display: block;
@@ -1485,7 +1491,7 @@ a .error_message:hover:active {
 .torrent_table tr.group_torrent[class*="edition_"] >td {
     padding: 4px 5px;
     font-size: 13px;
-    line-height: 18px;}
+    line-height: var(--lh-5px);}
 .torrent_table td[colspan="4"] >span:first-child {
     font-size: 0;
     display: inline-block;
@@ -1603,95 +1609,24 @@ a .error_message:hover:active {
     color: var(--on);}
 .torrent_table #downvote {
     color: var(--off);}
-
-
-@media (min-width: 1761px) {
-    @media (min-height: 937px) and (max-height: 941px) {
-        #header .clan_trophy img {
-            height: 60px;}
-    }
-    @media (max-height: 936px) {
-        #userinfo_minor {
-            clip: rect(272px, 200px, 302px, 0px);
-            display: flex;
-            flex-flow: column-reverse;
-            top: 277px;
-            z-index: 9;
-            background-color: var(--rowb);
-            border-top: 2px solid var(--main-border-color);
-            border-right: var(--main-border);
-            -webkit-box-shadow: inset var(--main-shadow);
-            box-shadow: inset var(--main-shadow);
-            -webkit-transition: all .2s linear;
-            -o-transition: all .2s linear;
-            transition: all .2s linear;
-            transition-delay: .5s;}
-        #userinfo_minor:before {
-            position: absolute;
-            bottom: -30px;
-            content: 'Menu';
-            width: 200px;
-            height: 30px;
-            font-size: 17px;
-            line-height: 30px;
-            font-weight: 600;}
-        #userinfo_minor.highlighted:before {
-            background-color: var(--bar3);
-            font-weight: 700;}
-        #userinfo_minor:hover:before {
-            background-color: var(--bar1);}
-        #userinfo_minor:hover {
-            transition-delay: 0s;
-            clip: rect(0, 200px, 302px, 0);}
-        #header .clan_trophy {
-            top: 579px;}
-        #userinfo_stats:before {
-            content: 'Stats';
-            width: 200px;
-            height: 30px;
-            font-size: 17px;
-            line-height: 30px;
-            font-weight: 600;
-            position: absolute;
-            bottom: -32px;
-            border-top: 2px solid var(--main-border-color);
-            border-bottom: 2px solid var(--main-border-color);}
-        #userinfo_stats {
-            padding-bottom: 2px;
-            -webkit-transition: all .15s linear;
-            -o-transition: all .15s linear;
-            transition: all .15s linear;
-            transition-delay: .5s;
-            background: linear-gradient(to top, var(--body) 15%, var(--rowb) 16%);
-            z-index: 99;
-            top: 151px;
-            border-left: var(--main-border);
-            -webkit-box-shadow: inset var(--main-shadow);
-            box-shadow: inset var(--main-shadow);
-            clip: rect(158px, 200px, 220px, 0px);}
-        #userinfo_stats:hover {
-            transition-delay: 0s;
-            clip: rect(0px, 200px, 220px, 0px);}
-        #userinfo_stats:hover:before {
-        background-color: var(--bar2);}
-        #connectable {
-            order: 8;}
-        #stats_ratio {
-            order: 7;}
-        #stats_seeding {
-            order: 6;
-            border-top: none;
-            border-bottom: 2px solid var(--main-border-color);}   
-        #stats_leeching {
-            order: 5;}   
-        #stats_hnr {
-            order: 4;}
-        #stats_share_score {
-            order: 3;}
-        #stats_gold {
-            order: 2;}
-        #online_irc {
-            border-top: 2px solid var(--main-border-color);
-            order: 1;}
-    }
-}
+.tags {
+    width: 100%;
+    font-size: 12px;
+    line-height: var(--lh-5px);}
+.rating_container:not(:last-of-type) {
+    margin-right: 4px;}
+.rating_container:last-of-type {
+    margin-right: 8px;}
+.tags_ratings {
+    display: flex;
+    flex-flow: row;}
+.rating_container {
+    opacity: .8;
+    height: 100%;
+    padding: 0 2px;
+    white-space: nowrap;
+    font-size: 13px;
+    line-height: var(--lh-5px);}
+.rating_container:hover {
+    opacity: 1;
+    background-color: var(--box);}
