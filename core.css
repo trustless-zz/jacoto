@@ -677,6 +677,7 @@ li.active {
     float: right;
     height: 100%;
     width: 300px;}
+form[name="filter"],
 .main_column >.box,
 .sidebar .box {
     background-color: var(--box);
@@ -752,7 +753,9 @@ a,
 .edition_info:before,
 .torrent_table tr.group_torrent,
 #userinfo_stats,
-.rating_container {
+.rating_container,
+input,
+select {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1630,3 +1633,55 @@ a .error_message:hover:active {
 .rating_container:hover {
     opacity: 1;
     background-color: var(--box);}
+form[name="filter"] {
+    text-align: left;}
+form[name="filter"] h3 {
+    background: var(--head-gradient);
+    font-size: 20px;
+    padding: 10px;
+    margin: 0;}
+td.label {
+    text-align: right;
+    vertical-align: middle;}
+.filter_torrents td.label {
+    width: 115px;}
+.filter_torrents td {
+    padding: 2px 5px 5px 5px;}
+
+input[type="text"], select {
+    border: var(--input-border);
+    background-color: var(--input);
+    height: 22px;
+    -webkit-box-shadow: var(--input-shadow);
+    box-shadow: var(--input-shadow);
+    color: var(--anchor-hover);
+    font-size: 14px;}
+input[type="text"] {
+    padding: 0 4px;}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-position: right 2px center;
+    background-repeat: no-repeat;
+    background-size: 14px 14px;
+    padding: 0 20px 0 4px;}
+select >option:nth-child(odd) {
+    background-color: var(--input);}
+select >option:nth-child(even),
+select:hover,
+input[type="text"]:focus {
+    background-color: var(--edition);}
+select:focus,
+input:focus {
+    border-color: var(--bar1);
+    outline: none;}
+#searchbars input:focus {
+    background-color: var(--box);}
+input[type="checkbox"],
+input[type="radio"] {
+    vertical-align: text-top;}
+
+.filter_torrents input.inputtext[name="filelist"],
+.filter_torrents input.inputtext.smaller {
+    width: 600px;}
