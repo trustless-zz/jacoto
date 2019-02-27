@@ -648,7 +648,9 @@ li.active {
 .Wikipedia,
 .XboxStore,
 .PCGamingWiki,
-.torrent_table td[colspan="4"] >span:first-child >a {
+.torrent_table td[colspan="4"] >span:first-child >a,
+.prev,
+.next {
     background-repeat: no-repeat;
     background-position: center;}
 
@@ -670,6 +672,17 @@ li.active {
     width: 100%;
     display: block;
     background-size: 26px 26px;}
+
+.prev,
+.next {
+    width: 24px;
+    height: 24px;
+    background-size: 12px 24px;
+    background-color: transparent !important;}
+.prev {
+    float: left;}
+.next {
+    float: right;}
 
 .thin {
     margin: 0 auto;}

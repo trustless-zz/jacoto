@@ -12,7 +12,9 @@
 #index #freeleech .group_torrent >span:first-child a:hover,
 #nav_logout a:hover,
 #nav_useredit a:hover,
-.torrent_table td[colspan="4"] >span:first-child >a:hover {
+.torrent_table td[colspan="4"] >span:first-child >a:hover,
+.prev:hover,
+.next:hover {
     -webkit-filter: brightness(0);
     filter: brightness(0);}
 
@@ -125,5 +127,12 @@ background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/200
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 22"><polygon points="0 22 1.061 22 8 15.061 14.939 22 16 22 16 6.5 0 6.5 0 22" fill="#646464"/><rect width="16" height="5" fill="#646464"/></svg>');}
 .torrent_table .removebookmark:hover {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 22"><rect y="3.75" width="16" height="4" fill="#A30000"/><polygon points="0 22 1.061 22 8 15.061 14.939 22 16 22 16 7.25 0 7.25 0 22"/><rect width="16" height="4.25"/></svg>');}
+
+/** staff pick cycle **/
+.prev,
+.next {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 24"><path d="M1.06067,10.93933,0,12l1.06067,1.06067L12,24V0ZM10.5,3.62134V20.37866L2.12134,12Z" fill="#646464"/></svg>');}
+.next {
+    transform: scaleX(-1);}
 
 /* background-image: url('data:image/svg+xml;utf8,');} */
