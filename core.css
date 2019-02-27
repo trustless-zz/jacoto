@@ -677,8 +677,7 @@ li.active {
 .next {
     width: 24px;
     height: 24px;
-    background-size: 12px 24px;
-    background-color: transparent !important;}
+    background-size: 12px 24px;}
 .prev {
     float: left;}
 .next {
@@ -736,7 +735,13 @@ a:hover {
 .colhead_dark a,
 .colhead a,
 #toplink a,
-#header a {
+#header a,
+.flright:hover,
+.toggle_tags:hover,
+.prev:hover,
+.next:hover,
+#taglist a:hover,
+.filter_torrents.advanced #taglist td:hover {
     background-color: transparent;}
 
 a,
@@ -768,7 +773,8 @@ a,
 #userinfo_stats,
 .rating_container,
 input,
-select {
+select,
+.filter_torrents.advanced #taglist td {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1698,3 +1704,36 @@ input[type="radio"] {
 .filter_torrents input.inputtext[name="filelist"],
 .filter_torrents input.inputtext.smaller {
     width: 600px;}
+
+.flright {
+    float: right;}
+.filter_torrents.advanced .flright {
+    position: relative;
+    margin-right: 5px;
+    line-height: 26px;}
+.filter_torrents.advanced .flright:before {
+    content: '(View Less)';
+    position: absolute;
+    bottom: 1066px;}
+.filter_torrents.advanced tr:first-child >td.label {
+    vertical-align: top;}
+#torrents .filter_torrents #platcheckbox td[colspan="5"] {
+    background-color: var(--edition);}
+.filter_torrents.advanced #taglist {
+    font-size: 13px;
+    width: 65%;
+    margin-left: 130px;}
+.filter_torrents.advanced .cat_list:not(#taglist) {
+    width: 600px;
+    margin-left: 125px;}
+.filter_torrents.advanced #taglist td {
+    padding: 0;
+    background-color: var(--edition);}
+.filter_torrents.advanced #taglist a {
+    width: 100%;
+    display: block;
+    padding: 2px 0px 2px 5px;
+    cursor: default;}
+.filter_torrents.advanced .cat_list:not(#taglist) td.label {
+    width: max-content;
+    display: block;}

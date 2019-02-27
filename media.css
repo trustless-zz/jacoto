@@ -42,6 +42,8 @@
         clip: rect(0, 200px, 302px, 0);}
     #header .clan_trophy {
         top: 579px;}
+}
+@media (min-width: 1760px) and (max-height: 900px) {
     #userinfo_username .sub:before {
         content: 'User Menu';
         width: 200px;
