@@ -774,7 +774,10 @@ a,
 .rating_container,
 input,
 select,
-.filter_torrents.advanced #taglist td {
+.filter_torrents.advanced #taglist td,
+button,
+input[type=button],
+input[type=submit] {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -931,7 +934,10 @@ img {
 #toplink a:hover:active,
 #header .clan_trophy:hover:active a,
 .error_message:hover:active,
-.edition_info:hover:active:before {
+.edition_info:hover:active:before,
+button:hover:active,
+input[type=button]:hover:active,
+input[type=submit]:hover:active {
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;}
@@ -1689,6 +1695,7 @@ select >option:nth-child(odd) {
     background-color: var(--input);}
 select >option:nth-child(even),
 select:hover,
+input[type="text"]:hover,
 input[type="text"]:focus {
     background-color: var(--edition);}
 select:focus,
@@ -1700,6 +1707,32 @@ input:focus {
 input[type="checkbox"],
 input[type="radio"] {
     vertical-align: text-top;}
+
+button,
+input[type=button],
+input[type=submit] {
+    cursor: pointer;
+    outline: 0;
+    padding: 5px 10px;
+    color: var(--text);
+    -webkit-appearance: button;
+    -webkit-box-shadow: var(--head-shadow);
+    box-shadow: var(--head-shadow);
+    border: var(--main-border);
+    background: linear-gradient(to bottom, var(--bar3) 0%, var(--body) 100%);
+    background-size: 200% auto !important;}
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover {
+    color: var(--anchor-hover);
+    background: linear-gradient(to bottom,var(--bar3) 0%,var(--bar4) 100%);}
+button:hover:active,
+input[type=button]:hover:active,
+input[type=submit]:hover:active {
+    background: linear-gradient(to bottom,var(--bar3) 0%,var(--bar2) 100%);}
+
+.filter_torrents .submit {
+    text-align: right;}
 
 .filter_torrents input.inputtext[name="filelist"],
 .filter_torrents input.inputtext.smaller {
@@ -1715,6 +1748,9 @@ input[type="radio"] {
     content: '(View Less)';
     position: absolute;
     bottom: 1066px;}
+.filter_torrents.advanced .flright,
+.toggle_tags {
+    cursor: default;}
 .filter_torrents.advanced tr:first-child >td.label {
     vertical-align: top;}
 #torrents .filter_torrents #platcheckbox td[colspan="5"] {
@@ -1737,3 +1773,16 @@ input[type="radio"] {
 .filter_torrents.advanced .cat_list:not(#taglist) td.label {
     width: max-content;
     display: block;}
+.filter_torrents.basic tr:nth-of-type(2) td:nth-of-type(3) {
+    width: 150px;
+    position: relative;
+    top: -25px;}
+.filter_torrents.basic tr:nth-of-type(2) td:nth-of-type(4) {
+    position: relative;
+    top: -25px;}
+.filter_torrents.basic .submit {
+    margin-top: -25px;}
+.filter_torrents.basic .submit span {
+    position: relative;
+    left: calc(100% - 240px);
+    top: 3px;}
