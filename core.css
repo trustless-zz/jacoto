@@ -31,6 +31,8 @@
     --em-act: #F5AD86;
     --em-txt: #fff;
     --fl: #6441a5;
+    --btn-b1: #7AD5D2;
+    --btn-b2: #99D7C3;
 /** 10 stages, bar1 to bar2 **/
     --b1: #12c9c2; --b2: #19c9bf; --b3: #20cabc; --b4: #27cab8; --b5: #2ecab5; --b6: #35cbb2; --b7: #3ccbaf; --b8: #43cbab; --b9: #4acca8; --b10: #51cca5;
 /** 50% opacity vs --box **/
@@ -1719,17 +1721,17 @@ input[type=submit] {
     -webkit-box-shadow: var(--head-shadow);
     box-shadow: var(--head-shadow);
     border: var(--main-border);
-    background: linear-gradient(to bottom, var(--bar3) 0%, var(--body) 100%);
+    background: linear-gradient(to bottom, var(--btn-b1) 0%, var(--body) 100%);
     background-size: 200% auto !important;}
 button:hover,
 input[type=button]:hover,
 input[type=submit]:hover {
     color: var(--anchor-hover);
-    background: linear-gradient(to bottom,var(--bar3) 0%,var(--bar4) 100%);}
+    background: linear-gradient(to bottom,var(--btn-b1) 0%,var(--btn-b2) 100%);}
 button:hover:active,
 input[type=button]:hover:active,
 input[type=submit]:hover:active {
-    background: linear-gradient(to bottom,var(--bar3) 0%,var(--bar2) 100%);}
+    background: linear-gradient(to bottom,var(--btn-b1) 0%,var(--bar2) 100%);}
 
 .filter_torrents .submit {
     text-align: right;}
