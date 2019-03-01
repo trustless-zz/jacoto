@@ -743,7 +743,8 @@ a:hover {
 .prev:hover,
 .next:hover,
 #taglist a:hover,
-.filter_torrents.advanced #taglist td:hover {
+.filter_torrents.advanced #taglist td:hover,
+.torrent_details .group_torrent td:first-child a {
     background-color: transparent;}
 
 a,
@@ -810,7 +811,7 @@ img {
 .pad {
     padding: 10px;}
 .main_column {
-    margin: 0 315px 0 0;}
+    width: calc(100% - 315px);}
 
 #index #freeleech .group_torrent {
     display: flex;}
@@ -1478,7 +1479,8 @@ a .error_message:hover:active {
     background-repeat: no-repeat;
     background-position: center;}
 
-.colhead td {
+.colhead td,
+.colhead_dark td {
     font-size: 16px;
     line-height: 32px;
     vertical-align: middle;
@@ -1494,7 +1496,8 @@ a .error_message:hover:active {
     width: 100%;
     -webkit-box-shadow: var(--main-shadow);
     box-shadow: var(--main-shadow);
-    border: var(--main-border);}
+    border: var(--main-border);
+    margin: 0 0 15px;}
 .torrent_table .group.rowa {
     background-color: var(--body);}
 .torrent_table .group.rowb {
@@ -1505,6 +1508,8 @@ a .error_message:hover:active {
     vertical-align: middle;}
 .torrent_table td:not(#displayname):not([colspan="4"]) {
     white-space: nowrap;}
+#torrents .group_torrent td:first-child {
+    white-space: normal;}
 .torrent_table #displayname {
     font-size: 15px;
     line-height: var(--lh-5px);}
@@ -1554,6 +1559,7 @@ a .error_message:hover:active {
     position: relative;
     background-color: var(--edition);}
 .edition_info strong {
+    font-weight: 600;
     position: absolute;
     max-width: calc(100% - 10px);
     left: 0;
@@ -1750,6 +1756,7 @@ input[type=submit]:hover:active {
     content: '(View Less)';
     position: absolute;
     bottom: 1066px;}
+.torrent_details .group_torrent td:first-child >a,
 .filter_torrents.advanced .flright,
 .toggle_tags {
     cursor: default;}
@@ -1788,3 +1795,10 @@ input[type=submit]:hover:active {
     position: relative;
     left: calc(100% - 240px);
     top: 3px;}
+
+.linkbox {
+    margin-bottom: 5px;
+    padding: 6px;
+    text-align: center;}
+.torrent_table .colhead_dark strong {
+    font-weight: normal;}
