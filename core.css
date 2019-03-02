@@ -357,6 +357,7 @@ li:first-of-type {
 li {
     padding: 2px 0;}
 table {
+    background-color: var(--box);
     border: 0;
     border-collapse: collapse;
     width: 100%;}
@@ -614,9 +615,11 @@ li.active {
 #nav_donate a,
 #nav_useredit a,
 .torrent_table .show_torrents_link,
-.torrent_table #leechers_icon img,
-.torrent_table #seeders_icon img,
-.torrent_table #snatches_icon img,
+img[title="Downloaded"],
+img[title="Uploaded"],
+img[title="Leechers"],
+img[title="Seeders"],
+img[title="Snatches"],
 .torrent_table #user_rating_icon img,
 .ign,
 .meta,
@@ -650,7 +653,14 @@ li.active {
 .Wikipedia,
 .XboxStore,
 .PCGamingWiki,
-.torrent_table td[colspan="4"] >span:first-child >a,
+a[title="Original Group"],
+a[title="Permalink"],
+a[title="Download"],
+a[title="Use a FL Token"],
+a[title="Report"],
+a[title="External Link"],
+a[title="Edit"],
+a[title="Remove"],
 .prev,
 .next {
     background-repeat: no-repeat;
@@ -691,6 +701,7 @@ li.active {
     float: right;
     height: 100%;
     width: 300px;}
+#grouplinks,
 form[name="filter"],
 .main_column >.box,
 .sidebar .box {
@@ -830,9 +841,11 @@ img {
     overflow: hidden;}
 #stats_seeding {
     border-top: 2px solid var(--main-border-color);}
-.torrent_table #leechers_icon img,
-.torrent_table #seeders_icon img,
-.torrent_table #snatches_icon img,
+img[title="Downloaded"],
+img[title="Uploaded"],
+img[title="Leechers"],
+img[title="Seeders"],
+img[title="Snatches"],
 .torrent_table #user_rating_icon img,
 #index #freeleech .group_torrent >span:first-child a,
 #stats_ratio:before,
@@ -840,7 +853,14 @@ img {
 #stats_gold a,
 #stats_leeching a,
 #stats_seeding a,
-.torrent_table td[colspan="4"] >span:first-child >a {
+a[title="Original Group"],
+a[title="Permalink"],
+a[title="Download"],
+a[title="Use a FL Token"],
+a[title="Report"],
+a[title="External Link"],
+a[title="Edit"],
+a[title="Remove"] {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
@@ -903,6 +923,7 @@ img {
 #stats_ratio span.stat:before {
     content: ':';}
 
+#grouplinks,
 #nav_logout,
 #nav_donate,
 #nav_useredit,
@@ -1523,14 +1544,17 @@ a .error_message:hover:active {
     width: 20px;
     background-size: contain;
     cursor: default;}
+.torrent_details .torrent_table tbody[id*="edition_"] .group_torrent td,
 .torrent_table tr.group_torrent[class*="edition_"] >td {
     padding: 4px 5px;
     font-size: 13px;
     line-height: var(--lh-5px);}
+.torrent_details .group_torrent td:first-child span,
 .torrent_table td[colspan="4"] >span:first-child {
     font-size: 0;
     display: inline-block;
     vertical-align: top;}
+.torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child >a {
     margin-right: 5px;
     display: inline-block;}
@@ -1586,9 +1610,11 @@ a .error_message:hover:active {
 .torrent_table tr.group_torrent:hover {
         background-color: var(--box-hvr);}
 
-.torrent_table #leechers_icon img,
-.torrent_table #seeders_icon img,
-.torrent_table #snatches_icon img,
+img[title="Downloaded"],
+img[title="Uploaded"],
+img[title="Leechers"],
+img[title="Seeders"],
+img[title="Snatches"],
 .torrent_table #user_rating_icon img {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -1596,10 +1622,8 @@ a .error_message:hover:active {
 .torrent_table .colhead a {
     padding: 100px;
     margin: -100px;}
-.torrent_table #user_rating_icon,
-.torrent_table #snatches_icon,
-.torrent_table #seeders_icon,
-.torrent_table #leechers_icon {
+.colhead_dark .sign,
+.colhead .sign {
     line-height: 0;}
 .torrent_table .colhead a:hover {
     background-color: var(--colhead-clickable);}
