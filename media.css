@@ -14,11 +14,11 @@
         flex-flow: column-reverse;
         top: 277px;
         z-index: 9;
-        background-color: var(--rowb);
-        border-top: 2px solid var(--main-border-color);
-        border-right: var(--main-border);
-        -webkit-box-shadow: inset var(--main-shadow);
-        box-shadow: inset var(--main-shadow);
+        background-color: var(--c-body);
+        border-top: 2px solid var(--c-main-brdr);
+        border-right: var(--p-main-brdr);
+        -webkit-box-shadow: inset var(--p-main-shdw);
+        box-shadow: inset var(--p-main-shdw);
         -webkit-transition: all .2s linear;
         -o-transition: all .2s linear;
         transition: all .2s linear;
@@ -33,10 +33,10 @@
         line-height: 30px;
         font-weight: 600;}
     #userinfo_minor.highlighted:before {
-        background-color: var(--bar3);
+        background-color: var(--c-b3);
         font-weight: 700;}
     #userinfo_minor:hover:before {
-        background-color: var(--bar1);}
+        background-color: var(--c-b1);}
     #userinfo_minor:hover {
         transition-delay: 0s;
         clip: rect(0, 200px, 302px, 0);}
@@ -54,19 +54,19 @@
         position: absolute;
         top: 0;
         left:0;
-        border-top: 2px solid var(--main-border-color);
-        border-bottom: 2px solid var(--main-border-color);}
+        border-top: 2px solid var(--c-main-brdr);
+        border-bottom: 2px solid var(--c-main-brdr);}
     #userinfo_username .sub {
         padding-bottom: 2px;
         -webkit-transition: all .15s linear;
         -o-transition: all .15s linear;
         transition: all .15s linear;
         transition-delay: .5s;
-        background: linear-gradient(to bottom, var(--body) 15%, var(--rowb) 16%);
+        background: linear-gradient(to bottom, var(--c-tor-row-hvr) 15%, var(--c-body) 16%);
         z-index: 99;
-        border-left: var(--main-border);
-        -webkit-box-shadow: inset var(--main-shadow);
-        box-shadow: inset var(--main-shadow);
+        border-left: var(--p-main-brdr);
+        -webkit-box-shadow: inset var(--p-main-shdw);
+        box-shadow: inset var(--p-main-shdw);
         clip: rect(0, 200px, 34px, 0px);
         height: auto;}
     #userinfo_username .sub span:first-child {
@@ -77,7 +77,7 @@
         transition-delay: 0s;
         clip: rect(0px, 200px, 230px, 0px);}
     #userinfo_username .sub:hover:before {
-        background-color: var(--bar2);
+        background-color: var(--c-b2);
         border-bottom: 0;}
     #userinfo_stats {
         top: 147px;}
