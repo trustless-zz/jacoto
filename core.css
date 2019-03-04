@@ -1,66 +1,66 @@
 ﻿:root {
 /** COLORS **/
-    --c-txt: 						rgb(50, 50, 50);
-    --c-text-s: 					rgb(100, 100, 100);
-    --c-input-brdr: 				rgb(195, 195, 195);
-    --c-main-brdr:					rgb(200, 200, 200);
-    --c-table-brdr: 				rgb(210, 210, 210);
-    --c-tor-rowb: 					rgb(215, 215, 215);
-    --c-body: 						rgb(220, 220, 220);				/*rowa*/
-    --c-tor-row-hvr: 				rgb(225, 225, 225);
-    --c-edition: 					rgb(230, 230, 230);
-    --c-input:						rgb(235, 235, 235);
-    --c-tgroup:						rgb(240, 240, 240);
-    --c-box: 						rgb(245, 245, 245);
-    --c-high:						rgb(255, 255, 255);
-    --c-b1: 						rgb(18, 201, 194);
-    --c-b2: 						rgb(81, 204, 165);
-    --c-b3: 						rgb(131, 223, 219);				/* 60% #6cdad6 */
-    --c-b4: 						rgb(162, 224, 205);				/* 60% #92dcc5 */
-    --c-b01: 						rgba(18, 201, 194, 0);
-    --c-b02: 						rgba(81, 204, 165, 0);
-    --c-anchor: 					rgb(11, 122, 118);				/* #bd002c */
-    --c-anchor-hvr: 				rgb(0, 0, 0);					/* #053d3b #630017 */
-    --c-anchor-hvr-bcg: 			rgba(18, 201, 194, .1);
-	--c-header-shdw: 				rgba(0,0,0,.1);
-    --c-main-shdw:					rgba(0,0,0,.2);
-    --c-img-bcg-anchor: 			rgb(230, 242, 242);
-    --c-on: 						rgb(29, 145, 0);				/* #1E9400 */
-    --c-off: 						rgb(163, 0, 0);					/* #910000 */
-    --c-colhead-click:				rgba(255, 255, 255, .15);
-    --c-colhead-act: 				rgba(255, 255, 255, .3);
-    --c-em-bcg: 					rgb(199, 81, 18);
-    --c-em-hvr: 					rgb(245, 100, 22);
-    --c-em-act: 					rgb(245, 173, 134);
-    --c-fl: 						rgb(100, 65, 165);
-    --c-btn-b1: 					rgb(119, 211, 207);
-    --c-btn-b2: 					rgb(151, 212, 193);
+    --c-txt: 							rgb(50, 50, 50);
+    --c-text-s: 						rgb(100, 100, 100);
+    --c-input-brdr:						rgb(195, 195, 195);
+    --c-main-brdr:						rgb(200, 200, 200);
+    --c-table-brdr: 					rgb(210, 210, 210);
+    --c-tor-rowb: 						rgb(215, 215, 215);
+    --c-body: 							rgb(220, 220, 220);						/*rowa*/
+    --c-tor-row-hvr: 					rgb(225, 225, 225);
+    --c-edition: 						rgb(230, 230, 230);
+    --c-input:							rgb(235, 235, 235);
+    --c-tgroup:							rgb(240, 240, 240);
+    --c-box: 							rgb(245, 245, 245);
+    --c-high:							rgb(255, 255, 255);
+    --c-b1: 							rgb(18, 201, 194);
+    --c-b2: 							rgb(81, 204, 165);
+    --c-b3: 							rgb(131, 223, 219);						/* 60% #6cdad6 */
+    --c-b4: 							rgb(162, 224, 205);						/* 60% #92dcc5 */
+    --c-b01: 							rgba(18, 201, 194, 0);
+    --c-b02: 							rgba(81, 204, 165, 0);
+    --c-anchor: 						rgb(11, 122, 118);						/* #bd002c */
+    --c-anchor-hvr: 					rgb(0, 0, 0);							/* #053d3b #630017 */
+    --c-anchor-hvr-bcg: 				rgba(18, 201, 194, .1);
+	--c-header-shdw: 					rgba(0,0,0,.1);
+    --c-main-shdw:						rgba(0,0,0,.2);
+    --c-img-bcg-anchor: 				rgb(230, 242, 242);
+    --c-on: 							rgb(29, 145, 0);						/* #1E9400 */
+    --c-off: 							rgb(163, 0, 0);							/* #910000 */
+    --c-colhead-click:					rgba(255, 255, 255, .15);
+    --c-colhead-act: 					rgba(255, 255, 255, .3);
+    --c-em-bcg: 						rgb(199, 81, 18);
+    --c-em-hvr: 						rgb(245, 100, 22);
+    --c-em-act: 						rgb(245, 173, 134);
+    --c-fl: 							rgb(100, 65, 165);
+    --c-btn-b1: 						rgb(119, 211, 207);
+    --c-btn-b2: 						rgb(151, 212, 193);
 /** /COLORS **/
-    --p-searchbar-grdnt: 			linear-gradient(155deg,var(--c-b1),var(--c-b2));
-    --p-head-grdnt: 				linear-gradient(155deg,var(--c-b3),var(--c-b4));
-    --p-header-shdw: 				0 0px 4px var(--c-header-shdw);
-    --p-main-shdw:					0 0 4px var(--c-main-shdw);
-    --p-main-brdr:					1px solid var(--c-main-brdr);
-    --p-table-brdr: 				1px solid var(--c-table-brdr);
-    --p-input-brdr: 				1px solid var(--c-input-brdr);
-    --p-input-shdw: 				inset 1px 1px 2px var(--c-header-shdw);
-    --p-expand-hvr: 				linear-gradient(to top, var(--c-b1), var(--c-b01));
-    --p-expand-act: 				linear-gradient(to top, var(--c-b1), var(--c-b2));
-    --p-img-brdr: 					3px solid var(--c-main-brdr);
-    --p-img-hvr: 					3px solid var(--c-b3);
-    --p-img-anchor-brdr:			3px solid var(--c-b4);
-    --p-img-anchor-brdr-hvr:		3px solid var(--c-b1);
-    --p-poll-grdnt:					linear-gradient(to bottom, var(--c-b01), var(--c-anchor)), linear-gradient(to right, var(--c-b1), var(--c-b2));
-    --p-colhead-tr-bcg: 			var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
-    --p-colhead-tr-bcg-hvr:			var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-box));
-    --p-colhead-tr-bcg-act:			var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
-    --p-lsfl-pulse: 				linear-gradient(to right,var(--c-b02) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
-    --p-show-hide-brdr-shdw: 		inset -1px 0 0px var(--c-table-brdr);
-    --p-sticky-brdr: 				1px solid var(--c-b1);
-    --p-edition-hvr: 				linear-gradient(to top,var(--c-b3),var(--c-edition));
-    --p-edition-act: 				linear-gradient(to top,var(--c-b3),var(--c-b4));
-    --p-lh: 						calc(100% + 5px);
-    --p-dot3:						-.02142857142em;}
+    --p-searchbar-grdnt: 				linear-gradient(155deg,var(--c-b1),var(--c-b2));
+    --p-head-grdnt: 					linear-gradient(155deg,var(--c-b3),var(--c-b4));
+    --p-header-shdw: 					0 0px 4px var(--c-header-shdw);
+    --p-main-shdw:						0 0 4px var(--c-main-shdw);
+    --p-main-brdr:						1px solid var(--c-main-brdr);
+    --p-table-brdr: 					1px solid var(--c-table-brdr);
+    --p-input-brdr: 					1px solid var(--c-input-brdr);
+    --p-input-shdw: 					inset 1px 1px 2px var(--c-header-shdw);
+    --p-expand-hvr: 					linear-gradient(to top, var(--c-b1), var(--c-b01));
+    --p-expand-act: 					linear-gradient(to top, var(--c-b1), var(--c-b2));
+    --p-img-brdr: 						3px solid var(--c-main-brdr);
+    --p-img-hvr: 						3px solid var(--c-b3);
+    --p-img-anchor-brdr:				3px solid var(--c-b4);
+    --p-img-anchor-brdr-hvr:			3px solid var(--c-b1);
+    --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b01), var(--c-anchor)), linear-gradient(to right, var(--c-b1), var(--c-b2));
+    --p-colhead-tr-bcg: 				var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
+    --p-colhead-tr-bcg-hvr:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-box));
+    --p-colhead-tr-bcg-act:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
+    --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b02) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
+    --p-show-hide-brdr-shdw: 			inset -1px 0 0px var(--c-table-brdr);
+    --p-sticky-brdr: 					1px solid var(--c-b1);
+    --p-edition-hvr: 					linear-gradient(to top,var(--c-b3),var(--c-edition));
+    --p-edition-act: 					linear-gradient(to top,var(--c-b3),var(--c-b4));
+    --p-lh: 							calc(100% + 5px);
+    --p-dot3:							-.02142857142em;}
 
 .amigacd32 {background: url(caticons/amigacd32_dark.svg);}
 .amstradcpc {background: url(caticons/amstradcpc_dark.svg);}
