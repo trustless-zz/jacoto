@@ -52,11 +52,15 @@
     --p-img-anchor-brdr-hvr:		3px solid var(--c-b1);
     --p-poll-grdnt:					linear-gradient(to bottom, var(--c-b01), var(--c-anchor)), linear-gradient(to right, var(--c-b1), var(--c-b2));
     --p-colhead-tr-bcg: 			var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
+    --p-colhead-tr-bcg-hvr:			var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-box));
+    --p-colhead-tr-bcg-act:			var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
     --p-lsfl-pulse: 				linear-gradient(to right,var(--c-b02) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
     --p-show-hide-brdr-shdw: 		inset -1px 0 0px var(--c-table-brdr);
     --p-sticky-brdr: 				1px solid var(--c-b1);
-    --p-edition-hvr: 				linear-gradient(to top,var(--c-tgroup),var(--c-edition));
-    --p-lh: 						calc(100% + 5px);}
+    --p-edition-hvr: 				linear-gradient(to top,var(--c-b3),var(--c-edition));
+    --p-edition-act: 				linear-gradient(to top,var(--c-b3),var(--c-b4));
+    --p-lh: 						calc(100% + 5px);
+    --p-dot3:						-.02142857142em;}
 
 .amigacd32 {background: url(caticons/amigacd32_dark.svg);}
 .amstradcpc {background: url(caticons/amstradcpc_dark.svg);}
@@ -1053,7 +1057,10 @@ input[type=submit]:hover:active {
     left: 0;
     right: 0;
     margin: auto;
-    border: var(--p-img-brdr);}
+    border: var(--p-img-brdr);
+    background-size: 16px 16px;
+    background-repeat: repeat;
+    background-position: top left;}
 .curtain {
     background-color: var(--c-txt);
     position: fixed;
@@ -1164,6 +1171,7 @@ input[type=submit]:hover:active {
     border: var(--p-main-brdr);
     background: var(--p-head-grdnt);
     margin: 0 0 15px 0;}
+.torrent_table .colhead_dark td[onclick],
 .sidebar #freeleech_time_left #progress_bar {
     position: relative;}
 .sidebar #freeleech_time_left #progress_bar .main_bar {
@@ -1620,7 +1628,7 @@ a .error_message:hover:active {
 .edition_info:hover:before {
     opacity: 1;}
 .edition_info:hover:active:before {
-    background: var(--c-tgroup);}
+    background: var(--p-edition-act);}
 
 .torrent_table tr.group_torrent {
     background-color: var(--c-tgroup);}
@@ -1858,3 +1866,21 @@ input[type=submit]:hover:active {
     text-align: center;}
 .torrent_table .colhead_dark strong {
     font-weight: normal;}
+
+.torrent_table .colhead_dark td[onclick]:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    background: var(--p-colhead-tr-bcg-hvr);}
+.torrent_table .colhead_dark td[onclick]:hover:before {
+    opacity: 1;}
+.torrent_table .colhead_dark td[onclick]:hover:active:before {
+    background: var(--p-colhead-tr-bcg-act);}
+.torrent_table .colhead_dark td[onclick] strong {
+    position: absolute;
+    top: 0;
+    left: 5px;}
