@@ -2,6 +2,7 @@
 /** COLORS **/
     --c-txt: 							rgb(50, 50, 50);
     --c-text-s: 						rgb(100, 100, 100);
+    --c-curtain:						rgb(110, 110, 110);
     --c-input-brdr:						rgb(195, 195, 195);
     --c-main-brdr:						rgb(200, 200, 200);
     --c-table-brdr: 					rgb(210, 210, 210);
@@ -806,7 +807,9 @@ select,
 .filter_torrents.advanced #taglist td,
 button,
 input[type=button],
-input[type=submit] {
+input[type=submit],
+.fancybox-image,
+.head[title="Click to expand/collapse"]:before {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1056,20 +1059,28 @@ input[type=submit]:hover:active {
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: auto;}
+.lightbox img,
+.fancybox-image {
     border: var(--p-img-brdr);
     background-size: 16px 16px;
     background-repeat: repeat;
     background-position: top left;}
+.fancybox-bg,
 .curtain {
-    background-color: var(--c-txt);
+    background-color: var(--c-curtain);}
+.curtain {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1001;
-    opacity: .7;}
+    z-index: 1001;}
+.fancybox-is-open .fancybox-bg,
+.curtain {
+    opacity: .75;}
+.fancybox-is-zoomable .fancybox-image:hover {
+    border: var(--p-img-hvr);}
 
 /** close/expand head **/
 #index #recommended .head,
@@ -1102,6 +1113,7 @@ input[type=submit]:hover:active {
     width: 160px;
     float: right;
     height: 15px;}
+.head[title="Click to expand/collapse"]:before,
 #index #recommended .head:before,
 .box.news_post .head:before {
     content: '';
@@ -1112,9 +1124,22 @@ input[type=submit]:hover:active {
     width: 100%;
     height: 100%;
     opacity: 0;}
+.head[title="Click to expand/collapse"] {
+    height: 19px;}
+.head[title="Click to expand/collapse"] strong {
+    cursor: default;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: 19px;}
+.head[title="Click to expand/collapse"]:hover:before,
 #index #recommended .head:hover:before,
 .box.news_post .head:hover:before {
     opacity: 1;}
+.head[title="Click to expand/collapse"]:hover:active:before,
 #index #recommended .head:hover:active:before,
 .box.news_post .head:hover:active:before {
     background: var(--p-expand-act);}
@@ -1139,6 +1164,7 @@ input[type=submit]:hover:active {
     margin: 10px auto;}
 #dailygazelle img {
     display: block;}
+.screenshots img:hover,
 .sidebar img:hover {
     border: var(--p-img-hvr);}
 #slides >.nobullet {
@@ -1171,7 +1197,7 @@ input[type=submit]:hover:active {
     border: var(--p-main-brdr);
     background: var(--p-head-grdnt);
     margin: 0 0 15px 0;}
-.torrent_table .colhead_dark td[onclick],
+.head[title="Click to expand/collapse"],
 .sidebar #freeleech_time_left #progress_bar {
     position: relative;}
 .sidebar #freeleech_time_left #progress_bar .main_bar {
@@ -1867,20 +1893,74 @@ input[type=submit]:hover:active {
 .torrent_table .colhead_dark strong {
     font-weight: normal;}
 
-.torrent_table .colhead_dark td[onclick]:before {
+.torrent_details .torrent_table .colhead_dark td:nth-child(1):after,
+.torrent_details .torrent_table .colhead_dark td:nth-child(1):before {
     position: absolute;
     content: '';
-    width: 100%;
+    width: 983px; /* can't think of another way */
     height: 100%;
     opacity: 0;
     top: 0;
     left: 0;
-    background: var(--p-colhead-tr-bcg-hvr);}
+    background: var(--p-colhead-tr-bcg-hvr);
+    z-index: 1;}
+.torrent_details .torrent_table .colhead_dark td:nth-child(1):after {
+    background: transparent !important;
+    z-index: 3;}
 .torrent_table .colhead_dark td[onclick]:hover:before {
     opacity: 1;}
 .torrent_table .colhead_dark td[onclick]:hover:active:before {
     background: var(--p-colhead-tr-bcg-act);}
-.torrent_table .colhead_dark td[onclick] strong {
+.torrent_details .torrent_table .colhead_dark strong,
+.torrent_details .torrent_table .colhead_dark img {
     position: absolute;
     top: 0;
-    left: 5px;}
+    left: 5px;
+    z-index: 2;}
+.torrent_details .torrent_table .colhead_dark img {
+    margin-top: 7px;}
+
+.torrent_details .torrent_table .colhead_dark td {
+    height: 32px;
+    position: relative;}
+.torrent_details .torrent_table .colhead_dark td:nth-child(1) {
+    width: 100%;
+    overflow: visible;}
+.torrent_details .torrent_table .colhead_dark td:nth-child(2) {
+    min-width: 44px;}
+.torrent_details .torrent_table .colhead_dark td:nth-child(3) {
+    min-width: 30px;}
+.torrent_details .torrent_table .colhead_dark td.sign {
+    min-width: 18px;}
+
+.screenshots {
+    display: flex;
+    flex-flow: wrap;
+    margin-bottom: -10px;}
+.screenshots a {
+    width: calc(25% - 13.5px);
+    margin: 0 16px 10px 0;
+    align-self: center;
+    cursor: default;}
+.screenshots a:nth-child(4n) {
+    margin-right: 0;}
+.screenshots img {
+    max-width: 100% !important;
+    border: var(--p-img-brdr);}
+
+.trailer_div {
+    padding: 10px;}
+.trailer_div .head {
+    margin: -10px -10px 10px -10px;}
+.trailer {
+    position: relative;
+    padding-bottom: calc(56.25% - 10px);
+    height: 0;}
+.trailer iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;}
+#vote_matches .head strong span {
+    display: none;}

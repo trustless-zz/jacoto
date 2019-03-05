@@ -29,7 +29,8 @@ a[title="Original Group"]:hover,
 #toplink a {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 24"><polygon points="0 21 0 24 75 11 150 24 150 21 75 8 0 21" fill="#323232"/><polygon points="75 0 0 13 0 16 75 3 150 16 150 13 75 0" fill="#323232"/></svg>');}
 
-/** lightbox background **/
+/** lightbox image background **/
+.fancybox-image,
 .lightbox img {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="8 16 16 16 16 8 8 0 0 0 0 8 8 16" fill="#fff"/><rect x="8" width="8" height="8" fill="#ccc"/><rect y="8" width="8" height="8" fill="#ccc"/></svg>');}
 
