@@ -332,6 +332,7 @@ html {
 .sidebar ul {
     list-style:none;}
 
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
 .torrent_table .addbookmark,
 .torrent_table .removebookmark,
 #index #recommended .head a,
@@ -891,7 +892,8 @@ a[title="Use a FL Token"],
 a[title="Report"],
 a[title="External Link"],
 a[title="Edit"],
-a[title="Remove"] {
+a[title="Remove"],
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1) {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
@@ -1209,6 +1211,7 @@ input[type=submit]:hover:active {
     border: var(--p-main-brdr);
     background: var(--p-head-grdnt);
     margin: 0 0 15px 0;}
+.forum_post .colhead_dark div[style="float: left;"],
 .head[title="Click to expand/collapse"],
 .sidebar #freeleech_time_left #progress_bar {
     position: relative;}
@@ -2072,12 +2075,47 @@ li:not(.suggested_similar) .similar_votes >span {
 
 .forum_post .colhead_dark td {
     font-size: 14px;
+    text-indent: 20px;
     background: var(--p-forum-colhead);}
 
+.forum_post .colhead_dark a.post_id {
+    width: auto;
+    height: 100%;
+    font-size: 24px;
+    vertical-align: top;
+    position: absolute;
+    left: 0;
+    text-indent: 0;
+    padding-right: 4px;
+    background: var(--p-forum-colhead);
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    border-right: var(--p-main-brdr);
+    clip: rect(0, 16px, 32px, 0);}
+.forum_post .colhead_dark a.post_id:hover {
+    clip: rect(0, 300px, 32px, 0);}
+.forum_post .colhead_dark {
+    overflow: hidden;}
+.forum_post .colhead_dark div[style="float: right;"] {
+    text-indent: 0;}
+.forum_post .colhead_dark div[style="float: left;"] {
+    width: calc(100% - 40px);}
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1) {
+    display: inline-block;
+    vertical-align: text-bottom;}
 
 
 
 /*****************************************************************************************************/
+.forum_post tr {
+	width: 100%;
+	text-align: left !important;}
+
+
+
+
+
+
 #forums #content .thin table {
 	width: 100%;}
 
@@ -2111,10 +2149,6 @@ li:not(.suggested_similar) .similar_votes >span {
 	text-align: left;
 	width: 100%;
 	padding: 10px 10px 25px 10px;}
-
-.forum_post tr {
-	width: 100%;
-	text-align: left !important;}
 
 #forums #content table tr.colhead td {
 	text-align:left;}

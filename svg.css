@@ -21,7 +21,8 @@ a[title="Remove"]:hover,
 a[title="Permalink"]:hover,
 a[title="Original Group"]:hover,
 .prev:hover,
-.next:hover {
+.next:hover,
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1):hover {
     -webkit-filter: brightness(0);
     filter: brightness(0);}
 
@@ -124,6 +125,7 @@ a[title="Use a FL Token"] {
 
 /** report **/
 /* anchor */
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
 a[title="Report"] {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path d="M9,1.5A7.5,7.5,0,1,1,1.5,9,7.50851,7.50851,0,0,1,9,1.5M9,0a9,9,0,1,0,9,9A9,9,0,0,0,9,0Z" fill="#0b7a76"/><path d="M7.83984,13.62109a1.05867,1.05867,0,0,1,1.17188-1.17968,1.12149,1.12149,0,0,1,.85156.3125,1.21007,1.21007,0,0,1,.29688.86718A1.24181,1.24181,0,0,1,9.85938,14.5a1.10161,1.10161,0,0,1-.84766.32422,1.15908,1.15908,0,0,1-.86328-.3125A1.21156,1.21156,0,0,1,7.83984,13.62109Zm1.85938-2.49218H8.33984L7.93359,3.17578h2.16407Z" fill="#0b7a76"/></svg>');}
 
