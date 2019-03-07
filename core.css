@@ -476,7 +476,7 @@ li.active {
     height: 26px;
     line-height: 24px;
     margin: 5px 0;
-    padding: 2px 9px 0;
+    padding: 2px 5px 0;
     position: relative;
     width: 100%;}
 
@@ -809,7 +809,9 @@ button,
 input[type=button],
 input[type=submit],
 .fancybox-image,
-.head[title="Click to expand/collapse"]:before {
+.head[title="Click to expand/collapse"]:before,
+.torrent_details .torrent_table .colhead_dark td:nth-child(1):before,
+.similar img {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1259,6 +1261,7 @@ input[type=submit]:hover:active {
     opacity: 0;}
 #recommended #vanityhouse a:first-child:hover {
     color: var(--c-txt);}
+.similar img:hover,
 #recommended #vanityhouse a:first-child:hover img {
     border: var(--p-img-anchor-brdr-hvr);}
 #recommended #vanityhouse a:first-child:hover:before {
@@ -1759,7 +1762,7 @@ td.label {
 input[type="text"], select {
     border: var(--p-input-brdr);
     background-color: var(--c-input);
-    height: 22px;
+    height: 24px;
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
     color: var(--c-anchor-hvr);
@@ -1795,25 +1798,32 @@ input[type="radio"] {
 
 button,
 input[type=button],
-input[type=submit] {
+input[type=submit],
+.similar_votes a[title="Mark as similar"] {
+    font-size: 14px;
+    line-height: 14px;
+    font-family: OpenSans, Helvetica, Arial, sans-serif;
+    font-weight: 400;
     cursor: pointer;
     outline: 0;
     padding: 5px 10px;
     color: var(--c-txt);
-    -webkit-appearance: button;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border: var(--p-main-brdr);
     background: linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-body) 100%);
-    background-size: 200% auto !important;}
+    background-size: 200% auto !important;
+    display: inline-block;}
 button:hover,
 input[type=button]:hover,
-input[type=submit]:hover {
+input[type=submit]:hover,
+.similar_votes a[title="Mark as similar"]:hover {
     color: var(--c-anchor-hvr);
     background: linear-gradient(to bottom,var(--c-btn-b1) 0%,var(--c-btn-b2) 100%);}
 button:hover:active,
 input[type=button]:hover:active,
-input[type=submit]:hover:active {
+input[type=submit]:hover:active,
+.similar_votes a[title="Mark as similar"]:hover:active {
     background: linear-gradient(to bottom,var(--c-btn-b1) 0%,var(--c-b2) 100%);}
 
 .filter_torrents .submit {
@@ -1964,3 +1974,34 @@ input[type=submit]:hover:active {
     height: 100%;}
 #vote_matches .head strong span {
     display: none;}
+
+.similar {
+    padding-right: 0;}
+.similar ul {
+    max-height: 350px;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: auto;
+    display: flex;
+    flex-flow: wrap;}
+.similar li {
+    width: calc(20% - 16px);
+    margin: 0 16px 10px 0;
+    align-self: center;}
+.similar li >a {
+    display: contents;}
+.similar img {
+    width: 100%;
+    height: auto;
+    border: var(--p-img-anchor-brdr);}
+.similar #suggested_header {
+    width: 100%;
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    font-size: 19px;}
+.similar_div .similar li {
+    align-self: baseline;}
+.similar li span.similar_votes {
+    display: inline-block;
+    margin-top: 1px;}
