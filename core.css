@@ -18,8 +18,7 @@
     --c-b2: 							rgb(81, 204, 165);
     --c-b3: 							rgb(131, 223, 219);						/* 60% #6cdad6 */
     --c-b4: 							rgb(162, 224, 205);						/* 60% #92dcc5 */
-    --c-b01: 							rgba(18, 201, 194, 0);
-    --c-b02: 							rgba(81, 204, 165, 0);
+    --c-b00: 							rgba(255, 255, 255, 0);
     --c-anchor: 						rgb(11, 122, 118);						/* #bd002c */
     --c-anchor-hvr: 					rgb(0, 0, 0);							/* #053d3b #630017 */
     --c-anchor-hvr-bcg: 				rgba(18, 201, 194, .1);
@@ -45,21 +44,26 @@
     --p-table-brdr: 					1px solid var(--c-table-brdr);
     --p-input-brdr: 					1px solid var(--c-input-brdr);
     --p-input-shdw: 					inset 1px 1px 2px var(--c-header-shdw);
-    --p-expand-hvr: 					linear-gradient(to top, var(--c-b1), var(--c-b01));
+    --p-expand-hvr: 					linear-gradient(to top, var(--c-b1), var(--c-b00));
     --p-expand-act: 					linear-gradient(to top, var(--c-b1), var(--c-b2));
     --p-img-brdr: 						3px solid var(--c-main-brdr);
     --p-img-hvr: 						3px solid var(--c-b3);
     --p-img-anchor-brdr:				3px solid var(--c-b4);
     --p-img-anchor-brdr-hvr:			3px solid var(--c-b1);
-    --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b01), var(--c-anchor)), linear-gradient(to right, var(--c-b1), var(--c-b2));
+    --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b00), var(--c-anchor)), linear-gradient(to right, var(--c-b1), var(--c-b2));
     --p-colhead-tr-bcg: 				var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
     --p-colhead-tr-bcg-hvr:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-box));
     --p-colhead-tr-bcg-act:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
-    --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b02) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
+    --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
+    --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b00) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
     --p-show-hide-brdr-shdw: 			inset -1px 0 0px var(--c-table-brdr);
     --p-sticky-brdr: 					1px solid var(--c-b1);
     --p-edition-hvr: 					linear-gradient(to top,var(--c-b3),var(--c-edition));
     --p-edition-act: 					linear-gradient(to top,var(--c-b3),var(--c-b4));
+    --p-btn:							linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-body) 100%);
+    --p-btn-hvr:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-btn-b2) 100%);
+    --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
+    --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
     --p-lh: 							calc(100% + 5px);
     --p-dot3:							-.02142857142em;}
 
@@ -578,6 +582,7 @@ li.active {
 #index #freeleech .group_torrent >span:not(:first-child) {
     padding: 0 2px;}
 
+li:not(.suggested_similar) .similar_votes >a:nth-child(2),
 .tags,
 #index #freeleech .group_torrent >span:first-child,
 #stats_ratio,
@@ -587,6 +592,7 @@ li.active {
 #index #freeleech .group_torrent span.tor_size,
 #nav_donate {
     order: 2;}
+li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 .rating_container:nth-child(2),
 #index #freeleech .group_torrent >a,
 #stats_seeding,
@@ -715,12 +721,15 @@ a[title="Remove"],
 form[name="filter"],
 .main_column >.box,
 .sidebar .box,
-#torrents #collages {
+#torrents #collages,
+.forum_post {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: var(--p-main-brdr);
     margin: 0 0 15px 0;}
+.forum_post {
+    margin: 0 0 10px 0;}
 .sidebar .box {
     padding: 10px;}
 .sidebar ul {
@@ -739,6 +748,7 @@ form[name="filter"],
 .head {
     background: var(--p-head-grdnt);
     font-size: 20px;
+    line-height: 20px;
     padding: 10px;}
 .sidebar .head {
     margin: -10px -10px 0;
@@ -1759,6 +1769,7 @@ td.label {
 .filter_torrents td {
     padding: 2px 5px 5px 5px;}
 
+input[type="number"],
 input[type="text"], select {
     border: var(--p-input-brdr);
     background-color: var(--c-input);
@@ -1766,7 +1777,9 @@ input[type="text"], select {
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
     color: var(--c-anchor-hvr);
-    font-size: 14px;}
+    font-size: 14px;
+    font-family: OpenSans, Helvetica, Arial, sans-serif;}
+input[type="number"],
 input[type="text"] {
     padding: 0 4px;}
 select {
@@ -1782,6 +1795,8 @@ select >option:nth-child(odd) {
     background-color: var(--c-input);}
 select >option:nth-child(even),
 select:hover,
+input[type="number"]:hover,
+input[type="number"]:focus,
 input[type="text"]:hover,
 input[type="text"]:focus {
     background-color: var(--c-edition);}
@@ -1799,7 +1814,7 @@ input[type="radio"] {
 button,
 input[type=button],
 input[type=submit],
-.similar_votes a[title="Mark as similar"] {
+.similar_votes a {
     font-size: 14px;
     line-height: 14px;
     font-family: OpenSans, Helvetica, Arial, sans-serif;
@@ -1811,20 +1826,20 @@ input[type=submit],
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border: var(--p-main-brdr);
-    background: linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-body) 100%);
+    background: var(--p-btn);
     background-size: 200% auto !important;
     display: inline-block;}
 button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
-.similar_votes a[title="Mark as similar"]:hover {
+.similar_votes a:hover {
     color: var(--c-anchor-hvr);
-    background: linear-gradient(to bottom,var(--c-btn-b1) 0%,var(--c-btn-b2) 100%);}
+    background: var(--p-btn-hvr);}
 button:hover:active,
 input[type=button]:hover:active,
 input[type=submit]:hover:active,
-.similar_votes a[title="Mark as similar"]:hover:active {
-    background: linear-gradient(to bottom,var(--c-btn-b1) 0%,var(--c-b2) 100%);}
+.similar_votes a:hover:active {
+    background: var(--p-btn-act);}
 
 .filter_torrents .submit {
     text-align: right;}
@@ -1976,8 +1991,10 @@ input[type=submit]:hover:active,
     display: none;}
 
 .similar {
-    padding-right: 0;}
+    position: relative;
+    padding: 5px 0 8px 10px;}
 .similar ul {
+    padding: 5px 0;
     max-height: 350px;
     list-style: none;
     margin: 0px;
@@ -1986,6 +2003,7 @@ input[type=submit]:hover:active,
     display: flex;
     flex-flow: wrap;}
 .similar li {
+    padding: 5px 0;
     width: calc(20% - 16px);
     margin: 0 16px 10px 0;
     align-self: center;}
@@ -1997,11 +2015,418 @@ input[type=submit]:hover:active,
     border: var(--p-img-anchor-brdr);}
 .similar #suggested_header {
     width: 100%;
-    margin: 0 0 10px 0;
+    margin: 10px 0;
     font-weight: 600;
     font-size: 19px;}
 .similar_div .similar li {
     align-self: baseline;}
 .similar li span.similar_votes {
+    display: flex;
+    flex-flow: row;
+    margin-top: 5px;
+    justify-content: center;}
+.similar_div .head .flright {
+    margin: -3px 0 0 0;}
+.similar_votes img {
+    display: none;}
+li:not(.suggested_similar) .similar_votes >a:nth-child(1):before {
+    content: '+';}
+li:not(.suggested_similar) .similar_votes >a:nth-child(2):before {
+    content: '-';}
+li:not(.suggested_similar) .similar_votes >span {
+    order: 2;
+    font-size: 16px;
+    padding: 0 10px;
+    font-weight: 600;
+    line-height: 26px;}
+.similar:before,
+.similar:after {
+    position: absolute;
+    content: '';
+    width: calc(100% - 20px);
+    height: 5px;
+    left: 0;
+    background: var(--p-fade);}
+.similar:before {
+    top: 5px;}
+.similar:after {
+    transform: scaleY(-1);
+    bottom: 8px;}
+
+#content .sub {
+    position: relative;
+    height: 0;
+    top: 33px;
+    left: 0;
+    display: flex;
+    flex-flow: column;
+    width: 140px;}
+#content .sub span {
+    background: var(--c-input);
+    width: 100%;
+    line-height: 28px;
+    text-align: center;
+    font-size: 16px;}
+#content .sub span a {
+    display: block;}
+
+.forum_post .colhead_dark td {
+    font-size: 14px;
+    background: var(--p-forum-colhead);}
+
+
+
+
+/*****************************************************************************************************/
+#forums #content .thin table {
+	width: 100%;}
+
+#forums .thin {
+	display: flex;
+	flex-direction: column;
+	line-height: 1.4em;}
+
+#forums .thin .forum_index {
+	line-height: 1em;}
+
+#forums .rowa td a,
+#forums .rowb td a {
+	 color: var(--white);
+	 font-weight: bold;}
+
+#forums .linkbox {
+	color: transparent;}
+
+#forums .linkbox label {
+	color: var(--white);
+	vertical-align: bottom;}
+
+#forums table.border td {
+	text-align:left;}
+
+#forums td {
+	text-align: center;}
+
+#forums td.body {
+	text-align: left;
+	width: 100%;
+	padding: 10px 10px 25px 10px;}
+
+.forum_post tr {
+	width: 100%;
+	text-align: left !important;}
+
+#forums #content table tr.colhead td {
+	text-align:left;}
+
+#forums .colhead {
+	font-size: 1.1em;
+	height: 30px;}
+
+div.breadcrumbs {
+	text-align: right;
+	padding: 5px 5px 0 0;}
+
+#forums .linkbox_bottom {
+	margin: 5px 0px;}
+
+/*** Makes username and time on forums.php smaller ***/
+#forums span[style="float:right;"] {
+	font-size: 0.8em;
+	margin-top: 3px;}
+
+/*** Overrides hard coded styles of Topics, Posts and Author headers ***/
+#forums td[style="width:7%;"] {text-align: center !important;}
+#forums td[style="width:9%;"] {text-align: center !important;}
+#forums td[style="width:14%;"] {text-align: center !important;}
+
+/*** h3 is the Subsection names (Site, Community, Gaming, etc.) ***/
+#forums h3 {
+	padding: 0px;
+	border-bottom: 1px var(--lightBlue30) solid;
+	margin-left: 5px;
+	color: var(--lightBlue);}
+
+#forums .forum_post h3 {
+	margin: 0;}
+
+/*** h4 is the name of each forum section (Announcements, Blog, Staff Picks, etc.) ***/
+#forums h4 {
+	text-align: left;}
+
+#forums h4 a {
+	color: var(--white);}
+
+/*** Forum Icons ***/
+.last_read {
+	width: 15px;
+	height: 15px;
+	background: url('../images/go_last_read.png') no-repeat center center;
+	margin-left: 5px;}
+
+.last_read a {
+	width: 100%;
+	height: 100%;
+	display: block;}
+
+#forums #content .thin td.read {
+	background-image: url("../images/balloon.png");
+	background-position: 50%;
+	background-repeat: no-repeat;
+	height: 18px;
+	width: 18px;}
+
+#forums #content .thin td.unread{
+	background-image: url('../images/balloon-unread.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 18px;
+	height: 18px}
+
+#forums #content .thin td.read_sticky{
+	background-image: url('../images/sticky.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 18px;
+	height: 18px}
+
+#forums #content .thin td.unread_sticky{
+	background-image:url('../images/sticky-unread.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 18px;
+	height: 18px}
+
+#forums #content .thin td.read_locked{
+	background-image:url('../images/lock.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 18px;
+	height: 18px}
+
+#forums #content .thin td.unread_locked{
+	background-image:url('../images/lock-unread.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 18px;
+	height: 18px}
+
+#forums #content .thin td.read_locked_sticky{
+	background-image:url('../images/lock-sticky.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 18px;
+	height: 18px}
+
+#forums #content .thin td.unread_locked_sticky{
+	background-image: url('../images/lock-sticky-unread.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width: 18px;
+	height: 18px}
+
+/*** Category List on Latest Posts Page ***/
+#forums table.border .cat_list td {
+	width: 20%;
+	padding: 0 !important;
+	border: 0 !important}
+
+#forums table.border .cat_list td[colspan="5"] {
+	background-color: var(--mediumBlue);
+	height: 25px;}
+
+#forums table.border .cat_list td[colspan="5"] strong {
+	padding: 3px;}
+
+#forums #content #otherop td,
+#forums #content #forumlist td {
+	text-align: left;
+	background-color: var(--mediumBlue);}
+
+#forums #content .search table {
+	border: 2px solid #003;
+	margin-bottom: 6px;}
+
+#forums #content .search .submit {
+	text-align: right;
+	margin-right: 5px;}
+
+#forums #content tbody #cat_list td a {
+	margin: 5px;}
+
+/*** Last 100 posts default forums box ***/
+.forum_latest .search {
+	margin-top: -36px;
+	width: 102%;
+	margin-left: -10px;
+	z-index: 1;
+	margin-bottom: 10px;
+	padding-top: 40px;}
+
+.forum_latest h2 {
+	z-index: 2;}
+
+.forum_latest form br {
+	line-height: 0px;}
+
+.submit input {
+	box-shadow: var(--black) 2px 2px 2px;}
+
+#user .main_column td.label {
+	vertical-align: middle;}
+
+/*** Avatar ***/
+td.avatar {
+	background-color: transparent;
+	box-shadow: 0px 0px 10px var(--black);}
+
+#forums td.avatar img {
+	margin-top: 5px;}
+
+.forum_post .body {
+    margin: 0 10px;
+    padding: 10px 15px;
+    width: 100%;}
+
+.forumstat {
+	font-size: 11px;
+	text-align: left;
+	margin: 2px 0px;
+	padding: 2px;
+	background-color: rgb(26, 42, 59);
+	color: var(--grey);}
+
+.forumstat:hover {
+	color: var(--white);}
+
+.avatar .forumstat {
+    max-height: 16px;
+    -webkit-transition: max-height 0.1s ease-out;
+    -moz-transition: max-height 0.1s ease-out;
+    -o-transition: max-height 0.1s ease-out;
+    transition: max-height 0.1s ease-out;
+    overflow: hidden;}
+
+.avatar:hover .forumstat {
+	max-height: 500px;
+	-webkit-transition: max-height 0.3s ease-in 0.25s;
+	-moz-transition: max-height 0.3s ease-in 0.25s;
+	-o-transition: max-height 0.3s ease-in 0.25s;
+	transition: max-height 0.3s ease-in 0.25s;
+	color: var(--white);}
+
+.user_online {
+	display: block;
+	color: var(--darkGreen);}
+
+.user_offline {
+	display: block;
+	color: var(--darkRed);}
+
+/*** Likes, Dislikes ***/
+tr.likes td {
+	text-align: left !important;
+	background-color: var(--darkBlue);
+	padding-left: 3px;}
+
+tr.likes {
+	border-top: var(--black) solid 2px;}
+
+/*** Forum Posts ***/
+#forums .colhead_dark .time,
+#forums .colhead_dark a[href*="#quickpost"],
+#forums .colhead_dark a[href*="#post"],
+#forums .colhead_dark label {
+	font-size: .8em;}
+
+#forums .colhead_dark div[id*="bar"] {
+	font-size: .8em;
+	margin-top: 5px;
+	padding-right: 5px;}
+
+#forums #content .thin .sub {
+	top: 40px;}
+
+#forums #content .thin .sub span {
+	display: block;
+	padding: 10px;}
+
+#forums #content .thin .sub a {
+	color: var(--white);}
+
+#forums blockquote {
+	margin-top:5px;}
+
+/*** Drop shadows on images and videos in the forums.  Different for smileys and weekly recap ***/
+#forums .forum_post td.body img,
+#forums .forum_post td.body iframe {
+	margin: 5px;
+	filter: drop-shadow(0px 0px 10px var(--black));
+	-webkit-filter: drop-shadow(0px 0px 10px var(--black));
+	padding: 5px;}
+
+#forums .forum_post td.body img[src*="static/common/smileys/"] {
+	margin: 0px;
+	box-shadow: 0px 0px 0px;
+	filter: none;
+	-webkit-filter: none;
+	padding: 0px;}
+
+#forums .forum_post td.body img[src="https://ptpimg.me/5u4e3c.png"] {
+	filter: drop-shadow(0px -10px 10px var(--black));
+	-webkit-filter: drop-shadow(0px -10px 10px var(--black));
+	margin: 0px;
+	box-shadow: 0px 0px 0px;
+	padding: 0px;}
+
+/*** Puts border around unread posts ***/
+#forums table.forum_unread {
+    border-top: var(--darkGreen60) solid 5px;
+    border-collapse: collapse;}
+
+/*** Other Misc. Items ***/
+#forums .rowa,
+#forums .rowb {
+	height: 40px;}
+
+/*For spoiler BB Code*/
+#forums a[onclick*="#thread_notes_tabl"] {
+	margin: 5px;}
+
+#forums td.body a[onclick="BBCode.spoiler(this);"] {
+	background-color: var(--mediumBlue) !important;
+	padding: 1px 3px;
+	color: var(--white);}
+
+/*Aligns images in custom titles*/
+.user_title img {
     display: inline-block;
-    margin-top: 1px;}
+    vertical-align: bottom;}
+
+/*** Signatures ***/
+#forums .forum_signature td {
+	text-align: left;
+	padding: 10px 4px 4px 10px;
+	height: auto;
+	vertical-align: bottom;
+	opacity: .5;}
+
+#forums .forum_signature td > div {
+	border-top: 1px solid var(--mediumBlue);
+	padding: 5px 0px 2px 3px;
+	max-height: 75px;
+	overflow-y: auto;
+	overflow-x: hidden;}
+
+/*** Sticky Posts ***/
+#forums #content .thin table.sticky_post {
+	width: 85%;
+	margin: 30px auto;}
+
+.sticky_post_label::before {
+    background: url('../images/pin.png');
+    height: 15px;
+    width: 15px;
+    content: "";
+    float: left;
+    margin: 1px 5px 0px 2px;}
