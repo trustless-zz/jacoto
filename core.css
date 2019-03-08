@@ -54,7 +54,7 @@
     --p-colhead-tr-bcg: 				var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
     --p-colhead-tr-bcg-hvr:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-box));
     --p-colhead-tr-bcg-act:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
-    --p-forum-colhead:					var(--c-edition) linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
+    --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
     --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b00) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
     --p-show-hide-brdr-shdw: 			inset -1px 0 0px var(--c-table-brdr);
     --p-sticky-brdr: 					1px solid var(--c-b1);
@@ -375,6 +375,8 @@ table {
 td, th {
     padding: 5px;
     text-align: left;}
+#thumbsup img,
+#thumbsdown img,
 .sidebar .box_user_rating img,
 td, th, tr {
     border: 0;}
@@ -2078,7 +2080,7 @@ li:not(.suggested_similar) .similar_votes >span {
 
 .forum_post .colhead_dark td {
     font-size: 14px;
-    background: var(--p-forum-colhead);
+    background: var(--c-edition) var(--p-forum-colhead);
     line-height: var(--p-lh);
     padding: 6px 5px 7px 5px;}
 
@@ -2086,18 +2088,27 @@ li:not(.suggested_similar) .similar_votes >span {
     transition-delay: .3s;
     width: auto;
     height: calc(100% + 13px);
-    font-size: 24px;
+    font-size: 15px;
     vertical-align: top;
     position: absolute;
     left: 0;
     top: -6px;
     line-height: 32px;
-    padding-right: 4px;
+    padding: 0 4px 0 8px;
     background: var(--p-forum-colhead);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border-right: var(--p-main-brdr);
     clip: rect(0, 15px, 32px, 0);}
+.forum_post .colhead_dark a.post_id:before {
+    position: absolute;
+    content: '#';
+    font-size: 24px;
+    width: 18px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--p-forum-colhead);}
 .forum_post .colhead_dark a.post_id:hover {
     transition-delay: 0s;
     clip: rect(0, 300px, 32px, 0);}
@@ -2113,6 +2124,11 @@ li:not(.suggested_similar) .similar_votes >span {
     font-size: 20px;
     line-height: 0;}
 
+.username_badges img {
+    max-height: 18px;
+    max-width: 18px;
+    margin: 0 2px 0 3px;
+    vertical-align: sub;}
 
 
 /*****************************************************************************************************/

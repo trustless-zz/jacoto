@@ -1,4 +1,13 @@
-﻿@media (min-width: 1760px) and (min-height: 937px) and (max-height: 941px) {
+﻿@media (min-width: 1760px) {
+    .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2) {
+        display: none;}
+    .forum_post .colhead_dark div[style="float: right;"] {
+        width: 18px;
+        height: 18px;}
+    .forum_post .colhead_dark div[style="float: left;"] {
+        width: calc(100% - 23px);}
+}
+@media (min-width: 1760px) and (min-height: 937px) and (max-height: 941px) {
     #header .clan_trophy img {
         height: 60px;}
 }
