@@ -54,7 +54,7 @@
     --p-colhead-tr-bcg: 				var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
     --p-colhead-tr-bcg-hvr:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-box));
     --p-colhead-tr-bcg-act:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
-    --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
+    --p-forum-colhead:					var(--c-edition) linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
     --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b00) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
     --p-show-hide-brdr-shdw: 			inset -1px 0 0px var(--c-table-brdr);
     --p-sticky-brdr: 					1px solid var(--c-b1);
@@ -332,6 +332,7 @@ html {
 .sidebar ul {
     list-style:none;}
 
+.forum_post .colhead_dark a[onclick],
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
 .torrent_table .addbookmark,
 .torrent_table .removebookmark,
@@ -677,7 +678,8 @@ a[title="External Link"],
 a[title="Edit"],
 a[title="Remove"],
 .prev,
-.next {
+.next,
+.forum_post .colhead_dark a[onclick] {
     background-repeat: no-repeat;
     background-position: center;}
 
@@ -893,7 +895,8 @@ a[title="Report"],
 a[title="External Link"],
 a[title="Edit"],
 a[title="Remove"],
-.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1) {
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
+.forum_post .colhead_dark a[onclick] {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
@@ -2075,34 +2078,40 @@ li:not(.suggested_similar) .similar_votes >span {
 
 .forum_post .colhead_dark td {
     font-size: 14px;
-    text-indent: 20px;
-    background: var(--p-forum-colhead);}
+    background: var(--p-forum-colhead);
+    line-height: var(--p-lh);
+    padding: 6px 5px 7px 5px;}
 
 .forum_post .colhead_dark a.post_id {
+    transition-delay: .3s;
     width: auto;
-    height: 100%;
+    height: calc(100% + 13px);
     font-size: 24px;
     vertical-align: top;
     position: absolute;
     left: 0;
-    text-indent: 0;
+    top: -6px;
+    line-height: 32px;
     padding-right: 4px;
     background: var(--p-forum-colhead);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border-right: var(--p-main-brdr);
-    clip: rect(0, 16px, 32px, 0);}
+    clip: rect(0, 15px, 32px, 0);}
 .forum_post .colhead_dark a.post_id:hover {
+    transition-delay: 0s;
     clip: rect(0, 300px, 32px, 0);}
 .forum_post .colhead_dark {
     overflow: hidden;}
-.forum_post .colhead_dark div[style="float: right;"] {
-    text-indent: 0;}
 .forum_post .colhead_dark div[style="float: left;"] {
     width: calc(100% - 40px);}
+.forum_post .colhead_dark a[onclick],
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1) {
     display: inline-block;
     vertical-align: text-bottom;}
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2) {
+    font-size: 20px;
+    line-height: 0;}
 
 
 
