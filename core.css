@@ -38,7 +38,7 @@
 /** /COLORS **/
     --p-searchbar-grdnt: 				linear-gradient(155deg,var(--c-b1),var(--c-b2));
     --p-head-grdnt: 					linear-gradient(155deg,var(--c-b3),var(--c-b4));
-    --p-header-shdw: 					0 0px 4px var(--c-header-shdw);
+    --p-header-shdw: 					0 0 4px var(--c-header-shdw);
     --p-main-shdw:						0 0 4px var(--c-main-shdw);
     --p-main-brdr:						1px solid var(--c-main-brdr);
     --p-table-brdr: 					1px solid var(--c-table-brdr);
@@ -64,6 +64,7 @@
     --p-btn-hvr:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-btn-b2) 100%);
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
     --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
+    --p-clickable-shdw:					0 0 0 3px var(--c-b3);
     --p-lh: 							calc(100% + 5px);
     --p-dot3:							-.02142857142em;}
 
@@ -681,7 +682,9 @@ a[title="Edit"],
 a[title="Remove"],
 .prev,
 .next,
-.forum_post .colhead_dark a[onclick] {
+.forum_post .colhead_dark a[onclick],
+.sidebar .userratingdiv img {
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
 
@@ -826,7 +829,8 @@ input[type=submit],
 .fancybox-image,
 .head[title="Click to expand/collapse"]:before,
 .torrent_details .torrent_table .colhead_dark td:nth-child(1):before,
-.similar img {
+.similar img,
+.sidebar .userratingdiv img {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1628,7 +1632,7 @@ a .error_message:hover:active {
     vertical-align: top;}
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child >a {
-    margin-right: 5px;
+    margin-right: 3px;
     display: inline-block;}
 .torrent_table .show_torrents .show_torrents_link {
     transform: rotate(-90deg);}
@@ -1687,10 +1691,25 @@ img[title="Uploaded"],
 img[title="Leechers"],
 img[title="Seeders"],
 img[title="Snatches"],
-.torrent_table #user_rating_icon img {
+.torrent_table #user_rating_icon img,
+.sidebar .userratingdiv img {
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+    box-sizing: border-box;}
+img[title="Downloaded"],
+img[title="Uploaded"],
+img[title="Leechers"],
+img[title="Seeders"],
+img[title="Snatches"],
+.torrent_table #user_rating_icon img {
     padding-left: 18px;}
+.sidebar .userratingdiv img {
+    border-radius: 50%;
+    padding-left: 50px;
+    width: 50px;
+    height: 50px;}
+.sidebar .userratingdiv img:hover {
+    -webkit-box-shadow: var(--p-clickable-shdw);
+    box-shadow: var(--p-clickable-shdw);}
 .torrent_table .colhead a {
     padding: 100px;
     margin: -100px;}
@@ -2129,6 +2148,20 @@ li:not(.suggested_similar) .similar_votes >span {
     max-width: 18px;
     margin: 0 2px 0 3px;
     vertical-align: sub;}
+
+.sidebar .userratingdiv tr:not(#reviewrow) {
+    display: inline-flex;
+    text-align: center;}
+.sidebar .userratingdiv strong {
+    vertical-align: text-top;}
+.ratings .green,
+#thumbsup {
+    font-size: 30px;
+    color: var(--c-on);}
+.ratings .red,
+#thumbsdown {
+    font-size: 30px;
+    color: var(--c-off);}
 
 
 /*****************************************************************************************************/
