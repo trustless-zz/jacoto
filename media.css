@@ -6,6 +6,61 @@
         height: 18px;}
     .forum_post .colhead_dark div[style="float: left;"] {
         width: calc(100% - 23px);}
+    
+    #extra1,
+    #extra2 {
+        background-color: var(--c-tor-row-hvr);
+        -webkit-box-shadow: inset var(--p-main-shdw);
+        box-shadow: inset var(--p-main-shdw);
+        width: 200px;
+        top: 0;
+        position: fixed;
+        z-index: 0;
+        height: 100vh;}
+    #extra1 {
+        left: 0;
+        border-right: var(--p-main-brdr);}
+    #extra2 {
+        right: 0;
+        border-left: var(--p-main-brdr);}
+    
+    #userinfo_minor,
+    #menu {
+        width: 200px;
+        position: absolute;
+        left: 0;}
+    #menu {
+        top: 241px;}
+    #userinfo_minor {
+        top: 531px;}
+    #menu >ul {
+        position: sticky;
+        top: 200px;
+        width: 100%;
+        display: flex;
+        flex-flow: wrap;}
+    #userinfo_minor li,
+    #menu li {
+        width: 50%;
+        height: 100%;}
+    #userinfo_minor li:first-child {
+        left: 50%;
+        position: absolute;
+        top: -58px;}
+    #userinfo_minor a,
+    #menu a {
+        line-height: 18px;
+        width: 100%;
+        display: block;
+        font-size: 18px;
+        padding: 36px 0 4px;
+        background-size: auto 28px;
+        background-position: center 5px;
+        background-repeat: no-repeat;}
+    #userinfo_minor a {
+        font-size: 16px;}
+    #userinfo_minor a.notificationsico {
+        letter-spacing: var(--p-dot3);}
 }
 @media (min-width: 1760px) and (min-height: 937px) and (max-height: 941px) {
     #header .clan_trophy img {

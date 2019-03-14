@@ -353,8 +353,6 @@ html {
 #nav_useredit a {
     font-size:0;}
 
-#menu ul li a {
-    font-size: 20px;}
 #nav_userinfo a.username {
     font-size: 17px;}
 
@@ -418,40 +416,6 @@ td, th, tr {
     position: relative;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% + 10px), 0 calc(100% + 10px));
     clip-path: polygon(0 0, 100% 0, 100% calc(100% + 10px), 0 calc(100% + 10px));}
-
-#menu ul li a {
-    line-height: 34px;
-    width: 100%;
-    display: block;}
-
-#extra1,
-#extra2 {
-    background-color: var(--c-tor-row-hvr);
-    -webkit-box-shadow: inset var(--p-main-shdw);
-    box-shadow: inset var(--p-main-shdw);
-    width: 200px;
-    top: 0;
-    position: fixed;
-    z-index: 0;
-    height: 100vh;}
-#extra1 {
-    left: 0;
-    border-right: var(--p-main-brdr);}
-#extra2 {
-    right: 0;
-    border-left: var(--p-main-brdr);}
-
-#menu {
-    width: 200px;
-    position: absolute;
-    top: 241px;
-    left: 0;}
-#menu ul li {
-    display: inline-block;
-    width: 200px;}
-#menu >ul {
-    position: sticky;
-    top: 200px;}
 
 li.active {
     font-weight: 600;}
@@ -518,11 +482,6 @@ li.active {
 
 #nav_index {
     display: none !important;}
-#userinfo_minor {
-    width: 200px;
-    position: absolute;
-    top: 549px;
-    left: 0;}
 #userinfo_username {
     position: absolute;
     top: 40px;
@@ -1008,7 +967,6 @@ input[type=submit]:hover:active {
     -o-transition: 0s;
     transition: 0s;}
 
-#menu li:last-child,
 #userinfo_username .sub span:last-child {
     border-bottom: 2px solid var(--c-main-brdr);}
 
