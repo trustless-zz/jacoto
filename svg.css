@@ -180,31 +180,31 @@ a[title="Remove"] {
 
 /** navbar **/
 #nav_torrents a {
-    background-image: url('icons/nav/100/games.svg');}
+    background-image: url('icons/dark/nav/games.svg');}
 #nav_collections a {
-    background-image: url('icons/nav/100/collages.svg');}
+    background-image: url('icons/dark/nav/bundles.svg');}
 #nav_requests a {
-    background-image: url('icons/nav/100/requests.svg');}
+    background-image: url('icons/dark/nav/requests.svg');}
 #nav_forums a {
-    background-image: url('icons/nav/100/forums.svg');}
+    background-image: url('icons/dark/nav/forums.svg');}
 #nav_irc a {
-    background-image: url('icons/nav/100/irc.svg');}
+    background-image: url('icons/dark/nav/irc.svg');}
 #nav_shop a {
-    background-image: url('icons/nav/100/shop.svg');}
+    background-image: url('icons/dark/nav/shop.svg');}
 #nav_rules a {
-    background-image: url('icons/nav/100/rules.svg');}
+    background-image: url('icons/dark/nav/rules.svg');}
 #nav_wiki a {
-    background-image: url('icons/nav/100/wiki.svg');}
+    background-image: url('icons/dark/nav/wiki.svg');}
 #nav_staff a {
-    background-image: url('icons/nav/100/staff.svg');}
+    background-image: url('icons/dark/nav/staff.svg');}
 #inboxlia {
-    background-image: url('icons/nav/100/inbox.svg');}
+    background-image: url('icons/dark/nav/inbox.svg');}
 a.top10ico {
-    background-image: url('icons/nav/100/top10.svg');}
+    background-image: url('icons/dark/nav/top10.svg');}
 a.bookmarksico {
-    background-image: url('icons/nav/100/bookmarks.svg');}
+    background-image: url('icons/dark/nav/bookmarks.svg');}
 #staffinboxlia {
-    background-image: url('icons/nav/100/staffpm.svg');}
+    background-image: url('icons/dark/nav/staffpm.svg');}
 
 /** thumbs **/
 #thumbsup img {
