@@ -32,13 +32,16 @@
     #menu {
         top: 241px;}
     #userinfo_minor {
-        top: 531px;}
+        z-index: 2;
+        top: 541px;}
+    #menu >ul,
+    #userinfo_minor {
+        display: flex;
+        flex-flow: wrap;}
     #menu >ul {
         position: sticky;
         top: 200px;
-        width: 100%;
-        display: flex;
-        flex-flow: wrap;}
+        width: 100%;}
     #userinfo_minor li,
     #menu li {
         width: 50%;
@@ -46,22 +49,24 @@
     #userinfo_minor li:first-child {
         left: 50%;
         position: absolute;
-        top: -58px;}
+        top: -60px;
+        height: auto;}
     #userinfo_minor a,
     #menu a {
         line-height: 18px;
         width: 100%;
         display: block;
         font-size: 18px;
-        padding: 36px 0 4px;
+        padding: 37px 0 5px;
         background-size: auto 28px;
-        background-position: center 5px;
+        background-position: center 6px;
         background-repeat: no-repeat;}
     #userinfo_minor a {
         font-size: 16px;}
     #userinfo_minor a.notificationsico {
         letter-spacing: var(--p-dot3);}
 }
+/*
 @media (min-width: 1760px) and (min-height: 937px) and (max-height: 941px) {
     #header .clan_trophy img {
         height: 60px;}
@@ -146,3 +151,4 @@
     #userinfo_stats {
         top: 147px;}
 }
+*/
