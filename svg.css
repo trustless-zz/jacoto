@@ -203,6 +203,16 @@ a.top10ico {
     background-image: url('icons/dark/nav/top10.svg');}
 a.bookmarksico {
     background-image: url('icons/dark/nav/bookmarks.svg');}
+a.notificationsico {
+    background-image: url('icons/dark/nav/notifications.svg');}
+a.torrentsico {
+    background-image: url('icons/dark/nav/uploads.svg');}
+a.inventoryico {
+    background-image: url('icons/dark/nav/inventory.svg');}
+a.uploadico {
+    background-image: url('icons/dark/nav/upload.svg');}
+a.inviteico {
+    background-image: url('icons/dark/nav/invite.svg');}
 #staffinboxlia {
     background-image: url('icons/dark/nav/staffpm.svg');}
 
