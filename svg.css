@@ -27,7 +27,9 @@ a[title="Original Group"]:hover,
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1):hover,
 .forum_post .colhead_dark a[onclick]:hover,
 #menu a:hover,
-#userinfo_minor a:hover {
+#menu li.active a,
+#userinfo_minor a:hover,
+#userinfo_minor .highlight {
     -webkit-filter: brightness(0);
     filter: brightness(0);}
 
