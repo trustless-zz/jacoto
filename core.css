@@ -333,6 +333,7 @@ html {
 .sidebar ul {
     list-style:none;}
 
+#torrentbrowse #groupplatform,
 .forum_post .colhead_dark a[onclick],
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
 .torrent_table .addbookmark,
@@ -1180,10 +1181,20 @@ input[type=submit]:hover:active {
     border: var(--p-main-brdr);
     background: var(--p-head-grdnt);
     margin: 0 0 15px 0;}
+.torrent_table #displayname,
 .forum_post .colhead_dark div[style="float: left;"],
 .head[title="Click to expand/collapse"],
 .sidebar #freeleech_time_left #progress_bar {
     position: relative;}
+#torrentbrowse #groupplatform a {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    left: -36px;
+    top: calc(50% - 17px);
+    background-size: 28px 28px;
+    background-repeat: no-repeat;
+    background-position: center;}
 .sidebar #freeleech_time_left #progress_bar .main_bar {
     background: var(--p-lsfl-pulse);
     display: block;
@@ -1742,7 +1753,8 @@ img[title="Snatches"],
     padding: 0 2px;
     white-space: nowrap;
     font-size: 13px;
-    line-height: var(--p-lh);}
+    line-height: var(--p-lh);
+    margin-bottom: -1px;}
 .rating_container:hover {
     opacity: 1;
     background-color: var(--c-box);}
@@ -2126,6 +2138,10 @@ li:not(.suggested_similar) .similar_votes >span {
 #thumbsdown {
     font-size: 30px;
     color: var(--c-off);}
+
+#torrentbrowse #hyphen {
+    display: none;}
+
 
 
 /*****************************************************************************************************/
