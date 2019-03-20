@@ -1007,7 +1007,7 @@ input[type=submit]:hover:active {
 #userinfo_minor li:not(.active):hover:active,
 #menu li.active,
 #userinfo_minor li.active {
-    background-color: var(--c-b1);}
+    background-color: var(--c-b1) !important;}
 
 #toplink {
     position: absolute;

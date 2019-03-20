@@ -180,44 +180,6 @@ a[title="Remove"] {
 .forum_post .colhead_dark a[onclick] {
     background-image: url('icons/dark/quote.svg');}
 
-/** navbar **/
-#nav_torrents a {
-    background-image: url('icons/dark/nav/games.svg');}
-#nav_collections a {
-    background-image: url('icons/dark/nav/bundles.svg');}
-#nav_requests a {
-    background-image: url('icons/dark/nav/requests.svg');}
-#nav_forums a {
-    background-image: url('icons/dark/nav/forums.svg');}
-#nav_irc a {
-    background-image: url('icons/dark/nav/irc.svg');}
-#nav_shop a {
-    background-image: url('icons/dark/nav/shop.svg');}
-#nav_rules a {
-    background-image: url('icons/dark/nav/rules.svg');}
-#nav_wiki a {
-    background-image: url('icons/dark/nav/wiki.svg');}
-#nav_staff a {
-    background-image: url('icons/dark/nav/staff.svg');}
-#inboxlia {
-    background-image: url('icons/dark/nav/inbox.svg');}
-a.top10ico {
-    background-image: url('icons/dark/nav/top10.svg');}
-a.bookmarksico {
-    background-image: url('icons/dark/nav/bookmarks.svg');}
-a.notificationsico {
-    background-image: url('icons/dark/nav/notifications.svg');}
-a.torrentsico {
-    background-image: url('icons/dark/nav/uploads.svg');}
-a.inventoryico {
-    background-image: url('icons/dark/nav/inventory.svg');}
-a.uploadico {
-    background-image: url('icons/dark/nav/upload.svg');}
-a.inviteico {
-    background-image: url('icons/dark/nav/invite.svg');}
-#staffinboxlia {
-    background-image: url('icons/dark/nav/staffpm.svg');}
-
 /** thumbs **/
 #thumbsup img {
     background-image: url('icons/dark/thumbsup_simple.svg');}
@@ -225,3 +187,50 @@ a.inviteico {
     background-image: url('icons/dark/thumbsdown_simple.svg');}
 
 /* background-image: url('data:image/svg+xml;utf8,');} */
+
+
+@media (min-width: 1760px) and (min-height: 659px) and (max-height: 903px) {
+/** navbar **/
+    #nav_torrents a {
+        background-image: url('icons/dark/nav/games.svg');}
+    #nav_collections a {
+        background-image: url('icons/dark/nav/bundles.svg');}
+    #nav_requests a {
+        background-image: url('icons/dark/nav/requests.svg');}
+    #nav_forums a {
+        background-image: url('icons/dark/nav/forums.svg');}
+    #nav_irc a {
+        background-image: url('icons/dark/nav/irc.svg');}
+    #nav_shop a {
+        background-image: url('icons/dark/nav/shop.svg');}
+    #nav_rules a {
+        background-image: url('icons/dark/nav/rules.svg');}
+    #nav_wiki a {
+        background-image: url('icons/dark/nav/wiki.svg');}
+    #nav_staff a {
+        background-image: url('icons/dark/nav/staff.svg');}
+    #inboxlia {
+        background-image: url('icons/dark/nav/inbox.svg');}
+    a.top10ico {
+        background-image: url('icons/dark/nav/top10.svg');}
+    a.bookmarksico {
+        background-image: url('icons/dark/nav/bookmarks.svg');}
+    a.notificationsico {
+        background-image: url('icons/dark/nav/notifications.svg');}
+    a.torrentsico {
+        background-image: url('icons/dark/nav/uploads.svg');}
+    a.inventoryico {
+        background-image: url('icons/dark/nav/inventory.svg');}
+    a.uploadico {
+        background-image: url('icons/dark/nav/upload.svg');}
+    a.inviteico {
+        background-image: url('icons/dark/nav/invite.svg');}
+    #staffinboxlia {
+        background-image: url('icons/dark/nav/staffpm.svg');}
+    
+    #userinfo_minor:before {
+        background-image: url('icons/dark/nav/more.svg');}
+    #userinfo_minor.highlighted:before,
+    #userinfo_minor:hover:before {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 6"><path d="M3,13a1,1,0,1,1-1,1,1.00113,1.00113,0,0,1,1-1m0-2a3,3,0,1,0,3,3,3,3,0,0,0-3-3Z" transform="translate(0 -11)" fill="#000"/><path d="M25,13a1,1,0,1,1-1,1,1.00113,1.00113,0,0,1,1-1m0-2a3,3,0,1,0,3,3,3,3,0,0,0-3-3Z" transform="translate(0 -11)" fill="#000"/><path d="M14,13a1,1,0,1,1-1,1,1.00113,1.00113,0,0,1,1-1m0-2a3,3,0,1,0,3,3,3,3,0,0,0-3-3Z" transform="translate(0 -11)" fill="#000"/></svg>');}
+}

@@ -1,4 +1,4 @@
-﻿@media (min-width: 1760px) {
+﻿@media (min-width: 1760px) and (min-height: 659px) {
     .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2) {
         display: none;}
     .forum_post .colhead_dark div[style="float: right;"] {
@@ -66,7 +66,7 @@
     #userinfo_minor a.notificationsico {
         letter-spacing: var(--p-dot3);}
 }
-@media (min-width: 1760px) and (max-height: 903px) {
+@media (min-width: 1760px) and (min-height: 659px) and (max-height: 903px) {
     #userinfo_minor {
         top: 239px;
         background: linear-gradient(to right, var(--c-body) 98%, var(--c-table-brdr) 100%);
@@ -86,12 +86,13 @@
         height: 60px;
         bottom: -60px;
         right: 0;
-        background-image: url(https://gitcdn.xyz/cdn/trustless-zz/jacoto/bc73f5d…/icons/dark/nav/inbox.svg);
         line-height: 92px;
         font-size: 18px;
         background-size: 28px 28px;
         background-position: center 6px;
         background-repeat: no-repeat;}
+    #userinfo_minor.highlighted:before {
+        font-weight: bold;}
     #userinfo_minor:hover:before {
         color: var(--c-anchor-hvr);
         background-color: var(--c-b3);}
@@ -101,8 +102,6 @@
         right: 50%;
         bottom: -60px;
         background-color: var(--c-body);}
-}
-@media (min-width: 1760px) and (max-height: 900px) {
     #userinfo_username .sub:before {
         content: 'User Menu';
         width: 200px;
@@ -141,4 +140,3 @@
     #userinfo_stats {
         top: 147px;}
 }
-*/
