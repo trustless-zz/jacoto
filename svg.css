@@ -3,105 +3,105 @@
 body {
     background-image: url('icons/dark/background.svg');}
 
-#torrentbrowse #groupplatform a[href$="=Amiga+CD32"] {background: url(caticons/amigacd32_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=Amstrad+CPC"] {background: url(caticons/amstradcpc_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=Atari+ST"] {background: url(caticons/atarist_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=Fairchild+Channel+F"] {background: url(caticons/fairchildchannelf_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=Game+Boy+Color"] {background: url(caticons/gameboycolor_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=Game Gear"] {background: url(caticons/gamegear_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=NES"] {background: url(caticons/nes_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=New+Nintendo+3DS"] {background: url(caticons/newnintendo3ds_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=Nintendo+3DS"] {background: url(caticons/nintendo3ds_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=Nokia+N-Gage"] {background: url(caticons/nokian-gage_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=RCA+Studio+II"] {background: url(caticons/rcastudioii_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=Tangerine+Oric"] {background: url(caticons/tangerineoric_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=V.Smile"] {background: url(caticons/v.smile_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=Watara+Supervision"] {background: url(caticons/watarasupervision_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=Wii+U"] {background: url(caticons/wiiu_dark.svg);}
-#torrentbrowse #groupplatform a[href$="=3DO"] {background: url(caticons/3do.svg);}
-#torrentbrowse #groupplatform a[href$="=Android"] {background: url(caticons/android.svg);}
-#torrentbrowse #groupplatform a[href$="=Apple+Bandai+Pippin"] {background: url(caticons/applebandaipippin.svg);}
-#torrentbrowse #groupplatform a[href$="=Atari+2600"] {background: url(caticons/atari2600.svg);}
-#torrentbrowse #groupplatform a[href$="=Atari+5200"] {background: url(caticons/atari5200.svg);}
-#torrentbrowse #groupplatform a[href$="=Atari+7800"] {background: url(caticons/atari7800.svg);}
-#torrentbrowse #groupplatform a[href$="=Atari+Jaguar"] {background: url(caticons/atarijaguar.svg);}
-#torrentbrowse #groupplatform a[href$="=Atari+Lynx"] {background: url(caticons/atarilynx.svg);}
-#torrentbrowse #groupplatform a[href$="=Bandai+WonderSwan"] {background: url(caticons/bandaiwonderswan.svg);}
-#torrentbrowse #groupplatform a[href$="=Bandai+WonderSwan+Color"] {background: url(caticons/bandaiwonderswancolor.svg);}
-#torrentbrowse #groupplatform a[href$="=Board+Game"] {background: url(caticons/boardgame.svg);}
-#torrentbrowse #groupplatform a[href$="=Card+Game"] {background: url(caticons/cardgame.svg);}
-#torrentbrowse #groupplatform a[href$="=Casio+Loopy"] {background: url(caticons/casioloopy.svg);}
-#torrentbrowse #groupplatform a[href$="=Casio+PV-1000"] {background: url(caticons/casiopv-1000.svg);}
-#torrentbrowse #groupplatform a[href$="=Colecovision"] {background: url(caticons/colecovision.svg);}
-#torrentbrowse #groupplatform a[href$="=Commodore+128"] {background: url(caticons/commodore128.svg);}
-#torrentbrowse #groupplatform a[href$="=Commodore+64"] {background: url(caticons/commodore64.svg);}
-#torrentbrowse #groupplatform a[href$="=Commodore+Amiga"] {background: url(caticons/commodoreamiga.svg);}
-#torrentbrowse #groupplatform a[href$="=Commodore+Plus-4"] {background: url(caticons/commodoreplus-4.svg);}
-#torrentbrowse #groupplatform a[href$="=Commodore+VIC-20"] {background: url(caticons/commodorevic-20.svg);}
-#torrentbrowse #groupplatform a[href$="=CreatiVision"] {background: url(caticons/creativision.svg);}
-#torrentbrowse #groupplatform a[href$="=DOS"] {background: url(caticons/dos.svg);}
-#torrentbrowse #groupplatform a[href$="=Dreamcast"] {background: url(caticons/dreamcast.svg);}
-#torrentbrowse #groupplatform a[href$="=Emerson+Arcadia+2001"] {background: url(caticons/emersonarcadia2001.svg);}
-#torrentbrowse #groupplatform a[href$="=Entex+Adventure+Vision"] {background: url(caticons/entexadventurevision.svg);}
-#torrentbrowse #groupplatform a[href$="=Epoch+Super+Casette+Vision"] {background: url(caticons/epochsupercasettevision.svg);}
-#torrentbrowse #groupplatform a[href$="=Funtech+Super+Acan"] {background: url(caticons/funtechsuperacan.svg);}
-#torrentbrowse #groupplatform a[href$="=Game.com"] {background: url(icon/gamecom56.png);}
-#torrentbrowse #groupplatform a[href$="=Game+Boy"] {background: url(caticons/gameboy.svg);}
-#torrentbrowse #groupplatform a[href$="=Game+Boy+Advance"] {background: url(caticons/gameboyadvance.svg);}
-#torrentbrowse #groupplatform a[href$="=GamePark+GP32"] {background: url(caticons/gameparkgp32.svg);}
-#torrentbrowse #groupplatform a[href$="=General+Computer+Vectrex"] {background: url(caticons/generalcomputervectrex.svg);}
-#torrentbrowse #groupplatform a[href$="=Gizmondo"] {background: url(caticons/gizmondo.svg);}
-#torrentbrowse #groupplatform a[href$="=Hartung+Game+Master"] {background: url(caticons/hartunggamemaster.svg);}
-#torrentbrowse #groupplatform a[href$="=Mattel+Intellivision"] {background: url(caticons/mattelintellivision.svg);}
-#torrentbrowse #groupplatform a[href$="=Interactive+DVD"] {background: url(caticons/interactivedvd.svg);}
-#torrentbrowse #groupplatform a[href$="=iOS"] {background: url(caticons/ios.svg);}
-#torrentbrowse #groupplatform a[href$="=Linux"] {background: url(caticons/linux.svg);}
-#torrentbrowse #groupplatform a[href$="=Mac"] {background: url(caticons/mac.svg);}
-#torrentbrowse #groupplatform a[href$="=Magnavox-Phillips+Odyssey"] {background: url(caticons/magnavox-phillipsodyssey.svg);}
-#torrentbrowse #groupplatform a[href$="=Master+System"] {background: url(caticons/mastersystem.svg);}
-#torrentbrowse #groupplatform a[href$="=Mega+Drive"] {background: url(caticons/megadrive.svg);}
-#torrentbrowse #groupplatform a[href$="=Memotech+MTX"] {background: url(caticons/memotechmtx.svg);}
-#torrentbrowse #groupplatform a[href$="=Miles+Gordon+Sam+Coupe"] {background: url(caticons/milesgordonsamcoupe.svg);}
-#torrentbrowse #groupplatform a[href$="=Miniature WargamesMSX"] {background: url(caticons/miniaturewargames.svg);}
-#torrentbrowse #groupplatform a[href$="=MSX"] {background: url(caticons/msx.svg);}
-#torrentbrowse #groupplatform a[href$="=MSX+2"] {background: url(caticons/msx2.svg);}
-#torrentbrowse #groupplatform a[href$="=NEC+PC-FX"] {background: url(caticons/necpc-fx.svg);}
-#torrentbrowse #groupplatform a[href$="=NEC+PC-98"] {background: url(caticons/necpc-98.svg);}
-#torrentbrowse #groupplatform a[href$="=NEC+SuperGrafx"] {background: url(caticons/necsupergrafx.svg);}
-#torrentbrowse #groupplatform a[href$="=NEC+SuperGrafx-16"] {background: url(caticons/necturbografx-16.svg);}
-#torrentbrowse #groupplatform a[href$="=Nintendo+64"] {background: url(caticons/nintendo64.svg);}
-#torrentbrowse #groupplatform a[href$="=Nintendo+DS"] {background: url(caticons/nintendods.svg);}
-#torrentbrowse #groupplatform a[href$="=Nintendo+GameCube"] {background: url(caticons/nintendogamecube.svg);}
-#torrentbrowse #groupplatform a[href$="=Pen+and +Paper+RPG"] {background: url(caticons/penandpaperrpg.svg);}
-#torrentbrowse #groupplatform a[href$="=Philips+Videopac+"] {background: url(caticons/philipsvideopac+.svg);}
-#torrentbrowse #groupplatform a[href$="=Phone%2FPDA"] {background: url(caticons/phonepda.svg);}
-#torrentbrowse #groupplatform a[href$="=Pico"] {background: url(caticons/pico.svg);}
-#torrentbrowse #groupplatform a[href$="=PlayStation+1"] {background: url(caticons/playstation.svg);}
-#torrentbrowse #groupplatform a[href$="=PlayStation+2"] {background: url(caticons/playstation2.svg);}
-#torrentbrowse #groupplatform a[href$="=PlayStation+3"] {background: url(caticons/playstation3.svg);}
-#torrentbrowse #groupplatform a[href$="=PlaysStation+4"] {background: url(caticons/playstation4.svg);}
-#torrentbrowse #groupplatform a[href$="=PlaysStation+Portable"] {background: url(caticons/playstationportable.svg);}
-#torrentbrowse #groupplatform a[href$="=Playstation+Vita"] {background: url(caticons/playstationvita.svg);}
-#torrentbrowse #groupplatform a[href$="=Pokemon+Mini"] {background: url(caticons/pokemonmini.svg);}
-#torrentbrowse #groupplatform a[href$="=Retro+-+Other"] {background: url(caticons/retro-other.svg);}
-#torrentbrowse #groupplatform a[href$="=Saturn"] {background: url(caticons/saturn.svg);}
-#torrentbrowse #groupplatform a[href$="=SG-1000"] {background: url(caticons/sg-1000.svg);}
-#torrentbrowse #groupplatform a[href$="=Sharp+x1"] {background: url(caticons/sharpx1.svg);}
-#torrentbrowse #groupplatform a[href$="=Sharp+X68000"] {background: url(caticons/sharpx68000.svg);}
-#torrentbrowse #groupplatform a[href$="=SNK+Neo+Geo"] {background: url(caticons/snkneogeo.svg);}
-#torrentbrowse #groupplatform a[href$="=SNK+Neo+Geo+Pocket"] {background: url(caticons/snkneogeopocket.svg);}
-#torrentbrowse #groupplatform a[href$="=SNES"] {background: url(caticons/snes.svg);}
-#torrentbrowse #groupplatform a[href$="=Switch"] {background: url(caticons/switch.svg);}
-#torrentbrowse #groupplatform a[href$="=Taito+Type+X"] {background: url(caticons/taitotypex.svg);}
-#torrentbrowse #groupplatform a[href$="=Tandy+Color+Computer"] {background: url(caticons/tandycolorcomputer.svg);}
-#torrentbrowse #groupplatform a[href$="=Thomson+MO5"] {background: url(caticons/thomsonmo5.svg);}
-#torrentbrowse #groupplatform a[href$="=General+Computer+Vectrex"] {background: url(caticons/vectrex.svg);}
-#torrentbrowse #groupplatform a[href$="=Virtual+Boy"] {background: url(caticons/virtualboy.svg);}
-#torrentbrowse #groupplatform a[href$="=Wii"] {background: url(caticons/wii.svg);}
-#torrentbrowse #groupplatform a[href$="=Windows"] {background: url(caticons/windows.svg);}
-#torrentbrowse #groupplatform a[href$="=Xbox"] {background: url(caticons/xbox.svg);}
-#torrentbrowse #groupplatform a[href$="=Xbox+360"] {background: url(caticons/xbox360.svg);}
-#torrentbrowse #groupplatform a[href$="=ZX+Spectrum"] {background: url(caticons/zxspectrum.svg);}
+#torrentbrowse #groupplatform a[href$="=Amiga+CD32"] {background-image: url(caticons/amigacd32_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=Amstrad+CPC"] {background-image: url(caticons/amstradcpc_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=Atari+ST"] {background-image: url(caticons/atarist_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=Fairchild+Channel+F"] {background-image: url(caticons/fairchildchannelf_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=Game+Boy+Color"] {background-image: url(caticons/gameboycolor_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=Game Gear"] {background-image: url(caticons/gamegear_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=NES"] {background-image: url(caticons/nes_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=New+Nintendo+3DS"] {background-image: url(caticons/newnintendo3ds_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=Nintendo+3DS"] {background-image: url(caticons/nintendo3ds_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=Nokia+N-Gage"] {background-image: url(caticons/nokian-gage_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=RCA+Studio+II"] {background-image: url(caticons/rcastudioii_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=Tangerine+Oric"] {background-image: url(caticons/tangerineoric_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=V.Smile"] {background-image: url(caticons/v.smile_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=Watara+Supervision"] {background-image: url(caticons/watarasupervision_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=Wii+U"] {background-image: url(caticons/wiiu_dark.svg);}
+#torrentbrowse #groupplatform a[href$="=3DO"] {background-image: url(caticons/3do.svg);}
+#torrentbrowse #groupplatform a[href$="=Android"] {background-image: url(caticons/android.svg);}
+#torrentbrowse #groupplatform a[href$="=Apple+Bandai+Pippin"] {background-image: url(caticons/applebandaipippin.svg);}
+#torrentbrowse #groupplatform a[href$="=Atari+2600"] {background-image: url(caticons/atari2600.svg);}
+#torrentbrowse #groupplatform a[href$="=Atari+5200"] {background-image: url(caticons/atari5200.svg);}
+#torrentbrowse #groupplatform a[href$="=Atari+7800"] {background-image: url(caticons/atari7800.svg);}
+#torrentbrowse #groupplatform a[href$="=Atari+Jaguar"] {background-image: url(caticons/atarijaguar.svg);}
+#torrentbrowse #groupplatform a[href$="=Atari+Lynx"] {background-image: url(caticons/atarilynx.svg);}
+#torrentbrowse #groupplatform a[href$="=Bandai+WonderSwan"] {background-image: url(caticons/bandaiwonderswan.svg);}
+#torrentbrowse #groupplatform a[href$="=Bandai+WonderSwan+Color"] {background-image: url(caticons/bandaiwonderswancolor.svg);}
+#torrentbrowse #groupplatform a[href$="=Board+Game"] {background-image: url(caticons/boardgame.svg);}
+#torrentbrowse #groupplatform a[href$="=Card+Game"] {background-image: url(caticons/cardgame.svg);}
+#torrentbrowse #groupplatform a[href$="=Casio+Loopy"] {background-image: url(caticons/casioloopy.svg);}
+#torrentbrowse #groupplatform a[href$="=Casio+PV-1000"] {background-image: url(caticons/casiopv-1000.svg);}
+#torrentbrowse #groupplatform a[href$="=Colecovision"] {background-image: url(caticons/colecovision.svg);}
+#torrentbrowse #groupplatform a[href$="=Commodore+128"] {background-image: url(caticons/commodore128.svg);}
+#torrentbrowse #groupplatform a[href$="=Commodore+64"] {background-image: url(caticons/commodore64.svg);}
+#torrentbrowse #groupplatform a[href$="=Commodore+Amiga"] {background-image: url(caticons/commodoreamiga.svg);}
+#torrentbrowse #groupplatform a[href$="=Commodore+Plus-4"] {background-image: url(caticons/commodoreplus-4.svg);}
+#torrentbrowse #groupplatform a[href$="=Commodore+VIC-20"] {background-image: url(caticons/commodorevic-20.svg);}
+#torrentbrowse #groupplatform a[href$="=CreatiVision"] {background-image: url(caticons/creativision.svg);}
+#torrentbrowse #groupplatform a[href$="=DOS"] {background-image: url(caticons/dos.svg);}
+#torrentbrowse #groupplatform a[href$="=Dreamcast"] {background-image: url(caticons/dreamcast.svg);}
+#torrentbrowse #groupplatform a[href$="=Emerson+Arcadia+2001"] {background-image: url(caticons/emersonarcadia2001.svg);}
+#torrentbrowse #groupplatform a[href$="=Entex+Adventure+Vision"] {background-image: url(caticons/entexadventurevision.svg);}
+#torrentbrowse #groupplatform a[href$="=Epoch+Super+Casette+Vision"] {background-image: url(caticons/epochsupercasettevision.svg);}
+#torrentbrowse #groupplatform a[href$="=Funtech+Super+Acan"] {background-image: url(caticons/funtechsuperacan.svg);}
+#torrentbrowse #groupplatform a[href$="=Game.com"] {background-image: url(icon/gamecom56.png);}
+#torrentbrowse #groupplatform a[href$="=Game+Boy"] {background-image: url(caticons/gameboy.svg);}
+#torrentbrowse #groupplatform a[href$="=Game+Boy+Advance"] {background-image: url(caticons/gameboyadvance.svg);}
+#torrentbrowse #groupplatform a[href$="=GamePark+GP32"] {background-image: url(caticons/gameparkgp32.svg);}
+#torrentbrowse #groupplatform a[href$="=General+Computer+Vectrex"] {background-image: url(caticons/generalcomputervectrex.svg);}
+#torrentbrowse #groupplatform a[href$="=Gizmondo"] {background-image: url(caticons/gizmondo.svg);}
+#torrentbrowse #groupplatform a[href$="=Hartung+Game+Master"] {background-image: url(caticons/hartunggamemaster.svg);}
+#torrentbrowse #groupplatform a[href$="=Mattel+Intellivision"] {background-image: url(caticons/mattelintellivision.svg);}
+#torrentbrowse #groupplatform a[href$="=Interactive+DVD"] {background-image: url(caticons/interactivedvd.svg);}
+#torrentbrowse #groupplatform a[href$="=iOS"] {background-image: url(caticons/ios.svg);}
+#torrentbrowse #groupplatform a[href$="=Linux"] {background-image: url(caticons/linux.svg);}
+#torrentbrowse #groupplatform a[href$="=Mac"] {background-image: url(caticons/mac.svg);}
+#torrentbrowse #groupplatform a[href$="=Magnavox-Phillips+Odyssey"] {background-image: url(caticons/magnavox-phillipsodyssey.svg);}
+#torrentbrowse #groupplatform a[href$="=Master+System"] {background-image: url(caticons/mastersystem.svg);}
+#torrentbrowse #groupplatform a[href$="=Mega+Drive"] {background-image: url(caticons/megadrive.svg);}
+#torrentbrowse #groupplatform a[href$="=Memotech+MTX"] {background-image: url(caticons/memotechmtx.svg);}
+#torrentbrowse #groupplatform a[href$="=Miles+Gordon+Sam+Coupe"] {background-image: url(caticons/milesgordonsamcoupe.svg);}
+#torrentbrowse #groupplatform a[href$="=Miniature WargamesMSX"] {background-image: url(caticons/miniaturewargames.svg);}
+#torrentbrowse #groupplatform a[href$="=MSX"] {background-image: url(caticons/msx.svg);}
+#torrentbrowse #groupplatform a[href$="=MSX+2"] {background-image: url(caticons/msx2.svg);}
+#torrentbrowse #groupplatform a[href$="=NEC+PC-FX"] {background-image: url(caticons/necpc-fx.svg);}
+#torrentbrowse #groupplatform a[href$="=NEC+PC-98"] {background-image: url(caticons/necpc-98.svg);}
+#torrentbrowse #groupplatform a[href$="=NEC+SuperGrafx"] {background-image: url(caticons/necsupergrafx.svg);}
+#torrentbrowse #groupplatform a[href$="=NEC+SuperGrafx-16"] {background-image: url(caticons/necturbografx-16.svg);}
+#torrentbrowse #groupplatform a[href$="=Nintendo+64"] {background-image: url(caticons/nintendo64.svg);}
+#torrentbrowse #groupplatform a[href$="=Nintendo+DS"] {background-image: url(caticons/nintendods.svg);}
+#torrentbrowse #groupplatform a[href$="=Nintendo+GameCube"] {background-image: url(caticons/nintendogamecube.svg);}
+#torrentbrowse #groupplatform a[href$="=Pen+and+Paper+RPG"] {background-image: url(caticons/penandpaperrpg.svg);}
+#torrentbrowse #groupplatform a[href$="=Philips+Videopac+"] {background-image: url(caticons/philipsvideopac+.svg);}
+#torrentbrowse #groupplatform a[href$="=Phone%2FPDA"] {background-image: url(caticons/phonepda.svg);}
+#torrentbrowse #groupplatform a[href$="=Pico"] {background-image: url(caticons/pico.svg);}
+#torrentbrowse #groupplatform a[href$="=PlayStation+1"] {background-image: url(caticons/playstation.svg);}
+#torrentbrowse #groupplatform a[href$="=PlayStation+2"] {background-image: url(caticons/playstation2.svg);}
+#torrentbrowse #groupplatform a[href$="=PlayStation+3"] {background-image: url(caticons/playstation3.svg);}
+#torrentbrowse #groupplatform a[href$="=PlayStation+4"] {background-image: url(caticons/playstation4.svg);}
+#torrentbrowse #groupplatform a[href$="=PlayStation+Portable"] {background-image: url(caticons/playstationportable.svg);}
+#torrentbrowse #groupplatform a[href$="=PlayStation+Vita"] {background-image: url(caticons/playstationvita.svg);}
+#torrentbrowse #groupplatform a[href$="=Pokemon+Mini"] {background-image: url(caticons/pokemonmini.svg);}
+#torrentbrowse #groupplatform a[href$="=Retro+-+Other"] {background-image: url(caticons/retro-other.svg);}
+#torrentbrowse #groupplatform a[href$="=Saturn"] {background-image: url(caticons/saturn.svg);}
+#torrentbrowse #groupplatform a[href$="=SG-1000"] {background-image: url(caticons/sg-1000.svg);}
+#torrentbrowse #groupplatform a[href$="=Sharp+X1"] {background-image: url(caticons/sharpx1.svg);}
+#torrentbrowse #groupplatform a[href$="=Sharp+X68000"] {background-image: url(caticons/sharpx68000.svg);}
+#torrentbrowse #groupplatform a[href$="=SNK+Neo+Geo"] {background-image: url(caticons/snkneogeo.svg);}
+#torrentbrowse #groupplatform a[href$="=SNK+Neo+Geo+Pocket"] {background-image: url(caticons/snkneogeopocket.svg);}
+#torrentbrowse #groupplatform a[href$="=SNES"] {background-image: url(caticons/snes.svg);}
+#torrentbrowse #groupplatform a[href$="=Switch"] {background-image: url(caticons/switch.svg);}
+#torrentbrowse #groupplatform a[href$="=Taito+Type+X"] {background-image: url(caticons/taitotypex.svg);}
+#torrentbrowse #groupplatform a[href$="=Tandy+Color+Computer"] {background-image: url(caticons/tandycolorcomputer.svg);}
+#torrentbrowse #groupplatform a[href$="=Thomson+MO5"] {background-image: url(caticons/thomsonmo5.svg);}
+#torrentbrowse #groupplatform a[href$="=General+Computer+Vectrex"] {background-image: url(caticons/vectrex.svg);}
+#torrentbrowse #groupplatform a[href$="=Virtual+Boy"] {background-image: url(caticons/virtualboy.svg);}
+#torrentbrowse #groupplatform a[href$="=Wii"] {background-image: url(caticons/wii.svg);}
+#torrentbrowse #groupplatform a[href$="=Windows"] {background-image: url(caticons/windows.svg);}
+#torrentbrowse #groupplatform a[href$="=Xbox"] {background-image: url(caticons/xbox.svg);}
+#torrentbrowse #groupplatform a[href$="=Xbox+360"] {background-image: url(caticons/xbox360.svg);}
+#torrentbrowse #groupplatform a[href$="=ZX+Spectrum"] {background-image: url(caticons/zxspectrum.svg);}
 
 /** anchor-like hover **/
 .torrent_table #leechers_icon:hover img,
@@ -289,7 +289,7 @@ a[title="Remove"] {
 /* background-image: url('data:image/svg+xml;utf8,');} */
 
 
-@media (min-width: 1760px) and (min-height: 659px) and (max-height: 903px) {
+@media (min-width: 1760px) and (min-height: 659px) {
 /** navbar **/
     #nav_torrents a {
         background-image: url('icons/dark/nav/games.svg');}

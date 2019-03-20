@@ -1186,12 +1186,18 @@ input[type=submit]:hover:active {
 .head[title="Click to expand/collapse"],
 .sidebar #freeleech_time_left #progress_bar {
     position: relative;}
-#torrentbrowse #groupplatform a {
+#torrentbrowse #groupplatform {
     width: 34px;
     height: 34px;
     position: absolute;
     left: -36px;
-    top: calc(50% - 17px);
+    top: calc(50% - 17px);}
+#torrentbrowse td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) {
+    background: none;}
+#torrentbrowse #groupplatform a {
+    width: 100%;
+    height: 100%;
+    display: block;
     background-size: 28px 28px;
     background-repeat: no-repeat;
     background-position: center;}
