@@ -66,51 +66,41 @@
     #userinfo_minor a.notificationsico {
         letter-spacing: var(--p-dot3);}
 }
-/*
-@media (min-width: 1760px) and (min-height: 937px) and (max-height: 941px) {
-    #header .clan_trophy img {
-        height: 60px;}
-}
-@media (min-width: 1760px) and (max-height: 936px) {
-    #userinfo_stats:before,
-    #userinfo_minor:before {
+@media (min-width: 1760px) and (max-height: 903px) {
+    #userinfo_minor {
+        top: 239px;
+        background: linear-gradient(to right, var(--c-body) 98%, var(--c-table-brdr) 100%);
+        flex-flow: wrap-reverse !important;
+        clip: rect(242px, 200px, 302px, 100px);
+        border-right: var(--p-main-brdr);
+        border-top: 2px solid var(--c-main-brdr);
         -webkit-transition: all .1s linear;
         -o-transition: all .1s linear;
         transition: all .1s linear;}
-    #userinfo_minor {
-        clip: rect(272px, 200px, 302px, 0px);
-        display: flex;
-        flex-flow: column-reverse;
-        top: 277px;
-        z-index: 9;
-        background-color: var(--c-body);
-        border-top: 2px solid var(--c-main-brdr);
-        border-right: var(--p-main-brdr);
-        -webkit-box-shadow: inset var(--p-main-shdw);
-        box-shadow: inset var(--p-main-shdw);
-        -webkit-transition: all .2s linear;
-        -o-transition: all .2s linear;
-        transition: all .2s linear;
-        transition-delay: .5s;}
-    #userinfo_minor:before {
-        position: absolute;
-        bottom: -30px;
-        content: 'Menu';
-        width: 200px;
-        height: 30px;
-        font-size: 17px;
-        line-height: 30px;
-        font-weight: 600;}
-    #userinfo_minor.highlighted:before {
-        background-color: var(--c-b3);
-        font-weight: 700;}
-    #userinfo_minor:hover:before {
-        background-color: var(--c-b1);}
     #userinfo_minor:hover {
-        transition-delay: 0s;
         clip: rect(0, 200px, 302px, 0);}
-    #header .clan_trophy {
-        top: 579px;}
+    #userinfo_minor:before {
+        content: 'More';
+        position: absolute;
+        width: 100px;
+        height: 60px;
+        bottom: -60px;
+        right: 0;
+        background-image: url(https://gitcdn.xyz/cdn/trustless-zz/jacoto/bc73f5d…/icons/dark/nav/inbox.svg);
+        line-height: 92px;
+        font-size: 18px;
+        background-size: 28px 28px;
+        background-position: center 6px;
+        background-repeat: no-repeat;}
+    #userinfo_minor:hover:before {
+        color: var(--c-anchor-hvr);
+        background-color: var(--c-b3);}
+    #userinfo_minor li:first-child {
+        left: unset;
+        top: unset;
+        right: 50%;
+        bottom: -60px;
+        background-color: var(--c-body);}
 }
 @media (min-width: 1760px) and (max-height: 900px) {
     #userinfo_username .sub:before {

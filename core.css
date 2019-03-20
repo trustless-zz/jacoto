@@ -729,7 +729,9 @@ a {
     border: 0;
     background-color: transparent;}
 #index #freeleech .group_torrent >span:first-child:hover,
-a:hover {
+a:hover,
+.forum_post .colhead_dark a.username:hover,
+.forum_post .colhead_dark a.post_id:hover {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
 #recommended #vanityhouse a:first-child,
@@ -1155,9 +1157,9 @@ input[type=submit]:hover:active {
     margin: 0 auto;}
 #dailygazelle #gazelletitle a {
     text-align: center;
-    width: 100%;
+    width: max-content;
     display: block;
-    margin: 8px 0 10px 0;}
+    margin: 8px auto 10px auto;}
 
 #center_poll {
     background-image: var(--p-poll-grdnt);
@@ -1201,7 +1203,8 @@ input[type=submit]:hover:active {
 #low_seed_fl_more a {
     display: block;
     text-align: center;
-    margin: 5px 0 -10px 0;}
+    margin: 5px auto -10px auto;
+    width: max-content;}
 
 #recommended #vanityhouse {
     position: relative;
@@ -1258,7 +1261,9 @@ input[type=submit]:hover:active {
     width: 200px !important;
     border-top: 2px solid var(--c-main-brdr);
     filter: none !important;
-    line-height: 17px;}
+    line-height: 17px;
+    display: flex;
+    flex-flow: wrap;}
 i.fa.fa-fl-pots {
     color: #6441a5 !important;
 	font-family: OpenSans, Helvetica, Arial, sans-serif;
@@ -1285,21 +1290,23 @@ i.fa.fa-fl-pots {
 
 #header .clan_trophy {
     position: absolute !important;
-    top: 819px;
+    top: 781px;
     right: unset !important;
     left: 0 !important;
     bottom: unset !important;
     width: 200px !important;
     border-top: 2px solid var(--c-main-brdr);}
 #header .clan_trophy img {
-    height: 65px;
+    height: 60px;
     filter: none !important;
     padding: 10px 0;}
 
 #header .clan_trophy img {
     opacity: .7;}
 #header .global_buffs a {
-    opacity: .9;}
+    opacity: .9;
+    display: block;
+    height: 100%;}
 #header .global_buffs a:hover,
 #header .clan_trophy:hover img {
     opacity: 1;}
@@ -1597,7 +1604,7 @@ a .error_message:hover:active {
 .torrent_table .hide_torrents .show_torrents_link {
     transform: rotate(0deg);}
 .torrent_table td.center:first-child {
-    width: 1px;
+    width: 20px;
     overflow: hidden;
     position: relative;
     box-shadow: var(--p-show-hide-brdr-shdw);}
@@ -1783,6 +1790,7 @@ select:hover,
 input[type="number"]:hover,
 input[type="number"]:focus,
 input[type="text"]:hover,
+input[disabled],
 input[type="text"]:focus {
     background-color: var(--c-edition);}
 select:focus,
@@ -2073,8 +2081,6 @@ li:not(.suggested_similar) .similar_votes >span {
     line-height: 32px;
     padding: 0 4px 0 8px;
     background: var(--p-forum-colhead);
-    -webkit-box-shadow: var(--p-header-shdw);
-    box-shadow: var(--p-header-shdw);
     border-right: var(--p-main-brdr);
     clip: rect(0, 15px, 32px, 0);}
 .forum_post .colhead_dark a.post_id:before {
