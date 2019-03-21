@@ -26,6 +26,7 @@
     --c-main-shdw:						rgba(0,0,0,.2);
     --c-img-bcg-anchor: 				rgb(230, 242, 242);
     --c-on: 							rgb(29, 145, 0);						/* #1E9400 */
+    --c-yellow: 						rgb(145, 145, 0);
     --c-off: 							rgb(163, 0, 0);							/* #910000 */
     --c-colhead-click:					rgba(255, 255, 255, .15);
     --c-colhead-act: 					rgba(255, 255, 255, .3);
@@ -64,7 +65,7 @@
     --p-btn-hvr:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-btn-b2) 100%);
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
     --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
-    --p-clickable-shdw:					0 0 0 3px var(--c-b3);
+    --p-clickable-shdw:					0 0 0 3px var(--c-anchor-hvr-bcg);
     --p-lh: 							calc(100% + 5px);
     --p-dot3:							-.02142857142em;}
 
@@ -395,40 +396,9 @@ td, th, tr {
 	font-family: OpenSans, Helvetica, Arial, sans-serif !important;
 	font-size: 12px !important;}
 
-#header {
-    font-size: 1em;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    z-index: 1;
-    margin-bottom: 20px;
-    position: sticky;
-    top: -41px;}
-
-#header #announcement {
-    width: calc(100% - 402px);
-    padding: 5px 0;
-    margin: 0 auto;
-    background-color: var(--c-box);
-    border-bottom: var(--p-main-brdr);
-    -webkit-box-shadow: var(--p-header-shdw);
-    box-shadow: var(--p-header-shdw);
-    z-index: -11;
-    position: relative;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% + 10px), 0 calc(100% + 10px));
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% + 10px), 0 calc(100% + 10px));}
-
 li.active {
     font-weight: 600;}
 
-#searchbars {
-    text-align: center;
-    width: 100%;
-    height: 40px;
-    background: var(--p-searchbar-grdnt);
-    -webkit-box-shadow: var(--p-header-shdw);
-    box-shadow: var(--p-header-shdw);
-    border-bottom: var(--p-main-brdr);}
 #searchbars ul {
     margin: 0 auto;
     max-width: 1314px;
@@ -473,76 +443,6 @@ li.active {
     color: var(--c-txt);}
 .autocomplete_list li:hover:active {
     background-color: var(--c-b1);}
-
-#userinfo_minor a {
-    color: var(--c-txt);
-    font-size: 17px;
-    width: 100%;
-    display: inline-block;
-    line-height: 30px;}
-
-#nav_index {
-    display: none !important;}
-#userinfo_username {
-    position: absolute;
-    top: 40px;
-    right: 0;
-    width: 200px;
-    z-index: 10;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap-reverse;}
-
-#userinfo_stats li, #userinfo_stats li a {
-    height: 26px;}
-
-#nav_userinfo {
-    text-align: center;
-    line-height: 36px;
-    height: 36px;
-    width: 100%;}
-#nav_userinfo a.username {
-    font-weight: 600;
-    width: 100%;
-    height: 100%;
-    display: inline-block;}
-#userinfo_username .sub {
-    width: 200px;
-    line-height: 28px;
-    text-align: center;
-    visibility: visible !important;
-    right: 0;
-    top: 73px;
-    position: absolute;
-    font-size: 16px;}
-#userinfo_stats {
-    position: absolute;
-    top: 311px;
-    right: 0;
-    width: 200px;
-    display: flex;
-    flex-flow: column;
-    line-height: 26px;
-    font-size: 15px;
-    flex-direction: row;
-    flex-wrap: wrap;}
-#userinfo_username .sub a {
-    width: 100%;
-    display: block;}
-
-#userinfo_stats li a,
-#userinfo_username .sub a,
-#menu a,
-#userinfo_username li:not(.sub) a {
-    color: var(--c-txt);}
-
-#nav_useredit,
-#nav_logout,
-#nav_donate {
-    padding-top: 1px;
-    height: 36px;
-    line-height: 36px;
-    width: calc(100%/3);}
 
 #index #freeleech .group_torrent >span:not(:first-child) {
     padding: 0 2px;}
@@ -732,7 +632,8 @@ a {
 #index #freeleech .group_torrent >span:first-child:hover,
 a:hover,
 .forum_post .colhead_dark a.username:hover,
-.forum_post .colhead_dark a.post_id:hover {
+.forum_post .colhead_dark a.post_id:hover,
+a:hover .ratings {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
 #recommended #vanityhouse a:first-child,
@@ -751,7 +652,8 @@ a:hover,
 .next:hover,
 #taglist a:hover,
 .filter_torrents.advanced #taglist td:hover,
-.torrent_details .group_torrent td:first-child a {
+.torrent_details .group_torrent td:first-child a,
+.box_game_ratings a[target="_blank"]:hover {
     background-color: transparent;}
 
 a,
@@ -792,7 +694,8 @@ input[type=submit],
 .head[title="Click to expand/collapse"]:before,
 .torrent_details .torrent_table .colhead_dark td:nth-child(1):before,
 .similar img,
-.sidebar .userratingdiv img {
+.sidebar .userratingdiv img,
+.torrent_details #grouplinks a div {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1186,21 +1089,6 @@ input[type=submit]:hover:active {
 .head[title="Click to expand/collapse"],
 .sidebar #freeleech_time_left #progress_bar {
     position: relative;}
-#torrentbrowse #groupplatform {
-    width: 34px;
-    height: 34px;
-    position: absolute;
-    left: -36px;
-    top: calc(50% - 17px);}
-#torrentbrowse td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) {
-    background: none;}
-#torrentbrowse #groupplatform a {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-size: 28px 28px;
-    background-repeat: no-repeat;
-    background-position: center;}
 .sidebar #freeleech_time_left #progress_bar .main_bar {
     background: var(--p-lsfl-pulse);
     display: block;
@@ -2138,17 +2026,55 @@ li:not(.suggested_similar) .similar_votes >span {
     vertical-align: text-top;}
 .ratings .green,
 #thumbsup {
-    font-size: 30px;
     color: var(--c-on);}
 .ratings .red,
 #thumbsdown {
-    font-size: 30px;
     color: var(--c-off);}
+.ratings .yellow {
+    color: var(--c-yellow);}
+#thumbsup,
+#thumbsdown {
+    font-size: 30px;}
 
-#torrentbrowse #hyphen {
-    display: none;}
+#grouplinks a div {
+    opacity: .7;
+    filter: grayscale(.3);
+    padding: 3px;
+    margin: -3px;}
+#grouplinks a div:hover {
+    opacity: 1;
+    filter: none;
+    background-color: var(--c-anchor-hvr-bcg);}
 
+.box_game_ratings a[target="_blank"] {
+    width: 200px;
+    display: block;
+    margin: 0 auto;}
+#torrents .ratings {
+    height: 22px;
+    width: 150px;
+    font-size: 22px;
+    line-height: 22px;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-position: left;
+    padding: 24px 0 24px 50px;
+    text-align: center;
+    margin: 0 auto;}
 
+.sidebar #weblinksdiv {
+    padding: 0 0 5px 0;}
+.sidebar #weblinksdiv .head {
+    margin: 0;}
+.sidebar #weblinksdiv .body.center {
+    padding: 3px 0 0 0;}
+.sidebar #weblinksdiv .body.center a {
+    display: inline-block;
+    padding: 3px;
+    margin: 2px;}
+.sidebar #weblinksdiv .weblinks {
+    width: 48px;
+    height: 48px;}
 
 /*****************************************************************************************************/
 .forum_post tr {

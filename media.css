@@ -1,4 +1,123 @@
-﻿@media (min-width: 1760px) and (min-height: 659px) {
+﻿@media (min-width: 801px) {
+#torrentbrowse #hyphen {
+    display: none;}
+#torrentbrowse #groupplatform {
+    width: 34px;
+    height: 34px;
+    position: absolute;
+    left: -36px;
+    top: calc(50% - 17px);}
+#torrentbrowse td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) {
+    background: none;}
+#torrentbrowse #groupplatform a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: 28px 28px;
+    background-repeat: no-repeat;
+    background-position: center;}
+}
+
+@media (min-width: 1760px) and (min-height: 659px) {
+    #header {
+        font-size: 1em;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        z-index: 1;
+        margin-bottom: 20px;
+        position: sticky;
+        top: -41px;}
+    #header #announcement {
+        width: calc(100% - 402px);
+        padding: 5px 0;
+        margin: 0 auto;
+        background-color: var(--c-box);
+        border-bottom: var(--p-main-brdr);
+        -webkit-box-shadow: var(--p-header-shdw);
+        box-shadow: var(--p-header-shdw);
+        z-index: -11;
+        position: relative;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% + 10px), 0 calc(100% + 10px));
+        clip-path: polygon(0 0, 100% 0, 100% calc(100% + 10px), 0 calc(100% + 10px));}
+    #userinfo_stats li, #userinfo_stats li a {
+        height: 26px;}
+    #nav_userinfo {
+        text-align: center;
+        line-height: 36px;
+        height: 36px;
+        width: 100%;}
+    #nav_userinfo a.username {
+        font-weight: 600;
+        width: 100%;
+        height: 100%;
+        display: inline-block;}
+    #userinfo_username .sub {
+        width: 200px;
+        line-height: 28px;
+        text-align: center;
+        visibility: visible !important;
+        right: 0;
+        top: 73px;
+        position: absolute;
+        font-size: 16px;}
+    #userinfo_stats {
+        position: absolute;
+        top: 311px;
+        right: 0;
+        width: 200px;
+        display: flex;
+        flex-flow: column;
+        line-height: 26px;
+        font-size: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;}
+    #userinfo_username .sub a {
+        width: 100%;
+        display: block;}
+    
+    #userinfo_minor a {
+        color: var(--c-txt);
+        font-size: 17px;
+        width: 100%;
+        display: inline-block;
+        line-height: 30px;}
+    
+    #userinfo_stats li a,
+    #userinfo_username .sub a,
+    #menu a,
+    #userinfo_username li:not(.sub) a {
+        color: var(--c-txt);}
+    
+    #nav_useredit,
+    #nav_logout,
+    #nav_donate {
+        padding-top: 1px;
+        height: 36px;
+        line-height: 36px;
+        width: calc(100%/3);}
+    
+    #nav_index {
+        display: none !important;}
+    #userinfo_username {
+        position: absolute;
+        top: 40px;
+        right: 0;
+        width: 200px;
+        z-index: 10;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap-reverse;}
+    
+    #searchbars {
+        text-align: center;
+        width: 100%;
+        height: 40px;
+        background: var(--p-searchbar-grdnt);
+        -webkit-box-shadow: var(--p-header-shdw);
+        box-shadow: var(--p-header-shdw);
+        border-bottom: var(--p-main-brdr);}
+    
     .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2) {
         display: none;}
     .forum_post .colhead_dark div[style="float: right;"] {

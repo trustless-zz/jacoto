@@ -3,6 +3,7 @@
 body {
     background-image: url('icons/dark/background.svg');}
 
+@media (min-width: 801px) {
 #torrentbrowse #groupplatform a[href$="=Amiga+CD32"] {background-image: url(caticons/amigacd32_dark.svg);}
 #torrentbrowse #groupplatform a[href$="=Amstrad+CPC"] {background-image: url(caticons/amstradcpc_dark.svg);}
 #torrentbrowse #groupplatform a[href$="=Atari+ST"] {background-image: url(caticons/atarist_dark.svg);}
@@ -102,6 +103,7 @@ body {
 #torrentbrowse #groupplatform a[href$="=Xbox"] {background-image: url(caticons/xbox.svg);}
 #torrentbrowse #groupplatform a[href$="=Xbox+360"] {background-image: url(caticons/xbox360.svg);}
 #torrentbrowse #groupplatform a[href$="=ZX+Spectrum"] {background-image: url(caticons/zxspectrum.svg);}
+}
 
 /** anchor-like hover **/
 .torrent_table #leechers_icon:hover img,
@@ -133,29 +135,10 @@ a[title="Original Group"]:hover,
     -webkit-filter: brightness(0);
     filter: brightness(0);}
 
-/** donate **/
-#nav_donate a {
-    background-image: url('icons/dark/nav/donate.svg');}
-/* hover */
-#nav_donate a:hover {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 22"><path d="M26,7.43966h-.013A7.55646,7.55646,0,0,0,18.68751,0,7.20793,7.20793,0,0,0,13,2.94319,7.20808,7.20808,0,0,0,7.31249,0,7.55646,7.55646,0,0,0,.013,7.43966H0l.00486.07051L0,7.56469l.03252.29975C.39,17.88984,12.89764,22,12.89764,22S25.58887,17.89463,25.9659,7.88048L26,7.56469l-.00486-.05452Z"  fill="#c12323"/></svg>');}
-
-/** scroll to top **/
-#toplink a {
-    background-image: url('icons/dark/toplink.svg');}
-
 /** lightbox image background **/
 .fancybox-image,
 .lightbox img {
     background-image: url('icons/dark/transparent.svg');}
-
-/** user settings **/
-#nav_useredit a {
-    background-image: url('icons/dark/nav/useredit.svg');}
-
-/** logout **/
-#nav_logout a {
-    background-image: url('icons/dark/nav/logout.svg');}
 
 /** logo **/
 #logo a {
@@ -290,6 +273,21 @@ a[title="Remove"] {
 
 
 @media (min-width: 1760px) and (min-height: 659px) {
+/** user settings **/
+    #nav_useredit a {
+        background-image: url('icons/dark/nav/useredit.svg');}
+/** logout **/
+    #nav_logout a {
+        background-image: url('icons/dark/nav/logout.svg');}
+/** donate **/
+    #nav_donate a {
+        background-image: url('icons/dark/nav/donate.svg');}
+/* hover */
+    #nav_donate a:hover {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 22"><path d="M26,7.43966h-.013A7.55646,7.55646,0,0,0,18.68751,0,7.20793,7.20793,0,0,0,13,2.94319,7.20808,7.20808,0,0,0,7.31249,0,7.55646,7.55646,0,0,0,.013,7.43966H0l.00486.07051L0,7.56469l.03252.29975C.39,17.88984,12.89764,22,12.89764,22S25.58887,17.89463,25.9659,7.88048L26,7.56469l-.00486-.05452Z"  fill="#c12323"/></svg>');}
+/** scroll to top **/
+    #toplink a {
+        background-image: url('icons/dark/toplink.svg');}
 /** navbar **/
     #nav_torrents a {
         background-image: url('icons/dark/nav/games.svg');}
