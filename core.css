@@ -696,7 +696,9 @@ input[type=submit],
 .similar img,
 .sidebar .userratingdiv img,
 .torrent_details #grouplinks a div,
-#torrents .ratings {
+#torrents .ratings,
+#markread:before,
+textarea {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -869,7 +871,8 @@ a[title="Remove"],
 .edition_info:hover:active:before,
 button:hover:active,
 input[type=button]:hover:active,
-input[type=submit]:hover:active {
+input[type=submit]:hover:active,
+#markread:hover:active:before {
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;}
@@ -1709,6 +1712,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 select >option:nth-child(odd) {
     background-color: var(--c-input);}
+textarea:hover,
+textarea:focus,
 select >option:nth-child(even),
 select:hover,
 input[type="number"]:hover,
@@ -1717,6 +1722,7 @@ input[type="text"]:hover,
 input[disabled],
 input[type="text"]:focus {
     background-color: var(--c-edition);}
+textarea:focus,
 select:focus,
 input:focus {
     color: var(--c-anchor-hvr);
@@ -1746,6 +1752,8 @@ input[type=submit],
     background: var(--p-btn);
     background-size: 200% auto !important;
     display: inline-block;}
+.similar_votes a {
+    font-size: 18px;}
 button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
@@ -2080,7 +2088,8 @@ li:not(.suggested_similar) .similar_votes >span {
     text-indent: 51px;
     margin: 0 auto;
     background-size: 70px 70px;
-    background-position: 3px center;}
+    background-position: 3px center;
+    border-radius: 38px 0 0 38px;}
 
 .sidebar #weblinksdiv {
     padding: 0 0 5px 0;}
@@ -2105,7 +2114,71 @@ li:not(.suggested_similar) .similar_votes >span {
 .sidebar .box_freeleech form input[type="number"] {
     width: calc(100% - 68px);}
 
+#markread:before {
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    background-color: var(--c-em-bcg);
+    left: -22px;
+    top: -1px;
+    cursor: pointer;
+    border-radius: 40px 0 0 40px;
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    border: var(--p-main-brdr);
+    clip: rect(-10px, 21px, 50px, -10px);
+    content: '✔';
+    text-indent: 4px;
+    font-size: 18px;
+    line-height: 40px;
+    color: var(--c-high);
+    z-index: 999;}
+#markread:hover:before {
+    color: var(--c-anchor-hvr);
+    background-color: var(--c-em-hvr);}
+#markread:hover:active:before {
+    background-color: var(--c-em-act);}
 
+.sidebar .addtagsdiv input#tags {
+    width: calc(100% - 10px) !important;
+    margin-top: 8px;}
+.sidebar .addtagsdiv input[type="submit"] {
+    margin-top: 8px;}
+.sidebar .addtagsdiv >strong {
+    float: right;
+    margin-top: -16px;
+    line-height: 1em;}
+.sidebar .addtagsdiv >br {
+    display: none;}
+
+#reply_box >.box.pad {
+    background-color: var(--c-box);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    border: var(--p-main-brdr);
+    margin-bottom: 10px;}
+#reply_box .head {
+    margin: -10px -10px 10px -10px;}
+
+textarea {
+    border: var(--p-input-brdr);
+    background-color: var(--c-input);
+    -webkit-box-shadow: var(--p-input-shdw);
+    box-shadow: var(--p-input-shdw);
+    font-size: 1em;
+    line-height: var(--p-lh);
+    resize: vertical;
+    width: 100%;
+    color: var(--c-txt);
+    font-family: OpenSans, Helvetica, Arial, sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 3px 6px;
+    outline-offset: 0;
+    margin-bottom: 8px !important;
+    outline: 0px solid var(--c-b1) !important;}
+textarea:focus {
+    outline-width: 1px !important;}
 
 h2 {
     padding: 0;
