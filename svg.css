@@ -175,10 +175,15 @@ a[title="Download"],
 #userinfo_stats #connectable .r00 {
     background-image: url('icons/dark/disconnected.svg');}
 
-/** show/hide torrents **/
+/** show/hide torrents, select **/
 select,
 .torrent_table .show_torrents_link {
     background-image: url('icons/dark/show.svg');}
+
+/** number **/
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    background-image: url('icons/dark/number.svg');}
 
 /** user rating **/
 .torrent_table #user_rating_icon img {
