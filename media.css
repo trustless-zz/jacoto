@@ -117,12 +117,14 @@
         -webkit-box-shadow: var(--p-header-shdw);
         box-shadow: var(--p-header-shdw);
         border-bottom: var(--p-main-brdr);}
-    
+    #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
     .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2) {
         display: none;}
+    #quickreplypreview .colhead_dark #barpreview,
     .forum_post .colhead_dark div[style="float: right;"] {
         width: 18px;
         height: 18px;}
+    #quickreplypreview .colhead_dark span[style="float:left;"],
     .forum_post .colhead_dark div[style="float: left;"] {
         width: calc(100% - 23px);}
     
@@ -216,7 +218,7 @@
         font-weight: bold;}
     #userinfo_minor:hover:before {
         color: var(--c-anchor-hvr);
-        background-color: var(--c-b3);}
+        background-color: var(--c-b1);}
     #userinfo_minor li:first-child {
         left: unset;
         top: unset;
@@ -241,7 +243,7 @@
         -o-transition: all .15s linear;
         transition: all .15s linear;
         transition-delay: .5s;
-        background: linear-gradient(to bottom, var(--c-tor-row-hvr) 15%, var(--c-body) 16%);
+        background: linear-gradient(to bottom, var(--c-tor-row-hvr) 14.5%, var(--c-body) 14.6%);
         z-index: 99;
         border-left: var(--p-main-brdr);
         -webkit-box-shadow: inset var(--p-main-shdw);

@@ -7,12 +7,13 @@
     --c-main-brdr:						rgb(200, 200, 200);
     --c-table-brdr: 					rgb(210, 210, 210);
     --c-tor-rowb: 						rgb(215, 215, 215);
-    --c-body: 							rgb(220, 220, 220);						/*rowa*/
+    --c-body: 							rgb(220, 220, 220);						/*tor-rowa*/
     --c-tor-row-hvr: 					rgb(225, 225, 225);
     --c-edition: 						rgb(230, 230, 230);
     --c-input:							rgb(235, 235, 235);
-    --c-tgroup:							rgb(240, 240, 240);
-    --c-box: 							rgb(245, 245, 245);
+    --c-tgroup:							rgb(240, 240, 240);                     /*rowb*/
+    --c-box: 							rgb(245, 245, 245);                     /*rowa*/
+    --c-row-hvr:						rgb(250, 250, 250);
     --c-high:							rgb(255, 255, 255);
     --c-b1: 							rgb(18, 201, 194);
     --c-b2: 							rgb(81, 204, 165);
@@ -30,8 +31,8 @@
     --c-off: 							rgb(163, 0, 0);							/* #910000 */
     --c-colhead-click:					rgba(255, 255, 255, .15);
     --c-colhead-act: 					rgba(255, 255, 255, .3);
-    --c-em-bcg: 						rgb(199, 81, 18);
-    --c-em-hvr: 						rgb(245, 100, 22);
+    --c-em-bcg: 						rgb(245, 100, 22);
+    --c-em-hvr: 						rgb(199, 81, 18);
     --c-em-act: 						rgb(245, 173, 134);
     --c-fl: 							rgb(100, 65, 165);
     --c-btn-b1: 						rgb(119, 211, 207);
@@ -65,7 +66,6 @@
     --p-btn-hvr:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-btn-b2) 100%);
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
     --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
-    --p-clickable-shdw:					0 0 0 3px var(--c-anchor-hvr-bcg);
     --p-lh: 							calc(100% + 5px);
     --p-dot3:							-.02142857142em;}
 
@@ -336,6 +336,7 @@ html {
 
 #torrentbrowse #groupplatform,
 .forum_post .colhead_dark a[onclick],
+#quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
 .torrent_table .addbookmark,
 .torrent_table .removebookmark,
@@ -412,15 +413,13 @@ li.active {
 #searchbars input {
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
-    -webkit-box-sizing: border-box;
     border: var(--p-input-brdr);
     background-color: var(--c-input);
-    box-sizing: border-box;
     font-size: 1em;
     height: 26px;
     line-height: 24px;
     margin: 5px 0;
-    padding: 2px 5px 0;
+    padding: 0 5px;
     position: relative;
     width: 100%;}
 
@@ -585,6 +584,9 @@ a[title="Remove"],
     float: right;
     height: 100%;
     width: 300px;}
+#requests .thin >.center.box.pad,
+#requests .thin >table.border,
+.torrent_table,
 #grouplinks,
 form[name="filter"],
 .main_column >.box,
@@ -605,7 +607,7 @@ form[name="filter"],
 .body {
     padding: 10px;}
 .sidebar .body {
-    padding: 8px 0 0 0;}
+    padding: 10px 0 0 0;}
 .sidebar #freeleech li.group_torrent {
     width: auto;
     white-space: nowrap;
@@ -632,6 +634,7 @@ a {
 #index #freeleech .group_torrent >span:first-child:hover,
 a:hover,
 .forum_post .colhead_dark a.username:hover,
+#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover,
 a:hover .ratings {
     background-color: var(--c-anchor-hvr-bcg);
@@ -653,7 +656,8 @@ a:hover .ratings {
 #taglist a:hover,
 .filter_torrents.advanced #taglist td:hover,
 .torrent_details .group_torrent td:first-child a,
-.box_game_ratings a[target="_blank"]:hover {
+.box_game_ratings a[target="_blank"]:hover,
+#requests .thin >.center.box.pad a[onclick] {
     background-color: transparent;}
 
 a,
@@ -698,7 +702,9 @@ input[type=submit],
 .torrent_details #grouplinks a div,
 #torrents .ratings,
 #markread:before,
-textarea {
+textarea,
+tr,
+.ratings span {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -714,13 +720,14 @@ textarea {
 #userinfo_username .donateico.active a,
 #userinfo_username .welcome.active a,
 #userinfo_username .sub span.active a,
-.box.news_post .head:hover {
+.box.news_post .head:hover,
+a:hover .ratings span {
     color: var(--c-anchor-hvr);}
 
 .sidebar img {
     border: var(--p-img-brdr);
     height: unset;
-    max-width: calc(100% - 6px) !important;}
+    max-width: 100% !important;}
 img {
     border: 0;
     border-style: none;}
@@ -769,6 +776,7 @@ a[title="Report"],
 a[title="External Link"],
 a[title="Edit"],
 a[title="Remove"],
+#quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
 .forum_post .colhead_dark a[onclick] {
     width: 18px;
@@ -1051,7 +1059,7 @@ input[type=submit]:hover:active,
 #dailygazelle img,
 #slides img {
     max-height: 280px !important;
-    max-width: calc(100% - 26px) !important;
+    max-width: calc(100% - 20px) !important;
     margin: 10px auto;}
 #dailygazelle img {
     display: block;}
@@ -1089,6 +1097,7 @@ input[type=submit]:hover:active,
     background: var(--p-head-grdnt);
     margin: 0 0 15px 0;}
 .torrent_table #displayname,
+#quickreplypreview .colhead_dark span[style="float:left;"],
 .forum_post .colhead_dark div[style="float: left;"],
 .head[title="Click to expand/collapse"],
 .sidebar #freeleech_time_left #progress_bar {
@@ -1178,6 +1187,8 @@ i.fa.fa-fl-pots {
 	font-family: OpenSans, Helvetica, Arial, sans-serif;
     filter: none !important;}
 .global_buffs .buff_text {
+    letter-spacing: var(--p-dot3);
+    font-size: 12px;
     text-shadow: none !important;}
 .global_buffs .buff_text .buff_multiplier {
     font-size: 17px !important;}
@@ -1192,7 +1203,7 @@ i.fa.fa-fl-pots {
 .global_buffs .color_green .buff_text,
 .global_buffs .color_purple .buff_text,
 .global_buffs .color_yellow .buff_text {
-    color: var(--c-txt);}
+    color: var(--c-text-s);}
 #header .global_buffs a:hover span,
 #header .global_buffs a:hover i {
     color: var(--c-anchor-hvr) !important;}
@@ -1226,11 +1237,11 @@ i.fa.fa-fl-pots {
 
 .save_message,
 .error_message {
-    display: inline-block;
     width: calc(100% - 12px);
     padding: 5px;
     text-align: center;
-    margin: -21px 0 20px 0;
+    position: relative;
+    top: -20px;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border: var(--p-main-brdr);
@@ -1239,10 +1250,10 @@ i.fa.fa-fl-pots {
 .save_message {
     background: var(--p-searchbar-grdnt);}
 .error_message {
-    color: var(--c-high);
+    color: var(--c-anchor-hvr);
     background-color: var(--c-em-bcg);}
 a .error_message:hover {
-    color: var(--c-anchor-hvr);
+    color: var(--c-high);
     background-color: var(--c-em-hvr);}
 a .error_message:hover:active {
     background-color: var(--c-em-act);}
@@ -1457,11 +1468,7 @@ a .error_message:hover:active {
     vertical-align: middle;}
 
 .torrent_table {
-    width: 100%;
-    -webkit-box-shadow: var(--p-main-shdw);
-    box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);
-    margin: 0 0 15px 0;}
+    width: 100%;}
 .torrent_table .group.rowa {
     background-color: var(--c-body);}
 .torrent_table .group.rowb {
@@ -1557,16 +1564,19 @@ a .error_message:hover:active {
 
 .torrent_table tr.group_torrent {
     background-color: var(--c-tgroup);}
-.torrent_table tr.group_torrent:hover {
-    background-color: var(--c-box);}
 
+.sidebar img,
+#searchbars input,
+textarea,
+.similar img,
 img[title="Downloaded"],
 img[title="Uploaded"],
 img[title="Leechers"],
 img[title="Seeders"],
 img[title="Snatches"],
 .torrent_table #user_rating_icon img,
-.sidebar .userratingdiv img {
+.sidebar .userratingdiv img,
+.screenshots img {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -1577,13 +1587,13 @@ img[title="Snatches"],
 .torrent_table #user_rating_icon img {
     padding-left: 18px;}
 .sidebar .userratingdiv img {
-    border-radius: 50%;
-    padding-left: 50px;
-    width: 50px;
-    height: 50px;}
-.sidebar .userratingdiv img:hover {
-    -webkit-box-shadow: var(--p-clickable-shdw);
-    box-shadow: var(--p-clickable-shdw);}
+    /* border-radius: 50%; */
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 50px 50px !important;
+    padding-left: 56px;
+    width: 56px;
+    height: 56px;}
 .torrent_table .colhead a {
     padding: 100px;
     margin: -100px;}
@@ -1728,8 +1738,6 @@ input:focus {
     color: var(--c-anchor-hvr);
     border-color: var(--c-b1);
     outline: none;}
-#searchbars input:focus {
-    background-color: var(--c-box);}
 input[type="checkbox"],
 input[type="radio"] {
     vertical-align: text-top;}
@@ -1752,7 +1760,7 @@ input[type=submit],
     background: var(--p-btn);
     background-size: 200% auto !important;
     display: inline-block;}
-.similar_votes a {
+.similar_votes a[onclick] {
     font-size: 18px;}
 button:hover,
 input[type=button]:hover,
@@ -1785,7 +1793,8 @@ input[type=submit]:hover:active,
     bottom: 1066px;}
 .torrent_details .group_torrent td:first-child >a,
 .filter_torrents.advanced .flright,
-.toggle_tags {
+.toggle_tags,
+#requests .thin >.center.box.pad a[onclick] {
     cursor: default;}
 .filter_torrents.advanced tr:first-child >td.label {
     vertical-align: top;}
@@ -1840,6 +1849,7 @@ input[type=submit]:hover:active,
     margin-bottom: 5px;
     padding: 6px;
     text-align: center;}
+#requests table.border .colhead_dark strong,
 .torrent_table .colhead_dark strong {
     font-weight: normal;}
 
@@ -1888,8 +1898,8 @@ input[type=submit]:hover:active,
     flex-flow: wrap;
     margin-bottom: -10px;}
 .screenshots a {
-    width: calc(25% - 13.5px);
-    margin: 0 16px 10px 0;
+    width: calc(25% - 8px);
+    margin: 0 10px 10px 0;
     align-self: center;
     cursor: default;}
 .screenshots a:nth-child(4n) {
@@ -1929,8 +1939,8 @@ input[type=submit]:hover:active,
     flex-flow: wrap;}
 .similar li {
     padding: 5px 0;
-    width: calc(20% - 16px);
-    margin: 0 16px 10px 0;
+    width: calc(20% - 10px);
+    margin: 0 10px 10px 0;
     align-self: center;}
 .similar li >a {
     display: contents;}
@@ -2001,6 +2011,7 @@ li:not(.suggested_similar) .similar_votes >span {
     line-height: var(--p-lh);
     padding: 6px 5px 7px 5px;}
 
+#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"],
 .forum_post .colhead_dark a.post_id {
     transition-delay: .3s;
     width: auto;
@@ -2015,6 +2026,7 @@ li:not(.suggested_similar) .similar_votes >span {
     background: var(--p-forum-colhead);
     border-right: var(--p-main-brdr);
     clip: rect(0, 15px, 32px, 0);}
+#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:before,
 .forum_post .colhead_dark a.post_id:before {
     position: absolute;
     content: '#';
@@ -2024,17 +2036,21 @@ li:not(.suggested_similar) .similar_votes >span {
     top: 0;
     height: 100%;
     background: var(--p-forum-colhead);}
+#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover {
     transition-delay: 0s;
     clip: rect(0, 300px, 32px, 0);}
 .forum_post .colhead_dark {
     overflow: hidden;}
+#quickreplypreview .colhead_dark span[style="float:left;"],
 .forum_post .colhead_dark div[style="float: left;"] {
     width: calc(100% - 40px);}
 .forum_post .colhead_dark a[onclick],
+#quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1) {
     display: inline-block;
     vertical-align: text-bottom;}
+#quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2) {
     font-size: 20px;
     line-height: 0;}
@@ -2072,24 +2088,29 @@ li:not(.suggested_similar) .similar_votes >span {
     filter: none;
     background-color: var(--c-anchor-hvr-bcg);}
 
+.box_game_ratings >.body {
+    display: flex;
+    flex-flow: wrap;}
 .box_game_ratings a[target="_blank"] {
-    width: 184px;
-    display: block;
-    margin: 0 auto;}
+    width: 100%;
+    height: 100%;}
+.box_game_ratings >.body >div {
+    width: calc(100% / 3);
+    display:flex;
+    align-items:center;}
 #torrents .ratings {
     height: 22px;
-    width: 150px;
-    font-size: 22px;
-    line-height: 22px;
+    width: 100%;
+    font-size: 19px;
+    line-height: 19px;
     font-weight: bold;
     background-repeat: no-repeat;
-    padding: 27px 0 27px 34px;
-    text-align: left;
-    text-indent: 51px;
-    margin: 0 auto;
-    background-size: 70px 70px;
-    background-position: 3px center;
-    border-radius: 38px 0 0 38px;}
+    padding: 90px 0 3px 0;
+    text-align: center;
+    margin: 0;
+    background-size: 80px 80px;
+    background-position: center 3px;
+    vertical-align: middle;}
 
 .sidebar #weblinksdiv {
     padding: 0 0 5px 0;}
@@ -2131,10 +2152,10 @@ li:not(.suggested_similar) .similar_votes >span {
     text-indent: 4px;
     font-size: 18px;
     line-height: 40px;
-    color: var(--c-high);
+    color: var(--c-anchor-hvr);
     z-index: 999;}
 #markread:hover:before {
-    color: var(--c-anchor-hvr);
+    color: var(--c-high);
     background-color: var(--c-em-hvr);}
 #markread:hover:active:before {
     background-color: var(--c-em-act);}
@@ -2171,14 +2192,21 @@ textarea {
     width: 100%;
     color: var(--c-txt);
     font-family: OpenSans, Helvetica, Arial, sans-serif;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     padding: 3px 6px;
     outline-offset: 0;
     margin-bottom: 8px !important;
     outline: 0px solid var(--c-b1) !important;}
 textarea:focus {
     outline-width: 1px !important;}
+
+#quickreplypreview {
+    -webkit-box-shadow: none;
+    box-shadow: none;}
+#quickreplybuttons {
+    display: flex;
+    justify-content: center;}
+#quickreplybuttons input {
+    margin: 0 5px;}
 
 h2 {
     padding: 0;
@@ -2189,6 +2217,24 @@ h2 {
     height: auto;
     width: 100%;
     font-weight: bold;}
+
+.rowa,
+#collages tr:not(.colhead):nth-child(even),
+#searchbars input:focus,
+.torrent_table tr.group_torrent:hover {
+    background-color: var(--c-box);}
+.rowb,
+#collages tr:not(.colhead):nth-child(odd) {
+    background-color: var(--c-tgroup);}
+.rowa:hover,
+.rowb:hover,
+#collages tr:not(.colhead):hover {
+    background-color: var(--c-row-hvr);}
+
+.box_series li {
+    list-style: circle;
+    margin-left: 20px;
+    color: var(--c-txt);}
 
 
 /*****************************************************************************************************/
