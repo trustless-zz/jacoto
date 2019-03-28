@@ -1,4 +1,4 @@
-﻿/*** embedding hover/active to avoid possible delay **/
+﻿/*** embedding hover/active to avoid possible loading delay **/
 
 body {
     background-image: url('icons/dark/background.svg');}
@@ -139,7 +139,7 @@ a[title="Original Group"]:hover,
 /** lightbox image background **/
 .fancybox-image,
 .lightbox img {
-    background-image: url('icons/dark/transparent.svg');}
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="8 16 16 16 16 8 8 0 0 0 0 8 8 16" fill="#fff"/><rect x="8" width="8" height="8" fill="#ccc"/><rect y="8" width="8" height="8" fill="#ccc"/></svg>');}
 
 /** logo **/
 #logo a {
