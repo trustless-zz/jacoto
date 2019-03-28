@@ -215,6 +215,7 @@
         background-position: center 6px;
         background-repeat: no-repeat;}
     #userinfo_minor.highlighted:before {
+        background-color: var(--c-b3);
         font-weight: bold;}
     #userinfo_minor:hover:before {
         color: var(--c-anchor-hvr);

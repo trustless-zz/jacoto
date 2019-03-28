@@ -557,7 +557,8 @@ a[title="Remove"],
 .prev,
 .next,
 .forum_post .colhead_dark a[onclick],
-.sidebar .userratingdiv img {
+.sidebar .userratingdiv img,
+#usersreviewimage img {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -599,6 +600,7 @@ a[title="Remove"],
     float: right;
     height: 100%;
     width: 300px;}
+#allreviews,
 #requests .thin >.center.box.pad,
 #requests .thin >table.border,
 .torrent_table,
@@ -719,7 +721,9 @@ input[type=submit],
 #markread:before,
 textarea,
 tr,
-.ratings span {
+.ratings span,
+#userinfo_minor:before,
+#reviewdate {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -903,6 +907,7 @@ input[type=submit]:hover:active,
 #userinfo_username .sub span:last-child {
     border-bottom: 2px solid var(--c-main-brdr);}
 
+#userinfo_minor .highlight,
 #menu li:not(.active):hover,
 #userinfo_minor li:not(.active):hover,
 #header .clan_trophy:hover a {
@@ -937,7 +942,8 @@ input[type=submit]:hover:active,
 #menu li:not(.active):hover:active,
 #userinfo_minor li:not(.active):hover:active,
 #menu li.active,
-#userinfo_minor li.active {
+#userinfo_minor li.active,
+#userinfo_minor .highlight:hover {
     background-color: var(--c-b1) !important;}
 
 #toplink {
@@ -1582,6 +1588,7 @@ a .error_message:hover:active {
 .torrent_table tr.group_torrent {
     background-color: var(--c-tgroup);}
 
+#usersreviewimage img,
 blockquote,
 #torrents .torrent_details tr table,
 .sidebar img,
@@ -1798,7 +1805,8 @@ input[type=submit],
     margin-bottom: 2px;}
 .box_tags .stats.nobullet div a:before {
     font-size: 18px;
-    line-height: 14px;}
+    line-height: 14px;
+    padding-right: 1px;}
 .similar_votes a[onclick] {
     font-size: 18px;}
 button:hover,
@@ -2265,18 +2273,21 @@ h2 {
 .row_a,
 #collages tr:not(.colhead):nth-child(even),
 #searchbars input:focus,
-.torrent_table tr.group_torrent:hover {
+.torrent_table tr.group_torrent:hover,
+.userreviews tr:nth-child(odd) {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
-#collages tr:not(.colhead):nth-child(odd) {
+#collages tr:not(.colhead):nth-child(odd),
+.userreviews tr:nth-child(even) {
     background-color: var(--c-tgroup);}
 .rowa:hover,
 .row_a:hover,
 .rowb:hover,
 .row_b:hover,
 #torrents .torrent_details tr table tr:not(.colhead):not(.colhead_dark):hover,
-#collages tr:not(.colhead):hover {
+#collages tr:not(.colhead):hover,
+.userreviews tr:hover {
     background-color: var(--c-row-hvr);}
 
 .box_series li {
@@ -2290,6 +2301,42 @@ h2 {
     border: var(--p-table-brdr);
     margin: 5px 10px 15px 10px;
     width: calc(100% - 20px);}
+
+#usersreviewimage img {
+    width: 36px;
+    height: 36px;
+    padding-left: 36px;}
+#usersreviewimage {
+    width: 36px;}
+#reviewdate {
+    width: fit-content;
+    display: block;
+    font-size: 12px;
+    line-height: var(--p-lh);
+    color: var(--c-text-s);}
+#reviewdate:hover {
+    color: var(--c-txt);}
+
+/* '#allreviewslink' shouldn't be inside of a review 'tr' */
+#usersreview {
+    position: relative;}
+.box.userreviews_div {
+    padding-bottom: 27px;}
+#allreviewslink {
+    position: absolute;
+    right: 0;
+    bottom: -27px;
+    font-weight: bold;}
+
+/* revisit later */
+#allreviews h2 {
+    background: var(--p-head-grdnt);
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px;
+    margin: 0;
+    width: auto;}
+
 
 
 /*****************************************************************************************************/
