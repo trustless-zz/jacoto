@@ -564,11 +564,13 @@ a[title="Remove"],
 img[src="static/common/thumbsdown.png"],
 img[src="static/common/thumbsup.png"],
 #requests table.border a[href^="upload.php"],
-#requests_donate img {
+#requests_donate img,
+img[title="Gold"] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
 
+#requests table.border a[href^="upload.php"],
 #index #freeleech .group_torrent >span:first-child a {
     display: inline-block;}
 
@@ -794,7 +796,8 @@ a[title="Remove"],
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
 .forum_post .colhead_dark a[onclick],
 #requests table.border a[href^="upload.php"],
-#requests_donate img {
+#requests_donate img,
+#requests .main_column >table:first-child img[title="Gold"] {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
@@ -1603,7 +1606,9 @@ img[title="Snatches"],
 .torrent_table #user_rating_icon img,
 .sidebar .userratingdiv img,
 .screenshots img,
-#requests_donate img {
+#requests_donate img,
+#requests .main_column >table:first-child img[title="Gold"],
+#requests .main_column >table:first-child {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -1612,7 +1617,8 @@ img[title="Leechers"],
 img[title="Seeders"],
 img[title="Snatches"],
 .torrent_table #user_rating_icon img,
-#requests_donate img {
+#requests_donate img,
+#requests .main_column >table:first-child img[title="Gold"] {
     padding-left: 18px;}
 .sidebar .userratingdiv img {
     /* border-radius: 50%; */
@@ -1709,6 +1715,7 @@ td.label {
     vertical-align: middle;}
 .filter_torrents td.label {
     width: 115px;}
+#requests .main_column >table:first-child td,
 .requests_outer_table td,
 .filter_torrents td {
     padding: 2px 5px 5px 5px;}
@@ -1773,7 +1780,8 @@ input:focus {
 input[type="checkbox"],
 input[type="radio"],
 #requests table.border a[href^="upload.php"],
-#requests_donate img {
+#requests_donate img,
+#requests .main_column >table:first-child img[title="Gold"] {
     vertical-align: text-top;}
 
 button,
@@ -1781,7 +1789,8 @@ input[type=button],
 input[type=submit],
 .similar_votes a,
 .box_tags .stats.nobullet div a,
-#requests table.border td.nobr:nth-child(2) strong {
+#requests table.border td.nobr:nth-child(2) strong,
+a[href="javascript:Vote(20, 1)"] strong {
     font-size: 14px;
     line-height: 14px;
     font-family: OpenSans, Helvetica, Arial, sans-serif !important;
@@ -1797,7 +1806,8 @@ input[type=submit],
     background-size: 200% auto !important;
     display: inline-block;}
 .box_tags .stats.nobullet div a,
-#requests table.border td.nobr:nth-child(2) strong {
+#requests table.border td.nobr:nth-child(2) strong,
+a[href="javascript:Vote(20, 1)"] strong {
     font-size: 0;
     line-height: 0;}
 .box_tags .stats.nobullet div a:nth-child(1) {
@@ -1814,6 +1824,7 @@ input[type=submit],
 .box_tags .stats.nobullet li {
     margin-bottom: 2px;}
 #requests table.border td.nobr:nth-child(2) strong:before,
+a[href="javascript:Vote(20, 1)"] strong:before,
 .box_tags .stats.nobullet div a:before {
     font-size: 18px;
     line-height: 14px;}
@@ -1826,6 +1837,7 @@ input[type=button]:hover,
 input[type=submit]:hover,
 .similar_votes a:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
+a[href="javascript:Vote(20, 1)"] strong:hover,
 .box_tags .stats.nobullet div a:hover {
     color: var(--c-anchor-hvr);
     background: var(--p-btn-hvr);}
@@ -1834,6 +1846,7 @@ input[type=button]:hover:active,
 input[type=submit]:hover:active,
 .similar_votes a:hover:active,
 #requests table.border td.nobr:nth-child(2) strong:hover:active,
+a[href="javascript:Vote(20, 1)"] strong:hover:active,
 .box_tags .stats.nobullet div a:hover:active {
     background: var(--p-btn-act);}
 
@@ -2033,6 +2046,7 @@ input[type=submit]:hover:active,
 .similar_div .head .flright {
     margin: -3px 0 0 0;}
 #requests table.border td.nobr:nth-child(2) strong:before,
+a[href="javascript:Vote(20, 1)"] strong:before,
 .box_tags .stats.nobullet div a:nth-child(2):before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(1):before {
     content: '+';}
@@ -2279,6 +2293,7 @@ input[type=submit]:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
+a[href="javascript:Vote(20, 1)"] strong:hover,
 .similar img:hover,
 .screenshots img:hover,
 .box_albumart img:hover,
@@ -2421,7 +2436,18 @@ img[src="static/common/thumbsup.png"],
 
 #requests .main_column >table:first-child {
     position: relative;
-    top: -19px;}
+    top: -19px;
+    margin-bottom: -4px;}
+
+/** table padding with no container (this is horrible) **/
+#requests .main_column >table:first-child td:first-child {
+    padding-left: 10px;}
+#requests .main_column >table:first-child td:last-child {
+    padding-right: 10px;}
+#requests .main_column >table:first-child tr:first-child td {
+    padding-top: 10px;}
+#requests .main_column >table:first-child tr:last-child td {
+    padding-bottom: 10px;}
 
 /** convert h3 to head (reply box) **/
 #request_comments #reply_box h3 {
