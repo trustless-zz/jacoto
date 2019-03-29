@@ -356,7 +356,9 @@ html {
 #nav_logout,
 #nav_donate,
 #nav_donate a,
-#nav_useredit a {
+#nav_useredit a,
+#requests table.border a[href^="upload.php"],
+#requests_donate tr:nth-child(1) {
     font-size:0;}
 
 #nav_userinfo a.username {
@@ -558,7 +560,9 @@ a[title="Remove"],
 .next,
 .forum_post .colhead_dark a[onclick],
 .sidebar .userratingdiv img,
-#usersreviewimage img {
+#usersreviewimage img,
+#requests table.border a[href^="upload.php"],
+#requests_donate img {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -674,7 +678,8 @@ a:hover .ratings {
 .filter_torrents.advanced #taglist td:hover,
 .torrent_details .group_torrent td:first-child a,
 .box_game_ratings a[target="_blank"]:hover,
-#requests .thin >.center.box.pad a[onclick] {
+#requests .thin >.center.box.pad a[onclick],
+#requests table.border a[href^="upload.php"] {
     background-color: transparent;}
 
 a,
@@ -784,7 +789,9 @@ a[title="Edit"],
 a[title="Remove"],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
-.forum_post .colhead_dark a[onclick] {
+.forum_post .colhead_dark a[onclick],
+#requests table.border a[href^="upload.php"],
+#requests_donate img {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
@@ -1467,11 +1474,11 @@ a .error_message:hover:active {
 .colhead td,
 .colhead_dark td {
     font-size: 16px;
-    line-height: 32px;
+    line-height: 20px;
     vertical-align: middle;
     background: var(--p-colhead-tr-bcg);
     font-weight: normal;
-    padding: 0 5px;
+    padding: 8px 5px;
     overflow: hidden;}
 .torrent_table tr td.center {
     text-align: center;
@@ -1589,7 +1596,8 @@ img[title="Seeders"],
 img[title="Snatches"],
 .torrent_table #user_rating_icon img,
 .sidebar .userratingdiv img,
-.screenshots img {
+.screenshots img,
+#requests_donate img {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -1597,7 +1605,8 @@ img[title="Uploaded"],
 img[title="Leechers"],
 img[title="Seeders"],
 img[title="Snatches"],
-.torrent_table #user_rating_icon img {
+.torrent_table #user_rating_icon img,
+#requests_donate img {
     padding-left: 18px;}
 .sidebar .userratingdiv img {
     /* border-radius: 50%; */
@@ -1691,6 +1700,7 @@ td.label {
     vertical-align: middle;}
 .filter_torrents td.label {
     width: 115px;}
+.requests_outer_table td,
 .filter_torrents td {
     padding: 2px 5px 5px 5px;}
 
@@ -1752,14 +1762,17 @@ input:focus {
     border-color: var(--c-b1);
     outline: none;}
 input[type="checkbox"],
-input[type="radio"] {
+input[type="radio"],
+#requests table.border a[href^="upload.php"],
+#requests_donate img {
     vertical-align: text-top;}
 
 button,
 input[type=button],
 input[type=submit],
 .similar_votes a,
-.box_tags .stats.nobullet div a {
+.box_tags .stats.nobullet div a,
+#requests table.border td.nobr:nth-child(2) strong {
     font-size: 14px;
     line-height: 14px;
     font-family: OpenSans, Helvetica, Arial, sans-serif !important;
@@ -1774,7 +1787,8 @@ input[type=submit],
     background: var(--p-btn);
     background-size: 200% auto !important;
     display: inline-block;}
-.box_tags .stats.nobullet div a {
+.box_tags .stats.nobullet div a,
+#requests table.border td.nobr:nth-child(2) strong {
     font-size: 0;
     line-height: 0;}
 .box_tags .stats.nobullet div a:nth-child(1) {
@@ -1790,6 +1804,7 @@ input[type=submit],
     line-height: 26px;}
 .box_tags .stats.nobullet li {
     margin-bottom: 2px;}
+#requests table.border td.nobr:nth-child(2) strong:before,
 .box_tags .stats.nobullet div a:before {
     font-size: 18px;
     line-height: 14px;
@@ -1800,6 +1815,7 @@ button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
 .similar_votes a:hover,
+#requests table.border td.nobr:nth-child(2) strong:hover,
 .box_tags .stats.nobullet div a:hover {
     color: var(--c-anchor-hvr);
     background: var(--p-btn-hvr);}
@@ -1807,6 +1823,7 @@ button:hover:active,
 input[type=button]:hover:active,
 input[type=submit]:hover:active,
 .similar_votes a:hover:active,
+#requests table.border td.nobr:nth-child(2) strong:hover:active,
 .box_tags .stats.nobullet div a:hover:active {
     background: var(--p-btn-act);}
 
@@ -1832,6 +1849,8 @@ input[type=submit]:hover:active,
 .toggle_tags,
 #requests .thin >.center.box.pad a[onclick] {
     cursor: default;}
+#requests_donate,
+.requests_outer_table >tbody >tr >td:nth-child(1),
 .filter_torrents.advanced tr:first-child >td.label {
     vertical-align: top;}
 #torrents .filter_torrents #platcheckbox td[colspan="5"] {
@@ -1910,14 +1929,15 @@ input[type=submit]:hover:active,
 .torrent_details .torrent_table .colhead_dark strong,
 .torrent_details .torrent_table .colhead_dark img {
     position: absolute;
+    line-height: 36px;
     top: 0;
     left: 5px;
     z-index: 2;}
 .torrent_details .torrent_table .colhead_dark img {
-    margin-top: 7px;}
+    margin-top: 9px;}
 
 .torrent_details .torrent_table .colhead_dark td {
-    height: 32px;
+    height: 20px;
     position: relative;}
 .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1) {
     width: 100%;
@@ -2002,6 +2022,7 @@ input[type=submit]:hover:active,
     justify-content: center;}
 .similar_div .head .flright {
     margin: -3px 0 0 0;}
+#requests table.border td.nobr:nth-child(2) strong:before,
 .box_tags .stats.nobullet div a:nth-child(2):before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(1):before {
     content: '+';}
@@ -2237,6 +2258,20 @@ textarea {
 textarea:focus {
     outline-width: 1px !important;}
 
+.similar img,
+.screenshots img,
+.box_albumart img {
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);}
+button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.similar_votes a:hover,
+.box_tags .stats.nobullet div a:hover,
+#requests table.border td.nobr:nth-child(2) strong:hover,
+.similar img:hover,
+.screenshots img:hover,
+.box_albumart img:hover,
 #quickreplypreview {
     -webkit-box-shadow: none;
     box-shadow: none;}
@@ -2261,12 +2296,14 @@ h2 {
 #collages tr:not(.colhead):nth-child(even),
 #searchbars input:focus,
 .torrent_table tr.group_torrent:hover,
-.userreviews tr:nth-child(odd) {
+.userreviews tr:nth-child(odd),
+.requests_outer_table #otherop tr:nth-child(odd) {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
 #collages tr:not(.colhead):nth-child(odd),
-.userreviews tr:nth-child(even) {
+.userreviews tr:nth-child(even),
+.requests_outer_table #otherop tr:nth-child(even) {
     background-color: var(--c-tgroup);}
 .rowa:hover,
 .row_a:hover,
@@ -2324,7 +2361,29 @@ h2 {
     margin: 0;
     width: auto;}
 
+#requests .thin >table.border {
+    table-layout: fixed;} /*115px=8%*/
 
+#requests_donate tr:nth-child(1) strong,
+#requests_donate tr:nth-child(1) a {
+    font-size: 14px;}
+#requests_donate tr:nth-child(1) a {
+    line-height: var(--p-lh);
+    font-weight: bold;
+    margin-top: -5px;
+    display: block;
+    width: fit-content;
+    margin-bottom: -20px;}
+#requests_donate #gold_donation {
+    width: calc(100% - 95px);
+    margin-bottom: 8px;}
+.requests_outer_table >tbody >tr >td:nth-child(1) {
+    width: 70% !important;}
+#requests_donate {
+    border-left: var(--p-table-brdr);}
+.requests_outer_table table.border td.label,
+.requests_outer_table #otherop td.label {
+    width: 115px;}
 
 /*****************************************************************************************************/
 .forum_post tr {
