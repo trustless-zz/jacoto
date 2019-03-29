@@ -2310,8 +2310,7 @@ h2 {
 .rowb:hover,
 .row_b:hover,
 #torrents .torrent_details tr table tr:not(.colhead):not(.colhead_dark):hover,
-#collages tr:not(.colhead):hover,
-.userreviews tr:hover {
+#collages tr:not(.colhead):hover {
     background-color: var(--c-row-hvr);}
 
 .box_series li {
