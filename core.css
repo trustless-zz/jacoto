@@ -561,6 +561,8 @@ a[title="Remove"],
 .forum_post .colhead_dark a[onclick],
 .sidebar .userratingdiv img,
 #usersreviewimage img,
+img[src="static/common/thumbsdown.png"],
+img[src="static/common/thumbsup.png"],
 #requests table.border a[href^="upload.php"],
 #requests_donate img {
     background-size: contain;
@@ -604,6 +606,7 @@ a[title="Remove"],
     float: right;
     height: 100%;
     width: 300px;}
+#requests .main_column >table:first-child,
 #allreviews,
 #requests .thin >.center.box.pad,
 #requests .thin >table.border,
@@ -652,7 +655,6 @@ a {
     color: var(--c-anchor);
     border: 0;
     background-color: transparent;}
-#index #freeleech .group_torrent >span:first-child:hover,
 a:hover,
 .forum_post .colhead_dark a.username:hover,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
@@ -715,7 +717,8 @@ input[type=submit],
 #markread:before,
 textarea,
 #userinfo_minor:before,
-#reviewdate {
+#reviewdate,
+.forum_post .comment_rating {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -883,7 +886,8 @@ a[title="Remove"],
 #recommended #vanityhouse a:first-child:hover:active:before,
 .autocomplete_list li:hover:active,
 .torrent_table td.center:hover:active:first-child,
-.torrent_table .colhead a:hover:active,
+.colhead_dark a:hover:active,
+.colhead a:hover:active,
 #index #clans .large_progress_bar:hover:active,
 #header .global_buffs a:hover:active,
 #toplink a:hover:active,
@@ -1582,6 +1586,8 @@ a .error_message:hover:active {
 .torrent_table tr.group_torrent {
     background-color: var(--c-tgroup);}
 
+img[src="static/common/thumbsdown.png"],
+img[src="static/common/thumbsup.png"],
 #usersreviewimage img,
 blockquote,
 #torrents .torrent_details tr table,
@@ -1616,15 +1622,18 @@ img[title="Snatches"],
     padding-left: 56px;
     width: 56px;
     height: 56px;}
-.torrent_table .colhead a {
-    padding: 100px;
-    margin: -100px;}
+.colhead_dark td >a,
+.colhead td >a {
+    padding: 500px;
+    margin: -500px;}
 .colhead_dark .sign,
 .colhead .sign {
     line-height: 0;}
-.torrent_table .colhead a:hover {
+.colhead_dark td >a:hover,
+.colhead td >a:hover {
     background-color: var(--c-colhead-click);}
-.torrent_table .colhead a:hover:active {
+.colhead_dark td >a:hover:active,
+.colhead td >a:hover:active {
     background-color: var(--c-colhead-act);}
 
 .torrent_table .group.rowa .empty_group {
@@ -1794,7 +1803,7 @@ input[type=submit],
 .box_tags .stats.nobullet div a:nth-child(1) {
     margin-right: 1px;}
 .box_tags .stats.nobullet div a:nth-child(2) {
-    margin-left: 2px;}
+    margin-left: 3px;}
 .box_tags .stats.nobullet div {
     display: flex !important;
     min-width: 80px;
@@ -1807,7 +1816,8 @@ input[type=submit],
 #requests table.border td.nobr:nth-child(2) strong:before,
 .box_tags .stats.nobullet div a:before {
     font-size: 18px;
-    line-height: 14px;
+    line-height: 14px;}
+.box_tags .stats.nobullet div a:nth-child(2):before {
     padding-right: 1px;}
 .similar_votes a[onclick] {
     font-size: 18px;}
@@ -2325,6 +2335,8 @@ h2 {
     margin: 5px 10px 15px 10px;
     width: calc(100% - 20px);}
 
+img[src="static/common/thumbsdown.png"],
+img[src="static/common/thumbsup.png"],
 #usersreviewimage img {
     width: 36px;
     height: 36px;
@@ -2383,6 +2395,43 @@ h2 {
 .requests_outer_table table.border td.label,
 .requests_outer_table #otherop td.label {
     width: 115px;}
+.requests_outer_table input[type="text"] {
+    width: calc(100% - 10px);}
+
+.forum_post .comment_rating {
+    width: 100%;
+    min-height: 25px;
+    margin-top: 10px;
+    padding: 5px 5px 3px 3px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-top: var(--p-table-brdr);
+    opacity: 0.65;}
+.forum_post .comment_rating:hover {
+    opacity: 1;}
+.forum_post .comment_rating .flleft {
+    margin: 1px 5px 0 0;
+    width: 36px;
+    height: 36px;
+    float: left;}
+.forum_post .comment_rating p {
+    margin: 0;
+    font-size: 13px;
+    line-height: var(--p-lh);}
+
+#requests .main_column >table:first-child {
+    position: relative;
+    top: -19px;}
+
+/** convert h3 to head (reply box) **/
+#request_comments #reply_box h3 {
+    background: var(--p-head-grdnt);
+    font-size: 20px;
+    line-height: 20px;
+    padding: 10px;
+    margin: -10px -10px 10px -10px;}
+
+
 
 /*****************************************************************************************************/
 .forum_post tr {

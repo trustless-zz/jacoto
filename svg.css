@@ -275,12 +275,14 @@ a[title="Remove"] {
     background-image: url('icons/dark/quote.svg');}
 
 /** thumbs **/
+img[src="static/common/thumbsup.png"],
 img[title="ThumbsUp"],
 img[title="ThumbsUp "],
 #thumbsup img {
     background-image: url('icons/dark/thumbsup_simple.svg');}
 #thumbsup img:hover {
     background: url('icons/dark/thumbsup_simple.svg') var(--c-anchor-hvr-bcg);}
+img[src="static/common/thumbsdown.png"],
 img[title="ThumbsDown"],
 img[title="ThumbsDown "],
 #thumbsdown img {
