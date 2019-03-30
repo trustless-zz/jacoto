@@ -2318,7 +2318,7 @@ h2 {
 
 .rowa,
 .row_a,
-#collages tr:not(.colhead):nth-child(even),
+#collages tr:not(.colhead):nth-child(odd),
 #searchbars input:focus,
 .torrent_table tr.group_torrent:hover,
 .userreviews tr:nth-child(odd),
@@ -2326,7 +2326,7 @@ h2 {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
-#collages tr:not(.colhead):nth-child(odd),
+#collages tr:not(.colhead):nth-child(even),
 .userreviews tr:nth-child(even),
 .requests_outer_table #otherop tr:nth-child(even) {
     background-color: var(--c-tgroup);}
@@ -2336,7 +2336,7 @@ h2 {
 .row_b:hover,
 #torrents .torrent_details tr table tr:not(.colhead):not(.colhead_dark):hover,
 #collages tr:not(.colhead):hover {
-    background-color: var(--c-row-hvr);}
+    background-color: var(--c-row-hvr) !important;}
 
 .box_series li {
     list-style: circle;
@@ -2390,6 +2390,8 @@ img[src="static/common/thumbsup.png"],
 #requests .thin >table.border {
     table-layout: fixed;} /*115px=8%*/
 
+#requests tr.sticky {
+    background-color: var(--c-input);}
 #requests_donate tr:nth-child(1) strong,
 #requests_donate tr:nth-child(1) a {
     font-size: 14px;}
