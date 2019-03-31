@@ -12,7 +12,8 @@
     --c-tor-row-hvr: 					rgb(225, 225, 225);
     --c-edition: 						rgb(230, 230, 230);
     --c-input:							rgb(235, 235, 235);
-    --c-tgroup:							rgb(240, 240, 240);                     /*rowb*/
+    --c-trowb:							rgb(237, 237, 237);                     /*rowb*/
+    --c-tgroup:							rgb(240, 240, 240);                     
     --c-box: 							rgb(245, 245, 245);                     /*rowa*/
     --c-row-hvr:						rgb(250, 250, 250);
     --c-high:							rgb(255, 255, 255);
@@ -611,7 +612,10 @@ img[title="Gold"] {
     float: right;
     height: 100%;
     width: 300px;}
-#request_form,
+#upload .thin form >table,
+#upload .thin form div >table,
+#upload #content >div[style="margin:0px auto;width:700px"],
+.thin >#request_form,
 #requests .main_column >table:first-child,
 #allreviews,
 #requests .thin >.center.box.pad,
@@ -1870,10 +1874,10 @@ a[href="javascript:Vote(20, 1)"] strong:hover:active,
 #requests .thin >.center.box.pad a[onclick] {
     cursor: default;}
 #artist_tr + tr td.label,
-#request_form #year_tr td.label,
-#request_form #image_tr + tr td.label,
-#request_form #releasetypes_tr td.label,
-#request_form #languages_tr td.label,
+.thin >#request_form #year_tr td.label,
+.thin >#request_form #image_tr + tr td.label,
+.thin >#request_form #releasetypes_tr td.label,
+.thin >#request_form #languages_tr td.label,
 #requests_donate,
 .requests_outer_table >tbody >tr >td:nth-child(1),
 .filter_torrents.advanced tr:first-child >td.label {
@@ -1929,6 +1933,7 @@ a[href="javascript:Vote(20, 1)"] strong:hover:active,
     margin-bottom: 5px;
     padding: 6px;
     text-align: center;}
+#upload table[style] .colhead strong,
 #requests table.border .colhead_dark strong,
 .torrent_table .colhead_dark strong {
     font-weight: normal;}
@@ -2324,20 +2329,23 @@ h2 {
 #searchbars input:focus,
 .torrent_table tr.group_torrent:hover,
 .userreviews tr:nth-child(odd),
-.requests_outer_table #otherop tr:nth-child(odd) {
+.requests_outer_table #otherop tr:nth-child(odd),
+#upload table[style] tr:not(.colhead):nth-child(odd) {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
 #collages tr:not(.colhead):nth-child(even),
 .userreviews tr:nth-child(even),
-.requests_outer_table #otherop tr:nth-child(even) {
-    background-color: var(--c-tgroup);}
+.requests_outer_table #otherop tr:nth-child(even),
+#upload table[style] tr:not(.colhead):nth-child(even) {
+    background-color: var(--c-trowb);}
 .rowa:hover,
 .row_a:hover,
 .rowb:hover,
 .row_b:hover,
 #torrents .torrent_details tr table tr:not(.colhead):not(.colhead_dark):hover,
-#collages tr:not(.colhead):hover {
+#collages tr:not(.colhead):hover,
+#upload table[style] tr:not(.colhead):hover {
     background-color: var(--c-row-hvr) !important;}
 
 .box_series li {
@@ -2411,8 +2419,9 @@ img[src="static/common/thumbsup.png"],
     width: 70% !important;}
 #requests_donate {
     border-left: var(--p-table-brdr);}
+#upload td.label,
 .filter_torrents td.label,
-#request_form td.label,
+.thin >#request_form td.label,
 .requests_outer_table table.border td.label,
 .requests_outer_table #otherop td.label {
     width: 115px;}
@@ -2446,21 +2455,22 @@ img[src="static/common/thumbsup.png"],
     margin-bottom: -4px;}
 
 /** table padding with no container (this is horrible) **/
-#request_form >table td:first-child,
+.thin >#request_form >table td:first-child,
 #requests .main_column >table:first-child td:first-child {
     padding-left: 10px;}
-#request_form >table td:last-child,
+.thin >#request_form >table td:last-child,
 #requests .main_column >table:first-child td:last-child {
     padding-right: 10px;}
-#request_form >table tr:nth-child(2) td,
+.thin >#request_form >table tr:nth-child(2) td,
 #requests .main_column >table:first-child tr:first-child td {
     padding-top: 10px;}
-#request_form >table tr:last-child td,
+.thin >#request_form >table tr:last-child td,
 #requests .main_column >table:first-child tr:last-child td {
     padding-bottom: 10px;}
 
 /** convert ... to head **/
-#request_form >table tr:first-child td,
+#upload h3#dnu_header,
+.thin >#request_form >table tr:first-child td,
 form[name="filter"] h3,
 #request_comments #reply_box h3 {
     font-weight: bold;
@@ -2472,7 +2482,7 @@ form[name="filter"] h3,
 form[name="filter"] h3 {
     margin: 0;}
 
-#request_form input[value="PTPImg It"],
+.thin >#request_form input[value="PTPImg It"],
 #requests td form input[value="Fill request"],
 #requests #voting input[type="button"] {
     vertical-align: bottom;}
@@ -2491,23 +2501,46 @@ form[name="filter"] h3 {
     width: calc(100% - 115px);
     margin-right: 5px;
     max-width: 475px;}
+#upload input#steamid,
 #requests table input#amount_box {
     width: 100px;}
 #requests .box_artists ul.stats.nobullet {
     margin-bottom: 0;}
 
-#request_form {
+.thin >#request_form {
     margin-top: 15px;}
-#request_form input[name="title"] {
+.thin >#request_form input[name="title"] {
     width: calc(100% - 15px);}
-#request_form input[name="year"] {
+#upload input#year,
+.thin >#request_form input[name="year"] {
     width: 35px;}
-#request_form input[name="image"] {
+.thin >#request_form input[name="image"] {
     width: calc(100% - 110px);
     margin-right: 5px;}
-#request_form input#tags {
+#upload input#tags,
+.thin >#request_form input#tags {
     width: calc(100% - 185px);
     margin-left: 5px;}
+
+#upload #content >div[style="margin:0px auto;width:700px"] {
+    width: 100% !important;
+    margin: 0 0 15px 0 !important;
+    padding: 10px;}
+#upload table[style] {
+    border: var(--p-table-brdr);}
+#upload table[style] td {
+    width: auto !important;}
+#upload .thin form table .colhead:not(:first-child) {
+    border-top: var(--p-table-brdr);}
+#upload input#release_title,
+#upload input#aliases,
+#upload input#title,
+#upload #announce_uri input {
+    width: calc(100% - 15px) !important;}
+#upload textarea#release_desc,
+#upload textarea#album_desc {
+    width: calc(100% - 5px);}
+
 
 /*****************************************************************************************************/
 .forum_post tr {
