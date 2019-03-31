@@ -388,6 +388,9 @@ td, th {
 td, th, tr {
     border: 0;}
 
+td.label {
+    vertical-align: middle;}
+
 blockquote {
     margin: 4px 5px 10px 5px;
     padding: 10px;
@@ -608,6 +611,7 @@ img[title="Gold"] {
     float: right;
     height: 100%;
     width: 300px;}
+#request_form,
 #requests .main_column >table:first-child,
 #allreviews,
 #requests .thin >.center.box.pad,
@@ -1705,17 +1709,10 @@ img[title="Snatches"],
     background-color: var(--c-box);}
 form[name="filter"] {
     text-align: left;}
-form[name="filter"] h3 {
-    background: var(--p-head-grdnt);
-    font-size: 20px;
-    padding: 10px;
-    margin: 0;}
 td.label {
     text-align: right;
     vertical-align: middle;}
-.filter_torrents td.label {
-    width: 115px;}
-#requests .main_column >table:first-child td,
+#requests .sidebar .box_votes table td,
 .requests_outer_table td,
 .filter_torrents td {
     padding: 2px 5px 5px 5px;}
@@ -1872,6 +1869,11 @@ a[href="javascript:Vote(20, 1)"] strong:hover:active,
 .toggle_tags,
 #requests .thin >.center.box.pad a[onclick] {
     cursor: default;}
+#artist_tr + tr td.label,
+#request_form #year_tr td.label,
+#request_form #image_tr + tr td.label,
+#request_form #releasetypes_tr td.label,
+#request_form #languages_tr td.label,
 #requests_donate,
 .requests_outer_table >tbody >tr >td:nth-child(1),
 .filter_torrents.advanced tr:first-child >td.label {
@@ -2409,6 +2411,8 @@ img[src="static/common/thumbsup.png"],
     width: 70% !important;}
 #requests_donate {
     border-left: var(--p-table-brdr);}
+.filter_torrents td.label,
+#request_form td.label,
 .requests_outer_table table.border td.label,
 .requests_outer_table #otherop td.label {
     width: 115px;}
@@ -2442,24 +2446,68 @@ img[src="static/common/thumbsup.png"],
     margin-bottom: -4px;}
 
 /** table padding with no container (this is horrible) **/
+#request_form >table td:first-child,
 #requests .main_column >table:first-child td:first-child {
     padding-left: 10px;}
+#request_form >table td:last-child,
 #requests .main_column >table:first-child td:last-child {
     padding-right: 10px;}
+#request_form >table tr:nth-child(2) td,
 #requests .main_column >table:first-child tr:first-child td {
     padding-top: 10px;}
+#request_form >table tr:last-child td,
 #requests .main_column >table:first-child tr:last-child td {
     padding-bottom: 10px;}
 
-/** convert h3 to head (reply box) **/
+/** convert ... to head **/
+#request_form >table tr:first-child td,
+form[name="filter"] h3,
 #request_comments #reply_box h3 {
+    font-weight: bold;
     background: var(--p-head-grdnt);
     font-size: 20px;
     line-height: 20px;
     padding: 10px;
     margin: -10px -10px 10px -10px;}
+form[name="filter"] h3 {
+    margin: 0;}
 
+#request_form input[value="PTPImg It"],
+#requests td form input[value="Fill request"],
+#requests #voting input[type="button"] {
+    vertical-align: bottom;}
+#requests .box_tags .stats.nobullet li {
+    margin-bottom: 0;}
+#requests .sidebar .box_votes table {
+    margin-top: 8px;}
+#requests td form label[for="anonymous"] {
+    margin-top: 3px;
+    display: inline-block;}
+#requests td form #anonymous {
+    margin: 3px 3px 0 5px;}
+#requests .main_column >table:first-child td.label {
+    vertical-align: top;}
+#requests table input[name="link"] {
+    width: calc(100% - 115px);
+    margin-right: 5px;
+    max-width: 475px;}
+#requests table input#amount_box {
+    width: 100px;}
+#requests .box_artists ul.stats.nobullet {
+    margin-bottom: 0;}
 
+#request_form {
+    margin-top: 15px;}
+#request_form input[name="title"] {
+    width: calc(100% - 15px);}
+#request_form input[name="year"] {
+    width: 35px;}
+#request_form input[name="image"] {
+    width: calc(100% - 110px);
+    margin-right: 5px;}
+#request_form input#tags {
+    width: calc(100% - 185px);
+    margin-left: 5px;}
 
 /*****************************************************************************************************/
 .forum_post tr {
