@@ -385,7 +385,8 @@ table {
     width: 100%;}
 td, th {
     padding: 5px;
-    text-align: left;}
+    text-align: left;
+    }
 #thumbsup img,
 #thumbsdown img,
 .sidebar .box_user_rating img,
@@ -572,7 +573,9 @@ img[src="static/common/thumbsdown.png"],
 img[src="static/common/thumbsup.png"],
 #requests table.border a[href^="upload.php"],
 #requests_donate img,
-img[title="Gold"] {
+img[title="Gold"],
+#forums td.read,
+#forums td.unread {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -615,6 +618,7 @@ img[title="Gold"] {
     float: right;
     height: 100%;
     width: 300px;}
+#forums .thin table,
 #upload .thin form >table,
 #upload .thin form div >table,
 #upload #content >div[style="margin:0px auto;width:700px"],
@@ -959,11 +963,11 @@ input[type=submit]:hover:active,
     background-color: var(--c-b1) !important;}
 
 #index span[style="color: gold;"],
-#upload table[style] span[style="color: yellow;"] {
+#upload #content >div >table[style] span[style="color: yellow;"] {
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
 #index span[style="color: red;"],
-#upload table[style] span[style="color:red;font-weight:700;"] {
+#upload #content >div >table[style] span[style="color:red;font-weight:700;"] {
     color: var(--c-red) !important;}
 #index span[style="color: orange;"] {
     color: var(--c-orange) !important;
@@ -1134,7 +1138,7 @@ input[type=submit]:hover:active,
 .sidebar #polcont .pad li:not(.graph):not(:first-child) {
     margin-top: 2px;}
 .sidebar #freeleech_time_left {
-    height: 36px;
+    height: 40px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: var(--p-main-brdr);
@@ -1151,13 +1155,13 @@ input[type=submit]:hover:active,
     display: block;
     animation: lsfl-pulse-a linear 2s infinite;
     transform-origin: left;
-    height: 36px;
+    height: 40px;
     background-repeat: repeat-x;
-    background-size: 900px 36px;}
+    background-size: 900px 40px;}
 .sidebar #freeleech_time_left .points {
     display: block;
     position: absolute;
-    line-height: 36px;
+    line-height: 40px;
     left: 10px;
     top: 0;
     font-weight: 600;
@@ -1958,7 +1962,7 @@ body:not(#upload) #artist_tr + tr td.label,
     margin-bottom: 5px;
     padding: 6px;
     text-align: center;}
-#upload table[style] .colhead strong,
+#upload #content >div >table[style] .colhead strong,
 #requests table.border .colhead_dark strong,
 .torrent_table .colhead_dark strong {
     font-weight: normal;}
@@ -2355,14 +2359,14 @@ h2 {
 .torrent_table tr.group_torrent:hover,
 .userreviews tr:nth-child(odd),
 .requests_outer_table #otherop tr:nth-child(odd),
-#upload table[style] tr:not(.colhead):nth-child(odd) {
+#upload #content >div >table[style] tr:not(.colhead):nth-child(odd) {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
 #collages tr:not(.colhead):nth-child(even),
 .userreviews tr:nth-child(even),
 .requests_outer_table #otherop tr:nth-child(even),
-#upload table[style] tr:not(.colhead):nth-child(even) {
+#upload #content >div >table[style] tr:not(.colhead):nth-child(even) {
     background-color: var(--c-trowb);}
 .rowa:hover,
 .row_a:hover,
@@ -2370,7 +2374,7 @@ h2 {
 .row_b:hover,
 #torrents .torrent_details tr table tr:not(.colhead):not(.colhead_dark):hover,
 #collages tr:not(.colhead):hover,
-#upload table[style] tr:not(.colhead):hover {
+#upload #content >div >table[style] tr:not(.colhead):hover {
     background-color: var(--c-row-hvr) !important;}
 
 .box_series li {
@@ -2570,9 +2574,9 @@ form[name="filter"] h3 {
     width: 100% !important;
     margin: 0 0 15px 0 !important;
     padding: 10px;}
-#upload table[style] {
+#upload #content >div >table[style] {
     border: var(--p-table-brdr);}
-#upload table[style] td {
+#upload #content >div >table[style] td {
     width: auto !important;}
 #upload .thin form table .colhead:not(:first-child) {
     border-top: var(--p-table-brdr);}
@@ -2623,161 +2627,108 @@ form[name="filter"] h3 {
     margin-top: 8px;}
 #upload td.label {
     background-color: var(--c-tgroup);}
+input#file[disabled] {
+    background-color: transparent;
+    opacity: .9;}
 
+#footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px auto;
+    font-size: 13px;
+    line-height: var(--p-lh);}
+#disclaimer_container {
+    text-align: justify;}
+#server_stats {
+    text-align: right;
+    margin: auto 0 0 0;
+    width: 50%;}
+#copyright {
+    text-align: left;
+    width: 50%;}
+#copyright p {
+    margin-bottom: 0;}
 
-
-/*****************************************************************************************************/
+#forums h3 {
+	padding: 0px;
+    margin: 0 0 5px 10px;}
+.forumstat,
+#forums h4,
+#forums td.body,
+#forums table.border td,
+#forums #content #otherop td,
+#forums #content #forumlist td,
+#forums #content table tr.colhead td {
+	text-align: left;}
 .forum_post tr {
-	width: 100%;
 	text-align: left !important;}
-
-
-
-
-
-
-#forums #content .thin table {
-	width: 100%;}
-
-#forums .thin {
-	display: flex;
-	flex-direction: column;
-	line-height: 1.4em;}
-
-#forums .thin .forum_index {
-	line-height: 1em;}
-
-#forums .rowa td a,
-#forums .rowb td a {
-	 color: var(--white);
-	 font-weight: bold;}
-
-#forums .linkbox {
-	color: transparent;}
-
-#forums .linkbox label {
-	color: var(--white);
-	vertical-align: bottom;}
-
-#forums table.border td {
-	text-align:left;}
-
 #forums td {
 	text-align: center;}
+#forums td[style="width:7%;"],
+#forums td[style="width:9%;"],
+#forums td[style="width:14%;"] {
+    text-align: center !important;}
+div.breadcrumbs,
+#forums #content .search .submit {
+	text-align: right;}
+#forums .forum_post h3,
+#forums h4 {
+    margin: 0;
+    padding: 0;}
+#forums h4 {
+    font-weight: normal;}
+.forum_post tr,
+#forums #content .thin table {
+	width: 100%;}
+#forums .last_poster {
+    font-size: 13px;}
+#forums td.read,
+#forums td.unread {
+    background-size: 19px 18px;
+    width: 19px;
+    height: 18px;}
+#forums .forum_index .colhead td:nth-child(1) {
+    width: auto !important;}
 
+/*****************************************************************************************************/
+
+
+
+#forums .linkbox label {
+	vertical-align: bottom;}
 #forums td.body {
-	text-align: left;
-	width: 100%;
-	padding: 10px 10px 25px 10px;}
-
-#forums #content table tr.colhead td {
-	text-align:left;}
+	width: 100%;}
 
 #forums .colhead {
 	font-size: 1.1em;
 	height: 30px;}
 
-div.breadcrumbs {
-	text-align: right;
-	padding: 5px 5px 0 0;}
-
-#forums .linkbox_bottom {
-	margin: 5px 0px;}
 
 /*** Makes username and time on forums.php smaller ***/
-#forums span[style="float:right;"] {
-	font-size: 0.8em;
-	margin-top: 3px;}
+#forums span[style="float:right;"] {}
 
 /*** Overrides hard coded styles of Topics, Posts and Author headers ***/
-#forums td[style="width:7%;"] {text-align: center !important;}
-#forums td[style="width:9%;"] {text-align: center !important;}
-#forums td[style="width:14%;"] {text-align: center !important;}
 
 /*** h3 is the Subsection names (Site, Community, Gaming, etc.) ***/
-#forums h3 {
-	padding: 0px;
-	border-bottom: 1px var(--lightBlue30) solid;
-	margin-left: 5px;
-	color: var(--lightBlue);}
 
-#forums .forum_post h3 {
-	margin: 0;}
 
 /*** h4 is the name of each forum section (Announcements, Blog, Staff Picks, etc.) ***/
-#forums h4 {
-	text-align: left;}
-
-#forums h4 a {
-	color: var(--white);}
 
 /*** Forum Icons ***/
-.last_read {
-	width: 15px;
-	height: 15px;
-	background: url('../images/go_last_read.png') no-repeat center center;
-	margin-left: 5px;}
+.last_read {}
 
 .last_read a {
 	width: 100%;
 	height: 100%;
 	display: block;}
 
-#forums #content .thin td.read {
-	background-image: url("../images/balloon.png");
-	background-position: 50%;
-	background-repeat: no-repeat;
-	height: 18px;
-	width: 18px;}
-
-#forums #content .thin td.unread{
-	background-image: url('../images/balloon-unread.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width: 18px;
-	height: 18px}
-
-#forums #content .thin td.read_sticky{
-	background-image: url('../images/sticky.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width: 18px;
-	height: 18px}
-
-#forums #content .thin td.unread_sticky{
-	background-image:url('../images/sticky-unread.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width: 18px;
-	height: 18px}
-
-#forums #content .thin td.read_locked{
-	background-image:url('../images/lock.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width: 18px;
-	height: 18px}
-
-#forums #content .thin td.unread_locked{
-	background-image:url('../images/lock-unread.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width: 18px;
-	height: 18px}
-
-#forums #content .thin td.read_locked_sticky{
-	background-image:url('../images/lock-sticky.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width: 18px;
-	height: 18px}
-
-#forums #content .thin td.unread_locked_sticky{
-	background-image: url('../images/lock-sticky-unread.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width: 18px;
-	height: 18px}
+#forums #content .thin td.read_sticky {}
+#forums #content .thin td.unread_sticky {}
+#forums #content .thin td.read_locked {}
+#forums #content .thin td.unread_locked {}
+#forums #content .thin td.read_locked_sticky {}
+#forums #content .thin td.unread_locked_sticky{}
 
 /*** Category List on Latest Posts Page ***/
 #forums table.border .cat_list td {
@@ -2785,73 +2736,22 @@ div.breadcrumbs {
 	padding: 0 !important;
 	border: 0 !important}
 
-#forums table.border .cat_list td[colspan="5"] {
-	background-color: var(--mediumBlue);
-	height: 25px;}
-
-#forums table.border .cat_list td[colspan="5"] strong {
-	padding: 3px;}
-
-#forums #content #otherop td,
-#forums #content #forumlist td {
-	text-align: left;
-	background-color: var(--mediumBlue);}
-
-#forums #content .search table {
-	border: 2px solid #003;
-	margin-bottom: 6px;}
-
-#forums #content .search .submit {
-	text-align: right;
-	margin-right: 5px;}
-
-#forums #content tbody #cat_list td a {
-	margin: 5px;}
-
 /*** Last 100 posts default forums box ***/
-.forum_latest .search {
-	margin-top: -36px;
-	width: 102%;
-	margin-left: -10px;
-	z-index: 1;
-	margin-bottom: 10px;
-	padding-top: 40px;}
-
-.forum_latest h2 {
-	z-index: 2;}
-
-.forum_latest form br {
-	line-height: 0px;}
-
-.submit input {
-	box-shadow: var(--black) 2px 2px 2px;}
-
-#user .main_column td.label {
-	vertical-align: middle;}
+.forum_latest .search {}
+.forum_latest h2 {}
+.forum_latest form br {}
+.submit input {}
+#user .main_column td.label {}
 
 /*** Avatar ***/
 td.avatar {
-	background-color: transparent;
 	box-shadow: 0px 0px 10px var(--black);}
 
-#forums td.avatar img {
-	margin-top: 5px;}
+#forums td.avatar img {}
 
 .forum_post .body {
-    margin: 0 10px;
-    padding: 10px 15px;
+    padding: 10px;
     width: 100%;}
-
-.forumstat {
-	font-size: 11px;
-	text-align: left;
-	margin: 2px 0px;
-	padding: 2px;
-	background-color: rgb(26, 42, 59);
-	color: var(--grey);}
-
-.forumstat:hover {
-	color: var(--white);}
 
 .avatar .forumstat {
     max-height: 16px;
@@ -2866,25 +2766,17 @@ td.avatar {
 	-webkit-transition: max-height 0.3s ease-in 0.25s;
 	-moz-transition: max-height 0.3s ease-in 0.25s;
 	-o-transition: max-height 0.3s ease-in 0.25s;
-	transition: max-height 0.3s ease-in 0.25s;
-	color: var(--white);}
+	transition: max-height 0.3s ease-in 0.25s;}
 
 .user_online {
-	display: block;
-	color: var(--darkGreen);}
+	display: block;}
 
 .user_offline {
-	display: block;
-	color: var(--darkRed);}
+	display: block;}
 
 /*** Likes, Dislikes ***/
 tr.likes td {
-	text-align: left !important;
-	background-color: var(--darkBlue);
-	padding-left: 3px;}
-
-tr.likes {
-	border-top: var(--black) solid 2px;}
+	text-align: left !important;}
 
 /*** Forum Posts ***/
 #forums .colhead_dark .time,
@@ -2893,64 +2785,37 @@ tr.likes {
 #forums .colhead_dark label {
 	font-size: .8em;}
 
-#forums .colhead_dark div[id*="bar"] {
-	font-size: .8em;
-	margin-top: 5px;
-	padding-right: 5px;}
+#forums .colhead_dark div[id*="bar"] {}
 
-#forums #content .thin .sub {
-	top: 40px;}
+#forums #content .thin .sub {}
 
-#forums #content .thin .sub span {
-	display: block;
-	padding: 10px;}
+#forums #content .thin .sub span {}
 
-#forums #content .thin .sub a {
-	color: var(--white);}
+#forums #content .thin .sub a {}
 
-#forums blockquote {
-	margin-top:5px;}
+#forums blockquote {}
 
 /*** Drop shadows on images and videos in the forums.  Different for smileys and weekly recap ***/
 #forums .forum_post td.body img,
-#forums .forum_post td.body iframe {
-	margin: 5px;
-	filter: drop-shadow(0px 0px 10px var(--black));
-	-webkit-filter: drop-shadow(0px 0px 10px var(--black));
-	padding: 5px;}
+#forums .forum_post td.body iframe {}
 
-#forums .forum_post td.body img[src*="static/common/smileys/"] {
-	margin: 0px;
-	box-shadow: 0px 0px 0px;
-	filter: none;
-	-webkit-filter: none;
-	padding: 0px;}
+#forums .forum_post td.body img[src*="static/common/smileys/"] {}
 
-#forums .forum_post td.body img[src="https://ptpimg.me/5u4e3c.png"] {
-	filter: drop-shadow(0px -10px 10px var(--black));
-	-webkit-filter: drop-shadow(0px -10px 10px var(--black));
-	margin: 0px;
-	box-shadow: 0px 0px 0px;
-	padding: 0px;}
+#forums .forum_post td.body img[src="https://ptpimg.me/5u4e3c.png"] {}
 
 /*** Puts border around unread posts ***/
 #forums table.forum_unread {
-    border-top: var(--darkGreen60) solid 5px;
+    border-top: red solid 5px;
     border-collapse: collapse;}
 
 /*** Other Misc. Items ***/
 #forums .rowa,
-#forums .rowb {
-	height: 40px;}
+#forums .rowb {}
 
 /*For spoiler BB Code*/
-#forums a[onclick*="#thread_notes_tabl"] {
-	margin: 5px;}
+#forums a[onclick*="#thread_notes_tabl"] {}
 
-#forums td.body a[onclick="BBCode.spoiler(this);"] {
-	background-color: var(--mediumBlue) !important;
-	padding: 1px 3px;
-	color: var(--white);}
+#forums td.body a[onclick="BBCode.spoiler(this);"] {}
 
 /*Aligns images in custom titles*/
 .user_title img {
@@ -2964,7 +2829,6 @@ tr.likes {
 	height: auto;
 	vertical-align: bottom;
 	opacity: .5;}
-
 #forums .forum_signature td > div {
 	border-top: 1px solid var(--mediumBlue);
 	padding: 5px 0px 2px 3px;
@@ -2976,11 +2840,3 @@ tr.likes {
 #forums #content .thin table.sticky_post {
 	width: 85%;
 	margin: 30px auto;}
-
-.sticky_post_label::before {
-    background: url('../images/pin.png');
-    height: 15px;
-    width: 15px;
-    content: "";
-    float: left;
-    margin: 1px 5px 0px 2px;}
