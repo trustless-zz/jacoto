@@ -41,6 +41,9 @@
     --c-btn-b2: 						rgb(151, 212, 193);
     --c-red:                            rgb(227, 0, 0);                         /* contrast adjusted */
     --c-gold:                           rgb(133, 112, 0);                       /* contrast adjusted */
+    --c-orange:                         rgb(156, 101, 0);                       /* contrast adjusted */
+    --p-orange:                         0 0 1px rgb(255, 165, 0);
+    --p-gold:                           0 0 1px rgb(255, 215, 0);
 /** /COLORS **/
     --p-searchbar-grdnt: 				linear-gradient(155deg,var(--c-b1),var(--c-b2));
     --p-head-grdnt: 					linear-gradient(155deg,var(--c-b3),var(--c-b4));
@@ -954,6 +957,17 @@ input[type=submit]:hover:active,
 #userinfo_minor li.active,
 #userinfo_minor .highlight:hover {
     background-color: var(--c-b1) !important;}
+
+#index span[style="color: gold;"],
+#upload table[style] span[style="color: yellow;"] {
+    color: var(--c-gold) !important;
+    text-shadow: var(--p-gold);}
+#index span[style="color: red;"],
+#upload table[style] span[style="color:red;font-weight:700;"] {
+    color: var(--c-red) !important;}
+#index span[style="color: orange;"] {
+    color: var(--c-orange) !important;
+    text-shadow: var(--p-orange);}
 
 #toplink {
     position: absolute;
@@ -1932,7 +1946,6 @@ body:not(#upload) #artist_tr + tr td.label,
     color: var(--c-text-s);}
 .filter_torrents.advanced label {
     color: var(--c-txt);}
-
 
 .sidebar .box_albumart,
 .sidebar .box_tags,
