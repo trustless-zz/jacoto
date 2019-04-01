@@ -1791,7 +1791,8 @@ input[type=submit],
 .similar_votes a,
 .box_tags .stats.nobullet div a,
 #requests table.border td.nobr:nth-child(2) strong,
-a[href="javascript:Vote(20, 1)"] strong {
+a[href="javascript:Vote(20, 1)"] strong,
+#upload td#image_block a {
     font-size: 14px;
     line-height: 14px;
     font-family: OpenSans, Helvetica, Arial, sans-serif !important;
@@ -1806,6 +1807,7 @@ a[href="javascript:Vote(20, 1)"] strong {
     background: var(--p-btn);
     background-size: 200% auto !important;
     display: inline-block;}
+#upload td#image_block,
 .box_tags .stats.nobullet div a,
 #requests table.border td.nobr:nth-child(2) strong,
 a[href="javascript:Vote(20, 1)"] strong {
@@ -1824,6 +1826,7 @@ a[href="javascript:Vote(20, 1)"] strong {
     line-height: 26px;}
 .box_tags .stats.nobullet li {
     margin-bottom: 2px;}
+#upload td#image_block a,
 #requests table.border td.nobr:nth-child(2) strong:before,
 a[href="javascript:Vote(20, 1)"] strong:before,
 .box_tags .stats.nobullet div a:before {
@@ -1839,7 +1842,8 @@ input[type=submit]:hover,
 .similar_votes a:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
 a[href="javascript:Vote(20, 1)"] strong:hover,
-.box_tags .stats.nobullet div a:hover {
+.box_tags .stats.nobullet div a:hover,
+#upload td#image_block a:hover {
     color: var(--c-anchor-hvr);
     background: var(--p-btn-hvr);}
 button:hover:active,
@@ -1848,7 +1852,8 @@ input[type=submit]:hover:active,
 .similar_votes a:hover:active,
 #requests table.border td.nobr:nth-child(2) strong:hover:active,
 a[href="javascript:Vote(20, 1)"] strong:hover:active,
-.box_tags .stats.nobullet div a:hover:active {
+.box_tags .stats.nobullet div a:hover:active,
+#upload td#image_block a:hover:active {
     background: var(--p-btn-act);}
 
 .filter_torrents .submit {
@@ -1873,7 +1878,14 @@ a[href="javascript:Vote(20, 1)"] strong:hover:active,
 .toggle_tags,
 #requests .thin >.center.box.pad a[onclick] {
     cursor: default;}
-#artist_tr + tr td.label,
+#upload #releaseinfo .colhead +tr+tr td.label,
+#upload #rlstitle +tr td.label,
+#upload #rlstitle td.label,
+#upload #year_tr +tr+tr+tr+tr+tr td.label,
+#upload #year_tr +tr+tr+tr+tr td.label,
+#upload #title_tr td.label,
+#upload #title_tr +.colhead+tr+tr td.label,
+body:not(#upload) #artist_tr + tr td.label,
 .thin >#request_form #year_tr td.label,
 .thin >#request_form #image_tr + tr td.label,
 .thin >#request_form #releasetypes_tr td.label,
@@ -2455,15 +2467,32 @@ img[src="static/common/thumbsup.png"],
     margin-bottom: -4px;}
 
 /** table padding with no container (this is horrible) **/
+#upload #dynamic_form + table.border.slice td:first-child,
+#upload #releaseinfo tr:not(.colhead) td:first-child,
+#upload #groupinfo tr:not(.colhead) td:first-child,
+#upload #torrent_properties tr:not(.colhead) td:first-child,
 .thin >#request_form >table td:first-child,
 #requests .main_column >table:first-child td:first-child {
     padding-left: 10px;}
+#upload #dynamic_form + table.border.slice td:last-child,
+#upload #releaseinfo tr:not(.colhead) td:last-child,
+#upload #groupinfo tr:not(.colhead) td:last-child,
+#upload #torrent_properties tr:not(.colhead) td:last-child,
 .thin >#request_form >table td:last-child,
 #requests .main_column >table:first-child td:last-child {
     padding-right: 10px;}
+#upload #dynamic_form + table.border.slice tr:first-child td,
+#upload #releaseinfo tr:nth-child(2) td,
+#upload #groupinfo tr:nth-child(2) td,
+#upload #groupinfo .colhead +tr td,
+#upload #torrent_properties tr:nth-child(2) td,
 .thin >#request_form >table tr:nth-child(2) td,
 #requests .main_column >table:first-child tr:first-child td {
     padding-top: 10px;}
+#upload #dynamic_form + table.border.slice tr:last-child td,
+#upload #releaseinfo tr:last-child td,
+#upload #groupinfo tr:last-child td,
+#upload #torrent_properties tr:last-child td,
 .thin >#request_form >table tr:last-child td,
 #requests .main_column >table:first-child tr:last-child td {
     padding-bottom: 10px;}
@@ -2482,6 +2511,9 @@ form[name="filter"] h3,
 form[name="filter"] h3 {
     margin: 0;}
 
+#upload td#image_block a,
+#upload input[type="submit"],
+#upload input[type="button"],
 .thin >#request_form input[value="PTPImg It"],
 #requests td form input[value="Fill request"],
 #requests #voting input[type="button"] {
@@ -2509,8 +2541,7 @@ form[name="filter"] h3 {
 
 .thin >#request_form {
     margin-top: 15px;}
-.thin >#request_form input[name="title"] {
-    width: calc(100% - 15px);}
+#upload input#remaster_year,
 #upload input#year,
 .thin >#request_form input[name="year"] {
     width: 35px;}
@@ -2532,14 +2563,54 @@ form[name="filter"] h3 {
     width: auto !important;}
 #upload .thin form table .colhead:not(:first-child) {
     border-top: var(--p-table-brdr);}
+.thin >#request_form input[name="title"],
 #upload input#release_title,
 #upload input#aliases,
 #upload input#title,
 #upload #announce_uri input {
     width: calc(100% - 15px) !important;}
+#upload input#remaster_title {
+    width: calc(100% - 55px);}
+#upload #weblinks input[type="text"],
+#upload #reviews_table input#gamespotscoreuri,
+#upload #reviews_table input#ignuri,
+#upload #reviews_table input#metauri,
+.thin >#request_form textarea[name="description"],
 #upload textarea#release_desc,
 #upload textarea#album_desc {
     width: calc(100% - 5px);}
+#upload #weblinks tr:nth-child(1) td:nth-child(3),
+#upload #reviews_table td:first-child {
+    width: 125px;}
+#upload #reviews_table input#gamespotscore,
+#upload #reviews_table input#ignscore,
+#upload #reviews_table input#meta {
+    width: 25px;
+    margin-bottom: 5px;}
+#upload #reviews_table p:first-child {
+    margin-bottom: 10px;}
+#upload textarea#album_desc + p {
+    margin-top: 0;}
+#upload td#image_block a,
+#upload input[type="button"],
+#upload input[type="submit"] {
+    margin-left: 5px !important;}
+#upload #weblinks tr:nth-child(1) td:first-child,
+#upload #weblinks tr:nth-child(2) td:first-child {
+    width: 165px;}
+#upload input#image {
+    width: calc(100% - 110px);}
+#upload #weblinks tr td:nth-child(3) {
+    padding-left: 20px;}
+#upload input#trailer {
+    width: calc(100% - 315px);}
+#upload td#image_block input[type="text"] {
+    width: calc(100% - 175px) !important;}
+#upload td#image_block input[type="text"]:not(#screen0) {
+    margin-top: 8px;}
+#upload td.label {
+    background-color: var(--c-tgroup);}
+
 
 
 /*****************************************************************************************************/
