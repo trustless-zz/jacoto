@@ -19,8 +19,8 @@
     --c-high:							rgb(255, 255, 255);
     --c-b1: 							rgb(18, 201, 194);
     --c-b2: 							rgb(81, 204, 165);
-    --c-b3: 							rgb(131, 223, 219);						/* 60% #6cdad6 */
-    --c-b4: 							rgb(162, 224, 205);						/* 60% #92dcc5 */
+    --c-b3: 							rgb(132, 223, 220);
+    --c-b4: 							rgb(163, 225, 205);
     --c-b00: 							rgba(255, 255, 255, 0);
     --c-anchor: 						rgb(11, 122, 118);						/* #bd002c */
     --c-anchor-hvr: 					rgb(0, 0, 0);							/* #053d3b #630017 */
@@ -45,8 +45,8 @@
     --p-orange:                         0 0 1px rgb(255, 165, 0);
     --p-gold:                           0 0 1px rgb(255, 215, 0);
 /** /COLORS **/
-    --p-searchbar-grdnt: 				linear-gradient(155deg,var(--c-b1),var(--c-b2));
-    --p-head-grdnt: 					linear-gradient(155deg,var(--c-b3),var(--c-b4));
+    --p-searchbar-grdnt: 				var(--c-b1) linear-gradient(155deg,var(--c-b1),var(--c-b2));
+    --p-head-grdnt: 					var(--c-b3) linear-gradient(155deg,var(--c-b3),var(--c-b4));
     --p-header-shdw: 					0 0 4px var(--c-header-shdw);
     --p-main-shdw:						0 0 4px var(--c-main-shdw);
     --p-main-brdr:						1px solid var(--c-main-brdr);
@@ -61,6 +61,7 @@
     --p-img-anchor-brdr-hvr:			3px solid var(--c-b1);
     --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b00), var(--c-anchor)), linear-gradient(to right, var(--c-b1), var(--c-b2));
     --p-colhead-tr-bcg: 				var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
+    --p-post-colhead-bcg:               var(--c-table-brdr) linear-gradient(155deg,var(--c-table-brdr),var(--c-body));
     --p-colhead-tr-bcg-hvr:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-box));
     --p-colhead-tr-bcg-act:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
     --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
@@ -422,6 +423,7 @@ blockquote {
 	font-family: OpenSans, Helvetica, Arial, sans-serif !important;
 	font-size: 12px !important;}
 
+.head strong,
 li.active {
     font-weight: 600;}
 
@@ -660,7 +662,7 @@ form[name="filter"],
     background: var(--p-head-grdnt);
     font-size: 20px;
     line-height: 20px;
-    padding: 10px;}
+    padding: 9px;}
 .sidebar .head {
     margin: -10px -10px 0;
     font-weight: 600;}
@@ -1086,6 +1088,7 @@ input[type=submit]:hover:active,
 #index #recommended .head:hover:before,
 .box.news_post .head:hover:before {
     opacity: 1;}
+.torrent_table .colhead_dark td[onclick]:hover:active:before,
 .head[title="Click to expand/collapse"]:hover:active:before,
 #index #recommended .head:hover:active:before,
 .box.news_post .head:hover:active:before {
@@ -1138,7 +1141,7 @@ input[type=submit]:hover:active,
 .sidebar #polcont .pad li:not(.graph):not(:first-child) {
     margin-top: 2px;}
 .sidebar #freeleech_time_left {
-    height: 40px;
+    height: 38px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: var(--p-main-brdr);
@@ -1155,13 +1158,13 @@ input[type=submit]:hover:active,
     display: block;
     animation: lsfl-pulse-a linear 2s infinite;
     transform-origin: left;
-    height: 40px;
+    height: 38px;
     background-repeat: repeat-x;
-    background-size: 900px 40px;}
+    background-size: 900px 38px;}
 .sidebar #freeleech_time_left .points {
     display: block;
     position: absolute;
-    line-height: 40px;
+    line-height: 38px;
     left: 10px;
     top: 0;
     font-weight: 600;
@@ -1504,14 +1507,16 @@ a .error_message:hover:active {
     background-repeat: no-repeat;
     background-position: center;}
 
+.colhead,
+.colhead_dark {
+    background: var(--p-head-grdnt);}
 .colhead td,
 .colhead_dark td {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 19px;
     vertical-align: middle;
-    background: var(--p-colhead-tr-bcg);
     font-weight: normal;
-    padding: 8px 5px;
+    padding: 9px 5px;
     overflow: hidden;}
 .torrent_table tr td.center {
     text-align: center;
@@ -1634,7 +1639,8 @@ img[title="Snatches"],
 .screenshots img,
 #requests_donate img,
 #requests .main_column >table:first-child img[title="Gold"],
-#requests .main_column >table:first-child {
+#requests .main_column >table:first-child,
+#upload #content >div[style="margin:0px auto;width:700px"] {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -1976,24 +1982,22 @@ body:not(#upload) #artist_tr + tr td.label,
     opacity: 0;
     top: 0;
     left: 0;
-    background: var(--p-colhead-tr-bcg-hvr);
+    background: var(--p-expand-hvr);
     z-index: 1;}
 .torrent_details .torrent_table .colhead_dark td:nth-child(1):after {
     background: transparent !important;
     z-index: 3;}
 .torrent_table .colhead_dark td[onclick]:hover:before {
     opacity: 1;}
-.torrent_table .colhead_dark td[onclick]:hover:active:before {
-    background: var(--p-colhead-tr-bcg-act);}
 .torrent_details .torrent_table .colhead_dark strong,
 .torrent_details .torrent_table .colhead_dark img {
     position: absolute;
-    line-height: 36px;
+    line-height: 38px;
     top: 0;
     left: 5px;
     z-index: 2;}
 .torrent_details .torrent_table .colhead_dark img {
-    margin-top: 9px;}
+    margin-top: 10px;}
 
 .torrent_details .torrent_table .colhead_dark td {
     height: 20px;
@@ -2126,9 +2130,11 @@ li:not(.suggested_similar) .similar_votes >span {
 #content .sub span a {
     display: block;}
 
+.forum_post .colhead_dark {
+    background: var(--p-post-colhead-bcg);}
+
 .forum_post .colhead_dark td {
     font-size: 14px;
-    background: var(--c-edition) var(--p-forum-colhead);
     line-height: var(--p-lh);
     padding: 6px 5px 7px 5px;}
 
@@ -2144,7 +2150,7 @@ li:not(.suggested_similar) .similar_votes >span {
     top: -6px;
     line-height: 32px;
     padding: 0 4px 0 8px;
-    background: var(--p-forum-colhead);
+    background-color: var(--c-table-brdr) !important;
     border-right: var(--p-main-brdr);
     clip: rect(0, 15px, 32px, 0);}
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:before,
@@ -2156,7 +2162,7 @@ li:not(.suggested_similar) .similar_votes >span {
     left: 0;
     top: 0;
     height: 100%;
-    background: var(--p-forum-colhead);}
+    background-color: var(--c-table-brdr);}
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover {
     transition-delay: 0s;
@@ -2257,22 +2263,22 @@ li:not(.suggested_similar) .similar_votes >span {
     width: calc(100% - 68px);}
 
 #markread:before {
-    width: 20px;
-    height: 40px;
+    width: 19px;
+    height: 38px;
     position: absolute;
     background-color: var(--c-em-bcg);
-    left: -22px;
+    left: -21px;
     top: -1px;
     cursor: pointer;
-    border-radius: 40px 0 0 40px;
+    border-radius: 38px 0 0 38px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: var(--p-main-brdr);
-    clip: rect(-10px, 21px, 50px, -10px);
+    clip: rect(-10px, 20px, 50px, -10px);
     content: '✔';
     text-indent: 4px;
     font-size: 18px;
-    line-height: 40px;
+    line-height: 38px;
     color: var(--c-anchor-hvr);
     z-index: 999;}
 #markread:hover:before {
@@ -2320,7 +2326,7 @@ textarea:focus {
 
 .similar img,
 .screenshots img,
-.box_albumart img {
+.sidebar img {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 button:hover,
@@ -2333,7 +2339,9 @@ a[href="javascript:Vote(20, 1)"] strong:hover,
 .similar img:hover,
 .screenshots img:hover,
 .box_albumart img:hover,
-#quickreplypreview {
+#quickreplypreview,
+.sidebar img:hover,
+.userratingdiv img {
     -webkit-box-shadow: none;
     box-shadow: none;}
 #quickreplybuttons {
@@ -2692,6 +2700,15 @@ div.breadcrumbs,
     width: auto !important;}
 
 /*****************************************************************************************************/
+ /* background-size: 100% 37px !important;
+    background-position: top left !important;
+    background-repeat: no-repeat !important;
+    background: var(--p-head-grdnt); 
+180
+185
+
+210
+215*/
 
 
 
