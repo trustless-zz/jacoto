@@ -1074,16 +1074,16 @@ input[type=submit]:hover:active,
     height: 100%;
     opacity: 0;}
 .head[title="Click to expand/collapse"] {
-    height: 19px;}
+    height: 20px;}
 .head[title="Click to expand/collapse"] strong {
     cursor: default;
     z-index: 1;
     position: absolute;
     left: 0;
     top: 0;
-    padding: 10px;
+    padding: 9px;
     width: calc(100% - 20px);
-    height: 19px;}
+    height: 20px;}
 .head[title="Click to expand/collapse"]:hover:before,
 #index #recommended .head:hover:before,
 .box.news_post .head:hover:before {
@@ -1512,12 +1512,15 @@ a .error_message:hover:active {
     background: var(--p-head-grdnt);}
 .colhead td,
 .colhead_dark td {
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 20px;
+    line-height: 20px;
     vertical-align: middle;
     font-weight: normal;
     padding: 9px 5px;
     overflow: hidden;}
+.colhead >td:first-child,
+.colhead_dark >td:first-child {
+    padding-left: 10px;}
 .torrent_table tr td.center {
     text-align: center;
     vertical-align: middle;}
@@ -1996,6 +1999,8 @@ body:not(#upload) #artist_tr + tr td.label,
     top: 0;
     left: 5px;
     z-index: 2;}
+.torrent_details .torrent_table .colhead_dark >td:first-child strong {
+    left: 10px;}
 .torrent_details .torrent_table .colhead_dark img {
     margin-top: 10px;}
 
@@ -2006,9 +2011,9 @@ body:not(#upload) #artist_tr + tr td.label,
     width: 100%;
     overflow: visible;}
 .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(2) {
-    min-width: 44px;}
+    min-width: 54px;}
 .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(3) {
-    min-width: 30px;}
+    min-width: 36px;}
 .torrent_details .torrent_table >tbody >.colhead_dark td.sign {
     min-width: 18px;}
 
@@ -2307,6 +2312,7 @@ li:not(.suggested_similar) .similar_votes >span {
     margin: -10px -10px 10px -10px;}
 
 textarea {
+    min-height: 28px;
     border: var(--p-input-brdr);
     background-color: var(--c-input);
     -webkit-box-shadow: var(--p-input-shdw);
@@ -2541,7 +2547,8 @@ form[name="filter"] h3 {
 #upload input[type="button"],
 .thin >#request_form input[value="PTPImg It"],
 #requests td form input[value="Fill request"],
-#requests #voting input[type="button"] {
+#requests #voting input[type="button"],
+.similar_div .head .flright input[type="submit"] {
     vertical-align: bottom;}
 #requests .box_tags .stats.nobullet li {
     margin-bottom: 0;}
@@ -2697,7 +2704,9 @@ div.breadcrumbs,
     width: 19px;
     height: 18px;}
 #forums .forum_index .colhead td:nth-child(1) {
-    width: auto !important;}
+    width: 30px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;}
 
 /*****************************************************************************************************/
  /* background-size: 100% 37px !important;
