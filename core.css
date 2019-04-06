@@ -2140,19 +2140,40 @@ li:not(.suggested_similar) .similar_votes >span {
     position: relative;
     height: 0;
     top: 33px;
-    left: 1px;
-    display: flex;
-    flex-flow: column;
-    width: 140px;
+    left: 6px;
+    display: block;
+    width: fit-content;
     z-index: 9;}
 #content .sub span {
-    background: var(--c-input);
     width: 100%;
     line-height: 28px;
     text-align: center;
-    font-size: 16px;}
-#content .sub span a {
+    font-size: 16px;
     display: block;}
+#content .sub span a {
+    display: block;
+    padding: 0 5px;
+    background-color: var(--c-input);
+    border-right: var(--p-table-brdr);
+    border-left: var(--p-table-brdr);
+    position: relative;}
+#content .sub span:first-child a {
+    border-top: var(--p-table-brdr);}
+#content .sub span:last-child a {
+    border-bottom: var(--p-table-brdr);}
+#content .sub span a:before {
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    z-index: -1;}
+#content .sub span:first-child a:before {
+    -webkit-clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));
+    clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));}
 
 .forum_post .colhead_dark {
     background: var(--p-post-colhead-bcg);}
@@ -2188,7 +2209,6 @@ li:not(.suggested_similar) .similar_votes >span {
     background-color: var(--c-table-brdr);}
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover {
-    transition-delay: .3s;
     clip: rect(0, 300px, 32px, 0);}
 .forum_post .colhead_dark {
     overflow: hidden;}
@@ -2752,9 +2772,16 @@ div.breadcrumbs,
     left: 160px;
     padding: 5px;
     z-index: 9;
+    -webkit-clip-path: polygon(-5px -5px, -5px -5px, -5px -5px, -5px -5px);
     clip-path: polygon(-5px -5px, -5px -5px, -5px -5px, -5px -5px);}
 .avatar:hover .forumstat {
-    clip-path: polygon(-5px -5px, calc(100% + 5px) -5px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));
+    -webkit-clip-path: polygon(-5px -5px, calc(100% + 5px) -5px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));
+    clip-path: polygon(-5px -5px, calc(100% + 5px) -5px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));}
+
+.forum_post .comment_rating,
+.avatar:hover .forumstat,
+#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
+.forum_post .colhead_dark a.post_id:hover {
     transition-delay: .3s;}
 
 #forums .forum_post .avatar >div:first-child:after {
