@@ -125,9 +125,11 @@
     #quickreplypreview .colhead_dark #barpreview,
     .forum_post .colhead_dark div[style="float: right;"] {
         width: 18px;
-        height: 18px;}
+        height: 18px;
+        font-size: 0;}
     #quickreplypreview .colhead_dark span[style="float:left;"],
-    .forum_post .colhead_dark div[style="float: left;"] {
+    .forum_post .colhead_dark div[style="float: left;"],
+    .forum_post .colhead_dark div[style="float:left;"] {
         width: calc(100% - 23px);}
     
     #extra1,
