@@ -424,7 +424,11 @@ blockquote {
 	font-size: 12px !important;}
 
 .head strong,
-li.active {
+li.active,
+#forums .forum_index td.unread ~td strong,
+#forums .forum_index td.unread_sticky ~td strong,
+#forums .forum_index td.unread_locked ~td strong,
+#forums .forum_index td.unread_locked_sticky ~td strong {
     font-weight: 600;}
 
 #searchbars ul {
@@ -576,8 +580,7 @@ img[src="static/common/thumbsup.png"],
 #requests table.border a[href^="upload.php"],
 #requests_donate img,
 img[title="Gold"],
-#forums td.read,
-#forums td.unread {
+#forums .forum_index tr:not(.colhead) td:first-child {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -1319,13 +1322,13 @@ a .error_message:hover:active {
     border: var( --p-main-brdr);
     background-color: var(--c-img-bcg-anchor);}
 .large_progress_bar, #progress_bar {
-    border: 10px solid var(--c-b3);
+    border: 9px solid var(--c-b3);
     height: 14px;
     display: flex;
     justify-content: space-between;
     padding: 3px;}
 #index #clans .large_progress_bar:hover {
-    border: 10px solid var(--c-b1);
+    border: 9px solid var(--c-b1);
     background-color: var(--c-b3);}
 #index #clans .large_progress_bar:hover:active {
     background-color: var(--c-b2);}
@@ -1971,6 +1974,7 @@ body:not(#upload) #artist_tr + tr td.label,
     margin-bottom: 5px;
     padding: 6px;
     text-align: center;}
+#forums .forum_index strong,
 #upload #content >div >table[style] .colhead strong,
 #requests table.border .colhead_dark strong,
 .torrent_table .colhead_dark strong {
@@ -2672,9 +2676,9 @@ input#file[disabled] {
 #forums h4,
 #forums td.body,
 #forums table.border td,
-#forums #content #otherop td,
-#forums #content #forumlist td,
-#forums #content table tr.colhead td {
+#forums #otherop td,
+#forums #forumlist td,
+#forums table tr.colhead td {
 	text-align: left;}
 .forum_post tr {
 	text-align: left !important;}
@@ -2694,12 +2698,11 @@ div.breadcrumbs,
 #forums h4 {
     font-weight: normal;}
 .forum_post tr,
-#forums #content .thin table {
+#forums .thin table {
 	width: 100%;}
 #forums .last_poster {
     font-size: 13px;}
-#forums td.read,
-#forums td.unread {
+#forums .forum_index tr:not(.colhead) td:first-child {
     background-size: 19px 18px;
     width: 19px;
     height: 18px;}
@@ -2707,6 +2710,10 @@ div.breadcrumbs,
     width: 30px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;}
+#forums .forum_index tr:not(.colhead) td {
+    font-size: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;}
 
 /*****************************************************************************************************/
  /* background-size: 100% 37px !important;
