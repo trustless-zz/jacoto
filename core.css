@@ -426,9 +426,17 @@ blockquote {
 .head strong,
 li.active,
 #forums .forum_index td.unread ~td strong,
+#forums .forum_index td.unread ~td .last_topic,
+#forums .forum_index td.unread ~td h4.min_padding,
 #forums .forum_index td.unread_sticky ~td strong,
+#forums .forum_index td.unread_sticky ~td .last_topic,
+#forums .forum_index td.unread_sticky ~td h4.min_padding,
 #forums .forum_index td.unread_locked ~td strong,
-#forums .forum_index td.unread_locked_sticky ~td strong {
+#forums .forum_index td.unread_locked ~td .last_topic,
+#forums .forum_index td.unread_locked ~td h4.min_padding,
+#forums .forum_index td.unread_locked_sticky ~td strong,
+#forums .forum_index td.unread_locked_sticky ~td .last_topic,
+#forums .forum_index td.unread_locked_sticky ~td h4.min_padding {
     font-weight: 600;}
 
 #searchbars ul {
@@ -2214,6 +2222,8 @@ li:not(.suggested_similar) .similar_votes >span {
 #thumbsdown {
     font-size: 30px;}
 
+#grouplinks {
+    min-height: 38px;}
 #grouplinks a div {
     opacity: .6;
     filter: grayscale(.4);
