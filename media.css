@@ -18,6 +18,37 @@
     background-position: center;}
 #requests .thin >table.border .colhead_dark {
     white-space: nowrap;}
+    
+#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"],
+.forum_post .colhead_dark a.post_id {
+    width: auto;
+    height: calc(100% + 13px);
+    font-size: 15px;
+    vertical-align: top;
+    position: absolute;
+    left: 0;
+    top: -6px;
+    line-height: 32px;
+    padding: 0 4px 0 8px;
+    background-color: var(--c-table-brdr) !important;
+    border-right: var(--p-main-brdr);
+    clip: rect(0, 15px, 32px, 0);}
+#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:before,
+.forum_post .colhead_dark a.post_id:before {
+    position: absolute;
+    content: '#';
+    font-size: 24px;
+    width: 18px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--c-table-brdr);}
+#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
+.forum_post .colhead_dark a.post_id:hover {
+    clip: rect(0, 300px, 32px, 0);}
+/* flame effect overlap fix */
+.forum_post .colhead_dark a.username {
+    margin-left: 1px;}
 }
 
 @media (min-width: 1760px) and (min-height: 659px) {

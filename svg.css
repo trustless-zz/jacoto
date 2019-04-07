@@ -106,6 +106,7 @@ body {
 }
 
 /** anchor-like hover **/
+.forum_post tr.likes >td:first-child a:hover,
 .torrent_table #leechers_icon:hover img,
 .torrent_table #seeders_icon:hover img,
 a:hover >img[title="Snatches"],
@@ -170,6 +171,12 @@ ul:not(.highlighted) li.active a,
 #forums td.unread_locked_sticky {
     background-image: url('icons/dark/unread_locked_sticky.svg');}
 
+/** forum like/dislike **/
+.forum_post tr.likes >td:first-child a:nth-child(1) {
+    background-image: url('icons/dark/a.like.svg');}
+.forum_post tr.likes >td:first-child a:nth-child(2) {
+    background-image: url('icons/dark/a.dislike.svg');}
+
 
 /** gold **/
 img[title="Gold"],
@@ -205,6 +212,9 @@ a[title="Download"],
 select,
 .torrent_table .show_torrents_link {
     background-image: url('icons/dark/show.svg');}
+/** forum post user stats **/
+#forums .forum_post .avatar >div:first-child:after {
+    background-image: url('icons/dark/show-hor.svg');}
 
 /** number **/
 input[type="number"]::-webkit-inner-spin-button, 
@@ -326,7 +336,7 @@ img[title="ThumbsDown "],
         background-image: url('icons/dark/nav/donate.svg');}
 /* hover */
     #nav_donate a:hover {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 22"><path d="M26,7.43966h-.013A7.55646,7.55646,0,0,0,18.68751,0,7.20793,7.20793,0,0,0,13,2.94319,7.20808,7.20808,0,0,0,7.31249,0,7.55646,7.55646,0,0,0,.013,7.43966H0l.00486.07051L0,7.56469l.03252.29975C.39,17.88984,12.89764,22,12.89764,22S25.58887,17.89463,25.9659,7.88048L26,7.56469l-.00486-.05452Z"  fill="#c12323"/></svg>');}
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 22"><path d="M18.8,0A7.17081,7.17081,0,0,0,13,2.95313,7.19063,7.19063,0,0,0,0,7.2C0,18.08331,13,22,13,22S26,18.08331,26,7.2A7.2,7.2,0,0,0,18.8,0Z" fill="#c12323"/></svg>');}
 /** scroll to top **/
     #toplink a {
         background-image: url('icons/dark/toplink.svg');}

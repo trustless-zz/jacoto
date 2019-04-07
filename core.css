@@ -589,7 +589,8 @@ img[src="static/common/thumbsup.png"],
 #requests table.border a[href^="upload.php"],
 #requests_donate img,
 img[title="Gold"],
-#forums .forum_index tr:not(.colhead) td:first-child {
+#forums .forum_index tr:not(.colhead) td:first-child,
+.forum_post tr.likes >td:first-child a {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -712,7 +713,8 @@ a:hover .ratings {
 .torrent_details .group_torrent td:first-child a,
 .box_game_ratings a[target="_blank"]:hover,
 #requests .thin >.center.box.pad a[onclick],
-#requests table.border a[href^="upload.php"] {
+#requests table.border a[href^="upload.php"],
+.forum_post tr.likes >td:first-child a {
     background-color: transparent;}
 
 a,
@@ -751,7 +753,8 @@ textarea,
 #reviewdate,
 .forum_post .comment_rating,
 .avatar .forumstat,
-div {
+div,
+#forums .forum_post .avatar >div:first-child:after {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -944,7 +947,8 @@ input[type=submit]:hover:active,
 #userinfo_minor .highlight,
 #menu li:not(.active):hover,
 #userinfo_minor li:not(.active):hover,
-#header .clan_trophy:hover a {
+#header .clan_trophy:hover a,
+#content .sub span a:hover {
     background-color: var(--c-b3);}
 
 #header .global_buffs a:hover,
@@ -1854,7 +1858,8 @@ a[href="javascript:Vote(20, 1)"] strong,
 #upload td#image_block,
 .box_tags .stats.nobullet div a,
 #requests table.border td.nobr:nth-child(2) strong,
-a[href="javascript:Vote(20, 1)"] strong {
+a[href="javascript:Vote(20, 1)"] strong,
+.forum_post tr.likes >td:first-child {
     font-size: 0;
     line-height: 0;}
 .box_tags .stats.nobullet div a:nth-child(1) {
@@ -2183,33 +2188,6 @@ li:not(.suggested_similar) .similar_votes >span {
     line-height: var(--p-lh);
     padding: 6px 5px 7px 5px;}
 
-#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"],
-.forum_post .colhead_dark a.post_id {
-    width: auto;
-    height: calc(100% + 13px);
-    font-size: 15px;
-    vertical-align: top;
-    position: absolute;
-    left: 0;
-    top: -6px;
-    line-height: 32px;
-    padding: 0 4px 0 8px;
-    background-color: var(--c-table-brdr) !important;
-    border-right: var(--p-main-brdr);
-    clip: rect(0, 15px, 32px, 0);}
-#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:before,
-.forum_post .colhead_dark a.post_id:before {
-    position: absolute;
-    content: '#';
-    font-size: 24px;
-    width: 18px;
-    left: 0;
-    top: 0;
-    height: 100%;
-    background-color: var(--c-table-brdr);}
-#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
-.forum_post .colhead_dark a.post_id:hover {
-    clip: rect(0, 300px, 32px, 0);}
 .forum_post .colhead_dark {
     overflow: hidden;}
 #quickreplypreview .colhead_dark span[style="float:left;"],
@@ -2724,6 +2702,7 @@ input#file[disabled] {
 	text-align: left !important;}
 #forums td {
 	text-align: center;}
+.forum_post tr.likes >td:first-child,
 #forums td[style="width:7%;"],
 #forums td[style="width:9%;"],
 #forums td[style="width:14%;"] {
@@ -2778,10 +2757,11 @@ div.breadcrumbs,
     -webkit-clip-path: polygon(-5px -5px, calc(100% + 5px) -5px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));
     clip-path: polygon(-5px -5px, calc(100% + 5px) -5px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));}
 
-.forum_post .comment_rating,
+.forum_post .comment_rating:hover,
 .avatar:hover .forumstat,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
-.forum_post .colhead_dark a.post_id:hover {
+.forum_post .colhead_dark a.post_id:hover,
+#forums .forum_signature:hover td {
     transition-delay: .3s;}
 
 #forums .forum_post .avatar >div:first-child:after {
@@ -2789,13 +2769,49 @@ div.breadcrumbs,
     font-weight: 600;
     font-size: 13px;
     line-height: var(--p-lh);
+    padding: 0 15px;
     margin: 0 auto;
     display: block;
     width: fit-content;
-    color: var(--c-text-s);}
+    color: var(--c-anchor-hvr);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 0 0;
+    opacity: .65;}
 #forums .forum_post .avatar:hover >div:first-child:after {
-    color: var(--c-anchor-hvr);}
+    background-size: 10px 10px;
+    opacity: 1;
+    transition-delay: .2s;}
 
+marquee {
+    max-width: 60%;}
+.colhead_dark marquee {
+    max-width: 30%;
+    vertical-align: bottom;}
+
+#forums .forum_signature td {
+    text-align: left;
+    padding: 10px 10px 5px 10px;
+    height: auto;
+    vertical-align: bottom;
+    opacity: .65;}
+#forums .forum_signature:hover td {
+    opacity: 1;}
+#forums .forum_signature td > div {
+    border-top: var(--p-table-brdr);
+    padding: 5px 3px 3px 3px;
+    max-height: 75px;
+    overflow-y: auto;
+    overflow-x: hidden;}
+.forum_post tr.likes {
+    border-top: var(--p-table-brdr);
+    background-color: var(--c-tgroup);}
+
+.forum_post tr.likes >td:first-child a {
+    width: 22px;
+    height: 18px;
+    margin: 5px;
+    display: inline-block;}
 
 /*****************************************************************************************************/
  /* background-size: 100% 37px !important;
@@ -2901,18 +2917,6 @@ tr.likes td {
     vertical-align: bottom;}
 
 /*** Signatures ***/
-#forums .forum_signature td {
-	text-align: left;
-	padding: 10px 4px 4px 10px;
-	height: auto;
-	vertical-align: bottom;
-	opacity: .5;}
-#forums .forum_signature td > div {
-	border-top: 1px solid var(--mediumBlue);
-	padding: 5px 0px 2px 3px;
-	max-height: 75px;
-	overflow-y: auto;
-	overflow-x: hidden;}
 
 /*** Sticky Posts ***/
 #forums #content .thin table.sticky_post {
