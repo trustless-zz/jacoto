@@ -2698,6 +2698,7 @@ input#file[disabled] {
 #forums #forumlist td,
 #forums table tr.colhead td {
 	text-align: left;}
+tr.likes td,
 .forum_post tr {
 	text-align: left !important;}
 #forums td {
@@ -2813,6 +2814,10 @@ marquee {
     margin: 5px;
     display: inline-block;}
 
+.user_title img {
+    display: inline-block;
+    vertical-align: bottom;}
+
 /*****************************************************************************************************/
  /* background-size: 100% 37px !important;
     background-position: top left !important;
@@ -2824,101 +2829,7 @@ marquee {
 210
 215*/
 
-
-
-/*** Makes username and time on forums.php smaller ***/
-#forums span[style="float:right;"] {}
-
-/*** Overrides hard coded styles of Topics, Posts and Author headers ***/
-
-/*** h3 is the Subsection names (Site, Community, Gaming, etc.) ***/
-
-
-/*** h4 is the name of each forum section (Announcements, Blog, Staff Picks, etc.) ***/
-
-/*** Forum Icons ***/
-.last_read {}
-
-.last_read a {
-	width: 100%;
-	height: 100%;
-	display: block;}
-
-#forums #content .thin td.read_sticky {}
-#forums #content .thin td.unread_sticky {}
-#forums #content .thin td.read_locked {}
-#forums #content .thin td.unread_locked {}
-#forums #content .thin td.read_locked_sticky {}
-#forums #content .thin td.unread_locked_sticky{}
-
-/*** Category List on Latest Posts Page ***/
-
-/*** Last 100 posts default forums box ***/
-.forum_latest .search {}
-.forum_latest h2 {}
-.forum_latest form br {}
-.submit input {}
-#user .main_column td.label {}
-
-/*** Avatar ***/
-td.avatar {}
-
-#forums td.avatar img {}
-
-.forum_post .body {}
-
-.user_online,
-.user_offline {
-	display: block;}
-
-/*** Likes, Dislikes ***/
-tr.likes td {
-	text-align: left !important;}
-
-/*** Forum Posts ***/
-#forums .colhead_dark label {
-	font-size: .8em;}
-
-#forums .colhead_dark div[id*="bar"] {}
-
-#forums #content .thin .sub {}
-
-#forums #content .thin .sub span {}
-
-#forums #content .thin .sub a {}
-
-#forums blockquote {}
-
-/*** Drop shadows on images and videos in the forums.  Different for smileys and weekly recap ***/
-#forums .forum_post td.body img,
-#forums .forum_post td.body iframe {}
-
-#forums .forum_post td.body img[src*="static/common/smileys/"] {}
-
-#forums .forum_post td.body img[src="https://ptpimg.me/5u4e3c.png"] {}
-
 /*** Puts border around unread posts ***/
 #forums table.forum_unread {
     border-top: red solid 5px;
     border-collapse: collapse;}
-
-/*** Other Misc. Items ***/
-#forums .rowa,
-#forums .rowb {}
-
-/*For spoiler BB Code*/
-#forums a[onclick*="#thread_notes_tabl"] {}
-
-#forums td.body a[onclick="BBCode.spoiler(this);"] {}
-
-/*Aligns images in custom titles*/
-.user_title img {
-    display: inline-block;
-    vertical-align: bottom;}
-
-/*** Signatures ***/
-
-/*** Sticky Posts ***/
-#forums #content .thin table.sticky_post {
-	width: 85%;
-	margin: 30px auto;}
