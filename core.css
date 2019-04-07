@@ -398,6 +398,7 @@ td, th, tr {
 td.label {
     vertical-align: middle;}
 
+.spoilerbox,
 blockquote {
     margin: 4px 5px 10px 5px;
     padding: 10px;
@@ -591,7 +592,8 @@ img[src="static/common/thumbsup.png"],
 img[title="Gold"],
 #forums .forum_index tr:not(.colhead) td:first-child,
 .forum_post tr.likes >td:first-child a,
-.bbbutt li a {
+.bbbutt li a,
+tr.likes td[id^="likers_"] >strong {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -715,7 +717,8 @@ a:hover .ratings {
 .box_game_ratings a[target="_blank"]:hover,
 #requests .thin >.center.box.pad a[onclick],
 #requests table.border a[href^="upload.php"],
-.forum_post tr.likes >td:first-child a {
+.forum_post tr.likes >td:first-child a,
+.bbbutt li a {
     background-color: transparent;}
 
 a,
@@ -1648,6 +1651,7 @@ a .error_message:hover:active {
 img[src="static/common/thumbsdown.png"],
 img[src="static/common/thumbsup.png"],
 #usersreviewimage img,
+.spoilerbox,
 blockquote,
 #torrents .torrent_details tr table,
 .sidebar img,
@@ -1861,7 +1865,8 @@ a[href="javascript:Vote(20, 1)"] strong,
 .box_tags .stats.nobullet div a,
 #requests table.border td.nobr:nth-child(2) strong,
 a[href="javascript:Vote(20, 1)"] strong,
-.forum_post tr.likes >td:first-child {
+.forum_post tr.likes >td:first-child,
+tr.likes td[id^="likers_"] >strong {
     font-size: 0;
     line-height: 0;}
 .box_tags .stats.nobullet div a:nth-child(1) {
@@ -2367,11 +2372,14 @@ a[href="javascript:Vote(20, 1)"] strong:hover,
 .similar img:hover,
 .screenshots img:hover,
 .box_albumart img:hover,
-#quickreplypreview,
 .sidebar img:hover,
 .userratingdiv img {
     -webkit-box-shadow: none;
     box-shadow: none;}
+
+#quickreplypreview  {
+    -webkit-box-shadow: var(--p-header-shdw) !important;
+    box-shadow: var(--p-header-shdw) !important;}
 #quickreplybuttons {
     display: flex;
     justify-content: center;}
@@ -2746,6 +2754,7 @@ div.breadcrumbs,
     display: none;}
 
 .avatar .forumstat {
+    opacity: 0;
     width: 194px;
     position: absolute;
     background-color: var(--c-input);
@@ -2759,6 +2768,7 @@ div.breadcrumbs,
     -webkit-clip-path: polygon(-5px -5px, -5px -5px, -5px -5px, -5px -5px);
     clip-path: polygon(-5px -5px, -5px -5px, -5px -5px, -5px -5px);}
 .avatar:hover .forumstat {
+    opacity: 1;
     -webkit-clip-path: polygon(-5px -5px, calc(100% + 5px) -5px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));
     clip-path: polygon(-5px -5px, calc(100% + 5px) -5px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));}
 
@@ -2766,7 +2776,8 @@ div.breadcrumbs,
 .avatar:hover .forumstat,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover,
-#forums .forum_signature:hover td {
+#forums .forum_signature:hover td,
+tr.likes td[id^="likers_"]:hover {
     transition-delay: .3s;}
 
 #forums .forum_post .avatar >div:first-child:after {
@@ -2783,6 +2794,8 @@ div.breadcrumbs,
     background-position: right center;
     background-size: 0 0;
     opacity: .65;}
+#quickreplypreview .avatar >div:first-child:after {
+    content: none !important;}
 #forums .forum_post .avatar:hover >div:first-child:after {
     background-size: 10px 10px;
     opacity: 1;
@@ -2830,6 +2843,24 @@ marquee {
 #forums #reply_box #quickpost {
     width: 100% !important;}
 
+tr.likes td[id^="likers_"] >strong {
+    background-position: center left;
+    height: 18px;
+    width: 27px;
+    display: inline-block;
+    vertical-align: bottom;}
+tr.likes td[id^="likers_"] >strong:nth-of-type(2) {
+    margin-top: 2px;}
+tr.likes td[id^="likers_"] >strong:after {
+    content: ':';
+    font-size: 14px;
+    line-height: var(--p-lh);
+    float: right;}
+tr.likes td[id^="likers_"] {
+    opacity: .85;}
+tr.likes td[id^="likers_"]:hover {
+    opacity: 1;}
+
 .bbbutt {
     background-color: var(--c-input);
     border: var(--p-img-brdr);
@@ -2840,38 +2871,30 @@ marquee {
     cursor: default;
     width: fit-content;}
 .bbbutt li {
-    display: inline;
-    margin-right: 2px;}
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 2px;}
 .bbbutt li a {
-    border: none;
+    opacity: .85;
     display: inline-block;
-    margin-bottom: 0px;}
-
-#bb_bold,
-#bb_und,
-#bb_ita,
-#bb_img,
-#bb_link,
-#bb_strk,
-#bb_h1,
-#bb_h2,
-#bb_h3,
-#bb_h4,
-#bb_h5,
-#bb_h6,
-#bb_color,
-#bb_tex,
-#bb_quote,
-#bb_list,
-#bb_spoil,
-#bb_cent,
-#bb_lef,
-#bb_righ,
-#bb_pre,
-#bb_youtube {
-    display: inline-block;
+    margin: 0;
     height: 18px;
-    width: auto;}
+    width: 18px;}
+.bbbutt li a:hover {
+    opacity: 1;}
+#bb_h1 {
+    width: 22.41px;}
+#bb_h2 {
+    width: 26.31px;}
+#bb_h3 {
+    width: 25.83px;}
+#bb_h4 {
+    width: 27.37px;}
+#bb_h5 {
+    width: 26.21px;}
+#bb_h6 {
+    width: 26.07px;}
+
 
 
 
