@@ -177,6 +177,52 @@ ul:not(.highlighted) li.active a,
 .forum_post tr.likes >td:first-child a:nth-child(2) {
     background-image: url('icons/dark/a.dislike.svg');}
 
+/** bbbutt **/
+#bb_bold {
+    background-image: url('icons/dark/bbbutt/bold.svg');}
+#bb_und {
+    background-image: url('icons/dark/bbbutt/und.svg');}
+#bb_ita {
+    background-image: url('icons/dark/bbbutt/ita.svg');}
+#bb_img {
+    background-image: url('icons/dark/bbbutt/img.svg');}
+#bb_link {
+    background-image: url('icons/dark/bbbutt/link.svg');}
+#bb_strk {
+    background-image: url('icons/dark/bbbutt/strk.svg');}
+#bb_h1 {
+    background-image: url('icons/dark/bbbutt/h1.svg');}
+#bb_h2 {
+    background-image: url('icons/dark/bbbutt/h2.svg');}
+#bb_h3 {
+    background-image: url('icons/dark/bbbutt/h3.svg');}
+#bb_h4 {
+    background-image: url('icons/dark/bbbutt/h4.svg');}
+#bb_h5 {
+    background-image: url('icons/dark/bbbutt/h5.svg');}
+#bb_h6 {
+    background-image: url('icons/dark/bbbutt/h6.svg');}
+#bb_color {
+    background-image: url('icons/dark/bbbutt/color.svg');}
+#bb_tex {
+    background-image: url('icons/dark/bbbutt/tex.svg');}
+#bb_quote {
+    background-image: url('icons/dark/bbbutt/quote.svg');}
+#bb_list {
+    background-image: url('icons/dark/bbbutt/list.svg');}
+#bb_spoil {
+    background-image: url('icons/dark/bbbutt/spoil.svg');}
+#bb_cent {
+    background-image: url('icons/dark/bbbutt/cent.svg');}
+#bb_lef {
+    background-image: url('icons/dark/bbbutt/lef.svg');}
+#bb_righ {
+    background-image: url('icons/dark/bbbutt/righ.svg');}
+#bb_pre {
+    background-image: url('icons/dark/bbbutt/pre.svg');}
+#bb_youtube {
+    background-image: url('icons/dark/bbbutt/youtube.svg');}
+
 
 /** gold **/
 img[title="Gold"],

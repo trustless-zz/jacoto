@@ -590,7 +590,8 @@ img[src="static/common/thumbsup.png"],
 #requests_donate img,
 img[title="Gold"],
 #forums .forum_index tr:not(.colhead) td:first-child,
-.forum_post tr.likes >td:first-child a {
+.forum_post tr.likes >td:first-child a,
+.bbbutt li a {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -1664,7 +1665,8 @@ img[title="Snatches"],
 #requests_donate img,
 #requests .main_column >table:first-child img[title="Gold"],
 #requests .main_column >table:first-child,
-#upload #content >div[style="margin:0px auto;width:700px"] {
+#upload #content >div[style="margin:0px auto;width:700px"],
+#forums .linkbox.linkbox_bottom +br +h3 {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -2554,13 +2556,15 @@ img[src="static/common/thumbsup.png"],
 #upload h3#dnu_header,
 .thin >#request_form >table tr:first-child td,
 form[name="filter"] h3,
-#request_comments #reply_box h3 {
-    font-weight: bold;
+#request_comments #reply_box h3,
+#forums .linkbox.linkbox_bottom +br +h3 {
+    font-weight: 600;
     background: var(--p-head-grdnt);
     font-size: 20px;
     line-height: 20px;
-    padding: 10px;
+    padding: 9px 10px;
     margin: -10px -10px 10px -10px;}
+#forums .linkbox.linkbox_bottom +br +h3,
 form[name="filter"] h3 {
     margin: 0;}
 
@@ -2814,10 +2818,66 @@ marquee {
     margin: 5px;
     display: inline-block;}
 
+#forums .linkbox.linkbox_bottom +br +h3 {
+    width: calc(100% - 2px);
+    margin: 1px auto 0 auto;
+    position: relative;
+    z-index: 9;}
+#forums #reply_box {
+    margin-top: -39px;}
+#forums #reply_box .box.pad {
+    padding-top: 48px;}
+#forums #reply_box #quickpost {
+    width: 100% !important;}
+
+.bbbutt {
+    background-color: var(--c-input);
+    border: var(--p-img-brdr);
+    padding: 5px;
+    margin: 5px auto;
+    list-style: none;
+    display: block;
+    cursor: default;
+    width: fit-content;}
+.bbbutt li {
+    display: inline;
+    margin-right: 2px;}
+.bbbutt li a {
+    border: none;
+    display: inline-block;
+    margin-bottom: 0px;}
+
+#bb_bold,
+#bb_und,
+#bb_ita,
+#bb_img,
+#bb_link,
+#bb_strk,
+#bb_h1,
+#bb_h2,
+#bb_h3,
+#bb_h4,
+#bb_h5,
+#bb_h6,
+#bb_color,
+#bb_tex,
+#bb_quote,
+#bb_list,
+#bb_spoil,
+#bb_cent,
+#bb_lef,
+#bb_righ,
+#bb_pre,
+#bb_youtube {
+    display: inline-block;
+    height: 18px;
+    width: auto;}
+
+
+
 .user_title img {
     display: inline-block;
     vertical-align: bottom;}
-
 /*****************************************************************************************************/
  /* background-size: 100% 37px !important;
     background-position: top left !important;
