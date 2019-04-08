@@ -6,6 +6,7 @@
     --c-curtain:						rgb(110, 110, 110);
     --c-input-brdr:						rgb(195, 195, 195);
     --c-main-brdr:						rgb(200, 200, 200);
+    --c-sticky-2:                       rgb(205, 205, 205);
     --c-table-brdr: 					rgb(210, 210, 210);
     --c-tor-rowb: 						rgb(215, 215, 215);
     --c-body: 							rgb(220, 220, 220);						/*tor-rowa*/
@@ -59,9 +60,12 @@
     --p-img-hvr: 						3px solid var(--c-b3);
     --p-img-anchor-brdr:				3px solid var(--c-b4);
     --p-img-anchor-brdr-hvr:			3px solid var(--c-b1);
+    --p-post-img:                       drop-shadow(0px 0px 4px var(--c-main-brdr));
+    --p-post-img-hvr:                   drop-shadow(0px 0px 4px var(--c-b3));
     --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b00), var(--c-anchor)), linear-gradient(to right, var(--c-b1), var(--c-b2));
     --p-colhead-tr-bcg: 				var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
     --p-post-colhead-bcg:               var(--c-table-brdr) linear-gradient(155deg,var(--c-table-brdr),var(--c-body));
+    --p-sticky-colhead-bcg:             var(--c-input-brdr) linear-gradient(155deg,var(--c-input-brdr),var(--c-sticky-2));
     --p-colhead-tr-bcg-hvr:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-box));
     --p-colhead-tr-bcg-act:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
     --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
@@ -334,6 +338,12 @@ html {
 .sidebar .head ul,
 #dailygazelle .colhead_dark {
     margin:0;}
+
+ul,
+menu,
+dir {
+    list-style-type: circle;}
+
 #menu ul,
 #searchbars ul,
 #userinfo_minor,
@@ -940,7 +950,8 @@ a[title="Remove"],
 button:hover:active,
 input[type=button]:hover:active,
 input[type=submit]:hover:active,
-#markread:hover:active:before {
+#markread:hover:active:before,
+.slides_control {
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;}
@@ -1670,7 +1681,11 @@ img[title="Snatches"],
 #requests .main_column >table:first-child img[title="Gold"],
 #requests .main_column >table:first-child,
 #upload #content >div[style="margin:0px auto;width:700px"],
-#forums .linkbox.linkbox_bottom +br +h3 {
+#forums .linkbox.linkbox_bottom +br +h3,
+.forum_post td.body iframe,
+.forum_post td.body img,
+.box.news_post >.pad iframe,
+.box.news_post >.pad img {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -2817,7 +2832,7 @@ marquee {
     opacity: 1;}
 #forums .forum_signature td > div {
     border-top: var(--p-table-brdr);
-    padding: 5px 3px 3px 3px;
+    padding: 6px 3px 1px 3px;
     max-height: 75px;
     overflow-y: auto;
     overflow-x: hidden;}
@@ -2864,7 +2879,7 @@ tr.likes td[id^="likers_"]:hover {
 .bbbutt {
     background-color: var(--c-input);
     border: var(--p-img-brdr);
-    padding: 5px;
+    padding: 3px;
     margin: 5px auto;
     list-style: none;
     display: block;
@@ -2895,8 +2910,81 @@ tr.likes td[id^="likers_"]:hover {
 #bb_h6 {
     width: 26.07px;}
 
+table.forum_unread .colhead_dark {
+    background: var(--p-head-grdnt);}
+table.sticky_post tr.colhead_dark {
+    background: var( --p-sticky-colhead-bcg);}
+table.sticky_post tr.colhead_dark strong:last-of-type {
+    float: right;}
+
+#forums .thin .forum_post table {
+    background-color: inherit;
+    -webkit-box-shadow: inherit;
+    box-shadow: inherit;
+    border: inherit;
+    margin: inherit;}
+table.bbcode_table td {
+    border: var(--p-table-brdr);}
+.bbcode_table_div {
+    padding: 5px;}
+
+span.size1 {
+    font-size: 0.75em;
+    line-height: 1em}
+span.size2 {
+    font-size: 1em;
+    line-height: 1em}
+span.size3 {
+    font-size: 1.25em;
+    line-height: 1em}
+span.size4 {
+    font-size: 1.5em;
+    line-height: 1em}
+span.size5 {
+    font-size: 1.75em;
+    line-height: 1em}
+span.size6 {
+    font-size: 2em;
+    line-height: 1em}
+span.size7 {
+    font-size: 2.25em;
+    line-height: 1em}
+span.size8 {
+    font-size: 2.5em;
+    line-height: 1em}
+span.size9 {
+    font-size: 2.75em;
+    line-height: 1em}
+span.size10 {
+    font-size: 3em;
+    line-height: 1em}
+
+.forum_post td.body iframe,
+.forum_post td.body img,
+.box.news_post >.pad iframe,
+.box.news_post >.pad img {
+    max-width: calc(100% - 10px) !important;
+    -webkit-filter: var(--p-post-img);
+    filter: var(--p-post-img);
+    margin: 0 5px;
+    padding: 5px;}
+.forum_post td.body img:hover,
+.box.news_post >.pad img:hover {
+    -webkit-filter: var(--p-post-img-hvr);
+    filter: var(--p-post-img-hvr);}
+
+ul#noty_bottomRight_layout_container.i-am-new li {
+    border-radius: 0 !important;
+    border: 0 !important;
+    background-color: var(--c-b3) !important;
+    color: var(--c-txt) !important;}
 
 
+
+
+/* ---gameroom--- ../images with size=4 code will float left, size=5 will float right */
+span.size4 img {float:left; padding: 0px 15px 15px 0px !important; box-shadow: none !important;}
+span.size5 img {float: right; padding: 0px 0px 15px 15px !important; box-shadow: none !important;}
 
 .user_title img {
     display: inline-block;
@@ -2911,8 +2999,3 @@ tr.likes td[id^="likers_"]:hover {
 
 210
 215*/
-
-/*** Puts border around unread posts ***/
-#forums table.forum_unread {
-    border-top: red solid 5px;
-    border-collapse: collapse;}
