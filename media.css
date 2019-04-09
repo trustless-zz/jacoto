@@ -57,6 +57,14 @@
     margin-left: 1px;}
 }
 
+
+@media (min-width: 1300px) {
+#forums .forum_latest >.search.box.pad table#forumlist {
+    white-space: nowrap;}
+}
+
+
+
 @media (min-width: 1760px) and (min-height: 659px) {
     #header {
         font-size: 1em;
