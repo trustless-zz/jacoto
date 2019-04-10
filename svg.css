@@ -308,6 +308,7 @@ a[title="Use a FL Token"] {
 /* anchor */
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
+#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1),
 a[title="Report"] {
     background-image: url('icons/dark/tor/rp.svg');}
 

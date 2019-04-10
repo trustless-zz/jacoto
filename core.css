@@ -351,9 +351,11 @@ html {
 .forum_post .colhead_dark a[onclick],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
+#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1),
 .torrent_table .addbookmark,
 .torrent_table .removebookmark,
 #index #recommended .head a,
+#newthreadpreview #pollpreview .head.colhead_dark a,
 .box.news_post .head a:not(#markread),
 #index #freeleech .group_torrent span:first-child,
 #userinfo_stats #connectable,
@@ -674,7 +676,8 @@ form[name="filter"],
 #reports .thin >.box.pad,
 #reports .thin >table,
 #forums .forum_latest >.search.box.pad,
-#forums #newthreadpreview +.box.pad {
+#forums #newthreadpreview +.box.pad,
+#newthreadpreview div#pollpreview {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -715,6 +718,7 @@ a {
     background-color: transparent;}
 a:hover,
 .forum_post .colhead_dark a.username:hover,
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover,
 a:hover .ratings {
@@ -856,6 +860,7 @@ a[title="Edit"],
 a[title="Remove"],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
+#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1),
 .forum_post .colhead_dark a[onclick],
 #requests table.border a[href^="upload.php"],
 #requests_donate img,
@@ -1092,6 +1097,7 @@ input[type=submit]:hover:active,
     position: absolute;
     right: 15px;
     top: 11px;}
+#newthreadpreview #pollpreview .head.colhead_dark a,
 #index #recommended .head a,
 .box.news_post .head a:not(#markread) {
     cursor: default;
@@ -1111,6 +1117,7 @@ input[type=submit]:hover:active,
     width: 160px;
     float: right;
     height: 15px;}
+#newthreadpreview #pollpreview .head.colhead_dark:before,
 .head[title="Click to expand/collapse"]:before,
 #index #recommended .head:before,
 .box.news_post .head:before {
@@ -1122,8 +1129,10 @@ input[type=submit]:hover:active,
     width: 100%;
     height: 100%;
     opacity: 0;}
+#newthreadpreview #pollpreview .head.colhead_dark,
 .head[title="Click to expand/collapse"] {
     height: 20px;}
+#newthreadpreview #pollpreview .head.colhead_dark strong,
 .head[title="Click to expand/collapse"] strong {
     cursor: default;
     z-index: 1;
@@ -1133,10 +1142,12 @@ input[type=submit]:hover:active,
     padding: 9px;
     width: calc(100% - 20px);
     height: 20px;}
+#newthreadpreview #pollpreview .head.colhead_dark:hover:before,
 .head[title="Click to expand/collapse"]:hover:before,
 #index #recommended .head:hover:before,
 .box.news_post .head:hover:before {
     opacity: 1;}
+#newthreadpreview #pollpreview .head.colhead_dark:hover:active:before,
 .torrent_table .colhead_dark td[onclick]:hover:active:before,
 .head[title="Click to expand/collapse"]:hover:active:before,
 #index #recommended .head:hover:active:before,
@@ -1196,10 +1207,12 @@ input[type=submit]:hover:active,
     border: var(--p-main-brdr);
     background: var(--p-head-grdnt);
     margin: 0 0 15px 0;}
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"],
 .torrent_table #displayname,
 #quickreplypreview .colhead_dark span[style="float:left;"],
 .forum_post .colhead_dark div[style="float: left;"],
 .forum_post .colhead_dark div[style="float:left;"],
+#newthreadpreview #pollpreview .head.colhead_dark,
 .head[title="Click to expand/collapse"],
 .sidebar #freeleech_time_left #progress_bar,
 #forums .forum_post .avatar,
@@ -2272,16 +2285,19 @@ li:not(.suggested_similar) .similar_votes >span {
     overflow: hidden;}
 #quickreplypreview .colhead_dark span[style="float:left;"],
 .forum_post .colhead_dark div[style="float: left;"],
-.forum_post .colhead_dark div[style="float:left;"] {
+.forum_post .colhead_dark div[style="float:left;"],
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
     width: calc(100% - 40px);
     text-align: left;}
 .forum_post .colhead_dark a[onclick],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
-.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1) {
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
+#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1) {
     display: inline-block;
     vertical-align: text-bottom;}
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
-.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2) {
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
+#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(2) {
     font-size: 20px;
     line-height: 0;}
 
@@ -2888,6 +2904,7 @@ div.breadcrumbs,
 
 .forum_post .comment_rating:hover,
 .avatar:hover .forumstat,
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover,
 #forums .forum_signature:hover td,
@@ -2908,6 +2925,8 @@ tr.likes td[id^="likers_"]:hover {
     background-position: right center;
     background-size: 0 0;
     opacity: .65;}
+#newthreadpreview div#pollpreview:after,
+#newthreadpreview .avatar >div:first-child:after,
 #quickreplypreview .avatar >div:first-child:after {
     content: none !important;}
 #forums .forum_post .avatar:hover >div:first-child:after {
@@ -3181,6 +3200,31 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     width: calc(100% - 71px) !important;}
 #newthreadtext td.label {
     width: 60px;}
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
+    left: -1px;}
+#forums #newthreadtext #poll_answers #answer_block,
+#forums #newthreadtext tr:nth-last-child(3) td.center {
+    padding-bottom: 13px;}
+#forums #newthreadtext tr#poll_question td {
+    padding-top: 0;}
+#newthreadpreview #pollpreview #threadpoll input[type="button"] {
+    float: inherit !important;}
+#newthreadpreview #pollpreview {
+    margin-bottom: 20px;}
+#forums #threadpoll {
+    padding: 10px 20px;
+    background-color: var(--c-tgroup);}
+    
+#forums .forum_post td.body img[src*="static/common/smileys/"] {
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-filter: none;
+    filter: none;
+    vertical-align: text-bottom;}
+
+
 
 
 /* ---gameroom--- ../images with size=4 code will float left, size=5 will float right */

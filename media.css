@@ -19,6 +19,7 @@
 #requests .thin >table.border .colhead_dark {
     white-space: nowrap;}
     
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"],
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"],
 .forum_post .colhead_dark a.post_id {
     width: auto;
@@ -33,6 +34,7 @@
     background-color: var(--c-table-brdr) !important;
     border-right: var(--p-main-brdr);
     clip: rect(0, 15px, 32px, 0);}
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:before,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:before,
 .forum_post .colhead_dark a.post_id:before {
     position: absolute;
@@ -43,6 +45,7 @@
     top: 0;
     height: 100%;
     background-color: var(--c-table-brdr);}
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover {
     clip: rect(0, 300px, 32px, 0);}
@@ -165,16 +168,19 @@
         box-shadow: var(--p-header-shdw);
         border-bottom: var(--p-main-brdr);}
     #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
-    .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2) {
+    .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
+    #newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(2) {
         display: none;}
     #quickreplypreview .colhead_dark #barpreview,
-    .forum_post .colhead_dark div[style="float: right;"] {
+    .forum_post .colhead_dark div[style="float: right;"],
+    #newthreadpreview .forum_post .colhead_dark #barpreview {
         width: 18px;
         height: 18px;
         font-size: 0;}
     #quickreplypreview .colhead_dark span[style="float:left;"],
     .forum_post .colhead_dark div[style="float: left;"],
-    .forum_post .colhead_dark div[style="float:left;"] {
+    .forum_post .colhead_dark div[style="float:left;"],
+    #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
         width: calc(100% - 23px);}
     
     #extra1,
