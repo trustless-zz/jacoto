@@ -20,8 +20,8 @@
     --c-high:							rgb(255, 255, 255);
     --c-b1: 							rgb(18, 201, 194);
     --c-b2: 							rgb(81, 204, 165);
-    --c-b3: 							rgb(132, 223, 220);
-    --c-b4: 							rgb(163, 225, 205);
+    --c-b3: 							rgb(142, 225, 222);                     /*~45%*/
+    --c-b4: 							rgb(170, 226, 209);                     /*~45%*/
     --c-b00: 							rgba(255, 255, 255, 0);
     --c-anchor: 						rgb(11, 122, 118);						/* #bd002c */
     --c-anchor-hvr: 					rgb(0, 0, 0);							/* #053d3b #630017 */
@@ -619,6 +619,11 @@ tr.likes td[id^="likers_"] >strong {
     background-repeat: no-repeat;
     background-position: center;}
 
+a[onclick="BBCode.spoiler(this);"],
+.forum_post .colhead_dark a[onclick],
+#quickreplypreview .colhead_dark #barpreview >a,
+.forum_post .colhead_dark div[style="float: right;"] >a,
+#newthreadpreview .forum_post .colhead_dark #barpreview a,
 #requests table.border a[href^="upload.php"],
 #index #freeleech .group_torrent >span:first-child a {
     display: inline-block;}
@@ -746,8 +751,12 @@ a:hover .ratings {
 #requests table.border a[href^="upload.php"],
 .forum_post tr.likes >td:first-child a,
 .bbbutt li a,
-#newthreadform #newthreadtext td.center a[onclick] {
+#newthreadform #newthreadtext td.center a[onclick],
+.torrent_details .torrent_table div[id^="history_"] table.border tr:not(.colhead) {
     background-color: transparent;}
+#torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
+#torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
+    background-color: transparent !important;}
 
 a,
 li,
@@ -790,6 +799,11 @@ div,
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
+
+.fancybox-container div {
+    -webkit-transition: auto;
+    -o-transition: auto;
+    transition: auto;}
 
 #userinfo_stats li:not(#stats_ratio):not(#connectable):hover,
 #userinfo_stats li:not(#stats_ratio):not(#connectable):hover a,
@@ -2289,12 +2303,13 @@ li:not(.suggested_similar) .similar_votes >span {
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
     width: calc(100% - 40px);
     text-align: left;}
-.forum_post .colhead_dark a[onclick],
-#quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
-.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
-#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1) {
-    display: inline-block;
+.forum_post .colhead_dark a[onclick] {
     vertical-align: text-bottom;}
+.forum_post .colhead_dark a[onclick],
+#quickreplypreview .colhead_dark #barpreview >a,
+.forum_post .colhead_dark div[style="float: right;"] >a,
+#newthreadpreview .forum_post .colhead_dark #barpreview a {
+    vertical-align: bottom;}
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
 #newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(2) {
@@ -3117,8 +3132,6 @@ a[onclick="BBCode.spoiler(this);"] {
     padding: 0 !important;
     margin: 5px 0 0 0 !important;
     cursor: default !important;}
-a[onclick="BBCode.spoiler(this);"] {
-    display: inline-block;}
 input[type="button"][value="Show"]:hover,
 input[type="button"][value="Hide"]:hover,
 a[onclick="BBCode.spoiler(this);"]:hover {
