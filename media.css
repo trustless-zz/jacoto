@@ -48,7 +48,8 @@
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover {
-    clip: rect(0, 300px, 32px, 0);}
+    clip: rect(0, 300px, 32px, 0);
+    z-index: 99;}
 #forums table.forum_unread .colhead_dark a.post_id,
 #forums table.forum_unread .colhead_dark a.post_id:before {
     background-color: var(--c-b3) !important;}
@@ -57,7 +58,8 @@
     background-color: var(--c-input-brdr) !important;}
 /* flame effect overlap fix */
 .forum_post .colhead_dark a.username {
-    margin-left: 1px;}
+    position: relative;
+    z-index: 9;}
 }
 
 

@@ -62,6 +62,7 @@
     --p-img-anchor-brdr-hvr:			3px solid var(--c-b1);
     --p-post-img:                       drop-shadow(0px 0px 3px var(--c-main-brdr));
     --p-post-img-hvr:                   drop-shadow(0px 0px 3px var(--c-b3));
+    --p-unread-stripe:                  4px solid var(--c-b3);
     --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b00), var(--c-anchor)), linear-gradient(to right, var(--c-b1), var(--c-b2));
     --p-colhead-tr-bcg: 				var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
     --p-post-colhead-bcg:               var(--c-table-brdr) linear-gradient(155deg,var(--c-table-brdr),var(--c-body));
@@ -458,6 +459,17 @@ li.active,
 #forums td.unread_locked_sticky ~td .last_topic,
 #forums td.unread_locked_sticky ~td h4.min_padding {
     font-weight: 600 !important;}
+
+td.unread,
+td.unread_sticky,
+td.unread_locked,
+td.unread_locked_sticky {
+    border-left: var(--p-unread-stripe);}
+.forum_index,
+.forum_mythreads,
+.forum_editsubs,
+.forum_subscriptions {
+    overflow: hidden;}
 
 #searchbars ul {
     margin: 0 auto;
@@ -3237,6 +3249,14 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     filter: none;
     vertical-align: text-bottom;}
 
+.avatar {
+    min-width: 150px;}
+.avatar.pixelart {
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    -ms-interpolation-mode: nearest-neighbor;}
 
 
 
