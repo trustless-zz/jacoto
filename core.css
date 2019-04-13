@@ -3008,7 +3008,7 @@ div.breadcrumbs,
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover,
-#forums .forum_signature:hover td,
+#forums .forum_signature td > div:hover,
 tr.likes td[id^="likers_"]:hover {
     transition-delay: .3s;}
 
@@ -3044,18 +3044,19 @@ marquee {
 
 #forums .forum_signature td {
     text-align: left;
-    padding: 10px 10px 5px 10px;
+    padding: 10px 0 0 0;
     height: auto;
-    vertical-align: bottom;
-    opacity: .65;}
-#forums .forum_signature:hover td {
-    opacity: 1;}
+    vertical-align: bottom;}
 #forums .forum_signature td > div {
+    opacity: .65;
     border-top: var(--p-table-brdr);
-    padding: 6px 3px 1px 3px;
+    margin: 0 10px;
+    padding: 6px 3px;
     max-height: 75px;
     overflow-y: auto;
     overflow-x: hidden;}
+#forums .forum_signature td > div:hover {
+    opacity: 1;}
 .forum_post tr.likes {
     border-top: var(--p-table-brdr);
     background-color: var(--c-tgroup);}
@@ -3151,6 +3152,7 @@ span.size10 {
     font-size: 3em;
     line-height: 1em}
 
+.twitter-tweet,
 .forum_post td.body iframe,
 .forum_post td.body img,
 .box.news_post >.pad iframe,
@@ -3160,6 +3162,22 @@ span.size10 {
     filter: var(--p-post-img);
     margin: 0 5px;
     padding: 5px;}
+.twitter_post h4 {
+    display: none;}
+.twitter_post {
+    margin: 0 5px;
+    width: fit-content;}
+.twitter_post >br {
+    display: none;}
+.twitter-tweet {
+    margin: 0 !important;}
+/* twitter align test */
+.body div[style="text-align:center;"] >.twitter_post {
+    margin: 0 auto !important;}
+.body div[style="text-align:left;"] >.twitter_post {
+    margin: 0 auto 0 5px !important;}
+.body div[style="text-align:right;"] >.twitter_post {
+    margin: 0 5px 0 auto !important;}
 
 ul#noty_bottomRight_layout_container.i-am-new li {
     border-radius: 0 !important;
@@ -3364,8 +3382,14 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 
 
 /* ---gameroom--- ../images with size=4 code will float left, size=5 will float right */
-span.size4 img {float:left; padding: 0px 15px 15px 0px !important; box-shadow: none !important;}
-span.size5 img {float: right; padding: 0px 0px 15px 15px !important; box-shadow: none !important;}
+span.size4 iframe,
+span.size4 .twitter_post,
+span.size4 img {
+    float: left; margin-right: 10px !important;}
+span.size5 iframe,
+span.size5 .twitter_post,
+span.size5 img {
+    float: right; margin-left: 10px !important;}
 
 .user_title img {
     display: inline-block;
