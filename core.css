@@ -349,6 +349,7 @@ html {
     list-style:none;}
 
 #torrentbrowse #groupplatform,
+#inbox .box.vertical_space .head a[onclick],
 .forum_post .colhead_dark a[onclick],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
@@ -356,6 +357,7 @@ html {
 .torrent_table .addbookmark,
 .torrent_table .removebookmark,
 #index #recommended .head a,
+#forums .thin >.box.thin.clear .head.colhead_dark a,
 #newthreadpreview #pollpreview .head.colhead_dark a,
 .box.news_post .head a:not(#markread),
 #index #freeleech .group_torrent span:first-child,
@@ -395,8 +397,7 @@ table {
     width: 100%;}
 td, th {
     padding: 5px;
-    text-align: left;
-    }
+    text-align: left;}
 #thumbsup img,
 #thumbsdown img,
 .sidebar .box_user_rating img,
@@ -479,6 +480,8 @@ td.unread_locked_sticky {
 #searchbars ul li {
     width: 100%;
     padding: 0 7px;}
+#inbox h2 +#messageform textarea#quickpost,
+#inbox #searchbox input[type="text"],
 #searchbars ul li form {
     width: 100%;}
 #searchbars input {
@@ -612,6 +615,7 @@ a[title="Edit"],
 a[title="Remove"],
 .prev,
 .next,
+#inbox .box.vertical_space .head a[onclick],
 .forum_post .colhead_dark a[onclick],
 .sidebar .userratingdiv img,
 #usersreviewimage img,
@@ -632,6 +636,7 @@ tr.likes td[id^="likers_"] >strong {
     background-position: center;}
 
 a[onclick="BBCode.spoiler(this);"],
+#inbox .box.vertical_space .head a[onclick],
 .forum_post .colhead_dark a[onclick],
 #quickreplypreview .colhead_dark #barpreview >a,
 .forum_post .colhead_dark div[style="float: right;"] >a,
@@ -690,23 +695,31 @@ form[name="filter"],
 .sidebar .box,
 #torrents #collages,
 .forum_post,
+#inbox .box.vertical_space,
 #reports .thin >.box.pad,
 #reports .thin >table,
 #forums .forum_latest >.search.box.pad,
 #forums #newthreadpreview +.box.pad,
-#newthreadpreview div#pollpreview {
+#newthreadpreview div#pollpreview,
+#inbox .thin >.box.pad #messageform,
+#inbox #searchbox,
+#forums .thin >.box.thin.clear,
+#inbox h2 +#messageform ,
+#inbox #messageform +h2 +form {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: var(--p-main-brdr);
     margin: 0 0 15px 0;}
+#inbox .box.vertical_space:not(:last-of-type),
 .forum_post {
     margin: 0 0 10px 0;}
-.sidebar .box {
-    padding: 10px;}
 .sidebar ul {
     margin: 8px 0 10px 0;}
-.body {
+.pad,
+.trailer_div,
+.body,
+.sidebar .box {
     padding: 10px;}
 .sidebar .body {
     padding: 10px 0 0 0;}
@@ -721,7 +734,7 @@ form[name="filter"],
     background: var(--p-head-grdnt);
     font-size: 20px;
     line-height: 20px;
-    padding: 9px;}
+    padding: 9px 10px;}
 .sidebar .head {
     margin: -10px -10px 0;
     font-weight: 600;}
@@ -769,6 +782,8 @@ a:hover .ratings {
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
     background-color: transparent !important;}
+#threadpoll li.graph {
+    color: transparent;}
 
 a,
 li,
@@ -796,6 +811,8 @@ button,
 input[type=button],
 input[type=submit],
 .fancybox-image,
+#forums .thin >.box.thin.clear .head.colhead_dark:before,
+#newthreadpreview #pollpreview .head.colhead_dark:before,
 .head[title="Click to expand/collapse"]:before,
 .torrent_details .torrent_table .colhead_dark td:nth-child(1):before,
 .torrent_details #grouplinks a div,
@@ -842,8 +859,6 @@ img {
 .center,
 #footer {
     text-align: center;}
-.pad {
-    padding: 10px;}
 .main_column {
     width: calc(100% - 315px);}
 
@@ -887,6 +902,7 @@ a[title="Remove"],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
 #newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1),
+#inbox .box.vertical_space .head a[onclick],
 .forum_post .colhead_dark a[onclick],
 #requests table.border a[href^="upload.php"],
 #requests_donate img,
@@ -1123,6 +1139,7 @@ input[type=submit]:hover:active,
     position: absolute;
     right: 15px;
     top: 11px;}
+#forums .thin >.box.thin.clear .head.colhead_dark a,
 #newthreadpreview #pollpreview .head.colhead_dark a,
 #index #recommended .head a,
 .box.news_post .head a:not(#markread) {
@@ -1143,6 +1160,7 @@ input[type=submit]:hover:active,
     width: 160px;
     float: right;
     height: 15px;}
+#forums .thin >.box.thin.clear .head.colhead_dark:before,
 #newthreadpreview #pollpreview .head.colhead_dark:before,
 .head[title="Click to expand/collapse"]:before,
 #index #recommended .head:before,
@@ -1158,6 +1176,10 @@ input[type=submit]:hover:active,
 #newthreadpreview #pollpreview .head.colhead_dark,
 .head[title="Click to expand/collapse"] {
     height: 20px;}
+#forums .thin >.box.thin.clear .head.colhead_dark {
+    height: 20px !important;
+    padding: 9px 10px!important;}
+#forums .thin >.box.thin.clear .head.colhead_dark strong,
 #newthreadpreview #pollpreview .head.colhead_dark strong,
 .head[title="Click to expand/collapse"] strong {
     cursor: default;
@@ -1165,14 +1187,16 @@ input[type=submit]:hover:active,
     position: absolute;
     left: 0;
     top: 0;
-    padding: 9px;
+    padding: 9px 10px;
     width: calc(100% - 20px);
     height: 20px;}
+#forums .thin >.box.thin.clear .head.colhead_dark:hover:before,
 #newthreadpreview #pollpreview .head.colhead_dark:hover:before,
 .head[title="Click to expand/collapse"]:hover:before,
 #index #recommended .head:hover:before,
 .box.news_post .head:hover:before {
     opacity: 1;}
+#forums .thin >.box.thin.clear .head.colhead_dark:hover:active:before,
 #newthreadpreview #pollpreview .head.colhead_dark:hover:active:before,
 .torrent_table .colhead_dark td[onclick]:hover:active:before,
 .head[title="Click to expand/collapse"]:hover:active:before,
@@ -1238,6 +1262,7 @@ input[type=submit]:hover:active,
 #quickreplypreview .colhead_dark span[style="float:left;"],
 .forum_post .colhead_dark div[style="float: left;"],
 .forum_post .colhead_dark div[style="float:left;"],
+#forums .thin >.box.thin.clear .head.colhead_dark,
 #newthreadpreview #pollpreview .head.colhead_dark,
 .head[title="Click to expand/collapse"],
 .sidebar #freeleech_time_left #progress_bar,
@@ -1964,7 +1989,8 @@ a[href="javascript:Vote(20, 1)"] strong,
 #requests table.border td.nobr:nth-child(2) strong,
 a[href="javascript:Vote(20, 1)"] strong,
 .forum_post tr.likes >td:first-child,
-tr.likes td[id^="likers_"] >strong {
+tr.likes td[id^="likers_"] >strong,
+#inbox #searchbox {
     font-size: 0;
     line-height: 0;}
 .box_tags .stats.nobullet div a:nth-child(1) {
@@ -2030,11 +2056,15 @@ a[href="javascript:Vote(20, 1)"] strong:hover:active,
     content: '(View Less)';
     position: absolute;
     bottom: 1066px;}
+#newthreadform #newthreadtext #answer_block a,
+#upload td#image_block a,
 .torrent_details .group_torrent td:first-child >a,
 .filter_torrents.advanced .flright,
 .toggle_tags,
 #requests .thin >.center.box.pad a[onclick],
-#newthreadform #newthreadtext td.center a[onclick] {
+#newthreadform #newthreadtext td.center a[onclick],
+.linkbox a[onclick^="popup_add"],
+.linkbox a[href="#quickpost"] {
     cursor: default;}
 /* #upload #releaseinfo .colhead +tr+tr td.label,
 #upload #rlstitle +tr td.label,
@@ -2052,6 +2082,8 @@ body:not(#upload) #artist_tr + tr td.label,
 .requests_outer_table >tbody >tr >td:nth-child(1),
 .filter_torrents.advanced tr:first-child >td.label {
     vertical-align: top;} */
+#upload input#getYT {
+    vertical-align: top;}
 #torrents .filter_torrents #platcheckbox td[colspan="5"] {
     background-color: var(--c-edition);}
 .filter_torrents.advanced #taglist {
@@ -2172,8 +2204,6 @@ body:not(#upload) #artist_tr + tr td.label,
     max-width: 100% !important;
     border: var(--p-img-brdr);}
 
-.trailer_div {
-    padding: 10px;}
 .trailer_div .head {
     margin: -10px -10px 10px -10px;}
 .trailer {
@@ -2186,6 +2216,41 @@ body:not(#upload) #artist_tr + tr td.label,
     left: 0;
     width: 100%;
     height: 100%;}
+
+.bbbutt {
+    background-color: var(--c-input);
+    border: var(--p-img-brdr);
+    padding: 3px;
+    margin: 5px auto;
+    list-style: none;
+    display: block;
+    cursor: default;
+    width: fit-content;}
+.bbbutt li {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 2px;}
+.bbbutt li a {
+    opacity: .85;
+    display: inline-block;
+    margin: 0;
+    height: 18px;
+    width: 18px;}
+.bbbutt li a:hover {
+    opacity: 1;}
+#bb_h1 {
+    width: 22.41px;}
+#bb_h2 {
+    width: 26.31px;}
+#bb_h3 {
+    width: 25.83px;}
+#bb_h4 {
+    width: 27.37px;}
+#bb_h5 {
+    width: 26.21px;}
+#bb_h6 {
+    width: 26.07px;}
+
 .hidden,
 input.hidden,
 .sidebar .addtagsdiv >br,
@@ -2299,9 +2364,11 @@ li:not(.suggested_similar) .similar_votes >span {
     -webkit-clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));
     clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));}
 
+#inbox .box.vertical_space .head,
 .forum_post .colhead_dark {
     background: var(--p-post-colhead-bcg);}
 
+#inbox .box.vertical_space .head,
 .forum_post .colhead_dark td {
     font-size: 14px;
     line-height: var(--p-lh);
@@ -2315,8 +2382,7 @@ li:not(.suggested_similar) .similar_votes >span {
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
     width: calc(100% - 40px);
     text-align: left;}
-.forum_post .colhead_dark a[onclick] {
-    vertical-align: text-bottom;}
+#inbox .box.vertical_space .head a[onclick],
 .forum_post .colhead_dark a[onclick],
 #quickreplypreview .colhead_dark #barpreview >a,
 .forum_post .colhead_dark div[style="float: right;"] >a,
@@ -2499,6 +2565,7 @@ a[href="javascript:Vote(20, 1)"] strong:hover,
 #quickreplybuttons {
     display: flex;
     justify-content: center;}
+#inbox #preview.box.vertical_space +#buttons input,
 #quickreplybuttons input {
     margin: 0 5px;}
 
@@ -2636,6 +2703,7 @@ img[src="static/common/thumbsup.png"],
     width: 36px;
     height: 36px;
     float: left;}
+#inbox .box.vertical_space .head span.time,
 .forum_post .colhead_dark .time,
 .forum_post .comment_rating p,
 .avatar .forumstat {
@@ -2689,6 +2757,8 @@ img[src="static/common/thumbsup.png"],
     padding-top: 12px;}
 
 /** convert ... to head **/
+#inbox #messageform +h2,
+#inbox .box.vertical_space +h2,
 #reports .thin >h3,
 #searchforum h3,
 #searchthread h3,
@@ -2756,6 +2826,8 @@ form[name="filter"] h3 {
     margin: 0 0 15px 0 !important;
     padding: 10px;}
 #upload #content >div >table[style] {
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
     border: var(--p-table-brdr);}
 #upload #content >div >table[style] td {
     width: auto !important;}
@@ -2871,6 +2943,7 @@ tr.likes td,
 div.breadcrumbs,
 #forums #content .search .submit {
 	text-align: right;}
+#inbox .thin >.box.pad,
 #forums .forum_post h3,
 #forums h4 {
     margin: 0;
@@ -2901,7 +2974,8 @@ div.breadcrumbs,
 #forums .forum_subscriptions tr:not(.colhead) td,
 #forums .forum_editsubs tr:not(.colhead) td,
 #forums .forum_mythreads tr:not(.colhead) td,
-#forums .forum_index tr:not(.colhead) td {
+#forums .forum_index tr:not(.colhead) td,
+#inbox .thin >.box.pad #messageform tr:not(.colhead) td:nth-child(2) {
     font-size: 15px;
     padding-top: 6px;
     padding-bottom: 6px;}
@@ -2954,7 +3028,8 @@ tr.likes td[id^="likers_"]:hover {
     opacity: .65;}
 #newthreadpreview div#pollpreview:after,
 #newthreadpreview .avatar >div:first-child:after,
-#quickreplypreview .avatar >div:first-child:after {
+#quickreplypreview .avatar >div:first-child:after,
+#forums .thin >.box.thin.clear:after {
     content: none !important;}
 #forums .forum_post .avatar:hover >div:first-child:after {
     background-size: 10px 10px;
@@ -2997,6 +3072,8 @@ marquee {
     margin: 1px auto 0 auto;
     position: relative;
     z-index: 9;}
+#inbox #messageform +h2 +form,
+#inbox h2 +#messageform,
 #reports .thin >.box.pad,
 #forums #reply_box {
     margin-top: -39px;}
@@ -3024,40 +3101,6 @@ tr.likes td[id^="likers_"] {
 tr.likes td[id^="likers_"]:hover {
     opacity: 1;}
 
-.bbbutt {
-    background-color: var(--c-input);
-    border: var(--p-img-brdr);
-    padding: 3px;
-    margin: 5px auto;
-    list-style: none;
-    display: block;
-    cursor: default;
-    width: fit-content;}
-.bbbutt li {
-    vertical-align: middle;
-    display: inline-block;
-    margin: 0 2px;}
-.bbbutt li a {
-    opacity: .85;
-    display: inline-block;
-    margin: 0;
-    height: 18px;
-    width: 18px;}
-.bbbutt li a:hover {
-    opacity: 1;}
-#bb_h1 {
-    width: 22.41px;}
-#bb_h2 {
-    width: 26.31px;}
-#bb_h3 {
-    width: 25.83px;}
-#bb_h4 {
-    width: 27.37px;}
-#bb_h5 {
-    width: 26.21px;}
-#bb_h6 {
-    width: 26.07px;}
-
 table.forum_unread .colhead_dark {
     background: var(--p-head-grdnt);}
 table.sticky_post tr.colhead_dark {
@@ -3073,6 +3116,7 @@ table.sticky_post tr.colhead_dark strong:last-of-type {
     margin: inherit;}
 table.bbcode_table td {
     border: var(--p-table-brdr);}
+#inbox .colhead >td:first-child,
 .bbcode_table_div {
     padding: 5px;}
 
@@ -3232,13 +3276,20 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     padding-bottom: 13px;}
 #forums #newthreadtext tr#poll_question td {
     padding-top: 0;}
-#newthreadpreview #pollpreview #threadpoll input[type="button"] {
+#forums #newthreadtext tr#poll_question td.label {
+    padding-top: 3px;}
+#threadpoll input[type="button"] {
     float: inherit !important;}
 #newthreadpreview #pollpreview {
     margin-bottom: 20px;}
 #forums #threadpoll {
     padding: 10px 20px;
     background-color: var(--c-tgroup);}
+#threadpoll #poll_results ul#poll_options {
+    padding: 0;
+    margin-bottom: 15px;}
+#forums #threadpoll >p:first-child {
+    margin-top: 0;}
     
 #forums .forum_post td.body img[src*="static/common/smileys/"] {
     margin: 0;
@@ -3258,6 +3309,58 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     image-rendering: pixelated;
     -ms-interpolation-mode: nearest-neighbor;}
 
+#inbox #searchbox label,
+#inbox #searchbox input {
+    display: inline-block;
+    font-size: 14px;
+    line-height: var(--p-lh);
+    vertical-align: middle;}
+#inbox #searchbox label,
+#inbox #searchbox input:not([type="text"]) {
+    margin-top: 5px;}
+#inbox #messageform +h2 +form >.box.pad,
+#inbox h2 +#messageform >.box.pad,
+#inbox #searchbox {
+    padding: 48px 10px 10px 10px;
+    position: relative;}
+#inbox #searchbox:before {
+    content: 'Search';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 20px);
+    height: 20px;
+    padding: 9px 10px;
+    z-index: 99;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    background: var(--p-head-grdnt);}
+#inbox #messageform table ~input {
+    margin: 8px 0 10px 5px;}
+#inbox #messageform table +input {
+    margin-left: 10px;}
+#inbox #messageform +h2,
+#inbox .box.vertical_space +h2 {
+    position: relative;
+    margin: 1px auto 0 auto;
+    width: calc(100% - 22px);}
+#inbox #preview.box.vertical_space {
+    margin: 0 0 15px 0;
+    border: var(--p-table-brdr); 
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);}
+#inbox #messageform +h2 +form >.box.pad tbody {
+    display: flex;}
+#inbox #messageform +h2 +form >.box.pad tr:not(:last-child) {
+    width: calc(100% - 180px);}
+#inbox #messageform +h2 +form >.box.pad tr:not(:last-child) td {
+    vertical-align: bottom;}
+#inbox #messageform +h2 +form >.box.pad tr:not(:last-child) td:not(.label) {
+    padding-right: 20px;
+    padding-left: 0;}
+
+
 
 
 /* ---gameroom--- ../images with size=4 code will float left, size=5 will float right */
@@ -3268,12 +3371,50 @@ span.size5 img {float: right; padding: 0px 0px 15px 15px !important; box-shadow:
     display: inline-block;
     vertical-align: bottom;}
 /*****************************************************************************************************/
- /* background-size: 100% 37px !important;
-    background-position: top left !important;
-    background-repeat: no-repeat !important;
-    background: var(--p-head-grdnt); 
+
 180
 185
 
 210
 215*/
+
+
+/*****************************************
+*****************INBOX********************
+*****************************************/
+#inbox table {
+     border-collapse:collapse;}
+
+#inbox .rowa td a,
+#inbox .rowb td a {
+     font-weight:normal !important;
+     padding: 5px 0px;}
+
+#inbox table td[width="40%"] {
+     width:60% !important;}
+
+#inbox .time {
+     white-space: nowrap;}
+
+#inbox tr.unreadpm td,
+#inbox tr.unreadpm td a {
+     font-weight: bold;}
+
+#inbox blockquote {
+     margin: 10px;
+     box-shadow: 2px 2px 5px red;}
+
+#inbox textarea {
+     margin: 10px auto;
+     width:100%;}
+
+#messageform textarea {
+     width: 90%;}
+
+#inbox .comp td {
+     padding: 0;}
+
+#inbox .userclasses {
+     float: left;
+     width: 25%;}
+

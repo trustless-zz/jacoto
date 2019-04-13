@@ -328,6 +328,7 @@ a[title="Original Group"] {
 
 /** edit **/
 /* anchor */
+.forum_post .colhead_dark a[onclick^="Edit"],
 a[title="Edit"] {
     background-image: url('icons/dark/tor/ed.svg');}
 
@@ -354,7 +355,8 @@ a[title="Remove"] {
     transform: scaleX(-1);}
 
 /** quote **/
-.forum_post .colhead_dark a[onclick] {
+#inbox .box.vertical_space .head a[onclick^="Quote"],
+.forum_post .colhead_dark a[onclick^="Quote"] {
     background-image: url('icons/dark/quote.svg');}
 
 /** thumbs **/

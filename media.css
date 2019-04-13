@@ -1,4 +1,6 @@
 ﻿@media (min-width: 801px) {
+html {
+    overflow-y: scroll;}
 #torrentbrowse #hyphen {
     display: none;}
 #torrentbrowse #groupplatform {
