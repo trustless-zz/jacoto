@@ -3381,6 +3381,12 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 
 
 
+
+.forum_post .user_title img {
+    max-height: 19px;}
+.user_title img {
+    display: inline-block;
+    vertical-align: bottom;}
 /* ---gameroom--- ../images with size=4 code will float left, size=5 will float right */
 span.size4 iframe,
 span.size4 .twitter_post,
@@ -3391,9 +3397,8 @@ span.size5 .twitter_post,
 span.size5 img {
     float: right; margin-left: 10px !important;}
 
-.user_title img {
-    display: inline-block;
-    vertical-align: bottom;}
+
+
 /*****************************************************************************************************/
 
 180
