@@ -52,12 +52,14 @@ html {
 .forum_post .colhead_dark a.post_id:hover {
     clip: rect(0, 300px, 32px, 0);
     z-index: 99;}
-#forums table.forum_unread .colhead_dark a.post_id,
-#forums table.forum_unread .colhead_dark a.post_id:before {
-    background-color: var(--c-b3) !important;}
-#forums table.sticky_post .colhead_dark a.post_id,
-#forums table.sticky_post .colhead_dark a.post_id:before {
-    background-color: var(--c-input-brdr) !important;}
+.forum_post.forum_unread .colhead_dark a.post_id,
+.forum_post.forum_unread .colhead_dark a.post_id:before {
+    background-color: var(--c-b3) !important;
+    border-color: var(--c-b1) !important;}
+.forum_post.sticky_post .colhead_dark a.post_id,
+.forum_post.sticky_post .colhead_dark a.post_id:before {
+    background-color: var(--c-input-brdr) !important;
+    border-color: var(--c-sticky-id-brdr) !important;}
 /* flame effect overlap fix */
 .forum_post .colhead_dark a.username {
     position: relative;

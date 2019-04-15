@@ -4,6 +4,7 @@
     --c-txt: 							rgb(50, 50, 50);
     --c-text-s: 						rgb(100, 100, 100);
     --c-curtain:						rgb(110, 110, 110);
+    --c-sticky-id-brdr:                 rgb(190, 190, 190);
     --c-input-brdr:						rgb(195, 195, 195);
     --c-main-brdr:						rgb(200, 200, 200);
     --c-sticky-2:                       rgb(205, 205, 205);
@@ -3108,12 +3109,16 @@ tr.likes td[id^="likers_"] {
 tr.likes td[id^="likers_"]:hover {
     opacity: 1;}
 
-table.forum_unread .colhead_dark {
+.forum_post.forum_unread .colhead_dark {
     background: var(--p-head-grdnt);}
-table.sticky_post tr.colhead_dark {
-    background: var( --p-sticky-colhead-bcg);}
-table.sticky_post tr.colhead_dark strong:last-of-type {
+.forum_post.sticky_post .colhead_dark {
+    background: var(--p-sticky-colhead-bcg);}
+.forum_post.sticky_post .colhead_dark strong:last-of-type {
     float: right;}
+.forum_post.sticky_post {
+    width: 95% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;}
 
 #forums .thin .forum_post table {
     background-color: inherit;
