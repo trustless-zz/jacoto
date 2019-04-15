@@ -1267,7 +1267,8 @@ input[type=submit]:hover:active,
 .head[title="Click to expand/collapse"],
 .sidebar #freeleech_time_left #progress_bar,
 #forums .forum_post .avatar,
-input[type="number"] {
+input[type="number"],
+.forum_post .colhead_dark a[onclick] {
     position: relative;}
 .sidebar #freeleech_time_left #progress_bar .main_bar {
     background: var(--p-lsfl-pulse);
@@ -2370,9 +2371,14 @@ li:not(.suggested_similar) .similar_votes >span {
 
 #inbox .box.vertical_space .head,
 .forum_post .colhead_dark td {
+    position: relative;
     font-size: 14px;
     line-height: var(--p-lh);
     padding: 6px 5px 7px 5px;}
+
+.forum_post .colhead_dark div[style="float: right;"] input[type="button"] {
+    margin: -3px 0 0 5px;
+    /* outline: 4px solid var(--c-body) !important; */}
 
 .forum_post .colhead_dark {
     overflow: hidden;}
@@ -3378,6 +3384,9 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     padding-right: 20px;
     padding-left: 0;}
 
+
+.forum_post .colhead_dark a[onclick] {
+    z-index: 99;}
 
 
 

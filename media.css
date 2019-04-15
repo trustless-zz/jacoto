@@ -178,9 +178,13 @@ html {
     #quickreplypreview .colhead_dark #barpreview,
     .forum_post .colhead_dark div[style="float: right;"],
     #newthreadpreview .forum_post .colhead_dark #barpreview {
-        width: 18px;
-        height: 18px;
-        font-size: 0;}
+            height: 18px;
+        font-size: 0;
+        min-width: 18px;
+        position: absolute;
+        right: 5px;
+        top: 6px;
+        z-index: 999;}
     #quickreplypreview .colhead_dark span[style="float:left;"],
     .forum_post .colhead_dark div[style="float: left;"],
     .forum_post .colhead_dark div[style="float:left;"],
