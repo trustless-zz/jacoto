@@ -1,5 +1,6 @@
 ﻿:root {
 /** COLORS **/
+    --c-quote-brdr:                     rgba(10, 10, 10, 0.1);
     --c-quote:                          rgb(10, 10, 10, .05);
     --c-txt: 							rgb(50, 50, 50);
     --c-text-s: 						rgb(100, 100, 100);
@@ -54,6 +55,7 @@
     --p-main-brdr:						1px solid var(--c-main-brdr);
     --p-table-brdr: 					1px solid var(--c-table-brdr);
     --p-input-brdr: 					1px solid var(--c-input-brdr);
+    --p-quote-brdr:                     1px solid var(--c-quote-brdr);
     --p-input-shdw: 					inset 1px 1px 2px var(--c-header-shdw);
     --p-expand-hvr: 					linear-gradient(to top, var(--c-b1), var(--c-b00));
     --p-expand-act: 					linear-gradient(to top, var(--c-b1), var(--c-b2));
@@ -417,7 +419,7 @@ pre {
 	border-radius: 0px !important;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-table-brdr);
+    border: var(--p-quote-brdr);
     background-color: var(--c-quote);}
 blockquote,
 pre {
@@ -713,7 +715,8 @@ form[name="filter"],
 #reportsv2 #report_table >.box.pad,
 #inbox #messageform,
 #collections .thin >h2:first-child +.center,
-#collections table.collections_art_display {
+#collections table.collections_art_display,
+#user .box {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -822,6 +825,7 @@ input[type=submit],
 #forums .thin >.box.thin.clear .head.colhead_dark:before,
 #newthreadpreview #pollpreview .head.colhead_dark:before,
 .head[title="Click to expand/collapse"]:before,
+.head[onclick]:before,
 .torrent_details .torrent_table .colhead_dark td:nth-child(1):before,
 .torrent_details #grouplinks a div,
 #torrents .ratings,
@@ -1072,6 +1076,7 @@ input[type=submit]:hover:active,
 #upload #content >div >table[style] span[style="color: yellow;"] {
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
+.sidebar span[style="color:red;font-weight:700;"],
 #reportsv2 font[color="red"],
 #index span[style="color: red;"],
 #upload #content >div >table[style] span[style="color:red;font-weight:700;"] {
@@ -1172,6 +1177,7 @@ input[type=submit]:hover:active,
 #forums .thin >.box.thin.clear .head.colhead_dark:before,
 #newthreadpreview #pollpreview .head.colhead_dark:before,
 .head[title="Click to expand/collapse"]:before,
+.head[onclick]:before,
 #index #recommended .head:before,
 .box.news_post .head:before {
     content: '';
@@ -1183,14 +1189,16 @@ input[type=submit]:hover:active,
     height: 100%;
     opacity: 0;}
 #newthreadpreview #pollpreview .head.colhead_dark,
-.head[title="Click to expand/collapse"] {
+.head[title="Click to expand/collapse"],
+.head[onclick] {
     height: 20px;}
 #forums .thin >.box.thin.clear .head.colhead_dark {
     height: 20px !important;
     padding: 9px 10px!important;}
 #forums .thin >.box.thin.clear .head.colhead_dark strong,
 #newthreadpreview #pollpreview .head.colhead_dark strong,
-.head[title="Click to expand/collapse"] strong {
+.head[title="Click to expand/collapse"] strong,
+.head[onclick] strong {
     cursor: default;
     z-index: 1;
     position: absolute;
@@ -1202,6 +1210,7 @@ input[type=submit]:hover:active,
 #forums .thin >.box.thin.clear .head.colhead_dark:hover:before,
 #newthreadpreview #pollpreview .head.colhead_dark:hover:before,
 .head[title="Click to expand/collapse"]:hover:before,
+.head[onclick]:hover:before,
 #index #recommended .head:hover:before,
 .box.news_post .head:hover:before {
     opacity: 1;}
@@ -1209,6 +1218,7 @@ input[type=submit]:hover:active,
 #newthreadpreview #pollpreview .head.colhead_dark:hover:active:before,
 .torrent_table .colhead_dark td[onclick]:hover:active:before,
 .head[title="Click to expand/collapse"]:hover:active:before,
+.head[onclick]:hover:active:before,
 #index #recommended .head:hover:active:before,
 .box.news_post .head:hover:active:before {
     background: var(--p-expand-act);}
@@ -1274,6 +1284,7 @@ input[type=submit]:hover:active,
 #forums .thin >.box.thin.clear .head.colhead_dark,
 #newthreadpreview #pollpreview .head.colhead_dark,
 .head[title="Click to expand/collapse"],
+.head[onclick],
 .sidebar #freeleech_time_left #progress_bar,
 #forums .forum_post .avatar,
 input[type="number"],
@@ -1979,6 +1990,7 @@ input[type=button],
 input[type=submit],
 .similar_votes a,
 .box_tags .stats.nobullet div a,
+.profile #requests a[href="javascript:Vote(20)"] strong,
 #requests table.border td.nobr:nth-child(2) strong,
 a[href="javascript:Vote(20, 1)"] strong,
 #upload td#image_block a,
@@ -2000,6 +2012,7 @@ a[href="javascript:Vote(20, 1)"] strong,
 #newthreadform #newthreadtext #answer_block,
 #upload td#image_block,
 .box_tags .stats.nobullet div a,
+.profile #requests a[href="javascript:Vote(20)"] strong,
 #requests table.border td.nobr:nth-child(2) strong,
 a[href="javascript:Vote(20, 1)"] strong,
 .forum_post tr.likes >td:first-child,
@@ -2022,6 +2035,7 @@ tr.likes td[id^="likers_"] >strong,
     margin-bottom: 2px;}
 #upload td#image_block a,
 #newthreadform #newthreadtext #answer_block a,
+.profile #requests a[href="javascript:Vote(20)"] strong:before,
 #requests table.border td.nobr:nth-child(2) strong:before,
 a[href="javascript:Vote(20, 1)"] strong:before,
 .box_tags .stats.nobullet div a:before {
@@ -2035,6 +2049,7 @@ button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
 .similar_votes a:hover,
+.profile #requests a[href="javascript:Vote(20)"] strong:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
 a[href="javascript:Vote(20, 1)"] strong:hover,
 .box_tags .stats.nobullet div a:hover,
@@ -2046,6 +2061,7 @@ button:hover:active,
 input[type=button]:hover:active,
 input[type=submit]:hover:active,
 .similar_votes a:hover:active,
+.profile #requests a[href="javascript:Vote(20)"] strong:hover:active,
 #requests table.border td.nobr:nth-child(2) strong:hover:active,
 a[href="javascript:Vote(20, 1)"] strong:hover:active,
 .box_tags .stats.nobullet div a:hover:active,
@@ -2078,7 +2094,8 @@ a[href="javascript:Vote(20, 1)"] strong:hover:active,
 #requests .thin >.center.box.pad a[onclick],
 #newthreadform #newthreadtext td.center a[onclick],
 .linkbox a[onclick^="popup_add"],
-.linkbox a[href="#quickpost"] {
+.linkbox a[href="#quickpost"],
+.sidebar .box_gold a.tooltip {
     cursor: default;}
 /* #upload #releaseinfo .colhead +tr+tr td.label,
 #upload #rlstitle +tr td.label,
@@ -2311,6 +2328,7 @@ input.hidden,
     justify-content: center;}
 .similar_div .head .flright {
     margin: -3px 0 0 0;}
+.profile #requests a[href="javascript:Vote(20)"] strong:before,
 #requests table.border td.nobr:nth-child(2) strong:before,
 a[href="javascript:Vote(20, 1)"] strong:before,
 .box_tags .stats.nobullet div a:nth-child(2):before,
@@ -2346,7 +2364,7 @@ li:not(.suggested_similar) .similar_votes >span {
     left: 6px;
     display: block;
     width: fit-content;
-    z-index: 9;}
+    z-index: 99;}
 #content .sub span {
     width: 100%;
     line-height: 28px;
@@ -2378,10 +2396,15 @@ li:not(.suggested_similar) .similar_votes >span {
     -webkit-clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));
     clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));}
 
+.box_gold #box_gold_scrollbar tr:not(.colhead) td.label {
+    background-color: var(--c-table-brdr);}
+.box_gold #box_gold_scrollbar .colhead,
+.box_requests #requests .colhead_dark,
 #inbox .box.vertical_space .head,
 .forum_post .colhead_dark {
     background: var(--p-post-colhead-bcg);}
-
+.box_gold #box_gold_scrollbar .colhead td,
+.box_requests #requests .colhead_dark td,
 #inbox .box.vertical_space .head,
 .forum_post .colhead_dark td {
     position: relative;
@@ -2568,6 +2591,7 @@ input[type=button]:hover,
 input[type=submit]:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
+.profile #requests a[href="javascript:Vote(20)"] strong:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
 a[href="javascript:Vote(20, 1)"] strong:hover,
 .similar img:hover,
@@ -2887,6 +2911,7 @@ form[name="filter"] h3 {
 #upload #reviews_table input#meta {
     width: 35px;
     margin-bottom: 5px;}
+.box_image_avatar .head,
 #upload #reviews_table p:first-child {
     margin-bottom: 10px;}
 #forums #threadpoll >p:first-child.
@@ -3025,7 +3050,7 @@ div.breadcrumbs,
     top: 5px;
     left: 160px;
     padding: 5px;
-    z-index: 9;
+    z-index: 99;
     -webkit-clip-path: polygon(-5px -5px, -5px -5px, -5px -5px, -5px -5px);
     clip-path: polygon(-5px -5px, -5px -5px, -5px -5px, -5px -5px);}
 .avatar:hover .forumstat {
@@ -3104,8 +3129,7 @@ marquee {
     width: calc(100% - 2px);
     margin: 1px auto 0 auto;
     position: relative;
-    z-index: 9;
-    }
+    z-index: 9;}
 #inbox #messageform +h2 +form,
 #inbox h2 +#messageform,
 #reports .thin >.box.pad,
@@ -3153,8 +3177,10 @@ tr.likes td[id^="likers_"]:hover {
     box-shadow: inherit;
     border: inherit;
     margin: inherit;}
+table.bbcode_table {
+    background-color: inherit;}
 table.bbcode_table td {
-    border: var(--p-table-brdr);}
+    border: var(--p-quote-brdr);}
 #inbox .colhead >td:first-child,
 .bbcode_table_div {
     padding: 5px;}
@@ -3277,12 +3303,17 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #forums .forum_latest >.search.box.pad #otherop,
 #searchthread form.search_form table.layout.border,
 #searchforum form.search_form table.layout.border,
-#forums #newthreadtext {
+#forums #newthreadtext,
+.sidebar .box_badges img,
+.sidebar .box_image_avatar img,
+.sidebar .box_fights_stats img {
     background: none;
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
     margin: 0;}
+.sidebar .box_badges img {
+    margin: 0 2px;}
 
 #searchforum form.search_form table.layout.border tr,
 #searchthread form.search_form table.layout.border tr {
@@ -3421,16 +3452,13 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #reportsv2 #dynamic_form >table.border {
     position: relative;
     border: var(--p-table-brdr);
-    border-collapse: inherit;
     -webkit-box-shadow: var(--p-header-shdw);
-    box-shadow: var(--p-header-shdw);}
+    box-shadow: var(--p-header-shdw);
+    margin-bottom: 36px;}
 #reportsv2 #dynamic_form >table.border:before {
     content: 'Details';
     position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    width: 100%;}
+    margin: 0;}
 #reportsv2 #dynamic_form >table.border tr:first-child td {
     padding-top: 49px;}
 #reportsv2 #dynamic_form >ul:last-of-type {
@@ -3440,7 +3468,7 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #reportsv2 #report_table >input[type="submit"] {
     position: absolute;
     bottom: 11px;
-    left: 10px;}
+    left: 11px;}
 #reportsv2 #dynamic_form >table.border td.label {
     width: 140px;
     padding-bottom: 0;}
@@ -3475,6 +3503,58 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     margin: 10px auto;}
 #inbox tr.unreadpm td:first-child input[type="checkbox"] {
     margin: 3px 3px 3px 2px;}
+
+.profile #community_stats:not([style="display: none;"]) {
+    display: flex !important;}
+.profile #community_stats {
+    flex-flow: row wrap;
+    justify-content: space-between;}
+.profile #community_stats li.icon_stat img {
+    margin-left: -18px;
+    margin-bottom: -2px;}
+.profile #community_stats >ul {
+    list-style: none;
+    display: inline-block;
+    float: left;
+    margin: 0 !important;
+    padding: 0 0 0 18px !important;
+    max-width: calc(25% - 18px);
+    font-size: 13px;
+    line-height: var(--p-lh);}
+.profile #community_stats li.comm_stats_head {
+    font-size: 15px;
+    line-height: var(--p-lh);
+    font-weight: 600;
+    padding-left: 5px;}
+.profile .box_stats {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;}
+.profile .box_stats ul {
+    display: flex;
+    flex-wrap: wrap;}
+
+
+/** Chromium border rendering bug workaround **/
+#forums .forum_post .avatar >div:before {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    border-left: var(--p-main-brdr);
+    border-bottom: var(--p-table-brdr);
+    top: 0;
+    left: -1px;}
+
+#reportsv2 #dynamic_form >table.border {
+    border-collapse: inherit;
+    border-spacing: 0;}
+#reportsv2 #dynamic_form >table.border:before {
+    top: 0;
+    left: 0;
+    width: 100%;}
+/** /Chromium border rendering bug workaround **/
 
 
 
