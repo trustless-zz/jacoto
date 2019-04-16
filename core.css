@@ -451,6 +451,8 @@ pre {
 
 .head strong,
 li.active,
+#user h2 +form#userform .colhead_dark strong,
+#user h2 +form#userform .colhead_dark td,
 #forums td.unread ~td strong,
 #forums td.unread ~td .last_topic,
 #forums td.unread ~td h4.min_padding,
@@ -716,7 +718,8 @@ form[name="filter"],
 #inbox #messageform,
 #collections .thin >h2:first-child +.center,
 #collections table.collections_art_display,
-#user .box {
+#user .box,
+#user h2 +form#userform {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -2167,6 +2170,7 @@ body:not(#upload) #artist_tr + tr td.label,
     margin-bottom: 5px;
     padding: 6px;
     text-align: center;}
+#user h2 +form#userform td.label strong,
 #forums .forum_index strong,
 #upload #content >div >table[style] .colhead strong,
 #requests table.border .colhead_dark strong,
@@ -2943,6 +2947,7 @@ form[name="filter"] h3 {
 #newthreadform #newthreadtext #answer_block br +input,
 #upload td#image_block input[type="text"]:not(#screen0) {
     margin-top: 8px;}
+#user h2 +form#userform td.label,
 #upload td.label {
     background-color: var(--c-tgroup);}
 input#file[disabled] {
@@ -3470,8 +3475,10 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     position: absolute;
     bottom: 11px;
     left: 11px;}
+#user h2 +form#userform td.label,
 #reportsv2 #dynamic_form >table.border td.label {
-    width: 140px;
+    width: 140px;}
+#reportsv2 #dynamic_form >table.border td.label {
     padding-bottom: 0;}
 #reportsv2 #dynamic_form >table.border td {
     vertical-align: top;}
