@@ -3293,6 +3293,7 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     position: relative;}
 #searchforum form.search_form,
 #searchthread form.search_form {
+    margin-bottom: 10px
     margin-top: -39px;
     padding: 48px 10px 10px 10px;
     background-color: var(--c-box);
@@ -3583,7 +3584,7 @@ span.size5 img {
 
 
 .linkbox {
-    line-height: 1em;}
+    /*line-height: 1em;*/}
 .linkbox br:last-child {
     display: none;}
 /*****************************************************************************************************/
