@@ -280,6 +280,8 @@ html {
     font-size: 14px;
     scroll-behavior: smooth;}
 body {
+    overflow-x: visible !important;
+    /* #user hovering over some objects causes [style="overflow-x: hidden;"] to appear for some reason */
     color: var(--c-txt);
     background-color: var(--c-body);
     background-size: 50px 50px;
@@ -719,7 +721,10 @@ form[name="filter"],
 #collections .thin >h2:first-child +.center,
 #collections table.collections_art_display,
 #user .box,
-#user h2 +form#userform {
+#user h2 +form#userform,
+.thin.torrent_history table.border,
+#torrents .thin >.header:first-child +table,
+#bookmarks #collage_table {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -791,7 +796,9 @@ a:hover .ratings {
 .forum_post tr.likes >td:first-child a,
 .bbbutt li a,
 #newthreadform #newthreadtext td.center a[onclick],
-.torrent_details .torrent_table div[id^="history_"] table.border tr:not(.colhead) {
+.torrent_details .torrent_table div[id^="history_"] table.border tr:not(.colhead),
+#user a#toggle_css_gallery,
+#user .thin >h2 +form#userform a[onclick] {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -1079,6 +1086,7 @@ input[type=submit]:hover:active,
 #upload #content >div >table[style] span[style="color: yellow;"] {
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
+.invalid, .warning, .error,
 .sidebar span[style="color:red;font-weight:700;"],
 #reportsv2 font[color="red"],
 #index span[style="color: red;"],
@@ -1354,6 +1362,9 @@ input[type="number"],
     opacity: 0;}
 #recommended #vanityhouse a:first-child:hover {
     color: var(--c-txt);}
+#bookmarks #collage_table img {
+    border: var(--p-img-anchor-brdr);}
+#bookmarks #collage_table img:hover,
 .similar img:hover,
 #recommended #vanityhouse a:first-child:hover img {
     border: var(--p-img-anchor-brdr-hvr);}
@@ -1672,6 +1683,7 @@ a .error_message:hover:active {
 
 .torrent_table {
     width: 100%;}
+#bookmarks #torrent_table .group.discog,
 .torrent_table .group.rowa {
     background-color: var(--c-body);}
 .torrent_table .group.rowb {
@@ -1778,6 +1790,7 @@ input,
 select,
 textarea,
 .similar img,
+#bookmarks #collage_table img,
 img[title="Downloaded"],
 img[title="Uploaded"],
 img[title="Leechers"],
@@ -1910,6 +1923,7 @@ td.label {
 
 #searchforum input[type="search"],
 #searchthread input[type="search"],
+input[type="password"],
 input[type="number"],
 input[type="text"],
 select {
@@ -1925,6 +1939,7 @@ select {
     height: 24px;}
 #searchforum input[type="search"],
 #searchthread input[type="search"],
+input[type="password"],
 input[type="number"],
 input[type="text"] {
     padding: 0 4px;}
@@ -1965,6 +1980,8 @@ textarea:hover,
 textarea:focus,
 select >option:nth-child(even),
 select:hover,
+input[type="password"]:hover,
+input[type="password"]:focus,
 input[type="number"]:hover,
 input[type="number"]:focus,
 input[type="text"]:hover,
@@ -2088,7 +2105,10 @@ a[href="javascript:Vote(20, 1)"] strong:hover:active,
 .filter_torrents.advanced .flright:before {
     content: '(View Less)';
     position: absolute;
-    bottom: 1066px;}
+    bottom: 1080px;}
+#platcheckbox td[colspan="5"] strong {
+    color: var(--c-txt);
+    font-weight: 600;}
 #newthreadform #newthreadtext #answer_block a,
 #upload td#image_block a,
 .torrent_details .group_torrent td:first-child >a,
@@ -2098,7 +2118,9 @@ a[href="javascript:Vote(20, 1)"] strong:hover:active,
 #newthreadform #newthreadtext td.center a[onclick],
 .linkbox a[onclick^="popup_add"],
 .linkbox a[href="#quickpost"],
-.sidebar .box_gold a.tooltip {
+.sidebar .box_gold a.tooltip,
+#user a#toggle_css_gallery,
+#user .thin >h2 +form#userform a[onclick] {
     cursor: default;}
 /* #upload #releaseinfo .colhead +tr+tr td.label,
 #upload #rlstitle +tr td.label,
@@ -2116,9 +2138,11 @@ body:not(#upload) #artist_tr + tr td.label,
 .requests_outer_table >tbody >tr >td:nth-child(1),
 .filter_torrents.advanced tr:first-child >td.label {
     vertical-align: top;} */
+#user .thin >h2 +form#userform tr:not(.colhead_dark) td,
 #upload input#getYT {
     vertical-align: top;}
-#torrents .filter_torrents #platcheckbox td[colspan="5"] {
+#platcheckbox td[colspan="5"] {
+    padding: 4px 5px !important;
     background-color: var(--c-edition);}
 .filter_torrents.advanced #taglist {
     font-size: 13px;
@@ -2428,6 +2452,7 @@ li:not(.suggested_similar) .similar_votes >span {
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
     width: calc(100% - 40px);
     text-align: left;}
+#user input#TitlePreview,
 #inbox .box.vertical_space .head a[onclick],
 .forum_post .colhead_dark a[onclick],
 #quickreplypreview .colhead_dark #barpreview >a,
@@ -2585,11 +2610,13 @@ textarea {
 textarea:focus {
     outline-width: 1px !important;}
 
+#bookmarks #collage_table td img,
 .similar img,
 .screenshots img,
 .sidebar img {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
+#bookmarks #collage_table td img:hover,
 button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
@@ -2768,6 +2795,7 @@ img[src="static/common/thumbsup.png"],
     margin-bottom: -4px;}
 
 /** table padding with no container (this is horrible) **/
+#user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:first-child,
 #reportsv2 #dynamic_form >table.border td:first-child,
 #upload #dynamic_form + table.border.slice td:first-child,
 #upload #releaseinfo tr:not(.colhead) td:first-child,
@@ -2776,6 +2804,7 @@ img[src="static/common/thumbsup.png"],
 .thin >#request_form >table td:first-child,
 #requests .main_column >table:first-child td:first-child {
     padding-left: 10px;}
+#user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:last-child,
 #reportsv2 #dynamic_form >table.border td:last-child,
 #upload #dynamic_form + table.border.slice td:last-child,
 #upload #releaseinfo tr:not(.colhead) td:last-child,
@@ -2784,6 +2813,7 @@ img[src="static/common/thumbsup.png"],
 .thin >#request_form >table td:last-child,
 #requests .main_column >table:first-child td:last-child {
     padding-right: 10px;}
+#user .thin >h2 +form#userform >table.border .colhead_dark +tr td,
 #reportsv2 #dynamic_form >table.border tr:first-child td,
 #upload #dynamic_form + table.border.slice tr:first-child td,
 #upload #releaseinfo tr:nth-child(2) td,
@@ -2793,6 +2823,7 @@ img[src="static/common/thumbsup.png"],
 .thin >#request_form >table tr:nth-child(2) td,
 #requests .main_column >table:first-child tr:first-child td {
     padding-top: 10px;}
+#user .thin >h2 +form#userform >table.border tr:last-child td,
 #upload #dynamic_form + table.border.slice tr:last-child td,
 #upload #releaseinfo tr:last-child td,
 #upload #groupinfo tr:last-child td,
@@ -2800,14 +2831,14 @@ img[src="static/common/thumbsup.png"],
 .thin >#request_form >table tr:last-child td,
 #requests .main_column >table:first-child tr:last-child td {
     padding-bottom: 10px;}
-
+#user .thin >h2 +form#userform >table.border .colhead_dark +tr td.label,
 #reportsv2 #dynamic_form >table.border tr:last-child td,
 #upload #dynamic_form + table.border.slice tr:first-child td.label,
 #upload #releaseinfo tr:nth-child(2) td.label,
 #upload #groupinfo tr:nth-child(2) td.label,
 #upload #groupinfo .colhead +tr td.label,
 #upload #torrent_properties tr:nth-child(2) td.label,
-.thin >#request_form >table tr:nth-child(2)  td.label,
+.thin >#request_form >table tr:nth-child(2) td.label,
 #requests .main_column >table:first-child tr:first-child td.label {
     padding-top: 12px;}
 
@@ -2865,6 +2896,10 @@ form[name="filter"] h3 {
 #requests table input#amount_box {
     width: 110px;}
 
+#torrents .thin >.header:first-child +table,
+.thin.torrent_history table.border,
+#collections .thin >h2:first-child +.center,
+#user .thin >h2 +form#userform,
 .thin >#request_form {
     margin-top: 15px;}
 #upload input#remaster_year,
@@ -2905,7 +2940,9 @@ form[name="filter"] h3 {
 #upload #reviews_table input#metauri,
 .thin >#request_form textarea[name="description"],
 #upload textarea#release_desc,
-#upload textarea#album_desc {
+#upload textarea#album_desc,
+#user input[type="password"],
+#user input#vpnip {
     width: 100%;}
 #upload #weblinks tr:nth-child(1) td:nth-child(3),
 #upload #reviews_table td:first-child {
@@ -3144,6 +3181,7 @@ marquee {
 #reports .thin >.box.pad,
 #forums #reply_box .box.pad {
     padding-top: 48px;}
+#user input#park_message,
 #forums #reply_box #quickpost {
     width: 100% !important;}
 
@@ -3326,6 +3364,9 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     width: 50%;
     display: inline-block;
     white-space: nowrap;}
+#user input#irckey,
+#user input#email,
+#user input#avatar,
 #reportsv2 input[type="text"],
 #searchforum input[type="search"],
 #searchforum form.search_form table.layout.border tr:last-child,
@@ -3385,7 +3426,7 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     padding: 0;
     margin-bottom: 15px;}
     
-#forums .forum_post td.body img[src*="static/common/smileys/"] {
+.forum_post td.body img[src*="static/common/smileys/"] {
     margin: 0;
     padding: 0;
     -webkit-box-shadow: none;
@@ -3565,10 +3606,73 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 /** /Chromium border rendering bug workaround **/
 
 
-
+#user input#styleurl {
+    width: calc(100% - 350px);}
+#user input[type="text"][name="custom_censor_content"] {
+    width: calc(100% - 225px);
+    margin: 5px 0 2px 0;}
+#user .thin >h2 +form#userform tr:not(.colhead_dark) td {
+    padding: 6px 5px;}
+#user .thin >h2 +form#userform ul {
+    list-style: none;
+    padding: 0 5px;
+    margin: 0;}
 .forum_post .colhead_dark a[onclick] {
     z-index: 99;}
+#user input#customtitle {
+    width: calc(100% - 82px);
+    margin-right: 5px;}
 
+.ui-widget-content {
+    border-radius: 0;
+    color: var(--c-txt);
+    background-color: var(--c-box);
+    border: var(--p-main-brdr);}
+.ui-dialog {
+    padding: 0px;
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+	font-family: OpenSans, Helvetica, Arial, sans-serif;}
+.ui-dialog .ui-dialog-titlebar {
+    padding: 9px 10px;}
+.ui-widget-header {
+    background: var(--p-head-grdnt);
+    border: none;
+    color: var(--c-txt);
+    border-radius: 0px;
+    height: 20px;
+    font-size: 20px;
+    font-weight: 600;}
+
+#bookmarks #collage_table tbody {
+    display: flex;
+    flex-flow: wrap;
+    padding: 48px 10px 0 10px;
+    position: relative;}
+#bookmarks #collage_table tr {
+    width: 100%;
+    display: flex;}
+#bookmarks #collage_table td img {
+    width: 100%;
+    height: auto;}
+#bookmarks #collage_table td {
+    display: flex;
+    width: calc(20% - 8px);
+    align-self: center;
+    margin-bottom: 10px;}
+#bookmarks #collage_table td:not(:last-child) {
+    margin-right: 10px;}
+#bookmarks #collage_table tbody:before {
+    content: 'Collage';
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    width: calc(100% - 20px);
+    height: 20px;
+    padding: 9px 10px;
+    background: var(--p-head-grdnt);
+    font-weight: 600;}
 
 
 
