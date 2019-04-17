@@ -1,17 +1,17 @@
 ﻿@media (min-width: 801px) {
 html {
     overflow-y: scroll;}
-#torrentbrowse #hyphen {
+#torrent_table #hyphen {
     display: none;}
-#torrentbrowse #groupplatform {
+#torrent_table #groupplatform {
     width: 34px;
     height: 34px;
     position: absolute;
     left: -36px;
     top: calc(50% - 17px);}
-#torrentbrowse td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) {
+#torrent_table td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) {
     background: none;}
-#torrentbrowse #groupplatform a {
+#torrent_table #groupplatform a {
     width: 100%;
     height: 100%;
     display: block;

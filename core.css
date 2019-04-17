@@ -82,6 +82,7 @@
     --p-btn-hvr:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-btn-b2) 100%);
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
     --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
+    --p-fade-2:                         linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
     --p-lh: 							calc(100% + 5px);
     --p-dot3:							-.02142857142em;}
 
@@ -353,7 +354,7 @@ html {
 .sidebar ul {
     list-style:none;}
 
-#torrentbrowse #groupplatform,
+#torrent_table #groupplatform,
 #inbox .box.vertical_space .head a[onclick],
 .forum_post .colhead_dark a[onclick],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
@@ -798,7 +799,8 @@ a:hover .ratings {
 #newthreadform #newthreadtext td.center a[onclick],
 .torrent_details .torrent_table div[id^="history_"] table.border tr:not(.colhead),
 #user a#toggle_css_gallery,
-#user .thin >h2 +form#userform a[onclick] {
+#user .thin >h2 +form#userform a[onclick],
+#bookmarks #torrent_table td[colspan="3"] >span:first-child a {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -1288,7 +1290,8 @@ input[type=submit]:hover:active,
     background: var(--p-head-grdnt);
     margin: 0 0 15px 0;}
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"],
-.torrent_table #displayname,
+#torrent_table #displayname,
+#torrent_table .group.discog td[colspan="5"],
 #quickreplypreview .colhead_dark span[style="float:left;"],
 .forum_post .colhead_dark div[style="float: left;"],
 .forum_post .colhead_dark div[style="float:left;"],
@@ -1683,7 +1686,7 @@ a .error_message:hover:active {
 
 .torrent_table {
     width: 100%;}
-#bookmarks #torrent_table .group.discog,
+#torrent_table .group.discog,
 .torrent_table .group.rowa {
     background-color: var(--c-body);}
 .torrent_table .group.rowb {
@@ -1694,13 +1697,16 @@ a .error_message:hover:active {
     vertical-align: middle;}
 .torrent_table td:not(#displayname):not([colspan="4"]) {
     white-space: nowrap;}
+#bookmarks #torrent_table td[colspan="3"],
 #torrents .torrent_details .torrent_table .pad.hidden td,
 #torrents .group_torrent td:first-child {
     white-space: normal;}
+#bookmarks #torrent_table td[colspan="3"] >a,
 #torrents .group_torrent td:first-child >a {
     font-size: 13px;
     line-height: var(--p-lh);
     margin-left: 2px;}
+#torrent_table .group.discog td[colspan="5"] >span:first-child,
 .torrent_table #displayname {
     font-size: 15px;
     line-height: var(--p-lh);}
@@ -1714,16 +1720,21 @@ a .error_message:hover:active {
     width: 20px;
     background-size: contain;
     cursor: default;}
+#bookmarks #torrent_table tr.group_torrent td:not(.edition_info) {
+    padding: 4px 5px;}
+#bookmarks #torrent_table tr.group_torrent td:not(.edition_info):not(:first-child),
 .torrent_details .torrent_table tbody[id*="edition_"] .group_torrent td,
 .torrent_table tr.group_torrent[class*="edition_"] >td {
     padding: 4px 5px;
     font-size: 13px;
     line-height: var(--p-lh);}
+#bookmarks #torrent_table td[colspan="3"] >span:first-child,
 .torrent_details .group_torrent td:first-child span,
 .torrent_table td[colspan="4"] >span:first-child {
     font-size: 0;
     display: inline-block;
     vertical-align: top;}
+#bookmarks #torrent_table td[colspan="3"] >span:first-child a,
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child >a {
     margin-right: 3px;
@@ -1810,7 +1821,8 @@ img[title="Snatches"],
 .box.news_post >.pad img,
 #reports .thin >h3,
 #reportsv2 #report_table >h3,
-#reportsv2 #dynamic_form >table.border:before {
+#reportsv2 #dynamic_form >table.border:before,
+#bookmarks #collage_table {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -1886,6 +1898,7 @@ img[title="Snatches"],
 .torrent_table #downvote {
     color: var(--c-off);}
 .tags {
+    white-space: normal;
     width: 100%;
     font-size: 12px;
     line-height: var(--p-lh);}
@@ -2037,7 +2050,9 @@ a[href="javascript:Vote(20, 1)"] strong,
 a[href="javascript:Vote(20, 1)"] strong,
 .forum_post tr.likes >td:first-child,
 tr.likes td[id^="likers_"] >strong,
-#inbox #searchbox {
+#inbox #searchbox,
+#bookmarks #torrent_table .colhead_dark td[width="70%"] /* hiding nonfunctional anchor */,
+#bookmarks #torrent_table td[colspan="3"] {
     font-size: 0;
     line-height: 0;}
 .box_tags .stats.nobullet div a:nth-child(1) {
@@ -2204,7 +2219,8 @@ body:not(#upload) #artist_tr + tr td.label,
 #searchthread table.layout.border strong,
 #forums .forum_mythreads tr:not(.colhead) strong,
 #forums .forum_editsubs tr:not(.colhead) strong,
-#forums .forum_subscriptions tr:not(.colhead) strong {
+#forums .forum_subscriptions tr:not(.colhead) strong,
+#torrent_table .group.discog td[colspan="5"] >span:first-child strong {
     font-weight: normal;}
 
 .torrent_details .torrent_table .colhead_dark td:nth-child(1):after,
@@ -3050,6 +3066,7 @@ div.breadcrumbs,
 .forum_post .body,
 #forums .thin table {
 	width: 100%;}
+#bookmarks span.time,
 #forums .forum_index.forum_latest tr span[style="float:right;"],
 #forums .forum_mythreads tr span[style="float:right;"],
 #forums .last_poster {
@@ -3123,6 +3140,7 @@ tr.likes td[id^="likers_"]:hover {
     background-position: right center;
     background-size: 0 0;
     opacity: .65;}
+#bookmarks .edition_info:before,
 #newthreadpreview div#pollpreview:after,
 #newthreadpreview .avatar >div:first-child:after,
 #quickreplypreview .avatar >div:first-child:after,
@@ -3647,8 +3665,9 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #bookmarks #collage_table tbody {
     display: flex;
     flex-flow: wrap;
-    padding: 48px 10px 0 10px;
-    position: relative;}
+    padding: 10px 10px 0 10px;
+    max-height: 2000px;
+    overflow-x: auto;}
 #bookmarks #collage_table tr {
     width: 100%;
     display: flex;}
@@ -3662,7 +3681,7 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     margin-bottom: 10px;}
 #bookmarks #collage_table td:not(:last-child) {
     margin-right: 10px;}
-#bookmarks #collage_table tbody:before {
+#bookmarks #collage_table:before {
     content: 'Collage';
     position: absolute;
     top: 0;
@@ -3673,6 +3692,40 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
+#bookmarks #collage_table {
+    display: block;
+    padding-top: 38px;
+    position: relative;}
+#bookmarks #collage_table tbody:after,
+#bookmarks #collage_table tbody:before {
+    content: '';
+    position: absolute;
+    height: 10px;
+    left: 0;
+    background: var(--p-fade-2);
+    width: calc(100% - 20px);}
+#bookmarks #collage_table tbody:before {
+    top: 38px;}
+#bookmarks #collage_table tbody:after {
+    transform: scaleY(-1);
+    bottom: 0;}
+#bookmarks #torrent_table .colhead_dark td[width="70%"] {
+    width: auto !important;}
+#bookmarks #torrent_table td.center.cats_col {
+    width: 28px;}
+#bookmarks #torrent_table tr.colhead_dark td:nth-child(n+4),
+#collections #torrent_table >tbody >tr.colhead >td:nth-child(n+4) {
+    width: 18px;}
+#torrent_table .group.discog td[colspan="5"] >span +br,
+#bookmarks #torrent_table .colhead_dark td[width="70%"] strong {
+    font-size: 20px;
+    line-height: 20px;}
+#bookmarks #torrent_table .discog span[style="float:left;"] >br:first-child,
+#bookmarks #torrent_table .colhead_dark td[width="70%"] a {
+    display: none;}
+#torrent_table .group.discog td[colspan="5"] >span:last-child {
+    clear: right;
+    margin-bottom: -5px;}
 
 
 
