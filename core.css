@@ -3016,6 +3016,7 @@ input#file {
     padding-bottom: 2px !important;}
 
 #footer {
+    clear: both;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
