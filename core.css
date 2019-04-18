@@ -477,9 +477,9 @@ td.unread_locked_sticky,
 tr.unreadpm td:first-child {
     border-left: var(--p-unread-stripe);}
 .forum_index,
-.forum_mythreads,
-.forum_editsubs,
-.forum_subscriptions,
+.forum_mythreads >table,
+.forum_editsubs >table,
+.forum_subscriptions >table,
 #inbox #messageform >input:first-child +table {
     overflow: hidden;}
 
@@ -716,6 +716,7 @@ form[name="filter"],
 #inbox .thin >.box.pad #messageform,
 #inbox #searchbox,
 #forums .thin >.box.thin.clear,
+#inbox .box.vertical_space +h2 +form,
 #inbox #messageform +h2 +form,
 #reportsv2 #report_table >.box.pad,
 #inbox #messageform,
@@ -2775,8 +2776,8 @@ img[src="static/common/thumbsup.png"],
 #upload td.label,
 .filter_torrents td.label,
 .thin >#request_form td.label,
-.requests_outer_table table.border td.label,
-.requests_outer_table #otherop td.label {
+#requests .requests_outer_table table.border td.label,
+#requests .requests_outer_table #otherop td.label {
     width: 115px;}
 .requests_outer_table input[type="text"] {
     width: calc(100% - 10px);}
@@ -2859,6 +2860,7 @@ img[src="static/common/thumbsup.png"],
     padding-top: 12px;}
 
 /** convert ... to head **/
+#inbox .box.vertical_space +h2,
 #inbox #messageform +h2,
 #inbox .box.vertical_space +h2,
 #reports .thin >h3,
@@ -3190,6 +3192,7 @@ marquee {
     margin: 1px auto 0 auto;
     position: relative;
     z-index: 9;}
+#inbox .box.vertical_space +h2 +form,
 #inbox #messageform +h2 +form,
 #inbox h2 +#messageform,
 #reports .thin >.box.pad,
@@ -3471,6 +3474,7 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #inbox #searchbox label,
 #inbox #searchbox input:not([type="text"]) {
     margin-top: 5px;}
+#inbox .box.vertical_space +h2 +form>.box.pad,
 #inbox #messageform +h2 +form >.box.pad,
 #inbox h2 +#messageform >.box.pad,
 #inbox #searchbox {
@@ -3493,6 +3497,7 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     margin: 8px 0 10px 5px;}
 #inbox #messageform table +input {
     margin-left: 10px;}
+#inbox .box.vertical_space +h2,
 #inbox #messageform +h2,
 #inbox .box.vertical_space +h2 {
     position: relative;
@@ -3504,12 +3509,16 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     border: var(--p-table-brdr); 
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
+#inbox .box.vertical_space +h2 +form >.box.pad tbody,
 #inbox #messageform +h2 +form >.box.pad tbody {
     display: flex;}
+#inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child),
 #inbox #messageform +h2 +form >.box.pad tr:not(:last-child) {
     width: calc(100% - 180px);}
+#inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child) td,
 #inbox #messageform +h2 +form >.box.pad tr:not(:last-child) td {
     vertical-align: bottom;}
+#inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child) td:not(.label),
 #inbox #messageform +h2 +form >.box.pad tr:not(:last-child) td:not(.label) {
     padding-right: 20px;
     padding-left: 0;}
@@ -3726,7 +3735,8 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #torrent_table .group.discog td[colspan="5"] >span:last-child {
     clear: right;
     margin-bottom: -5px;}
-
+#requests td.label {
+    width: 170px;}
 
 
 .forum_post .user_title img {
