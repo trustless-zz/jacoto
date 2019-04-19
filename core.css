@@ -1311,7 +1311,8 @@ input[type=submit]:hover:active,
 #forums .forum_post .avatar,
 input[type="number"],
 .forum_post .colhead_dark a[onclick],
-#reportsv2 #report_table {
+#reportsv2 #report_table,
+#forums .forums_search .search_form {
     position: relative;}
 .sidebar #freeleech_time_left #progress_bar .main_bar {
     background: var(--p-lsfl-pulse);
@@ -1942,8 +1943,9 @@ td.label {
 .filter_torrents td {
     padding: 2px 5px 5px 5px;}
 
-#searchforum input[type="search"],
-#searchthread input[type="search"],
+/* #searchforum input[type="search"],
+#searchthread input[type="search"], */
+input[type="search"],
 input[type="password"],
 input[type="number"],
 input[type="text"],
@@ -1958,14 +1960,16 @@ select {
     font-family: OpenSans, Helvetica, Arial, sans-serif;}
 select {
     height: 24px;}
-#searchforum input[type="search"],
-#searchthread input[type="search"],
+/* #searchforum input[type="search"],
+#searchthread input[type="search"], */
+input[type="search"],
 input[type="password"],
 input[type="number"],
 input[type="text"] {
     padding: 0 4px;}
-#searchforum input[type="search"],
-#searchthread input[type="search"] {
+/* #searchforum input[type="search"],
+#searchthread input[type="search"] */
+input[type="search"] {
     /* height: 26px; */}
 input[type="search"]:focus {
     color: var(--c-anchor-hvr) !important;
@@ -2008,10 +2012,12 @@ input[type="number"]:focus,
 input[type="text"]:hover,
 input[disabled],
 input[type="text"]:focus,
-#searchforum input[type="search"]:hover,
+/* #searchforum input[type="search"]:hover,
 #searchforum input[type="search"]:focus,
 #searchthread input[type="search"]:hover,
-#searchthread input[type="search"]:focus {
+#searchthread input[type="search"]:focus */
+input[type="search"]:hover,
+input[type="search"]:focus {
     background-color: var(--c-edition);}
 textarea:focus,
 select:focus,
@@ -2828,6 +2834,7 @@ img[src="static/common/thumbsup.png"],
     margin-bottom: -4px;}
 
 /** table padding with no container (this is horrible) **/
+#forums .forums_search .search_form >table.layout.border >tbody >tr >td:first-child,
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:first-child,
 #reportsv2 #dynamic_form >table.border td:first-child,
 #upload #dynamic_form + table.border.slice td:first-child,
@@ -2837,6 +2844,7 @@ img[src="static/common/thumbsup.png"],
 .thin >#request_form >table td:first-child,
 #requests .main_column >table:first-child td:first-child {
     padding-left: 10px;}
+#forums .forums_search .search_form >table.layout.border >tbody >tr >td:last-child,
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:last-child,
 #reportsv2 #dynamic_form >table.border td:last-child,
 #upload #dynamic_form + table.border.slice td:last-child,
@@ -2856,6 +2864,7 @@ img[src="static/common/thumbsup.png"],
 .thin >#request_form >table tr:nth-child(2) td,
 #requests .main_column >table:first-child tr:first-child td {
     padding-top: 10px;}
+#forums .forums_search .search_form >table.layout.border >tbody >tr:last-child >td,
 #user .thin >h2 +form#userform >table.border tr:last-child td,
 #upload #dynamic_form + table.border.slice tr:last-child td,
 #upload #releaseinfo tr:last-child td,
@@ -3219,6 +3228,7 @@ marquee {
 #forums #reply_box,
 #reportsv2 #report_table >.box.pad {
     margin-top: -39px;}
+#forums .forums_search .search_form >table.layout.border >tbody >tr:first-child >td,
 #reports .thin >.box.pad,
 #forums #reply_box .box.pad {
     padding-top: 48px;}
@@ -3393,7 +3403,8 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 .sidebar .box_badges img,
 .sidebar .box_image_avatar img,
 .sidebar .box_fights_stats img,
-#torrents #requests.request_table #requests_list {
+#torrents #requests.request_table #requests_list,
+#forums #forum_search_cat_list {
     background: none;
     border: none;
     -webkit-box-shadow: none;
@@ -3411,10 +3422,12 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #user input#email,
 #user input#avatar,
 #reportsv2 input[type="text"],
-#searchforum input[type="search"],
+/* #searchforum input[type="search"],
+#searchthread input[type="search"], */
+input[type="search"],
 #searchforum form.search_form table.layout.border tr:last-child,
-#searchthread input[type="search"],
-#searchthread form.search_form table.layout.border tr:last-child {
+#searchthread form.search_form table.layout.border tr:last-child,
+#forums .forums_search .search_form input[type="text"]:not([class="date_picker"]) {
     width: 100%;}
 
 #reports .thin >h2.center {
@@ -3437,6 +3450,7 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     width: 30%;
     left: calc(-70% + 260px);
     position: relative;}
+#forums .forums_search .search_form,
 #forums #newthreadpreview +.box.pad,
 #forums #newthreadpreview {
     margin-top: 15px;}
@@ -3790,7 +3804,74 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     padding: 0;
     top: 0;
     left: 0;}
+#forums .forums_search .search_form:before {
+    content: 'Filter';
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    font-size: 20px;
+    width: calc(100% - 22px);
+    height: 20px;
+    padding: 9px 10px;
+    background: var(--p-head-grdnt);
+    font-weight: 600;}
+#torrentbrowse .filter_torrents h3 a:before {
+    content: 'switch to ';}
+input[class="date_picker"] {
+    width: 85px;}
+#forums .forums_search .search_form input[class="date_picker"] {
+    margin-right: 5px;}
 
+.xdsoft_datetimepicker {
+    background-color: var(--c-box);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    border: var(--p-main-brdr);
+    color: var(--c-txt);
+	font-family: OpenSans, Helvetica, Arial, sans-serif;}
+.xdsoft_datetimepicker .xdsoft_label {
+    background-color: var(--c-box);}
+.xdsoft_datetimepicker .xdsoft_next,
+.xdsoft_datetimepicker .xdsoft_prev {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    background-size: 20px 24px !important;
+    background-repeat: no-repeat;
+    background-position: center;}
+.xdsoft_datetimepicker .xdsoft_next {
+    transform: scaleX(-1);}
+.xdsoft_datetimepicker .xdsoft_calendar td,
+.xdsoft_datetimepicker .xdsoft_calendar th {
+    border: var(--p-table-brdr);
+    background: var(--c-input);
+    color: var(--c-txt);}
+.xdsoft_datetimepicker .xdsoft_calendar th {
+    color: var(--c-text-s);
+    background-color: var(--c-tor-row-hvr);}
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select {
+    border: var(--p-main-brdr);
+    background-color: var(--c-box);}
+.xdsoft_scrollbar > .xdsoft_scroller {
+    background-color: var(--c-sticky-id-brdr) !important;}
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:nth-child(even) {
+    background-color: var(--c-tgroup);}
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select {
+    border: var(--p-main-brdr);
+    background-color: var(--c-box);}
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default,
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div.xdsoft_current,
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current {
+    background: var(--c-b1);
+    box-shadow: inset var(--p-main-shdw);
+    color: var(--c-anchor-hvr);}
+.xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover,
+.xdsoft_datetimepicker .xdsoft_calendar td:hover,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
+    color: var(--c-txt) !important;
+    background: var(--c-b3) !important;
+    box-shadow: none !important;}
 
 
 .forum_post .user_title img {

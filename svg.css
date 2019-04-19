@@ -348,9 +348,12 @@ a[title="Remove"] {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 22"><rect y="3.75" width="16" height="4" fill="rgb(163,0,0)"/><polygon points="0 22 1.061 22 8 15.061 14.939 22 16 22 16 7.25 0 7.25 0 22"/><rect width="16" height="4.25"/></svg>');}
 
 /** staff pick cycle **/
+.xdsoft_datetimepicker .xdsoft_next,
+.xdsoft_datetimepicker .xdsoft_prev,
 .prev,
 .next {
     background-image: url('icons/dark/prev.svg');}
+.xdsoft_datetimepicker .xdsoft_next,
 .next {
     transform: scaleX(-1);}
 
