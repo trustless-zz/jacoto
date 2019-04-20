@@ -2403,7 +2403,9 @@ input.hidden,
     margin: 10px 0;
     font-weight: 600;
     font-size: 19px;
-    border-bottom: var(--p-table-brdr);}
+    border-bottom: var(--p-table-brdr);
+    text-align: left;
+    padding-left: 10px;}
 .similar_div .similar li {
     align-self: baseline;}
 .similar li span.similar_votes {
