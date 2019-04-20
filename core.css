@@ -27,7 +27,7 @@
     --c-b00: 							rgba(255, 255, 255, 0);
     --c-anchor: 						rgb(11, 122, 118);						/* #bd002c */
     --c-anchor-hvr: 					rgb(0, 0, 0);							/* #053d3b #630017 */
-    --c-anchor-hvr-bcg: 				rgba(18, 201, 194, .1);
+    --c-anchor-hvr-bcg: 				rgb(204, 237, 236);                     /* 10,3rd */  /*rgba(18, 201, 194, .1);*/
 	--c-header-shdw: 					rgba(0,0,0,.1);
     --c-main-shdw:						rgba(0,0,0,.2);
     --c-img-bcg-anchor: 				rgb(230, 242, 242);
@@ -782,6 +782,8 @@ a {
     border: 0;
     background-color: transparent;}
 a:hover,
+.forum_post td.body a:hover img,
+.box.news_post >.pad a:hover img,
 .forum_post .colhead_dark a.username:hover,
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
@@ -3346,14 +3348,19 @@ span.size10 {
 
 .twitter-tweet,
 .forum_post td.body iframe,
-.forum_post td.body img,
 .box.news_post >.pad iframe,
+.forum_post td.body img,
 .box.news_post >.pad img {
     max-width: calc(100% - 10px) !important;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
     margin: 0 5px;
     padding: 5px;}
+.forum_post td.body img,
+.box.news_post >.pad img {
+    max-width: 100% !important;
+    margin: -4px 0; /* overlapping randomly displaced anchor, top for symmetry */
+    padding: 7px;}
 .twitter_post h4 {
     display: none;}
 .twitter_post {
