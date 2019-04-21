@@ -1110,6 +1110,7 @@ input[type=submit]:hover:active,
 #upload #content >div >table[style] span[style="color: yellow;"] {
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
+#rules .thin >.box.pad strong[style="color:red;"],
 .invalid, .warning, .error,
 .sidebar span[style="color:red;font-weight:700;"],
 #reportsv2 font[color="red"],
@@ -1328,7 +1329,8 @@ input[type="number"],
 .forum_post .colhead_dark a[onclick],
 #reportsv2 #report_table,
 #forums .forums_search .search_form,
-#user .thin >h2:first-child +form[method="post"] {
+#user .thin >h2:first-child +form[method="post"],
+#collections table.collections_art_display {
     position: relative;}
 .sidebar #freeleech_time_left #progress_bar .main_bar {
     background: var(--p-lsfl-pulse);
@@ -1951,6 +1953,7 @@ form[name="filter"] {
 #forums td.label,
 td.label {
     text-align: right;}
+#collections .thin >h2:first-child +.center td,
 #forums .forum_latest >.search.box.pad td,
 #searchforum form.search_form table.layout.border td,
 #searchthread form.search_form table.layout.border td,
@@ -2261,7 +2264,8 @@ body:not(#upload) #artist_tr + tr td.label,
 #forums .forum_subscriptions tr:not(.colhead) strong,
 #torrent_table .group.discog td[colspan="5"] >span:first-child strong,
 #forums .forums_search .search_form td strong,
-#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table td.label strong {
+#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table td.label strong,
+#collections .thin >h2:first-child +.center td.label strong {
     font-weight: normal;}
 
 .torrent_details .torrent_table .colhead_dark td:nth-child(1):after,
@@ -2860,6 +2864,7 @@ img[src="static/common/thumbsup.png"],
     margin-bottom: -4px;}
 
 /** table padding with no container (this is horrible) **/
+#collections table.collections_art_display tr td:first-child,
 #forums .forums_search .search_form >table.layout.border >tbody >tr >td:first-child,
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:first-child,
 #reportsv2 #dynamic_form >table.border td:first-child,
@@ -2870,6 +2875,7 @@ img[src="static/common/thumbsup.png"],
 .thin >#request_form >table td:first-child,
 #requests .main_column >table:first-child td:first-child {
     padding-left: 10px;}
+#collections table.collections_art_display tr td:last-child,
 #forums .forums_search .search_form >table.layout.border >tbody >tr >td:last-child,
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:last-child,
 #reportsv2 #dynamic_form >table.border td:last-child,
@@ -2889,6 +2895,7 @@ img[src="static/common/thumbsup.png"],
 #upload #torrent_properties tr:nth-child(2) td,
 .thin >#request_form >table tr:nth-child(2) td {
     padding-top: 10px;}
+#collections table.collections_art_display tr:nth-last-child(2) td,
 #forums .forums_search .search_form >table.layout.border >tbody >tr:last-child >td,
 #user .thin >h2 +form#userform >table.border tr:last-child td,
 #upload #dynamic_form + table.border.slice tr:last-child td,
@@ -3020,7 +3027,8 @@ input[name="toyear"],
 #upload textarea#album_desc,
 #user input[type="password"],
 #user input#vpnip,
-#torrents #requests.request_table #requests_list {
+#torrents #requests.request_table #requests_list,
+#collections .thin >h2:first-child +.center input[type="text"] {
     width: 100%;}
 #upload #weblinks tr:nth-child(1) td:nth-child(3),
 #upload #reviews_table td:first-child {
@@ -3259,6 +3267,7 @@ marquee {
 #forums #reply_box,
 #reportsv2 #report_table >.box.pad {
     margin-top: -39px;}
+#collections table.collections_art_display tr:first-child td,
 #requests .main_column >table:first-child tr:first-child td,
 #forums .forums_search .search_form >table.layout.border >tbody >tr:first-child >td,
 #reports .thin >.box.pad,
@@ -3556,7 +3565,8 @@ input[type="search"],
 #inbox #messageform +h2 +form >.box.pad,
 #inbox h2 +#messageform >.box.pad,
 #inbox #searchbox,
-#rules .thin >form.search_form {
+#rules .thin >form.search_form,
+#collections .thin >h2:first-child +.center {
     padding: 48px 10px 10px 10px;
     position: relative;}
 #rules .thin >form.search_form:before,
@@ -3727,6 +3737,19 @@ input[type="search"],
     background: var(--p-head-grdnt);
     border-top: var(--p-main-brdr);
     border-right: var(--p-main-brdr);}
+#collections table.collections_art_display:before { /* also pseudo head */
+    content: 'Display';
+    width: calc(100% - 21px);
+    position: absolute;
+    top: 0;
+    left: 1px;
+    height: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 9px 10px;
+    background: var(--p-head-grdnt);
+    border-top: var(--p-main-brdr);
+    border-right: var(--p-main-brdr);}
 /** /Chromium border rendering bug workaround **/
 
 
@@ -3865,7 +3888,9 @@ input[type="search"],
     padding: 0;
     top: 0;
     left: 0;}
+#collections .thin >h2:first-child +.center:before,
 #forums .forums_search .search_form:before {
+    text-align: left;
     content: 'Filter';
     position: absolute;
     left: 1px;
@@ -3876,6 +3901,10 @@ input[type="search"],
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
+#collections .thin >h2:first-child +.center:before {
+    left: 0;
+    top: 0;
+    width: calc(100% - 20px);}
 #torrentbrowse .filter_torrents h3 a:before {
     content: 'switch to ';}
 input[class="date_picker"] {
@@ -4007,12 +4036,20 @@ input[class="date_picker"] {
     bottom: -39px;
     width: calc(100% - 22px);
     left: 1px;}
-#rules .thin ul {
+#rules .thin >#actual_rules >div ul,
+#rules .thin >.before_rules ul {
+    list-style: none;
     padding: 0;}
 #rules .thin >.before_rules ul ul {
     padding: 0 0 0 30px;}
 #chat .thin ul {
     margin: 0;}
+#rules .thin >h2:first-child +.box.pad ul,
+#rules .thin >h3:first-child +.box.pad ul {
+    padding: 0 0 0 5px;
+    list-style: inside;}
+#rules #content #actual_rules li {
+    padding: 4px 0;}
 
 #rules .thin > .before_rules:before {
     content: 'Contents';
@@ -4030,12 +4067,11 @@ abbr {
     font-weight: 600;}
 #rules .thin >.before_rules li ul ul li strong {
     font-weight: normal;}
-#rules .thin li {
-    list-style: none;}
 #rules .thin >#actual_rules .before_rules h2 {
     margin: 0;
     width: calc(100% - 20px);}
-
+#collections .thin >h2:first-child +.center td.label {
+    width: 75px;}
 
 
 
@@ -4094,3 +4130,4 @@ span.size5 img {
      float: left;
      width: 25%;}
 
+    
