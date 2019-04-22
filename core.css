@@ -2289,6 +2289,9 @@ body:not(#upload) #artist_tr + tr td.label,
     margin-bottom: 5px;
     padding: 6px;
     text-align: center;}
+.linkbox .selected a {
+    color: var(--c-txt) !important;
+    pointer-events: none;}
 #user h2 +form#userform td.label strong,
 #forums .forum_index strong,
 #upload #content >div >table[style] .colhead strong,
