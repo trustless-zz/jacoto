@@ -24,6 +24,7 @@
     --c-b2: 							rgb(81, 204, 165);
     --c-b3: 							rgb(142, 225, 222);                     /*~45%*/
     --c-b4: 							rgb(170, 226, 209);                     /*~45%*/
+    --c-hovereffect: 					rgba(255, 255, 255, .8);
     --c-b00: 							rgba(255, 255, 255, 0);
     --c-anchor: 						rgb(11, 122, 118);						/* #bd002c */
     --c-anchor-hvr: 					rgb(0, 0, 0);							/* #053d3b #630017 */
@@ -75,7 +76,7 @@
     --p-colhead-tr-bcg-act:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
     --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
     --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b00) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
-    --p-show-hide-brdr-shdw: 			inset -1px 0 0px var(--c-table-brdr);
+/*    --p-show-hide-brdr-shdw: 			inset -1px 0 0px var(--c-table-brdr); */
     --p-sticky-brdr: 					1px solid var(--c-b1);
     --p-edition-hvr: 					linear-gradient(to top,var(--c-b3),var(--c-edition));
     --p-edition-act: 					linear-gradient(to top,var(--c-b3),var(--c-b4));
@@ -873,7 +874,8 @@ textarea,
 .forum_post .comment_rating,
 .avatar .forumstat,
 div,
-#forums .forum_post .avatar >div:first-child:after {
+#forums .forum_post .avatar >div:first-child:after,
+.hovereffect h2 {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1396,9 +1398,13 @@ input[type="number"],
     opacity: 0;}
 #recommended #vanityhouse a:first-child:hover {
     color: var(--c-txt);}
-#bookmarks #collage_table img {
+.hovereffect,
+#bookmarks #collage_table img,
+#collections #coverart.box li a {
     border: var(--p-img-anchor-brdr);}
+.hovereffect:hover,
 #bookmarks #collage_table img:hover,
+#collections #coverart.box li a:hover,
 .similar img:hover,
 #recommended #vanityhouse a:first-child:hover img {
     border: var(--p-img-anchor-brdr-hvr);}
@@ -1728,15 +1734,19 @@ a .error_message:hover:active {
     vertical-align: middle;}
 .torrent_table td:not(#displayname):not([colspan="4"]) {
     white-space: nowrap;}
+#collections #torrent_table .group.discog td[colspan="5"] >strong,
+#collections .group_torrent td span,
 #bookmarks #torrent_table td[colspan="3"],
 #torrents .torrent_details .torrent_table .pad.hidden td,
 #torrents .group_torrent td:first-child {
     white-space: normal;}
+#collections #torrent_table .group_torrent td[colspan="3"] >a,
 #bookmarks #torrent_table td[colspan="3"] >a,
 #torrents .group_torrent td:first-child >a {
     font-size: 13px;
     line-height: var(--p-lh);
     margin-left: 2px;}
+#collections #torrent_table .group.discog td[colspan="5"] >strong,
 #torrent_table .group.discog td[colspan="5"] >span:first-child,
 .torrent_table #displayname {
     font-size: 15px;
@@ -1751,14 +1761,17 @@ a .error_message:hover:active {
     width: 20px;
     background-size: contain;
     cursor: default;}
+#collections #torrent_table .group_torrent >td:not(.edition_info),
 #bookmarks #torrent_table tr.group_torrent td:not(.edition_info) {
     padding: 4px 5px;}
+#collections #torrent_table .group_torrent >td:not(.edition_info):not(:first-child),
 #bookmarks #torrent_table tr.group_torrent td:not(.edition_info):not(:first-child),
 .torrent_details .torrent_table tbody[id*="edition_"] .group_torrent td,
 .torrent_table tr.group_torrent[class*="edition_"] >td {
     padding: 4px 5px;
     font-size: 13px;
     line-height: var(--p-lh);}
+#collections #torrent_table .group_torrent td[colspan="3"] >span:first-child,
 #bookmarks #torrent_table td[colspan="3"] >span:first-child,
 .torrent_details .group_torrent td:first-child span,
 .torrent_table td[colspan="4"] >span:first-child {
@@ -1774,13 +1787,17 @@ a .error_message:hover:active {
     transform: rotate(-90deg);}
 .torrent_table .hide_torrents .show_torrents_link {
     transform: rotate(0deg);}
+#collections .group.discog td.collicon:nth-child(1),
 .torrent_table td.center:first-child {
     width: 20px;
     overflow: hidden;
     position: relative;
-    box-shadow: var(--p-show-hide-brdr-shdw);}
+    border-right: var(--p-table-brdr);
+    /* box-shadow: var(--p-show-hide-brdr-shdw); */}
+#collections .group.discog td.collicon:hover:nth-child(1),
 .torrent_table td.center:hover:first-child {
     background-color: var(--c-colhead-click);}
+#collections .group.discog td.collicon:hover:active:nth-child(1),
 .torrent_table td.center:hover:active:first-child {
     background-color: var(--c-colhead-act);}
 .torrent_table .show_torrents_link:before {
@@ -1853,7 +1870,13 @@ img[title="Snatches"],
 #reports .thin >h3,
 #reportsv2 #report_table >h3,
 #reportsv2 #dynamic_form >table.border:before,
-#bookmarks #collage_table {
+#bookmarks #collage_table,
+.hovereffect,
+.hovereffect h2,
+#collections #coverart.box li,
+#collections #coverart.box li a,
+#collections #coverart.box a div,
+#collections #coverart.box >ul:not(.hidden) {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -2101,7 +2124,8 @@ a[href="javascript:Vote(20, 1)"] strong,
 tr.likes td[id^="likers_"] >strong,
 #inbox #searchbox,
 #bookmarks #torrent_table .colhead_dark td[width="70%"] /* hiding nonfunctional anchor */,
-#bookmarks #torrent_table td[colspan="3"] {
+#bookmarks #torrent_table td[colspan="3"],
+#collections #torrent_table td[colspan="3"] {
     font-size: 0;
     line-height: 0;}
 .box_tags .stats.nobullet div a:nth-child(1) {
@@ -2691,10 +2715,12 @@ textarea {
 textarea:focus {
     outline-width: 1px !important;}
 
+#collections #coverart.box li a,
 #bookmarks #collage_table td img,
 .similar img,
 .screenshots img,
-.sidebar img {
+.sidebar img,
+.hovereffect {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 #bookmarks #collage_table td img:hover,
@@ -2711,7 +2737,9 @@ a[href="javascript:Vote(20, 1)"] strong:hover,
 .screenshots img:hover,
 .box_albumart img:hover,
 .sidebar img:hover,
-.userratingdiv img {
+.userratingdiv img,
+.hovereffect:hover,
+#collections #coverart.box li a:hover {
     -webkit-box-shadow: none;
     box-shadow: none;}
 
@@ -2878,7 +2906,6 @@ img[src="static/common/thumbsup.png"],
     margin-bottom: -4px;}
 
 /** table padding with no container (this is horrible) **/
-#collections table.collections_art_display tr td:first-child,
 #forums .forums_search .search_form >table.layout.border >tbody >tr >td:first-child,
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:first-child,
 #reportsv2 #dynamic_form >table.border td:first-child,
@@ -2889,7 +2916,6 @@ img[src="static/common/thumbsup.png"],
 .thin >#request_form >table td:first-child,
 #requests .main_column >table:first-child td:first-child {
     padding-left: 10px;}
-#collections table.collections_art_display tr td:last-child,
 #forums .forums_search .search_form >table.layout.border >tbody >tr >td:last-child,
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:last-child,
 #reportsv2 #dynamic_form >table.border td:last-child,
@@ -2909,7 +2935,6 @@ img[src="static/common/thumbsup.png"],
 #upload #torrent_properties tr:nth-child(2) td,
 .thin >#request_form >table tr:nth-child(2) td {
     padding-top: 10px;}
-#collections table.collections_art_display tr:nth-last-child(2) td,
 #forums .forums_search .search_form >table.layout.border >tbody >tr:last-child >td,
 #user .thin >h2 +form#userform >table.border tr:last-child td,
 #upload #dynamic_form + table.border.slice tr:last-child td,
@@ -3222,6 +3247,7 @@ tr.likes td[id^="likers_"]:hover {
     background-position: right center;
     background-size: 0 0;
     opacity: .65;}
+#collections .edition_info:before,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:before,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:after,
 #bookmarks .edition_info:before,
@@ -3283,7 +3309,6 @@ marquee {
     margin-top: -39px;}
 #reportsv2 #report_table >.box.pad,
 #reports .thin >.box.pad:first-of-type,
-#collections table.collections_art_display tr:first-child td,
 #requests .main_column >table:first-child tr:first-child td,
 #forums .forums_search .search_form >table.layout.border >tbody >tr:first-child >td,
 #reports .thin >.box.pad,
@@ -3579,7 +3604,8 @@ input[type="search"],
 #inbox h2 +#messageform >.box.pad,
 #inbox #searchbox,
 #rules .thin >form.search_form,
-#collections .thin >h2:first-child +.center {
+#collections .thin >h2:first-child +.center,
+#collections #coverart.box {
     padding: 48px 10px 10px 10px;
     position: relative;}
 #rules .thin >form.search_form:before,
@@ -3851,13 +3877,16 @@ input[type="search"],
 #bookmarks #collage_table tbody:after {
     transform: scaleY(-1);
     bottom: 0;}
+#collections #torrent_table .colhead td[width="70%"],
 #bookmarks #torrent_table .colhead_dark td[width="70%"] {
     width: auto !important;}
+#collections .group.discog td.collicon:nth-child(2),
 #bookmarks #torrent_table td.center.cats_col {
     width: 28px;}
-#bookmarks #torrent_table tr.colhead_dark td:nth-child(n+4),
+#bookmarks #torrent_table .colhead_dark td:nth-child(n+4),
 #collections #torrent_table >tbody >tr.colhead >td:nth-child(n+4) {
     width: 18px;}
+#collections #torrent_table .colhead td[width="70%"] strong,
 #torrent_table .group.discog td[colspan="5"] >span +br,
 #bookmarks #torrent_table .colhead_dark td[width="70%"] strong {
     font-size: 20px;
@@ -4049,6 +4078,7 @@ input[class="date_picker"] {
     bottom: -39px;
     width: calc(100% - 22px);
     left: 1px;}
+#collections #coverart.box ul,
 #rules .thin >#actual_rules >div ul,
 #rules .thin >.before_rules ul {
     list-style: none;
@@ -4075,9 +4105,10 @@ input[class="date_picker"] {
 
 abbr {
     cursor: help;}
-
 #rules .thin >.before_rules li ul li strong {
     font-weight: 600;}
+#collections #torrent_table .group.discog td[colspan="5"] >strong,
+#collections #torrent_table .colhead strong,
 #rules .thin >.before_rules li ul ul li strong {
     font-weight: normal;}
 #rules .thin >#actual_rules .before_rules h2 {
@@ -4085,7 +4116,8 @@ abbr {
     width: calc(100% - 20px);}
 #collections .thin >h2:first-child +.center td.label {
     width: 75px;}
-
+#requests table.border .colhead_dark td:nth-last-child(3) strong {
+    font-size: 16px;}
 
 
 
@@ -4124,23 +4156,163 @@ span.size5 img {
 *****************************************/
 #inbox table {
      border-collapse:collapse;}
-
-
 #inbox table td[width="40%"] {
      width: 60% !important;}
-
 #inbox .time {
      white-space: nowrap;}
-
 #inbox tr.unreadpm td,
 #inbox tr.unreadpm td a {
      font-weight: 600;}
-
 #inbox .comp td {
      padding: 0;}
-
 #inbox .userclasses {
      float: left;
      width: 25%;}
 
-    
+
+
+
+
+/*****************************************
+***************BUNDLES********************
+*****************************************/
+
+/* 2,13953488372093 */
+/*** Hover Effect ***/
+
+.hovereffect {
+     width: 100%;
+     height: 100%;
+     float: left;
+     overflow: hidden;
+     position: relative;
+     text-align: center;
+     cursor: default;}
+
+.hovereffect .img_responsive {
+     display: block;
+     position: relative;
+     width: 100%;
+     height: 100%;
+     background-size: contain;}
+
+
+.hovereffect .overlay {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     overflow: hidden;
+     top: 0;
+     bottom: 0;
+     left: 0;}
+
+.hovereffect h2 {
+    cursor: pointer;
+    font-weight: 600;
+     text-align: left;
+     position: relative;
+     font-size: 19px;
+     line-height: var(--p-lh);
+    height: 100%;
+    width: 100%;
+     padding: 5px;
+     border: none;
+     background: var(--c-hovereffect);
+     opacity: 0;
+     filter: alpha(opacity=0);
+     margin: 0;}
+
+.hovereffect:hover h2 {
+     opacity: 1;
+     visibility:visible}
+
+.hovereffect h2 div {
+    font-size: 12px;
+    line-height: var(--p-lh);}
+.hovereffect h2 >div {
+    text-align: right;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;}
+
+.overlay div {
+     padding-top: 5px;}
+
+.overlay span {
+    line-height: 14px;
+    font-style: normal;}
+
+
+#pageslinksdiv .invisible {
+     visibility: visible !important;}
+
+#sort_table {
+     border: 0px!important;
+     margin-top: -15px;
+     margin-bottom: 10px;
+     position: relative;
+     z-index:9999999}
+
+#sort_table select {
+     min-width: auto;}
+
+#sort_table input[type="submit"] {
+     margin: 0;}
+
+
+
+/* 460/215 */
+/********/
+.collections_art_display .collection_art {
+    height: calc(306px / 2.13953488372093);
+    width: 306px;
+    background-size: 306px calc(306px / 2.13953488372093);}
+.collections_art_display td {
+    border: none;
+    padding: 0px;
+    width: calc(25% - 7.5px);}
+
+#collections table.collections_art_display tr {
+    display: flex;
+    justify-content: space-between;}
+#collections table.collections_art_display tbody {
+    margin: 48px 10px 10px 10px;
+    display: block;}
+.collections_art_display tr:not(:first-child) td {
+    margin-top: 10px;}
+
+#collections #coverart.box:before {
+    content: 'Collage';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    width: calc(100% - 20px);
+    height: 20px;
+    padding: 9px 10px;
+    background: var(--p-head-grdnt);
+    font-weight: 600;}
+
+#collections #coverart.box a {
+    display: block;
+    height: 100%;
+    width: 100%;}
+#collections #coverart.box a div {
+    width: 100% !important;
+    height: 100%;
+    text-align: center;}
+#collections #coverart.box li {
+    padding: 0;
+    margin: 5px 0;
+    height: fit-content;
+    width: calc(20% - 8px);
+    align-self: center;}
+#collections #coverart.box >ul:not(.hidden) {
+    display: inline-flex;
+    flex-flow: wrap;
+    width: calc(100% + 1px);
+    justify-content: space-between;
+    padding: 5px 10px;}
+#collections #coverart.box img {
+    width: 100%;
+    height: auto;}

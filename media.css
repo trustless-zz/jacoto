@@ -9,6 +9,7 @@ html {
     position: absolute;
     left: -36px;
     top: calc(50% - 17px);}
+#collections .group.discog td.collicon:nth-child(2) >div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #torrent_table td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) {
     background: none;}
 #torrent_table #groupplatform a {
