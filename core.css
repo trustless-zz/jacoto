@@ -84,7 +84,7 @@
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
     --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
     --p-fade-2:                         linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
-    --p-lh: 							calc(100% + 5px);
+    --p-lh: 							1.357142857142857em; /*calc(100% + 5px);*/
     --p-dot3:							-.02142857142em;}
 
 .amigacd32 {background: url(caticons/amigacd32_dark.svg);}
@@ -417,7 +417,11 @@ td, th, tr {
 
 td.label {
     vertical-align: top;
-    padding-top: 7px;}
+    padding: 8px 5px 9px 5px;}
+td >select {
+    margin: 1px 0;}
+td >input#file {
+    margin: 3px 0;}
 
 .spoilerbox,
 blockquote,
@@ -1953,6 +1957,8 @@ form[name="filter"] {
 #forums td.label,
 td.label {
     text-align: right;}
+
+/* filter/search td */
 #collections .thin >h2:first-child +.center td,
 #forums .forum_latest >.search.box.pad td,
 #searchforum form.search_form table.layout.border td,
@@ -1960,7 +1966,15 @@ td.label {
 #requests .sidebar .box_votes table td,
 .requests_outer_table td,
 .filter_torrents td {
-    padding: 2px 5px 5px 5px;}
+    padding: 2px 5px 4px 5px;}
+#collections .thin >h2:first-child +.center td.label,
+#forums .forum_latest >.search.box.pad td.label,
+#searchforum form.search_form table.layout.border td.label,
+#searchthread form.search_form table.layout.border td.label,
+#requests .sidebar .box_votes table td.label,
+.requests_outer_table td.label,
+.filter_torrents td.label {
+    padding: 5px 5px 8px 5px;}
 
 /* #searchforum input[type="search"],
 #searchthread input[type="search"], */
@@ -2913,7 +2927,7 @@ img[src="static/common/thumbsup.png"],
 #upload #groupinfo .colhead +tr td.label,
 #upload #torrent_properties tr:nth-child(2) td.label,
 .thin >#request_form >table tr:nth-child(2) td.label {
-    padding-top: 12px;}
+    padding-top: 13px;}
 
 /** convert ... to head **/
 #rules .thin >#actual_rules >h3,
@@ -3267,6 +3281,8 @@ marquee {
 #forums #reply_box,
 #reportsv2 #report_table >.box.pad {
     margin-top: -39px;}
+#reportsv2 #report_table >.box.pad,
+#reports .thin >.box.pad:first-of-type,
 #collections table.collections_art_display tr:first-child td,
 #requests .main_column >table:first-child tr:first-child td,
 #forums .forums_search .search_form >table.layout.border >tbody >tr:first-child >td,
@@ -3486,9 +3502,6 @@ input[type="search"],
 #reportsv2 #report_table >h3,
 #reports .thin >h3 {
     margin-top: 16px;}
-#reportsv2 #report_table >.box.pad,
-#reports .thin >.box.pad:first-of-type {
-    padding-top: 38px;}
 
 #forums .forum_latest >h2:first-child {
     margin-bottom: 15px;}
@@ -3701,7 +3714,7 @@ input[type="search"],
     flex-wrap: wrap;}
 
 
-/** Chromium border rendering bug workaround **/
+/** Chromium table border rendering bug workaround **/
 #forums .forum_post .avatar >div:before {
     content: '';
     position: absolute;
@@ -3738,7 +3751,7 @@ input[type="search"],
     border-top: var(--p-main-brdr);
     border-right: var(--p-main-brdr);}
 #collections table.collections_art_display:before { /* also pseudo head */
-    content: 'Display';
+    content: 'Collections';
     width: calc(100% - 21px);
     position: absolute;
     top: 0;
@@ -3750,7 +3763,7 @@ input[type="search"],
     background: var(--p-head-grdnt);
     border-top: var(--p-main-brdr);
     border-right: var(--p-main-brdr);}
-/** /Chromium border rendering bug workaround **/
+/** /Chromium table border rendering bug workaround **/
 
 
 #user input#styleurl {
@@ -3759,7 +3772,7 @@ input[type="search"],
     width: calc(100% - 225px);
     margin: 5px 0 2px 0;}
 #user .thin >h2 +form#userform tr:not(.colhead_dark) td {
-    padding: 6px 5px;}
+    /*padding: 6px 5px;*/}
 #user .thin >h2 +form#userform ul {
     list-style: none;
     padding: 0 5px;
