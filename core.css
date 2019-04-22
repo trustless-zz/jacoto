@@ -3604,8 +3604,7 @@ input[type="search"],
 #inbox h2 +#messageform >.box.pad,
 #inbox #searchbox,
 #rules .thin >form.search_form,
-#collections .thin >h2:first-child +.center,
-#collections #coverart.box {
+#collections .thin >h2:first-child +.center {
     padding: 48px 10px 10px 10px;
     position: relative;}
 #rules .thin >form.search_form:before,
@@ -3860,6 +3859,7 @@ input[type="search"],
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
+#collections #coverart.box,
 #bookmarks #collage_table {
     display: block;
     padding-top: 38px;
@@ -4308,7 +4308,7 @@ span.size5 img {
     width: calc(20% - 8px);
     align-self: center;}
 #collections #coverart.box >ul:not(.hidden) {
-    display: inline-flex;
+    display: flex;
     flex-flow: wrap;
     width: calc(100% + 1px);
     justify-content: space-between;
