@@ -133,7 +133,8 @@ a[title="Original Group"]:hover,
 #menu a:hover,
 ul:not(.highlighted) li.active a,
 #userinfo_minor a:not(.highlight):hover,
-#requests table.border a[href^="upload.php"]:hover {
+#requests table.border a[href^="upload.php"]:hover,
+#collections .sidebar .box.box_comment a[href^="reports.php?action=report"]:hover {
     -webkit-filter: brightness(0);
     filter: brightness(0);}
 
@@ -306,6 +307,7 @@ a[title="Use a FL Token"] {
 
 /** report **/
 /* anchor */
+#collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
 #newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1),

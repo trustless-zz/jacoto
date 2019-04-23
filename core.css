@@ -365,6 +365,7 @@ ul {
 .forum_post .colhead_dark a[onclick],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
+#collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
 #newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1),
 .torrent_table .addbookmark,
 .torrent_table .removebookmark,
@@ -402,6 +403,8 @@ li:first-of-type {
     padding-top: 0px;}
 li {
     padding: 2px 0;}
+li:last-of-type {
+    padding-bottom: 0px;}
 table {
     background-color: var(--c-box);
     border: 0;
@@ -442,10 +445,8 @@ pre {
     max-height: 2000px;
     overflow: auto;}
 pre {
-    
     overflow: auto;
     white-space: pre-wrap;}
-
 
 .sub {
     visibility: hidden;}
@@ -542,16 +543,19 @@ tr.unreadpm td:first-child {
 #index #freeleech .group_torrent >span:not(:first-child) {
     padding: 0 2px;}
 
+#collections .sidebar .box.box_comment .head,
 li:not(.suggested_similar) .similar_votes >a:nth-child(2),
 .tags,
 #index #freeleech .group_torrent >span:first-child,
 #stats_ratio,
 #nav_useredit {
     order: 1;}
+#collections .sidebar .box.box_comment .pad,
 .rating_container:nth-child(1),
 #index #freeleech .group_torrent span.tor_size,
 #nav_donate {
     order: 2;}
+#collections .sidebar .box.box_comment .subhead,
 li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 .rating_container:nth-child(2),
 #index #freeleech .group_torrent >a,
@@ -825,7 +829,8 @@ a:hover .ratings,
 #user .thin >h2 +form#userform a[onclick],
 #bookmarks #torrent_table td[colspan="3"] >span:first-child a,
 #torrents #requests.request_table .colhead a,
-#forums #forum_search_cat_list td.forum_cat a {
+#forums #forum_search_cat_list td.forum_cat a,
+#collections .sidebar .box.box_comment a[href^="reports.php?action=report"] {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -952,6 +957,7 @@ a[title="Edit"],
 a[title="Remove"],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
+#collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
 #newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1),
 #inbox .box.vertical_space .head a[onclick],
 .forum_post .colhead_dark a[onclick],
@@ -1033,7 +1039,8 @@ a[title="Remove"],
 #header .clan_trophy a,
 .user_online,
 .user_offline,
-#rules .thin >form.search_form span#Index {
+#rules .thin >form.search_form span#Index,
+#collections .sidebar .box_addtorrent span:last-child {
     display: block;}
 
 #stats_seeding:hover:active,
@@ -2530,6 +2537,7 @@ li:not(.suggested_similar) .similar_votes >span {
 
 .box_gold #box_gold_scrollbar tr:not(.colhead) td.label {
     background-color: var(--c-body);}
+#collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
 .forum_post .colhead_dark {
     background: var(--p-post-colhead-bcg);}
@@ -2537,6 +2545,7 @@ li:not(.suggested_similar) .similar_votes >span {
 .box_requests #requests .colhead_dark,
 #torrents #requests.request_table #requests_list tr:first-child {
     background: var(--p-subcolhead);}
+#collections .sidebar .box.box_comment .head,
 .box_gold #box_gold_scrollbar .colhead td,
 .box_requests #requests .colhead_dark td,
 #inbox .box.vertical_space .head,
@@ -3086,6 +3095,7 @@ input[name="toyear"],
 .box.pad >p:first-child,
 #upload textarea#album_desc + p {
     margin-top: 0;}
+#collections .sidebar .box_addtorrent input[value="+"],
 #newthreadform #newthreadtext #answer_block a,
 #upload td#image_block a,
 #upload input[type="button"],
@@ -3328,6 +3338,7 @@ tr.likes td[id^="likers_"] >strong {
     width: 27px;
     display: inline-block;
     vertical-align: bottom;}
+#collections .sidebar .box_addtorrent span:last-child,
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table p,
 .sidebar #polcont .pad li:not(.graph):not(:first-child),
 #upload p.min_padding,
@@ -3499,12 +3510,15 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 .sidebar .box_image_avatar img,
 .sidebar .box_fights_stats img,
 #torrents #requests.request_table #requests_list,
-#forums #forum_search_cat_list {
+#forums #forum_search_cat_list,
+#collections .sidebar .box.box_comment +.box.pad {
     background: none;
     border: none;
     -webkit-box-shadow: none;
     box-shadow: none;
     margin: 0;}
+#collections .sidebar .box.box_comment +.box.pad {
+    margin-bottom: 15px;}
 .sidebar .box_badges img {
     margin: 0 2px;}
 
@@ -3903,6 +3917,8 @@ input[type="search"],
 #requests td.label {
     width: 170px;}
 
+#collections .sidebar form#quickpostform.pad,
+#collections .sidebar .box.box_comment +.box.pad,
 #torrents #requests.request_table tr:not(.colhead) td {
     padding: 0;}
 #torrents #requests.request_table #requests_list tr:first-child td.label {
@@ -4319,3 +4335,37 @@ span.size5 img {
 #collections #coverart.box img {
     width: 100%;
     height: auto;}
+#collections .sidebar .pad {
+    padding: 10px 0 0 0;}
+#collections .sidebar ul {
+    margin: 0;
+    padding: 0 !important;}
+#collections .sidebar .box_addtorrent .head,
+#collections .sidebar .box_tags ol {
+    margin-bottom: 10px;}
+#collections .sidebar .box.box_comment .subhead {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: var(--p-lh);
+    text-align: right;}
+#collections .sidebar ol {
+    margin: 0;
+    padding: 0 0 0 16px !important;}
+#collections .box.box_info.box_stats_collage_torrents ul {
+    margin-top: 10px;}
+#collections .sidebar .box_addtorrent .subhead {
+    line-height: 0;
+    font-size: 0;
+    text-align: center;}
+#collections .sidebar .box_addtorrent .subhead a {
+    line-height: var(--p-lh);
+    font-size: 14px;
+    cursor: default;
+    background-color: transparent;}
+#collections .sidebar .box_addtorrent input[name="url"] {
+    width: calc(100% - 39px);}
+#collections .sidebar .box.box_comment a[href^="reports.php?action=report"] {
+    float: right;}
+#collections .sidebar .box.box_comment +.box.pad {
+    font-weight: bold;
+    text-align: center;}
