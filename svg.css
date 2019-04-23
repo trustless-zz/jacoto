@@ -134,7 +134,8 @@ a[title="Original Group"]:hover,
 ul:not(.highlighted) li.active a,
 #userinfo_minor a:not(.highlight):hover,
 #requests table.border a[href^="upload.php"]:hover,
-#collections .sidebar .box.box_comment a[href^="reports.php?action=report"]:hover {
+#collections .sidebar .box.box_comment a[href^="reports.php?action=report"]:hover,
+.last_read:hover {
     -webkit-filter: brightness(0);
     filter: brightness(0);}
 
@@ -379,6 +380,11 @@ img[title="ThumbsDown "],
     background-image: url('icons/dark/thumbsdown_simple.svg');}
 #thumbsdown img:hover {
     background: url('icons/dark/thumbsdown_simple.svg') var(--c-anchor-hvr-bcg);}
+
+/** jump to last-read **/
+.last_read {
+   background-image: url('icons/dark/last_read.svg');}
+
 
 /* background-image: url('data:image/svg+xml;utf8,');} */
 

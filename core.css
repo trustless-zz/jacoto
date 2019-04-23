@@ -76,6 +76,8 @@
     --p-colhead-tr-bcg-act:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
     --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
     --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b00) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
+    --p-unread-brdr:                    1px solid var(--c-b3);
+    --p-sticky-brdr:                    1px solid var(--c-input-brdr);
 /*    --p-show-hide-brdr-shdw: 			inset -1px 0 0px var(--c-table-brdr); */
     --p-sticky-brdr: 					1px solid var(--c-b1);
     --p-edition-hvr: 					linear-gradient(to top,var(--c-b3),var(--c-edition));
@@ -656,7 +658,8 @@ img[title="Gold"],
 #forums .forum_subscriptions tr:not(.colhead) td:first-child,
 .forum_post tr.likes >td:first-child a,
 .bbbutt li a,
-tr.likes td[id^="likers_"] >strong {
+tr.likes td[id^="likers_"] >strong,
+.last_read {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -801,7 +804,7 @@ a:hover .ratings,
 #user .thin >h2 a.flright:hover {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
-#recommended #vanityhouse a:first-child,
+
 .torrent_table .addbookmark,
 .torrent_table .removebookmark,
 .torrent_table td[colspan="4"] >span:first-child >a,
@@ -847,7 +850,6 @@ img,
 #userinfo_stats #connectable span.stat >span:after,
 .box.news_post .head:before,
 #index #recommended .head:before,
-#recommended #vanityhouse a:first-child:before,
 .torrent_table .show_torrents_link,
 .torrent_table td.center:first-child,
 .torrent_table .group,
@@ -963,7 +965,8 @@ a[title="Remove"],
 .forum_post .colhead_dark a[onclick],
 #requests table.border a[href^="upload.php"],
 #requests_donate img,
-#requests .main_column >table:first-child img[title="Gold"] {
+#requests .main_column >table:first-child img[title="Gold"],
+.last_read {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
@@ -1056,7 +1059,6 @@ a[title="Remove"],
 #nav_donate:hover:active,
 .box.news_post .head:hover:active:before,
 #index #recommended .head:hover:active:before,
-#recommended #vanityhouse a:first-child:hover:active:before,
 .autocomplete_list li:hover:active,
 .torrent_table td.center:hover:active:first-child,
 .colhead_dark a:hover:active,
@@ -1367,58 +1369,48 @@ input[type="number"],
     margin: 5px auto -10px auto;
     width: max-content;}
 
-#recommended #vanityhouse {
-    position: relative;
-    z-index: 1;}
+#recommended #vanityhouse tbody {
+    display: block;
+    padding: 5px 10px;}
+#recommended #vanityhouse tr {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-between;}
 #recommended #vanityhouse td {
-    border: var(--p-table-brdr);
+    display: block;
+    padding: 0;
+    width: calc(25% - 7.5px);
+    margin: 5px 0;
+    align-self: flex-end;
     text-align: center;
-    width: 25%;
-    padding: 6px;
-    overflow: hidden;
-    position: relative;
-    background-color: var(--c-img-bcg-anchor);
-    z-index: -2;}
+    font-size: 13px;
+    line-height: var(--p-lh);}
 #recommended #vanityhouse img {
-    max-width: calc(100% - 6px);
+    width: 100%;
     height: auto;
     border: var(--p-img-anchor-brdr);
-    position: relative;
-    margin-bottom: -10px;}
-#recommended #vanityhouse a:nth-child(2) {
-    margin-bottom: 1px;
-    display: inline-block;}
-#recommended #vanityhouse a:nth-child(2):hover {
-    text-decoration: underline;}
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);}
 #recommended #vanityhouse a:first-child {
-    padding: 500px;
-    margin: -500px;}
-#recommended #vanityhouse a:first-child:before {
-    background-color: var(--c-b3);
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0;}
-#recommended #vanityhouse a:first-child:hover {
-    color: var(--c-txt);}
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    margin-bottom: 5px;
+    position: relative;}
+
+
 .hovereffect,
 #bookmarks #collage_table img,
 #collections #coverart.box li a {
     border: var(--p-img-anchor-brdr);}
+
+#recommended #vanityhouse img:hover,
 .hovereffect:hover,
 #bookmarks #collage_table img:hover,
 #collections #coverart.box li a:hover,
-.similar img:hover,
-#recommended #vanityhouse a:first-child:hover img {
+.similar img:hover {
     border: var(--p-img-anchor-brdr-hvr);}
-#recommended #vanityhouse a:first-child:hover:before {
-    opacity: 1;}
-#recommended #vanityhouse a:first-child:hover:active:before {
-    background-color: var(--c-b1);}
 
 .global_buffs {
     position: fixed !important;
@@ -1844,36 +1836,38 @@ a .error_message:hover:active {
 .torrent_table tr.group_torrent {
     background-color: var(--c-tgroup);}
 
-img[src="static/common/thumbsdown.png"],
+/* img[src="static/common/thumbsdown.png"],
 img[src="static/common/thumbsup.png"],
 #usersreviewimage img,
-.spoilerbox,
-blockquote,
-pre,
-#torrents .torrent_details tr table,
-.sidebar img,
-input,
-select,
-textarea,
-.similar img,
 #bookmarks #collage_table img,
 img[title="Downloaded"],
 img[title="Uploaded"],
 img[title="Leechers"],
 img[title="Seeders"],
 img[title="Snatches"],
+.sidebar img,
+.similar img,
 .torrent_table #user_rating_icon img,
 .sidebar .userratingdiv img,
 .screenshots img,
 #requests_donate img,
 #requests .main_column >table:first-child img[title="Gold"],
+.forum_post td.body img,
+.box.news_post >.pad img, */
+
+img,
+.spoilerbox,
+blockquote,
+pre,
+#torrents .torrent_details tr table,
+input,
+select,
+textarea,
 #requests .main_column >table:first-child,
 #upload #content >div[style="margin:0px auto;width:700px"],
 #forums .linkbox.linkbox_bottom +br +h3,
 .forum_post td.body iframe,
-.forum_post td.body img,
 .box.news_post >.pad iframe,
-.box.news_post >.pad img,
 #reports .thin >h3,
 #reportsv2 #report_table >h3,
 #reportsv2 #dynamic_form >table.border:before,
@@ -2221,7 +2215,9 @@ a[href="javascript:Vote(20, 1)"] strong:hover:active,
 .sidebar .box_gold a.tooltip,
 #user a#toggle_css_gallery,
 #user .thin >h2 +form#userform a[onclick],
-#forums #forum_search_cat_list td.forum_cat a {
+#forums #forum_search_cat_list td.forum_cat a,
+.prev,
+.next {
     cursor: default;}
 /* #upload #releaseinfo .colhead +tr+tr td.label,
 #upload #rlstitle +tr td.label,
@@ -2751,7 +2747,8 @@ a[href="javascript:Vote(20, 1)"] strong:hover,
 .sidebar img:hover,
 .userratingdiv img,
 .hovereffect:hover,
-#collections #coverart.box li a:hover {
+#collections #coverart.box li a:hover,
+#recommended #vanityhouse img:hover {
     -webkit-box-shadow: none;
     box-shadow: none;}
 
@@ -3365,6 +3362,20 @@ tr.likes td[id^="likers_"]:hover {
     width: 95% !important;
     margin-right: auto !important;
     margin-left: auto !important;}
+
+#forums .forum_post.forum_unread .avatar >div:before {
+    border-left: 1px solid var(--c-b3);}
+#content .forum_post.forum_unread {
+    border-right: 1px solid var(--c-b3);
+    border-left: 1px solid var(--c-b3);
+    border-bottom: 1px solid var(--c-b3);}
+
+#forums .forum_post.sticky_post .avatar >div:before {
+    border-left: 1px solid var(--c-input-brdr);}
+#content .forum_post.sticky_post {
+    border-right: 1px solid var(--c-input-brdr);
+    border-left: 1px solid var(--c-input-brdr);
+    border-bottom: 1px solid var(--c-input-brdr);}
 
 #forums .thin .forum_post table {
     background-color: inherit;
