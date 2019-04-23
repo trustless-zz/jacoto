@@ -3489,14 +3489,14 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 
 #searchforum,
 #searchthread {
-    margin-top: 15px;}
+    margin: 10px 0;}
 #searchforum >div,
 #searchthread >div {
-    width: calc(100% + 12px);
-    margin: 0 -6px;}
+    width: 100%;
+    margin: 0 auto;}
 #searchforum h3,
 #searchthread h3 {
-    margin: 0 1px !important;
+    margin: 0 1px -39px 1px !important;
     text-align: left;
     padding-left: 10px;
     height: 38px;
@@ -4167,11 +4167,13 @@ span.size5 img {
     float: right; margin-left: 10px !important;}
 
 
-
+/** linkbox testing **/
 .linkbox {
     /*line-height: 1em;*/}
 .linkbox br:last-child {
     display: none;}
+.linkbox +.linkbox {
+    margin-top: -5px;}
 /*****************************************************************************************************/
 
 180
