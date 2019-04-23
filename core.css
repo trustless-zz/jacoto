@@ -401,6 +401,9 @@ b, strong {
     font-weight: bold;}
 ul, ol {
     margin-bottom: 0px;}
+.sidebar .box_series ul,
+ul.postlist {
+    margin-top: .3571428571428571em;}
 li:first-of-type {
     padding-top: 0px;}
 li {
@@ -761,7 +764,7 @@ form[name="filter"],
 .forum_post {
     margin: 0 0 10px 0;}
 .sidebar ul {
-    margin: 8px 0 10px 0;}
+    margin: 10px 0;}
 .pad,
 .trailer_div,
 .body,
