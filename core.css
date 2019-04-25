@@ -87,7 +87,7 @@
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
     --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
     --p-fade-2:                         linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
-    --p-lh: 							1.357142857142857em; /*calc(100% + 5px);*/
+    --p-lh: 							1.357142857142857; /*calc(100% + 5px);*/
     --p-dot3:							-.02142857142em;}
 
 .amigacd32 {background: url(caticons/amigacd32_dark.svg);}
@@ -836,7 +836,8 @@ a:hover .ratings,
 #bookmarks #torrent_table td[colspan="3"] >span:first-child a,
 #torrents #requests.request_table .colhead a,
 #forums #forum_search_cat_list td.forum_cat a,
-#collections .sidebar .box.box_comment a[href^="reports.php?action=report"] {
+#collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
+.last_read a {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -968,8 +969,7 @@ a[title="Remove"],
 .forum_post .colhead_dark a[onclick],
 #requests table.border a[href^="upload.php"],
 #requests_donate img,
-#requests .main_column >table:first-child img[title="Gold"],
-.last_read {
+#requests .main_column >table:first-child img[title="Gold"] {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
@@ -2502,7 +2502,7 @@ li:not(.suggested_similar) .similar_votes >span {
     left: 6px;
     display: block;
     width: fit-content;
-    z-index: 99;}
+    z-index: 999;}
 #content .sub span {
     width: 100%;
     line-height: 28px;
@@ -4152,6 +4152,14 @@ abbr {
 #requests table.border .colhead_dark td:nth-last-child(3) strong {
     font-size: 16px;}
 
+.last_read {
+    margin: 3px 0 3px 5px;
+    width: 14px;
+    height: 14px;}
+.last_read a {
+    display: block;
+    width: 100%;
+    height: 100%;}
 
 
 .forum_post .user_title img {
