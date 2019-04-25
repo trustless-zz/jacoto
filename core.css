@@ -87,7 +87,7 @@
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
     --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
     --p-fade-2:                         linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
-    --p-lh: 							1.357142857142857; /*calc(100% + 5px);*/
+    --p-lh: 							1.357142857142857; /*14px calc(100% + 5px);*/
     --p-dot3:							-.02142857142em;}
 
 .amigacd32 {background: url(caticons/amigacd32_dark.svg);}
@@ -2312,7 +2312,8 @@ body:not(#upload) #artist_tr + tr td.label,
 #torrent_table .group.discog td[colspan="5"] >span:first-child strong,
 #forums .forums_search .search_form td strong,
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table td.label strong,
-#collections .thin >h2:first-child +.center td.label strong {
+#collections .thin >h2:first-child +.center td.label strong,
+#content >.torrent_notifications .colhead strong {
     font-weight: normal;}
 
 .torrent_details .torrent_table .colhead_dark td:nth-child(1):after,
@@ -3603,8 +3604,9 @@ input[type="search"],
 #threadpoll #poll_results ul#poll_options {
     padding: 0;
     margin-bottom: 15px;}
-    
-.forum_post td.body img[src*="static/common/smileys/"] {
+
+#wrapper img[src*="static/common/smileys/"] {
+    border: none;
     margin: 0;
     padding: 0;
     -webkit-box-shadow: none;
@@ -3801,6 +3803,7 @@ input[type="search"],
     top: 0;
     left: 1px;
     height: 20px;
+    line-height: 20px;
     font-size: 20px;
     font-weight: 600;
     padding: 9px 10px;
@@ -3814,6 +3817,7 @@ input[type="search"],
     top: 0;
     left: 1px;
     height: 20px;
+    line-height: 20px;
     font-size: 20px;
     font-weight: 600;
     padding: 9px 10px;
@@ -3888,6 +3892,7 @@ input[type="search"],
     font-size: 20px;
     width: calc(100% - 20px);
     height: 20px;
+    line-height: 20px;
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
@@ -3975,6 +3980,7 @@ input[type="search"],
     font-size: 20px;
     width: calc(100% - 22px);
     height: 20px;
+    line-height: 20px;
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
@@ -4134,6 +4140,7 @@ input[class="date_picker"] {
     content: 'Contents';
     font-size: 20px;
     height: 20px;
+    line-height: 20px;
     padding: 9px 10px;
     display: block;
     background: var(--p-head-grdnt);
@@ -4335,6 +4342,7 @@ span.size5 img {
     font-size: 20px;
     width: calc(100% - 20px);
     height: 20px;
+    line-height: 20px;
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
@@ -4370,6 +4378,9 @@ span.size5 img {
 #collections .sidebar .box_addtorrent .head,
 #collections .sidebar .box_tags ol {
     margin-bottom: 10px;}
+#collections .box.box_comment {
+    display: flex;
+    flex-flow: column;}
 #collections .sidebar .box.box_comment .subhead {
     margin-top: 8px;
     font-size: 12px;
