@@ -3260,6 +3260,7 @@ tr.likes td[id^="likers_"]:hover {
     background-position: right center;
     background-size: 0 0;
     opacity: .65;}
+#user script +.thin h2 +#userform:before,
 #collections .edition_info:before,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:before,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:after,
@@ -3931,6 +3932,7 @@ input[type="search"],
 #requests td.label {
     width: 170px;}
 
+#user script +.thin h2 +#userform,
 #collections .sidebar form#quickpostform.pad,
 #collections .sidebar .box.box_comment +.box.pad,
 #torrents #requests.request_table tr:not(.colhead) td {
@@ -4082,6 +4084,7 @@ input[class="date_picker"] {
     margin-top: -38px;
     bottom: -54px;}
 #user .thin >h2:first-child +form[method="post"]:before {
+    line-height: 20px;
     content: 'Create a new notification filter';
     font-size: 20px;
     height: 20px;
@@ -4153,8 +4156,8 @@ abbr {
     font-size: 16px;}
 
 .last_read {
-    margin: 3px 0 3px 5px;
-    width: 14px;
+    margin: 3px 0 3px 8px;
+    width: 10px;
     height: 14px;}
 .last_read a {
     display: block;
