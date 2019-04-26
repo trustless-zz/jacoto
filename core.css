@@ -2553,7 +2553,7 @@ li:not(.suggested_similar) .similar_votes >span {
 #torrents #requests.request_table #requests_list tr:first-child td.label {
     position: relative;
     font-size: 14px;
-    line-height: var(--p-lh);
+    line-height: 19px;
     padding: 6px 5px 7px 5px;}
 
 .forum_post .colhead_dark div[style="float: right;"] input[type="button"] {
