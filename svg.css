@@ -384,13 +384,13 @@ img[title="ThumbsDown "],
 /** jump to last-read **/
 /*unread*/
 .last_read {
-   background-image: url('icons/dark/last_read.svg');}
+    background-image: url('icons/dark/last_read.svg');}
 /*read*/
 .read ~td .last_read,
-.read_sticky ~td .last_read,,
-.read_locked ~td .last_read,,
+.read_sticky ~td .last_read,
+.read_locked ~td .last_read,
 .read_locked_sticky ~td .last_read {
-   background-image: url('icons/dark/read_last_read.svg');}
+    background-image: url('icons/dark/read_last_read.svg');}
 
 /* background-image: url('data:image/svg+xml;utf8,');} */
 

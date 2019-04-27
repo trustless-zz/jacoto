@@ -754,7 +754,8 @@ form[name="filter"],
 #rules .thin >.box.pad,
 #rules .thin >form.search_form,
 #rules .thin .before_rules,
-#rules .thin >#actual_rules >div {
+#rules .thin >#actual_rules >div,
+#collections table#manage_collage_table {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -1708,6 +1709,7 @@ a .error_message:hover:active {
 .colhead,
 .colhead_dark {
     background: var(--p-head-grdnt);}
+#manage_collage_table .colhead th,
 .colhead td,
 .colhead_dark td {
     font-size: 20px;
@@ -1716,6 +1718,7 @@ a .error_message:hover:active {
     font-weight: normal;
     padding: 9px 5px;
     overflow: hidden;}
+#manage_collage_table .colhead >th:first-child,
 .colhead >td:first-child,
 .colhead_dark >td:first-child {
     padding-left: 10px;}
@@ -2295,6 +2298,7 @@ body:not(#upload) #artist_tr + tr td.label,
     margin-bottom: 5px;
     padding: 6px;
     text-align: center;}
+#pageslinksdiv .invisible a,
 .linkbox .selected a {
     color: var(--c-txt) !important;
     pointer-events: none;}
@@ -2784,7 +2788,8 @@ h2 {
 .userreviews tr:nth-child(odd),
 .requests_outer_table #otherop tr:nth-child(odd),
 #upload #content >div >table[style] tr:not(.colhead):nth-child(odd),
-#reports .thin >table tr:not(.colhead):nth-child(odd) {
+#reports .thin >table tr:not(.colhead):nth-child(odd),
+#manage_collage_table tr:not(.colhead):not(:last-child):nth-child(odd) {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
@@ -2792,7 +2797,8 @@ h2 {
 .userreviews tr:nth-child(even),
 .requests_outer_table #otherop tr:nth-child(even),
 #upload #content >div >table[style] tr:not(.colhead):nth-child(even),
-#reports .thin >table tr:not(.colhead):nth-child(even) {
+#reports .thin >table tr:not(.colhead):nth-child(even),
+#manage_collage_table tr:not(.colhead):not(:last-child):nth-child(even) {
     background-color: var(--c-trowb);}
 .rowa:hover,
 .row_a:hover,
@@ -2801,7 +2807,8 @@ h2 {
 #torrents .torrent_details tr table tr:not(.colhead):not(.colhead_dark):hover,
 #collages tr:not(.colhead):hover,
 #upload #content >div >table[style] tr:not(.colhead):hover,
-#reports .thin >table tr:not(.colhead):hover {
+#reports .thin >table tr:not(.colhead):hover,
+#manage_collage_table tr:not(.colhead):not(:last-child):hover {
     background-color: var(--c-row-hvr) !important;}
 
 .box_series li {
@@ -3028,13 +3035,14 @@ form[name="filter"] h3 {
 #requests table input#amount_box {
     width: 110px;}
 
+#collections table#manage_collage_table,
 #torrents .thin >.header:first-child +table,
 .thin.torrent_history table.border,
 #collections .thin >h2:first-child +.center,
 #user .thin >h2 +form#userform,
 .thin >#request_form,
 #user .thin >h2 ~form[method="post"] {
-    margin-top: 15px;}
+    margin-top: 12px;}
 input[name="fromyear"],
 input[name="toyear"],
 #upload input#remaster_year,
@@ -4204,9 +4212,7 @@ span.size5 img {
 215*/
 
 
-/*****************************************
-*****************INBOX********************
-*****************************************/
+/****************************************/
 #inbox table {
      border-collapse:collapse;}
 #inbox table td[width="40%"] {
@@ -4221,17 +4227,8 @@ span.size5 img {
 #inbox .userclasses {
      float: left;
      width: 25%;}
+/****************************************/
 
-
-
-
-
-/*****************************************
-***************BUNDLES********************
-*****************************************/
-
-/* 2,13953488372093 */
-/*** Hover Effect ***/
 
 .hovereffect {
      width: 100%;
@@ -4241,15 +4238,12 @@ span.size5 img {
      position: relative;
      text-align: center;
      cursor: default;}
-
 .hovereffect .img_responsive {
      display: block;
      position: relative;
      width: 100%;
      height: 100%;
      background-size: contain;}
-
-
 .hovereffect .overlay {
      width: 100%;
      height: 100%;
@@ -4258,7 +4252,6 @@ span.size5 img {
      top: 0;
      bottom: 0;
      left: 0;}
-
 .hovereffect h2 {
     cursor: pointer;
     font-weight: 600;
@@ -4274,11 +4267,9 @@ span.size5 img {
      opacity: 0;
      filter: alpha(opacity=0);
      margin: 0;}
-
 .hovereffect:hover h2 {
      opacity: 1;
      visibility:visible}
-
 .hovereffect h2 div {
     font-size: 12px;
     line-height: var(--p-lh);}
@@ -4287,32 +4278,21 @@ span.size5 img {
     position: absolute;
     right: 5px;
     bottom: 5px;}
-
 .overlay div {
      padding-top: 5px;}
-
 .overlay span {
     line-height: 14px;
     font-style: normal;}
-
-
 #pageslinksdiv .invisible {
      visibility: visible !important;}
-
 #sort_table {
      border: 0px!important;
-     margin-top: -15px;
-     margin-bottom: 10px;
      position: relative;
      z-index:9999999}
-
 #sort_table select {
      min-width: auto;}
-
 #sort_table input[type="submit"] {
      margin: 0;}
-
-
 
 /* 460/215 */
 /********/
@@ -4407,3 +4387,163 @@ span.size5 img {
 #collections .sidebar .box.box_comment +.box.pad {
     font-weight: bold;
     text-align: center;}
+
+
+#wiki .sidebar ol.navigation_list {
+    margin: 0;
+    padding: 0 0 0 20px;}
+#wiki .sidebar >.box >.pad {
+    padding: 10px 0 0 0;}
+#wiki .sidebar .box_info.pad:before {
+    content: 'Info';
+    font-size: 20px;
+    height: 20px;
+    line-height: 20px;
+    background: var(--p-head-grdnt);
+    width: 100%;
+    display: block;
+    padding: 9px 10px;
+    margin: -10px -10px 0 -10px;
+    font-weight: 600;}
+#wiki .box.wiki_article:before {
+    content: 'Article';
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    width: calc(100% - 20px);
+    display: block;
+    font-weight: 600;
+    padding: 9px 10px;
+    background: var(--p-head-grdnt);}
+
+h3 {
+    font-size: 1.3em;
+    margin: 10px 0 5px 0;
+    padding-bottom: 5px;}
+h4 {
+    font-size: 1.2em;}
+.main_column h1,
+.main_column h2,
+.main_column h3,
+.main_column h4 {
+    margin: 0;}
+#wiki h5 {
+    font-size: 1.2em;
+    padding: 5px;}
+#wiki.wiki_index .wiki_article .postlist {
+    margin-bottom: 10px;}
+
+
+
+
+/*****************************************
+*****************WIKI*********************
+*****************************************/
+.wiki_index .wiki_article ul,
+.wiki_index .wiki_article strong {
+	display: inline-block;
+	width: 100%;}
+
+.wiki_index .wiki_article li {
+	word-wrap: break-word;
+	padding-right: 30px !important;}
+
+.wiki_index .wiki_article ul li {
+	float: left;
+	width: 40%;}
+
+#wiki .sidebar ul,
+#wiki .sidebar ol {
+	margin-bottom: 0px;}
+#wiki .sidebar li ul,
+#wiki .sidebar li ol {
+	margin: 0 0 8px 0;}
+#wiki .sidebar ul:last-child li:last-child ul:last-child,
+#wiki .sidebar ol:last-child li:last-child ol:last-child {
+	margin: 0;}
+
+#wiki span.size7,
+#wiki span.size6,
+#wiki span.size5,
+#wiki span.size4 {
+	color: var(-darkGreen);
+	float: left;
+	width: 100%;
+	padding: 10px 0;}
+
+/*** Headline 1 ***/
+#wiki h3 {
+	font-weight: bold;
+	font-size: 2em; }
+
+/*** headline 2 ***/
+#wiki h4 {
+	font-weight: bold;
+	font-size: 1.8em;
+	border-bottom: 1px solid red;}
+
+#wiki h5 {
+	background-color: blue;
+	padding: 5px;
+	border-radius: 3px;
+	box-shadow: 2px 2px 5px red;
+	font-size: 1.2em;
+	margin: 0;}
+
+.wiki_index .wiki_article strong {
+	background-color: green;
+	font-size: 1em;
+	padding: 5px;
+	border-radius: 3px;
+	box-shadow: 2px 2px 5px #000;}
+
+.wiki_index span.size7 strong,
+.wiki_index span.size6 strong,
+.wiki_index span.size5 strong,
+.wiki_index span.size4 strong {
+	background-color: transparent;
+	border-bottom: 1px solid red;
+	box-shadow: none;}
+
+#wiki.wiki_index h3 {
+	font-size: 1em;}
+
+#wiki.wiki_index h3:nth-of-type(1) {
+	font-size: 2em;
+	line-height: 0;
+	color: green;
+	margin: 0 0 20px 0;}
+
+#wiki.wiki_index h4 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: normal;
+	font-size: 1.2em;
+	color: yellow;
+	font-weight: bold;
+	border-bottom: none;}
+
+.wiki_index h4:nth-of-type(1),
+.wiki_index h4:nth-of-type(2) {
+    background-color: rebeccapurple;
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 2px 2px 5px aquamarine;
+    font-size: 1.5em;}
+
+#wiki .postlist {
+	margin: 0;}
+
+#wiki.wiki_index .wiki_article .postlist {
+	margin: 13px 0;}
+
+#wiki .box {
+	display: inline-block;
+	background-size: auto;
+	width: 100%;}
+
+#wiki .pad br {
+	line-height: 10px;}
+
+.wiki_index .pad br {
+	display: block;}
