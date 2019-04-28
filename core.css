@@ -270,8 +270,18 @@ filter: drop-shadow(0px 0 1px black);}
     font-weight: 600;}
 @font-face {
     font-family: "OpenSans";
+    src: url(OpenSans-SemiBoldItalic.ttf);
+    font-weight: 600;
+    font-style: italic;}
+@font-face {
+    font-family: "OpenSans";
     src: url(OpenSans-Bold.ttf);
     font-weight: bold;}
+@font-face {
+    font-family: "OpenSans";
+    src: url(OpenSans-BoldItalic.ttf);
+    font-weight: bold;   
+    font-style: italic;}
 
 @keyframes expandWidth {
 	0% {transform: scaleX(0);}
@@ -759,7 +769,12 @@ form[name="filter"],
 #wiki .center.thin >.box.pad,
 #staff .thin >.box.pad,
 #torrents .thin >h2:first-child +.center,
-#uploaded_table {
+#uploaded_table,
+#seeding_table,
+#leeching_table,
+#snatched_table,
+#snatched_not_seeding_table,
+#seeding_not_snatched_table {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -846,7 +861,12 @@ a:hover .ratings,
 #collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
 .last_read a,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child a,
-#uploaded_table td.center.cats_col +td span:first-child a {
+#uploaded_table             td.center.cats_col +td span:first-child a,
+#seeding_table              td.center.cats_col +td span:first-child a,
+#leeching_table             td.center.cats_col +td span:first-child a,
+#snatched_table             td.center.cats_col +td span:first-child a,
+#snatched_not_seeding_table td.center.cats_col +td span:first-child a,
+#seeding_not_snatched_table td.center.cats_col +td span:first-child a {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -1137,6 +1157,7 @@ input[type=submit]:hover:active,
 #upload #content >div >table[style] span[style="color: yellow;"] {
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
+#torrents .torrent_details [style="color:red"],
 strong.important_text,
 #rules .thin >.box.pad strong[style="color:red;"],
 .invalid, .warning, .error,
@@ -1747,6 +1768,12 @@ a .error_message:hover:active {
     border-top: var(--p-table-brdr);
     color: var(--c-text-s);
     vertical-align: middle;}
+#uploaded_table             td:nth-child(n+3),
+#seeding_table              td:nth-child(n+3),
+#leeching_table             td:nth-child(n+3),
+#snatched_table             td:nth-child(n+3),
+#snatched_not_seeding_table td:nth-child(n+3),
+#seeding_not_snatched_table td:nth-child(n+3),
 .torrent_table td:not(#displayname):not([colspan="4"]) {
     white-space: nowrap;}
 #collections #torrent_table .group.discog td[colspan="5"] >strong,
@@ -1797,7 +1824,12 @@ a .error_message:hover:active {
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child >a,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child a,
-#uploaded_table td.center.cats_col +td span:first-child a {
+#uploaded_table             td.center.cats_col +td span:first-child a,
+#seeding_table              td.center.cats_col +td span:first-child a,
+#leeching_table             td.center.cats_col +td span:first-child a,
+#snatched_table             td.center.cats_col +td span:first-child a,
+#snatched_not_seeding_table td.center.cats_col +td span:first-child a,
+#seeding_not_snatched_table td.center.cats_col +td span:first-child a {
     margin-right: 3px;
     display: inline-block;}
 .torrent_table .show_torrents .show_torrents_link {
@@ -2150,7 +2182,12 @@ tr.likes td[id^="likers_"] >strong,
 #bookmarks #torrent_table td[colspan="3"],
 #collections #torrent_table td[colspan="3"],
 #collections .collections .sidebar .box.box_comment .head,
-#uploaded_table tr:not(.colhead) td:nth-child(2) {
+#uploaded_table             tr:not(.colhead) td:nth-child(2),
+#seeding_table              tr:not(.colhead) td:nth-child(2),
+#leeching_table             tr:not(.colhead) td:nth-child(2),
+#snatched_table             tr:not(.colhead) td:nth-child(2),
+#snatched_not_seeding_table tr:not(.colhead) td:nth-child(2),
+#seeding_not_snatched_table tr:not(.colhead) td:nth-child(2) {
     font-size: 0;
     line-height: 0;}
 .box_tags .stats.nobullet div a:nth-child(1) {
@@ -2816,7 +2853,12 @@ h2 {
 #upload #content >div >table[style] tr:not(.colhead):nth-child(odd),
 #reports .thin >table tr:not(.colhead):nth-child(odd),
 #manage_collage_table tr:not(.colhead):not(:last-child):nth-child(odd),
-#uploaded_table tr:not(.colhead):nth-child(odd){
+#uploaded_table             tr:not(.colhead):nth-child(odd),
+#seeding_table              tr:not(.colhead):nth-child(odd),
+#leeching_table             tr:not(.colhead):nth-child(odd),
+#snatched_table             tr:not(.colhead):nth-child(odd),
+#snatched_not_seeding_table tr:not(.colhead):nth-child(odd),
+#seeding_not_snatched_table tr:not(.colhead):nth-child(odd) {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
@@ -2826,7 +2868,12 @@ h2 {
 #upload #content >div >table[style] tr:not(.colhead):nth-child(even),
 #reports .thin >table tr:not(.colhead):nth-child(even),
 #manage_collage_table tr:not(.colhead):not(:last-child):nth-child(even),
-#uploaded_table tr:not(.colhead):nth-child(even) {
+#uploaded_table             tr:not(.colhead):nth-child(even),
+#seeding_table              tr:not(.colhead):nth-child(even),
+#leeching_table             tr:not(.colhead):nth-child(even),
+#snatched_table             tr:not(.colhead):nth-child(even),
+#snatched_not_seeding_table tr:not(.colhead):nth-child(even),
+#seeding_not_snatched_table tr:not(.colhead):nth-child(even) {
     background-color: var(--c-trowb);}
 .rowa:hover,
 .row_a:hover,
@@ -2837,7 +2884,12 @@ h2 {
 #upload #content >div >table[style] tr:not(.colhead):hover,
 #reports .thin >table tr:not(.colhead):hover,
 #manage_collage_table tr:not(.colhead):not(:last-child):hover,
-#uploaded_table tr:not(.colhead):hover {
+#uploaded_table             tr:not(.colhead):hover,
+#seeding_table              tr:not(.colhead):hover,
+#leeching_table             tr:not(.colhead):hover,
+#snatched_table             tr:not(.colhead):hover,
+#snatched_not_seeding_table tr:not(.colhead):hover,
+#seeding_not_snatched_table tr:not(.colhead):hover {
     background-color: var(--c-row-hvr) !important;}
 
 .box_series li {
@@ -2946,7 +2998,12 @@ img[src="static/common/thumbsup.png"],
 .forum_post .colhead_dark .time,
 .forum_post .comment_rating p,
 .avatar .forumstat,
-#uploaded_table tr:not(.colhead) td:nth-child(2) span:nth-child(3) {
+#uploaded_table             tr:not(.colhead) td:nth-child(2) span:not(#groupplatform):not([style="float: right;"]),
+#seeding_table              tr:not(.colhead) td:nth-child(2) span:not(#groupplatform):not([style="float: right;"]),
+#leeching_table             tr:not(.colhead) td:nth-child(2) span:not(#groupplatform):not([style="float: right;"]),
+#snatched_table             tr:not(.colhead) td:nth-child(2) span:not(#groupplatform):not([style="float: right;"]),
+#snatched_not_seeding_table tr:not(.colhead) td:nth-child(2) span:not(#groupplatform):not([style="float: right;"]),
+#seeding_not_snatched_table tr:not(.colhead) td:nth-child(2) span:not(#groupplatform):not([style="float: right;"]) {
     margin: 0;
     font-size: 13px;
     line-height: var(--p-lh);}
@@ -3037,6 +3094,7 @@ form[name="filter"] h3 {
 #staff .thin >.box.pad >h3:first-of-type {
     margin: -10px -10px 0 -10px;}
 #staff .thin >.box.pad >h3:first-of-type ~h3 {
+    font-weight: 600;
     margin: 10px 0 8px 5px;}
 
 #newthreadform #newthreadtext #answer_block a,

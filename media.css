@@ -9,7 +9,12 @@ html {
     position: absolute;
     left: -36px;
     top: calc(50% - 17px);}
-#uploaded_table td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+#uploaded_table             td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+#seeding_table              td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+#leeching_table             td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+#snatched_table             td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+#snatched_not_seeding_table td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+#seeding_not_snatched_table td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #collections .group.discog td.collicon:nth-child(2) >div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #torrent_table td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) {
     background: none;}
@@ -22,6 +27,18 @@ html {
     background-position: center;}
 #requests .thin >table.border .colhead_dark {
     white-space: nowrap;}
+h2#display_name #groupplatform {
+    width: unset;
+    height: unset;
+    position: inherit;
+    font-size: 21px;
+    line-height: 21px;}
+h2#display_name #groupplatform a {
+    background-image: none;
+    width: unset;
+    height: unset;
+    display: inherit;}
+    
     
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"],
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"],
