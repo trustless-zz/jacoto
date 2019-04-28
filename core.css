@@ -1,7 +1,7 @@
 ﻿:root {
 /** COLORS **/
     --c-quote-brdr:                     rgba(10, 10, 10, 0.1);
-    --c-quote:                          rgb(10, 10, 10, .05);
+    --c-quote:                          rgba(10, 10, 10, .05);
     --c-txt: 							rgb(50, 50, 50);
     --c-text-s: 						rgb(100, 100, 100);
     --c-curtain:						rgb(110, 110, 110);
@@ -755,7 +755,8 @@ form[name="filter"],
 #rules .thin >form.search_form,
 #rules .thin .before_rules,
 #rules .thin >#actual_rules >div,
-#collections table#manage_collage_table {
+#collections table#manage_collage_table,
+#wiki .center.thin >.box.pad {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -798,6 +799,7 @@ a {
     border: 0;
     background-color: transparent;}
 a:hover,
+#wiki .wiki_article a:hover img,
 .forum_post td.body a:hover img,
 .box.news_post >.pad a:hover img,
 .forum_post .colhead_dark a.username:hover,
@@ -1129,6 +1131,7 @@ input[type=submit]:hover:active,
 #upload #content >div >table[style] span[style="color: yellow;"] {
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
+strong.important_text,
 #rules .thin >.box.pad strong[style="color:red;"],
 .invalid, .warning, .error,
 .sidebar span[style="color:red;font-weight:700;"],
@@ -1869,6 +1872,7 @@ pre,
 input,
 select,
 textarea,
+.sidebar >div,
 #requests .main_column >table:first-child,
 #upload #content >div[style="margin:0px auto;width:700px"],
 #forums .linkbox.linkbox_bottom +br +h3,
@@ -1883,7 +1887,8 @@ textarea,
 #collections #coverart.box li,
 #collections #coverart.box li a,
 #collections #coverart.box a div,
-#collections #coverart.box >ul:not(.hidden) {
+#collections #coverart.box >ul:not(.hidden),
+#wiki .center.thin >.box.pad {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -3162,6 +3167,9 @@ input#file {
 #forums h3 {
 	padding: 0px;
     margin: 0 0 5px 10px;}
+.forum_post h3 {
+    margin: 0 !important;
+    border-bottom: var(--p-table-brdr);}
 #forums td.body {
     padding: 10px 10px 15px 10px;}
 .forumstat,
@@ -3338,6 +3346,8 @@ marquee {
 #forums #reply_box .box.pad,
 #user .thin >h2 ~form[method="post"] {
     padding-top: 48px;}
+#wiki .center.thin >.box.pad input[type="text"],
+#wiki .center.thin >.box.pad textarea,
 #user input#park_message,
 #forums #reply_box #quickpost {
     width: 100% !important;}
@@ -3397,9 +3407,11 @@ tr.likes td[id^="likers_"]:hover {
     border: inherit;
     margin: inherit;}
 table.bbcode_table {
-    background-color: inherit;}
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    background-color: var(--c-box);}
 table.bbcode_table td {
-    border: var(--p-quote-brdr);}
+    border: var(--p-table-brdr);}
 #inbox .colhead >td:first-child,
 .bbcode_table_div,
 #torrents #requests.request_table #requests_list .requestrows td {
@@ -3439,6 +3451,7 @@ span.size10 {
 .twitter-tweet,
 .forum_post td.body iframe,
 .box.news_post >.pad iframe,
+#wiki .wiki_article a img,
 .forum_post td.body img,
 .box.news_post >.pad img {
     max-width: calc(100% - 10px) !important;
@@ -3446,6 +3459,7 @@ span.size10 {
     filter: var(--p-post-img);
     margin: 0 5px;
     padding: 5px;}
+#wiki .wiki_article a img,
 .forum_post td.body img,
 .box.news_post >.pad img {
     max-width: 100% !important;
@@ -4416,25 +4430,6 @@ span.size5 img {
     padding: 9px 10px;
     background: var(--p-head-grdnt);}
 
-h3 {
-    font-size: 1.3em;
-    margin: 10px 0 5px 0;
-    padding-bottom: 5px;}
-h4 {
-    font-size: 1.2em;}
-.main_column h1,
-.main_column h2,
-.main_column h3,
-.main_column h4 {
-    margin: 0;}
-#wiki h5 {
-    font-size: 1.2em;
-    padding: 5px;}
-#wiki.wiki_index .wiki_article .postlist {
-    margin-bottom: 10px;}
-
-
-
 
 /*****************************************
 *****************WIKI*********************
@@ -4443,15 +4438,12 @@ h4 {
 .wiki_index .wiki_article strong {
 	display: inline-block;
 	width: 100%;}
-
 .wiki_index .wiki_article li {
 	word-wrap: break-word;
 	padding-right: 30px !important;}
-
 .wiki_index .wiki_article ul li {
 	float: left;
 	width: 40%;}
-
 #wiki .sidebar ul,
 #wiki .sidebar ol {
 	margin-bottom: 0px;}
@@ -4461,107 +4453,42 @@ h4 {
 #wiki .sidebar ul:last-child li:last-child ul:last-child,
 #wiki .sidebar ol:last-child li:last-child ol:last-child {
 	margin: 0;}
-
 #wiki span.size7,
 #wiki span.size6,
 #wiki span.size5,
 #wiki span.size4 {
-	color: var(-darkGreen);
 	float: left;
 	width: 100%;
-	padding: 10px 0;}
-
-/*** Headline 1 ***/
-#wiki h3 {
-	font-weight: bold;
-	font-size: 2em; }
-
-/*** headline 2 ***/
-#wiki h4 {
-	font-weight: bold;
-	font-size: 1.8em;
-	border-bottom: 1px solid red;}
-
-#wiki h5 {
-	background-color: blue;
-	padding: 5px;
-	border-radius: 3px;
-	box-shadow: 2px 2px 5px red;
-	font-size: 1.2em;
-	margin: 0;}
-
-.wiki_index .wiki_article strong {
-	background-color: green;
-	font-size: 1em;
-	padding: 5px;
-	border-radius: 3px;
-	box-shadow: 2px 2px 5px #000;}
-
+	padding: 10px 5px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;}
 .wiki_index span.size7 strong,
 .wiki_index span.size6 strong,
 .wiki_index span.size5 strong,
 .wiki_index span.size4 strong {
-	background-color: transparent;
-	border-bottom: 1px solid red;
-	box-shadow: none;}
-
-#wiki.wiki_index h3 {
-	font-size: 1em;}
-
-#wiki.wiki_index h3:nth-of-type(1) {
-	font-size: 2em;
-	line-height: 0;
-	color: green;
-	margin: 0 0 20px 0;}
-
-#wiki.wiki_index h4 {
-	margin-top: 10px;
-	margin-bottom: 10px;
-	font-weight: normal;
-	font-size: 1.2em;
-	color: yellow;
-	font-weight: bold;
-	border-bottom: none;}
-
-.wiki_index h4:nth-of-type(1),
-.wiki_index h4:nth-of-type(2) {
-    background-color: rebeccapurple;
-    padding: 5px;
-    border-radius: 3px;
-    box-shadow: 2px 2px 5px aquamarine;
-    font-size: 1.5em;}
-
+	border-bottom: var(--p-table-brdr);	}
 #wiki .postlist {
 	margin: 0;}
-
 #wiki.wiki_index .wiki_article .postlist {
-	margin: 13px 0;}
-
+	margin: 0 0 20px 0;	}
 #wiki .box {
 	display: inline-block;
 	background-size: auto;
 	width: 100%;}
-
 #wiki .pad br {
 	line-height: 10px;}
-
 .wiki_index .pad br {
 	display: block;}
-
-
-
-
-
-
-h1 {
-    font-size: 2em;
-    margin: .67em 0;}
-h2 {
-    font-size: 1.5em;
-    margin-bottom: 15px;}
-h3 {
-    font-size: 1.3em;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-    font-weight: 300!important;}
-
+#wiki .center.thin >.box.pad {
+    text-align: left;}
+#wiki .center.thin >.box.pad:before {
+    content: 'Create article';
+    width: 100%;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    background: var(--p-head-grdnt);
+    display: block;
+    padding: 9px 10px;
+    margin: -10px -10px 0 -10px;
+    font-weight: 600;}
