@@ -15,6 +15,8 @@ html {
 #snatched_table             td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #snatched_not_seeding_table td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #seeding_not_snatched_table td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+#downloaded_table           td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+#extlink_table              td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #collections .group.discog td.collicon:nth-child(2) >div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #torrent_table td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) {
     background: none;}
@@ -33,6 +35,13 @@ h2#display_name #groupplatform {
     position: inherit;
     font-size: 21px;
     line-height: 21px;}
+#manage_collage_table #groupplatform {
+    width: unset;
+    height: unset;
+    position: inherit;
+    font-size: 14px;
+    line-height: var(--p-lh);}    
+#manage_collage_table #groupplatform a,
 h2#display_name #groupplatform a {
     background-image: none;
     width: unset;
