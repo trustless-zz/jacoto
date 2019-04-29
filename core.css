@@ -4745,3 +4745,160 @@ span.size5 img {
     padding: 9px 10px;
     margin: -10px -10px 0 -10px;
     font-weight: 600;}
+
+
+
+
+
+/*** User Info Box ***/
+.profile .box_main_info {
+	background: url('../images/smokeybackground.jpg');
+	background-size: cover;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	display: inline-block;}
+
+#user .profile .box_stats .head {
+	font-weight: normal;}
+
+.profile .box_stats .label {
+	display: none;}
+
+.profile .box_stats {
+	display: flex;
+	flex-direction: column;
+	white-space: nowrap;
+	background: none;
+	margin: 0;
+	padding-bottom: 0;}
+
+.profile .box_stats ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -5px 0 0 -15px;
+	}
+
+.profile .box_stats li {
+	flex: auto;
+	line-height: 2em;}
+
+.profile .box_stats ul#small_stats {
+	order: 1;}
+
+.profile .box_stats #small_stats li {
+	width: 50%;
+	float: left;
+	}
+
+.profile .box_stats #hnrs .label {
+	display: inline-block;
+	width: auto;
+	vertical-align: middle;}
+
+.profile .box_stats #hnrs {
+	font-size: 1.1em;
+	padding-left: 20px;
+	margin-left: -40px;}
+
+.profile .box_stats #hnrs a {
+	font-weight: bold;
+	font-size: 1.2em;
+	vertical-align: middle;}
+
+.profile .box_stats #hnrs a.alert {
+	color: #CF0024;}
+
+.profile .box_stats #hnrs a.warn {
+	color: #b49629;}
+
+.profile .box_stats #hnrs a.good {
+	color: #69c077;}
+
+.profile .box_stats #hnrs .stat {
+	padding-left: 0px;}
+
+.profile .box_stats #profile_views {
+	color: var(--grey);
+	text-align: right;
+	padding-top: 2px;
+	background: url("https://gazellegames.net/static/styles/game_room/images/icons/views.png") no-repeat right center;
+	}
+
+.profile .box_stats #profile_views .stat {
+	padding-right: 20px;}
+
+.profile .box_stats ul#online_stats {
+	order: 2;}
+
+.profile .box_stats .status {
+	font-size: 1.8em;}
+
+.profile .box_stats .online {
+	color: var(--darkGreen);}
+
+.profile .box_stats .offline {
+	color: var(--grey);
+	opacity: 0.5;}
+
+.profile .box_stats li#last_seen {
+	flex: 0 0 100%;}
+
+.profile .box_stats #last_seen {
+	color: var(--grey);
+	font-size: 0.8em;
+	opacity: 0.5;
+	margin-top: -10px;}
+
+.profile .box_stats ul#user_stats {
+	order: 3;}
+
+.profile .box_stats #user_stats {
+	font-size: 1.1em;}
+
+.profile .box_stats #user_stats li {
+	width: 50%;
+	float: right}
+
+.profile .box_stats .stat {
+	padding-left: 25px;}
+
+.profile .box_stats #ratio .stat {
+	background: url("https://gazellegames.net/static/styles/game_room/images/icons/ratio.png") no-repeat left center;}
+
+.profile .box_stats #share_score .stat {
+	background: url("https://gazellegames.net/static/styles/game_room/images/icons/share_score.png") no-repeat left center;}
+
+.profile .box_stats #gold .stat {
+	background: url("https://gazellegames.net/static/styles/game_room/images/icons/coins.png") no-repeat left center;}
+
+.profile .box_stats #upload .stat {
+	background: url("https://gazellegames.net/static/styles/game_room/images/icons/sword_upload.png") no-repeat left center;}
+
+.profile .box_stats #download .stat {
+	background: url("https://gazellegames.net/static/styles/game_room/images/icons/shield_down.png") no-repeat left center;}
+
+.profile .box_stats #clan .clan_earth {
+	background: url("https://gazellegames.net/static/common/clans/earth_icon.png") no-repeat left center;}
+
+.profile .box_stats #clan .clan_fire {
+	background: url("https://gazellegames.net/static/common/clans/fire_icon.png") no-repeat left center;}
+
+.profile .box_stats #clan .clan_water {
+	background: url("https://gazellegames.net/static/common/water_icon.png") no-repeat left center;}
+
+.profile .box_stats #clan .clan_wind {
+	background: url("https://gazellegames.net/static/common/clans/wind_icon.png") no-repeat left center;}
+
+.profile .box_stats #clan .stat:after {
+	content: ' Clan';}
+
+.profile .box_stats li#hnrs 			{order: 1;}
+.profile .box_stats li#profile_views 	{order: 2;}
+.profile .box_stats li#online_status 	{order: 3;}
+.profile .box_stats li#irc_status 		{order: 4;}
+.profile .box_stats li#ratio 			{order: 5;}
+.profile .box_stats li#share_score 	    {order: 6;}
+.profile .box_stats li#upload 		    {order: 7;}
+.profile .box_stats li#gold 			{order: 8;}
+.profile .box_stats li#download 		{order: 9;}
+.profile .box_stats li#clan 			{order: 10;}
