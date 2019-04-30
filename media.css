@@ -29,20 +29,22 @@ html {
     background-position: center;}
 #requests .thin >table.border .colhead_dark {
     white-space: nowrap;}
-h2#display_name #groupplatform {
+#wrapper h2 #groupplatform {
     width: unset;
     height: unset;
     position: inherit;
     font-size: 21px;
     line-height: 21px;}
+#wrapper .box.box_artists #groupplatform,
 #manage_collage_table #groupplatform {
     width: unset;
     height: unset;
     position: inherit;
     font-size: 14px;
-    line-height: var(--p-lh);}    
+    line-height: var(--p-lh);}
+#wrapper .box.box_artists #groupplatform a,
 #manage_collage_table #groupplatform a,
-h2#display_name #groupplatform a {
+#wrapper h2 #groupplatform a {
     background-image: none;
     width: unset;
     height: unset;
