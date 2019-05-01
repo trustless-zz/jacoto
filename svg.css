@@ -106,6 +106,10 @@ body {
 }
 
 /** anchor-like hover **/
+a:hover >img[title="Downloaded"],
+a:hover >img[title="Uploaded"],
+a:hover >img[title="Leechers"],
+a:hover >img[title="Seeders"],
 .forum_post tr.likes >td:first-child a:hover,
 .torrent_table #leechers_icon:hover img,
 .torrent_table #seeders_icon:hover img,
@@ -236,7 +240,8 @@ img[title="Gold"],
 #requests_donate img,
 #stats_gold a {
     background-image: url('icons/gold.svg');}
-
+h2#username span#tip_user img {
+    background-image: url('icons/gold_plus.svg');}
 /** download(ed) **/
 #stats_leeching a {
     background-image: url('icons/dark/leeching.svg');}

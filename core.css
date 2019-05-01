@@ -399,7 +399,8 @@ ul {
 #nav_useredit a,
 #requests table.border a[href^="upload.php"],
 #requests_donate tr:nth-child(1),
-#torrents .group_torrent td:not(.edition_info):first-child {
+#torrents .group_torrent td:not(.edition_info):first-child,
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) {
     font-size:0;}
 
 #nav_userinfo a.username {
@@ -673,7 +674,8 @@ img[title="Gold"],
 .forum_post tr.likes >td:first-child a,
 .bbbutt li a,
 tr.likes td[id^="likers_"] >strong,
-.last_read {
+.last_read,
+h2#username span#tip_user img {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -783,7 +785,9 @@ form[name="filter"],
 #staffpm #compose,
 #staffpm .box.vertical_space ~h3 +.box.pad,
 #user .thin >h2:first-child +.center,
-#user .thin >h2:first-child +.center ~table.border {
+#user .thin >h2:first-child +.center ~table.border,
+.thin.torrent_history >form#torrent_history_search ~table,
+.thin.torrent_history >form#torrent_history_search {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -805,7 +809,8 @@ form[name="filter"],
 #inbox #searchbox,
 #rules .thin >form.search_form,
 #collections .thin >h2:first-child +.center,
-#user .thin >h2:first-child +.center {
+#user .thin >h2:first-child +.center,
+.thin.torrent_history >form#torrent_history_search {
     padding: 10px;}
 .sidebar .body {
     padding: 10px 0 0 0;}
@@ -884,7 +889,8 @@ a:hover .ratings,
 #seeding_not_snatched_table td.center.cats_col +td span:first-child a,
 #downloaded_table           td.center.cats_col +td span:first-child a,
 #extlink_table              td.center.cats_col +td span:first-child a,
-#staffpm .linkbox a[onclick] {
+#staffpm .linkbox a[onclick],
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -1439,6 +1445,8 @@ td.center.cats_col +td {
     text-align: center;
     font-size: 13px;
     line-height: var(--p-lh);}
+table#likesrow img,
+table#snatchesrow img,
 #recommended #vanityhouse img {
     width: 100%;
     height: auto;
@@ -1456,14 +1464,20 @@ td.center.cats_col +td {
 .hovereffect,
 #bookmarks #collage_table img,
 #collections #coverart.box li a {
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
     border: var(--p-img-anchor-brdr);}
 
+table#snatchesrow img:hover,
+table#likesrow img:hover,
 #recommended #vanityhouse img:hover,
 .hovereffect:hover,
 #bookmarks #collage_table img:hover,
 #collections #coverart.box li a:hover,
 .similar img:hover {
-    border: var(--p-img-anchor-brdr-hvr);}
+    border: var(--p-img-anchor-brdr-hvr);
+    -webkit-box-shadow: none;
+    box-shadow: none;}
 
 .global_buffs {
     position: fixed !important;
@@ -1802,12 +1816,17 @@ a .error_message:hover:active {
 #torrents .torrent_details .torrent_table .pad.hidden td,
 #torrents .group_torrent td:first-child {
     white-space: normal;}
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
 #collections #torrent_table .group_torrent td[colspan="3"] >a,
 #bookmarks #torrent_table td[colspan="3"] >a,
 #torrents .group_torrent td:first-child >a {
     font-size: 13px;
     line-height: var(--p-lh);
     margin-left: 2px;}
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a {
+    margin: 0;}
+.box.box_requests tr:not(.colhead_dark) td:first-child,
+#requests .thin >table.border tr:not(.colhead_dark) td:first-child,
 #collections #torrent_table .group.discog td[colspan="5"] >strong,
 #torrent_table .group.discog td[colspan="5"] >span:first-child,
 .torrent_table #displayname {
@@ -1851,7 +1870,8 @@ a .error_message:hover:active {
 #snatched_not_seeding_table td.center.cats_col +td span:first-child a,
 #seeding_not_snatched_table td.center.cats_col +td span:first-child a,
 #downloaded_table           td.center.cats_col +td span:first-child a,
-#extlink_table              td.center.cats_col +td span:first-child a {
+#extlink_table              td.center.cats_col +td span:first-child a,
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a {
     margin-right: 3px;
     display: inline-block;}
 .torrent_table .show_torrents .show_torrents_link {
@@ -2171,6 +2191,7 @@ input[type=submit],
 .similar_votes a,
 .box_tags .stats.nobullet div a,
 .profile #requests a[href="javascript:Vote(20)"] strong,
+.profile #requests a[href="javascript:Vote(20971520)"] strong,
 #requests table.border td.nobr:nth-child(2) strong,
 #torrents #requests.request_table #requests_list .requestrows a.brackets,
 a[href="javascript:Vote(20, 1)"] strong,
@@ -2195,6 +2216,7 @@ a[href="javascript:Vote(20, 1)"] strong,
 #upload td#image_block,
 .box_tags .stats.nobullet div a,
 .profile #requests a[href="javascript:Vote(20)"] strong,
+.profile #requests a[href="javascript:Vote(20971520)"] strong,
 #requests table.border td.nobr:nth-child(2) strong,
 a[href="javascript:Vote(20, 1)"] strong,
 .forum_post tr.likes >td:first-child,
@@ -2230,6 +2252,7 @@ tr.likes td[id^="likers_"] >strong,
 #upload td#image_block a,
 #newthreadform #newthreadtext #answer_block a,
 .profile #requests a[href="javascript:Vote(20)"] strong:before,
+.profile #requests a[href="javascript:Vote(20971520)"] strong:before,
 #requests table.border td.nobr:nth-child(2) strong:before,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:before,
 a[href="javascript:Vote(20, 1)"] strong:before,
@@ -2245,6 +2268,7 @@ input[type=button]:hover,
 input[type=submit]:hover,
 .similar_votes a:hover,
 .profile #requests a[href="javascript:Vote(20)"] strong:hover,
+.profile #requests a[href="javascript:Vote(20971520)"] strong:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:hover,
 a[href="javascript:Vote(20, 1)"] strong:hover,
@@ -2258,6 +2282,7 @@ input[type=button]:hover:active,
 input[type=submit]:hover:active,
 .similar_votes a:hover:active,
 .profile #requests a[href="javascript:Vote(20)"] strong:hover:active,
+.profile #requests a[href="javascript:Vote(20971520)"] strong:hover:active,
 #requests table.border td.nobr:nth-child(2) strong:hover:active,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:hover:active,
 a[href="javascript:Vote(20, 1)"] strong:hover:active,
@@ -2564,6 +2589,7 @@ input.hidden,
 .similar_div .head .flright {
     margin: -3px 0 0 0;}
 .profile #requests a[href="javascript:Vote(20)"] strong:before,
+.profile #requests a[href="javascript:Vote(20971520)"] strong:before,
 #requests table.border td.nobr:nth-child(2) strong:before,
 a[href="javascript:Vote(20, 1)"] strong:before,
 .box_tags .stats.nobullet div a:nth-child(2):before,
@@ -2681,13 +2707,21 @@ li:not(.suggested_similar) .similar_votes >span {
 .forum_post .colhead_dark div[style="float: right;"] >a,
 #newthreadpreview .forum_post .colhead_dark #barpreview a,
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="button"],
-#collections table#new_collage input#art +input[type="button"] {
+#collections table#new_collage input#art +input[type="button"],
+.thin.torrent_history >form#torrent_history_search input[type="submit"] {
     vertical-align: bottom;}
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
 #newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(2) {
     font-size: 20px;
     line-height: 0;}
+
+.thin.torrent_history >form#torrent_history_search input#search_query {
+    width: calc(100% - 393px);}
+
+/** hiding an empty column on the 'Hit 'n' Runs' page, but not on the 'Torrent History' page, since it's being used there **/
+.thin.torrent_history .linkbox + table[width="100%"] tr:not([class="colhead nobr"]) td:last-child:empty {
+    display: none;}
 
 .username_badges img {
     max-height: 18px;
@@ -2837,12 +2871,9 @@ textarea {
 textarea:focus {
     outline-width: 1px !important;}
 
-#collections #coverart.box li a,
-#bookmarks #collage_table td img,
 .similar img,
 .screenshots img,
-.sidebar img,
-.hovereffect {
+.sidebar img {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 #bookmarks #collage_table td img:hover,
@@ -2852,6 +2883,7 @@ input[type=submit]:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
 .profile #requests a[href="javascript:Vote(20)"] strong:hover,
+.profile #requests a[href="javascript:Vote(20971520)"] strong:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:hover,
 a[href="javascript:Vote(20, 1)"] strong:hover,
@@ -2860,9 +2892,7 @@ a[href="javascript:Vote(20, 1)"] strong:hover,
 .box_albumart img:hover,
 .sidebar img:hover,
 .userratingdiv img,
-.hovereffect:hover,
-#collections #coverart.box li a:hover,
-#recommended #vanityhouse img:hover {
+.hovereffect:hover {
     -webkit-box-shadow: none;
     box-shadow: none;}
 
@@ -2903,7 +2933,8 @@ h2 {
 #snatched_not_seeding_table tr:not(.colhead):nth-child(odd),
 #seeding_not_snatched_table tr:not(.colhead):nth-child(odd),
 #downloaded_table           tr:not(.colhead):nth-child(odd),
-#extlink_table              tr:not(.colhead):nth-child(odd) {
+#extlink_table              tr:not(.colhead):nth-child(odd),
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(odd) {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
@@ -2920,7 +2951,8 @@ h2 {
 #snatched_not_seeding_table tr:not(.colhead):nth-child(even),
 #seeding_not_snatched_table tr:not(.colhead):nth-child(even),
 #downloaded_table           tr:not(.colhead):nth-child(even),
-#extlink_table              tr:not(.colhead):nth-child(even) {
+#extlink_table              tr:not(.colhead):nth-child(even),
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(even) {
     background-color: var(--c-trowb);}
 .rowa:hover,
 .row_a:hover,
@@ -2938,7 +2970,8 @@ h2 {
 #snatched_not_seeding_table tr:not(.colhead):hover,
 #seeding_not_snatched_table tr:not(.colhead):hover,
 #downloaded_table           tr:not(.colhead):hover,
-#extlink_table              tr:not(.colhead):hover {
+#extlink_table              tr:not(.colhead):hover,
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):hover {
     background-color: var(--c-row-hvr) !important;}
 
 .box_series li {
@@ -3200,7 +3233,8 @@ form[name="filter"] h3 {
 #user .thin >h2 +form#userform,
 .thin >#request_form,
 #user .thin >h2 ~form[method="post"],
-#torrents .thin >h2:first-child +.center {
+#torrents .thin >h2:first-child +.center,
+#user .thin >h2:first-child +.box.pad:last-child {
     margin-top: 12px;}
 input[name="fromyear"],
 input[name="toyear"],
@@ -3710,7 +3744,8 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #collections .sidebar .box.box_comment +.box.pad,
 #collections .sidebar >h3 ~.box.pad,
 #staffpm #inbox >form#messageform,
-#staffpm .box.vertical_space ~h3 +.box.pad form#messageform {
+#staffpm .box.vertical_space ~h3 +.box.pad form#messageform,
+.thin.torrent_history >form#torrent_history_search table#th_search {
     background: none;
     border: none;
     -webkit-box-shadow: none;
@@ -3822,6 +3857,7 @@ input[type="search"],
 #inbox h2 +#messageform >.box.pad {
     padding: 48px 10px 10px 10px;
     position: relative;}
+.thin.torrent_history >form#torrent_history_search:before,
 #user .thin >h2:first-child +.center:before,
 #rules .thin >form.search_form:before,
 #inbox #searchbox:before {
@@ -4114,6 +4150,7 @@ td.center.cats_col {
 #bookmarks #torrent_table .colhead_dark td[width="70%"] strong {
     font-size: 20px;
     line-height: 20px;}
+.thin.torrent_history >form#torrent_history_search td.label,
 #bookmarks #torrent_table .discog span[style="float:left;"] >br:first-child,
 #bookmarks #torrent_table .colhead_dark td[width="70%"] a {
     display: none;}
@@ -4128,7 +4165,10 @@ td.center.cats_col {
 #collections .sidebar form#quickpostform.pad,
 #collections .sidebar .box.box_comment +.box.pad,
 #torrents #requests.request_table tr:not(.colhead) td,
-#user .thin >h2:first-child +.center td {
+#user .thin >h2:first-child +.center td,
+.thin.torrent_history >form#torrent_history_search >.box.pad,
+.thin.torrent_history >form#torrent_history_search td,
+#user .thin >h2:first-child +.box.pad:last-child {
     padding: 0;}
 #torrents #requests.request_table #requests_list tr:first-child td.label {
     width: auto !important;
@@ -4348,7 +4388,8 @@ abbr {
 #rules .thin >.before_rules li ul li strong {
     font-weight: 600;}
 #collections #torrent_table .colhead strong,
-#rules .thin >.before_rules li ul ul li strong {
+#rules .thin >.before_rules li ul ul li strong,
+#user .thin >h2:first-child +.box.pad:last-child td strong {
     font-weight: normal;}
 #rules .thin >#actual_rules .before_rules h2 {
     margin: 0;
@@ -4356,8 +4397,9 @@ abbr {
 #collections table#new_collage td.label,
 #collections .thin >h2:first-child +.center td.label {
     width: 75px;}
+.thin.torrent_history >form#torrent_history_search ~table tr.colhead.nobr td:nth-child(n+3):not(:nth-child(11)),
 #requests table.border .colhead_dark td:nth-last-child(3) strong {
-    font-size: 16px;}
+    font-size: 15px;}
 
 .last_read {
     margin: 3px 0 3px 8px;
@@ -4442,6 +4484,37 @@ abbr {
     font-weight: normal;
     font-size: 14px;
     line-height: var(--p-lh);}
+
+.nobr {
+    white-space: nowrap;}
+#user .thin >h2:first-child +.box.pad:last-child .colhead td:last-child {
+    padding: 0 5px;}
+
+h2#username span#tip_user img {
+    padding-left: 32px;
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;}
+
+table#snatchesrow tbody,
+table#likesrow tbody {
+    display: block;
+    padding: 5px;}
+table#snatchesrow tr,
+table#likesrow tr {
+    display: flex;
+    width: 100%;}
+table#snatchesrow td,
+table#likesrow td {
+    padding: 0;
+    margin: 5px;
+    display: block;
+    width: 100%;
+    height: auto;
+    align-self: center;}
+table#snatchesrow a,
+table#likesrow a {
+    display: block;}
 
 
 .forum_post .user_title img {
@@ -4821,8 +4894,7 @@ span.size5 img {
 	color: var(--grey);
 	text-align: right;
 	padding-top: 2px;
-	background: url("https://gazellegames.net/static/styles/game_room/images/icons/views.png") no-repeat right center;
-	}
+	background: url("https://gazellegames.net/static/styles/game_room/images/icons/views.png") no-repeat right center;}
 
 .profile .box_stats #profile_views .stat {
 	padding-right: 20px;}

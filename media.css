@@ -42,6 +42,13 @@ html {
     position: inherit;
     font-size: 14px;
     line-height: var(--p-lh);}
+#wrapper .box.box_requests #groupplatform {
+    width: unset;
+    height: unset;
+    position: inherit;
+    font-size: 15px;
+    line-height: var(--p-lh);}
+#wrapper .box.box_requests #groupplatform a,
 #wrapper .box.box_artists #groupplatform a,
 #manage_collage_table #groupplatform a,
 #wrapper h2 #groupplatform a {
