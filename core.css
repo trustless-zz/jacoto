@@ -413,7 +413,7 @@ b, strong {
 ul, ol {
     margin-bottom: 0px;}
 .sidebar .box_series ul,
-ul.postlist {
+.postlist {
     margin-top: .3571428571428571em;}
 li:first-of-type {
     padding-top: 0px;}
@@ -787,7 +787,8 @@ form[name="filter"],
 #user .thin >h2:first-child +.center,
 #user .thin >h2:first-child +.center ~table.border,
 .thin.torrent_history >form#torrent_history_search ~table,
-.thin.torrent_history >form#torrent_history_search {
+.thin.torrent_history >form#torrent_history_search,
+#todo .thin >form {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -1188,7 +1189,8 @@ strong.important_text,
 .sidebar span[style="color:red;font-weight:700;"],
 #reportsv2 font[color="red"],
 #index span[style="color: red;"],
-#upload #content >div >table[style] span[style="color:red;font-weight:700;"] {
+#upload #content >div >table[style] span[style="color:red;font-weight:700;"],
+.wiki_article span[style="color:red;font-weight:700;"]{
     color: var(--c-red) !important;}
 #index span[style="color: orange;"] {
     color: var(--c-orange) !important;
@@ -3103,6 +3105,7 @@ img[src="static/common/thumbsup.png"],
     margin-bottom: -4px;}
 
 /** table padding with no container (this is horrible) **/
+#todo .thin >form tr:not(.colhead) td:first-child,
 #forums .forums_search .search_form >table.layout.border >tbody >tr >td:first-child,
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:first-child,
 #reportsv2 #dynamic_form >table.border td:first-child,
@@ -3113,6 +3116,7 @@ img[src="static/common/thumbsup.png"],
 .thin >#request_form >table td:first-child,
 #requests .main_column >table:first-child td:first-child {
     padding-left: 10px;}
+#todo .thin >form tr:not(.colhead) td:last-child,
 #forums .forums_search .search_form >table.layout.border >tbody >tr >td:last-child,
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:last-child,
 #reportsv2 #dynamic_form >table.border td:last-child,
@@ -3123,6 +3127,7 @@ img[src="static/common/thumbsup.png"],
 .thin >#request_form >table td:last-child,
 #requests .main_column >table:first-child td:last-child {
     padding-right: 10px;}
+#todo .thin >form tr:nth-child(2) td,
 #user .thin >h2 +form#userform >table.border .colhead_dark +tr td,
 #reportsv2 #dynamic_form >table.border tr:first-child td,
 #upload #dynamic_form + table.border.slice tr:first-child td,
@@ -3132,6 +3137,7 @@ img[src="static/common/thumbsup.png"],
 #upload #torrent_properties tr:nth-child(2) td,
 .thin >#request_form >table tr:nth-child(2) td {
     padding-top: 10px;}
+#todo .thin >form tr:last-child td,
 #forums .forums_search .search_form >table.layout.border >tbody >tr:last-child >td,
 #user .thin >h2 +form#userform >table.border tr:last-child td,
 #upload #dynamic_form + table.border.slice tr:last-child td,
@@ -3179,6 +3185,7 @@ form[name="filter"] h3,
     line-height: 20px;
     padding: 9px 10px;
     margin: -10px -10px 10px -10px;}
+#user .thin >h2:first-child +.box.pad:nth-last-of-type(2) p:last-child,
 #staffpm #inbox >form#messageform >h3,
 #forums .linkbox.linkbox_bottom +br +h3,
 form[name="filter"] h3 {
@@ -3234,7 +3241,8 @@ form[name="filter"] h3 {
 .thin >#request_form,
 #user .thin >h2 ~form[method="post"],
 #torrents .thin >h2:first-child +.center,
-#user .thin >h2:first-child +.box.pad:last-child {
+#user .thin >h2:first-child +.box.pad:last-child,
+#user .thin >h2:first-child +.box.pad:nth-last-of-type(2) {
     margin-top: 12px;}
 input[name="fromyear"],
 input[name="toyear"],
@@ -4168,7 +4176,8 @@ td.center.cats_col {
 #user .thin >h2:first-child +.center td,
 .thin.torrent_history >form#torrent_history_search >.box.pad,
 .thin.torrent_history >form#torrent_history_search td,
-#user .thin >h2:first-child +.box.pad:last-child {
+#user .thin >h2:first-child +.box.pad:last-child,
+#user .thin >h2:first-child +.box.pad:nth-last-of-type(2) +.box.pad {
     padding: 0;}
 #torrents #requests.request_table #requests_list tr:first-child td.label {
     width: auto !important;
@@ -4385,11 +4394,13 @@ input[class="date_picker"] {
 
 abbr {
     cursor: help;}
+#todo .thin >form .colhead td,
 #rules .thin >.before_rules li ul li strong {
     font-weight: 600;}
 #collections #torrent_table .colhead strong,
 #rules .thin >.before_rules li ul ul li strong,
-#user .thin >h2:first-child +.box.pad:last-child td strong {
+#user .thin >h2:first-child +.box.pad:last-child td strong,
+#user #sessions_table .colhead strong {
     font-weight: normal;}
 #rules .thin >#actual_rules .before_rules h2 {
     margin: 0;
@@ -4397,7 +4408,7 @@ abbr {
 #collections table#new_collage td.label,
 #collections .thin >h2:first-child +.center td.label {
     width: 75px;}
-.thin.torrent_history >form#torrent_history_search ~table tr.colhead.nobr td:nth-child(n+3):not(:nth-child(11)),
+.thin.torrent_history >form#torrent_history_search ~table tr.colhead.nobr td:nth-child(n+3):not(:nth-child(4)):not(:nth-child(11)),
 #requests table.border .colhead_dark td:nth-last-child(3) strong {
     font-size: 15px;}
 
@@ -4487,6 +4498,7 @@ abbr {
 
 .nobr {
     white-space: nowrap;}
+#user #sessions_table .colhead td:last-child,
 #user .thin >h2:first-child +.box.pad:last-child .colhead td:last-child {
     padding: 0 5px;}
 
@@ -4515,6 +4527,26 @@ table#likesrow td {
 table#snatchesrow a,
 table#likesrow a {
     display: block;}
+
+#user .thin >h2:first-child +.box.pad:nth-last-of-type(2):before {
+    content: 'Note';
+    text-align: left;
+    display: block;
+    margin: -10px -10px 10px -10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    padding: 9px 10px;
+    z-index: 99;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    background: var(--p-head-grdnt);}
+#todo .thin >form tr:not(.colhead):not(:last-child) td:first-child {
+    text-align: right;
+    width: 100px;}
+
 
 
 .forum_post .user_title img {
@@ -4793,8 +4825,8 @@ span.size5 img {
 .wiki_index span.size5 strong,
 .wiki_index span.size4 strong {
 	border-bottom: var(--p-table-brdr);	}
-#wiki .postlist {
-	margin: 0;}
+/* #wiki .postlist {
+	margin: 0;} */
 #wiki.wiki_index .wiki_article .postlist {
 	margin: 0 0 20px 0;	}
 #wiki .box {
