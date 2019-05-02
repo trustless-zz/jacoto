@@ -24,6 +24,8 @@
     --c-b2: 							rgb(81, 204, 165);
     --c-b3: 							rgb(142, 225, 222);                     /*~45%*/
     --c-b4: 							rgb(170, 226, 209);                     /*~45%*/
+    --c-sb1:                            rgb(191, 225, 223);                     /*body+b 10,3rd*/
+    --c-sb2:                            rgb(203, 225, 218);
     --c-hovereffect: 					rgba(255, 255, 255, .8);
     --c-b00: 							rgba(255, 255, 255, 0);
     --c-anchor: 						rgb(11, 122, 118);						/* #bd002c */
@@ -70,7 +72,7 @@
     --p-unread-stripe:                  4px solid var(--c-b3);
     --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b00), var(--c-anchor)), linear-gradient(to right, var(--c-b1), var(--c-b2));
     --p-colhead-tr-bcg: 				var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
-    --p-subcolhead:                     var(--c-body) linear-gradient(155deg,var(--c-body),var(--c-edition));
+    --p-subcolhead:                     var(--c-sb1) linear-gradient(155deg,var(--c-sb1),var(--c-sb2));
     --p-post-colhead-bcg:               var(--c-table-brdr) linear-gradient(155deg,var(--c-table-brdr),var(--c-body));
     --p-sticky-colhead-bcg:             var(--c-input-brdr) linear-gradient(155deg,var(--c-input-brdr),var(--c-sticky-2));
     --p-colhead-tr-bcg-hvr:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-box));
@@ -795,9 +797,10 @@ form[name="filter"],
 .thin.torrent_history >form#torrent_history_search,
 #todo .thin >form,
 #top10 .thin >.center,
-#top10 .thin >div >table.border,
+#top10 .thin >.linkbox ~div:not(.center),
 #clan_stats table,
-#artist .thin h2:first-child +table.border {
+#artist .thin h2:first-child +table.border,
+#stats #content >.box {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -821,7 +824,8 @@ form[name="filter"],
 #collections .thin >h2:first-child +.center,
 #user .thin >h2:first-child +.center,
 .thin.torrent_history >form#torrent_history_search,
-#top10 .thin >.center {
+#top10 .thin >.center,
+#stats #content >.box.center.chart{
     padding: 10px;}
 .sidebar .body {
     padding: 10px 0 0 0;}
@@ -2215,12 +2219,10 @@ input[type=button],
 input[type=submit],
 .similar_votes a,
 .box_tags .stats.nobullet div a,
-#artist a[href^="javascript:IndexVote("] strong,
-.profile #requests a[href="javascript:Vote(20)"] strong,
-.profile #requests a[href="javascript:Vote(20971520)"] strong,
+a[href^="javascript:IndexVote("] strong,
+a[href^="javascript:Vote("] strong,
 #requests table.border td.nobr:nth-child(2) strong,
 #torrents #requests.request_table #requests_list .requestrows a.brackets,
-a[href="javascript:Vote(20, 1)"] strong,
 #upload td#image_block a,
 #newthreadform #newthreadtext #answer_block a {
     font-size: 14px;
@@ -2241,11 +2243,9 @@ a[href="javascript:Vote(20, 1)"] strong,
 #newthreadform #newthreadtext #answer_block,
 #upload td#image_block,
 .box_tags .stats.nobullet div a,
-#artist a[href^="javascript:IndexVote("] strong,
-.profile #requests a[href="javascript:Vote(20)"] strong,
-.profile #requests a[href="javascript:Vote(20971520)"] strong,
+a[href^="javascript:IndexVote("] strong,
+a[href^="javascript:Vote("] strong,
 #requests table.border td.nobr:nth-child(2) strong,
-a[href="javascript:Vote(20, 1)"] strong,
 .forum_post tr.likes >td:first-child,
 tr.likes td[id^="likers_"] >strong,
 #inbox #searchbox,
@@ -2278,12 +2278,10 @@ tr.likes td[id^="likers_"] >strong,
     margin-bottom: 2px;}
 #upload td#image_block a,
 #newthreadform #newthreadtext #answer_block a,
-#artist a[href^="javascript:IndexVote("] strong:before,
-.profile #requests a[href="javascript:Vote(20)"] strong:before,
-.profile #requests a[href="javascript:Vote(20971520)"] strong:before,
+a[href^="javascript:IndexVote("] strong:before,
+a[href^="javascript:Vote("] strong:before,
 #requests table.border td.nobr:nth-child(2) strong:before,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:before,
-a[href="javascript:Vote(20, 1)"] strong:before,
 .box_tags .stats.nobullet div a:before {
     font-size: 18px;
     line-height: 14px;}
@@ -2295,12 +2293,10 @@ button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
 .similar_votes a:hover,
-#artist a[href^="javascript:IndexVote("] strong:hover,
-.profile #requests a[href="javascript:Vote(20)"] strong:hover,
-.profile #requests a[href="javascript:Vote(20971520)"] strong:hover,
+a[href^="javascript:IndexVote("] strong:hover,
+a[href^="javascript:Vote("] strong:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:hover,
-a[href="javascript:Vote(20, 1)"] strong:hover,
 .box_tags .stats.nobullet div a:hover,
 #upload td#image_block a:hover,
 #newthreadform #newthreadtext #answer_block a:hover {
@@ -2310,12 +2306,10 @@ button:hover:active,
 input[type=button]:hover:active,
 input[type=submit]:hover:active,
 .similar_votes a:hover:active,
-#artist a[href^="javascript:IndexVote("] strong:hover:active,
-.profile #requests a[href="javascript:Vote(20)"] strong:hover:active,
-.profile #requests a[href="javascript:Vote(20971520)"] strong:hover:active,
+a[href^="javascript:IndexVote("] strong:hover:active,
+a[href^="javascript:Vote("] strong:hover:active,
 #requests table.border td.nobr:nth-child(2) strong:hover:active,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:hover:active,
-a[href="javascript:Vote(20, 1)"] strong:hover:active,
 .box_tags .stats.nobullet div a:hover:active,
 #upload td#image_block a:hover:active,
 #newthreadform #newthreadtext #answer_block a:hover:active {
@@ -2577,7 +2571,8 @@ input.hidden,
 #staffpm .box.vertical_space ~h3 +.box.pad >br,
 #staffpm #inbox >form#messageform >br,
 #user .thin >h2:first-child +.center td.label,
-#top10 .thin >.center td.label {
+#top10 .thin >.center td.label,
+.thin.top10_tags br {
     display: none;}
 
 .similar {
@@ -2597,6 +2592,7 @@ input.hidden,
     width: calc(20% - 10px);
     margin: 0 10px 10px 0;
     align-self: center;}
+#content >a:first-child,
 .similar li >a {
     display: contents;}
 .similar img {
@@ -2620,11 +2616,9 @@ input.hidden,
     justify-content: center;}
 .similar_div .head .flright {
     margin: -3px 0 0 0;}
-#artist a[href^="javascript:IndexVote("] strong:before,
-.profile #requests a[href="javascript:Vote(20)"] strong:before,
-.profile #requests a[href="javascript:Vote(20971520)"] strong:before,
+a[href^="javascript:IndexVote("] strong:before,
+a[href^="javascript:Vote("] strong:before,
 #requests table.border td.nobr:nth-child(2) strong:before,
-a[href="javascript:Vote(20, 1)"] strong:before,
 .box_tags .stats.nobullet div a:nth-child(2):before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(1):before {
     content: '+';}
@@ -2691,17 +2685,19 @@ li:not(.suggested_similar) .similar_votes >span {
     clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));}
 
 .box_gold #box_gold_scrollbar tr:not(.colhead) td.label {
-    background-color: var(--c-body);}
+    background-color: var(--c-sb1);}
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
 .forum_post .colhead_dark {
     background: var(--p-post-colhead-bcg);}
+#top10 .thin >.linkbox ~div:not(.center) >table.border .colhead,
 #artist .main_column table .colhead,
 #artist .main_column table .colhead_dark,
 .box_gold #box_gold_scrollbar .colhead,
 .box_requests #requests .colhead_dark,
 #staffpm #inbox >form#messageform .colhead,
-#torrents #requests.request_table #requests_list tr:first-child {
+#torrents #requests.request_table #requests_list tr:first-child,
+#rules h3#jump +.box.pad .colhead {
     background: var(--p-subcolhead);}
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
@@ -2710,12 +2706,14 @@ li:not(.suggested_similar) .similar_votes >span {
     font-size: 14px;
     line-height: 19px;
     padding: 6px 5px 7px 5px;}
+#top10 .thin >.linkbox ~div:not(.center) >table.border .colhead td,
 #artist .main_column table .colhead td,
 #artist .main_column table .colhead_dark td,
 .box_gold #box_gold_scrollbar .colhead td,
 .box_requests #requests .colhead_dark td,
 #staffpm #inbox >form#messageform .colhead td,
-#torrents #requests.request_table #requests_list tr:first-child td.label  {
+#torrents #requests.request_table #requests_list tr:first-child td.label,
+#rules h3#jump +.box.pad .colhead td {
     font-weight: normal;
     position: relative;
     font-size: 15px;
@@ -2920,12 +2918,10 @@ input[type=button]:hover,
 input[type=submit]:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
-#artist a[href^="javascript:IndexVote("] strong:hover,
-.profile #requests a[href="javascript:Vote(20)"] strong:hover,
-.profile #requests a[href="javascript:Vote(20971520)"] strong:hover,
+a[href^="javascript:IndexVote("] strong:hover,
+a[href^="javascript:Vote("] strong:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:hover,
-a[href="javascript:Vote(20, 1)"] strong:hover,
 .similar img:hover,
 .screenshots img:hover,
 .box_albumart img:hover,
@@ -2947,8 +2943,7 @@ a[href="javascript:Vote(20, 1)"] strong:hover,
 
 h2 {
     padding: 0;
-    margin: 0;
-    margin-left: 10px;
+    margin: 0 0 0 10px;
     font-size: 21px;
     line-height: 21px;
     height: auto;
@@ -2957,8 +2952,7 @@ h2 {
 
 h3 {
     padding: 0;
-    margin: 5px 0 12px 0;
-    margin-left: 10px;
+    margin: 5px 0 12px 10px;
     font-size: 17px;
     line-height: 17px;
     height: auto;
@@ -3098,10 +3092,13 @@ img[src="static/common/thumbsup.png"],
 #requests_donate tr:nth-child(1) a {
     line-height: var(--p-lh);
     font-weight: bold;
+    float: right;
+    /*line-height: var(--p-lh);
+    font-weight: bold;
     margin-top: -5px;
     display: block;
     width: fit-content;
-    margin-bottom: -20px;}
+    margin-bottom: -20px;*/}
 #requests_donate #gold_donation {
     width: calc(100% - 95px);
     margin-bottom: 8px;}
@@ -3216,6 +3213,8 @@ img[src="static/common/thumbsup.png"],
     padding-top: 13px;}
 
 /** convert ... to head **/
+#top10 .thin >.linkbox ~div:not(.center) >h3,
+#stats #content >.box >h1,
 #staffpm .box.vertical_space ~h3,
 #staffpm #inbox >form#messageform >h3,
 #staff .thin >.box.pad >h3:first-of-type,
@@ -3237,6 +3236,8 @@ img[src="static/common/thumbsup.png"],
 form[name="filter"] h3,
 #request_comments #reply_box h3,
 #forums .linkbox.linkbox_bottom +br +h3 {
+    text-align: left;
+    width: 100%;
     font-weight: 600;
     background: var(--p-head-grdnt);
     font-size: 20px !important;
@@ -3252,6 +3253,9 @@ form[name="filter"] h3 {
     margin: 15px 0 0 0;}
 #staff .thin >.box.pad >h3:first-of-type {
     margin: -10px -10px 0 -10px;}
+#top10 .thin >.linkbox ~div:not(.center) >h3 {
+    margin: 0;
+    width: calc(100% - 20px);}
 #staff .thin >.box.pad >h3:first-of-type ~h3 {
     font-weight: 600;
     margin: 10px 0 8px 5px;}
@@ -3948,6 +3952,8 @@ input[type="search"],
     font-weight: 600;
     line-height: 20px;
     background: var(--p-head-grdnt);}
+.thin.torrent_history >form#torrent_history_search:before {
+    content: 'Search by Torrent Name';}
 #user .thin >h2:first-child +.center input[type="text"] {
     width: calc(100% - 105px);}
 #inbox #messageform table ~input {
@@ -4286,6 +4292,7 @@ td.center.cats_col {
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
+#requests .thin >.center.box.pad:before,
 #top10 .thin >.center:before,
 #collections .thin >h2:first-child +.center:before {
     text-align: left;
@@ -4639,8 +4646,10 @@ table#likesrow a {
 .thin.top10_tags .linkbox +#ut:last-of-type,
 .thin.top10_tags .linkbox {
     width: 100%;}
-.thin.top10_tags #ut {
-    width: calc(100% / 3 - 30px);}
+.thin.top10_tags #ut,
+.thin.top10_tags #ur,
+.thin.top10_tags #v {
+    width: calc(100% / 3 - 12px);}
 
 /** going with absolute because flex needs containers **/
 .clan_stat_totals:after {
@@ -4721,6 +4730,9 @@ table#likesrow a {
     padding: 10px 0 0 0 !important;}
 #artist .sidebar ul.stats.nobullet {
     margin-bottom: 0;}
+
+#rules h3#jump +.box.pad {
+    padding: 38px 0 0 0 !important;}
 
 
 
