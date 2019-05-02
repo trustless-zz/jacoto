@@ -402,7 +402,8 @@ ul {
 #requests_donate tr:nth-child(1),
 #torrents .group_torrent td:not(.edition_info):first-child,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2),
-#top10 td.center.cats_col +td >span {
+#top10 td.center.cats_col +td >span,
+#artist #torrent_table .group_torrent td[colspan="2"] {
     font-size:0;}
 
 #nav_userinfo a.username {
@@ -795,7 +796,8 @@ form[name="filter"],
 #todo .thin >form,
 #top10 .thin >.center,
 #top10 .thin >div >table.border,
-#clan_stats table {
+#clan_stats table,
+#artist .thin h2:first-child +table.border {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -889,6 +891,7 @@ a:hover .ratings,
 #forums #forum_search_cat_list td.forum_cat a,
 #collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
 .last_read a,
+#artist #torrent_table .group_torrent td[colspan="2"] >span:first-child a,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child a,
 #uploaded_table             td.center.cats_col +td span:first-child a,
 #seeding_table              td.center.cats_col +td span:first-child a,
@@ -1801,6 +1804,7 @@ a .error_message:hover:active {
 
 .torrent_table {
     width: 100%;}
+#artist #torrent_table tr.group,
 #torrent_table .group.discog,
 .torrent_table .group.rowa {
     background-color: var(--c-body);}
@@ -1827,11 +1831,12 @@ a .error_message:hover:active {
 #torrents .group_torrent td:first-child {
     white-space: normal;}
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
+#artist #torrent_table .group_torrent td[colspan="2"] >a,
 #collections #torrent_table .group_torrent td[colspan="3"] >a,
 #bookmarks #torrent_table td[colspan="3"] >a,
 #torrents .group_torrent td:first-child >a {
     font-size: 13px;
-    line-height: var(--p-lh);
+    line-height: 18px;
     margin-left: 2px;}
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a {
     margin: 0;}
@@ -1841,7 +1846,8 @@ a .error_message:hover:active {
 #requests .thin >table.border tr:not(.colhead_dark) td:first-child,
 #collections #torrent_table .group.discog td[colspan="5"] >strong,
 #torrent_table .group.discog td[colspan="5"] >span:first-child,
-.torrent_table #displayname {
+.torrent_table #displayname,
+#artist #torrent_table tr.group >td.center +td {
     font-size: 15px;
     line-height: var(--p-lh);}
 .torrent_table .show_torrents,
@@ -1854,9 +1860,11 @@ a .error_message:hover:active {
     width: 20px;
     background-size: contain;
     cursor: default;}
+#artist #torrent_table .group_torrent >td:not(.edition_info),
 #collections #torrent_table .group_torrent >td:not(.edition_info),
 #bookmarks #torrent_table tr.group_torrent td:not(.edition_info) {
     padding: 4px 5px;}
+#artist #torrent_table .group_torrent >td:not(.edition_info):not(:first-child),
 #collections #torrent_table .group_torrent >td:not(.edition_info):not(:first-child),
 #bookmarks #torrent_table tr.group_torrent td:not(.edition_info):not(:first-child),
 .torrent_details .torrent_table tbody[id*="edition_"] .group_torrent td,
@@ -1865,6 +1873,7 @@ a .error_message:hover:active {
     font-size: 13px;
     line-height: var(--p-lh);}
 #top10 td.center.cats_col +td >span a,
+#artist #torrent_table .group_torrent td[colspan="2"] >span:first-child,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child,
 #bookmarks #torrent_table td[colspan="3"] >span:first-child,
 .torrent_details .group_torrent td:first-child span,
@@ -1875,6 +1884,7 @@ a .error_message:hover:active {
 #bookmarks #torrent_table td[colspan="3"] >span:first-child a,
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child >a,
+#artist #torrent_table .group_torrent td[colspan="2"] >span:first-child a,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child a,
 #uploaded_table             td.center.cats_col +td span:first-child a,
 #seeding_table              td.center.cats_col +td span:first-child a,
@@ -2205,6 +2215,7 @@ input[type=button],
 input[type=submit],
 .similar_votes a,
 .box_tags .stats.nobullet div a,
+#artist a[href^="javascript:IndexVote("] strong,
 .profile #requests a[href="javascript:Vote(20)"] strong,
 .profile #requests a[href="javascript:Vote(20971520)"] strong,
 #requests table.border td.nobr:nth-child(2) strong,
@@ -2230,6 +2241,7 @@ a[href="javascript:Vote(20, 1)"] strong,
 #newthreadform #newthreadtext #answer_block,
 #upload td#image_block,
 .box_tags .stats.nobullet div a,
+#artist a[href^="javascript:IndexVote("] strong,
 .profile #requests a[href="javascript:Vote(20)"] strong,
 .profile #requests a[href="javascript:Vote(20971520)"] strong,
 #requests table.border td.nobr:nth-child(2) strong,
@@ -2266,6 +2278,7 @@ tr.likes td[id^="likers_"] >strong,
     margin-bottom: 2px;}
 #upload td#image_block a,
 #newthreadform #newthreadtext #answer_block a,
+#artist a[href^="javascript:IndexVote("] strong:before,
 .profile #requests a[href="javascript:Vote(20)"] strong:before,
 .profile #requests a[href="javascript:Vote(20971520)"] strong:before,
 #requests table.border td.nobr:nth-child(2) strong:before,
@@ -2282,6 +2295,7 @@ button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
 .similar_votes a:hover,
+#artist a[href^="javascript:IndexVote("] strong:hover,
 .profile #requests a[href="javascript:Vote(20)"] strong:hover,
 .profile #requests a[href="javascript:Vote(20971520)"] strong:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
@@ -2296,6 +2310,7 @@ button:hover:active,
 input[type=button]:hover:active,
 input[type=submit]:hover:active,
 .similar_votes a:hover:active,
+#artist a[href^="javascript:IndexVote("] strong:hover:active,
 .profile #requests a[href="javascript:Vote(20)"] strong:hover:active,
 .profile #requests a[href="javascript:Vote(20971520)"] strong:hover:active,
 #requests table.border td.nobr:nth-child(2) strong:hover:active,
@@ -2605,6 +2620,7 @@ input.hidden,
     justify-content: center;}
 .similar_div .head .flright {
     margin: -3px 0 0 0;}
+#artist a[href^="javascript:IndexVote("] strong:before,
 .profile #requests a[href="javascript:Vote(20)"] strong:before,
 .profile #requests a[href="javascript:Vote(20971520)"] strong:before,
 #requests table.border td.nobr:nth-child(2) strong:before,
@@ -2680,6 +2696,8 @@ li:not(.suggested_similar) .similar_votes >span {
 #inbox .box.vertical_space .head,
 .forum_post .colhead_dark {
     background: var(--p-post-colhead-bcg);}
+#artist .main_column table .colhead,
+#artist .main_column table .colhead_dark,
 .box_gold #box_gold_scrollbar .colhead,
 .box_requests #requests .colhead_dark,
 #staffpm #inbox >form#messageform .colhead,
@@ -2692,10 +2710,13 @@ li:not(.suggested_similar) .similar_votes >span {
     font-size: 14px;
     line-height: 19px;
     padding: 6px 5px 7px 5px;}
+#artist .main_column table .colhead td,
+#artist .main_column table .colhead_dark td,
 .box_gold #box_gold_scrollbar .colhead td,
 .box_requests #requests .colhead_dark td,
 #staffpm #inbox >form#messageform .colhead td,
 #torrents #requests.request_table #requests_list tr:first-child td.label  {
+    font-weight: normal;
     position: relative;
     font-size: 15px;
     line-height: 20px;
@@ -2899,6 +2920,7 @@ input[type=button]:hover,
 input[type=submit]:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
+#artist a[href^="javascript:IndexVote("] strong:hover,
 .profile #requests a[href="javascript:Vote(20)"] strong:hover,
 .profile #requests a[href="javascript:Vote(20971520)"] strong:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
@@ -3279,7 +3301,8 @@ form[name="filter"] h3 {
 #torrents .thin >h2:first-child +.center,
 #user .thin >h2:first-child +.box.pad:last-child,
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2),
-.clan_stat_totals h2:first-child +.large_progress_bar {
+.clan_stat_totals h2:first-child +.large_progress_bar,
+#artist .thin h2:first-child +table.border {
     margin-top: 12px;}
 input[name="fromyear"],
 input[name="toyear"],
@@ -3523,7 +3546,8 @@ tr.likes td[id^="likers_"]:hover {
 #newthreadpreview div#pollpreview:after,
 #newthreadpreview .avatar >div:first-child:after,
 #quickreplypreview .avatar >div:first-child:after,
-#forums .thin >.box.thin.clear:after {
+#forums .thin >.box.thin.clear:after,
+#artist td.edition_info:before {
     content: none !important;}
 #forums .forum_post .avatar:hover >div:first-child:after {
     background-size: 10px 10px;
@@ -3792,7 +3816,8 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #collections .sidebar >h3 ~.box.pad,
 #staffpm #inbox >form#messageform,
 #staffpm .box.vertical_space ~h3 +.box.pad form#messageform,
-.thin.torrent_history >form#torrent_history_search table#th_search {
+.thin.torrent_history >form#torrent_history_search table#th_search,
+#artist .main_column table {
     background: none;
     border: none;
     -webkit-box-shadow: none;
@@ -4447,7 +4472,8 @@ abbr {
 #rules .thin >.before_rules li ul ul li strong,
 #user .thin >h2:first-child +.box.pad:last-child td strong,
 #user #sessions_table .colhead strong,
-#top10 .thin >div >table.border .colhead strong {
+#top10 .thin >div >table.border .colhead strong,
+#artist .main_column table .colhead_dark strong {
     font-weight: normal;}
 #rules .thin >#actual_rules .before_rules h2 {
     margin: 0;
@@ -4689,7 +4715,12 @@ table#likesrow a {
     position: absolute;
     top: 460px;
     right: 0;}
-/** /going with absolute because flex needs containers **/
+/** /going with position:absolute because display:flex needs containers **/
+
+#artist .sidebar >.box:first-child >div:last-child {
+    padding: 10px 0 0 0 !important;}
+#artist .sidebar ul.stats.nobullet {
+    margin-bottom: 0;}
 
 
 
