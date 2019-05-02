@@ -53,6 +53,7 @@
     --p-head-grdnt: 					var(--c-b3) linear-gradient(155deg,var(--c-b3),var(--c-b4));
     --p-header-shdw: 					0 0 4px var(--c-header-shdw);
     --p-main-shdw:						0 0 4px var(--c-main-shdw);
+    --p-top-brdr:                       1px solid var(--c-edition);
     --p-main-brdr:						1px solid var(--c-main-brdr);
     --p-table-brdr: 					1px solid var(--c-table-brdr);
     --p-input-brdr: 					1px solid var(--c-input-brdr);
@@ -400,7 +401,8 @@ ul {
 #requests table.border a[href^="upload.php"],
 #requests_donate tr:nth-child(1),
 #torrents .group_torrent td:not(.edition_info):first-child,
-.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) {
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2),
+#top10 td.center.cats_col +td >span {
     font-size:0;}
 
 #nav_userinfo a.username {
@@ -517,6 +519,8 @@ tr.unreadpm td:first-child {
 #searchbars ul li {
     width: 100%;
     padding: 0 7px;}
+#top10 .thin.top10_torrents >div >table.border td:nth-child(3),
+#top10 .thin.top10_games >div >table.border td:nth-child(3),
 #rules .thin >form.search_form input#search_string,
 #inbox #messageform #quickpost .comp input[type="text"],
 #inbox h2 +#messageform textarea#quickpost,
@@ -788,7 +792,10 @@ form[name="filter"],
 #user .thin >h2:first-child +.center ~table.border,
 .thin.torrent_history >form#torrent_history_search ~table,
 .thin.torrent_history >form#torrent_history_search,
-#todo .thin >form {
+#todo .thin >form,
+#top10 .thin >.center,
+#top10 .thin >div >table.border,
+#clan_stats table {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -811,7 +818,8 @@ form[name="filter"],
 #rules .thin >form.search_form,
 #collections .thin >h2:first-child +.center,
 #user .thin >h2:first-child +.center,
-.thin.torrent_history >form#torrent_history_search {
+.thin.torrent_history >form#torrent_history_search,
+#top10 .thin >.center {
     padding: 10px;}
 .sidebar .body {
     padding: 10px 0 0 0;}
@@ -1827,6 +1835,8 @@ a .error_message:hover:active {
     margin-left: 2px;}
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a {
     margin: 0;}
+#top10 .group_torrent td:first-child,
+#top10 td.center.cats_col +td >strong,
 .box.box_requests tr:not(.colhead_dark) td:first-child,
 #requests .thin >table.border tr:not(.colhead_dark) td:first-child,
 #collections #torrent_table .group.discog td[colspan="5"] >strong,
@@ -1854,6 +1864,7 @@ a .error_message:hover:active {
     padding: 4px 5px;
     font-size: 13px;
     line-height: var(--p-lh);}
+#top10 td.center.cats_col +td >span a,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child,
 #bookmarks #torrent_table td[colspan="3"] >span:first-child,
 .torrent_details .group_torrent td:first-child span,
@@ -1887,6 +1898,8 @@ a .error_message:hover:active {
     position: relative;
     border-right: var(--p-table-brdr);
     /* box-shadow: var(--p-show-hide-brdr-shdw); */}
+#top10 .group_torrent td:first-child {
+    border-right: var(--p-top-brdr);}
 #collections .group.discog td.collicon:hover:nth-child(1),
 .torrent_table td.center:hover:first-child {
     background-color: var(--c-colhead-click);}
@@ -2429,7 +2442,8 @@ body:not(#upload) #artist_tr + tr td.label,
 #torrents .thin >h2:first-child +.center td.label strong,
 #collections #torrent_table .group.discog td[colspan="5"] >strong,
 #collections table#new_collage td.label strong,
-#user .thin >h2:first-child +.center ~table.border .colhead strong {
+#user .thin >h2:first-child +.center ~table.border .colhead strong,
+#top10 td.center.cats_col +td >strong {
     font-weight: normal;}
 
 .torrent_details .torrent_table .colhead_dark td:nth-child(1):after,
@@ -2547,7 +2561,8 @@ input.hidden,
 #staffpm .header ~br,
 #staffpm .box.vertical_space ~h3 +.box.pad >br,
 #staffpm #inbox >form#messageform >br,
-#user .thin >h2:first-child +.center td.label {
+#user .thin >h2:first-child +.center td.label,
+#top10 .thin >.center td.label {
     display: none;}
 
 .similar {
@@ -2918,6 +2933,16 @@ h2 {
     width: calc(100% - 10px);
     font-weight: bold;}
 
+h3 {
+    padding: 0;
+    margin: 5px 0 12px 0;
+    margin-left: 10px;
+    font-size: 17px;
+    line-height: 17px;
+    height: auto;
+    width: calc(100% - 10px);
+    font-weight: bold;}
+
 .rowa,
 .row_a,
 #collages tr:not(.colhead):nth-child(odd),
@@ -2936,7 +2961,9 @@ h2 {
 #seeding_not_snatched_table tr:not(.colhead):nth-child(odd),
 #downloaded_table           tr:not(.colhead):nth-child(odd),
 #extlink_table              tr:not(.colhead):nth-child(odd),
-.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(odd) {
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(odd),
+#wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(odd) td:nth-child(-n+2),
+.clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(even) td:nth-last-child(-n+2) {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
@@ -2954,7 +2981,9 @@ h2 {
 #seeding_not_snatched_table tr:not(.colhead):nth-child(even),
 #downloaded_table           tr:not(.colhead):nth-child(even),
 #extlink_table              tr:not(.colhead):nth-child(even),
-.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(even) {
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(even),
+#wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(even) td:nth-child(-n+2),
+.clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(odd) td:nth-last-child(-n+2) {
     background-color: var(--c-trowb);}
 .rowa:hover,
 .row_a:hover,
@@ -2973,8 +3002,15 @@ h2 {
 #seeding_not_snatched_table tr:not(.colhead):hover,
 #downloaded_table           tr:not(.colhead):hover,
 #extlink_table              tr:not(.colhead):hover,
-.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):hover {
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):hover,
+.clan_stat_totals table.border tr:not(.colhead):not(:last-child):hover td {
     background-color: var(--c-row-hvr) !important;}
+
+#wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td:empty {
+    background-color: transparent !important;}
+
+.clan_stat_totals table.border tr:not(.colhead):not(:last-child) td:nth-child(2) {
+    border-right: var(--p-table-brdr);}
 
 .box_series li {
     list-style: disc;
@@ -3242,7 +3278,8 @@ form[name="filter"] h3 {
 #user .thin >h2 ~form[method="post"],
 #torrents .thin >h2:first-child +.center,
 #user .thin >h2:first-child +.box.pad:last-child,
-#user .thin >h2:first-child +.box.pad:nth-last-of-type(2) {
+#user .thin >h2:first-child +.box.pad:nth-last-of-type(2),
+.clan_stat_totals h2:first-child +.large_progress_bar {
     margin-top: 12px;}
 input[name="fromyear"],
 input[name="toyear"],
@@ -3292,7 +3329,8 @@ input[name="toyear"],
 #torrents #requests.request_table #requests_list,
 #collections .thin >h2:first-child +.center input[type="text"],
 #torrents .thin >h2:first-child +.center input[type="text"],
-#collections table#new_collage input#name {
+#collections table#new_collage input#name,
+#top10 .thin >.center input[type="text"] {
     width: 100%;}
 #upload #weblinks tr:nth-child(1) td:nth-child(3),
 #upload #reviews_table td:first-child {
@@ -3380,7 +3418,8 @@ input#file {
 #forums table tr.colhead td {
 	text-align: left;}
 tr.likes td,
-.forum_post tr {
+.forum_post tr,
+#top10 .thin >div >table.border td[style="text-align:right"] {
 	text-align: left !important;}
 #forums td {
 	text-align: center;}
@@ -3822,6 +3861,7 @@ input[type="search"],
     padding-top: 3px;}
 #threadpoll input[type="button"] {
     float: inherit !important;}
+#top10 .thin >.center,
 #newthreadpreview #pollpreview {
     margin-bottom: 20px;}
 #forums #threadpoll {
@@ -4169,6 +4209,7 @@ td.center.cats_col {
     width: 170px;}
 
 #staffpm #inbox,
+#top10 .thin >.center td,
 #user script +.thin h2 +#userform,
 #collections .sidebar form#quickpostform.pad,
 #collections .sidebar .box.box_comment +.box.pad,
@@ -4220,6 +4261,7 @@ td.center.cats_col {
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
+#top10 .thin >.center:before,
 #collections .thin >h2:first-child +.center:before {
     text-align: left;
     content: 'Filter';
@@ -4232,6 +4274,8 @@ td.center.cats_col {
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
+#top10 .thin >.center:before {
+    content: 'Filter by tags';}
 #torrentbrowse .filter_torrents h3 a:before {
     content: 'switch to ';}
 input[class="date_picker"] {
@@ -4298,6 +4342,7 @@ input[class="date_picker"] {
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table td.label {
     width: 180px;}
 
+#top10 .thin >.center tr:first-child td:last-child,
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="text"]:not(:first-child),
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="button"]:not(:first-child),
 #collections table#new_collage input#art +input[type="button"] {
@@ -4394,13 +4439,15 @@ input[class="date_picker"] {
 
 abbr {
     cursor: help;}
+#top10 .group_torrent td:first-child strong,
 #todo .thin >form .colhead td,
 #rules .thin >.before_rules li ul li strong {
     font-weight: 600;}
 #collections #torrent_table .colhead strong,
 #rules .thin >.before_rules li ul ul li strong,
 #user .thin >h2:first-child +.box.pad:last-child td strong,
-#user #sessions_table .colhead strong {
+#user #sessions_table .colhead strong,
+#top10 .thin >div >table.border .colhead strong {
     font-weight: normal;}
 #rules .thin >#actual_rules .before_rules h2 {
     margin: 0;
@@ -4546,6 +4593,103 @@ table#likesrow a {
 #todo .thin >form tr:not(.colhead):not(:last-child) td:first-child {
     text-align: right;
     width: 100px;}
+
+#top10 .thin >.center tr,
+#top10 .thin >.center td {
+    display: inline-block;}
+#top10 .thin >.center tr:nth-child(1) {
+    width: calc(100% - 117px);
+    float: left;}
+#top10 .thin >.center tr:nth-child(2) {
+    float: right;}
+#top10 .thin >.center tr:first-child td:nth-child(2) {
+    width: calc(100% - 233px);
+    float: left;}
+
+.thin.top10_tags {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;}
+.thin.top10_tags .linkbox +#ut:last-of-type,
+.thin.top10_tags .linkbox {
+    width: 100%;}
+.thin.top10_tags #ut {
+    width: calc(100% / 3 - 30px);}
+
+/** going with absolute because flex needs containers **/
+.clan_stat_totals:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 689px;}
+
+.clan_stat_totals {
+    position: relative;}
+.clan_stat_totals h3 {
+    margin-left: 52px;
+    width: calc(50% - 59.5px);}
+.clan_stat_totals table.border {
+    width: calc(50% - 7.5px);}
+.clan_stat_totals .center {
+    text-align: left;
+    width: calc(50% - 17.5px);
+    margin-left: 10px;}
+.clan_stat_totals .center img {
+    width: 32px;
+    height: 32px;}
+
+.clan_stat_totals h2:first-child +.large_progress_bar +.center {
+    position: absolute;
+    top: 86px;
+    left: 0;}
+.clan_stat_totals h3:nth-of-type(1) {
+    position: absolute;
+    top: 91px;
+    left: 0;}
+.clan_stat_totals table.border:nth-of-type(1) {
+    position: absolute;
+    top: 123px;
+    left: 0;}
+
+.clan_stat_totals table.border:nth-of-type(1) +.center {
+    position: absolute;
+    top: 86px;
+    right: 0;}
+.clan_stat_totals h3:nth-of-type(2) {
+    position: absolute;
+    top: 91px;
+    right: 0;}
+.clan_stat_totals table.border:nth-of-type(2) {
+    position: absolute;
+    top: 123px;
+    right: 0;}
+
+.clan_stat_totals table.border:nth-of-type(2) +.center {
+    position: absolute;
+    top: 423px;
+    left: 0;}
+.clan_stat_totals h3:nth-of-type(3) {
+    position: absolute;
+    top: 428px;
+    left: 0;}
+.clan_stat_totals table.border:nth-of-type(3) {
+    position: absolute;
+    top: 460px;
+    left: 0;}
+
+.clan_stat_totals table.border:nth-of-type(3) +.center {
+    position: absolute;
+    top: 423px;
+    right: 0;}
+.clan_stat_totals h3:nth-of-type(4) {
+    position: absolute;
+    top: 428px;
+    right: 0;}
+.clan_stat_totals table.border:nth-of-type(4) {
+    position: absolute;
+    top: 460px;
+    right: 0;}
+/** /going with absolute because flex needs containers **/
 
 
 
