@@ -798,9 +798,9 @@ form[name="filter"],
 #todo .thin >form,
 #top10 .thin >.center,
 #top10 .thin >.linkbox ~div:not(.center),
-#clan_stats table,
 #artist .thin h2:first-child +table.border,
-#stats #content >.box {
+#stats #content >.box,
+#clans #clan_stats >div {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -825,7 +825,8 @@ form[name="filter"],
 #user .thin >h2:first-child +.center,
 .thin.torrent_history >form#torrent_history_search,
 #top10 .thin >.center,
-#stats #content >.box.center.chart{
+#stats #content >.box.center.chart,
+#clans #clan_stats >div {
     padding: 10px;}
 .sidebar .body {
     padding: 10px 0 0 0;}
@@ -1597,17 +1598,22 @@ a .error_message:hover:active {
     box-shadow: var(--p-main-shdw);
     border: var( --p-main-brdr);
     background-color: var(--c-img-bcg-anchor);}
-.large_progress_bar, #progress_bar {
-    border: 9px solid var(--c-b3);
+#index #clans a {
+    display: block;
+    border: 9px solid var(--c-b3);}
+#index #clans a:hover {
+    border: 9px solid var(--c-b1);}
+#index #clans a:hover .large_progress_bar { 
+    background-color: var(--c-b3);}
+#index #clans a:hover:active .large_progress_bar {
+    background-color: var(--c-b1);}
+.large_progress_bar,
+#progress_bar {
     height: 14px;
     display: flex;
     justify-content: space-between;
-    padding: 3px;}
-#index #clans .large_progress_bar:hover {
-    border: 9px solid var(--c-b1);
-    background-color: var(--c-b3);}
-#index #clans .large_progress_bar:hover:active {
-    background-color: var(--c-b2);}
+    padding: 3px;
+    background-color: var(--c-edition);}
 #clans .large_progress_bar .main_bar.clan_1_bar {
     animation: expandWidth 0.7s;
     animation-fill-mode: forwards;
@@ -2370,6 +2376,7 @@ body:not(#upload) #artist_tr + tr td.label,
 .requests_outer_table >tbody >tr >td:nth-child(1),
 .filter_torrents.advanced tr:first-child >td.label {
     vertical-align: top;} */
+#requests #wrapper #request_form input[type="button"],
 #user .thin >h2 +form#userform tr:not(.colhead_dark) td,
 #upload input#getYT {
     vertical-align: top;}
@@ -2572,7 +2579,8 @@ input.hidden,
 #staffpm #inbox >form#messageform >br,
 #user .thin >h2:first-child +.center td.label,
 #top10 .thin >.center td.label,
-.thin.top10_tags br {
+.thin.top10_tags br,
+.thin.top10_uploaders >.content_basiccontainer {
     display: none;}
 
 .similar {
@@ -2697,7 +2705,9 @@ li:not(.suggested_similar) .similar_votes >span {
 .box_requests #requests .colhead_dark,
 #staffpm #inbox >form#messageform .colhead,
 #torrents #requests.request_table #requests_list tr:first-child,
-#rules h3#jump +.box.pad .colhead {
+#rules h3#jump +.box.pad .colhead,
+#clans #clan_stats >div .colhead,
+#staff .thin >.box.pad .colhead {
     background: var(--p-subcolhead);}
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
@@ -2713,12 +2723,14 @@ li:not(.suggested_similar) .similar_votes >span {
 .box_requests #requests .colhead_dark td,
 #staffpm #inbox >form#messageform .colhead td,
 #torrents #requests.request_table #requests_list tr:first-child td.label,
-#rules h3#jump +.box.pad .colhead td {
+#rules h3#jump +.box.pad .colhead td,
+#clans #clan_stats >div .colhead td,
+#staff .thin >.box.pad .colhead td {
     font-weight: normal;
     position: relative;
-    font-size: 15px;
-    line-height: 20px;
-    padding: 6px 5px 7px 5px;}
+    font-size: 16px;
+    line-height: 16px;
+    padding: 8px 5px;}
 
 #collections .sidebar .box.box_comment .head a.username {
     font-size: 14px;
@@ -2961,6 +2973,7 @@ h3 {
 
 .rowa,
 .row_a,
+#clan_stats >div:not(.clan_stat_totals) tr:not(.colhead):nth-child(odd),
 #collages tr:not(.colhead):nth-child(odd),
 #searchbars input:focus,
 .torrent_table tr.group_torrent:hover,
@@ -2983,6 +2996,7 @@ h3 {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
+#clan_stats >div:not(.clan_stat_totals) tr:not(.colhead):nth-child(even),
 #collages tr:not(.colhead):nth-child(even),
 .userreviews tr:nth-child(even),
 .requests_outer_table #otherop tr:nth-child(even),
@@ -3005,6 +3019,7 @@ h3 {
 .row_a:hover,
 .rowb:hover,
 .row_b:hover,
+#clan_stats >div:not(.clan_stat_totals) tr:not(.colhead):hover,
 #torrents .torrent_details tr table tr:not(.colhead):not(.colhead_dark):hover,
 #collages tr:not(.colhead):hover,
 #upload #content >div >table[style] tr:not(.colhead):hover,
@@ -3101,6 +3116,8 @@ img[src="static/common/thumbsup.png"],
     margin-bottom: -20px;*/}
 #requests_donate #gold_donation {
     width: calc(100% - 95px);
+    margin-bottom: 8px;}
+#clans #clan_stats >div .large_progress_bar {
     margin-bottom: 8px;}
 #collections table#new_collage input#art {
     width: calc(100% - 95px);}
@@ -3213,6 +3230,7 @@ img[src="static/common/thumbsup.png"],
     padding-top: 13px;}
 
 /** convert ... to head **/
+#clans #clan_stats >div >h2,
 #top10 .thin >.linkbox ~div:not(.center) >h3,
 #stats #content >.box >h1,
 #staffpm .box.vertical_space ~h3,
@@ -3246,13 +3264,13 @@ form[name="filter"] h3,
     margin: -10px -10px 10px -10px;}
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2) p:last-child,
 #staffpm #inbox >form#messageform >h3,
-#forums .linkbox.linkbox_bottom +br +h3,
-form[name="filter"] h3 {
+#forums .linkbox.linkbox_bottom +br +h3 {
     margin: 0;}
 #staffpm .box.vertical_space ~h3 {
     margin: 15px 0 0 0;}
 #staff .thin >.box.pad >h3:first-of-type {
     margin: -10px -10px 0 -10px;}
+form[name="filter"] h3,
 #top10 .thin >.linkbox ~div:not(.center) >h3 {
     margin: 0;
     width: calc(100% - 20px);}
@@ -3306,7 +3324,8 @@ form[name="filter"] h3 {
 #user .thin >h2:first-child +.box.pad:last-child,
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2),
 .clan_stat_totals h2:first-child +.large_progress_bar,
-#artist .thin h2:first-child +table.border {
+#artist .thin h2:first-child +table.border,
+#clans .clan_past_stats >h3:not(:first-of-type) {
     margin-top: 12px;}
 input[name="fromyear"],
 input[name="toyear"],
@@ -3326,6 +3345,7 @@ input[name="toyear"],
     width: 100% !important;
     margin: 0 0 15px 0 !important;
     padding: 10px;}
+#clans #clan_stats >div table,
 #rules .thin >.box.pad >table,
 #upload #content >div >table[style],
 #staff .thin >.box.pad table {
@@ -3442,7 +3462,9 @@ input#file {
 #forums table.border td,
 #forums #otherop td,
 #forums #forumlist td,
-#forums table tr.colhead td {
+#forums table tr.colhead td,
+.clan_past_stats td.label,
+.ongoing_clan_war td.label {
 	text-align: left;}
 tr.likes td,
 .forum_post tr,
@@ -3632,6 +3654,8 @@ tr.likes td[id^="likers_"] >strong {
 tr.likes td[id^="likers_"] >strong:nth-of-type(2),
 #rules .thin >form.search_form span#Index {
     margin-top: 2px;}
+#request_form input[type="text"] {
+    margin-bottom: 2px;}
 tr.likes td[id^="likers_"] >strong:after {
     content: ':';
     font-size: 14px;
@@ -3796,7 +3820,8 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     height: 38px;
     line-height: 38px;
     z-index: 9;
-    position: relative;}
+    position: relative;
+    width: calc(100% - 12px);}
 #searchforum form.search_form,
 #searchthread form.search_form {
     margin-bottom: 10px
@@ -3821,7 +3846,8 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #staffpm #inbox >form#messageform,
 #staffpm .box.vertical_space ~h3 +.box.pad form#messageform,
 .thin.torrent_history >form#torrent_history_search table#th_search,
-#artist .main_column table {
+#artist .main_column table,
+#rules h3#jump +.box.pad >table {
     background: none;
     border: none;
     -webkit-box-shadow: none;
@@ -3909,6 +3935,8 @@ input[type="search"],
     box-shadow: none;
     -webkit-filter: none;
     filter: none;
+    vertical-align: text-bottom;}
+#clans td.label img {
     vertical-align: text-bottom;}
 
 .avatar {
@@ -4292,6 +4320,7 @@ td.center.cats_col {
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
+.thin.forum_latest >.search.box.pad:before,
 #requests .thin >.center.box.pad:before,
 #top10 .thin >.center:before,
 #collections .thin >h2:first-child +.center:before {
@@ -4656,18 +4685,19 @@ table#likesrow a {
     content: '';
     display: block;
     width: 100%;
-    height: 689px;}
+    height: 662px;}
 
 .clan_stat_totals {
     position: relative;}
 .clan_stat_totals h3 {
+    font-weight: 600;
     margin-left: 52px;
-    width: calc(50% - 59.5px);}
+    width: calc(50% - 69.5px);}
 .clan_stat_totals table.border {
-    width: calc(50% - 7.5px);}
+    width: calc(50% - 17.5px);}
 .clan_stat_totals .center {
     text-align: left;
-    width: calc(50% - 17.5px);
+    width: calc(50% - 27.5px);
     margin-left: 10px;}
 .clan_stat_totals .center img {
     width: 32px;
@@ -4676,54 +4706,54 @@ table#likesrow a {
 .clan_stat_totals h2:first-child +.large_progress_bar +.center {
     position: absolute;
     top: 86px;
-    left: 0;}
+    left: 10px;}
 .clan_stat_totals h3:nth-of-type(1) {
     position: absolute;
     top: 91px;
-    left: 0;}
+    left: 10px10px;}
 .clan_stat_totals table.border:nth-of-type(1) {
     position: absolute;
     top: 123px;
-    left: 0;}
+    left: 10px;}
 
 .clan_stat_totals table.border:nth-of-type(1) +.center {
     position: absolute;
     top: 86px;
-    right: 0;}
+    right: 10px;}
 .clan_stat_totals h3:nth-of-type(2) {
     position: absolute;
     top: 91px;
-    right: 0;}
+    right: 10px;}
 .clan_stat_totals table.border:nth-of-type(2) {
     position: absolute;
     top: 123px;
-    right: 0;}
+    right: 10px;}
 
 .clan_stat_totals table.border:nth-of-type(2) +.center {
     position: absolute;
     top: 423px;
-    left: 0;}
+    left: 10px;}
 .clan_stat_totals h3:nth-of-type(3) {
     position: absolute;
     top: 428px;
-    left: 0;}
+    left: 10px;}
 .clan_stat_totals table.border:nth-of-type(3) {
     position: absolute;
     top: 460px;
-    left: 0;}
+    left: 10px;}
 
 .clan_stat_totals table.border:nth-of-type(3) +.center {
     position: absolute;
     top: 423px;
-    right: 0;}
+    right: 10px;}
 .clan_stat_totals h3:nth-of-type(4) {
     position: absolute;
     top: 428px;
-    right: 0;}
+    right: 10px;}
 .clan_stat_totals table.border:nth-of-type(4) {
     position: absolute;
     top: 460px;
-    right: 0;}
+    right: 10px;}
 /** /going with position:absolute because display:flex needs containers **/
 
 #artist .sidebar >.box:first-child >div:last-child {
@@ -4733,6 +4763,13 @@ table#likesrow a {
 
 #rules h3#jump +.box.pad {
     padding: 38px 0 0 0 !important;}
+
+#clans #clan_stats >span[style="float: right;"]:first-child {
+    font-size: 20px;
+    padding: 9px 10px;
+    line-height: 20px;
+    height: 20px;
+    font-weight: 600;}
 
 
 
