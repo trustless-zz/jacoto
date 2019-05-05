@@ -1841,7 +1841,8 @@ a .error_message:hover:active {
 #collections .group_torrent td span,
 #bookmarks #torrent_table td[colspan="3"],
 #torrents .torrent_details .torrent_table .pad.hidden td,
-#torrents .group_torrent td:first-child {
+#torrents .group_torrent td:first-child,
+#artist #torrent_table .group_torrent td[colspan="2"] {
     white-space: normal;}
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
 #artist #torrent_table .group_torrent td[colspan="2"] >a,
@@ -4736,6 +4737,14 @@ table#likesrow a {
 .thin.top10_tags #ur,
 .thin.top10_tags #v {
     width: calc(100% / 3 - 12px);}
+
+td >img[title="Gold"] {
+    padding-left: 18px;
+    width: 18px;
+    height: 18px;
+    margin: -1px 0;
+    display: inline-block;
+    vertical-align: bottom;}
 
 /** going with absolute because flex needs containers **/
 .clan_stat_totals:after {

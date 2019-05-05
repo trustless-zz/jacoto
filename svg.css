@@ -69,7 +69,7 @@ body {
 #groupplatform a[href$="=NEC+PC-FX"] {background-image: url(caticons/necpc-fx.svg);}
 #groupplatform a[href$="=NEC+PC-98"] {background-image: url(caticons/necpc-98.svg);}
 #groupplatform a[href$="=NEC+SuperGrafx"] {background-image: url(caticons/necsupergrafx.svg);}
-#groupplatform a[href$="=NEC+SuperGrafx-16"] {background-image: url(caticons/necturbografx-16.svg);}
+#groupplatform a[href$="=NEC+TurboGrafx-16"] {background-image: url(caticons/necturbografx-16.svg);}
 #groupplatform a[href$="=Nintendo+64"] {background-image: url(caticons/nintendo64.svg);}
 #groupplatform a[href$="=Nintendo+DS"] {background-image: url(caticons/nintendods.svg);}
 #groupplatform a[href$="=Nintendo+GameCube"] {background-image: url(caticons/nintendogamecube.svg);}
