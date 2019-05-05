@@ -67,9 +67,9 @@
     --p-img-hvr: 						3px solid var(--c-b3);
     --p-img-anchor-brdr:				3px solid var(--c-b4);
     --p-img-anchor-brdr-hvr:			3px solid var(--c-b1);
-    --p-post-img:                       drop-shadow(0px 0px 3px var(--c-main-brdr));
-    --p-post-img-hvr:                   drop-shadow(0px 0px 3px var(--c-b3));
-    --p-unread-stripe:                  4px solid var(--c-b3);
+    --p-post-img:                       drop-shadow(0 0 3px var(--c-main-brdr));
+    --p-post-img-hvr:                   drop-shadow(0 0 3px var(--c-b3));
+    --p-unread-stripe:                  2px 0 0 0 var(--c-b3);
     --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b00), var(--c-anchor)), linear-gradient(to right, var(--c-b1), var(--c-b2));
     --p-colhead-tr-bcg: 				var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
     --p-subcolhead:                     var(--c-sb1) linear-gradient(155deg,var(--c-sb1),var(--c-sb2));
@@ -81,7 +81,7 @@
     --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b00) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
     --p-unread-brdr:                    1px solid var(--c-b3);
     --p-sticky-brdr:                    1px solid var(--c-input-brdr);
-/*    --p-show-hide-brdr-shdw: 			inset -1px 0 0px var(--c-table-brdr); */
+/*    --p-show-hide-brdr-shdw: 			inset -1px 0 0 var(--c-table-brdr); */
     --p-sticky-brdr: 					1px solid var(--c-b1);
     --p-edition-hvr: 					linear-gradient(to top,var(--c-b3),var(--c-edition));
     --p-edition-act: 					linear-gradient(to top,var(--c-b3),var(--c-b4));
@@ -506,13 +506,14 @@ td.unread_sticky,
 td.unread_locked,
 td.unread_locked_sticky,
 tr.unreadpm td:first-child {
-    border-left: var(--p-unread-stripe);}
-.forum_index,
+    -webkit-box-shadow: inset var(--p-unread-stripe);
+    box-shadow: inset var(--p-unread-stripe);}
+/* .forum_index,
 .forum_mythreads >table,
 .forum_editsubs >table,
 .forum_subscriptions >table,
 #inbox #messageform >input:first-child +table {
-    overflow: hidden;}
+    overflow: hidden;} */
 
 #searchbars ul {
     margin: 0 auto;
@@ -773,8 +774,7 @@ form[name="filter"],
 #chat .thin >.box.pad,
 #rules .thin >.box.pad,
 #rules .thin >form.search_form,
-#rules .thin .before_rules,
-#rules .thin >#actual_rules >div,
+#rules .thin >.before_rules,
 #collections table#manage_collage_table,
 #wiki .center.thin >.box.pad,
 #staff .thin >.box.pad,
@@ -800,7 +800,8 @@ form[name="filter"],
 #top10 .thin >.linkbox ~div:not(.center),
 #artist .thin h2:first-child +table.border,
 #stats #content >.box,
-#clans #clan_stats >div {
+#clans #clan_stats >div,
+#actual_rules {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -826,7 +827,8 @@ form[name="filter"],
 .thin.torrent_history >form#torrent_history_search,
 #top10 .thin >.center,
 #stats #content >.box.center.chart,
-#clans #clan_stats >div {
+#clans #clan_stats >div,
+#actual_rules {
     padding: 10px;}
 .sidebar .body {
     padding: 10px 0 0 0;}
@@ -907,7 +909,8 @@ a:hover .ratings,
 #downloaded_table           td.center.cats_col +td span:first-child a,
 #extlink_table              td.center.cats_col +td span:first-child a,
 #staffpm .linkbox a[onclick],
-.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a {
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a,
+.search.box.pad #cat_list a {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -2358,7 +2361,8 @@ a[href^="javascript:Vote("] strong:hover:active,
 #forums #forum_search_cat_list td.forum_cat a,
 .prev,
 .next,
-#staffpm .linkbox a[onclick] {
+#staffpm .linkbox a[onclick],
+.search.box.pad #cat_list a {
     cursor: default;}
 /* #upload #releaseinfo .colhead +tr+tr td.label,
 #upload #rlstitle +tr td.label,
@@ -2707,7 +2711,8 @@ li:not(.suggested_similar) .similar_votes >span {
 #torrents #requests.request_table #requests_list tr:first-child,
 #rules h3#jump +.box.pad .colhead,
 #clans #clan_stats >div .colhead,
-#staff .thin >.box.pad .colhead {
+#staff .thin >.box.pad .colhead,
+#rules table.required_ratio .colhead {
     background: var(--p-subcolhead);}
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
@@ -2725,7 +2730,8 @@ li:not(.suggested_similar) .similar_votes >span {
 #torrents #requests.request_table #requests_list tr:first-child td.label,
 #rules h3#jump +.box.pad .colhead td,
 #clans #clan_stats >div .colhead td,
-#staff .thin >.box.pad .colhead td {
+#staff .thin >.box.pad .colhead td,
+#rules table.required_ratio .colhead td {
     font-weight: normal;
     position: relative;
     font-size: 16px;
@@ -3236,8 +3242,6 @@ img[src="static/common/thumbsup.png"],
 #staffpm .box.vertical_space ~h3,
 #staffpm #inbox >form#messageform >h3,
 #staff .thin >.box.pad >h3:first-of-type,
-#rules .thin >#actual_rules >h3,
-#rules .thin >#actual_rules .before_rules h2,
 #rules .thin >h2.center:first-child,
 #rules .thin >h3,
 #chat .thin >h3,
@@ -3926,6 +3930,8 @@ input[type="search"],
 #threadpoll #poll_results ul#poll_options {
     padding: 0;
     margin-bottom: 15px;}
+#threadpoll #poll_results {
+    margin-bottom: 10px;}
 
 #wrapper img[src*="static/common/smileys/"] {
     border: none;
@@ -4155,6 +4161,53 @@ input[type="search"],
     border-right: var(--p-main-brdr);}
 /** /Chromium table border rendering bug workaround **/
 
+/** horrible acrobatics because of lack of container **/
+#forums .forum_list .forum_index .colhead  {
+    background: var(--p-subcolhead);}
+#forums .forum_list .forum_index .colhead td {
+    font-weight: normal;
+    position: relative;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 8px 5px;}
+
+#forums .forum_list h3 {
+    position: relative;
+    text-align: left;
+    width: calc(100% - 22px);
+    font-weight: 600;
+    background: var(--p-head-grdnt);
+    font-size: 20px !important;
+    line-height: 20px;
+    padding: 9px 10px;
+    top: 1px;
+    margin: 0 auto;}
+
+#forums .thin .forum_list .forum_index {
+    background: none;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    position: relative;
+    width: calc(100% - 2px);
+    top: 1px;
+    margin: 0 auto 17px auto;}
+#forums .forum_list .forum_index:before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 40px);
+    background-color: var(--c-box);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    border: var(--p-main-brdr);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: -1;}
+/** /horrible acrobatics because of lack of container **/
+
 
 #user input#styleurl {
     width: calc(100% - 350px);}
@@ -4320,6 +4373,7 @@ td.center.cats_col {
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
+#actual_rules:before,
 .thin.forum_latest >.search.box.pad:before,
 #requests .thin >.center.box.pad:before,
 #top10 .thin >.center:before,
@@ -4337,6 +4391,8 @@ td.center.cats_col {
     font-weight: 600;}
 #top10 .thin >.center:before {
     content: 'Filter by tags';}
+#actual_rules:before {
+    content: 'Rules';}
 #torrentbrowse .filter_torrents h3 a:before {
     content: 'switch to ';}
 input[class="date_picker"] {
@@ -4453,16 +4509,20 @@ input[class="date_picker"] {
     background: var(--p-head-grdnt);
     font-weight: 600;}
 
-#rules .thin >#actual_rules >h2 {
-    margin: 0 0 10px 10px;}
-#staff .thin >.box.pad,
-#rules .thin >#actual_rules .before_rules >div {
+#staff .thin >.box.pad {
     padding: 10px !important;}
-#rules .thin >#actual_rules >div:not(.before_rules),
+#rules .thin >#actual_rules .before_rules >div,
+#rules .thin >#actual_rules >div {
+    padding: 0 0 10px 0 !important;}
+#rules .thin >#actual_rules >div:last-child {
+    padding: 0 !important;}
+#rules .thin >#actual_rules h2 {
+    margin: 8px 0 8px 5px;}
+#rules .thin >#actual_rules h3 {
+    margin: 6px 0 6px 15px;}
 #rules .thin >.box.pad,
 #chat .thin >.box.pad {
     padding: 48px 10px 10px 10px !important;}
-#rules .thin >#actual_rules >h3,
 #rules .thin >h2.center:first-child,
 #rules .thin >h3,
 #chat .thin >h3 {
@@ -4511,9 +4571,6 @@ abbr {
 #top10 .thin >div >table.border .colhead strong,
 #artist .main_column table .colhead_dark strong {
     font-weight: normal;}
-#rules .thin >#actual_rules .before_rules h2 {
-    margin: 0;
-    width: calc(100% - 20px);}
 #collections table#new_collage td.label,
 #collections .thin >h2:first-child +.center td.label {
     width: 75px;}
