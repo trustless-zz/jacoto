@@ -4857,6 +4857,7 @@ span.size5 img {
 
 /** linkbox testing **/
 .linkbox {
+    color: transparent;
     /*line-height: 1em;*/}
 .linkbox br:last-child {
     display: none;}
