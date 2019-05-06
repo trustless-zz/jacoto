@@ -4210,34 +4210,80 @@ input[type="search"],
     z-index: -1;}
 /** /horrible acrobatics because of lack of containers **/
 
-/** removing brackets **/
-a[href="inbox.php?action=compose"],
-a[href="inbox.php?action=sentbox"],
-a[href="inbox.php"],
-a[href="wiki.php?action=create"] {
+/** removing embedded brackets **/
+#torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"],
+#torrents .linkbox a[href^="upload.php?groupid"],
+#torrents .linkbox a[href^="upload.php?action=copy&"],
+#torrents .linkbox a[href^="requests.php?action=new&"],
+#torrents .linkbox a[href^="torrents.php?action=download_all&"],
+#torrents .linkbox .addignore,
+#torrents .linkbox .removeignore,
+#torrents .linkbox .addbookmark,
+#torrents .linkbox .removebookmark,
+#torrents .linkbox a[href^="torrents.php?action=grouplog&"],
+#torrents .linkbox a[href^="torrents.php?action=history&"],
+.linkbox a[href="inbox.php?action=compose"],
+.linkbox a[href="inbox.php?action=sentbox"],
+.linkbox a[href="inbox.php"],
+.linkbox a[href="wiki.php?action=create"] {
     display: contents;
     font-size: 0;
     line-height: 0;}
-a[href="inbox.php?action=compose"]:before,
-a[href="inbox.php?action=sentbox"]:before,
-a[href="inbox.php"]:before,
-a[href="wiki.php?action=create"]:before {
+#torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"]:before,
+#torrents .linkbox a[href^="upload.php?groupid"]:before,
+#torrents .linkbox a[href^="upload.php?action=copy&"]:before,
+#torrents .linkbox a[href^="requests.php?action=new&"]:before,
+#torrents .linkbox a[href^="torrents.php?action=download_all&"]:before,
+#torrents .linkbox .addignore:before,
+#torrents .linkbox .removeignore:before,
+#torrents .linkbox .addbookmark:before,
+#torrents .linkbox .removebookmark:before,
+#torrents .linkbox a[href^="torrents.php?action=grouplog&"]:before,
+#torrents .linkbox a[href^="torrents.php?action=history&"]:before,
+.linkbox a[href="inbox.php?action=compose"]:before,
+.linkbox a[href="inbox.php?action=sentbox"]:before,
+.linkbox a[href="inbox.php"]:before,
+.linkbox a[href="wiki.php?action=create"]:before {
     font-size: 14px;
-    line-height: var(--p-lh);}
+    line-height: var(--p-lh);
+    margin: 0 4px;}
 
-a[href="inbox.php?action=compose"]:before   {content: 'Compose';}
-a[href="inbox.php?action=sentbox"]:before   {content: 'Sentbox';}
-a[href="inbox.php"]:before                  {content: 'Inbox';}
-a[href="wiki.php?action=create"]:before     {content: 'Create';}
+#torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"]:before    {content: 'Add torrent link';}
+#torrents .linkbox a[href^="upload.php?groupid"]:before                       {content: 'Add torrent';}
+#torrents .linkbox a[href^="upload.php?action=copy&"]:before                  {content: 'Upload new platform';}
+#torrents .linkbox a[href^="requests.php?action=new&"]:before                 {content: 'Create request';}
+#torrents .linkbox a[href^="torrents.php?action=download_all&"]:before        {content: 'Download all';}
+#torrents .linkbox .addignore:before                                          {content: 'Ignore';}
+#torrents .linkbox .removeignore:before                                       {content: 'Un-Ignore';}
+#torrents .linkbox .addbookmark:before                                        {content: 'Bookmark';}
+#torrents .linkbox .removebookmark:before                                     {content: 'Unbookmark';}
+#torrents .linkbox a[href^="torrents.php?action=grouplog&"]:before            {content: 'View log';}
+#torrents .linkbox a[href^="torrents.php?action=history&"]:before             {content: 'View history';}
+.linkbox a[href="inbox.php?action=compose"]:before                            {content: 'Compose';}
+.linkbox a[href="inbox.php?action=sentbox"]:before                            {content: 'Sentbox';}
+.linkbox a[href="inbox.php"]:before                                           {content: 'Inbox';}
+.linkbox a[href="wiki.php?action=create"]:before                              {content: 'Create';}
 
-a[href="inbox.php?action=compose"]:hover:before,
-a[href="inbox.php?action=sentbox"]:hover:before,
-a[href="inbox.php"]:hover:before,
-a[href="wiki.php?action=create"]:hover:before {
+#torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"]:hover:before,
+#torrents .linkbox a[href^="upload.php?groupid"]:hover:before,
+#torrents .linkbox a[href^="upload.php?action=copy&"]:hover:before,
+#torrents .linkbox a[href^="requests.php?action=new&"]:hover:before,
+#torrents .linkbox a[href^="torrents.php?action=download_all&"]:hover:before,
+#torrents .linkbox .addignore:hover:before,
+#torrents .linkbox .removeignore:hover:before,
+#torrents .linkbox .addbookmark:hover:before,
+#torrents .linkbox .removebookmark:hover:before,
+#torrents .linkbox a[href^="torrents.php?action=grouplog&"]:hover:before,
+#torrents .linkbox a[href^="torrents.php?action=history&"]:hover:before,
+.linkbox a[href="inbox.php?action=compose"]:hover:before,
+.linkbox a[href="inbox.php?action=sentbox"]:hover:before,
+.linkbox a[href="inbox.php"]:hover:before,
+.linkbox a[href="wiki.php?action=create"]:hover:before {
     background-color: var(--c-anchor-hvr-bcg);} */
 
     /* clip-path: polygon(5px 0, calc(100% - 5px) 0, calc(100% - 5px) 100%, 5px 100%);} */
-/** /removing brackets **/
+
+/** /removing embedded brackets **/
 
 #user input#styleurl {
     width: calc(100% - 350px);}
