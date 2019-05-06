@@ -4590,6 +4590,7 @@ input[class="date_picker"] {
 
 abbr {
     cursor: help;}
+#clans .clan_past_stats >h3,
 #top10 .group_torrent td:first-child strong,
 #todo .thin >form .colhead td,
 #rules .thin >.before_rules li ul li strong {
