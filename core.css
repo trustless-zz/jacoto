@@ -4068,10 +4068,11 @@ input[type="search"],
     padding: 0;
     font-size: 14px;}
 #inbox #messageform #quickpost .comp td:first-child {
-    padding-top: 7px;
     vertical-align: top;
     text-align: right;
-    width: 80px;}
+    width: 90px;}
+#inbox #messageform #quickpost .comp td:first-child h3 {
+    line-height: 26px;}
 #inbox #messageform #quickpost .comp td {
     padding: 5px;}
 #inbox h2 +#messageform >.box.pad textarea#quickpost {
@@ -4210,7 +4211,18 @@ input[type="search"],
     z-index: -1;}
 /** /horrible acrobatics because of lack of containers **/
 
+
+/** linkbox testing **/
+.linkbox {
+    font-size: 0;
+    line-height: 7px;} /*br*/
+.linkbox br:last-child {
+    display: none;}
+.linkbox +.linkbox {
+    margin-top: -5px;}
+
 /** removing embedded brackets **/
+.linkbox a[href="collections.php?action=new"],
 #torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"],
 #torrents .linkbox a[href^="upload.php?groupid"],
 #torrents .linkbox a[href^="upload.php?action=copy&"],
@@ -4229,6 +4241,10 @@ input[type="search"],
     display: contents;
     font-size: 0;
     line-height: 0;}
+.linkbox >strong,
+.linkbox a,
+#wrapper #content .linkbox a:before
+/*.linkbox a[href="collections.php?action=new"]:before,
 #torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"]:before,
 #torrents .linkbox a[href^="upload.php?groupid"]:before,
 #torrents .linkbox a[href^="upload.php?action=copy&"]:before,
@@ -4243,27 +4259,30 @@ input[type="search"],
 .linkbox a[href="inbox.php?action=compose"]:before,
 .linkbox a[href="inbox.php?action=sentbox"]:before,
 .linkbox a[href="inbox.php"]:before,
-.linkbox a[href="wiki.php?action=create"]:before {
+.linkbox a[href="wiki.php?action=create"]:before */ {
     font-size: 14px;
     line-height: var(--p-lh);
-    margin: 0 4px;}
+    margin: 0 5px;}
 
-#torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"]:before    {content: 'Add torrent link';}
-#torrents .linkbox a[href^="upload.php?groupid"]:before                       {content: 'Add torrent';}
-#torrents .linkbox a[href^="upload.php?action=copy&"]:before                  {content: 'Upload new platform';}
-#torrents .linkbox a[href^="requests.php?action=new&"]:before                 {content: 'Create request';}
-#torrents .linkbox a[href^="torrents.php?action=download_all&"]:before        {content: 'Download all';}
-#torrents .linkbox .addignore:before                                          {content: 'Ignore';}
-#torrents .linkbox .removeignore:before                                       {content: 'Un-Ignore';}
-#torrents .linkbox .addbookmark:before                                        {content: 'Bookmark';}
-#torrents .linkbox .removebookmark:before                                     {content: 'Unbookmark';}
-#torrents .linkbox a[href^="torrents.php?action=grouplog&"]:before            {content: 'View log';}
-#torrents .linkbox a[href^="torrents.php?action=history&"]:before             {content: 'View history';}
-.linkbox a[href="inbox.php?action=compose"]:before                            {content: 'Compose';}
-.linkbox a[href="inbox.php?action=sentbox"]:before                            {content: 'Sentbox';}
-.linkbox a[href="inbox.php"]:before                                           {content: 'Inbox';}
-.linkbox a[href="wiki.php?action=create"]:before                              {content: 'Create';}
+.linkbox a[href="collections.php?action=new"]:before                            {content: 'New collection';}
+#torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"]:before      {content: 'Add torrent link';}
+#torrents .linkbox a[href^="upload.php?groupid"]:before                         {content: 'Add torrent';}
+#torrents .linkbox a[href^="upload.php?action=copy&"]:before                    {content: 'Upload new platform';}
+#torrents .linkbox a[href^="requests.php?action=new&"]:before                   {content: 'Create request';}
+#torrents .linkbox a[href^="torrents.php?action=download_all&"]:before          {content: 'Download all';}
+#torrents .linkbox .addignore:before                                            {content: 'Ignore';}
+#torrents .linkbox .removeignore:before                                         {content: 'Un-Ignore';}
+#torrents .linkbox .addbookmark:before                                          {content: 'Bookmark';}
+#torrents .linkbox .removebookmark:before                                       {content: 'Unbookmark';}
+#torrents .linkbox a[href^="torrents.php?action=grouplog&"]:before              {content: 'View log';}
+#torrents .linkbox a[href^="torrents.php?action=history&"]:before               {content: 'View history';}
+.linkbox a[href="inbox.php?action=compose"]:before                              {content: 'Compose';}
+.linkbox a[href="inbox.php?action=sentbox"]:before                              {content: 'Sentbox';}
+.linkbox a[href="inbox.php"]:before                                             {content: 'Inbox';}
+.linkbox a[href="wiki.php?action=create"]:before                                {content: 'Create';}
 
+.linkbox a:hover:before
+/* .linkbox a[href="collections.php?action=new"]:hover:before,
 #torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"]:hover:before,
 #torrents .linkbox a[href^="upload.php?groupid"]:hover:before,
 #torrents .linkbox a[href^="upload.php?action=copy&"]:hover:before,
@@ -4278,7 +4297,7 @@ input[type="search"],
 .linkbox a[href="inbox.php?action=compose"]:hover:before,
 .linkbox a[href="inbox.php?action=sentbox"]:hover:before,
 .linkbox a[href="inbox.php"]:hover:before,
-.linkbox a[href="wiki.php?action=create"]:hover:before {
+.linkbox a[href="wiki.php?action=create"]:hover:before */ {
     background-color: var(--c-anchor-hvr-bcg);} */
 
     /* clip-path: polygon(5px 0, calc(100% - 5px) 0, calc(100% - 5px) 100%, 5px 100%);} */
@@ -4930,19 +4949,6 @@ span.size5 .twitter_post,
 span.size5 img {
     float: right; margin-left: 10px !important;}
 
-
-/** linkbox testing **/
-.linkbox {
-    color: transparent;
-    line-height: .5em;} /*br*/
-.linkbox a {
-    line-height: var(--p-lh);}
-.linkbox >strong {
-    color: var(--c-txt);}
-.linkbox br:last-child {
-    display: none;}
-.linkbox +.linkbox {
-    margin-top: -5px;}
 /*****************************************************************************************************/
 
 180
