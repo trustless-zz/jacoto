@@ -311,8 +311,7 @@ a[title="Remove"] {
     transform: scaleX(-1);}
 
 /** quote **/
-#inbox .box.vertical_space .head a[onclick^="Quote"],
-.forum_post .colhead_dark a[onclick^="Quote"] {
+a[onclick^="Quote"] {
     background-image: url('icons/dark/quote.svg');}
 
 /** thumbs **/

@@ -34,7 +34,8 @@ ul:not(.highlighted) li.active a,
 #userinfo_minor a:not(.highlight):hover,
 #requests table.border a[href^="upload.php"]:hover,
 #collections .sidebar .box.box_comment a[href^="reports.php?action=report"]:hover,
-.last_read:hover {
+.last_read:hover,
+a[onclick^="Quote"]:hover{
     -webkit-filter: brightness(0);
     filter: brightness(0);}
 

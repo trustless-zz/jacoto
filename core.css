@@ -828,7 +828,9 @@ form[name="filter"],
 #top10 .thin >.center,
 #stats #content >.box.center.chart,
 #clans #clan_stats >div,
-#actual_rules {
+#actual_rules,
+#searchthread form,
+#searchforum form {
     padding: 10px;}
 .sidebar .body {
     padding: 10px 0 0 0;}
@@ -910,7 +912,9 @@ a:hover .ratings,
 #extlink_table              td.center.cats_col +td span:first-child a,
 #staffpm .linkbox a[onclick],
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a,
-.search.box.pad #cat_list a {
+.search.box.pad #cat_list a,
+tr.pad.hidden .linkbox a,
+a[onclick^="Quote"] {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -2118,8 +2122,6 @@ td.label {
 /* filter/search td */
 #collections .thin >h2:first-child +.center td,
 #forums .forum_latest >.search.box.pad td,
-#searchforum form.search_form table.layout.border td,
-#searchthread form.search_form table.layout.border td,
 #requests .sidebar .box_votes table td,
 .requests_outer_table td,
 .filter_torrents td,
@@ -2127,8 +2129,6 @@ td.label {
     padding: 2px 5px 4px 5px;}
 #collections .thin >h2:first-child +.center td.label,
 #forums .forum_latest >.search.box.pad td.label,
-#searchforum form.search_form table.layout.border td.label,
-#searchthread form.search_form table.layout.border td.label,
 #requests .sidebar .box_votes table td.label,
 .requests_outer_table td.label,
 .filter_torrents td.label,
@@ -2347,23 +2347,10 @@ a[href^="javascript:Vote("] strong:hover:active,
 #platcheckbox td[colspan="5"] strong {
     color: var(--c-txt);
     font-weight: 600;}
-#newthreadform #newthreadtext #answer_block a,
-#upload td#image_block a,
-.torrent_details .group_torrent td:first-child >a,
-.filter_torrents.advanced .flright,
-.toggle_tags,
-#requests .thin >.center.box.pad a[onclick],
-#newthreadform #newthreadtext td.center a[onclick],
-.linkbox a[onclick^="popup_add"],
-.linkbox a[href="#quickpost"],
-.sidebar .box_gold a.tooltip,
-#user a#toggle_css_gallery,
-#user .thin >h2 +form#userform a[onclick],
-#forums #forum_search_cat_list td.forum_cat a,
-.prev,
-.next,
-#staffpm .linkbox a[onclick],
-.search.box.pad #cat_list a {
+input[type="button"][value="Preview"],
+input[type="button"][value="Editor"],
+a[href="#"],
+a[onclick] {
     cursor: default;}
 /* #upload #releaseinfo .colhead +tr+tr td.label,
 #upload #rlstitle +tr td.label,
@@ -2425,6 +2412,7 @@ body:not(#upload) #artist_tr + tr td.label,
 
 .filter_torrents.advanced td[colspan="7"] {
     color: var(--c-text-s);}
+.torrent_details .torrent_table tr.pad.hidden tr td,
 .filter_torrents.advanced label {
     color: var(--c-txt);}
 
@@ -2467,8 +2455,8 @@ body:not(#upload) #artist_tr + tr td.label,
 #top10 td.center.cats_col +td >strong {
     font-weight: normal;}
 
-.torrent_details .torrent_table .colhead_dark td:nth-child(1):after,
-.torrent_details .torrent_table .colhead_dark td:nth-child(1):before {
+.torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
+.torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
     position: absolute;
     content: '';
     width: 983px; /* can't think of another way */
@@ -2478,24 +2466,24 @@ body:not(#upload) #artist_tr + tr td.label,
     left: 0;
     background: var(--p-expand-hvr);
     z-index: 1;}
-.torrent_details .torrent_table .colhead_dark td:nth-child(1):after {
+.torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after {
     background: transparent !important;
     z-index: 3;}
-.torrent_table .colhead_dark td[onclick]:hover:before {
+.torrent_details .torrent_table >tbody >.colhead_dark td[onclick]:hover:before {
     opacity: 1;}
-.torrent_details .torrent_table .colhead_dark strong,
-.torrent_details .torrent_table .colhead_dark img {
+.torrent_details .torrent_table >tbody >.colhead_dark strong,
+.torrent_details .torrent_table >tbody >.colhead_dark img {
     position: absolute;
     line-height: 38px;
     top: 0;
     left: 5px;
     z-index: 2;}
-.torrent_details .torrent_table .colhead_dark >td:first-child strong {
+.torrent_details .torrent_table >tbody >.colhead_dark >td:first-child strong {
     left: 10px;}
-.torrent_details .torrent_table .colhead_dark img {
+.torrent_details .torrent_table >tbody >.colhead_dark img {
     margin-top: 10px;}
 
-.torrent_details .torrent_table .colhead_dark td {
+.torrent_details .torrent_table >tbody >.colhead_dark td {
     height: 20px;
     position: relative;}
 .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1) {
@@ -2714,7 +2702,9 @@ li:not(.suggested_similar) .similar_votes >span {
 #rules h3#jump +.box.pad .colhead,
 #clans #clan_stats >div .colhead,
 #staff .thin >.box.pad .colhead,
-#rules table.required_ratio .colhead {
+#rules table.required_ratio .colhead,
+.torrent_details .torrent_table tr.pad.hidden .colhead,
+.torrent_details .torrent_table tr.pad.hidden .colhead_dark {
     background: var(--p-subcolhead);}
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
@@ -2723,6 +2713,8 @@ li:not(.suggested_similar) .similar_votes >span {
     font-size: 14px;
     line-height: 19px;
     padding: 6px 5px 7px 5px;}
+.torrent_details .torrent_table tr.pad.hidden .colhead td,
+.torrent_details .torrent_table tr.pad.hidden .colhead_dark td,
 #top10 .thin >.linkbox ~div:not(.center) >table.border .colhead td,
 #artist .main_column table .colhead td,
 #artist .main_column table .colhead_dark td,
@@ -2740,6 +2732,8 @@ li:not(.suggested_similar) .similar_votes >span {
     line-height: 16px;
     padding: 8px 5px;}
 
+#searchforum,
+#searchthread,
 #collections .sidebar .box.box_comment .head a.username {
     font-size: 14px;
     line-height: 19px;}
@@ -3238,6 +3232,8 @@ img[src="static/common/thumbsup.png"],
     padding-top: 13px;}
 
 /** convert ... to head **/
+#wrapper #searchthread h3,
+#wrapper #searchforum h3,
 #clans #clan_stats >div >h2,
 #top10 .thin >.linkbox ~div:not(.center) >h3,
 #stats #content >.box >h1,
@@ -3276,6 +3272,8 @@ form[name="filter"] h3,
     margin: 15px 0 0 0;}
 #staff .thin >.box.pad >h3:first-of-type {
     margin: -10px -10px 0 -10px;}
+#wrapper #searchthread h3,
+#wrapper #searchforum h3,
 form[name="filter"] h3,
 #top10 .thin >.linkbox ~div:not(.center) >h3 {
     margin: 0;
@@ -3569,6 +3567,8 @@ tr.likes td[id^="likers_"]:hover {
     background-position: right center;
     background-size: 0 0;
     opacity: .65;}
+.linkbox .brackets:before,
+.linkbox .brackets:after,
 #user script +.thin h2 +#userform:before,
 #collections .edition_info:before,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:before,
@@ -3810,36 +3810,13 @@ input[type="button"][value="Hide"]:hover,
 a[onclick="BBCode.spoiler(this);"]:hover {
     color: var(--c-anchor-hvr);}
 
-#searchforum,
-#searchthread {
-    margin: 10px 0;}
 #searchforum >div,
 #searchthread >div {
     width: 100%;
-    margin: 0 auto;}
-#searchforum h3,
-#searchthread h3 {
-    margin: 0 1px -39px 1px !important;
-    text-align: left;
-    padding-left: 10px;
-    height: 38px;
-    line-height: 38px;
-    z-index: 9;
-    position: relative;
-    width: calc(100% - 12px);}
-#searchforum form.search_form,
-#searchthread form.search_form {
-    margin-bottom: 10px
-    margin-top: -39px;
-    padding: 48px 10px 10px 10px;
-    background-color: var(--c-box);
-    -webkit-box-shadow: var(--p-main-shdw);
-    box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);}
+    height: 100%;
+    margin: 0;}
 #forums .forum_latest >.search.box.pad #forumlist,
 #forums .forum_latest >.search.box.pad #otherop,
-#searchthread form.search_form table.layout.border,
-#searchforum form.search_form table.layout.border,
 #forums #newthreadtext,
 .sidebar .box_badges img,
 .sidebar .box_image_avatar img,
@@ -3852,7 +3829,9 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #staffpm .box.vertical_space ~h3 +.box.pad form#messageform,
 .thin.torrent_history >form#torrent_history_search table#th_search,
 #artist .main_column table,
-#rules h3#jump +.box.pad >table {
+#rules h3#jump +.box.pad >table,
+#wrapper #searchthread table,
+#wrapper #searchforum table {
     background: none;
     border: none;
     -webkit-box-shadow: none;
@@ -3863,11 +3842,6 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 .sidebar .box_badges img {
     margin: 0 2px;}
 
-#searchforum form.search_form table.layout.border tr,
-#searchthread form.search_form table.layout.border tr {
-    width: 50%;
-    display: inline-block;
-    white-space: nowrap;}
 #user input#irckey,
 #user input#email,
 #user input#avatar,
@@ -3875,8 +3849,6 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 /* #searchforum input[type="search"],
 #searchthread input[type="search"], */
 input[type="search"],
-#searchforum form.search_form table.layout.border tr:last-child,
-#searchthread form.search_form table.layout.border tr:last-child,
 #forums .forums_search .search_form input[type="text"]:not([class="date_picker"]) {
     width: 100%;}
 
@@ -3889,14 +3861,6 @@ input[type="search"],
 #forums .forum_latest >h2:first-child {
     margin-bottom: 15px;}
 
-#searchforum form.search_form table.layout.border tr:nth-child(2) {
-    width: 70%;
-    float: left;
-    margin-top: 2px;}
-#searchforum form.search_form table.layout.border tr:last-child {
-    width: 30%;
-    left: calc(-70% + 260px);
-    position: relative;}
 #forums .forums_search .search_form,
 #forums #newthreadpreview +.box.pad,
 #forums #newthreadpreview,
@@ -4016,7 +3980,7 @@ input[type="search"],
     width: calc(100% - 180px);}
 #inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child) td,
 #inbox #messageform +h2 +form >.box.pad tr:not(:last-child) td {
-    vertical-align: bottom;}
+    /*vertical-align: bottom;*/}
 #inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child) td:not(.label),
 #inbox #messageform +h2 +form >.box.pad tr:not(:last-child) td:not(.label) {
     padding-right: 20px;
@@ -4066,11 +4030,12 @@ input[type="search"],
     font-weight: normal;
     margin: 0;
     padding: 0;
+    width: 100%;
     font-size: 14px;}
 #inbox #messageform #quickpost .comp td:first-child {
     vertical-align: top;
     text-align: right;
-    width: 90px;}
+    width: 80px;}
 #inbox #messageform #quickpost .comp td:first-child h3 {
     line-height: 26px;}
 #inbox #messageform #quickpost .comp td {
@@ -4222,6 +4187,12 @@ input[type="search"],
     margin-top: -5px;}
 
 /** removing embedded brackets **/
+#inbox .linkbox a[href="#quickpost"],
+.linkbox a[onclick^="$('#searchthread')."],
+.linkbox a[onclick*=";unsubscribe_thread("],
+.linkbox a[onclick*=";subscribe_thread("],
+.linkbox a[href^="reports.php?action=report&type=thread&"],
+.linkbox a[href^="bookmarks.php?action=remove_snatched&"],
 .linkbox a[href="collections.php?action=new"],
 #torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"],
 #torrents .linkbox a[href^="upload.php?groupid"],
@@ -4243,27 +4214,17 @@ input[type="search"],
     line-height: 0;}
 .linkbox >strong,
 .linkbox a,
-#wrapper #content .linkbox a:before
-/*.linkbox a[href="collections.php?action=new"]:before,
-#torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"]:before,
-#torrents .linkbox a[href^="upload.php?groupid"]:before,
-#torrents .linkbox a[href^="upload.php?action=copy&"]:before,
-#torrents .linkbox a[href^="requests.php?action=new&"]:before,
-#torrents .linkbox a[href^="torrents.php?action=download_all&"]:before,
-#torrents .linkbox .addignore:before,
-#torrents .linkbox .removeignore:before,
-#torrents .linkbox .addbookmark:before,
-#torrents .linkbox .removebookmark:before,
-#torrents .linkbox a[href^="torrents.php?action=grouplog&"]:before,
-#torrents .linkbox a[href^="torrents.php?action=history&"]:before,
-.linkbox a[href="inbox.php?action=compose"]:before,
-.linkbox a[href="inbox.php?action=sentbox"]:before,
-.linkbox a[href="inbox.php"]:before,
-.linkbox a[href="wiki.php?action=create"]:before */ {
+#wrapper #content .linkbox a:before {
     font-size: 14px;
     line-height: var(--p-lh);
     margin: 0 5px;}
 
+#inbox .linkbox a[href="#quickpost"]:before                                     {content: 'Jump to Reply';}
+.linkbox a[onclick^="$('#searchthread')."]:before                               {content: 'Search this thread';}
+.linkbox a[onclick*=";unsubscribe_thread("]:before                              {content: 'Unsubscribe from Thread';}
+.linkbox a[onclick*=";subscribe_thread("]:before                                {content: 'Subscribe to Thread';}
+.linkbox a[href^="reports.php?action=report&type=thread&"]:before               {content: 'Report Thread';}
+.linkbox a[href^="bookmarks.php?action=remove_snatched&"]:before                {content: 'Remove Snatched';}
 .linkbox a[href="collections.php?action=new"]:before                            {content: 'New collection';}
 #torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"]:before      {content: 'Add torrent link';}
 #torrents .linkbox a[href^="upload.php?groupid"]:before                         {content: 'Add torrent';}
@@ -4281,24 +4242,8 @@ input[type="search"],
 .linkbox a[href="inbox.php"]:before                                             {content: 'Inbox';}
 .linkbox a[href="wiki.php?action=create"]:before                                {content: 'Create';}
 
-.linkbox a:hover:before
-/* .linkbox a[href="collections.php?action=new"]:hover:before,
-#torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"]:hover:before,
-#torrents .linkbox a[href^="upload.php?groupid"]:hover:before,
-#torrents .linkbox a[href^="upload.php?action=copy&"]:hover:before,
-#torrents .linkbox a[href^="requests.php?action=new&"]:hover:before,
-#torrents .linkbox a[href^="torrents.php?action=download_all&"]:hover:before,
-#torrents .linkbox .addignore:hover:before,
-#torrents .linkbox .removeignore:hover:before,
-#torrents .linkbox .addbookmark:hover:before,
-#torrents .linkbox .removebookmark:hover:before,
-#torrents .linkbox a[href^="torrents.php?action=grouplog&"]:hover:before,
-#torrents .linkbox a[href^="torrents.php?action=history&"]:hover:before,
-.linkbox a[href="inbox.php?action=compose"]:hover:before,
-.linkbox a[href="inbox.php?action=sentbox"]:hover:before,
-.linkbox a[href="inbox.php"]:hover:before,
-.linkbox a[href="wiki.php?action=create"]:hover:before */ {
-    background-color: var(--c-anchor-hvr-bcg);} */
+.linkbox a:hover:before {
+    background-color: var(--c-anchor-hvr-bcg);}
 
     /* clip-path: polygon(5px 0, calc(100% - 5px) 0, calc(100% - 5px) 100%, 5px 100%);} */
 
@@ -4752,11 +4697,13 @@ abbr {
     width: 60px;}
 #staffpm #compose table.comp td:first-child strong,
 #staffpm #compose table.comp td:first-child h3 {
+    vertical-align: top;
+    width: 100%;
     text-align: right;
     margin: 0;
     font-weight: normal;
     font-size: 14px;
-    line-height: var(--p-lh);}
+    line-height: 26px;}
 
 .nobr {
     white-space: nowrap;}
@@ -4840,6 +4787,55 @@ td >img[title="Gold"] {
     margin: -1px 0;
     display: inline-block;
     vertical-align: bottom;}
+
+
+#searchforum,
+#searchthread {
+    background-color: var(--c-box);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    border: var(--p-main-brdr);
+    margin: 10px 0;}
+#searchforum table,
+#searchthread table {
+    display: block;}
+#searchforum tr,
+#searchforum tbody,
+#searchthread tr,
+#searchthread tbody {
+    display: flex;
+    white-space: nowrap;}
+#searchforum tbody {
+    flex-flow: row wrap;}
+#searchthread tr:nth-child(1) {
+    width: calc(70% - 64px);}
+#searchthread tr:nth-child(2) {
+    width: calc(30% - 33px);
+    margin: 0 15px;}
+#searchforum tr:nth-child(1) {
+    width: calc(70% - 8px);}
+#searchforum tr:nth-child(3) {
+    width: calc(30% - 7px);
+    margin: 0 0 0 15px;}
+#searchforum tr:nth-child(2){
+    width: calc(100% - 67px);}
+#searchforum tr:nth-child(2),
+#searchforum tr:nth-child(4) {
+    margin-top: 8px;}
+#searchforum td,
+#searchthread td {
+    display: block;
+    padding: 0;
+    line-height: 26px;}
+#searchforum td:nth-child(2),
+#searchthread td:nth-child(2) {
+    width: 100%;
+    margin-left: 5px;}
+#searchforum tr:nth-child(2) {
+    order: 3;}
+#searchforum tr:nth-child(4) {
+    order: 4;}
+
 
 /** going with absolute because flex needs containers **/
 .clan_stat_totals:after {
