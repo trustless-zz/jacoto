@@ -987,7 +987,8 @@ div,
 #userinfo_username .welcome.active a,
 #userinfo_username .sub span.active a,
 .box.news_post .head:hover,
-a:hover .ratings span {
+a:hover .ratings span,
+#header #announcement {
     color: var(--c-anchor-hvr);}
 
 .sidebar img {
