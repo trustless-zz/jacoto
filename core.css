@@ -876,19 +876,17 @@ span.user_title a:hover {
 .torrent_table td[colspan="4"] >span:first-child >a,
 #index #freeleech .group_torrent >span:first-child a,
 .torrent_table .show_torrents_link,
-.colhead_dark a,
-.colhead a,
+/*.colhead_dark a,*/
+/*.colhead a,*/
 #toplink a,
 #header a,
-.flright:hover,
-.toggle_tags:hover,
 .prev:hover,
 .next:hover,
 #taglist a:hover,
 .filter_torrents.advanced #taglist td:hover,
 .torrent_details .group_torrent td:first-child a,
 .box_game_ratings a[target="_blank"]:hover,
-#requests .thin >.center.box.pad a[onclick],
+/*#requests .thin >.center.box.pad a[onclick],*/
 #requests table.border a[href^="upload.php"],
 .forum_post tr.likes >td:first-child a,
 .bbbutt li a,
@@ -916,7 +914,8 @@ span.user_title a:hover {
 .search.box.pad #cat_list a,
 tr.pad.hidden .linkbox a,
 .colhead_dark a[onclick^="Quote"],
-.head a[onclick^="Quote"] {
+.head a[onclick^="Quote"],
+#top10 td.center.cats_col +td >span a {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -1902,6 +1901,13 @@ a .error_message:hover:active {
     font-size: 0;
     display: inline-block;
     vertical-align: top;}
+#top10 td.center.cats_col +td >span a,
+#artist #torrent_table .group_torrent td[colspan="2"] >span:first-child a,
+#collections #torrent_table .group_torrent td[colspan="3"] >span:first-child aa,
+#bookmarks #torrent_table td[colspan="3"] >span:first-child a,
+.torrent_details .group_torrent td:first-child span a,
+.torrent_table td[colspan="4"] >span:first-child a {
+    cursor: pointer;}
 #bookmarks #torrent_table td[colspan="3"] >span:first-child a,
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child >a,
@@ -2340,11 +2346,12 @@ a[href^="javascript:Vote("] strong:hover:active,
 .filter_torrents.advanced .flright {
     position: relative;
     margin-right: 5px;
-    line-height: 26px;}
+    line-height: 19px;
+    margin-top: 3px;}
 .filter_torrents.advanced .flright:before {
     content: '(View Less)';
     position: absolute;
-    bottom: 1080px;}
+    bottom: 1039px;}
 .torrent_notifications table.border .colhead strong,
 #forums #forum_search_cat_list td.forum_cat strong,
 #platcheckbox td[colspan="5"] strong {
@@ -2355,6 +2362,7 @@ input[type="button"][value="Editor"],
 a[href="#"],
 a[onclick] {
     cursor: default;}
+#index .sidebar #freeleech .group_torrent a,
 td.body a[onclick^="Quote"] {
     cursor: pointer;}
 /* #upload #releaseinfo .colhead +tr+tr td.label,
@@ -4192,6 +4200,24 @@ input[type="search"],
     margin-top: -5px;}
 
 /** removing embedded brackets **/
+.linkbox a[href="collections.php"],
+.linkbox a[href^="collections.php?action=manage&collageid"],
+.linkbox a[href^="reports.php?action=report&type=collage&id"],
+.linkbox a[href^="collections.php?action=delete&collageid"],
+.linkbox a[href="top10.php?type=games"],
+.linkbox a[href="top10.php?type=torrents"],
+.linkbox a[href="top10.php?type=users"],
+.linkbox a[href="top10.php?type=uploaders"],
+.linkbox a[href="top10.php?type=tags"],
+.linkbox a[href^="artist.php?action=history&artistid"],
+.linkbox a[href^="artist.php?action=notify&artistid"],
+.linkbox a[href^="upload.php?artistname"],
+.linkbox a[href^="requests.php?action=new&artistid"],
+.linkbox a[href^="reports.php?action=report&type=request&"],
+.linkbox a[href="requests.php?type=voted"],
+.linkbox a[href="requests.php?type=created"],
+.linkbox a[href="requests.php?action=new&request_currency=upload"],
+.linkbox a[href="requests.php?action=new&request_currency=gold"],
 #inbox .linkbox a[href="#quickpost"],
 .linkbox a[onclick^="$('#searchthread')."],
 .linkbox a[onclick*=";unsubscribe_thread("],
@@ -4224,6 +4250,23 @@ input[type="search"],
     line-height: var(--p-lh);
     margin: 0 5px;}
 
+.linkbox a[href="collections.php"]:before                                       {content: "List of collections";}
+.linkbox a[href^="collections.php?action=manage&collageid"]:before              {content: "Manage torrents";}
+.linkbox a[href^="reports.php?action=report&type=collage&id"]:before            {content: "Report collection";}
+.linkbox a[href^="collections.php?action=delete&collageid"]:before              {content: "Delete";}
+.linkbox a[href="top10.php?type=games"]:before                                  {content: "Games";}
+.linkbox a[href="top10.php?type=torrents"]:before                               {content: "Torrents";}
+.linkbox a[href="top10.php?type=users"]:before                                  {content: "Users";}
+.linkbox a[href="top10.php?type=uploaders"]:before                              {content: "Uploaders";}
+.linkbox a[href="top10.php?type=tags"]:before                                   {content: "Tags";}
+.linkbox a[href^="artist.php?action=notify&artistid"]:before                    {content: "Notify of new uploads";}
+.linkbox a[href^="upload.php?artistname"]:before                                {content: "New Upload";}
+.linkbox a[href^="requests.php?action=new&artistid"]:before                     {content: "Add Request";}
+.linkbox a[href^="reports.php?action=report&type=request&"]:before              {content: "Report Request";}
+.linkbox a[href="requests.php?type=voted"]:before                               {content: "Requests I've voted on";}
+.linkbox a[href="requests.php?type=created"]:before                             {content: 'My requests';}
+.linkbox a[href="requests.php?action=new&request_currency=upload"]:before       {content: 'New GB request';}
+.linkbox a[href="requests.php?action=new&request_currency=gold"]:before         {content: 'New gold request';}
 #inbox .linkbox a[href="#quickpost"]:before                                     {content: 'Jump to Reply';}
 .linkbox a[onclick^="$('#searchthread')."]:before                               {content: 'Search this thread';}
 .linkbox a[onclick*=";unsubscribe_thread("]:before                              {content: 'Unsubscribe from Thread';}
@@ -4234,13 +4277,14 @@ input[type="search"],
 #torrents .linkbox a[href^="torrents.php?action=add_torrent_link&"]:before      {content: 'Add torrent link';}
 #torrents .linkbox a[href^="upload.php?groupid"]:before                         {content: 'Add torrent';}
 #torrents .linkbox a[href^="upload.php?action=copy&"]:before                    {content: 'Upload new platform';}
-#torrents .linkbox a[href^="requests.php?action=new&"]:before                   {content: 'Create request';}
+.linkbox a[href^="requests.php?action=new&groupid"]:before                      {content: 'Create request';}
 #torrents .linkbox a[href^="torrents.php?action=download_all&"]:before          {content: 'Download all';}
 #torrents .linkbox .addignore:before                                            {content: 'Ignore';}
 #torrents .linkbox .removeignore:before                                         {content: 'Un-Ignore';}
 #torrents .linkbox .addbookmark:before                                          {content: 'Bookmark';}
 #torrents .linkbox .removebookmark:before                                       {content: 'Unbookmark';}
 #torrents .linkbox a[href^="torrents.php?action=grouplog&"]:before              {content: 'View log';}
+.linkbox a[href^="artist.php?action=history&artistid"]:before,
 #torrents .linkbox a[href^="torrents.php?action=history&"]:before               {content: 'View history';}
 .linkbox a[href="inbox.php?action=compose"]:before                              {content: 'Compose';}
 .linkbox a[href="inbox.php?action=sentbox"]:before                              {content: 'Sentbox';}
