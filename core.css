@@ -915,7 +915,11 @@ span.user_title a:hover {
 tr.pad.hidden .linkbox a,
 .colhead_dark a[onclick^="Quote"],
 .head a[onclick^="Quote"],
-#top10 td.center.cats_col +td >span a {
+
+#top10 td.center.cats_col +td >span a,
+#quickreplypreview .colhead_dark #barpreview a,
+.forum_post .colhead_dark div[style="float: right;"] a,
+#newthreadpreview .forum_post .colhead_dark #barpreview a {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -2361,7 +2365,7 @@ input[type="button"][value="Preview"],
 input[type="button"][value="Editor"],
 a[href="#"],
 a[onclick] {
-    cursor: default;}
+    /*cursor: default;*/}
 #index .sidebar #freeleech .group_torrent a,
 td.body a[onclick^="Quote"] {
     cursor: pointer;}
