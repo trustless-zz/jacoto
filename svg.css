@@ -300,7 +300,9 @@ a[title="Remove"] {
 .torrent_table .removebookmark {
     background-image: url('icons/dark/removebookmark.svg');}
 
-/** staff pick cycle **/
+/** cycle **/
+.xdsoft_datetimepicker .xdsoft_next:hover:active,
+.xdsoft_datetimepicker .xdsoft_prev:hover:active,
 .xdsoft_datetimepicker .xdsoft_next,
 .xdsoft_datetimepicker .xdsoft_prev,
 .prev,
@@ -311,7 +313,8 @@ a[title="Remove"] {
     transform: scaleX(-1);}
 
 /** quote **/
-a[onclick^="Quote"] {
+.colhead_dark a[onclick^="Quote"],
+.head a[onclick^="Quote"] {
     background-image: url('icons/dark/quote.svg');}
 
 /** thumbs **/

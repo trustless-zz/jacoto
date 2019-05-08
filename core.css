@@ -866,7 +866,8 @@ a:hover,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover,
 a:hover .ratings,
-#user .thin >h2 a.flright:hover {
+#user .thin >h2 a.flright:hover,
+span.user_title a:hover {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
 
@@ -914,7 +915,8 @@ a:hover .ratings,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a,
 .search.box.pad #cat_list a,
 tr.pad.hidden .linkbox a,
-a[onclick^="Quote"] {
+.colhead_dark a[onclick^="Quote"],
+.head a[onclick^="Quote"] {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -2352,6 +2354,8 @@ input[type="button"][value="Editor"],
 a[href="#"],
 a[onclick] {
     cursor: default;}
+td.body a[onclick^="Quote"] {
+    cursor: pointer;}
 /* #upload #releaseinfo .colhead +tr+tr td.label,
 #upload #rlstitle +tr td.label,
 #upload #rlstitle td.label,
@@ -4449,6 +4453,8 @@ input[class="date_picker"] {
 	font-family: OpenSans, Helvetica, Arial, sans-serif;}
 .xdsoft_datetimepicker .xdsoft_label {
     background-color: var(--c-box);}
+.xdsoft_datetimepicker .xdsoft_next:hover:active,
+.xdsoft_datetimepicker .xdsoft_prev:hover:active,
 .xdsoft_datetimepicker .xdsoft_next,
 .xdsoft_datetimepicker .xdsoft_prev {
     -webkit-box-shadow: none;
