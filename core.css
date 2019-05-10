@@ -5606,11 +5606,8 @@ span.size5 img {
 	#shop_search a {
 		color: #999;}
 
-	#shop_search tbody:not(#advanced_search) td.label {
-		/* width: 75px; */
-		/* padding-left: 15px; */
-		display: none;
-		}
+#shop_search td.label strong {
+    font-weight: normal;}
 	#shop_search tbody:not(#advanced_search) td {
 	    padding:0;	}
 
@@ -5736,16 +5733,34 @@ span.size5 img {
 
 #shop #clickable {
 	width: 200px;
-	width: calc(100% - 40px);
+	width: calc(100% - 34px);
 	margin: 50px auto 0;
 	}
 
-#shop li.item_type_0 #clickable {background: url('https://gazellegames.net/static/styles/game_room/images/shop/redbkg.png') center left;}
-#shop li.item_type_1 #clickable {background: url('https://gazellegames.net/static/styles/game_room/images/shop/bluebkg.png') center left no-repeat;}
-#shop li.item_type_2 #clickable {background: url('https://gazellegames.net/static/styles/game_room/images/shop/greenbkg.png') center left no-repeat;}
-#shop li.item_type_3 #clickable {background: url('https://gazellegames.net/static/styles/game_room/images/shop/yellowbkg.png') center left no-repeat;}
-#shop li.item_type_4 #clickable {background: url('https://gazellegames.net/static/styles/game_room/images/shop/greybkg.png') center left no-repeat;}
-#shop li.item_type_5 #clickable {background: url('https://gazellegames.net/static/styles/game_room/images/shop/lightbluebkg.png') left center no-repeat;}
+#shop li.item_type_0 #clickable {
+    background-color: var(--c-type-0);
+    outline: 3px solid var(--c-type-0);
+    outline-offset: -3px;}
+#shop li.item_type_1 #clickable {
+    background-color: var(--c-type-1);
+    outline: 3px solid var(--c-type-1);
+    outline-offset: -3px;}
+#shop li.item_type_2 #clickable {
+    background-color: var(--c-type-2);
+    outline: 3px solid var(--c-type-2);
+    outline-offset: -3px;}
+#shop li.item_type_3 #clickable {
+    background-color: var(--c-type-3);
+    outline: 3px solid var(--c-type-3);
+    outline-offset: -3px;}
+#shop li.item_type_4 #clickable {
+    background-color: var(--c-type-4);
+    outline: 3px solid var(--c-type-4);
+    outline-offset: -3px;}
+#shop li.item_type_5 #clickable {
+    background-color: var(--c-type-5);
+    outline: 3px solid var(--c-type-5);
+    outline-offset: -3px;}
 
 #shop .owned {
     background: var(--c-box) url('https://gazellegames.net/static/styles/game_room/images/shop/owned.png') top left no-repeat !important;
@@ -5779,7 +5794,7 @@ span.size5 img {
 	opacity: 1;
 	position: relative;
 	top: -165px;
-	background-color: var(--c-hovereffect);
+	background-color: var(--c-item-desc);
 	color: var(--c-txt);
 	padding: 10px;
 	max-height: 160px;
@@ -5852,7 +5867,7 @@ span.size5 img {
 	visibility: visible;
 	height: auto;}
 
-#shop li.featured #clickable {width: 100%; margin: 25px auto 0;}
+#shop li.featured #clickable {width: calc(100% - 34px); margin: 50px auto 0;}
 
 #shop .featured h3.center {
 	/* border-bottom: 1px solid #fff; */
@@ -5867,6 +5882,7 @@ span.size5 img {
 	opacity: 1;
 	visibility: visible;
 	margin-left: 205px;
+    margin-right: 22px;
 	text-align: left;
 	margin-top: -240px;
 	top: 0px;

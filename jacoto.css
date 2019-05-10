@@ -5,9 +5,9 @@
 
 @import url(https://gazellegames.net/static/styles/game_room/cssFiles/holidayeffects.css);
 
-:root {
 /** COLORS **/
-    --c-quote-brdr:                     rgba(10, 10, 10, 0.1);
+:root {
+    --c-quote-brdr:                     rgba(10, 10, 10, .1);
     --c-quote:                          rgba(10, 10, 10, .05);
     --c-txt: 							rgb(50, 50, 50);
     --c-text-s: 						rgb(100, 100, 100);
@@ -25,6 +25,7 @@
     --c-trowb:							rgb(237, 237, 237);                     /*rowb*/
     --c-tgroup:							rgb(240, 240, 240);                     
     --c-box: 							rgb(245, 245, 245);                     /*rowa*/
+    --c-item-desc:                      rgba(245, 245, 245, .8);
     --c-row-hvr:						rgb(250, 250, 250);
     --c-high:							rgb(255, 255, 255);
     --c-b1: 							rgb(18, 201, 194);
@@ -56,5 +57,13 @@
     --c-gold:                           rgb(133, 112, 0);                       /* contrast adjusted */
     --c-orange:                         rgb(156, 101, 0);                       /* contrast adjusted */
     --p-orange:                         0 0 1px rgb(255, 165, 0);
-    --p-gold:                           0 0 1px rgb(255, 215, 0);}
+    --p-gold:                           0 0 1px rgb(255, 215, 0);
+/*shop*/
+    --c-type-0:                         rgba(116,   56,     66,     .25);
+    --c-type-1:                         rgba(58,    77,     115,    .25);
+    --c-type-2:                         rgba(70,    114,    59,     .25);
+    --c-type-3:                         rgba(115,   118,    0,      .25);
+    --c-type-4:                         rgba(84,    84,     84,     .25);
+    --c-type-5:                         rgba(0,     92,     119,    .25);
+}
 /** /COLORS **/
