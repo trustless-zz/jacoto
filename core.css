@@ -1,56 +1,4 @@
 ﻿:root {
-/** COLORS **/
-    --c-quote-brdr:                     rgba(10, 10, 10, 0.1);
-    --c-quote:                          rgba(10, 10, 10, .05);
-    --c-txt: 							rgb(50, 50, 50);
-    --c-text-s: 						rgb(100, 100, 100);
-    --c-curtain:						rgb(110, 110, 110);
-    --c-sticky-id-brdr:                 rgb(190, 190, 190);
-    --c-input-brdr:						rgb(195, 195, 195);
-    --c-main-brdr:						rgb(200, 200, 200);
-    --c-sticky-2:                       rgb(205, 205, 205);
-    --c-table-brdr: 					rgb(210, 210, 210);
-    --c-tor-rowb: 						rgb(215, 215, 215);
-    --c-body: 							rgb(220, 220, 220);						/*tor-rowa*/
-    --c-tor-row-hvr: 					rgb(225, 225, 225);
-    --c-edition: 						rgb(230, 230, 230);
-    --c-input:							rgb(235, 235, 235);
-    --c-trowb:							rgb(237, 237, 237);                     /*rowb*/
-    --c-tgroup:							rgb(240, 240, 240);                     
-    --c-box: 							rgb(245, 245, 245);                     /*rowa*/
-    --c-row-hvr:						rgb(250, 250, 250);
-    --c-high:							rgb(255, 255, 255);
-    --c-b1: 							rgb(18, 201, 194);
-    --c-b2: 							rgb(81, 204, 165);
-    --c-b3: 							rgb(142, 225, 222);                     /*~45%*/
-    --c-b4: 							rgb(170, 226, 209);                     /*~45%*/
-    --c-sb1:                            rgb(183, 233, 231);                     /* 10,4th */
-    --c-sb2:                            rgb(200, 234, 223);                     /* 10,4th */
-    --c-hovereffect: 					rgba(255, 255, 255, .8);
-    --c-b00: 							rgba(255, 255, 255, 0);
-    --c-anchor: 						rgb(11, 122, 118);						/* #bd002c */
-    --c-anchor-hvr: 					rgb(0, 0, 0);							/* #053d3b #630017 */
-    --c-anchor-hvr-bcg: 				rgb(204, 237, 236);                     /* 10,3rd */  /*rgba(18, 201, 194, .1);*/
-	--c-header-shdw: 					rgba(0,0,0,.1);
-    --c-main-shdw:						rgba(0,0,0,.2);
-    --c-img-bcg-anchor: 				rgb(230, 242, 242);
-    --c-on: 							rgb(29, 145, 0);						/* #1E9400 */
-    --c-yellow: 						rgb(145, 145, 0);
-    --c-off: 							rgb(163, 0, 0);							/* #910000 */
-    --c-colhead-click:					rgba(255, 255, 255, .15);
-    --c-colhead-act: 					rgba(255, 255, 255, .3);
-    --c-em-bcg: 						rgb(245, 100, 22);
-    --c-em-hvr: 						rgb(199, 81, 18);
-    --c-em-act: 						rgb(245, 173, 134);
-    --c-fl: 							rgb(100, 65, 165);
-    --c-btn-b1: 						rgb(119, 211, 207);
-    --c-btn-b2: 						rgb(151, 212, 193);
-    --c-red:                            rgb(227, 0, 0);                         /* contrast adjusted */
-    --c-gold:                           rgb(133, 112, 0);                       /* contrast adjusted */
-    --c-orange:                         rgb(156, 101, 0);                       /* contrast adjusted */
-    --p-orange:                         0 0 1px rgb(255, 165, 0);
-    --p-gold:                           0 0 1px rgb(255, 215, 0);
-/** /COLORS **/
     --p-searchbar-grdnt: 				var(--c-b1) linear-gradient(155deg,var(--c-b1),var(--c-b2));
     --p-head-grdnt: 					var(--c-b3) linear-gradient(155deg,var(--c-b3),var(--c-b4));
     --p-header-shdw: 					0 0 4px var(--c-header-shdw);
@@ -800,7 +748,9 @@ form[name="filter"],
 #artist .thin h2:first-child +table.border,
 #stats #content >.box,
 #clans #clan_stats >div,
-#actual_rules {
+#actual_rules,
+#shop_search,
+#shop #items_navigation {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -832,7 +782,8 @@ form[name="filter"],
 #clans #clan_stats >div,
 #actual_rules,
 #searchthread form,
-#searchforum form {
+#searchforum form,
+#shop_search {
     padding: 10px;}
 .sidebar .body {
     padding: 10px 0 0 0;}
@@ -1221,7 +1172,8 @@ strong.important_text,
 #reportsv2 font[color="red"],
 #index span[style="color: red;"],
 #upload #content >div >table[style] span[style="color:red;font-weight:700;"],
-.wiki_article span[style="color:red;font-weight:700;"]{
+.wiki_article span[style="color:red;font-weight:700;"],
+.item_description span[style="color:red;font-weight:700;"] {
     color: var(--c-red) !important;}
 #index span[style="color: orange;"] {
     color: var(--c-orange) !important;
@@ -3251,6 +3203,7 @@ img[src="static/common/thumbsup.png"],
     padding-top: 13px;}
 
 /** convert ... to head **/
+#shop #items_navigation h3,
 #wrapper #searchthread h3,
 #wrapper #searchforum h3,
 #clans #clan_stats >div >h2,
@@ -3956,7 +3909,8 @@ input[type="search"],
 .thin.torrent_history >form#torrent_history_search:before,
 #user .thin >h2:first-child +.center:before,
 #rules .thin >form.search_form:before,
-#inbox #searchbox:before {
+#inbox #searchbox:before,
+#shop_search:before {
     text-align: left;
     content: 'Search';
     display: block;
@@ -5432,3 +5386,724 @@ span.size5 img {
 .profile .box_stats li#gold 			{order: 8;}
 .profile .box_stats li#download 		{order: 9;}
 .profile .box_stats li#clan 			{order: 10;}
+
+
+
+
+
+
+
+
+
+
+/*****************************************************
+******************* ALL ITEM PAGES *******************
+*****************************************************/
+
+/*** Left Navigation Menu ***/
+#items_navigation {
+	width: 220px;
+	float: left;
+	text-align: left;
+	}
+
+#items_navigation h3 {
+	/* text-align: left; */
+	/* left: 0; */
+	/* display: block; */
+	/* margin: 0; */
+	}
+
+#items_navigation ul {
+	margin-bottom: 0;
+	padding: 0;	}
+#items_navigation >ul {
+	margin-bottom: 20px;	}
+#items_navigation ul:last-child {
+    margin-bottom: 0;}
+
+#items_navigation li {
+	list-style: none;
+	/* margin-left: -30px; */
+	/* font-family: Roboto; */
+	/* padding: 5px 0; */
+	}
+
+#items_navigation li a {}
+
+#items_navigation li#selected a {
+	font-weight: bold;
+	/* color: #b49629; */
+	}
+
+#items_navigation li a:hover {
+	/* color: #b49629; */
+	/* text-decoration: none; */
+	}
+
+#items_navigation ul ul li {
+	margin-left: 6px;
+	}
+
+#items_navigation ul ul li:last-of-type {
+	margin-bottom: 5px;
+	}
+
+#items_navigation ul ul ul li {
+	margin-left: 12px;
+	}
+
+#items_navigation ul ul ul li:last-of-type {
+	margin-bottom: 10px;}
+
+.items_style .global_buffs {
+	right: -15px;
+	left: auto;}
+
+.items_table .colhead td {
+	text-align: center;}
+
+.items_table .row_a td,
+.items_table .row_b td {
+	text-align: center;}
+
+#running_freeleech.items_table .row_a td,
+#running_freeleech.items_table .row_b td {
+	text-align: left;}
+
+.freeleech_shop_main td:nth-of-type(1),
+.global_buffs_shop_main td:nth-of-type(1) {
+	text-align: left;}
+
+/*** Crafting / Equipment / Trading ***/
+#crafting_panel h2,
+#equipment h2,
+#trading_panel h2,
+#backpack h2 {
+	visibility: hidden;}
+
+#crafting_panel #items #items-wrapper,
+#equipment #items #items-wrapper,
+#trading_panel .items-wrapper,
+#backpack #items-wrapper {
+	margin-top: 0;
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	float: left;
+	padding: 0;
+	position: relative;}
+
+#crafting_panel #items #items-wrapper li,
+#equipment #items #items-wrapper li,
+#trading_panel .items-wrapper li,
+#backpack #items-wrapper li {
+	padding: 4px;}
+
+#crafting_panel #items div,
+#equipment #items div,
+#trading_panel #items div,
+#backpack #items div {
+	display: inline-block;
+	text-align: center;}
+
+#crafting_panel .item,
+#equipment .item,
+#trading_panel .item,
+#backpack .item {
+	list-style-type: none;
+	margin: 4px;
+	float: left;
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	background-color: #1c1c1c;
+	text-align: center;
+	position: relative;
+	font-weight: bold;
+	color: #999;
+	border: 3px solid #000;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-moz-box-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+	-webkit-box-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+	box-shadow: 3px 3px 8px rgba(0,0,0,0.7);}
+
+#crafting_panel .item h3,
+#equipment .item h3,
+#trading_panel .item h3,
+#backpack .item h3 {
+	position: absolute;
+	bottom: 2px;
+	width: 100px;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 6px #000;}
+
+#crafting_panel .item.used,
+#equipment .item.used,
+#trading_panel .item.used {
+	background: url('https://gazellegames.net/static/styles/game_room/images/shop/itempattern.png') repeat, url('../images/icons/equipment_used.png') 95% 5% no-repeat #1b1b1d !important;}
+
+#crafting_panel .item.broken,
+#equipment .item.broken,
+#trading_panel .item.broken {
+	background: url('https://gazellegames.net/static/styles/game_room/images/shop/itempattern.png') repeat, url('../images/icons/equipment_broken.png') 95% 5% no-repeat #1b1b1d !important;}
+
+#crafting_panel .item img,
+#equipment .item img,
+#trading_panel .item img,
+#backpack .item img {
+	max-width: 94px;
+	max-height: 94px;
+	padding: 3px;}
+
+#crafting_panel .item img.equipment_level,
+#equipment .item img.equipment_level,
+#trading_panel .item img.equipment_level {
+	position: absolute;
+	top: 2px;
+	left: 2px;}
+
+#crafting_panel .item:hover,
+#equipment .item:hover,
+#trading_panel .item:hover,
+#backpack .item:hover {
+	cursor: grab;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;}
+
+
+
+
+
+
+
+
+/**********************************************
+******************SHOP*************************
+**********************************************/
+	#shop #alerts {
+		top: 318px;
+		position: absolute;}
+
+	/*** Search bar ***/
+	#shop_search  {
+		position: relative;
+		z-index: 2;
+		text-align: left;
+		margin-top: 12px;
+		}
+
+	#shop_search  table {
+		/* background: none; */
+		/* width: 1015px; */
+		/* margin: 0 auto; */
+		}
+
+	#shop_search #search_query {
+		width: 250px;}
+
+	#shop_search a {
+		color: #999;}
+
+	#shop_search tbody:not(#advanced_search) td.label {
+		/* width: 75px; */
+		/* padding-left: 15px; */
+		display: none;
+		}
+	#shop_search tbody:not(#advanced_search) td {
+	    padding:0;	}
+
+	#shop input,
+	#shop select,
+	#shop li button,
+	.inventory input,
+	.inventory select,
+	.inventory li button {
+		/* background-color: #352b07; */
+		/* color: #999; */
+		/* margin: 5px; */
+		/* padding: 2px; */
+		/* height: auto; */
+		}
+
+	#shop_search, #shop .error_message {
+		}
+
+#shop #content li.no_items,
+#loading {
+	list-style: none;
+	font-size: 2em;
+	text-align: left;
+	padding: 10px;
+	/* text-shadow: 2px 2px 2px #000; */
+	}
+
+#loading {
+	margin-left: 250px;}
+
+#shop #items_navigation {
+	/* margin: 20px 0 0 0; */
+	float: left;
+	}
+
+/*** Shop Items ***/
+#items_list {
+	margin: 0 0 0 5px;
+	width: calc(100% - 247px);
+	padding: 0;
+	float: right;
+	display: block;
+	height: 100%;
+	}
+
+#shop li.item_li {
+	position: relative;
+	list-style: none;
+	background: var(--c-box);
+	margin: 0 0 10px 10px;
+	/* width: 200px; */
+	width: calc(25% - 10px);
+	padding: 0;
+	float: left;
+	height: 370px;
+	/* border-radius: 10px; */
+	-webkit-box-shadow: var(--p-main-shdw);
+	box-shadow: var(--p-main-shdw);
+	border: var(--p-main-brdr);
+	box-sizing: border-box;
+	}
+
+#shop li[class*="item_type_"] {
+	/* width: calc(25% - 10px); */
+	}
+
+#shop #stock_info,
+#shop h4,
+#shop .item_description,
+#shop #extended_info,
+#shop #spacer_2,
+#shop #requirements,
+#shop #upload_info,
+#shop #gold_info,
+#shop #life_info,
+#shop #attack_info,
+#shop #slot_info,
+#shop #item_type {
+	visibility: hidden;
+	height: 0;
+	padding: 0;
+	margin: 0;}
+
+
+#shop h3.center {
+	vertical-align: middle;
+	font-size: 17px;
+	margin: 0;
+	/* line-height: 1.2em; */
+	max-height: 34px;
+	width: calc(100% - 16px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 8px;
+	/* box-sizing: border-box; */
+	font-weight: 600;
+	background: var(--p-subcolhead);
+	}
+
+#shop .item_image_div {
+	height: 150px;
+	width: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	}
+
+#shop .item_center.item_image {
+	max-width: 150px;
+	max-height: 150px;
+	margin-top: 15px;
+	vertical-align: middle;
+	display: block;}
+
+#shop #clickable {
+	height: 225px;
+	padding: 10px 0;
+	}
+
+#shop #clickable {
+	width: 200px;
+	width: calc(100% - 40px);
+	margin: 50px auto 0;
+	}
+
+#shop li.item_type_0 #clickable {background: url('https://gazellegames.net/static/styles/game_room/images/shop/redbkg.png') center left;}
+#shop li.item_type_1 #clickable {background: url('https://gazellegames.net/static/styles/game_room/images/shop/bluebkg.png') center left no-repeat;}
+#shop li.item_type_2 #clickable {background: url('https://gazellegames.net/static/styles/game_room/images/shop/greenbkg.png') center left no-repeat;}
+#shop li.item_type_3 #clickable {background: url('https://gazellegames.net/static/styles/game_room/images/shop/yellowbkg.png') center left no-repeat;}
+#shop li.item_type_4 #clickable {background: url('https://gazellegames.net/static/styles/game_room/images/shop/greybkg.png') center left no-repeat;}
+#shop li.item_type_5 #clickable {background: url('https://gazellegames.net/static/styles/game_room/images/shop/lightbluebkg.png') left center no-repeat;}
+
+#shop .owned {
+    background: var(--c-box) url('https://gazellegames.net/static/styles/game_room/images/shop/owned.png') top left no-repeat !important;
+}
+
+#shop .submit_section {
+	width: auto;
+	/* margin: -60px auto 0; */
+	text-align: center;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	width: calc(100% - 20px);
+	height: 60px;
+	}
+
+#shop .submit_section input, #shop .submit_section button  {
+	/* padding: 4px; */
+	margin: 2px;
+	}
+
+#shop .item_description {
+	opacity: 0;
+	-moz-transition: opacity .1s;
+	-webkit-transition: opacity .1s;
+	transition: opacity .1s;
+	}
+
+#shop #clickable:hover .item_description {
+	visibility: visible;
+	opacity: 1;
+	position: relative;
+	top: -165px;
+	background-color: var(--c-hovereffect);
+	color: var(--c-txt);
+	padding: 10px;
+	max-height: 160px;
+	height: auto;
+	text-align: left;
+	z-index: 3;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	}
+
+#shop #cost_info {
+	visibility: visible;
+	position: relative;
+	top: -65px;
+	width: 200px;
+	text-align: center;
+	display: block;
+	padding: 5px 0px;
+	color: #69c077;
+	font-size: 2em;
+	/* text-shadow: 2px 2px 5px #000; */
+	font-weight: bold;
+	margin: 0 auto;
+	}
+
+/*** Confirmation Box ***/
+.alertable-buttons button {
+	line-height: 5px;}
+
+/*** Avatar Preview ***/
+#contentpreview {
+	padding: 5px 10px;}
+
+#avatarpreview_dialog .avatar div {
+	width: 150px;
+	height: 150px;
+	background-repeat: 'no-repeat';}
+
+/*** New, Featured Items ***/
+#shop .new_purchase_icon {
+	width: 70px;
+	height: 70px;
+	margin: 0;
+	padding: 0;
+	font-size: 35px;
+	font-family: "Comic Sans MS",helvetica,sans-serif;
+	font-weight: bold;
+	text-shadow: 2px 2px 2px #000;
+	color: #19ea19;
+	text-align: left;
+	vertical-align: top;
+	position: absolute;}
+
+#shop li.new {
+	background: var(--c-box) url('https://gazellegames.net/static/styles/game_room/images/shop/new.png') top left no-repeat;
+	}
+
+#shop li.featured {
+	display: block;
+	width: calc(50% - 10px);
+	/* height: 340px; */
+	}
+
+#shop .featured {
+	background: var(--c-box) url('https://gazellegames.net/static/styles/game_room/images/shop/featured.png') top left no-repeat !important;
+	}
+
+#shop .featured  {
+	visibility: visible;
+	height: auto;}
+
+#shop li.featured #clickable {width: 100%; margin: 25px auto 0;}
+
+#shop .featured h3.center {
+	/* border-bottom: 1px solid #fff; */
+	/* display: block; */
+	/* height: auto; */
+	/* margin-left: 20px; */
+	/* margin-top: -35px; */
+	}
+
+#shop .featured .item_description,
+#shop .featured #clickable:hover .item_description {
+	opacity: 1;
+	visibility: visible;
+	margin-left: 205px;
+	text-align: left;
+	margin-top: -240px;
+	top: 0px;
+	display: block;
+	height: 220px;
+	padding: 0;
+	background-color: transparent;}
+
+#shop .featured #cost_info {
+	margin: 0;}
+
+#shop .featured .submit_section {
+	/* margin: -60px 0 0; */
+	text-align: left;
+	height: 30px;
+	}
+
+#shop .featured #stock_info,
+#shop .featured #upload_info,
+#shop .featured #life_info,
+#shop .featured #attack_info,
+#shop .featured #stock_info,
+#shop .featured #item_type,
+#shop .featured #slot_info,
+#shop .featured #extended_info {
+	display: none;}
+
+#shop .more_info p.center,
+#shop .more_info #stock_info,
+#shop .more_info p,
+#shop .more_info #extended_info,
+#shop .more_info #spacer_2 {
+	visibility: visible;
+	height: auto; }
+
+/***O ut of Stock Items ()**/
+#shop li.item_li.nostock #clickable .item_description {
+	visibility: visible;
+	opacity: 1;
+	position: relative;
+	top: -102px;
+	background: url('https://gazellegames.net/static/styles/game_room/images/shop/soldout.png') no-repeat;
+	background-size: contain;
+	padding: 10px;
+	height: 130px;
+	text-indent: -10000px;
+	z-index: 2;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	left: 2px;
+	width: 166px;
+	color: transparent;}
+
+#shop li.item_li.nostock .submit_section {
+	margin-top: -78px;}
+
+#shop li.item_li.featured.nostock #clickable .item_description {
+	visibility: visible;
+	opacity: 1;
+	position: relative;
+	top: -102px;
+	background: url('https://gazellegames.net/static/styles/game_room/images/shop/soldout.png') no-repeat;
+	background-size: contain;
+	padding: 10px;
+	height: 130px;
+	text-indent: -1000px;
+	z-index: 2;
+	display: block;
+	margin: 0 auto;
+	overflow: hidden;
+	left: 100px;
+	width: 166px;}
+
+#shop li.item_li.featured.nostock .submit_section {
+	margin-top: -58px;}
+
+.nostock img {
+	opacity: 0.5;}
+
+#shop .nostock #clickable .item_description a,
+#shop .nostock #clickable .item_description span,
+#shop .nostock #clickable .item_description .spoilerbox {
+    visibility: hidden !important;}
+
+/*** More Info Popup ***/
+.info_description img {
+	max-width: 100% !important;}
+
+.more_info {
+	width: 100%;}
+
+.more_info .col_1 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 200px;
+	padding: 10px 0 0 20px;}
+
+.more_info .col_2 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 200px;
+	padding: 0 10px 0 60px;}
+
+.more_info .info_box span.label {
+	display: block;
+	padding-top: 20px;
+	font-size: 1.1em;
+	color: var(--grey);
+	width: 100%;
+	border-bottom: 1px solid rgba(180, 150, 41,.5);}
+
+.more_info .info_cost {
+	text-align: center;}
+
+.more_info .info_cost #cost {
+	font-size: 2em;
+	text-shadow: 2px 2px 5px #000;
+	padding-top: 30px;
+	font-weight: bold;}
+
+.more_info .info_cost #cost {
+	color: var(--darkGreen);}
+
+.more_info #your_cost {
+    display: block;
+    font-size: .6em;
+    line-height: 1em;}
+
+.more_info .info_reqs .denied_req {
+	color: #CF0024;}
+
+.more_info .info_sub_basic {
+	padding-bottom: 6px;}
+
+.more_info p {
+	padding-top: 0px;}
+
+.more_info #img_box img {
+	max-width: 200px;
+	width: 200px;
+	height: auto;}
+
+.ui-dialog {
+	padding: 0px;
+	box-shadow: 2px 2px 10px #000;
+	font-family: Roboto;}
+
+.ui-widget-header {
+	background: var(--darkBlue2);
+	border: none;
+	color: #c6e6f6;
+	border-radius: 0px;
+	border-bottom: 1px var(--mediumBlue) solid;}
+
+.ui-widget-content {
+	color: #fff;
+	background: url('../images/smokeybackground.jpg');
+	background-size: cover;
+	border: none;}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close {
+	background: var(--darkBlue);
+	border: 1px solid var(--darkBlue);
+	color: #ccc;}
+
+.ui-widget-content a {
+	color: var(--grey);}
+
+.ui-dialog table {
+	background: none;}
+
+.noty_bar a {
+	color: #50420e;}
+
+/*** Items Manager Staff Page ***/
+.items_manager #avatar_Background {
+	width: 200px;}
+
+/**********************************
+**********FREELEECH SHOP***********
+**********************************/
+
+.freeleech_shop_main, .global_buffs_shop_main {
+	margin: 20px auto 50px;
+	width: calc(100% - 225px);
+	padding: 0;
+	float: right;
+	display: block;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	border-radius: 10px;}
+
+#shop.fl_shop #content {
+	min-height: 350px;}
+
+#shop.fl_shop #alerts {
+	top: 275px;}
+
+.freeleech_shop_main .box,
+.freeleech_shop_main table,
+.global_buffs_shop_main .box,
+.global_buffs_shop_main table {
+	background: none;}
+
+.freeleech_shop_main a, .global_buffs_shop_main a {
+	color: var(--grey);}
+
+#shop .box_add_freeleech,
+#shop .box_add_buff input {
+	padding: 2px 5px;}
+
+.freeleech_shop_main td:nth-of-type(1),
+.global_buffs_shop_main td:nth-of-type(1) {
+	padding-left: 15px;}
+
+#shop.fl_shop h3 {
+	text-align: left;
+	left: 0;
+	display: block;
+	font-size: 1.5em;
+	border-bottom: 1px solid #c7c7c7;
+	font-family: elderscrolls;
+	font-weight: normal;
+	color: #fff;
+	text-shadow: 2px 2px 2px #000;}
+
+#shop.fl_shop h3 a {
+	color: var(--grey)}
+
+#running_freeleech .group_torrent strong a {
+	font-size: 1.4em;}
+
+#running_freeleech .tags {
+	display: none;}

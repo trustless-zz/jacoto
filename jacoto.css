@@ -4,3 +4,57 @@
 @import url(media.css);
 
 @import url(https://gazellegames.net/static/styles/game_room/cssFiles/holidayeffects.css);
+
+:root {
+/** COLORS **/
+    --c-quote-brdr:                     rgba(10, 10, 10, 0.1);
+    --c-quote:                          rgba(10, 10, 10, .05);
+    --c-txt: 							rgb(50, 50, 50);
+    --c-text-s: 						rgb(100, 100, 100);
+    --c-curtain:						rgb(110, 110, 110);
+    --c-sticky-id-brdr:                 rgb(190, 190, 190);
+    --c-input-brdr:						rgb(195, 195, 195);
+    --c-main-brdr:						rgb(200, 200, 200);
+    --c-sticky-2:                       rgb(205, 205, 205);
+    --c-table-brdr: 					rgb(210, 210, 210);
+    --c-tor-rowb: 						rgb(215, 215, 215);
+    --c-body: 							rgb(220, 220, 220);						/*tor-rowa*/
+    --c-tor-row-hvr: 					rgb(225, 225, 225);
+    --c-edition: 						rgb(230, 230, 230);
+    --c-input:							rgb(235, 235, 235);
+    --c-trowb:							rgb(237, 237, 237);                     /*rowb*/
+    --c-tgroup:							rgb(240, 240, 240);                     
+    --c-box: 							rgb(245, 245, 245);                     /*rowa*/
+    --c-row-hvr:						rgb(250, 250, 250);
+    --c-high:							rgb(255, 255, 255);
+    --c-b1: 							rgb(18, 201, 194);
+    --c-b2: 							rgb(81, 204, 165);
+    --c-b3: 							rgb(142, 225, 222);                     /*~45%*/
+    --c-b4: 							rgb(170, 226, 209);                     /*~45%*/
+    --c-sb1:                            rgb(183, 233, 231);                     /* 10,4th */
+    --c-sb2:                            rgb(200, 234, 223);                     /* 10,4th */
+    --c-hovereffect: 					rgba(255, 255, 255, .8);
+    --c-b00: 							rgba(255, 255, 255, 0);
+    --c-anchor: 						rgb(11, 122, 118);						/* #bd002c */
+    --c-anchor-hvr: 					rgb(0, 0, 0);							/* #053d3b #630017 */
+    --c-anchor-hvr-bcg: 				rgb(204, 237, 236);                     /* 10,3rd */  /*rgba(18, 201, 194, .1);*/
+	--c-header-shdw: 					rgba(0,0,0,.1);
+    --c-main-shdw:						rgba(0,0,0,.2);
+    --c-img-bcg-anchor: 				rgb(230, 242, 242);
+    --c-on: 							rgb(29, 145, 0);						/* #1E9400 */
+    --c-yellow: 						rgb(145, 145, 0);
+    --c-off: 							rgb(163, 0, 0);							/* #910000 */
+    --c-colhead-click:					rgba(255, 255, 255, .15);
+    --c-colhead-act: 					rgba(255, 255, 255, .3);
+    --c-em-bcg: 						rgb(245, 100, 22);
+    --c-em-hvr: 						rgb(199, 81, 18);
+    --c-em-act: 						rgb(245, 173, 134);
+    --c-fl: 							rgb(100, 65, 165);
+    --c-btn-b1: 						rgb(119, 211, 207);
+    --c-btn-b2: 						rgb(151, 212, 193);
+    --c-red:                            rgb(227, 0, 0);                         /* contrast adjusted */
+    --c-gold:                           rgb(133, 112, 0);                       /* contrast adjusted */
+    --c-orange:                         rgb(156, 101, 0);                       /* contrast adjusted */
+    --p-orange:                         0 0 1px rgb(255, 165, 0);
+    --p-gold:                           0 0 1px rgb(255, 215, 0);
+/** /COLORS **/
