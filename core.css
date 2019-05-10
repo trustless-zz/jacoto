@@ -38,7 +38,7 @@
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
     --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
     --p-fade-2:                         linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
-    --p-lh: 							1.357142857142857; /*14px calc(100% + 5px);*/
+    --p-lh: 							1.35714286805; /* calc(19 / 14), 1.357142857142857 gets 18px for some reason */
     --p-dot3:							-.02142857142em;}
 
 .amigacd32 {background: url(caticons/amigacd32_dark.svg);}
@@ -1865,7 +1865,7 @@ a .error_message:hover:active {
 #bookmarks #torrent_table td[colspan="3"] >span:first-child a,
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child a {
-    cursor: pointer;}
+    /* cursor: pointer */;}
 #bookmarks #torrent_table td[colspan="3"] >span:first-child a,
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child >a,
@@ -2322,7 +2322,7 @@ a[onclick] {
     /*cursor: default;*/}
 #index .sidebar #freeleech .group_torrent a,
 td.body a[onclick^="Quote"] {
-    cursor: pointer;}
+    /* cursor: pointer; */}
 /* #upload #releaseinfo .colhead +tr+tr td.label,
 #upload #rlstitle +tr td.label,
 #upload #rlstitle td.label,
@@ -3470,6 +3470,9 @@ div.breadcrumbs,
 #forums .forum_mythreads tr span[style="float:right;"],
 #forums .last_poster {
     font-size: 13px;}
+#index #freeleech .group_torrent >a {
+    font-size: 13px;
+    line-height: 19px;}
 #forums .forum_index tr:not(.colhead) td:first-child,
 #forums .forum_mythreads tr:not(.colhead) td:first-child,
 #forums .forum_editsubs tr:not(.colhead) td:first-child,
