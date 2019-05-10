@@ -1,5 +1,9 @@
 ﻿body {
     background-image: url('icons/dark/background.svg');}
+/** disabling custom user backgrounds for now **/
+#user[style^="background: url("] {
+    background-image: url('icons/dark/background.svg') !important;
+    background-size: 50px 50px !important;}
 
 @media (min-width: 801px) {
 #groupplatform a[href$="=Amiga+CD32"] {background-image: url(caticons/amigacd32_dark.svg);}

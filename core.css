@@ -298,8 +298,7 @@ html {
     font-size: 14px;
     scroll-behavior: smooth;}
 body {
-    overflow-x: visible !important;
-    /* #user hovering over some objects causes [style="overflow-x: hidden;"] to appear for some reason */
+    overflow-x: visible !important; /* #user, hovering over some objects causes [style="overflow-x: hidden;"] to appear for some reason */
     color: var(--c-txt);
     background-color: var(--c-body);
     background-size: 50px 50px;
@@ -812,6 +811,9 @@ form[name="filter"],
     margin: 0 0 10px 0;}
 .sidebar ul {
     margin: 10px 0;}
+#user .box.box_gold #box_gold_scrollbar +ul.stats.nobullet,
+.sidebar >div >ul:last-child {
+    margin-bottom: 0;}
 .pad,
 .trailer_div,
 .body,
@@ -3969,6 +3971,8 @@ input[type="search"],
     font-weight: 600;
     line-height: 20px;
     background: var(--p-head-grdnt);}
+#rules .thin >form.search_form:before {
+    content: 'Filter';}
 .thin.torrent_history >form#torrent_history_search:before {
     content: 'Search by Torrent Name';}
 #user .thin >h2:first-child +.center input[type="text"] {
@@ -4084,13 +4088,6 @@ input[type="search"],
     line-height: var(--p-lh);
     font-weight: 600;
     padding-left: 5px;}
-.profile .box_stats {
-    display: flex;
-    flex-direction: column;
-    white-space: nowrap;}
-.profile .box_stats ul {
-    display: flex;
-    flex-wrap: wrap;}
 
 
 /** Chromium table border rendering bug workaround **/
@@ -4204,6 +4201,7 @@ input[type="search"],
     margin-top: -5px;}
 
 /** removing embedded brackets **/
+.linkbox a[onclick^="popup_add("],
 .linkbox a[href="collections.php"],
 .linkbox a[href^="collections.php?action=manage&collageid"],
 .linkbox a[href^="reports.php?action=report&type=collage&id"],
@@ -4254,6 +4252,7 @@ input[type="search"],
     line-height: var(--p-lh);
     margin: 0 5px;}
 
+.linkbox a[onclick^="popup_add("]:before                                        {content: "Add a user";}
 .linkbox a[href="collections.php"]:before                                       {content: "List of collections";}
 .linkbox a[href^="collections.php?action=manage&collageid"]:before              {content: "Manage torrents";}
 .linkbox a[href^="reports.php?action=report&type=collage&id"]:before            {content: "Report collection";}
@@ -4983,13 +4982,23 @@ td >img[title="Gold"] {
     height: 20px;
     font-weight: 600;}
 
+h2#username span#tip_user {
+    display: inline-block;
+    vertical-align: bottom;
+    margin-bottom: -6px;}
+h2#username span#tip_user a.tooltip {
+    display: block;
+    padding: 2px;}
+h2#username span#tip_user a.tooltip img {
+    filter: var(--p-post-img);}
+
 
 
 .forum_post .user_title img {
     max-height: 19px;}
 .user_title img {
     display: inline-block;
-    vertical-align: bottom;}
+    vertical-align: middle;} /*bottom*/
 /* ---gameroom--- ../images with size=4 code will float left, size=5 will float right */
 span.size4 iframe,
 span.size4 .twitter_post,
@@ -5279,79 +5288,86 @@ span.size5 img {
     margin: -10px -10px 0 -10px;
     font-weight: 600;}
 
+.ps-scrollbar-y-rail,
+.ps-scrollbar-x-rail {
+    display: none !important;}
 
-
-
+#user .box.box_gold #box_gold_scrollbar {
+    position: relative;
+    overflow-x: auto !important;
+    display: block;
+    padding: 0;
+    height: 100%;
+    width: calc(100% + 20px);
+    margin-left: -10px;}
+#user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td {
+    padding: 5px;}
+#user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td:not(.label) {
+    border: var(--p-table-brdr);}
+#user #wrapper .box.box_gold #box_gold_scrollbar .colhead +tr td {
+    border-top: none;}
+#user #wrapper .box.box_gold #box_gold_scrollbar tr:last-child td {
+    border-bottom: none;}
+#user #wrapper .box.box_gold #box_gold_scrollbar td:nth-child(2) {
+    border-left: none;}
+#user #wrapper .box.box_gold #box_gold_scrollbar td:last-child {
+    border-right: none;}
+#user #wrapper .box.box_gold #box_gold_scrollbar td.label {
+    font-size: 16px;
+    line-height: 16px;}
+#user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td:not(.label):hover {
+    background-color: var(--c-row-hvr);}
 
 /*** User Info Box ***/
-.profile .box_main_info {
-	background: url('../images/smokeybackground.jpg');
-	background-size: cover;
-	margin-top: 10px;
-	padding-bottom: 10px;
-	display: inline-block;}
-
-#user .profile .box_stats .head {
-	font-weight: normal;}
-
 .profile .box_stats .label {
 	display: none;}
-
 .profile .box_stats {
 	display: flex;
 	flex-direction: column;
 	white-space: nowrap;
-	background: none;
 	margin: 0;
 	padding-bottom: 0;}
 
 .profile .box_stats ul {
 	display: flex;
 	flex-wrap: wrap;
-	margin: -5px 0 0 -15px;
-	}
+    margin: 0;}
+.profile .box_stats ul:first-of-type {
+    margin-top: 10px;}
+.profile #user_stats {
+    margin: 5px 0;}
 
 .profile .box_stats li {
 	flex: auto;
-	line-height: 2em;}
+	line-height: 1em;
+    margin-bottom: 10px;}
 
 .profile .box_stats ul#small_stats {
-	order: 1;}
-
-.profile .box_stats #small_stats li {
-	width: 50%;
-	float: left;
-	}
+	order: 99;}
 
 .profile .box_stats #hnrs .label {
 	display: inline-block;
 	width: auto;
 	vertical-align: middle;}
 
-.profile .box_stats #hnrs {
-	font-size: 1.1em;
-	padding-left: 20px;
-	margin-left: -40px;}
-
 .profile .box_stats #hnrs a {
+    font-size: 19px;
 	font-weight: bold;
-	font-size: 1.2em;
 	vertical-align: middle;}
 
 .profile .box_stats #hnrs a.alert {
-	color: #CF0024;}
+	color: var(--c-off);}
 
 .profile .box_stats #hnrs a.warn {
-	color: #b49629;}
+	color: var(--c-yellow);}
 
 .profile .box_stats #hnrs a.good {
-	color: #69c077;}
+	color: var(--c-on);}
 
 .profile .box_stats #hnrs .stat {
 	padding-left: 0px;}
 
 .profile .box_stats #profile_views {
-	color: var(--grey);
 	text-align: right;
 	padding-top: 2px;
 	background: url("https://gazellegames.net/static/styles/game_room/images/icons/views.png") no-repeat right center;}
@@ -5359,65 +5375,47 @@ span.size5 img {
 .profile .box_stats #profile_views .stat {
 	padding-right: 20px;}
 
-.profile .box_stats ul#online_stats {
-	order: 2;}
-
 .profile .box_stats .status {
-	font-size: 1.8em;}
+	font-size: 20px;
+    text-align: center;}
 
 .profile .box_stats .online {
-	color: var(--darkGreen);}
+	color: var(--c-on);}
 
 .profile .box_stats .offline {
-	color: var(--grey);
+	color: var(--c-off);
 	opacity: 0.5;}
 
-.profile .box_stats li#last_seen {
-	flex: 0 0 100%;}
-
 .profile .box_stats #last_seen {
-	color: var(--grey);
-	font-size: 0.8em;
-	opacity: 0.5;
-	margin-top: -10px;}
-
-.profile .box_stats ul#user_stats {
-	order: 3;}
-
-.profile .box_stats #user_stats {
-	font-size: 1.1em;}
+    text-align: left !important;
+	color: var(--c-text-s);
+	opacity: 0.9;
+	margin-top: -10px;
+    flex: 0 0 100%;}
 
 .profile .box_stats #user_stats li {
 	width: 50%;
-	float: right}
+    text-align: center;}
 
 .profile .box_stats .stat {
 	padding-left: 25px;}
 
 .profile .box_stats #ratio .stat {
 	background: url("https://gazellegames.net/static/styles/game_room/images/icons/ratio.png") no-repeat left center;}
-
 .profile .box_stats #share_score .stat {
 	background: url("https://gazellegames.net/static/styles/game_room/images/icons/share_score.png") no-repeat left center;}
-
 .profile .box_stats #gold .stat {
 	background: url("https://gazellegames.net/static/styles/game_room/images/icons/coins.png") no-repeat left center;}
-
 .profile .box_stats #upload .stat {
 	background: url("https://gazellegames.net/static/styles/game_room/images/icons/sword_upload.png") no-repeat left center;}
-
 .profile .box_stats #download .stat {
 	background: url("https://gazellegames.net/static/styles/game_room/images/icons/shield_down.png") no-repeat left center;}
-
 .profile .box_stats #clan .clan_earth {
 	background: url("https://gazellegames.net/static/common/clans/earth_icon.png") no-repeat left center;}
-
 .profile .box_stats #clan .clan_fire {
 	background: url("https://gazellegames.net/static/common/clans/fire_icon.png") no-repeat left center;}
-
 .profile .box_stats #clan .clan_water {
 	background: url("https://gazellegames.net/static/common/water_icon.png") no-repeat left center;}
-
 .profile .box_stats #clan .clan_wind {
 	background: url("https://gazellegames.net/static/common/clans/wind_icon.png") no-repeat left center;}
 
