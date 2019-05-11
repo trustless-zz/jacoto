@@ -38,7 +38,7 @@
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
     --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
     --p-fade-2:                         linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
-    --p-lh: 							1.35714286805; /* calc(19 / 14), 1.357142857142857 gets 18px for some reason */
+    --p-lh: 							1.35714286805; /* calc(19 / 14), 1.357142857142857 says 19px but is actually 18px when measured */
     --p-dot3:							-.02142857142em;}
 
 .amigacd32 {background: url(caticons/amigacd32_dark.svg);}
@@ -762,6 +762,7 @@ form[name="filter"],
 .sidebar ul {
     margin: 10px 0;}
 #user .box.box_gold #box_gold_scrollbar +ul.stats.nobullet,
+.sidebar >div >div:last-child >ul:last-child,
 .sidebar >div >ul:last-child {
     margin-bottom: 0;}
 .pad,
@@ -1410,7 +1411,7 @@ td.center.cats_col +td {
 #low_seed_fl_more a {
     display: block;
     text-align: center;
-    margin: 5px auto -10px auto;
+    margin: 5px auto 0 auto;
     width: max-content;}
 
 #recommended #vanityhouse tbody {
@@ -1517,6 +1518,10 @@ i.fa.fa-fl-pots {
 #header .clan_trophy img {
     height: 60px;
     filter: none !important;
+    padding: 10px 0;}
+
+.sidebar .box.box_badges >.pad {
+    text-align: center;
     padding: 10px 0;}
 
 #header .clan_trophy img {
@@ -2387,11 +2392,9 @@ body:not(#upload) #artist_tr + tr td.label,
 .filter_torrents.advanced label {
     color: var(--c-txt);}
 
+.sidebar .box.box_badges,
 .sidebar .box_albumart,
-.sidebar .box_tags,
-.sidebar .box_series,
-.sidebar #stats,
-.sidebar #blogposts {
+.sidebar .box_series {
     padding-bottom: 0;}
 
 .linkbox {
@@ -3327,6 +3330,7 @@ input[name="toyear"],
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border: var(--p-table-brdr);}
+.profile .box.box_requests td:first-child,
 #upload #content >div >table[style] td {
     width: auto !important;}
 #upload .thin form table .colhead:not(:first-child) {
@@ -4158,6 +4162,7 @@ input[type="search"],
     margin-top: -5px;}
 
 /** removing embedded brackets **/
+#slides >.nobullet a,
 .linkbox a[onclick^="popup_add("],
 .linkbox a[href="collections.php"],
 .linkbox a[href^="collections.php?action=manage&collageid"],
@@ -4209,6 +4214,13 @@ input[type="search"],
     line-height: var(--p-lh);
     margin: 0 5px;}
 
+#slides >.nobullet a:before {
+    font-size: 14px;
+    line-height: var(--p-lh);
+    margin-top: 2px;
+    display: inline-block;}
+
+#slides >.nobullet a:before                                                     {content: "See the Current Pick";}
 .linkbox a[onclick^="popup_add("]:before                                        {content: "Add a user";}
 .linkbox a[href="collections.php"]:before                                       {content: "List of collections";}
 .linkbox a[href^="collections.php?action=manage&collageid"]:before              {content: "Manage torrents";}
@@ -4251,6 +4263,7 @@ input[type="search"],
 .linkbox a[href="inbox.php"]:before                                             {content: 'Inbox';}
 .linkbox a[href="wiki.php?action=create"]:before                                {content: 'Create';}
 
+#slides >.nobullet a:hover:before,
 .linkbox a:hover:before {
     background-color: var(--c-anchor-hvr-bcg);}
 
@@ -5123,6 +5136,7 @@ span.size5 img {
 #collections .sidebar ul {
     margin: 0;
     padding: 0 !important;}
+.box.box_image.box_image_coverart .head,
 #collections .sidebar .box_addtorrent .head,
 #collections .sidebar .box_tags ol {
     margin-bottom: 10px;}
