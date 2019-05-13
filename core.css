@@ -3106,6 +3106,7 @@ img[src="static/common/thumbsup.png"],
 .requests_outer_table >tbody >tr >td:nth-child(1) {
     width: 70% !important;}
 #requests_donate {
+    vertical-align: top;
     border-left: var(--p-table-brdr);}
 #torrents .thin >h2:first-child +.center td.label,
 #upload td.label,
@@ -3560,7 +3561,9 @@ tr.likes td[id^="likers_"]:hover {
 #newthreadpreview .avatar >div:first-child:after,
 #quickreplypreview .avatar >div:first-child:after,
 #forums .thin >.box.thin.clear:after,
-#artist td.edition_info:before {
+#artist td.edition_info:before,
+.ui-widget-header:before,
+.ui-widget-header:after {
     content: none !important;}
 #forums .forum_post .avatar:hover >div:first-child:after {
     background-size: 10px 10px;
@@ -4297,6 +4300,7 @@ input[type="search"],
     background-color: var(--c-box);
     border: var(--p-main-brdr);}
 .ui-dialog {
+    border: var(--p-main-brdr);
     padding: 0px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -4958,10 +4962,12 @@ td >img[title="Gold"] {
 h2#username span#tip_user {
     display: inline-block;
     vertical-align: bottom;
-    margin-bottom: -6px;}
+    margin-bottom: -6px;
+    margin-top: -10px;}
 h2#username span#tip_user a.tooltip {
     display: block;
     padding: 2px;}
+#requests_donate img,
 h2#username span#tip_user a.tooltip img {
     filter: var(--p-post-img);}
 
@@ -5856,6 +5862,7 @@ span.size5 img {
 	font-weight: bold;
 	margin: 0 auto;}
 
+.more_info .info_cost #cost img,
 #cost_info img.gold_icon {
     width: 18px;
     height: 18px;
@@ -5869,6 +5876,9 @@ span.size5 img {
 
 #shop #cost_info strong[title^="If you buy this you will have -"] {
     color: var(--c-red);}
+
+.ui-widget #quickreplypreview .colhead_dark a {
+    color: var(--c-anchor);}
 
 /*** Confirmation Box ***/
 .alertable-buttons button {
@@ -6105,34 +6115,38 @@ span.size5 img {
 	top: 0;
 	left: 0;
 	width: 200px;
-	padding: 10px 0 0 20px;}
+	padding: 10px 0 0 10px;}
 
 .more_info .col_2 {
 	position: absolute;
 	top: 0;
 	right: 0;
 	left: 200px;
-	padding: 0 10px 0 60px;}
+	padding: 10px 10px 0 30px;}
 
 .more_info .info_box span.label {
 	display: block;
-	padding-top: 20px;
-	font-size: 1.1em;
-	color: var(--grey);
+	padding-top: 12px;
+	font-size: 17px;
+    font-weight: 600;
+	color: var(--c-text-s);
 	width: 100%;
-	border-bottom: 1px solid rgba(180, 150, 41,.5);}
+    padding-left: 5px;
+	border-bottom: var(--p-table-brdr);}
+
+.more_info p:last-of-type {
+    margin-bottom: 0;}
 
 .more_info .info_cost {
 	text-align: center;}
 
 .more_info .info_cost #cost {
 	font-size: 2em;
-	text-shadow: 2px 2px 5px #000;
 	padding-top: 30px;
 	font-weight: bold;}
 
 .more_info .info_cost #cost {
-	color: var(--darkGreen);}
+	color: var(--c-on);}
 
 .more_info #your_cost {
     display: block;
@@ -6140,35 +6154,21 @@ span.size5 img {
     line-height: 1em;}
 
 .more_info .info_reqs .denied_req {
-	color: #CF0024;}
+	color: var(--c-red);}
 
 .more_info .info_sub_basic {
 	padding-bottom: 6px;}
 
 .more_info p {
-	padding-top: 0px;}
+	margin-top: 0px;}
 
 .more_info #img_box img {
 	max-width: 200px;
 	width: 200px;
 	height: auto;}
 
-.ui-dialog {
-	padding: 0px;
-	box-shadow: 2px 2px 10px #000;
-	font-family: Roboto;}
-
-.ui-widget-header {
-	background: var(--darkBlue2);
-	border: none;
-	color: #c6e6f6;
-	border-radius: 0px;
-	border-bottom: 1px var(--mediumBlue) solid;}
-
-.ui-widget-content {
-	color: #fff;
-	background-size: cover;
-	border: none;}
+.ui-widget {
+    font-size: 14px;}
 
 .ui-state-default,
 .ui-widget-content .ui-state-default,
@@ -6177,6 +6177,14 @@ span.size5 img {
 	background: var(--darkBlue);
 	border: 1px solid var(--darkBlue);
 	color: #ccc;}
+
+.ui-widget-header >.ui-dialog-title {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+    float: unset;}
+.ui-dialog .ui-dialog-content {
+    padding: 10px;}
 
 .ui-widget-content a {
 	color: var(--grey);}
