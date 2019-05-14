@@ -1399,7 +1399,8 @@ input[type="number"],
 #forums .forums_search .search_form,
 #user .thin >h2:first-child +form[method="post"],
 #collections table.collections_art_display,
-td.center.cats_col +td {
+td.center.cats_col +td,
+.forum_post span.user_title {
     position: relative;}
 .sidebar #freeleech_time_left #progress_bar .main_bar {
     background: var(--p-lsfl-pulse);
@@ -2403,8 +2404,7 @@ body:not(#upload) #artist_tr + tr td.label,
     color: var(--c-txt);}
 
 .sidebar .box.box_badges,
-.sidebar .box_albumart,
-.sidebar .box_series {
+.sidebar .box_albumart {
     padding-bottom: 0;}
 
 .linkbox {
@@ -3586,10 +3586,14 @@ tr.likes td[id^="likers_"]:hover {
     transition-delay: .2s;}
 
 marquee {
+    vertical-align: bottom;
     max-width: 60%;}
 .colhead_dark marquee {
-    max-width: 25%;
-    vertical-align: bottom;}
+    max-width: 25%;}
+h2 marquee {
+    margin-top: -4px;
+    line-height: var(--p-lh);
+    vertical-align: text-bottom;}
 
 #forums .forum_signature td {
     text-align: left;
@@ -4188,7 +4192,10 @@ input[type="search"],
 .linkbox +.linkbox {
     margin-top: -5px;}
 
-/** removing embedded brackets **/
+/** manually removing embedded brackets **/
+.linkbox a[href^="torrents.php?action=editimages&groupid"],
+.linkbox a[href^="torrents.php?action=editgroup&groupid"],
+.linkbox a[href^="?type=hitnrun&userid"],
 #slides >.nobullet a,
 .linkbox a[onclick^="popup_add("],
 .linkbox a[href="collections.php"],
@@ -4247,6 +4254,9 @@ input[type="search"],
     margin-top: 2px;
     display: inline-block;}
 
+.linkbox a[href^="torrents.php?action=editimages&groupid"]:before               {content: "Edit Images";}
+.linkbox a[href^="torrents.php?action=editgroup&groupid"]:before                {content: "Edit description";}
+.linkbox a[href^="?type=hitnrun&userid"]:before                                 {content: "Hit 'n' Runs";}
 #slides >.nobullet a:before                                                     {content: "See the Current Pick";}
 .linkbox a[onclick^="popup_add("]:before                                        {content: "Add a user";}
 .linkbox a[href="collections.php"]:before                                       {content: "List of collections";}
@@ -4296,7 +4306,7 @@ input[type="search"],
 
     /* clip-path: polygon(5px 0, calc(100% - 5px) 0, calc(100% - 5px) 100%, 5px 100%);} */
 
-/** /removing embedded brackets **/
+/** /manually removing embedded brackets **/
 
 #user input#styleurl {
     width: calc(100% - 350px);}
@@ -4900,7 +4910,8 @@ td >img[title="Gold"] {
     font-size: 13px;
     line-height: 18px;
     padding: 0 3px 0 2px;
-    background: var(--p-head-grdnt);}
+    background: var(--p-head-grdnt);
+    outline: var(--p-table-brdr);}
 
 
 /** going with position:absolute because display:flex needs containers **/
@@ -5458,7 +5469,52 @@ span.size5 img {
 .box.pad.box_add_freeleech #groupid_input {
     width: calc(100% - 216px);}
 
+/*revisit*/
+#color_leeching,
+#color_leeching .torrent_info_tags,
+#color_leeching a {
+	color: var(--c-leech);}
 
+#color_seeding,
+#color_seeding .torrent_info_tags,
+#color_seeding a {
+	color: var(--c-seed);}
+
+#color_uploaded,
+#color_uploaded .torrent_info_tags,
+#color_uploaded a {
+	color: var(--c-upload);}
+
+#color_snatched,
+#color_snatched .torrent_info_tags,
+#color_snatched a {
+	color: var(--c-snatch);}
+
+#color_downloaded,
+#color_downloaded .torrent_info_tags,
+#color_downloaded a {
+	color: var(--c-download);}
+
+#wrapper .freeleech_label {
+    color: var(--c-fl);}
+
+#color_leeching:hover,
+#color_leeching .torrent_info_tags:hover,
+#color_leeching a:hover,
+#color_seeding:hover,
+#color_seeding .torrent_info_tags:hover,
+#color_seeding a:hover,
+#color_uploaded:hover,
+#color_uploaded .torrent_info_tags:hover,
+#color_uploaded a:hover,
+#color_snatched:hover,
+#color_snatched .torrent_info_tags:hover,
+#color_snatched a:hover,
+#color_downloaded:hover,
+#color_downloaded .torrent_info_tags:hover,
+#color_downloaded a:hover,
+#wrapper a:hover .freeleech_label {
+    color: var(--c-anchor-hvr);}
 
 
 /*****************************************************

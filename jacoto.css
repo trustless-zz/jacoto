@@ -58,6 +58,11 @@
     --c-orange:                         rgb(156, 101, 0);                       /* contrast adjusted */
     --p-orange:                         0 0 1px rgb(255, 165, 0);
     --p-gold:                           0 0 1px rgb(255, 215, 0);
+    --c-leech:                          rgb(163, 135, 0);
+    --c-seed:                           rgb(32, 161, 0);
+    --c-upload:                         rgb(89, 153, 112);
+    --c-snatch:                         rgb(204, 35, 0);
+    --c-download:                       rgb(230, 71, 0);
 /*shop*/
     --c-type-0:                         rgba(116,   56,     66,     .17);
     --c-type-1:                         rgba(58,    77,     115,    .17);
