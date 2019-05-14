@@ -750,7 +750,11 @@ form[name="filter"],
 #clans #clan_stats >div,
 #actual_rules,
 #shop_search,
-#shop #items_navigation {
+#shop #items_navigation,
+.freeleech_shop_main .box,
+.freeleech_shop_main table,
+.global_buffs_shop_main .box,
+.global_buffs_shop_main table {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -924,7 +928,8 @@ div,
 #forums .forum_post .avatar >div:first-child:after,
 .hovereffect h2,
 #shop li.item_li .item_description:before,
-#shop li.item_li .item_description:after {
+#shop li.item_li .item_description:after,
+#shop .item_description {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1176,7 +1181,8 @@ strong.important_text,
 #index span[style*="red;"],
 #upload #content >div >table[style] span[style*="red;"],
 .wiki_article span[style*="red;"],
-.item_description span[style*="red;"] {
+.item_description span[style*="red;"],
+.info_description span[style*="red;"] {
     color: var(--c-red) !important;}
 #index span[style="color: orange;"] {
     color: var(--c-orange) !important;
@@ -3309,6 +3315,8 @@ form[name="filter"] h3,
 .clan_stat_totals h2:first-child +.large_progress_bar,
 #artist .thin h2:first-child +table.border {
     margin-top: 12px;}
+.thin.freeleech_shop >div:first-child {
+    margin-bottom: 12px;}
 input[name="fromyear"],
 input[name="toyear"],
 #upload input#remaster_year,
@@ -3376,6 +3384,8 @@ input[name="toyear"],
 .box.pad >p:first-child,
 #upload textarea#album_desc + p {
     margin-top: 0;}
+.box.pad >p:last-child {
+    margin-bottom: 0;}
 #collections .sidebar .box_addtorrent input[value="+"],
 #newthreadform #newthreadtext #answer_block a,
 #upload td#image_block a,
@@ -3693,6 +3703,7 @@ table.bbcode_table {
     background-color: var(--c-box);}
 table.bbcode_table td {
     border: var(--p-table-brdr);}
+#running_freeleech td.center.cats_col,
 #inbox .colhead >td:first-child,
 .bbcode_table_div,
 #torrents #requests.request_table #requests_list .requestrows td {
@@ -3923,7 +3934,8 @@ input[type="search"],
 #user .thin >h2:first-child +.center:before,
 #rules .thin >form.search_form:before,
 #inbox #searchbox:before,
-#shop_search:before {
+#shop_search:before,
+.box.pad.box_freeleech_info:before {
     text-align: left;
     content: 'Search';
     display: block;
@@ -3942,6 +3954,8 @@ input[type="search"],
     content: 'Filter';}
 .thin.torrent_history >form#torrent_history_search:before {
     content: 'Search by Torrent Name';}
+.box.pad.box_freeleech_info:before {
+    content: 'Info';}
 #user .thin >h2:first-child +.center input[type="text"] {
     width: calc(100% - 105px);}
 #inbox #messageform table ~input {
@@ -4867,8 +4881,19 @@ td >img[title="Gold"] {
 #searchforum tr:nth-child(4) {
     order: 4;}
 
+.new_status {
+    margin-left: 5px;}
+.new_status:before {
+    content: 'NEW';
+    display: block;
+    color: var(--c-anchor-hvr);
+    font-size: 13px;
+    line-height: 18px;
+    padding: 0 3px 0 2px;
+    background: var(--p-head-grdnt);}
 
-/** going with absolute because flex needs containers **/
+
+/** going with position:absolute because display:flex needs containers **/
 .clan_stat_totals:after {
     content: '';
     display: block;
@@ -5430,15 +5455,8 @@ span.size5 img {
 #items_navigation {
 	width: 220px;
 	float: left;
-	text-align: left;
-	}
+	text-align: left;}
 
-#items_navigation h3 {
-	/* text-align: left; */
-	/* left: 0; */
-	/* display: block; */
-	/* margin: 0; */
-	}
 
 #items_navigation ul {
 	margin-bottom: 0;
@@ -5449,35 +5467,20 @@ span.size5 img {
     margin-bottom: 0;}
 
 #items_navigation li {
-	list-style: none;
-	/* margin-left: -30px; */
-	/* font-family: Roboto; */
-	/* padding: 5px 0; */
-	}
+    list-style: none;}
 
-#items_navigation li a {}
 
 #items_navigation li#selected a {
-	font-weight: bold;
-	/* color: #b49629; */
-	}
-
-#items_navigation li a:hover {
-	/* color: #b49629; */
-	/* text-decoration: none; */
-	}
+	font-weight: bold;}
 
 #items_navigation ul ul li {
-	margin-left: 6px;
-	}
+	margin-left: 6px;}
 
 #items_navigation ul ul li:last-of-type {
-	margin-bottom: 5px;
-	}
+	margin-bottom: 5px;}
 
 #items_navigation ul ul ul li {
-	margin-left: 12px;
-	}
+	margin-left: 12px;}
 
 #items_navigation ul ul ul li:last-of-type {
 	margin-bottom: 10px;}
@@ -5486,27 +5489,29 @@ span.size5 img {
 	right: -15px;
 	left: auto;}
 
-.items_table .colhead td {
-	text-align: center;}
-
+.items_table .colhead td,
 .items_table .row_a td,
 .items_table .row_b td {
 	text-align: center;}
 
 #running_freeleech.items_table .row_a td,
-#running_freeleech.items_table .row_b td {
-	text-align: left;}
-
+#running_freeleech.items_table .row_b td,
 .freeleech_shop_main td:nth-of-type(1),
 .global_buffs_shop_main td:nth-of-type(1) {
 	text-align: left;}
+
+
+
+
+
+
 
 /*** Crafting / Equipment / Trading ***/
 #crafting_panel h2,
 #equipment h2,
 #trading_panel h2,
 #backpack h2 {
-	visibility: hidden;}
+	/* visibility: hidden; */}
 
 #crafting_panel #items #items-wrapper,
 #equipment #items #items-wrapper,
@@ -5608,23 +5613,17 @@ span.size5 img {
 /**********************************************
 ******************SHOP*************************
 **********************************************/
-	#shop #alerts {
-		top: 318px;
-		position: absolute;}
+#shop #alerts {
+    top: 318px;
+    position: absolute;}
 
-	/*** Search bar ***/
-	#shop_search  {
-		position: relative;
-		z-index: 2;
-		text-align: left;
-		margin-top: 12px;
-		}
+/*** Search bar ***/
+#shop_search  {
+    position: relative;
+    z-index: 2;
+    text-align: left;
+    margin-top: 12px;}
 
-	#shop_search  table {
-		/* background: none; */
-		/* width: 1015px; */
-		/* margin: 0 auto; */
-		}
 #shop_search #search_query {
     width: calc(100% - 405px);}
 #shop_search td.label {
@@ -5633,7 +5632,7 @@ span.size5 img {
 #shop_search td.label strong {
     font-weight: normal;}
 #shop_search tbody:not(#advanced_search) td {
-	    padding:0;}
+    padding:0;}
 #shop_search tbody:not(#advanced_search) td.label {
     width: 71px;
     line-height: 26px;
@@ -5647,38 +5646,18 @@ span.size5 img {
     vertical-align: top;}
 
 
-	#shop input,
-	#shop select,
-	#shop li button,
-	.inventory input,
-	.inventory select,
-	.inventory li button {
-		/* background-color: #352b07; */
-		/* color: #999; */
-		/* margin: 5px; */
-		/* padding: 2px; */
-		/* height: auto; */
-		}
-
-	#shop_search, #shop .error_message {
-		}
-
 #shop #content li.no_items,
 #loading {
 	list-style: none;
 	font-size: 2em;
 	text-align: left;
-	padding: 10px;
-	/* text-shadow: 2px 2px 2px #000; */
-	}
+	padding: 10px;}
 
 #loading {
 	margin-left: 250px;}
 
 #shop #items_navigation {
-	/* margin: 20px 0 0 0; */
-	float: left;
-	}
+	float: left;	}
 
 /*** Shop Items ***/
 #items_list {
@@ -5687,8 +5666,7 @@ span.size5 img {
 	padding: 0;
 	float: right;
 	display: block;
-	height: 100%;
-	}
+	height: 100%;	}
 
 #shop li.item_li {
     opacity: 1;
@@ -5696,23 +5674,16 @@ span.size5 img {
 	list-style: none;
 	background: var(--c-box);
 	margin: 0 0 10px 10px;
-	/* width: 200px; */
 	width: calc(25% - 10px);
 	padding: 0;
 	float: left;
 	height: 370px;
-	/* border-radius: 10px; */
 	-webkit-box-shadow: var(--p-main-shdw);
 	box-shadow: var(--p-main-shdw);
 	border: var(--p-main-brdr);
-	box-sizing: border-box;
-	}
+	box-sizing: border-box;	}
 #shop li.item_li.no_access {
     background-color: var(--c-edition);}
-
-#shop li[class*="item_type_"] {
-	/* width: calc(25% - 10px); */
-	}
 
 #shop #stock_info,
 #shop h4,
@@ -5745,8 +5716,7 @@ span.size5 img {
 	padding: 8px;
 	/* box-sizing: border-box; */
 	font-weight: 600;
-	background: var(--p-post-colhead-bcg);
-	}
+	background: var(--p-post-colhead-bcg);}
 
 #shop .item_image_div {
 	height: 150px;
@@ -5768,14 +5738,12 @@ span.size5 img {
 
 #shop #clickable {
 	height: 225px;
-	padding: 10px 0;
-	}
+	padding: 10px 0;}
 
 #shop #clickable {
 	width: 200px;
 	width: calc(100% - 34px);
-	margin: 50px auto 0;
-	}
+	margin: 50px auto 0;}
 
 #shop li.item_type_0 #clickable {
     background-color: var(--c-type-0);
@@ -5802,9 +5770,6 @@ span.size5 img {
     outline: 3px solid var(--c-type-5);
     outline-offset: -3px;}
 
-#shop .owned {
-    /* background: var(--c-box) url('https://gazellegames.net/static/styles/game_room/images/shop/owned.png') top left no-repeat !important; */
-}
 
 #shop .submit_section {
 	width: auto;
@@ -5814,20 +5779,10 @@ span.size5 img {
 	bottom: 10px;
 	left: 10px;
 	width: calc(100% - 20px);
-	height: 60px;
-	}
+	height: 60px;}
 
 #shop .submit_section input, #shop .submit_section button  {
-	/* padding: 4px; */
-	margin: 2px;
-	}
-
-#shop .item_description {
-	opacity: 0;
-	-moz-transition: opacity .1s;
-	-webkit-transition: opacity .1s;
-	transition: opacity .1s;
-	}
+	margin: 2px;}
 
 #shop #clickable .item_description {
 	visibility: hidden;
@@ -5858,7 +5813,6 @@ span.size5 img {
 	padding: 5px 0px;
 	color: var(--c-on);
 	font-size: 2em;
-	/* text-shadow: 2px 2px 5px #000; */
 	font-weight: bold;
 	margin: 0 auto;}
 
@@ -5908,9 +5862,7 @@ span.size5 img {
 	position: absolute;}
 
 #shop li.new {
-    border-color: var(--c-sb1);
-	/* background: var(--c-box) url('https://gazellegames.net/static/styles/game_room/images/shop/new.png') top left no-repeat;
-	*/}
+    border-color: var(--c-sb1);}
 #shop li.new h3.center {
     background: var(--p-subcolhead);}
 
@@ -5923,8 +5875,7 @@ span.size5 img {
     right: 20px;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-image: url('icons/dark/new.svg');} /* revisit */
+    background-position: center;}
 #shop li.item_li.owned:after {
     content: '✔';
     font-size: 24px;
@@ -5941,28 +5892,19 @@ span.size5 img {
 #shop li.featured {
     border-color: var(--c-input-brdr);
 	display: block;
-	width: calc(50% - 10px);
-	/* height: 340px; */
-	}
+	width: calc(50% - 10px);}
 
-#shop .featured {
-	/* background: var(--c-box) url('https://gazellegames.net/static/styles/game_room/images/shop/featured.png') top left no-repeat !important;
-	*/}
 
 #shop .featured  {
 	visibility: visible;
 	height: auto;}
 
-#shop li.featured #clickable {width: calc(100% - 34px); margin: 50px auto 0;}
+#shop li.featured #clickable {
+    width: calc(100% - 34px);
+    margin: 50px auto 0;}
 
 #shop .featured h3.center {
-    background: var(--p-sticky-colhead-bcg);
-	/* border-bottom: 1px solid #fff; */
-	/* display: block; */
-	/* height: auto; */
-	/* margin-left: 20px; */
-	/* margin-top: -35px; */
-	}
+    background: var(--p-sticky-colhead-bcg);}
 
 #shop .featured .item_description,
 #shop .featured #clickable:hover .item_description {
@@ -5982,10 +5924,8 @@ span.size5 img {
 	margin: 0;}
 
 #shop .featured .submit_section {
-	/* margin: -60px 0 0; */
 	text-align: left;
-	height: 30px;
-	}
+	height: 30px;	}
 
 #shop .featured #stock_info,
 #shop .featured #upload_info,
@@ -6080,7 +6020,6 @@ span.size5 img {
 	opacity: 1;
 	position: relative;
 	top: -102px;
-	/* background: url('https://gazellegames.net/static/styles/game_room/images/shop/soldout.png') no-repeat */;
 	background-size: contain;
 	padding: 10px;
 	height: 130px;
@@ -6129,7 +6068,6 @@ span.size5 img {
 	padding-top: 12px;
 	font-size: 17px;
     font-weight: 600;
-	color: var(--c-text-s);
 	width: 100%;
     padding-left: 5px;
 	border-bottom: var(--p-table-brdr);}
@@ -6174,9 +6112,9 @@ span.size5 img {
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default,
 .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close {
-	background: var(--darkBlue);
-	border: 1px solid var(--darkBlue);
-	color: #ccc;}
+    background: var(--c-box);
+	border: var(--p-table-brdr);
+	color: var(--c-anchor);}
 
 .ui-widget-header >.ui-dialog-title {
     font-size: 20px;
@@ -6186,14 +6124,13 @@ span.size5 img {
 .ui-dialog .ui-dialog-content {
     padding: 10px;}
 
-.ui-widget-content a {
-	color: var(--grey);}
+.ui-widget-content a {}
 
 .ui-dialog table {
 	background: none;}
 
 .noty_bar a {
-	color: #50420e;}
+	color: red;}
 
 /*** Items Manager Staff Page ***/
 .items_manager #avatar_Background {
@@ -6203,15 +6140,14 @@ span.size5 img {
 **********FREELEECH SHOP***********
 **********************************/
 
-.freeleech_shop_main, .global_buffs_shop_main {
-	margin: 20px auto 50px;
-	width: calc(100% - 225px);
+.freeleech_shop_main,
+.global_buffs_shop_main {
+	margin: 0 0 0 15px;
+	width: calc(100% - 257px);
 	padding: 0;
 	float: right;
 	display: block;
-	height: 100%;
-	background: rgba(0,0,0,0.7);
-	border-radius: 10px;}
+	height: 100%;}
 
 #shop.fl_shop #content {
 	min-height: 350px;}
@@ -6223,35 +6159,16 @@ span.size5 img {
 .freeleech_shop_main table,
 .global_buffs_shop_main .box,
 .global_buffs_shop_main table {
-	background: none;}
+	/* background: none; */}
 
-.freeleech_shop_main a, .global_buffs_shop_main a {
-	color: var(--grey);}
+.freeleech_shop_main a, .global_buffs_shop_main a {}
 
 #shop .box_add_freeleech,
 #shop .box_add_buff input {
-	padding: 2px 5px;}
+	padding: 0;}
 
-.freeleech_shop_main td:nth-of-type(1),
-.global_buffs_shop_main td:nth-of-type(1) {
-	padding-left: 15px;}
-
-#shop.fl_shop h3 {
-	text-align: left;
-	left: 0;
-	display: block;
-	font-size: 1.5em;
-	border-bottom: 1px solid #c7c7c7;
-	font-family: elderscrolls;
-	font-weight: normal;
-	color: #fff;
-	text-shadow: 2px 2px 2px #000;}
-
-#shop.fl_shop h3 a {
-	color: var(--grey)}
-
-#running_freeleech .group_torrent strong a {
-	font-size: 1.4em;}
-
-#running_freeleech .tags {
-	display: none;}
+#running_freeleech td.center.cats_col +td >strong {
+    font-weight: normal;}
+#running_freeleech td.center.cats_col +td >strong >a {
+    font-size: 15px;
+    line-height: var(--p-lh);}
