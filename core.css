@@ -630,7 +630,8 @@ img[title="Gold"],
 .bbbutt li a,
 tr.likes td[id^="likers_"] >strong,
 .last_read,
-h2#username span#tip_user img {
+h2#username span#tip_user img,
+.inventory .trash_icon {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -750,7 +751,7 @@ form[name="filter"],
 #clans #clan_stats >div,
 #actual_rules,
 #shop_search,
-#shop #items_navigation,
+#items_navigation,
 .freeleech_shop_main .box,
 .freeleech_shop_main table,
 .global_buffs_shop_main .box,
@@ -1994,7 +1995,8 @@ textarea,
 #collections #coverart.box li a,
 #collections #coverart.box a div,
 #collections #coverart.box >ul:not(.hidden),
-#wiki .center.thin >.box.pad {
+#wiki .center.thin >.box.pad,
+.inventory .trash_icon {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -2741,7 +2743,9 @@ li:not(.suggested_similar) .similar_votes >span {
 #newthreadpreview .forum_post .colhead_dark #barpreview a,
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="button"],
 #collections table#new_collage input#art +input[type="button"],
-.thin.torrent_history >form#torrent_history_search input[type="submit"] {
+.thin.torrent_history >form#torrent_history_search input[type="submit"],
+.box.pad.box_add_freeleech input[type="submit"],
+.box.pad.box_add_buff input[type="submit"] {
     vertical-align: bottom;}
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
@@ -3216,7 +3220,7 @@ img[src="static/common/thumbsup.png"],
     padding-top: 13px;}
 
 /** convert ... to head **/
-#shop #items_navigation h3,
+#items_navigation h3,
 #wrapper #searchthread h3,
 #wrapper #searchforum h3,
 #clans #clan_stats >div >h2,
@@ -3315,6 +3319,7 @@ form[name="filter"] h3,
 .clan_stat_totals h2:first-child +.large_progress_bar,
 #artist .thin h2:first-child +table.border {
     margin-top: 12px;}
+.thin.global_buffs_shop >div:first-child,
 .thin.freeleech_shop >div:first-child {
     margin-bottom: 12px;}
 input[name="fromyear"],
@@ -3935,7 +3940,8 @@ input[type="search"],
 #rules .thin >form.search_form:before,
 #inbox #searchbox:before,
 #shop_search:before,
-.box.pad.box_freeleech_info:before {
+.box.pad.box_freeleech_info:before,
+.box.pad.box_buffs_info:before {
     text-align: left;
     content: 'Search';
     display: block;
@@ -3954,6 +3960,7 @@ input[type="search"],
     content: 'Filter';}
 .thin.torrent_history >form#torrent_history_search:before {
     content: 'Search by Torrent Name';}
+.box.pad.box_buffs_info:before,
 .box.pad.box_freeleech_info:before {
     content: 'Info';}
 #user .thin >h2:first-child +.center input[type="text"] {
@@ -4413,7 +4420,8 @@ td.center.cats_col {
 .thin.torrent_history >form#torrent_history_search >.box.pad,
 .thin.torrent_history >form#torrent_history_search td,
 #user .thin >h2:first-child +.box.pad:last-child,
-#user .thin >h2:first-child +.box.pad:nth-last-of-type(2) +.box.pad {
+#user .thin >h2:first-child +.box.pad:nth-last-of-type(2) +.box.pad,
+.box.pad.box_add_buff {
     padding: 0;}
 #torrents #requests.request_table #requests_list tr:first-child td.label {
     width: auto !important;
@@ -4660,8 +4668,10 @@ abbr {
 #collections table#new_collage td.label,
 #collections .thin >h2:first-child +.center td.label {
     width: 75px;}
-.thin.torrent_history >form#torrent_history_search ~table tr.colhead.nobr td:nth-child(n+3):not(:nth-child(4)):not(:nth-child(11)),
-#requests table.border .colhead_dark td:nth-last-child(3) strong {
+.thin.torrent_history >form#torrent_history_search ~table tr.colhead.nobr td:not(:first-child),
+#requests table.border .colhead_dark td:not(:first-child),
+#existing_freeleech_pots .colhead td:not(:first-child),
+#existing_buff_pots .colhead td:not(:first-child) {
     font-size: 15px;}
 
 .last_read {
@@ -5441,8 +5451,12 @@ span.size5 img {
 
 
 
-
-
+.box.pad.box_add_buff #payment,
+.box.pad.box_add_freeleech #gold_input {
+    width: 150px;
+    margin: 0 5px;}
+.box.pad.box_add_freeleech #groupid_input {
+    width: calc(100% - 216px);}
 
 
 
@@ -5626,6 +5640,8 @@ span.size5 img {
 
 #shop_search #search_query {
     width: calc(100% - 405px);}
+.inventory #shop_search #search_query {
+    width: calc(100% - 425px);}
 #shop_search td.label {
     white-space: nowrap;}
 
@@ -5641,6 +5657,8 @@ span.size5 img {
     vertical-align: bottom;}
 #shop_search tbody#advanced_search tr:first-child td:last-child {
     max-width: 325px;}
+.inventory #shop_search tbody#advanced_search tr:first-child td:last-child {
+    max-width: 230px;}
 #shop_search tbody#advanced_search tr:first-child td:nth-child(2) {
     line-height: 26px;
     vertical-align: top;}
@@ -5681,7 +5699,7 @@ span.size5 img {
 	-webkit-box-shadow: var(--p-main-shdw);
 	box-shadow: var(--p-main-shdw);
 	border: var(--p-main-brdr);
-	box-sizing: border-box;	}
+	box-sizing: border-box;}
 #shop li.item_li.no_access {
     background-color: var(--c-edition);}
 
@@ -5703,6 +5721,7 @@ span.size5 img {
 	margin: 0;}
 
 
+.inventory #content h3.center,
 #shop h3.center {
 	vertical-align: middle;
 	font-size: 17px;
@@ -6163,8 +6182,7 @@ span.size5 img {
 
 .freeleech_shop_main a, .global_buffs_shop_main a {}
 
-#shop .box_add_freeleech,
-#shop .box_add_buff input {
+#shop .box_add_freeleech {
 	padding: 0;}
 
 #running_freeleech td.center.cats_col +td >strong {
@@ -6172,3 +6190,198 @@ span.size5 img {
 #running_freeleech td.center.cats_col +td >strong >a {
     font-size: 15px;
     line-height: var(--p-lh);}
+
+
+
+
+
+/**********************************
+************INVENTORY**************
+**********************************/
+
+
+body#user.inventory {}
+
+#user.inventory #logo {}
+
+#user.inventory #alerts {
+    position: absolute;
+    top: 274px;
+    width: 100%;} /*revisit*/
+
+.inventory h2 {}
+
+#user .inventory .center {
+	padding: 0;}
+
+#user .inventory td.label {
+	background-color: transparent;}
+
+/***Inventory Items***/
+.inventory .featured {
+	background: rgba(0,0,0,.7) url('../images/shop/featured.png') top left no-repeat !important;}
+
+#user .inventory .featured .item_info .center {
+	padding-left: 15px;}
+
+.inventory #items_list {
+	width: calc(100% - 247px);
+	padding: 0;
+	float: right;
+	display: flex;
+	flex-wrap: wrap;
+	height: 100%;}
+
+.inventory #content li.item_li {
+    position: relative;
+	list-style: none;
+	margin: 0 0 10px 10px;
+	width: calc(50% - 10px);
+	min-height: 200px;
+	padding: 0;
+	float: left;
+	display: block;
+    background-color: var(--c-box);
+	-webkit-box-shadow: var(--p-main-shdw);
+	box-shadow: var(--p-main-shdw);
+	border: var(--p-main-brdr);
+	box-sizing: border-box;}
+
+.inventory .item_image_div {
+    margin-top: 50px;
+	height: 100px;
+	width: 100px;
+	float: left;}
+.inventory .item_center.item_image {
+	width: 100px;
+	height: auto;
+	max-height: 150px;
+	margin-left: 10px;
+	vertical-align: top;
+	display: block;}
+
+.inventory #content li.item_li p,
+.inventory #content li.item_li #life_info,
+.inventory #content li.item_li h4  {
+	text-align: left;
+	padding: 0;
+	margin: 0 0 0 120px;}
+
+.inventory h4 {
+    /* font-size: 1.1em; */}
+
+.inventory #content li.item_li .item_description {
+    text-align: left;
+	margin: 30px 5px 15px 120px !important;
+	display: block;
+	padding: 0;
+	background-color: transparent;}
+
+#content li.item_li a {
+	color: #b49629;}
+
+.inventory #one_time_inputs input {
+	width: 200px;
+	margin-left: 120px;
+	margin-bottom: 10px;}
+
+.inventory .submit_section {
+	width: auto; margin: 0 0 10px 120px;}
+
+.inventory #one_time_inputs .title_preview  {
+    width: 60px;
+    margin: 5px;
+    padding: 2px;
+    height: 24px;
+    margin-left: 120px;}
+
+.inventory .top_linkbox {
+	display: none;}
+
+.inventory .bottom_linkbox {
+	clear: both;
+	margin-left: 257px;}
+
+.inventory .trash_icon {
+    cursor: pointer;
+    padding-left: 18px;
+    z-index: 9;
+    margin: 5px;
+    position: relative;
+    width: 18px;
+    height: 18px;}
+
+.inventory .save_message {
+	display: block;
+	width: calc(100% - 250px);
+	line-height: 1.6em;
+	margin: 30px 5px -10px;
+	background: rgba(180,150,41,.8);
+	padding: 5px;
+	border-radius: 10px;
+	filter: drop-shadow(2px 2px 10px #000);
+	float: right;}
+
+.inventory .save_message span {
+	text-align: center;
+	display: block;
+	font-size: 1.6em;
+	border-bottom: 1px solid #c7c7c7;
+	font-family: elderscrolls;
+	font-weight: bold;
+	color: #fff;
+	margin: 0 auto 10px;
+	width: 100%;}
+
+.inventory .spoilerbox {
+	background-color: transparent;
+	border-color: transparent;}
+
+.inventory .spoilerbox img {
+	max-width: 100% !important;}
+
+.inventory .item_description img {
+    max-width: 100% !important;}
+
+/*** Books ***/
+.book_dialog {
+	color: #fff}
+
+.book {
+	margin: 10px;
+	padding: 25px 75px;
+	filter: drop-shadow(2px 2px 5px #000);}
+
+.book .book_content {
+	padding: 25px;
+	box-shadow: 0px 0px 5px #000;
+	background-color: #2b4e66;}
+
+.book .page {
+	background-color: #2b4e66;}
+
+.book span.size7 {
+	border-bottom: 2px solid #fff;
+	width: 100%;
+	display: block;}
+
+.book blockquote {
+	background-color: #1c3145;}
+
+.page_break {
+	margin-bottom: 20px;
+	border-top: #fff solid 1px;
+	display: block;
+	width: 100%;}
+
+.page_break::after {
+	content: attr(id);}
+
+/*** Flags that staffer is on a different user's inventory ***/
+.others_inventory h2 {
+	display: block;
+	position: absolute;
+	top: -150px;
+	text-align: center;
+	border-bottom: none;
+	font-size: 2.5em;}

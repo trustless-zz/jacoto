@@ -187,6 +187,10 @@ tr.likes td[id^="likers_"] >strong:nth-of-type(2) {
 #bb_youtube {
     background-image: url('icons/dark/bbbutt/youtube.svg');}
 
+/** invert white icons **/
+img.animate_icon {
+    filter: invert(1);}
+
 /** new shop item **/
 #shop li.item_li.new:before {
     background-image: url('icons/dark/new.svg');}
@@ -298,6 +302,7 @@ a[title="Edit"] {
 
 /** remove **/
 /* anchor */
+.inventory .trash_icon,
 a[title="Remove"] {
     background-image: url('icons/dark/tor/rm.svg');}
 
