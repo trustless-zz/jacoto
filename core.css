@@ -4193,6 +4193,7 @@ input[type="search"],
     margin-top: -5px;}
 
 /** manually removing embedded brackets **/
+#collections .linkbox a[href^="torrents.php?taglist="],
 .linkbox a[href^="torrents.php?action=editimages&groupid"],
 .linkbox a[href^="torrents.php?action=editgroup&groupid"],
 .linkbox a[href^="?type=hitnrun&userid"],
@@ -4254,6 +4255,7 @@ input[type="search"],
     margin-top: 2px;
     display: inline-block;}
 
+#collections .linkbox a[href^="torrents.php?taglist="]:before                            {content: "Search collection";}
 .linkbox a[href^="torrents.php?action=editimages&groupid"]:before               {content: "Edit Images";}
 .linkbox a[href^="torrents.php?action=editgroup&groupid"]:before                {content: "Edit description";}
 .linkbox a[href^="?type=hitnrun&userid"]:before                                 {content: "Hit 'n' Runs";}
@@ -5192,8 +5194,7 @@ span.size5 img {
     margin: 0;
     padding: 0 !important;}
 .box.box_image.box_image_coverart .head,
-#collections .sidebar .box_addtorrent .head,
-#collections .sidebar .box_tags ol {
+#collections .sidebar .box_addtorrent .head {
     margin-bottom: 10px;}
 #collections .box.box_comment {
     display: flex;
