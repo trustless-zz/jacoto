@@ -1449,6 +1449,7 @@ td.center.cats_col +td,
     text-align: center;
     font-size: 13px;
     line-height: var(--p-lh);}
+table#uploadsrow img,
 table#likesrow img,
 table#snatchesrow img,
 #recommended #vanityhouse img {
@@ -1474,6 +1475,7 @@ table#snatchesrow img,
     border: var(--p-img-anchor-brdr);}
 
 .sidebar .box.box_image_coverart img:hover,
+table#uploadsrow img:hover,
 table#snatchesrow img:hover,
 table#likesrow img:hover,
 #recommended #vanityhouse img:hover,
@@ -4812,14 +4814,17 @@ h2#username span#tip_user img {
     height: 32px;
     background-size: 32px 32px;}
 
+table#uploadsrow tbody,
 table#snatchesrow tbody,
 table#likesrow tbody {
     display: block;
     padding: 5px;}
+table#uploadsrow tr,
 table#snatchesrow tr,
 table#likesrow tr {
     display: flex;
     width: 100%;}
+table#uploadsrow td,
 table#snatchesrow td,
 table#likesrow td {
     padding: 0;
@@ -4828,6 +4833,7 @@ table#likesrow td {
     width: 100%;
     height: auto;
     align-self: center;}
+table#uploadsrow a,
 table#snatchesrow a,
 table#likesrow a {
     display: block;}
@@ -6489,350 +6495,75 @@ body#user.inventory {}
 
 /*****************************************
 *************USER PROFILE*****************
-*****************************************
-
-/*** Fix for headers, for some reason ***/
-#user .head {
-	display: block;
-	height: 21px;
-	width: 98%;}
-
-/*** Avatar ***/
-#user .profile .box_image_avatar .head {
-	display: none;}
-
-.profile .box_image_avatar img {
-	filter: drop-shadow(0px 0px 10px var(--black));}
-
-/*** Tip User ***/
-.profile #tip_user a:hover {
-	filter: drop-shadow(0px 0px 5px rgba(255, 241, 165, 0.8));}
-
-/*** User Info Box ***/
-.profile .box_main_info {
-	background: url('../images/smokeybackground.jpg');
-	background-size: cover;
-	margin-top: 10px;
-	padding-bottom: 10px;
-	display: inline-block;}
-
-#user .profile .box_stats .head {
-	font-weight: normal;}
-
-.profile .box_stats .label {
-	display: none;}
-
-.profile .box_stats {
-	display: flex;
-	flex-direction: column;
-	white-space: nowrap;
-	background: none;
-	margin: 0;
-	padding-bottom: 0;}
-
-.profile .box_stats ul {
-	display: flex;
-	flex-wrap: wrap;
-	margin: -5px 0 0 -15px;}
-
-.profile .box_stats li {
-	flex: auto;
-	line-height: 2em;}
-
-.profile .box_stats ul#small_stats {
-	order: 1;}
-
-.profile .box_stats #small_stats li {
-	width: 50%;
-	float: left;}
-
-.profile .box_stats #hnrs .label {
-	display: inline-block;
-	width: auto;
-	vertical-align: middle;}
-
-.profile .box_stats #hnrs {
-	font-size: 1.1em;
-	padding-left: 20px;
-	margin-left: -40px;}
-
-.profile .box_stats #hnrs a {
-	font-weight: bold;
-	font-size: 1.2em;
-	vertical-align: middle;}
-
-.profile .box_stats #hnrs a.alert {
-	color: #CF0024;}
-
-.profile .box_stats #hnrs a.warn {
-	color: #b49629;}
-
-.profile .box_stats #hnrs a.good {
-	color: #69c077;}
-
-.profile .box_stats #hnrs .stat {
-	padding-left: 0px;}
-
-.profile .box_stats #profile_views {
-	color: var(--grey);
-	text-align: right;
-	padding-top: 2px;
-	background: url("../images/icons/views.png") no-repeat right center;}
-
-.profile .box_stats #profile_views .stat {
-	padding-right: 20px;}
-
-.profile .box_stats ul#online_stats {
-	order: 2;}
-
-.profile .box_stats .status {
-	font-size: 1.8em;}
-
-.profile .box_stats .online {
-	color: var(--darkGreen);}
-
-.profile .box_stats .offline {
-	color: var(--grey);
-	opacity: 0.5;}
-
-.profile .box_stats li#last_seen {
-	flex: 0 0 100%;}
-
-.profile .box_stats #last_seen {
-	color: var(--grey);
-	font-size: 0.8em;
-	opacity: 0.5;
-	margin-top: -10px;}
-
-.profile .box_stats ul#user_stats {
-	order: 3;}
-
-.profile .box_stats #user_stats {
-	font-size: 1.1em;}
-
-.profile .box_stats #user_stats li {
-	width: 50%;
-	float: right}
-
-.profile .box_stats .stat {
-	padding-left: 25px;}
-
-.profile .box_stats #ratio .stat {
-	background: url("../images/icons/ratio.png") no-repeat left center;}
-
-.profile .box_stats #share_score .stat {
-	background: url("../images/icons/share_score.png") no-repeat left center;}
-
-.profile .box_stats #gold .stat {
-	background: url("../images/icons/coins.png") no-repeat left center;}
-
-.profile .box_stats #upload .stat {
-	background: url("../images/icons/sword_upload.png") no-repeat left center;}
-
-.profile .box_stats #download .stat {
-	background: url("../images/icons/shield_down.png") no-repeat left center;}
-
-.profile .box_stats #clan .clan_earth {
-	background: url("../../../common/clans/earth_icon.png") no-repeat left center;}
-
-.profile .box_stats #clan .clan_fire {
-	background: url("../../../common/clans/fire_icon.png") no-repeat left center;}
-
-.profile .box_stats #clan .clan_water {
-	background: url("../../../common/clans/water_icon.png") no-repeat left center;}
-
-.profile .box_stats #clan .clan_wind {
-	background: url("../../../common/clans/wind_icon.png") no-repeat left center;}
-
-.profile .box_stats #clan .stat:after {
-	content: ' Clan';}
-
-.profile .box_stats li#hnrs 			{order: 1;}
-.profile .box_stats li#profile_views 	{order: 2;}
-.profile .box_stats li#online_status 	{order: 3;}
-.profile .box_stats li#irc_status 		{order: 4;}
-.profile .box_stats li#ratio 			{order: 5;}
-.profile .box_stats li#share_score 	{order: 6;}
-.profile .box_stats li#upload 		{order: 7;}
-.profile .box_stats li#gold 			{order: 8;}
-.profile .box_stats li#download 		{order: 9;}
-.profile .box_stats li#clan 			{order: 10;}
-
-/*** Links Section of User Info Box ***/
-#user .profile .box_links .head {
-	display: none;}
-
-.profile .box_links {
-	font-size: 1.1em;
-	background: none;
-	border-top: 2px solid var(--darkBlue2);
-	padding: 1px 0px 2px 5px;}
-
-.profile .box_links ul {
-    display: block;
-    flex-wrap: wrap;}
-
-.profile .box_links ul li {
-	margin-left: 15px;
-	line-height: 1.5em;
-	width: 95%;
-	float: left;}
-
-.profile .box_links .profile_link:after {
-	content: ":";}
-
-.profile .box_links #torrent_history .profile_link:after {
-	content: none;}
-
+*****************************************/
 .profile .box_links .profile_link_count {
-	color: var(--white);
-	font-weight: bold;}
-
-.profile .box_links a:hover {
-	text-decoration: none;
-	color: var(--lightblue);}
-
-.profile .box_links a:hover > .profile_link {
-	text-decoration: underline;
-	color: var(--white);}
-
-/*** Community Stats ***/
-.profile #community_stats {
-	display: block;
-    overflow: auto;}
-
-.profile #community_stats ul {
-	list-style: none;
-	display: inline-block;
-	width: 40%;
-	float: left;
-	margin-bottom: 10px;}
-
-.profile #community_stats .space {
-	height: 10px;}
-
-.profile #community_stats li.icon_stat {
-	margin-top: -3px;}
-
-.profile #community_stats li.icon_stat img {
-	margin-left: -18px;
-	margin-bottom: -1px;}
-
-.profile #community_stats .comm_stats_head {
-	font-weight: bold;
-	border-bottom: 1px solid var(--white);
-	display: block;
-	width: 90%;}
+	font-weight: 600;}
 
 /*** Image Gallery ***/
 .profile .box_art_gallery .gallery {
-	margin-left: -10px;
-	display: inline-block;}
-
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;}
 .profile .box_art_gallery .gallery_slot {
  	overflow: hidden;}
-
 .profile .box_art_gallery .gallery_main_slot {
 	text-align: center;
 	width: 100%;
 	max-height: 600px;}
-
 .profile .box_art_gallery .gallery_row {
 	padding: 0;
 	margin: auto;
+    margin-top: 2px;
 	position: relative;
 	width: 100%;
 	max-height: 150px;
 	white-space: nowrap;
-	overflow: hidden;}
-
+	overflow: auto !important;}
 .profile .box_art_gallery .gallery_small_slot {
 	display: inline-block;
 	max-height: 80px;
 	margin: 1px;
 	overflow: hidden;}
-
 .profile .box_art_gallery .large_row .gallery_small_slot {
-	width: 23%;}
-
+    border: var(--p-img-brdr);
+    width: auto;
+    height: 80px;}
 .profile .box_art_gallery .small_row .gallery_small_slot {
-	width: 24%;
+    border: var(--p-img-brdr);
+    width: auto;
 	margin: 2px;}
-
+.profile .box_art_gallery .large_row .gallery_small_slot:hover,
+.profile .box_art_gallery .small_row .gallery_small_slot:hover {
+    border: var(--p-img-hvr);}
 .profile .gallery_small_slot img {
 	display: block;}
-
 .profile .box_art_gallery .gallery_small_slot.selected {
-	border: 1px solid var(--white);
+	border: 3px solid var(--c-sticky-id-brdr);
 	margin: 0;}
 
-/*** Recent Liks, Snatches, Uploads ***/
-#snatchesrow td,
-#uploadsrow td,
-#likesrow td {
-	width: 19.5%;}
-
-#snatchesrow img,
-#uploadsrow img,
-#likesrow img {
-	min-width: 97%;
-	height: 170px;
-	margin: 1px 0px;
-	padding: 0 1px;}
-
-/*** Requests* **/
-#user #requests {
-	max-height: 325px;
-	overflow-y: scroll;
-	overflow-x: hidden;}
-
-/*** Tip User ***/
-#user #tip_user {
-	float: right;
-	margin-right: 5px;}
-
-#user #username {
-	padding-bottom: 10px;}
-
-#tip_user img {
-	height: 25px;
-	width: 25px;}
+.profile .box_art_gallery .gallery_small_slot img {
+    width: auto;
+    height: 100%;}
 
 /*** Platform checkboxes on edit profile ***/
-#platcheckbox td[colspan="5"] {
-	background-color: #2b4e66;
-	height: 25px;}
 
-@media screen and (min-width: 1400px) {
-	.profile .box_community #community_stats ul {
-		width: 20%;}
-
-	.profile .box_community #community_stats {
-		padding: 10px 0;
-		margin-left: -30px;}
-
-	#snatchesrow img,
-	#uploadsrow img,
-	#likesrow img {
-		height: 250px;}
-}
 
 /*** The CSS Gallery ***/
 #css_gallery {
 	overflow-y: scroll;}
 
 /*** Snatch List Page ***/
-#snatched_table tr:nth-of-type(odd) td {
+/* #snatched_table tr:nth-of-type(odd) td {
 	background-color: var(--rowa);}
 
 #snatched_table tr:nth-of-type(even) td {
 	background-color: var(--rowb);}
 
 #snatched_table tr.colhead td {
-	background-color: inherit;}
+	background-color: inherit;} */
 
 /*** Gold Generation Box ***/
-.box_gold td {
+/* .box_gold td {
 	text-align: center;
 	padding: 10px 5px;}
 
@@ -6864,21 +6595,21 @@ body#user.inventory {}
 #user .box_gold td.label {
 	box-shadow: none; max-width: 100px;
 	width: 100%;
-	background-color: var(--label)}
+	background-color: var(--label)} */
 
 /*** Edit Profile ***/
-#userform td.right {
+/* #userform td.right {
 	text-align: left;}
 
 #styleurl {
-	width: 500px;}
+	width: 500px;} */
 
 /*** Profile Views History ***/
-#userhistory .rowa td, .row_a td {
+/* #userhistory .rowa td, .row_a td {
 	background-color: transparent;}
 
 #userhistory tr.rowa:nth-of-type(2n) {
-	background-color: var(--rowb);}
+	background-color: var(--rowb);}  */
 
 /* Staff Sections */
 #user_badge_edit_tr input {
@@ -6891,43 +6622,430 @@ body#user.inventory {}
 	appearance: none;
 	border: none;
 	width: 130px;
-	height: 13px;}
-
+	height: 14px;}
 .box_fights_stats .stat_bar progress::-webkit-progress-bar {
-	background-color: #ddd;
-	border-radius: 2px;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;}
+	background-color: var(--c-body);
+	box-shadow: inset var(--p-main-shdw);}
 
-.box_fights_stats .stat_bar progress::-webkit-progress-value {
-	box-shadow:
-		inset 0px 11px 8px -10px #fff,
-		inset 0px -11px 8px -10px #000,
-		1px 0 5px 1px rgba(0, 0, 0, 0.5);
-	border-radius: 1px;}
-
-.box_fights_stats .stat_bar progress::-moz-progress-bar {
-	box-shadow:
-		inset 0px 11px 8px -10px #fff,
-		inset 0px -11px 8px -10px #000,
-		1px 0 5px 1px rgba(0, 0, 0, 0.5);
-	border-radius: 1px;}
+.box_fights_stats .stat_bar progress::-webkit-progress-value {}
+.box_fights_stats .stat_bar progress::-moz-progress-bar {}
 
 .box_fights_stats .stat_bar progress.experience_bar {
-	color: #0085fe;}
-
-.box_fights_stats .stat_bar progress.experience_bar::-webkit-progress-value {
-	background-color: #0085fe;}
-
+	color: var(--c-gold);}
+.box_fights_stats .stat_bar progress.experience_bar::-webkit-progress-value{
+	background: linear-gradient(0deg, var(--c-gold) 0%, var(--c-o-gold) 55%, var(--c-o-gold) 80%, var(--c-gold) 100%);}
 .box_fights_stats .stat_bar progress.experience_bar::-moz-progress-bar {
-	background-color: #0085fe;}
+	background: linear-gradient(0deg, var(--c-gold) 0%, var(--c-o-gold) 55%, var(--c-o-gold) 80%, var(--c-gold) 100%);}
 
 .box_fights_stats .stat_bar progress.health_bar {
-	color: #fe0000;}
-
+	color: var(--c-red);}
 .box_fights_stats .stat_bar progress.health_bar::-webkit-progress-value {
-	background-color: #fe0000;}
-
+	background-color: var(--c-red);}
 .box_fights_stats .stat_bar progress.health_bar::-moz-progress-bar {
-	background-color: #fe0000;}
+	background-color: var(--c-red);}
 
-#user_fight_attacks .attributes {font-size: 0.8em;}
+#user_fight_attacks .attributes {font-size: 4em;}
+
+
+
+
+
+
+
+/*****************************************
+**************STAFF PAGES*****************
+*****************************************/
+
+/*** Permissions Page ***/
+.permissions {
+	display: table !important;
+	width: 100%;}
+
+.permission_container {
+	float: left;
+	margin:10px;
+	padding:2px;
+	width: 22%;}
+
+.permission_container a {
+	line-height: 20px;
+	padding-left: 5px;}
+
+.permission_container .colhead {
+    background: var(--darkBlue);
+    margin: 0;
+    padding: 2px;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: underline;
+    border-radius: 0px;
+    width: 200px;}
+
+#permform .submit_container {
+	clear: both;}
+
+/*** Staff PMs ***/
+#staffpm table {
+	width: 100%;}
+
+#staffpm .linkbox {
+	margin: 0;}
+
+#staffpm .header .linkbox {
+	margin: 10px 0;}
+
+#staffpm .body {
+	margin: 10px;
+	padding: 10px 0px;}
+
+#staffpm .box {
+	padding: 0px;
+	width: 100%;}
+
+#staffpm #searchbox {
+	margin: 5px;}
+
+#staffpm #inbox {
+	margin-top: -40px;}
+
+#torrents #content .notchecked {
+    background: url('../images/crossn.png') no-repeat;
+    width: 20px;
+    height: 20px;
+    /* float: center;*/}
+
+#torrents #content .checked {
+    background: url('../images/checkmark.png') no-repeat;
+    width: 20px;
+    height: 20px;
+    /* float: center;*/}
+
+input[type=submit],
+input[type=button],
+#staffpm select {
+	margin:10px 3px;
+	padding:5px;
+	height:30px;}
+
+input[type=submit]:hover,
+input[type=button]:hover,
+button[type=button]:hover {
+	box-shadow: 3px 3px 3px black;}
+
+/*** Reports ***/
+#reports #content form,
+#reportsv2 #all_reports,
+#tms {
+	display:block;
+	padding:10px;
+	width:100%;
+	margin-top:10px;}
+
+#reports .center,
+#reportsv2 #all_reports {
+	text-align:left;}
+
+#reportsv2 .box {
+	width: 85% !important;}
+
+#reportsv2 .colhead {
+	font-size: 1em;
+	box-shadow: none;
+	border-radius: 0px;}
+
+#reportsv2 td {
+	vertical-align: top;}
+
+#reportsv2 table table tr {
+	border: var(--darkBlue2) 1px solid;}
+
+#reportsv2 table table td {
+	padding: 10px 5px;}
+
+#reportsv2 table table tr:nth-of-type(odd) {
+	background-color: var(--mediumBlue);}
+
+#reportsv2 table table tr:nth-of-type(even) {
+	background-color: var(--darkBlue);}
+
+#reportsv2 table table td:nth-of-type(2) {
+	min-width: 100px;}
+
+#reportsv2 div[style="padding:Daedy0px Daedy0px Daedy0px 20px; width: 70%; margin-left: auto; margin-right: auto"] table:nth-of-type(1) td:nth-of-type(2) table {
+	margin-top: 16px;}
+
+#reportsv2 #all_reports td {
+	padding-bottom: 20px;}
+
+#reportsv2 #all_reports td.label {
+	width:150px;
+	background-color: var(--label);
+	vertical-align: middle;}
+
+#reportsv2 #all_reports td.label select {
+	width: 110px;
+	min-width: 0px;}
+
+#reportsv2 #all_reports input[type="button"] {
+	display: inline;}
+
+#reportsv2 #all_reports tr:nth-of-type(4) span,
+#reportsv2 #all_reports tr:nth-of-type(5) span {
+	display: block;}
+
+#reportsv2 #all_reports tr:nth-of-type(4) span span:nth-of-type(1) input,
+#reportsv2 #all_reports tr:nth-of-type(5) span span:nth-of-type(1) input {
+	margin-left: 20px;}
+
+#reportsv2 #all_reports tr:nth-of-type(4) span span input,
+#reportsv2 #all_reports tr:nth-of-type(5) span span input {
+	margin-left: 15px;}
+
+#reportsv2 #all_reports tr:nth-of-type(4) span span select,
+#reportsv2 #all_reports tr:nth-of-type(5) span span select {
+	margin-left: 8px;}
+
+#reportsv2 #all_reports tr:nth-of-type(1) div strong {
+	color: #bf6a6a;}
+
+#reportsv2 #all_reports tr:nth-of-type(1) div:nth-of-type(2) {
+	padding-top: 10px;}
+
+#reportsv2 #all_reports tr:last-of-type input[type="button"] {
+	display: inline;}
+
+#reportsv2 #all_reports tr:nth-last-child(2) td:nth-of-type(3) {
+	background-color: transparent; width: 105px}
+
+#reportsv2 .buttonbox {
+	background-color: var(--darkBlue);}
+
+#reportsv2 #filters-form {
+	background-color: var(--darkBlue);}
+
+#reportsv2 .relevant_other_torrents ul {
+	margin-top: 0;
+	padding-left: 18px;}
+
+/*** TM Stats ***/
+#tms {
+	display:inline-block;
+	width:98%;
+	margin:10px 0px;
+	text-align: center;}
+
+#tms .box {
+	background:none;}
+
+#tm_time {
+	background-color:#1c3145;
+	padding:1px 3px 1px 15px;
+	background: linear-gradient(#2b4e66, #1c3145);
+	box-shadow: -3px 3px 2px #000;
+	border-radius:5px;
+	font-size:1em;
+	height: 45px;}
+
+#tm_time input[type="text"] {
+	vertical-align: middle;}
+
+#tms_form {
+	margin-top:-15px;}
+
+#tms h2, #platforms h2 {
+	display:none;}
+
+#tms td {
+	width: 20%;}
+
+#tools .thin td:first-of-type {
+	padding-left: 5px;}
+
+#todo .main_column {
+	width: 100%;}
+
+/*** Fixes Mass Add Torrents to Collections ***/
+#tools  .col_mass_add td.colhead {
+	width: auto;
+	margin:0;
+	padding:0;
+	background:none;
+	box-shadow: none;}
+
+/*** User Apps ***/
+#tools table[style="width: 960px; text-align: center;"] {
+	text-align:left !important;}
+
+#tools table[style="width: 960px; text-align: center;"] td {
+	margin: 10px 5px;
+	display: block;}
+
+#tools table[style="width: 960px; text-align: center;"] .colhead td {
+	margin: 0; display: inline-block;}
+
+#tools table[style="width: 960px; text-align: center;"] .colhead td[style="height: 30px;"] {
+	height: auto !important;}
+
+#tools table[style="width: 960px; text-align: center;"] textarea {
+	width: 90% !important;
+	margin-top: 10px;}
+
+#tools .user_applications table .colhead:nth-of-type(1) {
+	width: 100%;
+	margin: 0 0 10px 0;
+	padding: 0;
+	box-shadow: none;
+	border-radius: 0px;}
+
+#tools .user_applications table .colhead:nth-of-type(2) {
+	display: none;}
+
+#tools .user_applications table tr {
+	width: 49%;
+	float: left;
+	display: block;}
+
+#tools .user_applications .rowa {
+	margin-right: 1%;}
+
+#tools .user_applications .rowa,
+#tools .user_applications .rowb {
+	 height: auto;
+	 filter: drop-shadow(3px 3px 3px var(--black));}
+
+#tools .user_applications .rowa:hover td,
+#tools .user_applications .rowb:hover td {
+	background-color: var(--mediumBlue);}
+
+#tools .user_applications .rowa:hover input,
+#tools .user_applications .rowb:hover input {
+	background-color: var(--darkBlue);}
+
+#tools .user_applications table td {
+	display: block;
+	padding: 10px 10px;
+	height: 30px;
+	background-color: var(--rowb);}
+
+#tools .thin.user_applications tr.colhead:hover td {
+	background-color: var(--rowb);}
+
+#tools .user_applications table td:nth-of-type(2):before {
+	content: "Email: ";
+	display: block;
+	font-weight: bold;}
+
+#tools .user_applications table .colhead:nth-of-type(1) td:nth-of-type(2):before {content:"";}
+
+#tools .user_applications table td:nth-of-type(3):before {
+	content: "Origin: ";
+	display: block;
+	font-weight: bold;}
+
+#tools .user_applications table td:nth-of-type(4):before {
+	content: "Referer: ";
+	display: block;
+	font-weight: bold;}
+
+#tools .user_applications table td:nth-of-type(5) {
+	height: 60px;}
+
+#tools .user_applications table td:nth-of-type(5):before {
+	content: "What can you contribute?: ";
+	display: block;
+	font-weight: bold;}
+
+#tools .user_applications table td:nth-of-type(6):before {
+	content: "IP: "; display: block; font-weight: bold;}
+
+#tools .user_applications table td:nth-of-type(7):before {
+	content: "When Applied: ";
+	display: block;
+	font-weight: bold;}
+
+#tools .user_applications table td.center {
+	text-align: left;
+	margin-bottom: 20px;}
+
+#tools .user_applications input[type="button"] {
+	margin: 5px 0px;}
+
+/*** Staff Notes on User Profiles ***/
+#staffnotes {
+	background-color: var(--mediumBlue)}
+
+/*** Gazelle manager ***/
+#gazelle_images td img {
+	width: 150px;
+	height: auto;}
+
+#gazelle_images .box td img {
+	width: 150px;
+	height: auto;}
+
+#gazelles td.body {
+	padding: 5px 10px;}
+
+/*****************************************
+******************BLOG********************
+*****************************************/
+#blog .head {
+	font-size: 1em;}
+
+#blog .head strong {
+	font-size:1.2em;}
+
+/*****************************************
+***************ITEM CREATOR***************
+*****************************************/
+#book_contents,
+#packadvanced {
+	width: 99%;}
+
+#book_excerpt {
+	width: 500px;
+	height: 100px;
+	margin-bottom: 15px;}
+
+#user #itemsdiv img {
+	max-width: 150px;
+	float: left;
+	padding: 5px;}
+
+#user #itemsdiv div[style="text-align:center;"],
+#user #itemsdiv span[style="text-decoration: underline;"],
+#user #itemsdiv p {
+	display: none;}
+
+.select2-search__field {
+	height: 30px;}
+
+.equipment_manager #equip_slots {
+	height: 200px;}
+
+/**********************************************
+************Fighting System Managers**********
+**********************************************/
+#attack_edit_form .label {
+	width: 150px;}
+
+#attack_edit_form tr.colhead > td {
+	padding: 5px 0px 5px 0px;}
+
+#attack_edit_form tbody > tr:first-child:not(.colhead) > td {
+	padding-top: 0.5em;}
+
+#attack_edit_form tbody > tr:last-child:not(.colhead) > td:not(#submit_col) {
+	padding-bottom: 1em;}
+
+#monster_edit_form .wide_text {
+	width: 99%;}
+
+#monster_edit_form tr.colhead > td {
+	padding: 5px 0px 5px 0px;}
+
+#monster_edit_form tbody > tr:first-child:not(.colhead) > td {
+	padding-top: 0.5em;}
+
+#monster_edit_form tbody > tr:last-child:not(.colhead) > td:not(#submit_col) {
+	padding-bottom: 1em;}
