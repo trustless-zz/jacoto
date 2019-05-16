@@ -932,7 +932,8 @@ div,
 .hovereffect h2,
 #shop li.item_li .item_description:before,
 #shop li.item_li .item_description:after,
-#shop .item_description {
+#shop .item_description,
+#shop li.item_li.owned:after {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1466,11 +1467,13 @@ table#snatchesrow img,
 
 .hovereffect,
 #bookmarks #collage_table img,
-#collections #coverart.box li a {
+#collections #coverart.box li a,
+.sidebar .box.box_image_coverart img {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border: var(--p-img-anchor-brdr);}
 
+.sidebar .box.box_image_coverart img:hover,
 table#snatchesrow img:hover,
 table#likesrow img:hover,
 #recommended #vanityhouse img:hover,
@@ -2593,6 +2596,7 @@ input.hidden,
     width: calc(20% - 10px);
     margin: 0 10px 10px 0;
     align-self: center;}
+.sidebar .box.box_image_coverart a,
 #content >a:first-child,
 .similar li >a {
     display: contents;}
@@ -5809,11 +5813,11 @@ span.size5 img {
 	margin: 0;
 	/* line-height: 1.2em; */
 	max-height: 34px;
-	width: calc(100% - 16px);
+    width: calc(100% - 46px);
 	position: absolute;
 	top: 0;
 	left: 0;
-	padding: 8px;
+    padding: 8px 23px;
 	/* box-sizing: border-box; */
 	font-weight: 600;
 	background: var(--p-post-colhead-bcg);}
@@ -5841,7 +5845,6 @@ span.size5 img {
 	padding: 10px 0;}
 
 #shop #clickable {
-	width: 200px;
 	width: calc(100% - 34px);
 	margin: 50px auto 0;}
 
@@ -5960,8 +5963,10 @@ span.size5 img {
 	vertical-align: top;
 	position: absolute;}
 
+.inventory #wrapper #content li.item_li.new,
 #shop li.new {
     border-color: var(--c-sb1);}
+.inventory #wrapper #content li.item_li.new h3.center,
 #shop li.new h3.center {
     background: var(--p-subcolhead);}
 
@@ -5979,17 +5984,20 @@ span.size5 img {
     background-position: center;}
 #shop li.item_li.owned:after {
     content: '✔';
-    font-size: 24px;
-    line-height: 28px;
-    top: 53px;
-    right: 20px;
+    font-size: 13px;
+    line-height: 14px;
+    top: 7px;
+    right: 5px;
     position: absolute;
     text-align: center;
-    width: 28px;
-    height: 28px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     color: var(--c-text-s);
     border: 2px solid var(--c-text-s);}
+#shop li.item_li.owned:hover:after {
+    color: var(--c-anchor-hvr);
+    border-color: var(--c-anchor-hvr);}
 
 #shop li.featured {
     border-color: var(--c-input-brdr);
@@ -6005,10 +6013,10 @@ span.size5 img {
     width: calc(100% - 34px);
     margin: 50px auto 0;}
 
-.inventory #wrapper #content .featured h3.center,
+.inventory #wrapper #content .item_li.featured h3.center,
 #shop .featured h3.center {
     background: var(--p-sticky-colhead-bcg);}
-.inventory #wrapper #content .featured {
+.inventory #wrapper #content .item_li.featured {
     border-color: var(--c-input-brdr);}
 
 #shop .featured .item_description,
@@ -6475,3 +6483,451 @@ body#user.inventory {}
 .alertable button {
     border-radius: 0;
     margin-left: 5px;}
+
+
+
+
+/*****************************************
+*************USER PROFILE*****************
+*****************************************
+
+/*** Fix for headers, for some reason ***/
+#user .head {
+	display: block;
+	height: 21px;
+	width: 98%;}
+
+/*** Avatar ***/
+#user .profile .box_image_avatar .head {
+	display: none;}
+
+.profile .box_image_avatar img {
+	filter: drop-shadow(0px 0px 10px var(--black));}
+
+/*** Tip User ***/
+.profile #tip_user a:hover {
+	filter: drop-shadow(0px 0px 5px rgba(255, 241, 165, 0.8));}
+
+/*** User Info Box ***/
+.profile .box_main_info {
+	background: url('../images/smokeybackground.jpg');
+	background-size: cover;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	display: inline-block;}
+
+#user .profile .box_stats .head {
+	font-weight: normal;}
+
+.profile .box_stats .label {
+	display: none;}
+
+.profile .box_stats {
+	display: flex;
+	flex-direction: column;
+	white-space: nowrap;
+	background: none;
+	margin: 0;
+	padding-bottom: 0;}
+
+.profile .box_stats ul {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -5px 0 0 -15px;}
+
+.profile .box_stats li {
+	flex: auto;
+	line-height: 2em;}
+
+.profile .box_stats ul#small_stats {
+	order: 1;}
+
+.profile .box_stats #small_stats li {
+	width: 50%;
+	float: left;}
+
+.profile .box_stats #hnrs .label {
+	display: inline-block;
+	width: auto;
+	vertical-align: middle;}
+
+.profile .box_stats #hnrs {
+	font-size: 1.1em;
+	padding-left: 20px;
+	margin-left: -40px;}
+
+.profile .box_stats #hnrs a {
+	font-weight: bold;
+	font-size: 1.2em;
+	vertical-align: middle;}
+
+.profile .box_stats #hnrs a.alert {
+	color: #CF0024;}
+
+.profile .box_stats #hnrs a.warn {
+	color: #b49629;}
+
+.profile .box_stats #hnrs a.good {
+	color: #69c077;}
+
+.profile .box_stats #hnrs .stat {
+	padding-left: 0px;}
+
+.profile .box_stats #profile_views {
+	color: var(--grey);
+	text-align: right;
+	padding-top: 2px;
+	background: url("../images/icons/views.png") no-repeat right center;}
+
+.profile .box_stats #profile_views .stat {
+	padding-right: 20px;}
+
+.profile .box_stats ul#online_stats {
+	order: 2;}
+
+.profile .box_stats .status {
+	font-size: 1.8em;}
+
+.profile .box_stats .online {
+	color: var(--darkGreen);}
+
+.profile .box_stats .offline {
+	color: var(--grey);
+	opacity: 0.5;}
+
+.profile .box_stats li#last_seen {
+	flex: 0 0 100%;}
+
+.profile .box_stats #last_seen {
+	color: var(--grey);
+	font-size: 0.8em;
+	opacity: 0.5;
+	margin-top: -10px;}
+
+.profile .box_stats ul#user_stats {
+	order: 3;}
+
+.profile .box_stats #user_stats {
+	font-size: 1.1em;}
+
+.profile .box_stats #user_stats li {
+	width: 50%;
+	float: right}
+
+.profile .box_stats .stat {
+	padding-left: 25px;}
+
+.profile .box_stats #ratio .stat {
+	background: url("../images/icons/ratio.png") no-repeat left center;}
+
+.profile .box_stats #share_score .stat {
+	background: url("../images/icons/share_score.png") no-repeat left center;}
+
+.profile .box_stats #gold .stat {
+	background: url("../images/icons/coins.png") no-repeat left center;}
+
+.profile .box_stats #upload .stat {
+	background: url("../images/icons/sword_upload.png") no-repeat left center;}
+
+.profile .box_stats #download .stat {
+	background: url("../images/icons/shield_down.png") no-repeat left center;}
+
+.profile .box_stats #clan .clan_earth {
+	background: url("../../../common/clans/earth_icon.png") no-repeat left center;}
+
+.profile .box_stats #clan .clan_fire {
+	background: url("../../../common/clans/fire_icon.png") no-repeat left center;}
+
+.profile .box_stats #clan .clan_water {
+	background: url("../../../common/clans/water_icon.png") no-repeat left center;}
+
+.profile .box_stats #clan .clan_wind {
+	background: url("../../../common/clans/wind_icon.png") no-repeat left center;}
+
+.profile .box_stats #clan .stat:after {
+	content: ' Clan';}
+
+.profile .box_stats li#hnrs 			{order: 1;}
+.profile .box_stats li#profile_views 	{order: 2;}
+.profile .box_stats li#online_status 	{order: 3;}
+.profile .box_stats li#irc_status 		{order: 4;}
+.profile .box_stats li#ratio 			{order: 5;}
+.profile .box_stats li#share_score 	{order: 6;}
+.profile .box_stats li#upload 		{order: 7;}
+.profile .box_stats li#gold 			{order: 8;}
+.profile .box_stats li#download 		{order: 9;}
+.profile .box_stats li#clan 			{order: 10;}
+
+/*** Links Section of User Info Box ***/
+#user .profile .box_links .head {
+	display: none;}
+
+.profile .box_links {
+	font-size: 1.1em;
+	background: none;
+	border-top: 2px solid var(--darkBlue2);
+	padding: 1px 0px 2px 5px;}
+
+.profile .box_links ul {
+    display: block;
+    flex-wrap: wrap;}
+
+.profile .box_links ul li {
+	margin-left: 15px;
+	line-height: 1.5em;
+	width: 95%;
+	float: left;}
+
+.profile .box_links .profile_link:after {
+	content: ":";}
+
+.profile .box_links #torrent_history .profile_link:after {
+	content: none;}
+
+.profile .box_links .profile_link_count {
+	color: var(--white);
+	font-weight: bold;}
+
+.profile .box_links a:hover {
+	text-decoration: none;
+	color: var(--lightblue);}
+
+.profile .box_links a:hover > .profile_link {
+	text-decoration: underline;
+	color: var(--white);}
+
+/*** Community Stats ***/
+.profile #community_stats {
+	display: block;
+    overflow: auto;}
+
+.profile #community_stats ul {
+	list-style: none;
+	display: inline-block;
+	width: 40%;
+	float: left;
+	margin-bottom: 10px;}
+
+.profile #community_stats .space {
+	height: 10px;}
+
+.profile #community_stats li.icon_stat {
+	margin-top: -3px;}
+
+.profile #community_stats li.icon_stat img {
+	margin-left: -18px;
+	margin-bottom: -1px;}
+
+.profile #community_stats .comm_stats_head {
+	font-weight: bold;
+	border-bottom: 1px solid var(--white);
+	display: block;
+	width: 90%;}
+
+/*** Image Gallery ***/
+.profile .box_art_gallery .gallery {
+	margin-left: -10px;
+	display: inline-block;}
+
+.profile .box_art_gallery .gallery_slot {
+ 	overflow: hidden;}
+
+.profile .box_art_gallery .gallery_main_slot {
+	text-align: center;
+	width: 100%;
+	max-height: 600px;}
+
+.profile .box_art_gallery .gallery_row {
+	padding: 0;
+	margin: auto;
+	position: relative;
+	width: 100%;
+	max-height: 150px;
+	white-space: nowrap;
+	overflow: hidden;}
+
+.profile .box_art_gallery .gallery_small_slot {
+	display: inline-block;
+	max-height: 80px;
+	margin: 1px;
+	overflow: hidden;}
+
+.profile .box_art_gallery .large_row .gallery_small_slot {
+	width: 23%;}
+
+.profile .box_art_gallery .small_row .gallery_small_slot {
+	width: 24%;
+	margin: 2px;}
+
+.profile .gallery_small_slot img {
+	display: block;}
+
+.profile .box_art_gallery .gallery_small_slot.selected {
+	border: 1px solid var(--white);
+	margin: 0;}
+
+/*** Recent Liks, Snatches, Uploads ***/
+#snatchesrow td,
+#uploadsrow td,
+#likesrow td {
+	width: 19.5%;}
+
+#snatchesrow img,
+#uploadsrow img,
+#likesrow img {
+	min-width: 97%;
+	height: 170px;
+	margin: 1px 0px;
+	padding: 0 1px;}
+
+/*** Requests* **/
+#user #requests {
+	max-height: 325px;
+	overflow-y: scroll;
+	overflow-x: hidden;}
+
+/*** Tip User ***/
+#user #tip_user {
+	float: right;
+	margin-right: 5px;}
+
+#user #username {
+	padding-bottom: 10px;}
+
+#tip_user img {
+	height: 25px;
+	width: 25px;}
+
+/*** Platform checkboxes on edit profile ***/
+#platcheckbox td[colspan="5"] {
+	background-color: #2b4e66;
+	height: 25px;}
+
+@media screen and (min-width: 1400px) {
+	.profile .box_community #community_stats ul {
+		width: 20%;}
+
+	.profile .box_community #community_stats {
+		padding: 10px 0;
+		margin-left: -30px;}
+
+	#snatchesrow img,
+	#uploadsrow img,
+	#likesrow img {
+		height: 250px;}
+}
+
+/*** The CSS Gallery ***/
+#css_gallery {
+	overflow-y: scroll;}
+
+/*** Snatch List Page ***/
+#snatched_table tr:nth-of-type(odd) td {
+	background-color: var(--rowa);}
+
+#snatched_table tr:nth-of-type(even) td {
+	background-color: var(--rowb);}
+
+#snatched_table tr.colhead td {
+	background-color: inherit;}
+
+/*** Gold Generation Box ***/
+.box_gold td {
+	text-align: center;
+	padding: 10px 5px;}
+
+.box_gold .colhead td.label {
+	background-color: inherit;}
+
+.box_gold .colhead {
+	border-radius: 0px;}
+
+.box_gold .colhead td {
+	padding: 5px;}
+
+.box_gold table {
+	width: 280px;
+	height: 176px;
+	position: relative;
+	overflow-x: hidden;
+	display: block;}
+
+.box_gold tr.total td {
+	border-top: 1px solid var(--lightBlue);}
+
+.box_gold tr.total td.label {
+	border-top: none;}
+
+#user .thin .box_gold table td {
+	display: table-cell !important;}
+
+#user .box_gold td.label {
+	box-shadow: none; max-width: 100px;
+	width: 100%;
+	background-color: var(--label)}
+
+/*** Edit Profile ***/
+#userform td.right {
+	text-align: left;}
+
+#styleurl {
+	width: 500px;}
+
+/*** Profile Views History ***/
+#userhistory .rowa td, .row_a td {
+	background-color: transparent;}
+
+#userhistory tr.rowa:nth-of-type(2n) {
+	background-color: var(--rowb);}
+
+/* Staff Sections */
+#user_badge_edit_tr input {
+	vertical-align: initial;}
+
+/*** Fighting Stats Box ***/
+.box_fights_stats .stat_bar progress {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	width: 130px;
+	height: 13px;}
+
+.box_fights_stats .stat_bar progress::-webkit-progress-bar {
+	background-color: #ddd;
+	border-radius: 2px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;}
+
+.box_fights_stats .stat_bar progress::-webkit-progress-value {
+	box-shadow:
+		inset 0px 11px 8px -10px #fff,
+		inset 0px -11px 8px -10px #000,
+		1px 0 5px 1px rgba(0, 0, 0, 0.5);
+	border-radius: 1px;}
+
+.box_fights_stats .stat_bar progress::-moz-progress-bar {
+	box-shadow:
+		inset 0px 11px 8px -10px #fff,
+		inset 0px -11px 8px -10px #000,
+		1px 0 5px 1px rgba(0, 0, 0, 0.5);
+	border-radius: 1px;}
+
+.box_fights_stats .stat_bar progress.experience_bar {
+	color: #0085fe;}
+
+.box_fights_stats .stat_bar progress.experience_bar::-webkit-progress-value {
+	background-color: #0085fe;}
+
+.box_fights_stats .stat_bar progress.experience_bar::-moz-progress-bar {
+	background-color: #0085fe;}
+
+.box_fights_stats .stat_bar progress.health_bar {
+	color: #fe0000;}
+
+.box_fights_stats .stat_bar progress.health_bar::-webkit-progress-value {
+	background-color: #fe0000;}
+
+.box_fights_stats .stat_bar progress.health_bar::-moz-progress-bar {
+	background-color: #fe0000;}
+
+#user_fight_attacks .attributes {font-size: 0.8em;}
