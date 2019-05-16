@@ -192,8 +192,9 @@ img.animate_icon {
     filter: invert(1);}
 
 /** new shop item **/
-#shop li.item_li.new:before {
-    background-image: url('icons/dark/new.svg');}
+.inventory .item_li.featured:before,
+#shop .item_li.featured:before {
+    background-image: url('icons/dark/featured.svg');}
 
 /** gold **/
 img[title="Gold"],
