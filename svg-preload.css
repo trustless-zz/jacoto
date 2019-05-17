@@ -43,6 +43,7 @@ ul:not(.highlighted) li.active a,
     filter: brightness(0);}
 
 /** lightbox image background **/
+table.gazelles_art_display .hovereffect:before,
 .fancybox-image,
 .lightbox img {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="8 16 16 16 16 8 8 0 0 0 0 8 8 16" fill="rgb(255,255,255)"/><rect x="8" width="8" height="8" fill="rgb(204,204,204)"/><rect y="8" width="8" height="8" fill="rgb(204,204,204)"/></svg>');}

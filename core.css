@@ -758,7 +758,12 @@ form[name="filter"],
 .global_buffs_shop_main table,
 #blog .thin >div.box,
 table.gazellepic,
-table.gazelleinfo {
+table.gazelleinfo,
+#gazelles .thin >h2:first-child +.box.pad,
+table.gazelles_art_display,
+#user .thin >h3:first-child +.linkbox +form,
+#log .thin >.header +.box.pad,
+#log table#log_table {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -792,7 +797,8 @@ table.gazelleinfo {
 #actual_rules,
 #searchthread form,
 #searchforum form,
-#shop_search {
+#shop_search,
+#user .thin >h3:first-child +.linkbox +form {
     padding: 10px;}
 .sidebar .body {
     padding: 10px 0 0 0;}
@@ -1098,7 +1104,8 @@ a[title="Remove"],
 .user_online,
 .user_offline,
 #rules .thin >form.search_form span#Index,
-#collections .sidebar .box_addtorrent span:last-child {
+#collections .sidebar .box_addtorrent span:last-child,
+#gazelles .thin >h2:first-child +.box.pad table td[colspan="4"] {
     display: block;}
 
 #stats_seeding:hover:active,
@@ -1233,12 +1240,26 @@ strong.important_text,
     left: 0;
     right: 0;
     margin: auto;}
+table.gazelles_art_display .hovereffect:before,
 .lightbox img,
 .fancybox-image {
     border: var(--p-img-brdr);
     background-size: 16px 16px;
     background-repeat: repeat;
     background-position: top left;}
+table.gazelles_art_display .hovereffect {
+    position: relative;}
+table.gazelles_art_display .hovereffect:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    border: none;}
+table.gazelles_art_display .hovereffect:hover:before {
+    opacity: 1;}
 .alertable-overlay,
 .fancybox-bg,
 .curtain {
@@ -2015,7 +2036,8 @@ textarea,
 #collections #coverart.box a div,
 #collections #coverart.box >ul:not(.hidden),
 #wiki .center.thin >.box.pad,
-.inventory .trash_icon {
+.inventory .trash_icon,
+.gazelles_art_display {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -2289,7 +2311,10 @@ tr.likes td[id^="likers_"] >strong,
     justify-content: space-between;
     flex-flow: wrap;}
 .box_tags .stats.nobullet {
+    margin-top: 0;
     line-height: 26px;}
+.box_tags .head {
+    margin-bottom: 10px;}
 .box_tags .stats.nobullet li {
     margin-bottom: 2px;}
 #upload td#image_block a,
@@ -2461,7 +2486,8 @@ body:not(#upload) #artist_tr + tr td.label,
 #collections #torrent_table .group.discog td[colspan="5"] >strong,
 #collections table#new_collage td.label strong,
 #user .thin >h2:first-child +.center ~table.border .colhead strong,
-#top10 td.center.cats_col +td >strong {
+#top10 td.center.cats_col +td >strong,
+#log table#log_table .colhead strong {
     font-weight: normal;}
 
 .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
@@ -2586,7 +2612,10 @@ input.hidden,
 .thin.top10_uploaders >.content_basiccontainer,
 .thin.forum_latest .search.box.pad form >br,
 #blog .thin >div.box +br,
-#gazelleview >br {
+#gazelleview >br,
+#gazelles .thin >h2:first-child +.box.pad table tr:first-child td:first-child,
+#user .thin >h3:first-child +.linkbox +form td.label.nobr,
+#log .thin form.search_form td.label {
     display: none;}
 
 .similar {
@@ -2773,7 +2802,9 @@ li:not(.suggested_similar) .similar_votes >span {
 #collections table#new_collage input#art +input[type="button"],
 .thin.torrent_history >form#torrent_history_search input[type="submit"],
 .box.pad.box_add_freeleech input[type="submit"],
-.box.pad.box_add_buff input[type="submit"] {
+.box.pad.box_add_buff input[type="submit"],
+#user .thin >h3:first-child +.linkbox +form input[type="submit"],
+#log .thin form.search_form input[type="submit"] {
     vertical-align: bottom;}
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
@@ -2971,6 +3002,7 @@ a[href^="javascript:Vote("] strong:hover,
 #quickreplybuttons input {
     margin: 0 5px;}
 
+#user .thin >h3:first-child,
 h2 {
     padding: 0;
     margin: 0 0 0 10px;
@@ -2991,6 +3023,7 @@ h3 {
 
 .rowa,
 .row_a,
+#user .thin >h3:first-child +.linkbox +form ~.box.pad.center tr:not(.colhead):nth-child(odd),
 #clan_stats >div:not(.clan_stat_totals) tr:not(.colhead):nth-child(odd),
 #collages tr:not(.colhead):nth-child(odd),
 #searchbars input:focus,
@@ -3014,6 +3047,8 @@ h3 {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
+#user .thin >h3:first-child +.linkbox +form ~.box.pad.center tr:not(.colhead):nth-child(even),
+#torrents .thin >.header +table tr.rowa:nth-child(even), /* (view log) hisotry for game */
 #clan_stats >div:not(.clan_stat_totals) tr:not(.colhead):nth-child(even),
 #collages tr:not(.colhead):nth-child(even),
 .userreviews tr:nth-child(even),
@@ -3037,6 +3072,7 @@ h3 {
 .row_a:hover,
 .rowb:hover,
 .row_b:hover,
+#user .thin >h3:first-child +.linkbox +form ~.box.pad.center tr:not(.colhead):hover,
 #clan_stats >div:not(.clan_stat_totals) tr:not(.colhead):hover,
 #torrents .torrent_details tr table tr:not(.colhead):not(.colhead_dark):hover,
 #collages tr:not(.colhead):hover,
@@ -3298,7 +3334,8 @@ form[name="filter"] h3,
 #wrapper #searchthread h3,
 #wrapper #searchforum h3,
 form[name="filter"] h3,
-#top10 .thin >.linkbox ~div:not(.center) >h3 {
+#top10 .thin >.linkbox ~div:not(.center) >h3,
+#wrapper .gazelles_art_display:before {
     margin: 0;
     width: calc(100% - 20px);}
 #staff .thin >.box.pad >h3:first-of-type ~h3 {
@@ -3352,7 +3389,9 @@ form[name="filter"] h3,
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2),
 .clan_stat_totals h2:first-child +.large_progress_bar,
 #artist .thin h2:first-child +table.border,
-table.gazellepic {
+table.gazellepic,
+#gazelles .thin >h2:first-child +.box.pad,
+#log .thin >.header +.box.pad {
     margin-top: 12px;}
 .thin.global_buffs_shop >div:first-child,
 .thin.freeleech_shop >div:first-child {
@@ -3681,6 +3720,7 @@ h2 marquee {
 #staffpm .box.vertical_space ~h3 +.box.pad,
 #gazelleview table.gazelleinfo tr:first-child td {
     padding-top: 48px;}
+#gazelles .thin >h2:first-child +.box.pad table,
 #wiki .center.thin >.box.pad input[type="text"],
 #wiki .center.thin >.box.pad textarea,
 #user input#park_message,
@@ -3699,7 +3739,8 @@ tr.likes td[id^="likers_"] >strong {
 .sidebar #polcont .pad li:not(.graph):not(:first-child),
 #upload p.min_padding,
 tr.likes td[id^="likers_"] >strong:nth-of-type(2),
-#rules .thin >form.search_form span#Index {
+#rules .thin >form.search_form span#Index,
+#gazelles .thin >h2:first-child +.box.pad table td[colspan="4"] {
     margin-top: 2px;}
 #request_form input[type="text"] {
     margin-bottom: 2px;}
@@ -3981,6 +4022,13 @@ input[type="search"],
 #inbox h2 +#messageform >.box.pad {
     padding: 48px 10px 10px 10px;
     position: relative;}
+#gazelles .thin >h2:first-child +.box.pad:before,
+.gazelles_art_display:before,
+#actual_rules:before,
+.thin.forum_latest >.search.box.pad:before,
+#requests .thin >.center.box.pad:before,
+#top10 .thin >.center:before,
+#collections .thin >h2:first-child +.center:before,
 .thin.torrent_history >form#torrent_history_search:before,
 #user .thin >h2:first-child +.center:before,
 #rules .thin >form.search_form:before,
@@ -3988,27 +4036,24 @@ input[type="search"],
 #shop_search:before,
 .box.pad.box_freeleech_info:before,
 .box.pad.box_buffs_info:before,
-#inbox .thin[xmlns] >#messageform:before {
-    text-align: left;
-    content: 'Search';
+#inbox .thin[xmlns] >#messageform:before,
+#user .thin >h3:first-child +.linkbox +form:before,
+#log .thin >.header +.box.pad:before {
     display: block;
-    margin: -10px -10px 10px -10px;
-    top: 0;
-    left: 0;
+    text-align: left;
     width: 100%;
-    height: 20px;
+    margin: -10px -10px 10px -10px;
     padding: 9px 10px;
-    z-index: 99;
     font-size: 20px;
-    font-weight: 600;
+    height: 20px;
     line-height: 20px;
-    background: var(--p-head-grdnt);}
+    background: var(--p-head-grdnt);
+    font-weight: 600;
+    content: 'Search';}
 #inbox .thin[xmlns] >#messageform:before {
     margin: 0;
     width: calc(100% - 20px);
     content: 'New message';}
-#rules .thin >form.search_form:before {
-    content: 'Filter';}
 .thin.torrent_history >form#torrent_history_search:before {
     content: 'Search by Torrent Name';}
 .box.pad.box_buffs_info:before,
@@ -4473,7 +4518,10 @@ td.center.cats_col {
 #user .thin >h2:first-child +.box.pad:last-child,
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2) +.box.pad,
 .box.pad.box_add_buff,
-#gazelleview {
+#gazelleview,
+#gazelles .thin >h2:first-child +.box.pad table td,
+#friends .thin >.box.pad,
+#log .thin form.search_form td {
     padding: 0;}
 #torrents #requests.request_table #requests_list tr:first-child td.label {
     width: auto !important;
@@ -4504,9 +4552,9 @@ td.center.cats_col {
     top: 0;
     left: 0;}
 #forums .forums_search .search_form:before {
+    position: absolute;
     text-align: left;
     content: 'Filter';
-    position: absolute;
     left: 1px;
     top: 1px;
     font-size: 20px;
@@ -4516,27 +4564,20 @@ td.center.cats_col {
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
-#actual_rules:before,
-.thin.forum_latest >.search.box.pad:before,
-#requests .thin >.center.box.pad:before,
-#top10 .thin >.center:before,
-#collections .thin >h2:first-child +.center:before {
-    text-align: left;
-    content: 'Filter';
-    display: block;
-    font-size: 20px;
-    width: 100%;
-    height: 20px;
-    margin: -10px -10px 10px -10px;
-    line-height: 20px;
-    padding: 9px 10px;
-    background: var(--p-head-grdnt);
-    font-weight: 600;}
-#top10 .thin >.center:before {
+#rules #wrapper .thin >form.search_form:before,
+#wrapper .thin.forum_latest >.search.box.pad:before,
+#requests #wrapper .thin >.center.box.pad:before,
+#collections #wrapper .thin >h2:first-child +.center:before {
+    content: 'Filter';}
+#gazelles #wrapper .thin >h2:first-child +.box.pad:before {
+    content: 'Search';}
+#wrapper .gazelles_art_display:before {
+    content: 'Gazelles';}
+#top10 #wrapper .thin >.center:before {
     content: 'Filter by tags';}
-#actual_rules:before {
+#wrapper #actual_rules:before {
     content: 'Rules';}
-#torrentbrowse .filter_torrents h3 a:before {
+#wrapper #torrentbrowse .filter_torrents h3 a:before {
     content: 'switch to ';}
 input[class="date_picker"] {
     width: 85px;}
@@ -6889,159 +6930,121 @@ body#user.inventory {}
 #gazelleview table.gazelleinfo input#newtag {
     width: 50%;}
 
-
+.gazelles_art_display {
+    display: block;}
+.gazelles_art_display tbody {
+    display: block;
+    padding: 10px 10px 0 10px;}
+.gazelles_art_display tr {
+    display: flex;
+    justify-content: space-between;}
 .gazelles_art_display td {
-    border: none;
-    padding: 2px;
-    width: 25%;}
+    padding: 0;
+    width: calc(25% - 7.5px);
+    margin-bottom: 10px;}
+
+.gazelle_art[style*="Error"] {
+    position: relative;}
+.gazelle_art[style*="Error"]:before {
+    content: 'ERROR';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: calc(50% - .5em);
+    font-size: 30px;
+    line-height: 1em;
+    height: 30px;
+    font-weight: 600;
+    color: var(--c-red);}
+#wrapper .gazelle_art[style*="Error: Maybe that link was bad or missing_thumb."]:before {
+    top: calc(50% - 22px);}
+.gazelle_art[style*="Maybe that link was bad or missing_thumb."]:after {
+    content: 'Maybe that link was bad or missing_thumb.';
+    color: var(--c-txt);
+    font-size: 14px;
+    line-height: 14px;
+    top: calc(50% + 8px);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    font-weight: 600;}
+
+#gazelles .thin >h2:first-child +.box.pad table input[type="text"] {
+    width: 100%;}
+#gazelles .thin >h2:first-child +.box.pad table td[style="width:10%;"] {
+    text-align: right;}
+#gazelles .thin >h2:first-child +.box.pad table input[type="submit"] {
+    float: right;}
+
 
 .gazelles_art_display .gazelle_art {
     height: 180px;
-    background-size: 100% 180px;
-    background-color: white;}
-
+    background-repeat: no-repeat;
+    background-position: center;}
 #gazelleview .gazellepic img {
     display: block;
     margin: 0 auto;
-    width: 100%;}
+    width: auto;
+    max-width: 100%;}
 
 /*****************************************
 *************NOTIFICATIONS****************
 *****************************************/
 
-#user td.label {
-     width: 150px;
-     background-color: var(--label);
-     border-collapse: collapse;
-     padding-left: 5px;
-     vertical-align: middle;}
-
-#user .min_padding {
-     margin: 0;
-     padding: 0;}
-
-#user input[name="label"] {
-     width:70% !important;}
-
-#user input[name="clear"] {
-     height: 22px !important;
-     width: 50px;
-     vertical-align:center;
-     padding: 0px;}
-
-#user input[name="censor"] {
-     height: 22px !important;
-     vertical-align:center;
-     padding: 0px;}
-
-#user .center {
-     padding: 25px 0px 10px;
-     text-decoration: underline;
-     text-align: left;}
-
-#user .center input[type="submit"] {
-     text-decoration: none;
-     display:inline-block;}
 
 /*****************************************
 *****************INBOX********************
 *****************************************/
-#inbox table {
-     border-collapse:collapse;}
 
-#inbox .colhead, #inbox .head {
-     font-size: 1em;}
-
-#inbox .rowa td a,
-#inbox .rowb td a {
-     font-weight:normal !important;
-     color: var(--white);
-     padding: 5px 0px;}
-
-#inbox .head a {
-     font-size: 1em;}
-
-#inbox table td[width="40%"] {
-     width:60% !important;}
-
-#inbox .time {
-     font-size: .8em;
-     white-space: nowrap;}
-
-#inbox td {
-     padding: 10px 3px;}
-
-#inbox tr.unreadpm td,
-#inbox tr.unreadpm td a {
-     color: var(--darkGreen);
-     font-weight: bold;}
-
-#inbox blockquote {
-     margin: 10px;
-     box-shadow: 2px 2px 5px var(--black);}
-
-#inbox #searchbox div {
-     height: 30px;}
-
-#inbox textarea {
-     margin: 10px auto;
-     width:100%;}
-
-#messageform textarea {
-     width: 90%;}
-
-#inbox .comp td {
-     padding: 0;}
-
-#inbox .userclasses {
-     float: left;
-     width: 25%;}
 
 /*****************************************
 *****************LOG**********************
 *****************************************/
+
+#log .thin form.search_form input[type="search"] {
+    width: calc(100% - 101px);}
+
 td .log_blue {
-     color: #3CF;}
-
+     color: var(--c-blue);}
 td .log_red {
-     color: #bf6a6a;}
-
+     color: var(--c-red);}
 td .log_green {
-     color: #69c077;}
+     color: var(--c-on);}
 
 /*****************************************
 ****************FRIENDS*******************
 *****************************************/
-#friends .colhead {
-     font-size: 1em;}
-
+#friends .colhead a.username {
+    font-weight: bold;}
+#friends td.col_avatar.avatar {
+    width: 150px;}
+#friends td.left {
+    width: 100px;}
 #friends input[type=submit] {
-     margin: 3px;}
-
+     margin: 3px 3px 5px 3px;}
+#friends textarea[name="comment"] {
+    margin-top: 5px;}
 #friends h2.center {
      text-align:left;}
 
 /*****************************************
 **************USER SEARCH*****************
 *****************************************/
-#user .layout {
-     margin-top: 10px;}
-
-#user .layout td {
-     padding: 2px;}
-
-#user .layout input {
-     padding: 2px;}
+#user .thin >h3:first-child +.linkbox +form td {
+    padding: 0;}
+#user .thin >h3:first-child +.linkbox +form input[type="text"] {
+    width: calc(100% - 117px);}
+#user .thin >h3:first-child +.linkbox +form ~.box.pad.center {
+    width: fit-content;
+    padding: 0;
+    margin: 0 auto;}
 
 #user .layout ul {
      padding-left: 5px;
      list-style:none;}
 
-#user .center {
-     text-decoration: none;}
 
-#user .box .colhead {
-     font-size: 1em;}
 
 /*****************************************
 **************USER POSTS******************
