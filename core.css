@@ -755,7 +755,10 @@ form[name="filter"],
 .freeleech_shop_main .box,
 .freeleech_shop_main table,
 .global_buffs_shop_main .box,
-.global_buffs_shop_main table {
+.global_buffs_shop_main table,
+#blog .thin >div.box,
+table.gazellepic,
+table.gazelleinfo {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -1189,7 +1192,8 @@ strong.important_text,
 .wiki_article span[style*="red;"],
 .item_description span[style*="red;"],
 .info_description span[style*="red;"],
-#user .thin >h2:first-child +.center ~table.border span[style*="red;"] {
+#user .thin >h2:first-child +.center ~table.border span[style*="red;"],
+#reportsv2 #dynamic_form >table.border td.label [color="red"] {
     color: var(--c-red) !important;}
 #index span[style="color: orange;"] {
     color: var(--c-orange) !important;
@@ -1408,7 +1412,8 @@ input[type="number"],
 #user .thin >h2:first-child +form[method="post"],
 #collections table.collections_art_display,
 td.center.cats_col +td,
-.forum_post span.user_title {
+.forum_post span.user_title,
+#gazelleview table.gazelleinfo {
     position: relative;}
 .sidebar #freeleech_time_left #progress_bar .main_bar {
     background: var(--p-lsfl-pulse);
@@ -1997,6 +2002,7 @@ textarea,
 #upload #content >div[style="margin:0px auto;width:700px"],
 #forums .linkbox.linkbox_bottom +br +h3,
 .forum_post td.body iframe,
+#blog .pad iframe,
 .box.news_post >.pad iframe,
 #reports .thin >h3,
 #reportsv2 #report_table >h3,
@@ -2578,7 +2584,9 @@ input.hidden,
 #top10 .thin >.center td.label,
 .thin.top10_tags br,
 .thin.top10_uploaders >.content_basiccontainer,
-.thin.forum_latest .search.box.pad form >br {
+.thin.forum_latest .search.box.pad form >br,
+#blog .thin >div.box +br,
+#gazelleview >br {
     display: none;}
 
 .similar {
@@ -3188,6 +3196,7 @@ img[src="static/common/thumbsup.png"],
     margin-bottom: -4px;}
 
 /** table padding with no container (this is horrible) **/
+#gazelleview table.gazelleinfo tr td:first-child,
 #todo .thin >form tr:not(.colhead) td:first-child,
 #forums .forums_search .search_form >table.layout.border >tbody >tr >td:first-child,
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:first-child,
@@ -3199,6 +3208,7 @@ img[src="static/common/thumbsup.png"],
 .thin >#request_form >table td:first-child,
 #requests .main_column >table:first-child td:first-child {
     padding-left: 10px;}
+#gazelleview table.gazelleinfo tr td:last-child,
 #todo .thin >form tr:not(.colhead) td:last-child,
 #forums .forums_search .search_form >table.layout.border >tbody >tr >td:last-child,
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:last-child,
@@ -3220,6 +3230,7 @@ img[src="static/common/thumbsup.png"],
 #upload #torrent_properties tr:nth-child(2) td,
 .thin >#request_form >table tr:nth-child(2) td {
     padding-top: 10px;}
+#gazelleview table.gazelleinfo tr:last-child td,
 #todo .thin >form tr:last-child td,
 #forums .forums_search .search_form >table.layout.border >tbody >tr:last-child >td,
 #user .thin >h2 +form#userform >table.border tr:last-child td,
@@ -3241,6 +3252,7 @@ img[src="static/common/thumbsup.png"],
     padding-top: 13px;}
 
 /** convert ... to head **/
+#gazelleview #titlerow p,
 #items_navigation h3,
 #wrapper #searchthread h3,
 #wrapper #searchforum h3,
@@ -3282,6 +3294,7 @@ form[name="filter"] h3,
     margin: 15px 0 0 0;}
 #staff .thin >.box.pad >h3:first-of-type {
     margin: -10px -10px 0 -10px;}
+#gazelleview #titlerow p,
 #wrapper #searchthread h3,
 #wrapper #searchforum h3,
 form[name="filter"] h3,
@@ -3338,7 +3351,8 @@ form[name="filter"] h3,
 #user .thin >h2:first-child +.box.pad:last-child,
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2),
 .clan_stat_totals h2:first-child +.large_progress_bar,
-#artist .thin h2:first-child +table.border {
+#artist .thin h2:first-child +table.border,
+table.gazellepic {
     margin-top: 12px;}
 .thin.global_buffs_shop >div:first-child,
 .thin.freeleech_shop >div:first-child {
@@ -3540,6 +3554,7 @@ div.breadcrumbs,
     padding-top: 6px;
     padding-bottom: 6px;}
 
+#gazelleview #torrent_comments >h1:first-child,
 .avatar .forumstat >strong:first-child,
 .avatar .forumstat >br:first-of-type {
     display: none;}
@@ -3663,7 +3678,8 @@ h2 marquee {
 #reports .thin >.box.pad,
 #forums #reply_box .box.pad,
 #user .thin >h2 ~form[method="post"],
-#staffpm .box.vertical_space ~h3 +.box.pad {
+#staffpm .box.vertical_space ~h3 +.box.pad,
+#gazelleview table.gazelleinfo tr:first-child td {
     padding-top: 48px;}
 #wiki .center.thin >.box.pad input[type="text"],
 #wiki .center.thin >.box.pad textarea,
@@ -3775,6 +3791,8 @@ span.size10 {
 .forum_post td.body iframe,
 .box.news_post >.pad iframe,
 #wiki .wiki_article a img,
+#blog .pad img,
+#blog .pad iframe,
 .forum_post td.body img,
 .box.news_post >.pad img {
     max-width: calc(100% - 10px) !important;
@@ -3783,6 +3801,7 @@ span.size10 {
     margin: 0 5px;
     padding: 5px;}
 #wiki .wiki_article a img,
+#blog .pad img,
 .forum_post td.body img,
 .box.news_post >.pad img {
     max-width: 100% !important;
@@ -3798,11 +3817,11 @@ span.size10 {
 .twitter-tweet {
     margin: 0 !important;}
 /* twitter align test */
-.body div[style="text-align:center;"] >.twitter_post {
+div[style="text-align:center;"] >.twitter_post {
     margin: 0 auto !important;}
-.body div[style="text-align:left;"] >.twitter_post {
+div[style="text-align:left;"] >.twitter_post {
     margin: 0 auto 0 5px !important;}
-.body div[style="text-align:right;"] >.twitter_post {
+div[style="text-align:right;"] >.twitter_post {
     margin: 0 5px 0 auto !important;}
 
 ul#noty_bottomRight_layout_container.i-am-new li {
@@ -4133,6 +4152,8 @@ input[type="search"],
 #requests .main_column >table:first-child {
     width: calc(100% - 1px);}
 
+#gazelleview table.gazelleinfo:before,
+#collections table.collections_art_display:before,
 #requests .main_column >table:first-child:before { /* also pseudo head */
     content: 'Details';
     width: calc(100% - 21px);
@@ -4147,20 +4168,10 @@ input[type="search"],
     background: var(--p-head-grdnt);
     border-top: var(--p-main-brdr);
     border-right: var(--p-main-brdr);}
-#collections table.collections_art_display:before { /* also pseudo head */
-    content: 'Collections';
-    width: calc(100% - 21px);
-    position: absolute;
-    top: 0;
-    left: 1px;
-    height: 20px;
-    line-height: 20px;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 9px 10px;
-    background: var(--p-head-grdnt);
-    border-top: var(--p-main-brdr);
-    border-right: var(--p-main-brdr);}
+#collections table.collections_art_display:before {
+    content: 'Collections';}
+#gazelleview table.gazelleinfo:before {
+    content: 'Info';}
 /** /Chromium table border rendering bug workaround **/
 
 /** horrible acrobatics because of lack of containers **/
@@ -4461,7 +4472,8 @@ td.center.cats_col {
 .thin.torrent_history >form#torrent_history_search td,
 #user .thin >h2:first-child +.box.pad:last-child,
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2) +.box.pad,
-.box.pad.box_add_buff {
+.box.pad.box_add_buff,
+#gazelleview {
     padding: 0;}
 #torrents #requests.request_table #requests_list tr:first-child td.label {
     width: auto !important;
@@ -4592,6 +4604,7 @@ input[class="date_picker"] {
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table td.label {
     width: 180px;}
 
+#gazelleview table.gazelleinfo td#tags input[type="submit"],
 #top10 .thin >.center tr:first-child td:last-child,
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="text"]:not(:first-child),
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="button"]:not(:first-child),
@@ -6552,64 +6565,6 @@ body#user.inventory {}
 #css_gallery {
 	overflow-y: scroll;}
 
-/*** Snatch List Page ***/
-/* #snatched_table tr:nth-of-type(odd) td {
-	background-color: var(--rowa);}
-
-#snatched_table tr:nth-of-type(even) td {
-	background-color: var(--rowb);}
-
-#snatched_table tr.colhead td {
-	background-color: inherit;} */
-
-/*** Gold Generation Box ***/
-/* .box_gold td {
-	text-align: center;
-	padding: 10px 5px;}
-
-.box_gold .colhead td.label {
-	background-color: inherit;}
-
-.box_gold .colhead {
-	border-radius: 0px;}
-
-.box_gold .colhead td {
-	padding: 5px;}
-
-.box_gold table {
-	width: 280px;
-	height: 176px;
-	position: relative;
-	overflow-x: hidden;
-	display: block;}
-
-.box_gold tr.total td {
-	border-top: 1px solid var(--lightBlue);}
-
-.box_gold tr.total td.label {
-	border-top: none;}
-
-#user .thin .box_gold table td {
-	display: table-cell !important;}
-
-#user .box_gold td.label {
-	box-shadow: none; max-width: 100px;
-	width: 100%;
-	background-color: var(--label)} */
-
-/*** Edit Profile ***/
-/* #userform td.right {
-	text-align: left;}
-
-#styleurl {
-	width: 500px;} */
-
-/*** Profile Views History ***/
-/* #userhistory .rowa td, .row_a td {
-	background-color: transparent;}
-
-#userhistory tr.rowa:nth-of-type(2n) {
-	background-color: var(--rowb);}  */
 
 /* Staff Sections */
 #user_badge_edit_tr input {
@@ -6655,22 +6610,20 @@ body#user.inventory {}
 /*****************************************
 **************STAFF PAGES*****************
 *****************************************/
+/* no access */
 
 /*** Permissions Page ***/
 .permissions {
 	display: table !important;
 	width: 100%;}
-
 .permission_container {
 	float: left;
 	margin:10px;
 	padding:2px;
 	width: 22%;}
-
 .permission_container a {
 	line-height: 20px;
 	padding-left: 5px;}
-
 .permission_container .colhead {
     background: var(--darkBlue);
     margin: 0;
@@ -6680,152 +6633,36 @@ body#user.inventory {}
     text-decoration: underline;
     border-radius: 0px;
     width: 200px;}
-
 #permform .submit_container {
 	clear: both;}
 
 /*** Staff PMs ***/
-#staffpm table {
-	width: 100%;}
 
-#staffpm .linkbox {
-	margin: 0;}
-
-#staffpm .header .linkbox {
-	margin: 10px 0;}
-
-#staffpm .body {
-	margin: 10px;
-	padding: 10px 0px;}
-
-#staffpm .box {
-	padding: 0px;
-	width: 100%;}
-
-#staffpm #searchbox {
-	margin: 5px;}
-
-#staffpm #inbox {
-	margin-top: -40px;}
-
-#torrents #content .notchecked {
-    background: url('../images/crossn.png') no-repeat;
-    width: 20px;
-    height: 20px;
-    /* float: center;*/}
-
+#torrents #content .notchecked:before,
+#torrents #content .checked:before {
+    content: '';
+    font-size: 15px;
+    line-height: 18px;
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;}
+#torrents #content .notchecked:before {
+    color: var(--c-off);
+    border: 2px solid var(--c-off);}
+#torrents #content .checked:before {
+    content: '✔';
+    color: var(--c-on);
+    border: 2px solid var(--c-on);}
+#torrents #content .notchecked,
 #torrents #content .checked {
-    background: url('../images/checkmark.png') no-repeat;
+    position: relative;
     width: 20px;
-    height: 20px;
-    /* float: center;*/}
+    height: 20px;}
 
-input[type=submit],
-input[type=button],
-#staffpm select {
-	margin:10px 3px;
-	padding:5px;
-	height:30px;}
-
-input[type=submit]:hover,
-input[type=button]:hover,
-button[type=button]:hover {
-	box-shadow: 3px 3px 3px black;}
-
-/*** Reports ***/
-#reports #content form,
-#reportsv2 #all_reports,
-#tms {
-	display:block;
-	padding:10px;
-	width:100%;
-	margin-top:10px;}
-
-#reports .center,
-#reportsv2 #all_reports {
-	text-align:left;}
-
-#reportsv2 .box {
-	width: 85% !important;}
-
-#reportsv2 .colhead {
-	font-size: 1em;
-	box-shadow: none;
-	border-radius: 0px;}
-
-#reportsv2 td {
-	vertical-align: top;}
-
-#reportsv2 table table tr {
-	border: var(--darkBlue2) 1px solid;}
-
-#reportsv2 table table td {
-	padding: 10px 5px;}
-
-#reportsv2 table table tr:nth-of-type(odd) {
-	background-color: var(--mediumBlue);}
-
-#reportsv2 table table tr:nth-of-type(even) {
-	background-color: var(--darkBlue);}
-
-#reportsv2 table table td:nth-of-type(2) {
-	min-width: 100px;}
-
-#reportsv2 div[style="padding:Daedy0px Daedy0px Daedy0px 20px; width: 70%; margin-left: auto; margin-right: auto"] table:nth-of-type(1) td:nth-of-type(2) table {
-	margin-top: 16px;}
-
-#reportsv2 #all_reports td {
-	padding-bottom: 20px;}
-
-#reportsv2 #all_reports td.label {
-	width:150px;
-	background-color: var(--label);
-	vertical-align: middle;}
-
-#reportsv2 #all_reports td.label select {
-	width: 110px;
-	min-width: 0px;}
-
-#reportsv2 #all_reports input[type="button"] {
-	display: inline;}
-
-#reportsv2 #all_reports tr:nth-of-type(4) span,
-#reportsv2 #all_reports tr:nth-of-type(5) span {
-	display: block;}
-
-#reportsv2 #all_reports tr:nth-of-type(4) span span:nth-of-type(1) input,
-#reportsv2 #all_reports tr:nth-of-type(5) span span:nth-of-type(1) input {
-	margin-left: 20px;}
-
-#reportsv2 #all_reports tr:nth-of-type(4) span span input,
-#reportsv2 #all_reports tr:nth-of-type(5) span span input {
-	margin-left: 15px;}
-
-#reportsv2 #all_reports tr:nth-of-type(4) span span select,
-#reportsv2 #all_reports tr:nth-of-type(5) span span select {
-	margin-left: 8px;}
-
-#reportsv2 #all_reports tr:nth-of-type(1) div strong {
-	color: #bf6a6a;}
-
-#reportsv2 #all_reports tr:nth-of-type(1) div:nth-of-type(2) {
-	padding-top: 10px;}
-
-#reportsv2 #all_reports tr:last-of-type input[type="button"] {
-	display: inline;}
-
-#reportsv2 #all_reports tr:nth-last-child(2) td:nth-of-type(3) {
-	background-color: transparent; width: 105px}
-
-#reportsv2 .buttonbox {
-	background-color: var(--darkBlue);}
-
-#reportsv2 #filters-form {
-	background-color: var(--darkBlue);}
-
-#reportsv2 .relevant_other_torrents ul {
-	margin-top: 0;
-	padding-left: 18px;}
 
 /*** TM Stats ***/
 #tms {
@@ -6833,34 +6670,23 @@ button[type=button]:hover {
 	width:98%;
 	margin:10px 0px;
 	text-align: center;}
-
 #tms .box {
 	background:none;}
-
 #tm_time {
-	background-color:#1c3145;
+	background-color: var(--c-box);
 	padding:1px 3px 1px 15px;
-	background: linear-gradient(#2b4e66, #1c3145);
-	box-shadow: -3px 3px 2px #000;
-	border-radius:5px;
 	font-size:1em;
 	height: 45px;}
-
 #tm_time input[type="text"] {
 	vertical-align: middle;}
-
 #tms_form {
 	margin-top:-15px;}
-
 #tms h2, #platforms h2 {
-	display:none;}
-
+	display: none;}
 #tms td {
 	width: 20%;}
-
 #tools .thin td:first-of-type {
 	padding-left: 5px;}
-
 #todo .main_column {
 	width: 100%;}
 
@@ -6869,131 +6695,102 @@ button[type=button]:hover {
 	width: auto;
 	margin:0;
 	padding:0;
-	background:none;
 	box-shadow: none;}
 
 /*** User Apps ***/
 #tools table[style="width: 960px; text-align: center;"] {
 	text-align:left !important;}
-
 #tools table[style="width: 960px; text-align: center;"] td {
 	margin: 10px 5px;
 	display: block;}
-
 #tools table[style="width: 960px; text-align: center;"] .colhead td {
 	margin: 0; display: inline-block;}
-
 #tools table[style="width: 960px; text-align: center;"] .colhead td[style="height: 30px;"] {
 	height: auto !important;}
-
 #tools table[style="width: 960px; text-align: center;"] textarea {
 	width: 90% !important;
 	margin-top: 10px;}
-
 #tools .user_applications table .colhead:nth-of-type(1) {
 	width: 100%;
 	margin: 0 0 10px 0;
 	padding: 0;
 	box-shadow: none;
 	border-radius: 0px;}
-
 #tools .user_applications table .colhead:nth-of-type(2) {
 	display: none;}
-
 #tools .user_applications table tr {
 	width: 49%;
 	float: left;
 	display: block;}
-
 #tools .user_applications .rowa {
 	margin-right: 1%;}
-
 #tools .user_applications .rowa,
 #tools .user_applications .rowb {
-	 height: auto;
-	 filter: drop-shadow(3px 3px 3px var(--black));}
-
+	 height: auto;}
 #tools .user_applications .rowa:hover td,
-#tools .user_applications .rowb:hover td {
-	background-color: var(--mediumBlue);}
-
+#tools .user_applications .rowb:hover td {}
 #tools .user_applications .rowa:hover input,
-#tools .user_applications .rowb:hover input {
-	background-color: var(--darkBlue);}
-
+#tools .user_applications .rowb:hover input {}
 #tools .user_applications table td {
 	display: block;
 	padding: 10px 10px;
-	height: 30px;
-	background-color: var(--rowb);}
-
-#tools .thin.user_applications tr.colhead:hover td {
-	background-color: var(--rowb);}
-
+	height: 30px;}
+#tools .thin.user_applications tr.colhead:hover td {}
 #tools .user_applications table td:nth-of-type(2):before {
 	content: "Email: ";
 	display: block;
 	font-weight: bold;}
-
 #tools .user_applications table .colhead:nth-of-type(1) td:nth-of-type(2):before {content:"";}
-
 #tools .user_applications table td:nth-of-type(3):before {
 	content: "Origin: ";
 	display: block;
 	font-weight: bold;}
-
 #tools .user_applications table td:nth-of-type(4):before {
 	content: "Referer: ";
 	display: block;
 	font-weight: bold;}
-
 #tools .user_applications table td:nth-of-type(5) {
 	height: 60px;}
-
 #tools .user_applications table td:nth-of-type(5):before {
 	content: "What can you contribute?: ";
 	display: block;
 	font-weight: bold;}
-
 #tools .user_applications table td:nth-of-type(6):before {
 	content: "IP: "; display: block; font-weight: bold;}
-
 #tools .user_applications table td:nth-of-type(7):before {
 	content: "When Applied: ";
 	display: block;
 	font-weight: bold;}
-
 #tools .user_applications table td.center {
 	text-align: left;
 	margin-bottom: 20px;}
-
 #tools .user_applications input[type="button"] {
 	margin: 5px 0px;}
 
 /*** Staff Notes on User Profiles ***/
 #staffnotes {
-	background-color: var(--mediumBlue)}
+    background-color: var(--c-box);}
 
 /*** Gazelle manager ***/
 #gazelle_images td img {
 	width: 150px;
 	height: auto;}
-
 #gazelle_images .box td img {
 	width: 150px;
 	height: auto;}
-
-#gazelles td.body {
-	padding: 5px 10px;}
 
 /*****************************************
 ******************BLOG********************
 *****************************************/
 #blog .head {
-	font-size: 1em;}
-
+    font-size: 14px;
+    display: flex;}
 #blog .head strong {
-	font-size:1.2em;}
+    font-size: 20px;
+    margin-right: 5px;}
+#blog .head span.time {
+    order: 99;
+    margin-left: 5px;}
 
 /*****************************************
 ***************ITEM CREATOR***************
@@ -7001,25 +6798,20 @@ button[type=button]:hover {
 #book_contents,
 #packadvanced {
 	width: 99%;}
-
 #book_excerpt {
 	width: 500px;
 	height: 100px;
 	margin-bottom: 15px;}
-
 #user #itemsdiv img {
 	max-width: 150px;
 	float: left;
 	padding: 5px;}
-
 #user #itemsdiv div[style="text-align:center;"],
 #user #itemsdiv span[style="text-decoration: underline;"],
 #user #itemsdiv p {
 	display: none;}
-
 .select2-search__field {
 	height: 30px;}
-
 .equipment_manager #equip_slots {
 	height: 200px;}
 
@@ -7028,24 +6820,666 @@ button[type=button]:hover {
 **********************************************/
 #attack_edit_form .label {
 	width: 150px;}
-
 #attack_edit_form tr.colhead > td {
 	padding: 5px 0px 5px 0px;}
-
 #attack_edit_form tbody > tr:first-child:not(.colhead) > td {
 	padding-top: 0.5em;}
-
 #attack_edit_form tbody > tr:last-child:not(.colhead) > td:not(#submit_col) {
 	padding-bottom: 1em;}
-
 #monster_edit_form .wide_text {
 	width: 99%;}
-
 #monster_edit_form tr.colhead > td {
 	padding: 5px 0px 5px 0px;}
-
 #monster_edit_form tbody > tr:first-child:not(.colhead) > td {
 	padding-top: 0.5em;}
-
 #monster_edit_form tbody > tr:last-child:not(.colhead) > td:not(#submit_col) {
 	padding-bottom: 1em;}
+
+
+
+
+
+
+/*****************************************
+*********NOTIFICATIONS PAGES**************
+*****************************************/
+
+
+/*****************************************
+****************STATS*********************
+*****************************************/
+
+/*****************************************
+****************TOP 10********************
+*****************************************/
+
+
+/*****************************************
+**************BOOKMARKS*******************
+*****************************************/
+
+#bookmarks .stats li:nth-of-type(1) {
+     overflow-x: hidden;
+     text-indent: -62px;}
+#bookmarks .stats li:nth-of-type(1):after {
+     content: " Torrents";}
+#bookmarks .stats li:nth-of-type(2) {
+     overflow-x: hidden;
+     text-indent: -48px;}
+#bookmarks .stats li:nth-of-type(2):after {
+     content: " Platforms";}
+
+/*****************************************
+*************GAZELLE VIEWER***************
+*****************************************/
+#gazelleview #titlerow td:first-child {
+    padding: 0;}
+#gazelleview #imgrow td:first-child {
+    padding: 10px;}
+#gazelleview table.gazelleinfo tr td:first-child {
+    width: 40%;}
+#gazelleview table.gazelleinfo td#tags form {
+    position: absolute;
+    top: 49px;
+    right: 10px;
+    text-align: right;
+    width: 60%;}
+#gazelleview table.gazelleinfo td#tags input {
+    vertical-align: top;}
+#gazelleview table.gazelleinfo input#newtag {
+    width: 50%;}
+
+
+.gazelles_art_display td {
+    border: none;
+    padding: 2px;
+    width: 25%;}
+
+.gazelles_art_display .gazelle_art {
+    height: 180px;
+    background-size: 100% 180px;
+    background-color: white;}
+
+#gazelleview .gazellepic img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;}
+
+/*****************************************
+*************NOTIFICATIONS****************
+*****************************************/
+
+#user td.label {
+     width: 150px;
+     background-color: var(--label);
+     border-collapse: collapse;
+     padding-left: 5px;
+     vertical-align: middle;}
+
+#user .min_padding {
+     margin: 0;
+     padding: 0;}
+
+#user input[name="label"] {
+     width:70% !important;}
+
+#user input[name="clear"] {
+     height: 22px !important;
+     width: 50px;
+     vertical-align:center;
+     padding: 0px;}
+
+#user input[name="censor"] {
+     height: 22px !important;
+     vertical-align:center;
+     padding: 0px;}
+
+#user .center {
+     padding: 25px 0px 10px;
+     text-decoration: underline;
+     text-align: left;}
+
+#user .center input[type="submit"] {
+     text-decoration: none;
+     display:inline-block;}
+
+/*****************************************
+*****************INBOX********************
+*****************************************/
+#inbox table {
+     border-collapse:collapse;}
+
+#inbox .colhead, #inbox .head {
+     font-size: 1em;}
+
+#inbox .rowa td a,
+#inbox .rowb td a {
+     font-weight:normal !important;
+     color: var(--white);
+     padding: 5px 0px;}
+
+#inbox .head a {
+     font-size: 1em;}
+
+#inbox table td[width="40%"] {
+     width:60% !important;}
+
+#inbox .time {
+     font-size: .8em;
+     white-space: nowrap;}
+
+#inbox td {
+     padding: 10px 3px;}
+
+#inbox tr.unreadpm td,
+#inbox tr.unreadpm td a {
+     color: var(--darkGreen);
+     font-weight: bold;}
+
+#inbox blockquote {
+     margin: 10px;
+     box-shadow: 2px 2px 5px var(--black);}
+
+#inbox #searchbox div {
+     height: 30px;}
+
+#inbox textarea {
+     margin: 10px auto;
+     width:100%;}
+
+#messageform textarea {
+     width: 90%;}
+
+#inbox .comp td {
+     padding: 0;}
+
+#inbox .userclasses {
+     float: left;
+     width: 25%;}
+
+/*****************************************
+*****************LOG**********************
+*****************************************/
+td .log_blue {
+     color: #3CF;}
+
+td .log_red {
+     color: #bf6a6a;}
+
+td .log_green {
+     color: #69c077;}
+
+/*****************************************
+****************FRIENDS*******************
+*****************************************/
+#friends .colhead {
+     font-size: 1em;}
+
+#friends input[type=submit] {
+     margin: 3px;}
+
+#friends h2.center {
+     text-align:left;}
+
+/*****************************************
+**************USER SEARCH*****************
+*****************************************/
+#user .layout {
+     margin-top: 10px;}
+
+#user .layout td {
+     padding: 2px;}
+
+#user .layout input {
+     padding: 2px;}
+
+#user .layout ul {
+     padding-left: 5px;
+     list-style:none;}
+
+#user .center {
+     text-decoration: none;}
+
+#user .box .colhead {
+     font-size: 1em;}
+
+/*****************************************
+**************USER POSTS******************
+*****************************************/
+
+#userhistory #content .thin table {
+     width: 100%;}
+
+#userhistory .thin td {
+     border: none;}
+
+#userhistory table {
+     border-collapse: collapse;}
+
+#userhistory td[style="width:7%;"],
+#userhistory td[style="width:14%;"] {
+     text-align: center !important;}
+
+#userhistory #content .box table td {
+     background-color: var(--rowb);
+     border: none;}
+
+#userhistory #content .box table td.label {
+     background-color: var(--rowa);
+     border: none;}
+
+#userhistory #content #otherop td {						/* Latest Posts box with subforum selections */
+	text-align:left;
+	background-color: var(--rowa);}
+
+#userhistory #content #forumlist td {
+	text-align:left;
+	background-color: var(--rowa);}
+
+#userhistory table.forum_unread {
+     border: solid var(--mediumBlue) 4px !important;
+     border-collapse: inherit;}
+
+#userhistory td.body {
+     text-align:left;
+     width: 100%;}
+
+#userhistory td {
+	border: none;
+	text-align:left;}
+
+#userhistory h3 {
+     padding: 0px;
+     border-bottom: 1px var(--lightBlue) solid;
+     border-color: rgba(198,230,246,.3);
+     margin-left: 5px;
+     color: var(--lightBlue);}
+
+#userhistory h3:first-child{
+     margin: 0 0 15px 0}
+
+#userhistory h4 {
+     text-align: left;}
+
+#userhistory #content .thin h4 a {
+	color: var(--white);
+	border-bottom: none;}
+
+#userhistory #content tbody td {
+	color: var(--white);
+	border-bottom: none;}
+
+#userhistory td.body {
+     padding:10px;}
+
+#userhistory td.avatar {
+	background-color: var(--lightBlue);
+	box-shadow: 0px 0px 10px var(--black);}
+
+#userhistory td.avatar img {
+     margin-top: 10px;}
+
+#userhistory table.border .cat_list{
+     width:80%}
+
+#userhistory table.border .cat_list td{
+	width:20%;
+	padding:0 !important;
+	border:0 !important}
+
+#userhistory #content .thin td.read {
+	background-image:url("../images/balloon.png");
+	background-position:50%;
+	background-repeat:no-repeat;
+	height:18px;
+	width:18px;}
+
+#userhistory #content .thin td.unread{
+	background-image: url('../images/balloon-unread.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width:18px;
+	height:18px}
+
+#userhistory #content .thin td.read_sticky{
+	background-image: url('../images/sticky.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width:18px;
+	height:18px}
+
+#userhistory #content .thin td.unread_sticky{
+	background-image:url('../images/sticky-unread.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width:18px;
+	height:18px}
+
+#userhistory #content .thin td.read_locked{
+	background-image:url('../images/lock.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width:18px;
+	height:18px}
+
+#userhistory #content .thin td.unread_locked{
+	background-image:url('../images/lock-unread.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width:18px;
+	height:18px}
+
+#userhistory #content .thin td.read_locked_sticky{
+	background-image:url('../images/lock-sticky.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width:18px;
+	height:18px}
+
+#userhistory #content .thin td.unread_locked_sticky{
+	background-image: url('../images/lock-sticky-unread.png');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	width:18px;
+	height:18px}
+
+#userhistory td.body {
+     background-color: transparent;}
+
+#userhistory table.border td {
+     text-align:left;}
+
+#userhistory #content .forum_post ul {
+     margin:0 0 -5px 20px;}
+
+#userhistory #content .search {
+	margin: 20px auto;
+	width: 865px;
+	display: block;}
+
+#userhistory #content .search #otherop {
+	margin-bottom: -3px;}
+
+#userhistory #content .search table {
+	border: 2px solid #003;
+	margin-bottom: 6px;}
+
+#userhistory #content .search table td {
+	border: solid #003 1px;}
+
+#userhistory #content .search table tr {
+	background-color: var(--mediumBlue);}
+
+#userhistory #content .search table tr td.label {
+	background-color: var(--mediumBlue);
+     opacity: 0.1}
+
+#userhistory #content .search .submit {
+	text-align: right;
+	margin-right: 5px;}
+
+#userhistory #content .sub {
+	height: 1px;
+	left: 60px;
+	overflow: visible;
+	position: relative;
+	top: 27px;
+	visibility: hidden;
+	width: 10%;}
+
+#userhistory #content .sub span{
+	background: url("../images/ColHeadGrad.png") repeat-x scroll 0 50% transparent;
+	border: 1px solid #003;
+	display: block;
+	padding: 5px;}
+
+#userhistory #content .sub a {
+	color: var(--white);}
+
+#userhistory #content table tr.colhead td {
+     text-align:left;}
+
+#userhistory .forum_index span a[href*="forums.php"] {
+     padding-left:5px;}
+
+#userhistory .colhead_dark .time,
+#userhistory .colhead_dark a[href*="#quickpost"],
+#userhistory .colhead_dark a[href*="#post"],
+#userhistory .colhead_dark span[id*="bar"] {
+     font-size:.8em;}
+
+#userhistory .colhead_dark span[id*="bar"] {
+     margin-top: 3px;
+     padding-right: 5px;}
+
+#userhistory .colhead_dark span .time {
+     padding-right: 0px;}
+
+#userhistory .box {
+	background:none;
+	background-color: var(--darkBlue);}
+
+#userhistory #content tbody #cat_list td a {
+     margin:5px;}
+
+/*Puts a shadow around forum images and youtube links but not smileys*/
+#userhistory .forum_post td.body img,
+#userhistory .forum_post td.body iframe {
+    margin: 5px;
+    filter: drop-shadow(0px 0px 20px var(--black));
+	-webkit-filter: drop-shadow(0px 0px 20px var(--black));}
+
+#userhistory .forum_post td.body img[src*="../static/common/smileys/"] {
+     margin:0px !important;
+     box-shadow: 0px 0px 0px !important;}
+
+/*Hack to make the category list on latest posts hide until clicked*/
+#userhistory #content .search .hidden {
+     display: block;}
+
+#userhistory #content .sub {
+    height: 1px;
+    left: 60px;
+    overflow: visible;
+    position: relative;
+    top: 47px;
+    visibility: hidden;
+    width: 15%;}
+
+#userhistory #content .sub span {
+    background-color: var(--mediumBlue);
+    border-bottom: 1px solid var(--darkBlue2);
+    display: block;
+    padding: 5px;}
+
+#userhistory h2.center {
+     text-align:left;}
+
+/************************************************************************
+Makes the cover image on hover larger + drop shadow
+for NeutronNoir's script.  See
+https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=334463#post334463
+and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
+*************************************************************************/
+
+#cover_container>img {
+	filter: drop-shadow(5px 5px 5px var(--black));
+	height: auto !important;
+	width: 400px !important;
+	max-width: 400px !important;
+	max-height: 600px !important;}
+
+/*****************************************
+*************ACHIEVEMENTS*****************
+*****************************************/
+.flright {
+	float: right;}
+
+.flleft {
+	float: left;}
+
+.levelcont img {
+	padding-top: 10px;}
+
+#achievements .colhead  {
+	background: linear-gradient(var(--mediumBlue), var(--darkBlue));
+	height:50px;}
+
+#achievements tr {
+	background: none;
+	border-bottom: var(--mediumBlue) 1px solid;
+	margin:5px 0;}
+
+#achievements td {
+    border: none;
+    vertical-align: middle;
+    text-align: center;}
+
+#achievements td.achlabel {
+    text-align: left;
+    padding-left: 15px;}
+
+#achievements td .italic {
+	font-size: 10px;
+	font-style: italic;
+	font-weight: normal;}
+
+#achievements {
+	border-collapse:collapse;}
+
+#user .linkbox {
+	width: auto;
+	color: var(--white);}
+
+#achievements td .levelcont .complete {
+    display: inline-block;
+	margin-left: -5px;
+    background-image: URL('../images/usercheck.png');
+    background-size: cover;
+    height: 10px;
+    width: 10px;
+    opacity: .5;}
+
+#achievements td .levelcont .bubble {
+    display: inline-block;
+	margin-left: -5px;
+    background-image: URL('../images/userbubble.png');
+    background-size: cover;
+    height: 10px;
+    width: 10px;
+    opacity: .5;}
+
+/****************************************************
+**************** SHARE SCORE PAGE *******************
+****************************************************/
+#share_score .linkbox {
+	font-weight: bold;
+	font-size: 1.2em;}
+
+#share_score .colhead {
+	text-align: center;}
+
+#share_score_breakdown td.label {
+	height: 5.5em;}
+
+#share_score .large_progress_bar .points {
+  font-weight: bold;
+  margin-left: 48.5%;
+  padding-top: 7px;
+  text-align: center;
+  z-index: 2;
+  text-shadow:
+     -1px -1px 0 #333,
+     1px -1px 0 #333,
+     -1px 1px 0 #333,
+     1px 1px 0 #333;}
+
+#share_score .large_progress_bar .five_marker {
+       top: -17px;
+       right: 0;}
+
+#share_score .large_progress_bar .fifteen_marker {
+       top: 32px;
+       right: 0;}
+
+#share_score .large_progress_bar .main_section {
+	border-right: 2px solid var(--white);}
+
+#share_score .large_progress_bar .bonus_section {
+       border-top-right-radius: 25px;
+       border-bottom-right-radius: 25px;
+       background-color: rgba(177,232,0,0.2);
+       right: 0;}
+
+#seed_snatch_breakdown .large_progress_bar .main_bar {
+       background-color: rgb(123,255,158);
+       background-image: linear-gradient(to bottom, rgb(123,255,158), rgb(6,162,6));}
+
+#seed_time_breakdown .large_progress_bar .main_bar {
+       background-color: rgb(99, 228, 255);
+       background-image: linear-gradient(to bottom, rgb(99,228,255), rgb(0,115,150));}
+
+#seed_size_breakdown .large_progress_bar .main_bar {
+       background-color: #e8a3f0;
+       background-image: linear-gradient(to bottom, #e8a3f0, #ad23f4);}
+
+
+/****************************************************
+************** ADVENTURE CLUB TOOLS *****************
+****************************************************/
+.attacks_manager #attributes ul,
+.monsters_manager ul.inline_list,
+#adventureclub ul.inline_list {
+     padding-left: 0;}
+.attacks_manager #attributes ul li,
+.monsters_manager ul.inline_list li,
+#adventureclub ul.inline_list li {
+     list-style: none;
+     padding: 2px;
+     width: 19%;
+     display: inline-block;}
+.attacks_manager #attributes ul li input:checked + label,
+.monsters_manager ul.inline_list li input:checked + label {
+     color: yellowgreen;
+     text-decoration: underline;}
+.monsters_manager #attributes_div tr:not(:last-child) td {
+     border-bottom: 1px solid white;}
+
+#adventureclub ul.inline_list {margin-top: 0;}
+#adventureclub .linkbox {color: var(--white);}
+#adventureclub .effects_div {float: left; padding-right: 1.5em;}
+#adventureclub tr.outer_row {border: 1px solid rgba(0, 0, 0, 0.2);}
+#adventureclub tr.main_row + tr.sub_row {border-top: 1px dashed rgba(255, 255, 255, 0.1);}
+#adventureclub tr.sub_row {
+     font-size: 0.9em;
+     background-color: rgba(255, 255, 255, 0.1);}
+#adventureclub td.image_col {
+     max-width: 160px;
+     text-align: center;}
+#adventureclub td.image_col.hidden {width: 0;}
+#adventureclub td.image_col.show {width: 14%;}
+#adventureclub td.image_col img {max-height: 200px;}
+
+/****************************************************
+************ Long Term Seeding Tokens ***************
+****************************************************/
+#seedtime_tokens .large_progress_bar .last_drop {
+     top: 32px;
+     left: 0;}
+#seedtime_tokens .large_progress_bar .next_drop {
+     top: 32px;
+     right: 0;}
+#seedtime_tokens .large_progress_bar .points {
+     font-weight: bold;
+     margin-left: 48.5%;
+     padding-top: 7px;
+     text-align: center;
+     z-index: 2;
+     text-shadow:
+          -1px -1px 0 #333,
+          1px -1px 0 #333,
+          -1px 1px 0 #333,
+          1px 1px 0 #333;}
+#seedtime_tokens .large_progress_bar.month8 .main_bar {
+     background-color: rgb(99, 228, 255);
+     background-image: linear-gradient(to bottom, rgb(99,228,255), rgb(0,115,150));}
