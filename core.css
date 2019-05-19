@@ -894,7 +894,7 @@ tr.pad.hidden .linkbox a,
 .forum_post .colhead_dark div[style="float: right;"] a,
 #newthreadpreview .forum_post .colhead_dark #barpreview a,
 #userhistory .colhead_dark a img[alt="Last read post"],
-#userhistory .colhead_dark span[style="float:left;"] >a[href*="#post"]:nth-child(3) {
+#userhistory .colhead_dark span[style="float:left;"] >a[href*="#post"]:nth-of-type(2) {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -1206,7 +1206,8 @@ strong.important_text,
 .item_description span[style*="red;"],
 .info_description span[style*="red;"],
 #user .thin >h2:first-child +.center ~table.border span[style*="red;"],
-#reportsv2 #dynamic_form >table.border td.label [color="red"] {
+#reportsv2 #dynamic_form >table.border td.label [color="red"],
+#userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] {
     color: var(--c-red) !important;}
 #index span[style="color: orange;"] {
     color: var(--c-orange) !important;
@@ -2754,7 +2755,8 @@ li:not(.suggested_similar) .similar_votes >span {
 #staff .thin >.box.pad .colhead,
 #rules table.required_ratio .colhead,
 .torrent_details .torrent_table tr.pad.hidden .colhead,
-.torrent_details .torrent_table tr.pad.hidden .colhead_dark {
+.torrent_details .torrent_table tr.pad.hidden .colhead_dark,
+#achievements .colhead {
     background: var(--p-subcolhead);}
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
@@ -4300,6 +4302,14 @@ input[type="search"],
     margin-top: -5px;}
 
 /** manually removing embedded brackets **/
+#comments .linkbox a[href="comments.php?action=requests&type=voted"],
+#comments .linkbox a[href="comments.php?action=requests&type=created"],
+#comments .linkbox a[href="comments.php?action=collages&type=contributed"],
+#comments .linkbox a[href="comments.php?action=collages&type=created"],
+#comments .linkbox a[href="comments.php?action=torrents"],
+#comments .linkbox a[href="comments.php?action=torrents&type=uploaded"],
+#comments .linkbox a[href="comments.php?action=requests"],
+#comments .linkbox a[href="comments.php?action=collages"],
 #collections .linkbox a[href^="torrents.php?taglist="],
 .linkbox a[href^="torrents.php?action=editimages&groupid"],
 .linkbox a[href^="torrents.php?action=editgroup&groupid"],
@@ -4362,7 +4372,15 @@ input[type="search"],
     margin-top: 2px;
     display: inline-block;}
 
-#collections .linkbox a[href^="torrents.php?taglist="]:before                            {content: "Search collection";}
+#comments .linkbox a[href="comments.php?action=requests&type=voted"]:before     {content: "Display comments left on requests you've voted on";}
+#comments .linkbox a[href="comments.php?action=requests&type=created"]:before   {content: "Display comments left on your requests";}
+#comments .linkbox a[href="comments.php?action=collages&type=contributed"]:before{content: "Display comments left on collections you've contributed to";}
+#comments .linkbox a[href="comments.php?action=collages&type=created"]:before   {content: "Display comments left on your collections";}
+#comments .linkbox a[href="comments.php?action=torrents"]:before                {content: "Torrent comments";}
+#comments .linkbox a[href="comments.php?action=torrents&type=uploaded"]:before  {content: "Display comments left on your uploads";}
+#comments .linkbox a[href="comments.php?action=requests"]:before                {content: "Request comments";}
+#comments .linkbox a[href="comments.php?action=collages"]:before                {content: "Collection comments";}
+#collections .linkbox a[href^="torrents.php?taglist="]:before                   {content: "Search collection";}
 .linkbox a[href^="torrents.php?action=editimages&groupid"]:before               {content: "Edit Images";}
 .linkbox a[href^="torrents.php?action=editgroup&groupid"]:before                {content: "Edit description";}
 .linkbox a[href^="?type=hitnrun&userid"]:before                                 {content: "Hit 'n' Runs";}
@@ -4413,7 +4431,7 @@ input[type="search"],
 .linkbox a:hover:before {
     background-color: var(--c-anchor-hvr-bcg);}
 
-    /* clip-path: polygon(5px 0, calc(100% - 5px) 0, calc(100% - 5px) 100%, 5px 100%);} */
+    /* clip-path: polygon(5px 0, calc(100% - 5px) 0, calc(100% - 5px) 100%, 5px 100%); */
 
 /** /manually removing embedded brackets **/
 
@@ -4801,7 +4819,8 @@ abbr {
     display: block;
     width: 100%;
     height: 100%;}
-#userhistory .colhead_dark span[style="float:left;"] >a[href*="#post"]:nth-child(3) {
+#userhistory .colhead_dark span[style="float:left;"] >a[href*="#post"]:nth-of-type(2) {
+    margin-bottom: 2px;
     vertical-align: middle;
     margin-left: 5px;
     display: inline-block;}
@@ -5464,7 +5483,8 @@ span.size5 img {
 #user #wrapper .box.box_gold #box_gold_scrollbar td.label {
     font-size: 16px;
     line-height: 16px;}
-#user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td:not(.label):hover {
+#user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td:not(.label):hover,
+#achievements tr:not(.colhead):not(:last-child) td:not(.achlabel):hover {
     background-color: var(--c-row-hvr);}
 
 /*** User Info Box ***/
@@ -7078,8 +7098,6 @@ td .log_green {
      padding-left: 5px;
      list-style:none;}
 
-/***/
-
 
 /*****************************************
 **************USER POSTS******************
@@ -7091,111 +7109,24 @@ td .log_green {
 #userhistory td[style="width:14%;"] {
      text-align: center !important;}
 
-
-#userhistory #content #otherop td {						/* Latest Posts box with subforum selections */
+#userhistory td,
+#userhistory h4,
+#userhistory table.border td,
+#userhistory #content #otherop td,						/* Latest Posts box with subforum selections */
+#userhistory #content #forumlist td,
+#userhistory #content table tr.colhead td,
+#userhistory h2.center {
 	text-align: left;}
-
-#userhistory #content #forumlist td {
-	text-align: left;}
-
-#userhistory table.forum_unread {}
 
 #userhistory td.body {
      text-align:left;
      width: 100%;}
 
-#userhistory td {
-	text-align:left;}
-
-#userhistory h3 {}
-
-#userhistory h3:first-child {}
-
-#userhistory h4 {
-     text-align: left;}
-
-#userhistory #content .thin h4 a {}
-
-#userhistory #content tbody td {}
-
-#userhistory td.body {}
-
-#userhistory td.avatar {}
-
-#userhistory td.avatar img {}
-
 #userhistory table.border .cat_list {
      width:80%;}
 
-#userhistory table.border .cat_list td{}
-
-#userhistory #content .thin td.read {}
-#userhistory #content .thin td.unread{}
-#userhistory #content .thin td.read_sticky{}
-#userhistory #content .thin td.unread_sticky{}
-#userhistory #content .thin td.read_locked{}
-#userhistory #content .thin td.unread_locked{}
-#userhistory #content .thin td.read_locked_sticky{}
-#userhistory #content .thin td.unread_locked_sticky{}
-
-#userhistory td.body {}
-
-#userhistory table.border td {
-     text-align: left;}
-
-#userhistory #content .forum_post ul {}
-
-#userhistory #content .search {}
-
-#userhistory #content .search #otherop {}
-
-#userhistory #content .search table {}
-
-#userhistory #content .search table td {}
-
-#userhistory #content .search table tr {}
-
-#userhistory #content .search table tr td.label {}
-
 #userhistory #content .search .submit {
 	text-align: right;}
-
-#userhistory #content .sub {}
-
-#userhistory #content .sub span {}
-
-#userhistory #content .sub a {}
-
-#userhistory #content table tr.colhead td {
-     text-align: left;}
-
-#userhistory .forum_index span a[href*="forums.php"] {}
-
-#userhistory .colhead_dark .time,
-#userhistory .colhead_dark a[href*="#quickpost"],
-#userhistory .colhead_dark a[href*="#post"],
-#userhistory .colhead_dark span[id*="bar"] {}
-
-
-#userhistory .colhead_dark span .time {}
-
-#userhistory .box {}
-
-#userhistory #content tbody #cat_list td a {}
-
-/*Puts a shadow around forum images and youtube links but not smileys*/
-
-
-/*Hack to make the category list on latest posts hide until clicked*/
-#userhistory #content .search .hidden {
-     display: block;}
-
-#userhistory #content .sub {}
-
-#userhistory #content .sub span {}
-
-#userhistory h2.center {
-     text-align:left;}
 
 /************************************************************************
 Makes the cover image on hover larger + drop shadow
@@ -7205,22 +7136,20 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 *************************************************************************/
 
 #cover_container>img {
-	filter: drop-shadow(5px 5px 5px var(--black));
+    -webkit-box-shadow: var(--p-header-shdw) !important;
+    box-shadow: var(--p-header-shdw) !important;
+    filter: none !important;
+    border: var(--p-img-brdr) !important;
 	height: auto !important;
 	width: 400px !important;
 	max-width: 400px !important;
 	max-height: 600px !important;}
 
 
-
-
-
-
-/***/
-
 /*****************************************
 *************ACHIEVEMENTS*****************
 *****************************************/
+/***/
 .flright {
 	float: right;}
 
@@ -7228,55 +7157,106 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 	float: left;}
 
 .levelcont img {
-	padding-top: 10px;}
+	padding-top: 4px;}
 
-#achievements .colhead  {
-	background: linear-gradient(var(--mediumBlue), var(--darkBlue));
-	height:50px;}
+#achievements td.achlabel,
+#achievements .colhead span {
+    line-height: 1em;}
+#achievements td.achlabel span.bold,
+#achievements .colhead td {
+    font-size: 18px;}
 
-#achievements tr {
-	background: none;
-	border-bottom: var(--mediumBlue) 1px solid;
-	margin:5px 0;}
+#achievements .colhead span.italic {
+    line-height: var(--p-lh);}
+
+#achievements .spacer {
+    display: none;}
 
 #achievements td {
-    border: none;
     vertical-align: middle;
     text-align: center;}
 
 #achievements td.achlabel {
+    background-color: var(--c-sb1);
     text-align: left;
-    padding-left: 15px;}
+    padding-left: 10px;}
 
 #achievements td .italic {
-	font-size: 10px;
+	font-size: 11px;
 	font-style: italic;
 	font-weight: normal;}
 
 #achievements {
-	border-collapse:collapse;}
+    top: 39px;
+    width: calc(100% - 2px);
+    margin: 0 auto 25px auto;
+	position: relative;}
+#achievements:before {
+    z-index: 0;
+    content: 'Achievements';
+    padding: 9px 10px;
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    width: calc(100% - 20px);
+    font-weight: 600;
+    display: block;
+    background: var(--p-head-grdnt);
+    position: absolute;
+    left: 0;
+    top: -38px;}
+#achievements:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: -39px;
+    left: -1px;
+    height: calc(100% + 38px);
+    z-index: -1;
+    background-color: var(--c-box);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    border: var(--p-main-brdr);}
 
-#user .linkbox {
-	width: auto;
-	color: var(--white);}
+#achievements tr:not(.colhead) td:not(.achlabel) {
+    border: var(--p-table-brdr);}
+#wrapper #achievements td.achlabel +td {
+    border-left: none;}
+#wrapper #achievements tr:not(.colhead) td:last-child {
+    border-right: none;}
+#wrapper #achievements .colhead +tr td:not(.achlabel) {
+    border-top: none;}
+#wrapper #achievements tr:nth-last-child(2) td:not(.achlabel) {
+    border-bottom: none;}
+#wrapper #achievements tr:last-child td {
+    font-size: 11px !important;
+    padding-left: 10px;
+    border: none;
+    border-top: var(--p-table-brdr);}
 
+
+/* revisit */
 #achievements td .levelcont .complete {
     display: inline-block;
 	margin-left: -5px;
-    background-image: URL('../images/usercheck.png');
+    background-image: URL('https://gazellegames.net/static/styles/game_room/images/usercheck.png');
+    background-size: cover;
+    height: 10px;
+    width: 10px;
+    opacity: .5;}
+#achievements td .levelcont .bubble {
+    display: inline-block;
+	margin-left: -5px;
+    background-image: URL('https://gazellegames.net/static/styles/game_room/images/userbubble.png');
     background-size: cover;
     height: 10px;
     width: 10px;
     opacity: .5;}
 
-#achievements td .levelcont .bubble {
-    display: inline-block;
-	margin-left: -5px;
-    background-image: URL('../images/userbubble.png');
-    background-size: cover;
-    height: 10px;
-    width: 10px;
-    opacity: .5;}
+
+
+
+
 
 /****************************************************
 **************** SHARE SCORE PAGE *******************

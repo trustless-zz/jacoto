@@ -37,7 +37,7 @@ html {
     position: inherit;
     font-size: 21px;
     line-height: 21px;}
-.forum_post #groupplatform,
+#wrapper .forum_post #groupplatform,
 #existing_freeleech_pots #groupplatform,
 #wrapper .box.box_artists #groupplatform,
 #manage_collage_table #groupplatform {
@@ -45,7 +45,9 @@ html {
     height: unset;
     position: inherit;
     font-size: 14px;
-    line-height: var(--p-lh);}
+    line-height: var(--p-lh);
+    left: unset;
+    top: unset;}
 #wrapper .box.box_requests #groupplatform {
     width: unset;
     height: unset;

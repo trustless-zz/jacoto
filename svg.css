@@ -348,6 +348,7 @@ img[title="ThumbsDown "],
 
 /** jump to last-read **/
 /*unread*/
+#userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a img[alt="Last read post"],
 .last_read {
     background-image: url('icons/dark/last_read.svg');}
 /*read*/
