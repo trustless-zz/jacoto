@@ -354,7 +354,8 @@ img[title="ThumbsDown "],
 .read ~td .last_read,
 .read_sticky ~td .last_read,
 .read_locked ~td .last_read,
-.read_locked_sticky ~td .last_read {
+.read_locked_sticky ~td .last_read,
+#userhistory .colhead_dark a img[alt="Last read post"] {
     background-image: url('icons/dark/read_last_read.svg');}
 
 /* background-image: url('data:image/svg+xml;utf8,');} */

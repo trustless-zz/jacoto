@@ -416,6 +416,9 @@ pre {
     overflow: auto;
     white-space: pre-wrap;}
 
+strong.mature +strong +br +a[onclick] {
+    margin-top: 0 !important;}
+
 .sub {
     visibility: hidden;}
 
@@ -631,7 +634,8 @@ img[title="Gold"],
 tr.likes td[id^="likers_"] >strong,
 .last_read,
 h2#username span#tip_user img,
-.inventory .trash_icon {
+.inventory .trash_icon,
+#userhistory .colhead_dark a img[alt="Last read post"] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -888,7 +892,9 @@ tr.pad.hidden .linkbox a,
 #top10 td.center.cats_col +td >span a,
 #quickreplypreview .colhead_dark #barpreview a,
 .forum_post .colhead_dark div[style="float: right;"] a,
-#newthreadpreview .forum_post .colhead_dark #barpreview a {
+#newthreadpreview .forum_post .colhead_dark #barpreview a,
+#userhistory .colhead_dark a img[alt="Last read post"],
+#userhistory .colhead_dark span[style="float:left;"] >a[href*="#post"]:nth-child(3) {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -1909,6 +1915,8 @@ a .error_message:hover:active {
 #bookmarks #torrent_table td[colspan="3"] >span:first-child,
 .torrent_details .group_torrent td:first-child span,
 .torrent_table td[colspan="4"] >span:first-child {
+    position: relative;
+    z-index: 1;
     font-size: 0;
     display: inline-block;
     vertical-align: top;}
@@ -2823,7 +2831,9 @@ li:not(.suggested_similar) .similar_votes >span {
     max-height: 18px;
     max-width: 18px;
     margin: 0 2px 0 3px;
-    vertical-align: sub;}
+    vertical-align: text-bottom;}
+span.secondary_class {
+    line-height: 18px;}
 
 .sidebar .userratingdiv tr:not(#reviewrow) {
     display: inline-flex;
@@ -3685,6 +3695,7 @@ h2 marquee {
     overflow-x: hidden;}
 #forums .forum_signature td > div:hover {
     opacity: 1;}
+#userhistory .forum_post.vertical_margin >tbody >tr:last-child,
 .forum_post tr.likes {
     border-top: var(--p-table-brdr);
     background-color: var(--c-tgroup);}
@@ -3785,17 +3796,24 @@ tr.likes td[id^="likers_"]:hover {
     box-shadow: inherit;
     border: inherit;
     margin: inherit;}
-table.bbcode_table {
-    -webkit-box-shadow: var(--p-main-shdw);
-    box-shadow: var(--p-main-shdw);
+#wrapper #content table.bbcode_table {
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
     background-color: var(--c-box);}
-table.bbcode_table td {
+#wrapper #content table.bbcode_table td {
     border: var(--p-table-brdr);}
 #running_freeleech td.center.cats_col,
 #inbox .colhead >td:first-child,
 .bbcode_table_div,
 #torrents #requests.request_table #requests_list .requestrows td {
     padding: 5px;}
+
+#wrapper div[style*="text-align:center;"] table.bbcode_table td {
+    text-align: center;}
+#wrapper div[style*="text-align:right;"] table.bbcode_table td {
+    text-align: right;}
+#wrapper div[style*="text-align:left;"] table.bbcode_table td {
+    text-align: left;}
 
 span.size1 {
     font-size: 0.75em;
@@ -3865,11 +3883,16 @@ div[style="text-align:left;"] >.twitter_post {
 div[style="text-align:right;"] >.twitter_post {
     margin: 0 5px 0 auto !important;}
 
-ul#noty_bottomRight_layout_container.i-am-new li {
+
+ul#noty_bottomRight_layout_container li {
     border-radius: 0 !important;
-    border: 0 !important;
+    -webkit-box-shadow: var(--p-main-shdw) !important;
+    box-shadow: var(--p-main-shdw) !important;
+    border: var(--p-main-brdr) !important;
     background-color: var(--c-b3) !important;
-    color: var(--c-txt) !important;}
+    color: var(--c-anchor-hvr) !important;}
+ul#noty_bottomRight_layout_container li[style*="darkred"] {
+    background-color: var(--c-em-bcg) !important;}
 
 table.forum_post td.body {
     -webkit-hyphens: auto;
@@ -3890,7 +3913,7 @@ a[onclick="BBCode.spoiler(this);"] {
     box-shadow: none !important;
     color: var(--c-anchor);
     padding: 0 !important;
-    margin: 5px 0 0 0 !important;
+    margin: 5px 10px 0 0 !important;
     cursor: default !important;}
 input[type="button"][value="Show"]:hover,
 input[type="button"][value="Hide"]:hover,
@@ -4778,6 +4801,15 @@ abbr {
     display: block;
     width: 100%;
     height: 100%;}
+#userhistory .colhead_dark span[style="float:left;"] >a[href*="#post"]:nth-child(3) {
+    vertical-align: middle;
+    margin-left: 5px;
+    display: inline-block;}
+
+#userhistory .colhead_dark a img[alt="Last read post"] {
+    padding-left: 10px;
+    width: 10px;
+    height: 14px;}
 
 .sidebar .box.box_pack .body.center {
     display: flex;}
@@ -4991,7 +5023,9 @@ td >img[title="Gold"] {
 #searchforum tr:nth-child(4) {
     order: 4;}
 
-.new_status {
+#wrapper .new_status {
+    position: relative;
+    z-index: 0;
     margin-left: 5px;}
 .new_status:before {
     content: 'NEW';
@@ -6959,7 +6993,7 @@ body#user.inventory {}
 #wrapper .gazelle_art[style*="Error: Maybe that link was bad or missing_thumb."]:before {
     top: calc(50% - 22px);}
 .gazelle_art[style*="Maybe that link was bad or missing_thumb."]:after {
-    content: 'Maybe that link was bad or missing_thumb.';
+    content: 'Maybe that link was bad or missing thumb.';
     color: var(--c-txt);
     font-size: 14px;
     line-height: 14px;
@@ -7044,6 +7078,7 @@ td .log_green {
      padding-left: 5px;
      list-style:none;}
 
+/***/
 
 
 /*****************************************
@@ -7052,248 +7087,112 @@ td .log_green {
 
 #userhistory #content .thin table {
      width: 100%;}
-
-#userhistory .thin td {
-     border: none;}
-
-#userhistory table {
-     border-collapse: collapse;}
-
 #userhistory td[style="width:7%;"],
 #userhistory td[style="width:14%;"] {
      text-align: center !important;}
 
-#userhistory #content .box table td {
-     background-color: var(--rowb);
-     border: none;}
-
-#userhistory #content .box table td.label {
-     background-color: var(--rowa);
-     border: none;}
 
 #userhistory #content #otherop td {						/* Latest Posts box with subforum selections */
-	text-align:left;
-	background-color: var(--rowa);}
+	text-align: left;}
 
 #userhistory #content #forumlist td {
-	text-align:left;
-	background-color: var(--rowa);}
+	text-align: left;}
 
-#userhistory table.forum_unread {
-     border: solid var(--mediumBlue) 4px !important;
-     border-collapse: inherit;}
+#userhistory table.forum_unread {}
 
 #userhistory td.body {
      text-align:left;
      width: 100%;}
 
 #userhistory td {
-	border: none;
 	text-align:left;}
 
-#userhistory h3 {
-     padding: 0px;
-     border-bottom: 1px var(--lightBlue) solid;
-     border-color: rgba(198,230,246,.3);
-     margin-left: 5px;
-     color: var(--lightBlue);}
+#userhistory h3 {}
 
-#userhistory h3:first-child{
-     margin: 0 0 15px 0}
+#userhistory h3:first-child {}
 
 #userhistory h4 {
      text-align: left;}
 
-#userhistory #content .thin h4 a {
-	color: var(--white);
-	border-bottom: none;}
+#userhistory #content .thin h4 a {}
 
-#userhistory #content tbody td {
-	color: var(--white);
-	border-bottom: none;}
+#userhistory #content tbody td {}
 
-#userhistory td.body {
-     padding:10px;}
+#userhistory td.body {}
 
-#userhistory td.avatar {
-	background-color: var(--lightBlue);
-	box-shadow: 0px 0px 10px var(--black);}
+#userhistory td.avatar {}
 
-#userhistory td.avatar img {
-     margin-top: 10px;}
+#userhistory td.avatar img {}
 
-#userhistory table.border .cat_list{
-     width:80%}
+#userhistory table.border .cat_list {
+     width:80%;}
 
-#userhistory table.border .cat_list td{
-	width:20%;
-	padding:0 !important;
-	border:0 !important}
+#userhistory table.border .cat_list td{}
 
-#userhistory #content .thin td.read {
-	background-image:url("../images/balloon.png");
-	background-position:50%;
-	background-repeat:no-repeat;
-	height:18px;
-	width:18px;}
+#userhistory #content .thin td.read {}
+#userhistory #content .thin td.unread{}
+#userhistory #content .thin td.read_sticky{}
+#userhistory #content .thin td.unread_sticky{}
+#userhistory #content .thin td.read_locked{}
+#userhistory #content .thin td.unread_locked{}
+#userhistory #content .thin td.read_locked_sticky{}
+#userhistory #content .thin td.unread_locked_sticky{}
 
-#userhistory #content .thin td.unread{
-	background-image: url('../images/balloon-unread.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width:18px;
-	height:18px}
-
-#userhistory #content .thin td.read_sticky{
-	background-image: url('../images/sticky.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width:18px;
-	height:18px}
-
-#userhistory #content .thin td.unread_sticky{
-	background-image:url('../images/sticky-unread.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width:18px;
-	height:18px}
-
-#userhistory #content .thin td.read_locked{
-	background-image:url('../images/lock.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width:18px;
-	height:18px}
-
-#userhistory #content .thin td.unread_locked{
-	background-image:url('../images/lock-unread.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width:18px;
-	height:18px}
-
-#userhistory #content .thin td.read_locked_sticky{
-	background-image:url('../images/lock-sticky.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width:18px;
-	height:18px}
-
-#userhistory #content .thin td.unread_locked_sticky{
-	background-image: url('../images/lock-sticky-unread.png');
-	background-repeat: no-repeat;
-	background-position: 50%;
-	width:18px;
-	height:18px}
-
-#userhistory td.body {
-     background-color: transparent;}
+#userhistory td.body {}
 
 #userhistory table.border td {
-     text-align:left;}
+     text-align: left;}
 
-#userhistory #content .forum_post ul {
-     margin:0 0 -5px 20px;}
+#userhistory #content .forum_post ul {}
 
-#userhistory #content .search {
-	margin: 20px auto;
-	width: 865px;
-	display: block;}
+#userhistory #content .search {}
 
-#userhistory #content .search #otherop {
-	margin-bottom: -3px;}
+#userhistory #content .search #otherop {}
 
-#userhistory #content .search table {
-	border: 2px solid #003;
-	margin-bottom: 6px;}
+#userhistory #content .search table {}
 
-#userhistory #content .search table td {
-	border: solid #003 1px;}
+#userhistory #content .search table td {}
 
-#userhistory #content .search table tr {
-	background-color: var(--mediumBlue);}
+#userhistory #content .search table tr {}
 
-#userhistory #content .search table tr td.label {
-	background-color: var(--mediumBlue);
-     opacity: 0.1}
+#userhistory #content .search table tr td.label {}
 
 #userhistory #content .search .submit {
-	text-align: right;
-	margin-right: 5px;}
+	text-align: right;}
 
-#userhistory #content .sub {
-	height: 1px;
-	left: 60px;
-	overflow: visible;
-	position: relative;
-	top: 27px;
-	visibility: hidden;
-	width: 10%;}
+#userhistory #content .sub {}
 
-#userhistory #content .sub span{
-	background: url("../images/ColHeadGrad.png") repeat-x scroll 0 50% transparent;
-	border: 1px solid #003;
-	display: block;
-	padding: 5px;}
+#userhistory #content .sub span {}
 
-#userhistory #content .sub a {
-	color: var(--white);}
+#userhistory #content .sub a {}
 
 #userhistory #content table tr.colhead td {
-     text-align:left;}
+     text-align: left;}
 
-#userhistory .forum_index span a[href*="forums.php"] {
-     padding-left:5px;}
+#userhistory .forum_index span a[href*="forums.php"] {}
 
 #userhistory .colhead_dark .time,
 #userhistory .colhead_dark a[href*="#quickpost"],
 #userhistory .colhead_dark a[href*="#post"],
-#userhistory .colhead_dark span[id*="bar"] {
-     font-size:.8em;}
+#userhistory .colhead_dark span[id*="bar"] {}
 
-#userhistory .colhead_dark span[id*="bar"] {
-     margin-top: 3px;
-     padding-right: 5px;}
 
-#userhistory .colhead_dark span .time {
-     padding-right: 0px;}
+#userhistory .colhead_dark span .time {}
 
-#userhistory .box {
-	background:none;
-	background-color: var(--darkBlue);}
+#userhistory .box {}
 
-#userhistory #content tbody #cat_list td a {
-     margin:5px;}
+#userhistory #content tbody #cat_list td a {}
 
 /*Puts a shadow around forum images and youtube links but not smileys*/
-#userhistory .forum_post td.body img,
-#userhistory .forum_post td.body iframe {
-    margin: 5px;
-    filter: drop-shadow(0px 0px 20px var(--black));
-	-webkit-filter: drop-shadow(0px 0px 20px var(--black));}
 
-#userhistory .forum_post td.body img[src*="../static/common/smileys/"] {
-     margin:0px !important;
-     box-shadow: 0px 0px 0px !important;}
 
 /*Hack to make the category list on latest posts hide until clicked*/
 #userhistory #content .search .hidden {
      display: block;}
 
-#userhistory #content .sub {
-    height: 1px;
-    left: 60px;
-    overflow: visible;
-    position: relative;
-    top: 47px;
-    visibility: hidden;
-    width: 15%;}
+#userhistory #content .sub {}
 
-#userhistory #content .sub span {
-    background-color: var(--mediumBlue);
-    border-bottom: 1px solid var(--darkBlue2);
-    display: block;
-    padding: 5px;}
+#userhistory #content .sub span {}
 
 #userhistory h2.center {
      text-align:left;}
@@ -7311,6 +7210,13 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 	width: 400px !important;
 	max-width: 400px !important;
 	max-height: 600px !important;}
+
+
+
+
+
+
+/***/
 
 /*****************************************
 *************ACHIEVEMENTS*****************

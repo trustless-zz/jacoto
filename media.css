@@ -215,6 +215,7 @@ html {
         -webkit-box-shadow: var(--p-header-shdw);
         box-shadow: var(--p-header-shdw);
         border-bottom: var(--p-main-brdr);}
+    #userhistory .colhead_dark span[id*="bar"],
     #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
     .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
     #newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(2) {

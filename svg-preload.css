@@ -38,7 +38,8 @@ ul:not(.highlighted) li.active a,
 .colhead_dark a[onclick^="Quote"]:hover,
 .head a[onclick^="Quote"]:hover,
 #newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1):hover,
-.inventory .trash_icon:hover {
+.inventory .trash_icon:hover,
+#userhistory .colhead_dark a img[alt="Last read post"]:hover {
     -webkit-filter: brightness(0);
     filter: brightness(0);}
 
