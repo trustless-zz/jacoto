@@ -246,7 +246,7 @@ html {
     font-size: 14px;
     scroll-behavior: smooth;}
 body {
-    overflow-x: visible !important; /* #user, hovering over some objects causes [style="overflow-x: hidden;"] to appear for some reason */
+    overflow-x: visible !important; /* on #user, hovering over some objects causes [style="overflow-x: hidden;"] to appear for some reason */
     color: var(--c-txt);
     background-color: var(--c-body);
     background-size: 50px 50px;
@@ -357,6 +357,11 @@ ul {
 
 #nav_userinfo a.username {
     font-size: 17px;}
+
+.bold {
+    font-weight: bold;}
+.italic {
+    font-style: italic;}
 
 p {
     margin: 10px 0;}
@@ -767,7 +772,8 @@ table.gazelleinfo,
 table.gazelles_art_display,
 #user .thin >h3:first-child +.linkbox +form,
 #log .thin >.header +.box.pad,
-#log table#log_table {
+#log table#log_table,
+#share_score_breakdown {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -2624,7 +2630,10 @@ input.hidden,
 #gazelleview >br,
 #gazelles .thin >h2:first-child +.box.pad table tr:first-child td:first-child,
 #user .thin >h3:first-child +.linkbox +form td.label.nobr,
-#log .thin form.search_form td.label {
+#log .thin form.search_form td.label,
+#left_poll,
+#right_poll,
+#share_score >br {
     display: none;}
 
 .similar {
@@ -7149,7 +7158,6 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 /*****************************************
 *************ACHIEVEMENTS*****************
 *****************************************/
-/***/
 .flright {
 	float: right;}
 
@@ -7165,6 +7173,9 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 #achievements td.achlabel span.bold,
 #achievements .colhead td {
     font-size: 18px;}
+#achievements .colhead .bold,
+#achievements td.achlabel .bold {
+    font-weight: 600;}
 
 #achievements .colhead span.italic {
     line-height: var(--p-lh);}
@@ -7185,6 +7196,8 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 	font-size: 11px;
 	font-style: italic;
 	font-weight: normal;}
+#achievements td .italic:last-child {
+    color: var(--c-anchor-hvr);}
 
 #achievements {
     top: 39px;
@@ -7234,6 +7247,47 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     border: none;
     border-top: var(--p-table-brdr);}
 
+#user #content >#progress_bar ~.flleft.linkbox {
+    text-align: left;}
+#user #content >#progress_bar ~.flright.linkbox {
+    text-align: right;}
+
+/* presudo element galore */
+#user #content >#progress_bar {
+    margin: 57px 11px 11px 11px;
+    position: relative;}
+#user #content >#progress_bar:before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 106px);
+    bottom: -59px;
+    left: -11px;
+    background-color: var(--c-box);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    border: var(--p-main-brdr);
+    z-index: -1;}
+#user #content >#progress_bar:after {
+    content: 'User class progress';
+    position: absolute;
+    text-align: left;
+    padding: 9px 10px;
+    top: -48px;
+    left: -10px;
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    font-weight: 600;
+    z-index: 1;
+    width: 100%;
+    background: var(--p-head-grdnt);}
+#user #content >#progress_bar ~.linkbox {
+    margin: 0 10px 25px 10px;
+    padding: 0;
+    font-size: 14px;
+    line-height: var(--p-lh);}
+
 
 /* revisit */
 #achievements td .levelcont .complete {
@@ -7254,22 +7308,106 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     opacity: .5;}
 
 
-
-
-
-
 /****************************************************
 **************** SHARE SCORE PAGE *******************
 ****************************************************/
-#share_score .linkbox {
-	font-weight: bold;
-	font-size: 1.2em;}
+/***/
+/* presudo element galore */
+#share_score {
+    position: relative;}
+#share_score >.large_progress_bar {
+    margin: 61px 11px 26px 11px;
+    position: relative;}
+#share_score >.large_progress_bar:before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 58px);
+    bottom: -11px;
+    left: -11px;
+    background-color: var(--c-box);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    border: var(--p-main-brdr);
+    z-index: -1;}
+#share_score >.large_progress_bar:after {
+    content: '';
+    position: absolute;
+    text-align: left;
+    padding: 9px 10px;
+    top: -48px;
+    left: -10px;
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    font-weight: 600;
+    z-index: 1;
+    width: 100%;
+    background: var(--p-head-grdnt);}
+#share_score .large_progress_bar +.linkbox {
+    position: absolute;
+    top: -39px;
+    left: 11px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    line-height: 20px;
+    z-index: 1;}
 
-#share_score .colhead {
-	text-align: center;}
 
 #share_score_breakdown td.label {
-	height: 5.5em;}
+    width: 150px;
+    padding-left: 10px;}
+#share_score_breakdown td:last-child {
+    padding-right: 10px;}
+#share_score_breakdown .colhead td:nth-child(2) {
+    text-indent: -160px;
+    overflow: visible;
+    font-weight: 600;}
+
+#share_score_breakdown tr:not(:first-child):not(:last-child) {
+    border-bottom: var(--p-table-brdr);}
+
+
+
+
+.large_progress_bar {
+	height: 20px;
+	width: 80%;
+	position: relative;
+	background: var(--mediumBlue);
+	border-radius: 25px;
+	padding: 5px;
+	margin: 5px auto;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);}
+
+.large_progress_bar > span {
+	display: block;
+	height: 100%;
+	position: absolute;
+	top: 0;}
+
+.large_progress_bar .main_bar {
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	background-color: #d4f423;
+	background-image: linear-gradient(to bottom, #89a740, #d4f423, #698c11);
+	box-shadow:
+		inset 0 2px 9px  rgba(255,255,255,0.3),
+		inset 0 -2px 6px rgba(0,0,0,0.4);
+	position: relative;
+	z-index: 1;}
+
+.large_progress_bar .main_bar.complete {
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;}
+
+
+
+
 
 #share_score .large_progress_bar .points {
   font-weight: bold;
@@ -7292,7 +7430,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
        right: 0;}
 
 #share_score .large_progress_bar .main_section {
-	border-right: 2px solid var(--white);}
+	border-right: 2px solid red;}
 
 #share_score .large_progress_bar .bonus_section {
        border-top-right-radius: 25px;
