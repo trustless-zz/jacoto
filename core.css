@@ -1410,6 +1410,7 @@ table.gazelles_art_display .hovereffect:hover:before {
     display: block;
     margin: 8px auto 10px auto;}
 
+.large_progress_bar .main_bar,
 #center_poll {
     background-image: var(--p-poll-grdnt);
     display: block;
@@ -1646,7 +1647,8 @@ a .error_message:hover:active {
     display: flex;
     justify-content: space-between;
     padding: 3px;
-    background-color: var(--c-edition);}
+    background-color: var(--c-edition);
+	position: relative;}
 #clans .large_progress_bar .main_bar.clan_1_bar {
     animation: expandWidth 0.7s;
     animation-fill-mode: forwards;
@@ -7370,42 +7372,15 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     border-bottom: var(--p-table-brdr);}
 
 
-
-
-.large_progress_bar {
-	height: 20px;
-	width: 80%;
-	position: relative;
-	background: var(--mediumBlue);
-	border-radius: 25px;
-	padding: 5px;
-	margin: 5px auto;
-	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);}
-
 .large_progress_bar > span {
 	display: block;
 	height: 100%;
 	position: absolute;
 	top: 0;}
 
-.large_progress_bar .main_bar {
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
-	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
-	background-color: #d4f423;
-	background-image: linear-gradient(to bottom, #89a740, #d4f423, #698c11);
-	box-shadow:
-		inset 0 2px 9px  rgba(255,255,255,0.3),
-		inset 0 -2px 6px rgba(0,0,0,0.4);
-	position: relative;
-	z-index: 1;}
+.large_progress_bar .main_bar {}
 
-.large_progress_bar .main_bar.complete {
-	border-top-right-radius: 20px;
-	border-bottom-right-radius: 20px;}
-
-
+.large_progress_bar .main_bar.complete {}
 
 
 
