@@ -773,7 +773,9 @@ table.gazelles_art_display,
 #user .thin >h3:first-child +.linkbox +form,
 #log .thin >.header +.box.pad,
 #log table#log_table,
-#share_score_breakdown {
+#share_score_breakdown,
+#adventureclub table.adventure_table,
+#adventureclub .linkbox:first-child +div +div {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -1117,7 +1119,8 @@ a[title="Remove"],
 .user_offline,
 #rules .thin >form.search_form span#Index,
 #collections .sidebar .box_addtorrent span:last-child,
-#gazelles .thin >h2:first-child +.box.pad table td[colspan="4"] {
+#gazelles .thin >h2:first-child +.box.pad table td[colspan="4"],
+#adventureclub table#monsters_search span.info {
     display: block;}
 
 #stats_seeding:hover:active,
@@ -2054,7 +2057,8 @@ textarea,
 #collections #coverart.box >ul:not(.hidden),
 #wiki .center.thin >.box.pad,
 .inventory .trash_icon,
-.gazelles_art_display {
+.gazelles_art_display,
+#adventureclub .thin >table {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -2181,6 +2185,7 @@ input[type="search"],
 input[type="password"],
 input[type="number"],
 input[type="text"],
+#wrapper .select2-container--default .select2-selection--multiple,
 input[type="url"],
 select {
     border: var(--p-input-brdr);
@@ -2199,6 +2204,7 @@ input[type="search"],
 input[type="password"],
 input[type="number"],
 input[type="text"],
+#wrapper .select2-container--default .select2-selection--multiple,
 input[type="url"] {
     padding: 0 4px;}
 /* #searchforum input[type="search"],
@@ -2233,10 +2239,12 @@ input[type="number"]::-webkit-outer-spin-button {
     bottom: 0;
     width: 18px;}
 
+.select2-container--default .select2-results > .select2-results__options >li:nth-child(odd),
 select >option:nth-child(odd) {
     background-color: var(--c-input);}
 textarea:hover,
 textarea:focus,
+.select2-container--default .select2-results > .select2-results__options >li:nth-child(even),
 select >option:nth-child(even),
 select:hover,
 input[type="password"]:hover,
@@ -2244,9 +2252,11 @@ input[type="password"]:focus,
 input[type="number"]:hover,
 input[type="number"]:focus,
 input[type="text"]:hover,
+#wrapper .select2-container--default .select2-selection--multiple:hover,
 input[type="url"]:hover,
 input[disabled],
 input[type="text"]:focus,
+#wrapper .select2-container--default .select2-selection--multiple:focus,
 input[type="url"]:focus,
 /* #searchforum input[type="search"]:hover,
 #searchforum input[type="search"]:focus,
@@ -2257,10 +2267,13 @@ input[type="search"]:focus {
     background-color: var(--c-edition);}
 textarea:focus,
 select:focus,
-input:focus {
+input:focus,
+#wrapper .select2-container--default .select2-selection--multiple[aria-expanded="true"] {
     color: var(--c-anchor-hvr);
     border-color: var(--c-b1);
     outline: none;}
+.select2-container--open .select2-dropdown--below {
+    border-color: var(--c-b1);}
 input[type="checkbox"],
 input[type="radio"],
 #requests table.border a[href^="upload.php"],
@@ -2635,7 +2648,8 @@ input.hidden,
 #log .thin form.search_form td.label,
 #left_poll,
 #right_poll,
-#share_score >br {
+#share_score >br,
+#adventureclub form[name="realms_search"] td.label {
     display: none;}
 
 .similar {
@@ -2767,7 +2781,8 @@ li:not(.suggested_similar) .similar_votes >span {
 #rules table.required_ratio .colhead,
 .torrent_details .torrent_table tr.pad.hidden .colhead,
 .torrent_details .torrent_table tr.pad.hidden .colhead_dark,
-#achievements .colhead {
+#achievements .colhead,
+.thin#user_fight_attacks table.border .colhead {
     background: var(--p-subcolhead);}
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
@@ -2788,7 +2803,8 @@ li:not(.suggested_similar) .similar_votes >span {
 #rules h3#jump +.box.pad .colhead td,
 #clans #clan_stats >div .colhead td,
 #staff .thin >.box.pad .colhead td,
-#rules table.required_ratio .colhead td {
+#rules table.required_ratio .colhead td,
+.thin#user_fight_attacks table.border .colhead td {
     font-weight: normal;
     position: relative;
     font-size: 16px;
@@ -3311,6 +3327,7 @@ img[src="static/common/thumbsup.png"],
     padding-top: 13px;}
 
 /** convert ... to head **/
+.thin#user_fight_attacks >.box.pad >h3,
 #gazelleview #titlerow p,
 #items_navigation h3,
 #wrapper #searchthread h3,
@@ -3379,7 +3396,8 @@ form[name="filter"] h3,
 #reportsv2 #report_table >.box.pad >p,
 #requests .box_artists ul.stats.nobullet,
 #requests .box_tags .stats.nobullet li,
-#bookmarks .sidebar ul.stats.nobullet {
+#bookmarks .sidebar ul.stats.nobullet,
+#below_box >p:last-child {
     margin-bottom: 0;}
 #requests .sidebar .box_votes table {
     margin-top: 8px;}
@@ -3764,7 +3782,8 @@ tr.likes td[id^="likers_"] >strong {
 #upload p.min_padding,
 tr.likes td[id^="likers_"] >strong:nth-of-type(2),
 #rules .thin >form.search_form span#Index,
-#gazelles .thin >h2:first-child +.box.pad table td[colspan="4"] {
+#gazelles .thin >h2:first-child +.box.pad table td[colspan="4"],
+#adventureclub table#monsters_search span.info {
     margin-top: 2px;}
 #request_form input[type="text"] {
     margin-bottom: 2px;}
@@ -3954,7 +3973,9 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #artist .main_column table,
 #rules h3#jump +.box.pad >table,
 #wrapper #searchthread table,
-#wrapper #searchforum table {
+#wrapper #searchforum table,
+.thin#user_fight_attacks >.box.pad,
+.thin#user_fight_attacks table.border {
     background: none;
     border: none;
     -webkit-box-shadow: none;
@@ -4074,7 +4095,8 @@ input[type="search"],
 .box.pad.box_buffs_info:before,
 #inbox .thin[xmlns] >#messageform:before,
 #user .thin >h3:first-child +.linkbox +form:before,
-#log .thin >.header +.box.pad:before {
+#log .thin >.header +.box.pad:before,
+#adventureclub .linkbox:first-child +div +div:before {
     display: block;
     text-align: left;
     width: 100%;
@@ -6705,12 +6727,6 @@ body#user.inventory {}
 .box_fights_stats .stat_bar progress.health_bar::-moz-progress-bar {
 	background-color: var(--c-red);}
 
-#user_fight_attacks .attributes {font-size: 4em;}
-
-
-
-
-
 
 
 /*****************************************
@@ -7313,7 +7329,6 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 /****************************************************
 **************** SHARE SCORE PAGE *******************
 ****************************************************/
-/***/
 /* presudo element galore */
 #share_score {
     position: relative;}
@@ -7385,50 +7400,163 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 
 
 #share_score .large_progress_bar .points {
-  font-weight: bold;
-  margin-left: 48.5%;
-  padding-top: 7px;
-  text-align: center;
-  z-index: 2;
-  text-shadow:
-     -1px -1px 0 #333,
-     1px -1px 0 #333,
-     -1px 1px 0 #333,
-     1px 1px 0 #333;}
-
-#share_score .large_progress_bar .five_marker {
-       top: -17px;
-       right: 0;}
-
+    font-weight: bold;
+    margin-left: 48.5%;
+    text-align: center;
+    z-index: 2;}
+#share_score .large_progress_bar .five_marker,
 #share_score .large_progress_bar .fifteen_marker {
-       top: 32px;
-       right: 0;}
+    text-indent: 3px;
+    font-weight: 600;
+    z-index: 9;
+    color: var(--c-anchor-hvr);
+    top: 0;
+    right: 0;}
+#share_score .large_progress_bar .points,
+#share_score .large_progress_bar .five_marker,
+#share_score .large_progress_bar .fifteen_marker {
+    text-shadow:
+        0 0 5px var(--c-box),
+        0 0 3px var(--c-box),
+        0 0 1px var(--c-box);}
+
 
 #share_score .large_progress_bar .main_section {
-	border-right: 2px solid red;}
+	border-right: 2px solid var(--c-on);}
 
 #share_score .large_progress_bar .bonus_section {
-       border-top-right-radius: 25px;
-       border-bottom-right-radius: 25px;
-       background-color: rgba(177,232,0,0.2);
-       right: 0;}
+    background-color: var(--c-bonus);
+    right: 0;}
 
-#seed_snatch_breakdown .large_progress_bar .main_bar {
-       background-color: rgb(123,255,158);
-       background-image: linear-gradient(to bottom, rgb(123,255,158), rgb(6,162,6));}
+#seed_snatch_breakdown .large_progress_bar .main_bar {}
 
-#seed_time_breakdown .large_progress_bar .main_bar {
-       background-color: rgb(99, 228, 255);
-       background-image: linear-gradient(to bottom, rgb(99,228,255), rgb(0,115,150));}
+#seed_time_breakdown .large_progress_bar .main_bar {}
 
-#seed_size_breakdown .large_progress_bar .main_bar {
-       background-color: #e8a3f0;
-       background-image: linear-gradient(to bottom, #e8a3f0, #ad23f4);}
+#seed_size_breakdown .large_progress_bar .main_bar {}
 
 
 /****************************************************
 ************** ADVENTURE CLUB TOOLS *****************
 ****************************************************/
+#user_fight_attacks .attributes {font-size: 1em;}
+#wrapper .thin#user_fight_attacks table.border {
+    position: relative;
+    z-index: 0;
+    width: calc(100% - 2px);
+    margin: 0 auto 17px auto;}
+.thin#user_fight_attacks table.border:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 38px);
+    left: -1px;
+    bottom: -1px;
+    z-index: -1;
+    background-color: var(--c-box);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    border: var(--p-main-brdr);}
+#wrapper .thin#user_fight_attacks >.box.pad >h3 {
+    width: calc(100% - 22px);
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;}
+.thin#user_fight_attacks table.border .colhead td:first-child {
+    padding-left: 10px;}
+.thin#user_fight_attacks td.label {
+    padding: 5px 10px;
+    background-color: var(--c-edition);
+    text-align: left;}
+/***/
+
+/* getting h2 to the top */
+#adventureclub .thin {
+    display: flex;
+    flex-flow: column;}
+#adventureclub .linkbox:first-child +div:not(.center):not(.linkbox) {
+    order: -1;}
+
+
+#adventureclub .linkbox:first-child +div +div {
+    padding: 10px;
+    position: relative;}
+
+
+#adventureclub form[name="realms_search"] table#realms_search {
+    display: block;}
+#adventureclub form[name="realms_search"] tbody {
+    display: flex;
+    justify-content: space-between;}
+#adventureclub form[name="realms_search"] td {
+    padding: 0;}
+#adventureclub form[name="realms_search"] .flleft {
+    line-height: 26px;
+    margin: 0 10px 0 5px;}
+
+#adventureclub table#monsters_search tbody:first-child td {
+    padding-top: 0;
+    padding-bottom: 0;}
+#adventureclub table#monsters_search td.label strong {
+    font-weight: normal;}
+#adventureclub table#monsters_search tbody:first-child tr {
+    white-space: nowrap;}
+#adventureclub table#monsters_search tbody:first-child td.label {
+    line-height: 26px;}
+#adventureclub table#monsters_search tbody:first-child input[type="submit"] {
+    vertical-align: bottom;}
+#adventureclub tbody#advanced_search td.label.label_right h3 {
+    width: 100%;
+    text-align: right;
+    margin: 0;
+    font-weight: 600;}
+#adventureclub tbody#advanced_search tr:first-child td {
+    padding-top: 10px;}
+#adventureclub tbody#advanced_search tr:first-child td.label {
+    padding-top: 13px;}
+#adventureclub tbody#advanced_search tr:first-child td[rowspan="6"] {
+    vertical-align: top;
+    padding-top: 13px;}
+
+#wrapper .select2-container--default .select2-selection--multiple .select2-selection__rendered,
+#wrapper .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
+    padding: 0;}
+#wrapper #content .select2-container--default .select2-selection--multiple {
+    border-radius: 0;
+    min-height: 26px;
+    height: unset;}
+#wrapper .select2-container .select2-selection--multiple {
+    min-height: unset;}
+#wrapper .select2-container .select2-search--inline .select2-search__field {
+    margin: 0;}
+#wrapper #content .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    margin: 1px 4px 1px 0;
+    background-color: var(--c-edition);
+    border: var(--p-main-brdr);
+    padding: 1px 3px 2px 3px;}
+#wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: var(--c-text-s);}
+#wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
+    color: var(--c-anchor-hvr);}
+.select2-container--default .select2-results > .select2-results__options >li,
+option {
+    height: 26px;
+    line-height: 26px;
+    min-height: unset;
+    padding: 0px 2px;}
+.select2-container--default .select2-results > .select2-results__options >li {
+    color: var(--c-txt);}
+.select2-container--default .select2-results > .select2-results__options >li:hover {
+    color: var(--c-anchor-hvr);
+    background-color: var(--c-tgroup);}
+#adventureclub table#monsters_search td.tooltip {
+    text-align: right;}
+#adventureclub table#monsters_search #advanced_search tr:last-child td {
+    vertical-align: top;}
+/***/
+
+
+
+
 .attacks_manager #attributes ul,
 .monsters_manager ul.inline_list,
 #adventureclub ul.inline_list {
@@ -7442,19 +7570,16 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
      display: inline-block;}
 .attacks_manager #attributes ul li input:checked + label,
 .monsters_manager ul.inline_list li input:checked + label {
-     color: yellowgreen;
      text-decoration: underline;}
-.monsters_manager #attributes_div tr:not(:last-child) td {
-     border-bottom: 1px solid white;}
+.monsters_manager #attributes_div tr:not(:last-child) td {}
 
 #adventureclub ul.inline_list {margin-top: 0;}
-#adventureclub .linkbox {color: var(--white);}
+#adventureclub .linkbox {}
 #adventureclub .effects_div {float: left; padding-right: 1.5em;}
-#adventureclub tr.outer_row {border: 1px solid rgba(0, 0, 0, 0.2);}
-#adventureclub tr.main_row + tr.sub_row {border-top: 1px dashed rgba(255, 255, 255, 0.1);}
+#adventureclub tr.outer_row {}
+#adventureclub tr.main_row + tr.sub_row {}
 #adventureclub tr.sub_row {
-     font-size: 0.9em;
-     background-color: rgba(255, 255, 255, 0.1);}
+     font-size: 0.9em;}
 #adventureclub td.image_col {
      max-width: 160px;
      text-align: center;}
