@@ -956,7 +956,8 @@ div,
 #shop li.item_li .item_description:before,
 #shop li.item_li .item_description:after,
 #shop .item_description,
-#shop li.item_li.owned:after {
+#shop li.item_li.owned:after,
+fancybox-button {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1295,6 +1296,32 @@ table.gazelles_art_display .hovereffect:hover:before {
     opacity: .75;}
 .fancybox-is-zoomable .fancybox-image:hover {
     border: var(--p-img-hvr);}
+
+.fancybox-thumbs>ul>li:before,
+.fancybox-button {
+    -webkit-transition: all .1s linear !important;
+    -o-transition: all .1s linear !important;
+    transition: all .1s linear !important;}
+.fancybox-button {
+    color: var(--c-body) !important;
+    background: var(--c-txt) !important;}
+.fancybox-button:hover {
+    color: var(--c-sb1) !important;
+    background: var(--c-anchor-hvr) !important;}
+.fancybox-button.disabled:hover,
+.fancybox-button.disabled {
+    color: var(--c-main-brdr) !important;
+    background: var(--c-text-s) !important;}
+
+.fancybox-show-thumbs .fancybox-thumbs {
+    background-color: var(--c-box);}
+.fancybox-thumbs>ul>li:before {
+    opacity: 1;
+    border: var(--p-img-brdr);}
+.fancybox-thumbs>ul>li.fancybox-thumbs-active:before {
+    border-color: var(--c-b1);}
+.fancybox-thumbs>ul>li:not(.fancybox-thumbs-active):hover:before {
+    border-color: var(--c-b3);}
 
 /** close/expand head **/
 #index #recommended .head,
@@ -1872,7 +1899,8 @@ a .error_message:hover:active {
 #seeding_not_snatched_table td:nth-child(n+3),
 #downloaded_table           td:nth-child(n+3),
 #extlink_table              td:nth-child(n+3),
-.torrent_table td:not(#displayname):not([colspan="4"]) {
+.torrent_table td:not(#displayname):not([colspan="4"]),
+table.adventure_table .colhead td {
     white-space: nowrap;}
 #collections #torrent_table .group.discog td[colspan="5"] >strong,
 #collections .group_torrent td span,
@@ -2651,7 +2679,8 @@ input.hidden,
 #left_poll,
 #right_poll,
 #share_score >br,
-#adventureclub form[name="realms_search"] td.label {
+#adventureclub form[name="realms_search"] td.label,
+#seedtime_tokens >br {
     display: none;}
 
 .similar {
@@ -2784,7 +2813,8 @@ li:not(.suggested_similar) .similar_votes >span {
 .torrent_details .torrent_table tr.pad.hidden .colhead,
 .torrent_details .torrent_table tr.pad.hidden .colhead_dark,
 #achievements .colhead,
-.thin#user_fight_attacks table.border .colhead {
+.thin#user_fight_attacks table.border .colhead,
+#seedtime_tokens #tokens_breakdown .colhead {
     background: var(--p-subcolhead);}
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
@@ -2793,6 +2823,7 @@ li:not(.suggested_similar) .similar_votes >span {
     font-size: 14px;
     line-height: 19px;
     padding: 6px 5px 7px 5px;}
+#seedtime_tokens #tokens_breakdown .colhead td,
 .torrent_details .torrent_table tr.pad.hidden .colhead td,
 .torrent_details .torrent_table tr.pad.hidden .colhead_dark td,
 #top10 .thin >.linkbox ~div:not(.center) >table.border .colhead td,
@@ -3329,6 +3360,7 @@ img[src="static/common/thumbsup.png"],
     padding-top: 13px;}
 
 /** convert ... to head **/
+#seedtime_tokens >h3,
 .thin#user_fight_attacks >.box.pad >h3,
 #gazelleview #titlerow p,
 #items_navigation h3,
@@ -4843,7 +4875,8 @@ abbr {
 .thin.torrent_history >form#torrent_history_search ~table tr.colhead.nobr td:not(:first-child),
 #requests table.border .colhead_dark td:not(:first-child),
 #existing_freeleech_pots .colhead td:not(:first-child),
-#existing_buff_pots .colhead td:not(:first-child) {
+#existing_buff_pots .colhead td:not(:first-child),
+table.adventure_table .colhead td:not(:first-child) {
     font-size: 15px;}
 
 .last_read {
@@ -5518,6 +5551,7 @@ span.size5 img {
 #user #wrapper .box.box_gold #box_gold_scrollbar td.label {
     font-size: 16px;
     line-height: 16px;}
+#seedtime_tokens #tokens_breakdown tr:not(.colhead) td:not(.label):hover,
 #user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td:not(.label):hover,
 #achievements tr:not(.colhead):not(:last-child) td:not(.achlabel):hover {
     background-color: var(--c-row-hvr);}
@@ -7228,11 +7262,13 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 #achievements td .italic:last-child {
     color: var(--c-anchor-hvr);}
 
+#seedtime_tokens #tokens_breakdown,
 #achievements {
     top: 39px;
     width: calc(100% - 2px);
     margin: 0 auto 25px auto;
 	position: relative;}
+#seedtime_tokens #tokens_breakdown:before,
 #achievements:before {
     z-index: 0;
     content: 'Achievements';
@@ -7247,6 +7283,9 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     position: absolute;
     left: 0;
     top: -38px;}
+#wrapper #seedtime_tokens #tokens_breakdown:before {
+    content: 'Breakdown';}
+#seedtime_tokens #tokens_breakdown:after,
 #achievements:after {
     content: '';
     position: absolute;
@@ -7260,16 +7299,8 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     box-shadow: var(--p-main-shdw);
     border: var(--p-main-brdr);}
 
-#achievements tr:not(.colhead) td:not(.achlabel) {
-    border: var(--p-table-brdr);}
-#wrapper #achievements td.achlabel +td {
-    border-left: none;}
-#wrapper #achievements tr:not(.colhead) td:last-child {
-    border-right: none;}
-#wrapper #achievements .colhead +tr td:not(.achlabel) {
-    border-top: none;}
-#wrapper #achievements tr:nth-last-child(2) td:not(.achlabel) {
-    border-bottom: none;}
+#achievements tr:not(.colhead) td {
+    border-bottom: var(--p-table-brdr);}
 #wrapper #achievements tr:last-child td {
     font-size: 11px !important;
     padding-left: 10px;
@@ -7282,9 +7313,11 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     text-align: right;}
 
 /* presudo element galore */
+#seedtime_tokens >.large_progress_bar,
 #user #content >#progress_bar {
     margin: 57px 11px 11px 11px;
     position: relative;}
+#seedtime_tokens >.large_progress_bar:before,
 #user #content >#progress_bar:before {
     content: '';
     position: absolute;
@@ -7311,6 +7344,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     z-index: 1;
     width: 100%;
     background: var(--p-head-grdnt);}
+#seedtime_tokens >.linkbox,
 #user #content >#progress_bar ~.linkbox {
     margin: 0 10px 25px 10px;
     padding: 0;
@@ -7410,11 +7444,14 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 
 
 
+#seedtime_tokens .large_progress_bar .points,
 #share_score .large_progress_bar .points {
     font-weight: bold;
     margin-left: 48.5%;
     text-align: center;
     z-index: 2;}
+#seedtime_tokens .large_progress_bar .last_drop,
+#seedtime_tokens .large_progress_bar .next_drop,
 #share_score .large_progress_bar .five_marker,
 #share_score .large_progress_bar .fifteen_marker {
     text-indent: 3px;
@@ -7423,6 +7460,9 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     color: var(--c-anchor-hvr);
     top: 0;
     right: 0;}
+#seedtime_tokens .large_progress_bar .last_drop,
+#seedtime_tokens .large_progress_bar .next_drop,
+#seedtime_tokens .large_progress_bar .points,
 #share_score .large_progress_bar .points,
 #share_score .large_progress_bar .five_marker,
 #share_score .large_progress_bar .fifteen_marker {
@@ -7504,14 +7544,17 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     line-height: 26px;
     margin: 0 10px 0 5px;}
 
+#adventureclub table#attacks_search tbody:first-child td,
 #adventureclub table#monsters_search tbody:first-child td {
     padding-top: 0;
     padding-bottom: 0;}
 #adventureclub form#adventure_search td.label strong,
 #adventureclub table#monsters_search td.label strong {
     font-weight: normal;}
+#adventureclub table#attacks_search tbody:first-child tr,
 #adventureclub table#monsters_search tbody:first-child tr {
     white-space: nowrap;}
+#adventureclub table#attacks_search tbody:first-child td.label,
 #adventureclub table#monsters_search tbody:first-child td.label {
     line-height: 26px;}
 #adventureclub table#monsters_search tbody:first-child input[type="submit"] {
@@ -7521,6 +7564,8 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     text-align: right;
     margin: 0;
     font-weight: 600;}
+#adventureclub table#attacks_search input#search_query {
+    width: calc(100% - 460px);}
 #adventureclub tbody#advanced_search tr:first-child td {
     padding-top: 10px;}
 #adventureclub tbody#advanced_search tr:first-child td.label {
@@ -7538,6 +7583,17 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     width: 120px;}
 #adventureclub .inline_list +.inline_list {
     margin-top: 5px;}
+#adventureclub table#monsters_search td.label:first-child {
+    width: auto;}
+#adventureclub #adventure_search table#attacks_search tr:nth-child(2) td:not(.label),
+#adventureclub #adventure_search table#monsters_search tr:nth-child(2) td:not(.label) {
+    line-height: 26px;}
+#adventureclub #adventure_search select +input[type="number"] {
+    margin-left: 5px;}
+#adventureclub #adventure_search table#monsters_search td.label:not(:first-child) br {
+    display: none;}
+#adventureclub #adventure_search tbody:first-child input[type="submit"] {
+    vertical-align: bottom;}
 
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__rendered,
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
@@ -7576,6 +7632,10 @@ option {
     text-align: right;}
 #adventureclub table#monsters_search #advanced_search tr:last-child td {
     vertical-align: top;}
+table.adventure_table h3 {
+    margin: 0;
+    font-weight: 600;
+    width: unset;}
 /***/
 
 
@@ -7593,8 +7653,7 @@ option {
      width: 19%;
      display: inline-block;}
 .attacks_manager #attributes ul li input:checked + label,
-.monsters_manager ul.inline_list li input:checked + label {
-     text-decoration: underline;}
+.monsters_manager ul.inline_list li input:checked + label {}
 .monsters_manager #attributes_div tr:not(:last-child) td {}
 
 #adventureclub ul.inline_list {margin-top: 0;}
@@ -7611,26 +7670,35 @@ option {
 #adventureclub td.image_col.show {width: 14%;}
 #adventureclub td.image_col img {max-height: 200px;}
 
+
+
+
 /****************************************************
 ************ Long Term Seeding Tokens ***************
 ****************************************************/
-#seedtime_tokens .large_progress_bar .last_drop {
-     top: 32px;
-     left: 0;}
-#seedtime_tokens .large_progress_bar .next_drop {
-     top: 32px;
-     right: 0;}
-#seedtime_tokens .large_progress_bar .points {
-     font-weight: bold;
-     margin-left: 48.5%;
-     padding-top: 7px;
-     text-align: center;
-     z-index: 2;
-     text-shadow:
-          -1px -1px 0 #333,
-          1px -1px 0 #333,
-          -1px 1px 0 #333,
-          1px 1px 0 #333;}
-#seedtime_tokens .large_progress_bar.month8 .main_bar {
-     background-color: rgb(99, 228, 255);
-     background-image: linear-gradient(to bottom, rgb(99,228,255), rgb(0,115,150));}
+#seedtime_tokens #tokens_breakdown td.label {
+    text-align: left;
+    background-color: var(--c-sb1);}
+#wrapper #seedtime_tokens >h3 {
+    margin: 0 auto -47px auto;
+    width: calc(100% - 22px);}
+#wrapper #seedtime_tokens >.large_progress_bar:before {
+    height: calc(100% + 88px);
+    bottom: -41px;}
+#wrapper #seedtime_tokens >h3:first-child {
+    margin-top: 13px;}
+#wrapper #seedtime_tokens >.linkbox {
+    margin-bottom: 27px;}
+#seedtime_tokens #tokens_breakdown td:last-child {
+    border-left: var(--p-table-brdr);}
+
+
+#wrapper #seedtime_tokens .large_progress_bar .last_drop {
+    text-indent: 0;
+    top: 0;
+    left: 5px;}
+#wrapper #seedtime_tokens .large_progress_bar .next_drop {
+    text-indent: 0;
+    top: 0;
+    right: 5px;}
+#seedtime_tokens .large_progress_bar.month8 .main_bar {}
