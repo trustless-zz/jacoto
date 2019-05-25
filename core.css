@@ -961,6 +961,7 @@ div,
     -o-transition: all .1s linear;
     transition: all .1s linear;}
 
+body >div, /* more info window at #shop */
 .ui-dialog,
 .fancybox-container div {
     -webkit-transition: auto;
@@ -1216,7 +1217,8 @@ strong.important_text,
 .info_description span[style*="red;"],
 #user .thin >h2:first-child +.center ~table.border span[style*="red;"],
 #reportsv2 #dynamic_form >table.border td.label [color="red"],
-#userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] {
+#userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"],
+.torrent_details blockquote#description [style="color: #ff0000;"] {
     color: var(--c-red) !important;}
 #index span[style="color: orange;"] {
     color: var(--c-orange) !important;
@@ -5675,19 +5677,19 @@ span.size5 img {
     color: var(--c-fl);}
 
 #color_leeching:hover,
-#color_leeching .torrent_info_tags:hover,
+#color_leeching:hover .torrent_info_tags,
 #color_leeching a:hover,
 #color_seeding:hover,
-#color_seeding .torrent_info_tags:hover,
+#color_seeding:hover .torrent_info_tags,
 #color_seeding a:hover,
 #color_uploaded:hover,
-#color_uploaded .torrent_info_tags:hover,
+#color_uploaded:hover .torrent_info_tags,
 #color_uploaded a:hover,
 #color_snatched:hover,
-#color_snatched .torrent_info_tags:hover,
+#color_snatched:hover .torrent_info_tags,
 #color_snatched a:hover,
 #color_downloaded:hover,
-#color_downloaded .torrent_info_tags:hover,
+#color_downloaded:hover .torrent_info_tags,
 #color_downloaded a:hover,
 #wrapper a:hover .freeleech_label {
     color: var(--c-anchor-hvr);}
@@ -5960,14 +5962,22 @@ span.size5 img {
 	margin: 0;
 	/* line-height: 1.2em; */
 	max-height: 34px;
-    width: calc(100% - 46px);
+    width: calc(100% - 10px);
 	position: absolute;
 	top: 0;
 	left: 0;
-    padding: 8px 23px;
+    padding: 8px 5px;
 	/* box-sizing: border-box; */
 	font-weight: 600;
 	background: var(--p-post-colhead-bcg);}
+
+.inventory #content h3.center:before,
+.item_li.owned h3.center:before {
+    content: '';
+    width: 18px;
+    display: block;
+    float: right;
+    height: 5px;}
 
 #shop .item_image_div {
 	height: 150px;
@@ -6162,7 +6172,8 @@ span.size5 img {
 
 .inventory #wrapper #content .item_li.featured h3.center,
 #shop .featured h3.center {
-    background: var(--p-sticky-colhead-bcg);}
+    background: var(--p-sticky-colhead-bcg);
+    text-indent: 18px;}
 .inventory #wrapper #content .item_li.featured {
     border-color: var(--c-input-brdr);}
 
@@ -7496,6 +7507,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 #adventureclub table#monsters_search tbody:first-child td {
     padding-top: 0;
     padding-bottom: 0;}
+#adventureclub form#adventure_search td.label strong,
 #adventureclub table#monsters_search td.label strong {
     font-weight: normal;}
 #adventureclub table#monsters_search tbody:first-child tr {
@@ -7513,9 +7525,19 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     padding-top: 10px;}
 #adventureclub tbody#advanced_search tr:first-child td.label {
     padding-top: 13px;}
+#adventureclub tbody#advanced_search td[colspan="3"],
+#adventureclub tbody#advanced_search td[colspan="4"],
+#adventureclub tbody#advanced_search td.label.label_right +td,
 #adventureclub tbody#advanced_search tr:first-child td[rowspan="6"] {
-    vertical-align: top;
+    vertical-align: top;}
+#adventureclub tbody#advanced_search tr:first-child td[rowspan="6"] {
     padding-top: 13px;}
+#adventureclub tbody#advanced_search li {
+    padding: 0;}
+#adventureclub tbody#advanced_search td.label:first-child {
+    width: 120px;}
+#adventureclub .inline_list +.inline_list {
+    margin-top: 5px;}
 
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__rendered,
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
@@ -7528,6 +7550,8 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     min-height: unset;}
 #wrapper .select2-container .select2-search--inline .select2-search__field {
     margin: 0;}
+#wrapper .select2-container--default .select2-search--inline .select2-search__field {
+    height: 24px;}
 #wrapper #content .select2-container--default .select2-selection--multiple .select2-selection__choice {
     margin: 1px 4px 1px 0;
     background-color: var(--c-edition);
