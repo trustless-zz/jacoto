@@ -775,7 +775,8 @@ table.gazelles_art_display,
 #log table#log_table,
 #share_score_breakdown,
 #adventureclub table.adventure_table,
-#adventureclub .linkbox:first-child +div +div {
+#adventureclub .linkbox:first-child +div +div,
+#crafting_panel >div {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -3469,6 +3470,7 @@ table.gazellepic,
 #gazelles .thin >h2:first-child +.box.pad,
 #log .thin >.header +.box.pad {
     margin-top: 12px;}
+#crafting_panel >h2:first-child,
 .thin.global_buffs_shop >div:first-child,
 .thin.freeleech_shop >div:first-child {
     margin-bottom: 12px;}
@@ -4578,16 +4580,49 @@ input[type="search"],
     display: block;
     padding-top: 38px;
     position: relative;}
+
+
+#crafting_panel #items #items-wrapper.custom-state-active:before,
+#equipment #items #items-wrapper.custom-state-active:before,
+#trading_panel .items-wrapper.custom-state-active:before,
+#backpack #items-wrapper.custom-state-active:before,/**/
+#crafting_panel #items #items-wrapper.custom-state-active:after,
+#equipment #items #items-wrapper.custom-state-active:after,
+#trading_panel .items-wrapper.custom-state-active:after,
+#backpack #items-wrapper.custom-state-active:after/**/ {
+    opacity: 0;}
+
+#crafting_panel #items #items-wrapper:before,
+#equipment #items #items-wrapper:before,
+#trading_panel .items-wrapper:before,
+#backpack #items-wrapper:before,/**/
+#crafting_panel #items #items-wrapper:after,
+#equipment #items #items-wrapper:after,
+#trading_panel .items-wrapper:after,
+#backpack #items-wrapper:after,/**/
 #bookmarks #collage_table tbody:after,
 #bookmarks #collage_table tbody:before {
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+    opacity: 1;
     content: '';
     position: absolute;
     height: 10px;
     left: 0;
     background: var(--p-fade-2);
-    width: calc(100% - 20px);}
+    width: calc(100% - 15px);
+    z-index: 9;}
+#crafting_panel #items #items-wrapper:before,
+#equipment #items #items-wrapper:before,
+#trading_panel .items-wrapper:before,
+#backpack #items-wrapper:before,/**/
 #bookmarks #collage_table tbody:before {
     top: 38px;}
+#crafting_panel #items #items-wrapper:after,
+#equipment #items #items-wrapper:after,
+#trading_panel .items-wrapper:after,
+#backpack #items-wrapper:after,/**/
 #bookmarks #collage_table tbody:after {
     transform: scaleY(-1);
     bottom: 0;}
@@ -5800,13 +5835,15 @@ span.size5 img {
 #equipment #items #items-wrapper,
 #trading_panel .items-wrapper,
 #backpack #items-wrapper {
-	margin-top: 0;
-	text-align: center;
-	height: 100%;
-	width: 100%;
-	float: left;
-	padding: 0;
-	position: relative;}
+    margin-top: 0;
+    text-align: center;
+    height: calc(100% - 38px);
+    width: 100%;
+    float: left;
+    padding: 10px 0 10px 10px;
+    /* position: relative; */
+    box-sizing: border-box;
+    overflow-y: scroll !important;}
 
 #crafting_panel #items #items-wrapper li,
 #equipment #items #items-wrapper li,
@@ -5825,33 +5862,42 @@ span.size5 img {
 #equipment .item,
 #trading_panel .item,
 #backpack .item {
-	list-style-type: none;
-	margin: 4px;
-	float: left;
-	width: 100px;
-	height: 100px;
-	overflow: hidden;
-	background-color: #1c1c1c;
-	text-align: center;
-	position: relative;
-	font-weight: bold;
-	color: #999;
-	border: 3px solid #000;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px;
-	-moz-box-shadow: 3px 3px 8px rgba(0,0,0,0.7);
-	-webkit-box-shadow: 3px 3px 8px rgba(0,0,0,0.7);
-	box-shadow: 3px 3px 8px rgba(0,0,0,0.7);}
+    -webkit-transition: border-color, box-shadow .1s linear;
+    -o-transition: border-color, box-shadow .1s linear;
+    transition: border-color, box-shadow .1s linear;
+    list-style-type: none;
+    margin: 0 10px 10px 0;
+    float: left;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    background-color: var(--c-edition);
+    text-align: center;
+    position: relative;
+    font-weight: 600;
+    color: var(--c-txt);
+    border: var(--p-img-brdr);
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);}
+#crafting_panel .item:hover,
+#equipment .item:hover,
+#trading_panel .item:hover,
+#backpack .item:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-color: var(--c-b3);}
 
 #crafting_panel .item h3,
 #equipment .item h3,
 #trading_panel .item h3,
 #backpack .item h3 {
+    margin: unset;
+    margin-block-end: 1em;
+    font-size: 16px;
+    line-height: 16px;
 	position: absolute;
 	bottom: 2px;
-	width: 100px;
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 6px #000;}
+	width: 100px;}
 
 #crafting_panel .item.used,
 #equipment .item.used,
@@ -7461,6 +7507,10 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     color: var(--c-anchor-hvr);
     top: 0;
     right: 0;}
+#crafting_panel .item h3,
+#equipment .item h3,
+#trading_panel .item h3,
+#backpack .item h3,
 #seedtime_tokens .large_progress_bar .last_drop,
 #seedtime_tokens .large_progress_bar .next_drop,
 #seedtime_tokens .large_progress_bar .points,
@@ -7723,15 +7773,33 @@ table.adventure_table h3 {
 	width: 100% !important;}
 
 
+#crafting_panel >div {
+    position: relative;}
+#crafting_panel #items:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 38px;
+    top: 0;
+    left: 0;
+    background: var(--p-head-grdnt);}
+#crafting_panel #items >span,
+#crafting_panel #items >input {
+    position: relative;}
+#crafting_panel #items >span {
+    font-size: 20px;
+    line-height: 38px;
+    font-weight: 600;}
+#crafting_panel #items >input {
+    width: calc(100% - 105px);
+    top: -2px;}
+
 /*** Crafting Panel (the panel with all your staff) ***/
 #crafting_panel #items {
 	width: 250px;
 	float: left;
-	margin: 0 10px 15px;
-	position: relative;
-	padding: 3px 0px 3px 3px;
-	height: 390px;
-	background-color: rgba(0,0,0,.7);
+	margin: 0 15px 15px 15px;
+	height: 420px;
 	text-align: center;
 	overflow: hidden;}
 
@@ -7740,17 +7808,23 @@ table.adventure_table h3 {
 	#crafting_panel #items {width: 125px;}}
 
 @media screen and (min-width: 1300px) {
-	#crafting_panel #items {width: 375px;}}
+	#crafting_panel #items {width: 397px;}}
 
 /* The combining panel */
 #crafting_panel #slots_panel {
-	background: url('../images/shop/crafting_panel.jpg');
-	height: 370px;
+	height: 420px;
 	width: 550px;
-	margin-bottom: 15px;
-	-moz-box-shadow: 0px 0px 10px 3px black;
-	-webkit-box-shadow: 0px 0px 10px 3px black;
-	box-shadow: 0px 0px 10px 3px black;}
+	margin-bottom: 15px;}
+#crafting_panel #slots_panel:before {
+    content: 'Crafting Place';
+    font-weight: 600;
+    background: var(--p-head-grdnt);
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    padding: 9px 10px;
+    display: block;}
+
 
 #crafting_panel .itemslot {
 	width: 106px;
@@ -7760,20 +7834,18 @@ table.adventure_table h3 {
 #crafting_panel .ui-widget-content {
 	background: transparent;}
 
-#crafting_panel .itemslot .item {
+/* #crafting_panel .itemslot .item {
 	width: 91px;
 	height: 91px;
 	border-width: 2px;
 	margin: 1px;}
-
 #crafting_panel .itemslot .item img {
 	max-width: 87px;
 	max-height: 87px;
 	padding: 2px;}
-
 #crafting_panel .itemslot .item h3 {
 	width: 89px;
-	bottom: -6px;}
+	bottom: -6px;} */
 
 /*** Position item slots ***/
 #crafting_panel .itemslot#slot_0 {margin: 13px 0 0 13px;}
