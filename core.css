@@ -2547,7 +2547,8 @@ body:not(#upload) #artist_tr + tr td.label,
 #collections table#new_collage td.label strong,
 #user .thin >h2:first-child +.center ~table.border .colhead strong,
 #top10 td.center.cats_col +td >strong,
-#log table#log_table .colhead strong {
+#log table#log_table .colhead strong,
+#torrent_history_search #th_search strong {
     font-weight: normal;}
 
 .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
@@ -7702,3 +7703,171 @@ table.adventure_table h3 {
     top: 0;
     right: 5px;}
 #seedtime_tokens .large_progress_bar.month8 .main_bar {}
+
+
+
+
+
+
+
+
+
+
+
+/***************************************
+************ Crafting Panel ************
+***************************************/
+
+/*** Crafting Manager ***/
+.crafting_manager .select2-container {
+	width: 100% !important;}
+
+
+/*** Crafting Panel (the panel with all your staff) ***/
+#crafting_panel #items {
+	width: 250px;
+	float: left;
+	margin: 0 10px 15px;
+	position: relative;
+	padding: 3px 0px 3px 3px;
+	height: 390px;
+	background-color: rgba(0,0,0,.7);
+	text-align: center;
+	overflow: hidden;}
+
+/* Size of items selector */
+@media screen and (min-width: 800px) and (max-width: 1175px) {
+	#crafting_panel #items {width: 125px;}}
+
+@media screen and (min-width: 1300px) {
+	#crafting_panel #items {width: 375px;}}
+
+/* The combining panel */
+#crafting_panel #slots_panel {
+	background: url('../images/shop/crafting_panel.jpg');
+	height: 370px;
+	width: 550px;
+	margin-bottom: 15px;
+	-moz-box-shadow: 0px 0px 10px 3px black;
+	-webkit-box-shadow: 0px 0px 10px 3px black;
+	box-shadow: 0px 0px 10px 3px black;}
+
+#crafting_panel .itemslot {
+	width: 106px;
+	height: 106px;
+	position: absolute;}
+
+#crafting_panel .ui-widget-content {
+	background: transparent;}
+
+#crafting_panel .itemslot .item {
+	width: 91px;
+	height: 91px;
+	border-width: 2px;
+	margin: 1px;}
+
+#crafting_panel .itemslot .item img {
+	max-width: 87px;
+	max-height: 87px;
+	padding: 2px;}
+
+#crafting_panel .itemslot .item h3 {
+	width: 89px;
+	bottom: -6px;}
+
+/*** Position item slots ***/
+#crafting_panel .itemslot#slot_0 {margin: 13px 0 0 13px;}
+#crafting_panel .itemslot#slot_1 {margin: 13px 0 0 132px;}
+#crafting_panel .itemslot#slot_2 {margin: 13px 0 0 251px;}
+#crafting_panel .itemslot#slot_3 {margin: 132px 0 0 13px;}
+#crafting_panel .itemslot#slot_4 {margin: 132px 0 0 132px;}
+#crafting_panel .itemslot#slot_5 {margin: 132px 0 0 251px;}
+#crafting_panel .itemslot#slot_6 {margin: 251px 0 0 13px;}
+#crafting_panel .itemslot#slot_7 {margin: 251px 0 0 132px;}
+#crafting_panel .itemslot#slot_8 {margin: 251px 0 0 251px;}
+#crafting_panel .itemslot#CraftingResult {margin: 131px 0 0 431px;}
+
+/*** Ability icons ***/
+#crafting_panel ul#abilities {
+	padding-left: 5px;}
+
+#crafting_panel ul#abilities li {
+	float: left;
+	width: 64px;
+	height: 64px;
+	padding: 0;
+	margin: 0;}
+
+#crafting_panel li#campfire {
+	background: url('../images/icons/campfire.png') no-repeat left;}
+
+#crafting_panel li#campfire.active {
+	background: url('../images/icons/campfire_activated.png') no-repeat left;}
+
+#crafting_panel li#forge {
+	background: url('../images/icons/forge.png') no-repeat left;}
+
+#crafting_panel li#forge.active {
+	background: url('../images/icons/forge_activated.png') no-repeat left;}
+
+#crafting_panel li#enchanting {
+	background: url('../images/icons/enchant.png') no-repeat left;}
+
+#crafting_panel li#enchanting.active {
+	background-image: url('../images/icons/enchant_activated.png');}
+
+/*** Crafting books ***/
+#crafting_recipes {
+	height: 290px;
+	width: 100%;
+	max-width: 1100px;
+	min-width: 200px;
+	padding: 3px;
+	margin: 0 auto;
+	background-color: rgba(19,9,0,.7);
+	overflow: hidden;}
+
+#crafting_recipes #items_list {
+	margin-top: 0;
+	text-align: center;
+	width: 100%;
+	position: relative;}
+
+#crafting_recipes li.item_li {
+	list-style: none;
+	float: left;
+	height: 250px;
+	width: 200px;
+	margin: 0 20px 20px 0;
+	cursor: pointer;
+	background: url('../images/shop/yellowbkg.png') center left no-repeat;}
+
+#crafting_recipes li.item_li > div {
+	position: relative;
+	width: 160px;
+	padding-left: 20px; }
+
+#crafting_recipes h3 {
+	position: absolute;
+	top: 10px;
+	width: 160px;
+	z-index: 10;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 6px #000;}
+
+#crafting_recipes .item_image_div {
+	height: 150px;
+	width: 160px;
+	position: absolute;
+	top: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 10px;}
+
+#crafting_recipes .item_center.item_image {
+	max-width: 150px;
+	max-height: 150px;
+	vertical-align: middle;
+	display: block;}
+
