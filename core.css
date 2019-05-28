@@ -776,7 +776,9 @@ table.gazelles_art_display,
 #share_score_breakdown,
 #adventureclub table.adventure_table,
 #adventureclub .linkbox:first-child +div +div,
-#crafting_panel >div {
+#crafting_panel >div,
+#equipment >div,
+#crafting_recipes {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -1206,6 +1208,8 @@ input[type=submit]:hover:active,
 #upload #content >div >table[style] span[style="color: yellow;"] {
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
+
+.book [style*="red;"],
 #torrents .torrent_details [style*="red;"],
 strong.important_text,
 #rules .thin >.box.pad strong[style*="red;"],
@@ -1903,6 +1907,7 @@ a .error_message:hover:active {
 .torrent_table td:not(#displayname):not([colspan="4"]),
 table.adventure_table .colhead td {
     white-space: nowrap;}
+#description,
 #collections #torrent_table .group.discog td[colspan="5"] >strong,
 #collections .group_torrent td span,
 #bookmarks #torrent_table td[colspan="3"],
@@ -3470,6 +3475,7 @@ table.gazellepic,
 #gazelles .thin >h2:first-child +.box.pad,
 #log .thin >.header +.box.pad {
     margin-top: 12px;}
+.equipment #equipment >h2:first-child,
 #crafting_panel >h2:first-child,
 .thin.global_buffs_shop >div:first-child,
 .thin.freeleech_shop >div:first-child {
@@ -4133,7 +4139,8 @@ input[type="search"],
 #inbox .thin[xmlns] >#messageform:before,
 #user .thin >h3:first-child +.linkbox +form:before,
 #log .thin >.header +.box.pad:before,
-#adventureclub .linkbox:first-child +div +div:before {
+#adventureclub .linkbox:first-child +div +div:before,
+#crafting_recipes:before {
     display: block;
     text-align: left;
     width: 100%;
@@ -4149,6 +4156,9 @@ input[type="search"],
     margin: 0;
     width: calc(100% - 20px);
     content: 'New message';}
+#wrapper #crafting_recipes:before {
+    margin: 0;
+    content: 'Crafting recipes';}
 .thin.torrent_history >form#torrent_history_search:before {
     content: 'Search by Torrent Name';}
 .box.pad.box_buffs_info:before,
@@ -4601,7 +4611,9 @@ input[type="search"],
 #trading_panel .items-wrapper:after,
 #backpack #items-wrapper:after,/**/
 #bookmarks #collage_table tbody:after,
-#bookmarks #collage_table tbody:before {
+#bookmarks #collage_table tbody:before,
+#crafting_recipes #items_list:before,
+#crafting_recipes #items_list:after {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;
@@ -4617,13 +4629,15 @@ input[type="search"],
 #equipment #items #items-wrapper:before,
 #trading_panel .items-wrapper:before,
 #backpack #items-wrapper:before,/**/
-#bookmarks #collage_table tbody:before {
+#bookmarks #collage_table tbody:before,
+#crafting_recipes #items_list:before {
     top: 38px;}
 #crafting_panel #items #items-wrapper:after,
 #equipment #items #items-wrapper:after,
 #trading_panel .items-wrapper:after,
 #backpack #items-wrapper:after,/**/
-#bookmarks #collage_table tbody:after {
+#bookmarks #collage_table tbody:after,
+#crafting_recipes #items_list:after {
     transform: scaleY(-1);
     bottom: 0;}
 #collections #torrent_table .colhead td[width="70%"],
@@ -5560,6 +5574,7 @@ span.size5 img {
     margin: -10px -10px 0 -10px;
     font-weight: 600;}
 
+/* disabling 'fancy' scrollbars */
 .ps-scrollbar-y-rail,
 .ps-scrollbar-x-rail {
     display: none !important;}
@@ -5840,7 +5855,7 @@ span.size5 img {
     height: calc(100% - 38px);
     width: 100%;
     float: left;
-    padding: 10px 0 10px 10px;
+    padding: 10px 0 0 10px;
     /* position: relative; */
     box-sizing: border-box;
     overflow-y: scroll !important;}
@@ -5862,6 +5877,7 @@ span.size5 img {
 #equipment .item,
 #trading_panel .item,
 #backpack .item {
+    padding: 4px; /**/
     -webkit-transition: border-color, box-shadow .1s linear;
     -o-transition: border-color, box-shadow .1s linear;
     transition: border-color, box-shadow .1s linear;
@@ -7507,6 +7523,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     color: var(--c-anchor-hvr);
     top: 0;
     right: 0;}
+#crafting_recipes h3,
 #crafting_panel .item h3,
 #equipment .item h3,
 #trading_panel .item h3,
@@ -7772,9 +7789,10 @@ table.adventure_table h3 {
 .crafting_manager .select2-container {
 	width: 100% !important;}
 
-
+#equipment >div,
 #crafting_panel >div {
     position: relative;}
+#equipment #items:before,
 #crafting_panel #items:before {
     position: absolute;
     content: '';
@@ -7783,20 +7801,25 @@ table.adventure_table h3 {
     top: 0;
     left: 0;
     background: var(--p-head-grdnt);}
+#equipment #items_inner >span,
+#equipment #items_inner >input,
 #crafting_panel #items >span,
 #crafting_panel #items >input {
     position: relative;}
+#equipment #items_inner >span,
 #crafting_panel #items >span {
     font-size: 20px;
     line-height: 38px;
     font-weight: 600;}
+#equipment #items_inner >input,
 #crafting_panel #items >input {
     width: calc(100% - 105px);
     top: -2px;}
 
 /*** Crafting Panel (the panel with all your staff) ***/
+#equipment #items,
 #crafting_panel #items {
-	width: 250px;
+	width: 397px;
 	float: left;
 	margin: 0 15px 15px 15px;
 	height: 420px;
@@ -7804,18 +7827,15 @@ table.adventure_table h3 {
 	overflow: hidden;}
 
 /* Size of items selector */
-@media screen and (min-width: 800px) and (max-width: 1175px) {
-	#crafting_panel #items {width: 125px;}}
-
-@media screen and (min-width: 1300px) {
-	#crafting_panel #items {width: 397px;}}
 
 /* The combining panel */
 #crafting_panel #slots_panel {
 	height: 420px;
 	width: 550px;
 	margin-bottom: 15px;}
+#equipment #equip_panel:before,
 #crafting_panel #slots_panel:before {
+    text-align: left;
     content: 'Crafting Place';
     font-weight: 600;
     background: var(--p-head-grdnt);
@@ -7824,15 +7844,14 @@ table.adventure_table h3 {
     height: 20px;
     padding: 9px 10px;
     display: block;}
+#wrapper #equipment #equip_panel:before {
+    content: 'Equipment Panel';}
 
 
 #crafting_panel .itemslot {
-	width: 106px;
-	height: 106px;
+	width: 114px;
+	height: 114px;
 	position: absolute;}
-
-#crafting_panel .ui-widget-content {
-	background: transparent;}
 
 /* #crafting_panel .itemslot .item {
 	width: 91px;
@@ -7848,16 +7867,23 @@ table.adventure_table h3 {
 	bottom: -6px;} */
 
 /*** Position item slots ***/
-#crafting_panel .itemslot#slot_0 {margin: 13px 0 0 13px;}
-#crafting_panel .itemslot#slot_1 {margin: 13px 0 0 132px;}
-#crafting_panel .itemslot#slot_2 {margin: 13px 0 0 251px;}
-#crafting_panel .itemslot#slot_3 {margin: 132px 0 0 13px;}
-#crafting_panel .itemslot#slot_4 {margin: 132px 0 0 132px;}
-#crafting_panel .itemslot#slot_5 {margin: 132px 0 0 251px;}
-#crafting_panel .itemslot#slot_6 {margin: 251px 0 0 13px;}
-#crafting_panel .itemslot#slot_7 {margin: 251px 0 0 132px;}
-#crafting_panel .itemslot#slot_8 {margin: 251px 0 0 251px;}
-#crafting_panel .itemslot#CraftingResult {margin: 131px 0 0 431px;}
+#equipment .itemslot,
+#crafting_panel .itemslot {
+    border-color: var(--c-table-brdr);
+    background-color: var(--c-tgroup);}
+#crafting_panel .itemslot#slot_0 {margin: 10px  0 0 10px;}
+#crafting_panel .itemslot#slot_1 {margin: 10px  0 0 136px;}
+#crafting_panel .itemslot#slot_2 {margin: 10px  0 0 262px;}
+#crafting_panel .itemslot#slot_3 {margin: 136px 0 0 10px;}
+#crafting_panel .itemslot#slot_4 {margin: 136px 0 0 136px;}
+#crafting_panel .itemslot#slot_5 {margin: 136px 0 0 262px;}
+#crafting_panel .itemslot#slot_6 {margin: 262px 0 0 10px;}
+#crafting_panel .itemslot#slot_7 {margin: 262px 0 0 136px;}
+#crafting_panel .itemslot#slot_8 {margin: 262px 0 0 262px;}
+#crafting_panel .itemslot#CraftingResult {
+    margin: 136px 0 0 424px;
+    border-color: var(--c-main-brdr);
+    background-color: var(--c-input);}
 
 /*** Ability icons ***/
 #crafting_panel ul#abilities {
@@ -7870,65 +7896,77 @@ table.adventure_table h3 {
 	padding: 0;
 	margin: 0;}
 
+/* revisit */
 #crafting_panel li#campfire {
-	background: url('../images/icons/campfire.png') no-repeat left;}
-
+	background: url('https://gazellegames.net/static/styles/game_room/images/icons/campfire.png') no-repeat left;}
 #crafting_panel li#campfire.active {
-	background: url('../images/icons/campfire_activated.png') no-repeat left;}
-
+	background: url('https://gazellegames.net/static/styles/game_room/images/icons/campfire_activated.png') no-repeat left;}
 #crafting_panel li#forge {
-	background: url('../images/icons/forge.png') no-repeat left;}
-
+	background: url('https://gazellegames.net/static/styles/game_room/images/icons/forge.png') no-repeat left;}
 #crafting_panel li#forge.active {
-	background: url('../images/icons/forge_activated.png') no-repeat left;}
-
+	background: url('https://gazellegames.net/static/styles/game_room/images/icons/forge_activated.png') no-repeat left;}
 #crafting_panel li#enchanting {
-	background: url('../images/icons/enchant.png') no-repeat left;}
-
+	background: url('https://gazellegames.net/static/styles/game_room/images/icons/enchant.png') no-repeat left;}
 #crafting_panel li#enchanting.active {
-	background-image: url('../images/icons/enchant_activated.png');}
+	background-image: url('https://gazellegames.net/static/styles/game_room/images/icons/enchant_activated.png') no-repeat left;}
 
 /*** Crafting books ***/
 #crafting_recipes {
-	height: 290px;
+    position: relative;
+    box-sizing: border-box;
+	height: 400px;
 	width: 100%;
-	max-width: 1100px;
-	min-width: 200px;
-	padding: 3px;
+    min-width: 300px;
+	padding: 0;
 	margin: 0 auto;
-	background-color: rgba(19,9,0,.7);
 	overflow: hidden;}
 
 #crafting_recipes #items_list {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px 0 10px 10px;
+    overflow-y: scroll !important;
+    height: calc(100% - 38px);
 	margin-top: 0;
 	text-align: center;
-	width: 100%;
-	position: relative;}
+	width: 100%;}
 
 #crafting_recipes li.item_li {
 	list-style: none;
 	float: left;
 	height: 250px;
-	width: 200px;
-	margin: 0 20px 20px 0;
+    width: calc(100% / 6 - 10px);
+    margin: 0 10px 10px 0;
 	cursor: pointer;
-	background: url('../images/shop/yellowbkg.png') center left no-repeat;}
+    background-color: var(--c-type-2);
+    outline: 3px solid var(--c-type-2);
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    outline-offset: -3px;}
+#crafting_recipes li.item_li:hover {
+    outline-color: var(--c-b3);
+    -webkit-box-shadow: none;
+    box-shadow: none;}
 
 #crafting_recipes li.item_li > div {
 	position: relative;
-	width: 160px;
-	padding-left: 20px; }
+    width: calc(100% - 20px);
+    padding-left: 20px;}
 
 #crafting_recipes h3 {
+    font-size: 16px;
+    line-height: 16px;
+    margin: unset;
 	position: absolute;
 	top: 10px;
-	width: 160px;
-	z-index: 10;
-	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 6px #000;}
+	width: calc(100% - 40px);
+	z-index: 1;}
+#crafting_recipes li.item_li:hover h3 {
+    color: var(--c-anchor-hvr);}
 
 #crafting_recipes .item_image_div {
 	height: 150px;
-	width: 160px;
+	width: calc(100% - 40px);
 	position: absolute;
 	top: 50px;
 	display: flex;
@@ -7938,8 +7976,194 @@ table.adventure_table h3 {
 	margin-top: 10px;}
 
 #crafting_recipes .item_center.item_image {
-	max-width: 150px;
+	max-width: calc(100% - 40px);
 	max-height: 150px;
 	vertical-align: middle;
 	display: block;}
 
+
+
+
+
+
+
+
+
+
+
+
+
+/**************************************************
+**************** Equipment Panel ******************
+**************************************************/
+
+#equipment #items {
+	/* width: 250px;
+	float: left;
+	margin: 0 10px;
+	position: relative;
+	padding: 3px 0px 3px 3px;
+	height: 800px;
+	background-color: rgba(0,0,0,.7);
+	text-align: center;
+	overflow: hidden; */}
+
+/*** Size of items selector ***/
+
+/*** For top and bottom highlights when hovering over item slot ***/
+#equipment #items_inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;}
+
+/** equipment map **/
+#equipment .itemslot:before {
+    position: absolute;
+    left: 0;
+    top: 6px;
+    line-height: 1em;
+    color: var(--c-text-s);
+    width: 100%;}
+#equipment .itemslot#slot_1:before {
+    content: 'Helmet';}
+#equipment .itemslot#slot_2:before {
+    content: 'Upper Body';}
+#equipment .itemslot#slot_3:before {
+    content: 'Arms';}
+#equipment .itemslot#slot_4:before {
+    content: 'Legs';}
+#equipment .itemslot#slot_5:before {
+    content: 'Hands';}
+#equipment .itemslot#slot_6:before {
+    content: 'Feet';}
+#equipment .itemslot#slot_7:before {
+    content: 'Left-Hand Weapon';}
+#equipment .itemslot#slot_8:before {
+    content: 'Right-Hand Weapon';}
+#equipment .itemslot#slot_9:before {
+    content: 'Necklace';}
+#equipment .itemslot#slot_10:before {
+    content: 'Left-Hand Ring';}
+#equipment .itemslot#slot_11:before {
+    content: 'Right-Hand Ring';}
+#equipment .itemslot#slot_12:before {
+    content: 'Back';}
+#equipment .itemslot#slot_13:before {
+    content: 'Clothes';}
+#equipment .itemslot#slot_14:before,
+#equipment .itemslot#slot_15:before {
+    content: 'Additional';}
+
+#equipment .itemslot#slot_1:after,
+#equipment .itemslot#slot_2:after,
+#equipment .itemslot#slot_3:after,
+#equipment .itemslot#slot_4:after,
+#equipment .itemslot#slot_5:after,
+#equipment .itemslot#slot_7:after,
+#equipment .itemslot#slot_8:after,
+#equipment .itemslot#slot_9:after,
+#equipment .itemslot#slot_10:after,
+#equipment .itemslot#slot_11:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--c-tor-rowb);
+    position: absolute;}
+#equipment .itemslot#slot_7:after,
+#equipment .itemslot#slot_8:after {
+    top: -11px;
+    left: 52px;}
+#equipment .itemslot#slot_1:after,
+#equipment .itemslot#slot_2:after,
+#equipment .itemslot#slot_4:after,
+#equipment .itemslot#slot_9:after,
+#equipment .itemslot#slot_10:after,
+#equipment .itemslot#slot_11:after {
+    bottom: -11px;
+    left: 52px;}
+ #equipment .itemslot#slot_3:after {
+    left: -11px;
+    top: 42px;}
+ #equipment .itemslot#slot_5:after {
+    right: -11px;
+    top: 42px;}
+/** /equipment map **/
+
+#equipment .top_highlight #items_inner ul:before {
+	-webkit-box-shadow: inset 0 4px 10px -6px var(--c-on);
+	box-shadow: inset 0 4px 10px -6px var(--c-on);}
+#equipment .bottom_highlight #items_inner ul:after {
+	-webkit-box-shadow: inset 0 4px 10px -6px var(--c-on);
+	box-shadow: inset 0 4px 10px -6px var(--c-on);}
+#equipment .top_highlight.bottom_highlight #items_inner ul:before,
+#equipment .top_highlight.bottom_highlight #items_inner ul:after {
+	-webkit-box-shadow: inset 0 4px 10px -6px var(--c-on);
+	box-shadow: inset 0 4px 10px -6px var(--c-on);}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+    background: var(--c-high) !important ;}
+
+#equipment #purchase {
+	margin-top: 35px;}
+
+#equipment #equip_panel {
+	height: 794px;
+	width: 516px;}
+
+#equipment .itemslot {
+	width: 114px;
+	height: 114px;
+	position: absolute;}
+
+#equipment .itemslot.inactive {
+	background: var(--c-body);}
+
+#equipment .itemslot .item:hover {
+    border-color: var(--c-b3);}
+
+#equipment .itemslot .item img {}
+
+#equipment .itemslot .item h3 {}
+
+#equipment {
+	margin: 0 auto;
+	text-align: center;}
+
+#equipment h2 {
+	text-align: left;}
+
+#equipment #equip_panel {
+	display: inline-block;}
+
+#equipment div.itemslot.highlight {
+	-webkit-box-shadow: inset 0 0 4px var(--c-on);
+	box-shadow: inset 0 0 4px var(--c-on);}
+
+#equipment .item.highlight {
+	-webkit-box-shadow: 0 0 4px var(--c-on);
+    box-shadow: 0 0 4px var(--c-on);
+	border-color: var(--c-sticky-id-brdr);}
+
+#equipment #avatar_preview {
+	margin-top: 15px;}
+
+/*** Position item slots ***/
+#equipment .itemslot#slot_1 {margin: 68px 0 0 200px;}
+#equipment .itemslot#slot_9 {margin: 194px 0 0 200px;}
+#equipment .itemslot#slot_2 {margin: 320px 0 0 200px;}
+#equipment .itemslot#slot_4 {margin: 446px 0 0 200px;}
+#equipment .itemslot#slot_6 {margin: 572px 0 0 200px;}
+#equipment .itemslot#slot_5 {margin: 310px 0 0 74px;}
+#equipment .itemslot#slot_3 {margin: 310px 0 0 326px;}
+#equipment .itemslot#slot_11 {margin: 184px 0 0 41px;}
+#equipment .itemslot#slot_10 {margin: 184px 0 0 359px;}
+#equipment .itemslot#slot_8 {margin: 436px 0 0 41px;}
+#equipment .itemslot#slot_7 {margin: 436px 0 0 359px;}
+#equipment .itemslot#slot_13 {margin: 10px 0 0 10px;}
+#equipment .itemslot#slot_12 {margin: 10px 0 0 390px;}
+#equipment .itemslot#slot_14 {margin: 630px 0 0 10px;}
+#equipment .itemslot#slot_15 {margin: 630px 0 0 390px;}
