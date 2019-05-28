@@ -646,7 +646,8 @@ tr.likes td[id^="likers_"] >strong,
 .last_read,
 h2#username span#tip_user img,
 .inventory .trash_icon,
-#userhistory .colhead_dark a img[alt="Last read post"] {
+#userhistory .colhead_dark a img[alt="Last read post"],
+#wrapper #trading_panel .gold_trade .gold_trade_buttons img {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -2319,6 +2320,7 @@ input[type="search"]:focus {
 textarea:focus,
 select:focus,
 input:focus,
+#wrapper #trading_panel .gold_trade input#my_gold_trade_amount:focus,
 #wrapper .select2-container--default .select2-selection--multiple[aria-expanded="true"] {
     color: var(--c-anchor-hvr);
     border-color: var(--c-b1);
@@ -4644,13 +4646,15 @@ input[type="search"],
     background: var(--p-fade-2);
     width: calc(100% - 15px);
     z-index: 9;}
+#trading_panel #items #main-items-wrapper:before,
 #crafting_panel #items #items-wrapper:before,
 #equipment #items #items-wrapper:before,
-#trading_panel .items-wrapper:before,
 #backpack #items-wrapper:before,/**/
 #bookmarks #collage_table tbody:before,
 #crafting_recipes #items_list:before {
     top: 38px;}
+#trading_panel .trade_table .items-wrapper:before {
+    top: 80px;}
 #crafting_panel #items #items-wrapper:after,
 #equipment #items #items-wrapper:after,
 #trading_panel .items-wrapper:after,
@@ -8222,6 +8226,7 @@ table.adventure_table h3 {
 	overflow: hidden;
     padding: unset;}
 #wrapper #trading_panel .trade_table {
+    position: relative;
     display: flex;
     flex-flow: column;
     background: unset;}
@@ -8259,10 +8264,8 @@ table.adventure_table h3 {
 .trade_table#my_trade_table {
 	margin-left: 40px;}
 
-#trading_panel .trade_table .items-wrapper {
-	height: 600px;
-	width: 270px;
-	margin-left: 15px;}
+#wrapper #trading_panel .trade_table .items-wrapper {
+	margin: 0;}
 
 #trading_panel .trade_table .items-wrapper .item {
 	margin: 4px 10px 4px 10px;}
@@ -8353,15 +8356,39 @@ table.adventure_table h3 {
 	margin: 0;
 	text-align: center;}
 
-#trading_panel .gold_trade .gold_trade_max {
+#wrapper #trading_panel .gold_trade .gold_trade_max {
+    position: absolute;
+    width: 90px;
+    top: 38px;
+    margin: 2px 0;
+    right: 85px;
 	display: block;
-	font-weight: bold;}
+	font-weight: 600;}
 
 #wrapper #trading_panel .gold_trade .gold_trade_box {
-	width: calc(100% - 70px);
+    margin: 0;
+	width: calc(100% - 175px);
+    height: 42px;
 	float: left;
 	border: none;
 	border-radius: 0;}
+
+#wrapper #trading_panel .trade_table#other_trade_table .gold_trade_box .gold_trade_box_left {
+    margin: 8px 5px 8px 10px;
+    width: 26px;
+    height: 26px;}
+#wrapper #trading_panel .trade_table#other_trade_table .gold_trade_box .gold_trade_box_right {
+    width: calc(100% - 41px);
+    text-align: left;
+    text-indent: 5px;}
+#wrapper #trading_panel .gold_trade span#other_gold_trade_amount {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 42px;}
+#wrapper #trading_panel .trade_table#other_trade_table .gold_trade_box img {
+    width: 26px;
+    height: 26px;
+    padding-left: 26px;}
 
 #trading_panel #other_gold_trade .gold_trade_box {
 	margin-top: 15px;
@@ -8385,9 +8412,13 @@ table.adventure_table h3 {
 
 #wrapper #trading_panel .gold_trade .gold_trade_box_right {
 	height: 100%;
-	width: 204px;
+	width: calc(100% - 33px);
 	float: left;
 	background-color: unset;}
+#wrapper #trading_panel .gold_trade input#my_gold_trade_amount {
+    width: 100%;
+    font-weight: 600;
+    text-align: left;}
 
 #trading_panel .gold_trade .gold_trade_amount {
 	width: 200px;
@@ -8408,18 +8439,20 @@ table.adventure_table h3 {
 #wrapper #trading_panel .gold_trade .gold_trade_buttons {
 	width: 70px;
 	float: right;
-	margin: 0;}
+    height: 28px;
+    margin: 7px 10px 7px 0;}
 #wrapper #trading_panel .gold_trade .gold_trade_buttons a {
     padding: 1px;
     margin-left: 5px;
     display: inline-block;}
 
 #wrapper #trading_panel .gold_trade .gold_trade_buttons img {
+    margin: 0;
 	height: 26px;
-	width: 26px;}
-
-#trading_panel .gold_trade .gold_trade_buttons #gold_trade_subtract img {
-	margin-top: 0;}
+	width: 26px;
+    padding-left: 26px;}
+#wrapper #trading_panel .gold_trade .gold_trade_buttons #gold_trade_subtract img {
+    margin: 0;}
 
 /*** Value ***/
 .trade_value {

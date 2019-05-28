@@ -201,8 +201,12 @@ img[title="Gold"],
 #requests_donate img,
 #stats_gold a {
     background-image: url('icons/gold.svg');}
-h2#username span#tip_user img {
+h2#username span#tip_user img,
+#wrapper #trading_panel .gold_trade a#gold_trade_add img {
     background-image: url('icons/gold_plus.svg');}
+#wrapper #trading_panel .gold_trade a#gold_trade_subtract img {
+    background-image: url('icons/gold_minus.svg');}
+
 /** download(ed) **/
 #stats_leeching a {
     background-image: url('icons/dark/leeching.svg');}
