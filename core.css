@@ -38,8 +38,14 @@
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
     --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
     --p-fade-2:                         linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
-    --p-lh: 							1.35714286805; /* calc(19 / 14), 1.357142857142857 says 19px but is actually 18px when measured */
+    --p-lh: 							1.35714286805; /* calc(19 / 14), 1.357142857142857 says 19px but actually is 18px when measured */
     --p-dot3:							-.02142857142em;}
+
+/** Get More News - duplicate news bug fix **/
+#index .box.news_post:empty,
+#index .box.news_post >.head:nth-child(3),
+#index .box.news_post >.head:nth-child(3) +.pad {
+    display: none;}
 
 .amigacd32 {background: url(caticons/amigacd32_dark.svg);}
 .amstradcpc {background: url(caticons/amstradcpc_dark.svg);}
@@ -4383,6 +4389,7 @@ input[type="search"],
     margin-top: -5px;}
 
 /** manually removing embedded brackets **/
+#more_news >a,
 #comments .linkbox a[href="comments.php?action=requests&type=voted"],
 #comments .linkbox a[href="comments.php?action=requests&type=created"],
 #comments .linkbox a[href="comments.php?action=collages&type=contributed"],
@@ -4442,7 +4449,8 @@ input[type="search"],
     line-height: 0;}
 .linkbox >strong,
 .linkbox a,
-#wrapper #content .linkbox a:before {
+#wrapper #content .linkbox a:before,
+#more_news >a:before {
     font-size: 14px;
     line-height: var(--p-lh);
     margin: 0 5px;}
@@ -4453,33 +4461,34 @@ input[type="search"],
     margin-top: 2px;
     display: inline-block;}
 
+#more_news >a:before                                                            {content: 'Get More News';}
 #comments .linkbox a[href="comments.php?action=requests&type=voted"]:before     {content: "Display comments left on requests you've voted on";}
-#comments .linkbox a[href="comments.php?action=requests&type=created"]:before   {content: "Display comments left on your requests";}
+#comments .linkbox a[href="comments.php?action=requests&type=created"]:before   {content: 'Display comments left on your requests';}
 #comments .linkbox a[href="comments.php?action=collages&type=contributed"]:before{content: "Display comments left on collections you've contributed to";}
-#comments .linkbox a[href="comments.php?action=collages&type=created"]:before   {content: "Display comments left on your collections";}
-#comments .linkbox a[href="comments.php?action=torrents"]:before                {content: "Torrent comments";}
-#comments .linkbox a[href="comments.php?action=torrents&type=uploaded"]:before  {content: "Display comments left on your uploads";}
-#comments .linkbox a[href="comments.php?action=requests"]:before                {content: "Request comments";}
-#comments .linkbox a[href="comments.php?action=collages"]:before                {content: "Collection comments";}
-#collections .linkbox a[href^="torrents.php?taglist="]:before                   {content: "Search collection";}
-.linkbox a[href^="torrents.php?action=editimages&groupid"]:before               {content: "Edit Images";}
-.linkbox a[href^="torrents.php?action=editgroup&groupid"]:before                {content: "Edit description";}
+#comments .linkbox a[href="comments.php?action=collages&type=created"]:before   {content: 'Display comments left on your collections';}
+#comments .linkbox a[href="comments.php?action=torrents"]:before                {content: 'Torrent comments';}
+#comments .linkbox a[href="comments.php?action=torrents&type=uploaded"]:before  {content: 'Display comments left on your uploads';}
+#comments .linkbox a[href="comments.php?action=requests"]:before                {content: 'Request comments';}
+#comments .linkbox a[href="comments.php?action=collages"]:before                {content: 'Collection comments';}
+#collections .linkbox a[href^="torrents.php?taglist="]:before                   {content: 'Search collection';}
+.linkbox a[href^="torrents.php?action=editimages&groupid"]:before               {content: 'Edit Images';}
+.linkbox a[href^="torrents.php?action=editgroup&groupid"]:before                {content: 'Edit description';}
 .linkbox a[href^="?type=hitnrun&userid"]:before                                 {content: "Hit 'n' Runs";}
-#slides >.nobullet a:before                                                     {content: "See the Current Pick";}
-.linkbox a[onclick^="popup_add("]:before                                        {content: "Add a user";}
-.linkbox a[href="collections.php"]:before                                       {content: "List of collections";}
-.linkbox a[href^="collections.php?action=manage&collageid"]:before              {content: "Manage torrents";}
-.linkbox a[href^="reports.php?action=report&type=collage&id"]:before            {content: "Report collection";}
-.linkbox a[href^="collections.php?action=delete&collageid"]:before              {content: "Delete";}
-.linkbox a[href="top10.php?type=games"]:before                                  {content: "Games";}
-.linkbox a[href="top10.php?type=torrents"]:before                               {content: "Torrents";}
-.linkbox a[href="top10.php?type=users"]:before                                  {content: "Users";}
-.linkbox a[href="top10.php?type=uploaders"]:before                              {content: "Uploaders";}
-.linkbox a[href="top10.php?type=tags"]:before                                   {content: "Tags";}
-.linkbox a[href^="artist.php?action=notify&artistid"]:before                    {content: "Notify of new uploads";}
-.linkbox a[href^="upload.php?artistname"]:before                                {content: "New Upload";}
-.linkbox a[href^="requests.php?action=new&artistid"]:before                     {content: "Add Request";}
-.linkbox a[href^="reports.php?action=report&type=request&"]:before              {content: "Report Request";}
+#slides >.nobullet a:before                                                     {content: 'See the Current Pick';}
+.linkbox a[onclick^="popup_add("]:before                                        {content: 'Add a user';}
+.linkbox a[href="collections.php"]:before                                       {content: 'List of collections';}
+.linkbox a[href^="collections.php?action=manage&collageid"]:before              {content: 'Manage torrents';}
+.linkbox a[href^="reports.php?action=report&type=collage&id"]:before            {content: 'Report collection';}
+.linkbox a[href^="collections.php?action=delete&collageid"]:before              {content: 'Delete';}
+.linkbox a[href="top10.php?type=games"]:before                                  {content: 'Games';}
+.linkbox a[href="top10.php?type=torrents"]:before                               {content: 'Torrents';}
+.linkbox a[href="top10.php?type=users"]:before                                  {content: 'Users';}
+.linkbox a[href="top10.php?type=uploaders"]:before                              {content: 'Uploaders';}
+.linkbox a[href="top10.php?type=tags"]:before                                   {content: 'Tags';}
+.linkbox a[href^="artist.php?action=notify&artistid"]:before                    {content: 'Notify of new uploads';}
+.linkbox a[href^="upload.php?artistname"]:before                                {content: 'New Upload';}
+.linkbox a[href^="requests.php?action=new&artistid"]:before                     {content: 'Add Request';}
+.linkbox a[href^="reports.php?action=report&type=request&"]:before              {content: 'Report Request';}
 .linkbox a[href="requests.php?type=voted"]:before                               {content: "Requests I've voted on";}
 .linkbox a[href="requests.php?type=created"]:before                             {content: 'My requests';}
 .linkbox a[href="requests.php?action=new&request_currency=upload"]:before       {content: 'New GB request';}
@@ -4508,6 +4517,7 @@ input[type="search"],
 .linkbox a[href="inbox.php"]:before                                             {content: 'Inbox';}
 .linkbox a[href="wiki.php?action=create"]:before                                {content: 'Create';}
 
+#more_news >a:hover:before,
 #slides >.nobullet a:hover:before,
 .linkbox a:hover:before {
     background-color: var(--c-anchor-hvr-bcg);}
