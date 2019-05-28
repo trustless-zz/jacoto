@@ -967,7 +967,8 @@ fancybox-button {
 
 body >div, /* more info window at #shop */
 .ui-dialog,
-.fancybox-container div {
+.fancybox-container div,
+#equipment .itemslot >div {
     -webkit-transition: auto;
     -o-transition: auto;
     transition: auto;}
@@ -4922,7 +4923,7 @@ abbr {
 #collections table#new_collage td.label,
 #collections .thin >h2:first-child +.center td.label {
     width: 75px;}
-.thin.torrent_history >form#torrent_history_search ~table tr.colhead.nobr td:not(:first-child),
+.thin.torrent_history >form#torrent_history_search ~table tr.colhead.nobr td:nth-child(n+3),
 #requests table.border .colhead_dark td:not(:first-child),
 #existing_freeleech_pots .colhead td:not(:first-child),
 #existing_buff_pots .colhead td:not(:first-child),
@@ -7830,7 +7831,7 @@ table.adventure_table h3 {
 
 /* The combining panel */
 #crafting_panel #slots_panel {
-	height: 420px;
+	height: 426px;
 	width: 550px;
 	margin-bottom: 15px;}
 #equipment #equip_panel:before,
@@ -7997,16 +7998,8 @@ table.adventure_table h3 {
 **************** Equipment Panel ******************
 **************************************************/
 
-#equipment #items {
-	/* width: 250px;
-	float: left;
-	margin: 0 10px;
-	position: relative;
-	padding: 3px 0px 3px 3px;
-	height: 800px;
-	background-color: rgba(0,0,0,.7);
-	text-align: center;
-	overflow: hidden; */}
+#wrapper #equipment #items {
+    height: 792px;}
 
 /*** Size of items selector ***/
 
@@ -8167,3 +8160,757 @@ table.adventure_table h3 {
 #equipment .itemslot#slot_12 {margin: 10px 0 0 390px;}
 #equipment .itemslot#slot_14 {margin: 630px 0 0 10px;}
 #equipment .itemslot#slot_15 {margin: 630px 0 0 390px;}
+
+
+
+
+
+
+
+
+/***/ /*trade.css*/
+#trading_panel h2 {
+    visibility: hidden;
+}
+
+/* Linkbox */
+#trading_panel .linkbox {
+    font-size: 14px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#trading_panel .linkbox #how_to {
+    float: right;
+}
+
+/* Trading panel (the panel with all your items) */
+#trading_panel #items {
+    width: 250px;
+    float: left;
+    clear: both;
+    position: relative;
+    padding: 3px 0px 3px 3px;
+    height: 650px;
+    margin-top: 25px;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Size of items selector */
+@media screen and (min-width: 800px) and (max-width: 1175px) {
+    #trading_panel #items {
+        width: 125px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    #trading_panel #items {
+        width: 375px;
+    }
+}
+
+#trading_panel .items-wrapper {
+    margin-top: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    float: left;
+    padding: 0;
+    position: relative;
+}
+
+#trading_panel .item {
+    list-style-type: none;
+    margin: 4px;
+    padding: 4px;
+    float: left;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    background-color: #1c1c1c;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    color: #999;
+    border: 3px solid #000;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+#trading_panel #items div {
+    display: inline-block;
+    text-align: center;
+}
+
+#trading_panel .item h3 {
+    position: absolute;
+    bottom: 2px;
+    width: 100px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0 0 6px #000;
+}
+
+#trading_panel .item img {
+    max-width: 94px;
+    max-height: 94px;
+    padding: 3px;
+}
+
+#trading_panel .item:hover {
+    cursor: grab;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+}
+
+/* Trade tables */
+.trade_table {
+    float: left;
+    height: 656px;
+    width: 300px;
+    margin-top: 25px;
+    text-align: center;
+    background: url('images/trading_table.png') no-repeat 0 0;
+}
+
+.trade_table#my_trade_table {
+    margin-left: 40px;
+}
+
+.trade_table#other_trade_table {
+    float: right;
+}
+
+#trading_panel .trade_table .items-wrapper {
+    height: 600px;
+    width: 270px;
+    margin-left: 15px;
+}
+
+#trading_panel .trade_table .items-wrapper .item {
+    margin: 4px 10px 4px 10px;
+}
+
+.trade_table .name_tag {
+    height: 40px;
+    width: 292px;
+    margin: 3px 0 6px 3px;
+    background-color: #573500;
+    border: 1px solid #140c00;
+    box-shadow: 0px 0px 4px #000;
+    text-align: center;
+    color: #eae4c3;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+#trading_panel .trade_table .notice {
+    list-style-type: none;
+    margin: 4px;
+    padding: 4px;
+    height: 80px;
+    font-size: 14px;
+    word-break: break-word;
+    line-height: 80px;
+    background-color: #8D735F;
+    border: 1px solid #614734;
+    border-radius: 4px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
+}
+
+#trading_panel .trade_table .notice span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+/* Buttons */
+#trading_panel button {
+    cursor: pointer;
+    height: 45px;
+    width: 150px;
+    float: left;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px #000;
+    font-size: 17px;
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+}
+
+#trading_panel button:hover {
+    filter: brightness(95%);
+}
+
+#trading_panel button:active {
+    box-shadow: inset 2px 2px 3px #000;
+}
+
+#trading_panel button:focus {
+    outline: 0;
+}
+
+#trading_panel button#cancel_trade {
+    float: left;
+    background-color: #C34332;
+}
+
+#trading_panel button#propose_trade {
+    clear: both;
+    margin: 10px 0 0 25px;
+    background-color: #007DBE;
+}
+
+#trading_panel button#accept_trade {
+    margin: 10px 0 0 15px;
+    background-color: #679B35;
+}
+
+#trading_panel button:disabled {
+    filter: grayscale(85%);
+    color: #1c1c1c;
+    cursor: default;
+}
+
+#trading_panel button:disabled:hover {
+    background-color: inherit;
+}
+
+/* Gold trade boxes */
+#trading_panel div.gold_trade {
+    height: 80px;
+    width: 300px;
+    margin-top: -80px;
+    text-align: center;
+}
+
+#trading_panel .gold_trade .gold_trade_max {
+    display: block;
+    font-weight: bold;
+}
+
+#trading_panel .gold_trade .gold_trade_box {
+    height: 45px;
+    width: 259px;
+    float: left;
+    border: 3px solid #0A0A0A;
+    border-radius: 6px;
+}
+
+#trading_panel #other_gold_trade .gold_trade_box {
+    margin-top: 15px;
+    margin-left: 17px;
+}
+
+#trading_panel .gold_trade .gold_trade_box_left {
+    height: 100%;
+    width: 55px;
+    position: relative;
+    float: left;
+    background-color: #0A0A0A;
+}
+
+#trading_panel .gold_trade .gold_trade_box_left img {
+    position: absolute;
+    margin: auto;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
+#trading_panel .gold_trade .gold_trade_box_right {
+    height: 100%;
+    width: 204px;
+    float: left;
+    background-color: #252525;
+}
+
+#trading_panel .gold_trade .gold_trade_amount {
+    width: 200px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 45px;
+    background: none;
+}
+
+#trading_panel .gold_trade #my_gold_trade_amount {
+    height: 45px;
+    -moz-appearance: textfield;
+}
+
+#my_gold_trade_amount::-webkit-outer-spin-button,
+#my_gold_trade_amount::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#trading_panel .gold_trade .gold_trade_buttons {
+    width: 25px;
+    float: left;
+    margin-top: -1px;
+    margin-left: 10px;
+}
+
+#trading_panel .gold_trade .gold_trade_buttons img {
+    height: 24px;
+    width: 24px;
+}
+
+#trading_panel .gold_trade .gold_trade_buttons #gold_trade_subtract img {
+    margin-top: 4px;
+}
+
+/* Value */
+.trade_value {
+    width: 300px;
+    float: left;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.trade_value_inner {
+    display: inline-block;
+}
+
+.trade_value .trade_value_gold img {
+    height: 24px;
+    width: 24px;
+}
+
+.trade_value .trade_value_gold {
+    color: #DDA82A;
+}
+
+.trade_value .trade_value_percent {
+    float: right;
+    color: #B10000;
+}
+
+/* Message Box */
+#trading_panel .message_section {
+    width: 100%;
+    float: left;
+    clear: both;
+    margin-top: 50px;
+}
+
+#trading_panel .message_box {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px 20px 10px 20px;;
+    background-color: #8d735f;
+    border: 1px solid #614734;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#trading_panel .message_box .label {
+    float: left;
+    clear: both;
+    margin-left: 15px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#trading_panel .message_box .label:nth-of-type(2) {
+    margin-top: 15px;
+}
+
+#trading_panel .message_box textarea {
+    margin: 10px auto;
+    padding: 15px 10px 15px 10px;
+    background-color: #d8c4b4;
+    color: black;
+}
+
+#trading_panel .message_box ul.bbbutt {
+    border: 1px solid #614734;
+}
+
+#trading_panel .message_box #buttons input {
+    background-color: #d8c4b4;
+    color: black;
+}
+
+#trading_panel .message_box #buttons input:disabled {
+    box-shadow: none;
+}
+
+#trading_panel .message_replies {
+    clear: both;
+    color: black;
+    text-align: left;
+}
+
+#trading_panel .message_reply {
+    display: inline-block;
+    position: relative;
+    width: 800px;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#trading_panel .message_replies .message_reply_self {
+    background-color: #D7D7D7;
+}
+
+#trading_panel .message_replies .message_reply_self:before {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -12px;
+    top: 0px;
+    border: 15px solid;
+    border-color: #D7D7D7 transparent transparent transparent;
+}
+
+#trading_panel .message_replies .message_reply_other {
+    float: right;
+    background-color: #D2BC8C;
+}
+
+#trading_panel .message_replies .message_reply_other:after {
+    content: ' ';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: -12px;
+    top: 0px;
+    border: 15px solid;
+    border-color: #D2BC8C transparent transparent transparent;
+}
+
+
+
+
+
+
+
+
+
+/***/ /*gr trade*/
+/**********************************************
+****************TRADING************************
+**********************************************/
+@media screen and (min-width: 1100px) {
+	body#user.trading {
+		background-image: url('../images/shop/tradingbkg.jpg');
+		overflow-x: hidden;}
+
+	#user.trading #logo {
+		background: url('../images/shop/tradingpost.png') no-repeat bottom center;}
+}
+
+
+.trading #content {
+	min-height: 1250px;}
+
+/*** Linkbox ***/
+#trading_panel .linkbox {
+	font-size: 1.1em;
+	text-align: left;
+	margin: -35px -50% 35px -50%;
+	background-color: rgba(0,0,0,0.7);
+	padding: 10px;
+	width: 200%;
+	text-align: center;}
+
+#trading_panel .linkbox a {
+	color: #fff; padding: 0 25px;}
+
+.trading #alerts {
+	top: 318px;
+	position: absolute;}
+
+/*** Trading panel (the panel with all your items) ***/
+#trading_panel #items {
+	width: 250px;
+	float: left;
+	clear: both;
+	position: relative;
+	padding: 3px 0px 3px 3px;
+	height: 650px;
+	margin-top: 25px;
+	background-color: rgba(0,0,0,.7);
+	text-align: center;
+	overflow: hidden;}
+
+/*** Trade tables ***/
+.trade_table {
+	float: left;
+	height: 656px;
+	width: 300px;
+	margin-top: 25px;
+	text-align: center;
+	background: url('../images/shop/trading_table.png') no-repeat 0 0;}
+
+.trade_table#my_trade_table {
+	margin-left: 40px;}
+
+.trade_table#other_trade_table {
+	float: right;}
+
+#trading_panel .trade_table .items-wrapper {
+	height: 600px;
+	width: 270px;
+	margin-left: 15px;}
+
+#trading_panel .trade_table .items-wrapper .item {
+	margin: 4px 10px 4px 10px;}
+
+.trade_table .name_tag {
+	height: 40px;
+	width: 292px;
+	margin: 3px 0 6px 3px;
+	background-color: #573500;
+	border: 1px solid #140c00;
+	box-shadow: 0px 0px 4px #000;
+	text-align: center;
+	color: #eae4c3;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 40px;}
+
+#trading_panel .trade_table .notice {
+	list-style-type: none;
+	margin: 4px;
+	padding: 4px;
+	height: 80px;
+	font-size: 14px;
+	word-break: break-word;
+	line-height: 80px;
+	background-color: #8D735F;
+	border: 1px solid #614734;
+	border-radius: 4px;
+	box-shadow: 3px 3px 8px rgba(0,0,0,0.7);}
+
+#trading_panel .trade_table .notice span {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;}
+
+/* Buttons */
+#trading_panel button {
+	cursor: pointer;
+	height: 45px;
+	width: 150px;
+	float: left;
+	border-radius: 5px;
+	box-shadow: 2px 2px 5px #000;
+	font-size: 17px;
+	font-weight: bold;
+	color: black;
+	border: 1px solid black;}
+
+#trading_panel button:hover {
+	filter: brightness(95%);}
+
+#trading_panel button:active {
+	box-shadow: inset 2px 2px 3px #000;}
+
+#trading_panel button:focus {
+	outline: 0;}
+
+#trading_panel button#cancel_trade {
+	float: left;
+	background-color: #C34332;}
+
+#trading_panel button#propose_trade {
+	clear: both;
+	margin: 10px 0 0 25px;
+	background-color: #007DBE;}
+
+#trading_panel button#accept_trade {
+	margin: 10px 0 0 15px;
+	background-color: #679B35;}
+
+#trading_panel button:disabled {
+	filter: grayscale(85%);
+	color: #1c1c1c;
+	cursor: default;}
+
+#trading_panel button:disabled:hover {
+	background-color: inherit;}
+
+/* Gold trade boxes */
+#trading_panel div.gold_trade {
+	height: 80px;
+	width: 300px;
+	margin-top: -80px;
+	text-align: center;}
+
+#trading_panel .gold_trade .gold_trade_max {
+	display: block;
+	font-weight: bold;}
+
+#trading_panel .gold_trade .gold_trade_box {
+	height: 45px;
+	width: 259px;
+	float: left;
+	border: 3px solid #0A0A0A;
+	border-radius: 6px;}
+
+#trading_panel #other_gold_trade .gold_trade_box {
+	margin-top: 15px;
+	margin-left: 17px;}
+
+#trading_panel .gold_trade .gold_trade_box_left {
+	height: 100%;
+	width: 55px;
+	position: relative;
+	float: left;
+	background-color: #0A0A0A;}
+
+#trading_panel .gold_trade .gold_trade_box_left img {
+	position: absolute;
+	margin: auto;
+	top: 0px; right: 0px; bottom: 0px; left: 0px;}
+
+#trading_panel .gold_trade .gold_trade_box_right {
+	height: 100%;
+	width: 204px;
+	float: left;
+	background-color: #252525;}
+
+#trading_panel .gold_trade .gold_trade_amount {
+	width: 200px;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 45px;
+	background: none;}
+
+#trading_panel .gold_trade #my_gold_trade_amount {
+	height: 45px;
+	-moz-appearance: textfield;}
+
+#my_gold_trade_amount::-webkit-outer-spin-button,
+#my_gold_trade_amount::-webkit-inner-spin-button {
+	-webkit-appearance: none;}
+
+#trading_panel .gold_trade .gold_trade_buttons {
+	width: 25px;
+	float: left;
+	margin-top: -1px;
+	margin-left: 10px;}
+
+#trading_panel .gold_trade .gold_trade_buttons img {
+	height: 24px;
+	width: 24px;}
+
+#trading_panel .gold_trade .gold_trade_buttons #gold_trade_subtract img {
+	margin-top: 4px;}
+
+/*** Value ***/
+.trade_value {
+	width: 300px;
+	float:  left;
+	margin-top: 10px;
+	font-size: 25px;
+	font-weight: bold;}
+
+.trade_value_inner {
+	display: inline-block;}
+
+.trade_value .trade_value_gold img {
+	height: 24px;
+	width: 24px;}
+
+.trade_value .trade_value_gold {
+	color: #DDA82A;}
+
+.trade_value .trade_value_percent {
+	float: right;
+	color: #B10000;}
+
+/*** Message Box ***/
+
+#trading_panel .message_section {
+	width: 100%;
+	float: left;
+	clear: both;
+	margin-top: 50px;}
+
+#trading_panel .message_box {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 20px 20px 10px 20px;
+	background-color: rgba(0,0,0,.7);
+	border-radius: 8px;
+	text-align: center;}
+
+#trading_panel .message_box .label {
+	float: left;
+	clear: both;
+	margin-left: 15px;
+	font-size: 25px;
+	font-weight: bold;}
+
+#trading_panel .message_box .label:nth-of-type(2) {
+	margin-top: 15px;}
+
+#trading_panel .message_box textarea {
+	margin: 10px auto;
+	padding: 15px 10px 15px 10px;
+	background-color: #614734;
+	color: #fff;}
+
+#trading_panel .message_box ul.bbbutt {
+	border: 1px solid #614734;}
+
+#trading_panel .message_box #buttons input {
+	background-color: #d8c4b4;
+	color: black;}
+
+#trading_panel .message_box #buttons input:disabled {
+	box-shadow: none;}
+
+#trading_panel .message_replies {
+	clear: both;
+	color: black;
+	text-align: left;}
+
+#trading_panel .message_reply {
+	display: inline-block;
+	position: relative;
+	width: 800px;
+	margin-top: 15px;
+	padding: 10px;
+	border-radius: 4px;}
+
+#trading_panel .message_replies .message_reply_self {
+	background-color: #D7D7D7;}
+
+#trading_panel .message_replies .message_reply_self:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: -12px;
+	top: 0px;
+	border: 15px solid;
+	border-color: #D7D7D7 transparent transparent transparent;}
+
+#trading_panel .message_replies .message_reply_other {
+	float: right;
+	background-color: #D2BC8C;}
+
+#trading_panel .message_replies .message_reply_other:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	right: -12px;
+	top: 0px;
+	border: 15px solid;
+	border-color: #D2BC8C transparent transparent transparent;}
+
