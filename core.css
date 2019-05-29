@@ -788,7 +788,9 @@ table.gazelles_art_display,
 #crafting_panel >div,
 #equipment >div,
 #crafting_recipes,
-#wrapper #trading_panel >div:not(.linkbox) {
+#wrapper #trading_panel >div:not(.linkbox),
+.backpack #backpack >div,
+div#fight_skill_points_assign >table {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -3507,10 +3509,12 @@ table.gazellepic,
 #gazelles .thin >h2:first-child +.box.pad,
 #log .thin >.header +.box.pad {
     margin-top: 12px;}
+.backpack #backpack >h2:first-child,
 .equipment #equipment >h2:first-child,
 #crafting_panel >h2:first-child,
 .thin.global_buffs_shop >div:first-child,
-.thin.freeleech_shop >div:first-child {
+.thin.freeleech_shop >div:first-child,
+#fight_skill_points_assign >h2:first-child {
     margin-bottom: 12px;}
 input[name="fromyear"],
 input[name="toyear"],
@@ -4638,6 +4642,8 @@ input[type="search"],
 #backpack #items-wrapper.custom-state-active:after/**/ {
     opacity: 0;}
 
+#backpack #slots_panel ul:before,
+#backpack #slots_panel ul:after,
 #crafting_panel #items #items-wrapper:before,
 #equipment #items #items-wrapper:before,
 #trading_panel .items-wrapper:before,
@@ -4661,6 +4667,7 @@ input[type="search"],
     background: var(--p-fade-2);
     width: calc(100% - 15px);
     z-index: 9;}
+#backpack #slots_panel ul:before,
 #trading_panel #items #main-items-wrapper:before,
 #crafting_panel #items #items-wrapper:before,
 #equipment #items #items-wrapper:before,
@@ -4670,6 +4677,7 @@ input[type="search"],
     top: 38px;}
 #trading_panel .trade_table .items-wrapper:before {
     top: 80px;}
+#backpack #slots_panel ul:after,
 #crafting_panel #items #items-wrapper:after,
 #equipment #items #items-wrapper:after,
 #trading_panel .items-wrapper:after,
@@ -5915,6 +5923,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #backpack h2 {
 	/* visibility: hidden; */}
 
+#backpack #slots_panel ul,
 #wrapper #trading_panel .items-wrapper,
 #crafting_panel #items #items-wrapper,
 #equipment #items #items-wrapper,
@@ -5928,7 +5937,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     position: initial;
     box-sizing: border-box;
     overflow-y: scroll !important;}
-
+    
 #crafting_panel #items #items-wrapper li,
 #equipment #items #items-wrapper li,
 #wrapper #trading_panel .items-wrapper li,
@@ -7860,10 +7869,13 @@ table.adventure_table h3 {
 .crafting_manager .select2-container {
 	width: 100% !important;}
 
+.backpack #backpack >div,
 #equipment >div,
 #crafting_panel >div,
 #wrapper #trading_panel #items >div:not(.linkbox) {
     position: relative;}
+#backpack #slots_header:before,
+#backpack #items:before,
 #wrapper #trading_panel #items:before,
 #equipment #items:before,
 #crafting_panel #items:before {
@@ -7874,6 +7886,8 @@ table.adventure_table h3 {
     top: 0;
     left: 0;
     background: var(--p-head-grdnt);}
+#backpack #items >span,
+#backpack #items >input,
 #wrapper #trading_panel #items >span,
 #wrapper #trading_panel #items >input,
 #equipment #items_inner >span,
@@ -7881,12 +7895,14 @@ table.adventure_table h3 {
 #crafting_panel #items >span,
 #crafting_panel #items >input {
     position: relative;}
+#backpack #items >span,
 #wrapper #trading_panel #items >span,
 #equipment #items_inner >span,
 #crafting_panel #items >span {
     font-size: 20px;
     line-height: 38px;
     font-weight: 600;}
+#backpack #items >input,
 #wrapper #trading_panel #items >input,
 #equipment #items_inner >input,
 #crafting_panel #items >input {
@@ -7894,6 +7910,8 @@ table.adventure_table h3 {
     top: -2px;}
 
 /*** Crafting Panel (the panel with all your staff) ***/
+#backpack #slots_panel,
+#backpack #items,
 #equipment #items,
 #crafting_panel #items {
 	width: 397px;
@@ -7944,6 +7962,7 @@ table.adventure_table h3 {
 	bottom: -6px;} */
 
 /*** Position item slots ***/
+#wrapper #backpack .itemslot,
 #equipment .itemslot,
 #crafting_panel .itemslot {
     border-color: var(--c-table-brdr);
@@ -8191,6 +8210,7 @@ table.adventure_table h3 {
 #equipment .itemslot.inactive {
 	background: var(--c-body);}
 
+#backpack .itemslot .item:hover,
 #equipment .itemslot .item:hover {
     border-color: var(--c-b3);}
 
@@ -8561,77 +8581,48 @@ table.adventure_table h3 {
 **********************************************/
 
 /*** Items panel (the panel with all your items) ***/
-#backpack #items {
-	width: 250px;
-	float: left;
-	margin: 0 10px 15px;
-	position: relative;
-	padding: 3px 0px 3px 3px;
-	height: 650px;
-	background-color: rgba(0,0,0,.7);
-	text-align: center;
-	overflow: hidden;}
-
-#backpack #items {width: 375px;}
-
 
 /* The backpack slots */
-#backpack #slots_panel {
-	width: 375px;
-	float: right;
-	margin: 0 10px 15px;
-	padding: 3px 0px 3px 3px;
-	min-height: 650px;
-	background-color: rgba(25, 17, 7, 0.95);
-	border: 2px solid #969696;
-	border-radius: 4px;
-	box-shadow: inset 0px 0px 4px 2px black, 0px 0px 5px 2px black;}
+#wrapper #backpack #slots_panel {
+    float: right;
+    margin-right: 0;
+    width: 529px;}
 
-#backpack #slots_panel ul {
-	margin-top: 0;
-	padding: 0;}
 #backpack #slots_panel ul li {
 	padding: 4px;}
 
-#backpack #slots_header {
-	height: 60px;
-	position: relative;
-	padding-left: 100px;
-	margin-bottom: 5px;
-	border-bottom: 2px solid #969696;}
 #backpack #slots_header img {
-	position: absolute;
-	top: -40px;
-	left: -20px;}
+    display: none;}
 #backpack #slots_header span {
-	color: #fff2e0;
-	font-size: 3em;
-	font-weight: bold;
-	font-family: ElderScrolls;
-	line-height: 55px;}
+    font-size: 20px;
+    line-height: 20px;
+    height: 20px;
+    display: block;
+    text-align: left;
+    position: relative;
+    padding: 9px 10px;
+    font-weight: 600;}
 
 #backpack .ui-widget-content {background: none;}
-#backpack .itemslot {
+#wrapper #backpack .itemslot {
 	list-style-type: none;
-	margin: 4px;
-	width: 106px;
-	height: 106px;
+	margin: 0 10px 10px 0;
+    padding: 0;
+	width: 114px;
+	height: 114px;
 	float: left;
-	position: relative;
-	background-color: rgba(103, 71, 26, 0.5);
-	border: 1px solid #969696;
-	border-radius: 4px;
-	box-shadow: inset 0px 0px 4px 1px black, 0px 0px 5px 2px black;}
+	position: relative;}
 
 #backpack .itemslot .slot_number {
+    z-index: 9;
 	position: absolute;
 	z-index: 1;
 	left: -2px;
 	top: -6px;
 	padding: 2px;
-	background: #4a4a4a;
-	box-shadow: 0px 0px 1px 1px black;
-}
+    font-weight: 600;
+	background: var(--c-input);
+	outline: 1px solid var(--c-sticky-id-brdr);}
 
 #backpack .itemslot .item {
 	box-sizing: border-box;
@@ -8640,38 +8631,91 @@ table.adventure_table h3 {
 	margin: 0;
 	padding: 2px;}
 
-#backpack #slots_panel {width: 500px;}
-
-
 /* Buttons */
 #backpack button {
-	cursor: pointer;
-	height: 52px;
-	width: 120px;
-	margin-top: 2px;
-	margin-right: 3px;
-	float: right;
-	border-radius: 5px;
-	font-size: 17px;
-	font-weight: bold;
-	color: #fff2e0;
-	border: 1px solid #969696;
-	background-color: rgba(241, 167, 64, 0.5);
-	box-shadow: 0px 0px 5px 2px black;}
+    z-index: 9;
+    float: right;
+    margin: 6px;
+    position: relative;}
 
-#backpack button:hover {
-	filter: brightness(95%);}
-
-#backpack button:active {
-	box-shadow: inset 2px 2px 3px #000;}
-
-#backpack button:focus {
-	outline: 0;}
-
+input[type=button]:disabled,
 #backpack button:disabled {
-	filter: grayscale(85%);
-	color: #1c1c1c;
-	cursor: default;}
+    pointer-events: none;
+	cursor: default;
+	opacity: .5;}
 
 
+
+
+
+
+
+/**********************************************
+****************SKILL POINTS*******************
+**********************************************/
+
+
+div#fight_skill_points_assign >table {
+    float: right;
+    width: calc(100% - 257px);}
+
+#fight_skill_points_assign table tr.colhead td:last-child,
+#fight_skill_points_assign table tr.colhead td:nth-child(1) {
+	width: 78px;}
+#fight_skill_points_assign table tr.colhead td:nth-child(2) {
+	/*width: 160px;*/}
+#fight_skill_points_assign table tr.colhead td:nth-child(3),
+#fight_skill_points_assign table tr.colhead td:nth-child(4),
+#fight_skill_points_assign table tr.colhead td:nth-child(5) {
+	text-align: center;
+	width: 110px;}
+#fight_skill_points_assign tr.skill_tr {
+	height: 60px;}
+#fight_skill_points_assign .achievement_image img {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 48px;}
+
+#fight_skill_points_assign .stat_label span {
+	font-size: 24px;}
+#fight_skill_points_assign .stat_label img {
+	float: right;
+	padding-top: 8px;}
+
+#fight_skill_points_assign .points {
+	font-size: 38px;
+    line-height: 1em;
+	text-align: center;}
+#fight_skill_points_assign .plus_sign {
+    font-size: 26px;
+    margin-bottom: -12px;
+    margin-left: -8px;
+    display: inline-block;
+    position: relative;
+    top: -4px;}
+
+#fight_skill_points_assign .points.base_points,
+#fight_skill_points_assign .points.skill_points {
+	color: var(--c-text-s);}
+#fight_skill_points_assign .points.total_points {
+	color: var(--c-txt);}
+
+#fight_skill_points_assign tr.skill_tr:not(:nth-last-child(2)){
+    border-bottom: var(--p-table-brdr);}
+#fight_skill_points_assign tr.submit_section {
+    border-top: var(--p-table-brdr);
+    background-color: var(--c-tgroup);}
+#fight_skill_points_assign tr.submit_section span {
+    font-size: 16px;
+    vertical-align: middle;
+    line-height: 16px;}
+#fight_skill_points_assign tr.submit_section td {
+	padding: 10px;}
+#fight_skill_points_assign tr.submit_section #assignable_skill_points {
+	font-size: 24px;}
+#fight_skill_points_assign .buttons input +input {
+    margin-left: 4px;}
+
+#fight_skill_points_assign #submit {
+	float: right;}
 
