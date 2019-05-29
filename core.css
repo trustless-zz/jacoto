@@ -15,6 +15,7 @@
     --p-img-hvr: 						3px solid var(--c-b3);
     --p-img-anchor-brdr:				3px solid var(--c-b4);
     --p-img-anchor-brdr-hvr:			3px solid var(--c-b1);
+    --p-contrast:                       drop-shadow(0 0 2px var(--c-contrast));
     --p-post-img:                       drop-shadow(0 0 3px var(--c-main-brdr));
     --p-post-img-hvr:                   drop-shadow(0 0 3px var(--c-b3));
     --p-unread-stripe:                  2px 0 0 0 var(--c-b3);
@@ -647,7 +648,8 @@ tr.likes td[id^="likers_"] >strong,
 h2#username span#tip_user img,
 .inventory .trash_icon,
 #userhistory .colhead_dark a img[alt="Last read post"],
-#wrapper #trading_panel .gold_trade .gold_trade_buttons img {
+#wrapper #trading_panel .gold_trade .gold_trade_buttons img,
+#wrapper .trade_value .trade_value_gold img {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -913,7 +915,8 @@ tr.pad.hidden .linkbox a,
 .forum_post .colhead_dark div[style="float: right;"] a,
 #newthreadpreview .forum_post .colhead_dark #barpreview a,
 #userhistory .colhead_dark a img[alt="Last read post"],
-#userhistory .colhead_dark span[style="float:left;"] >a[href*="#post"]:nth-of-type(2) {
+#userhistory .colhead_dark span[style="float:left;"] >a[href*="#post"]:nth-of-type(2),
+.colhead_dark span.username_badges a {
     background-color: transparent;}
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
@@ -968,7 +971,8 @@ div,
 #shop li.item_li .item_description:after,
 #shop .item_description,
 #shop li.item_li.owned:after,
-fancybox-button {
+fancybox-button,
+tr.group_torrent >td a:before {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1176,9 +1180,10 @@ input[type=submit]:hover:active,
 #userinfo_minor .highlight,
 #menu li:not(.active):hover,
 #userinfo_minor li:not(.active):hover,
-#header .clan_trophy:hover a,
-#content .sub span a:hover {
+#header .clan_trophy:hover a {
     background-color: var(--c-b3);}
+#content .sub span a:hover {
+    background-color: var(--c-anchor-hvr-bcg);}
 
 #header .global_buffs a:hover,
 #userinfo_username li:hover,
@@ -2294,6 +2299,8 @@ select >option:nth-child(odd) {
     background-color: var(--c-input);}
 textarea:hover,
 textarea:focus,
+#wrapper #trading_panel .message_box textarea:hover,
+#wrapper #trading_panel .message_box textarea:focus,
 .select2-container--default .select2-results > .select2-results__options >li:nth-child(even),
 select >option:nth-child(even),
 select:hover,
@@ -2317,6 +2324,7 @@ input[type="url"]:focus,
 input[type="search"]:hover,
 input[type="search"]:focus {
     background-color: var(--c-edition);}
+#wrapper #trading_panel .message_box textarea:focus,
 textarea:focus,
 select:focus,
 input:focus,
@@ -2335,6 +2343,7 @@ input[type="radio"],
     vertical-align: text-top;}
 
 button,
+#wrapper #trading_panel button,
 .alertable button,
 input[type=button],
 input[type=submit],
@@ -2414,6 +2423,7 @@ a[href^="javascript:Vote("] strong:before,
 .similar_votes a[onclick] {
     font-size: 18px;}
 button:hover,
+#wrapper #trading_panel button:hover,
 .alertable button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
@@ -2428,6 +2438,7 @@ a[href^="javascript:Vote("] strong:hover,
     color: var(--c-anchor-hvr);
     background: var(--p-btn-hvr);}
 button:hover:active,
+#wrapper #trading_panel button:hover:active,
 .alertable button:hover:active,
 input[type=button]:hover:active,
 input[type=submit]:hover:active,
@@ -3044,6 +3055,7 @@ span.secondary_class {
 #reply_box .head {
     margin: -10px -10px 10px -10px;}
 
+#wrapper #trading_panel .message_box textarea,
 textarea {
     min-height: 28px;
     border: var(--p-input-brdr);
@@ -3060,6 +3072,7 @@ textarea {
     outline-offset: 0;
     margin-bottom: 8px !important;
     outline: 0px solid var(--c-b1) !important;}
+#wrapper #trading_panel .message_box textarea:focus,
 textarea:focus {
     outline-width: 1px !important;}
 
@@ -3070,6 +3083,7 @@ textarea:focus {
     box-shadow: var(--p-header-shdw);}
 #bookmarks #collage_table td img:hover,
 button:hover,
+#wrapper #trading_panel button:hover,
 .alertable button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
@@ -3384,6 +3398,7 @@ img[src="static/common/thumbsup.png"],
     padding-top: 13px;}
 
 /** convert ... to head **/
+#wrapper #trading_panel .message_box .label:first-of-type,
 #seedtime_tokens >h3,
 .thin#user_fight_attacks >.box.pad >h3,
 #gazelleview #titlerow p,
@@ -4663,6 +4678,8 @@ input[type="search"],
 #crafting_recipes #items_list:after {
     transform: scaleY(-1);
     bottom: 0;}
+#wrapper #trading_panel .trade_table .items-wrapper:after {
+    bottom: 73px;}
 #collections #torrent_table .colhead td[width="70%"],
 #bookmarks #torrent_table .colhead_dark td[width="70%"] {
     width: auto !important;}
@@ -5299,7 +5316,7 @@ h2#username span#tip_user a.tooltip {
     padding: 2px;}
 #requests_donate img,
 h2#username span#tip_user a.tooltip img {
-    filter: var(--p-post-img);}
+    filter: var(--p-contrast);}
 
 
 
@@ -5760,27 +5777,22 @@ span.size5 img {
 #color_leeching .torrent_info_tags,
 #color_leeching a {
 	color: var(--c-leech);}
-
 #color_seeding,
 #color_seeding .torrent_info_tags,
 #color_seeding a {
 	color: var(--c-seed);}
-
 #color_uploaded,
 #color_uploaded .torrent_info_tags,
 #color_uploaded a {
 	color: var(--c-upload);}
-
 #color_snatched,
 #color_snatched .torrent_info_tags,
 #color_snatched a {
 	color: var(--c-snatch);}
-
 #color_downloaded,
 #color_downloaded .torrent_info_tags,
 #color_downloaded a {
 	color: var(--c-download);}
-
 #wrapper .freeleech_label {
     color: var(--c-fl);}
 
@@ -5801,6 +5813,40 @@ span.size5 img {
 #color_downloaded a:hover,
 #wrapper a:hover .freeleech_label {
     color: var(--c-anchor-hvr);}
+
+tr.group_torrent >td {
+    position: relative;}
+#color_leeching:before,
+#color_seeding:before,
+#color_uploaded:before,
+#color_snatched:before,
+#color_downloaded:before {
+    opacity: .8;
+    content: '';
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;}
+tr:hover #color_leeching:before,
+tr:hover #color_seeding:before,
+tr:hover #color_uploaded:before,
+tr:hover #color_snatched:before,
+tr:hover #color_downloaded:before {
+    opacity: 1;}
+#color_leeching:before      {background-color: var(--c-leech);}
+#color_seeding:before       {background-color: var(--c-seed);}
+#color_uploaded:before      {background-color: var(--c-upload);}
+#color_snatched:before      {background-color: var(--c-snatch);}
+#color_downloaded:before    {background-color: var(--c-download);}
+table#uploaded_table td.center.cats_col +td >span:before,
+table#seeding_table td.center.cats_col +td >span:before,
+table#leeching_table td.center.cats_col +td >span:before,
+table#snatched_table td.center.cats_col +td >span:before,
+table#snatched_not_seeding_table td.center.cats_col +td >span:before,
+table#seeding_not_snatched_table td.center.cats_col +td >span:before,
+table#downloaded_table td.center.cats_col +td >span:before {
+    content: none;}
 
 
 /*****************************************************
@@ -5989,9 +6035,6 @@ span.size5 img {
 /**********************************************
 ******************SHOP*************************
 **********************************************/
-#shop #alerts {
-    top: 318px;
-    position: absolute;}
 
 /*** Search bar ***/
 #shop_search  {
@@ -6209,7 +6252,7 @@ span.size5 img {
     width: 18px;
     height: 18px;
     padding-left: 18px;
-    filter: var(--p-post-img);
+    filter: var(--p-contrast);
     opacity: 1;}
 
 #shop li.item_li.nostock #cost_info,
@@ -6551,9 +6594,6 @@ span.size5 img {
 
 #shop.fl_shop #content {
 	min-height: 350px;}
-
-#shop.fl_shop #alerts {
-	top: 275px;}
 
 .freeleech_shop_main .box,
 .freeleech_shop_main table,
@@ -8201,7 +8241,7 @@ table.adventure_table h3 {
 
 
 
-/***/ /*gr trade*/
+/*gr trade*/
 /**********************************************
 ****************TRADING************************
 **********************************************/
@@ -8214,61 +8254,35 @@ table.adventure_table h3 {
     margin-bottom: 5px;
     padding: 6px;
 	width: 100%;
-	text-align: center;}
+	text-align: left;}
 
 #wrapper #trading_panel .trade_table,
 #wrapper #trading_panel #items {
 	width: 397px;
 	float: left;
 	margin: 0 15px 15px 0;
-	height: 420px;
+	height: 544px;
 	text-align: center;
 	overflow: hidden;
     padding: unset;}
-#wrapper #trading_panel .trade_table {
+#wrapper #content #trading_panel .trade_table {
+    height: 535px;
     position: relative;
     display: flex;
     flex-flow: column;
-    background: unset;}
+    background-image: unset;}
 #wrapper #trading_panel .trade_table#other_trade_table {
 	float: right;}
 
-#trading_panel .linkbox a {}
+#wrapper #trading_panel .linkbox #how_to {
+    float: right;}
 
-.trading #alerts {
-	top: 318px;
-	position: absolute;}
-
-/*** Trading panel (the panel with all your items) ***/
-#trading_panel #items {
-	width: 250px;
-	float: left;
-	clear: both;
-	position: relative;
-	padding: 3px 0px 3px 3px;
-	height: 650px;
-	margin-top: 25px;
-	background-color: rgba(0,0,0,.7);
-	text-align: center;
-	overflow: hidden;}
 
 /*** Trade tables ***/
-.trade_table {
-	float: left;
-	height: 656px;
-	width: 300px;
-	margin-top: 25px;
-	text-align: center;
-	background: url('../images/shop/trading_table.png') no-repeat 0 0;}
 
-.trade_table#my_trade_table {
-	margin-left: 40px;}
 
 #wrapper #trading_panel .trade_table .items-wrapper {
 	margin: 0;}
-
-#trading_panel .trade_table .items-wrapper .item {
-	margin: 4px 10px 4px 10px;}
 
 #wrapper #trading_panel .trade_table .name_tag {
     position: relative;
@@ -8287,65 +8301,66 @@ table.adventure_table h3 {
     -webkit-box-shadow: none;
     box-shadow: none;}
 
-#trading_panel .trade_table .notice {
+#wrapper #trading_panel .trade_table .notice {
+    width: calc(100% - 25px);
 	list-style-type: none;
-	margin: 4px;
+	margin: 0 0 10px 0;
 	padding: 4px;
 	height: 80px;
 	font-size: 14px;
 	word-break: break-word;
 	line-height: 80px;
-	background-color: #8D735F;
-	border: 1px solid #614734;
-	border-radius: 4px;
-	box-shadow: 3px 3px 8px rgba(0,0,0,0.7);}
+	background-color: var(--c-edition);
+	border: var(--p-table-brdr);
+	border-radius: 0;
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);}
 
-#trading_panel .trade_table .notice span {
+#wrapper #trading_panel .trade_table .notice span {
 	display: inline-block;
 	vertical-align: middle;
 	line-height: normal;}
 
 /* Buttons */
-#trading_panel button {
+#wrapper #content #trading_panel button {
 	cursor: pointer;
 	height: 45px;
 	width: 150px;
 	float: left;
-	border-radius: 5px;
-	box-shadow: 2px 2px 5px #000;
-	font-size: 17px;
-	font-weight: bold;
-	color: black;
-	border: 1px solid black;}
+	border-radius: 0;
+	font-size: 18px;
+	font-weight: 600;}
 
-#trading_panel button:hover {
-	filter: brightness(95%);}
+#wrapper #content #trading_panel button#cancel_trade[style="visibility: hidden;"] {
+    display: none;}
 
-#trading_panel button:active {
-	box-shadow: inset 2px 2px 3px #000;}
+#wrapper #trading_panel button:hover {
+	filter: unset;}
+#wrapper #trading_panel button:focus {
+	outline: unset;}
 
-#trading_panel button:focus {
-	outline: 0;}
-
-#trading_panel button#cancel_trade {
+#wrapper #content #trading_panel button#cancel_trade {
+    margin: 0 0 12px 10px;
 	float: left;
-	background-color: #C34332;}
+    color: var(--c-off);
+	background-color: inherit;}
 
-#trading_panel button#propose_trade {
+#wrapper #trading_panel button#propose_trade {
 	clear: both;
-	margin: 10px 0 0 25px;
-	background-color: #007DBE;}
+	margin: 5px 0 25px 10px;
+	background-color: inherit;}
 
-#trading_panel button#accept_trade {
-	margin: 10px 0 0 15px;
-	background-color: #679B35;}
+#wrapper #content button#accept_trade {
+    color: var(--c-on);
+	margin: 5px 0 25px 10px;
+	background-color: inherit;}
 
-#trading_panel button:disabled {
+#wrapper #content #trading_panel button:disabled {
 	filter: grayscale(85%);
-	color: #1c1c1c;
+    pointer-events: none;
 	cursor: default;}
 
-#trading_panel button:disabled:hover {
+#wrapper #trading_panel button:disabled:hover {
 	background-color: inherit;}
 
 /* Gold trade boxes */
@@ -8390,10 +8405,6 @@ table.adventure_table h3 {
     height: 26px;
     padding-left: 26px;}
 
-#trading_panel #other_gold_trade .gold_trade_box {
-	margin-top: 15px;
-	margin-left: 17px;}
-
 #wrapper #trading_panel .gold_trade .gold_trade_box_left {
     margin: 12px 5px 12px 10px;
 	height: 18px;
@@ -8408,7 +8419,7 @@ table.adventure_table h3 {
     width: 18px;
     height: 18px;
     padding-left: 18px;
-    filter: var(--p-post-img);}
+    filter: var(--p-contrast);}
 
 #wrapper #trading_panel .gold_trade .gold_trade_box_right {
 	height: 100%;
@@ -8420,20 +8431,16 @@ table.adventure_table h3 {
     font-weight: 600;
     text-align: left;}
 
-#trading_panel .gold_trade .gold_trade_amount {
-	width: 200px;
-	font-size: 25px;
-	font-weight: bold;
-	text-align: center;
-	line-height: 45px;
-	background: none;}
+#wrapper #trading_panel .gold_trade .gold_trade_amount {
+	width: 100%;
+	text-align: left;}
 
-#trading_panel .gold_trade input#my_gold_trade_amount {
+#wrapper #trading_panel .gold_trade input#my_gold_trade_amount {
     margin: 8px 0;
 	-moz-appearance: textfield;}
 
-#my_gold_trade_amount::-webkit-outer-spin-button,
-#my_gold_trade_amount::-webkit-inner-spin-button {
+#wrapper #my_gold_trade_amount::-webkit-outer-spin-button,
+#wrapper #my_gold_trade_amount::-webkit-inner-spin-button {
 	-webkit-appearance: none;}
 
 #wrapper #trading_panel .gold_trade .gold_trade_buttons {
@@ -8447,6 +8454,7 @@ table.adventure_table h3 {
     display: inline-block;}
 
 #wrapper #trading_panel .gold_trade .gold_trade_buttons img {
+    filter: var(--p-contrast);
     margin: 0;
 	height: 26px;
 	width: 26px;
@@ -8455,106 +8463,215 @@ table.adventure_table h3 {
     margin: 0;}
 
 /*** Value ***/
-.trade_value {
-	width: 300px;
-	float:  left;
-	margin-top: 10px;
-	font-size: 25px;
-	font-weight: bold;}
+#wrapper .trade_value {
+    width: 100%;
+    float: unset;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 24px;
+    line-height: 26px;
+    font-weight: bold;
+    border-top: var(--p-table-brdr);
+    background-color: var(--c-tgroup);}
 
-.trade_value_inner {
+#wrapper .trade_value_inner {
 	display: inline-block;}
 
-.trade_value .trade_value_gold img {
-	height: 24px;
-	width: 24px;}
+#wrapper .trade_value .trade_value_gold img {
+    filter: var(--p-contrast);
+    vertical-align: bottom;
+	height: 26px;
+	width: 26px;
+    padding-left: 26px;}
 
-.trade_value .trade_value_gold {
-	color: #DDA82A;}
-
-.trade_value .trade_value_percent {
-	float: right;
-	color: #B10000;}
+#wrapper .trade_value .trade_value_percent {
+	float: unset;}
 
 /*** Message Box ***/
 
-#trading_panel .message_section {
+#wrapper #trading_panel .message_section {
 	width: 100%;
 	float: left;
 	clear: both;
 	margin-top: 50px;}
 
-#trading_panel .message_box {
-	max-width: 1000px;
-	margin: 0 auto;
-	padding: 20px 20px 10px 20px;
-	background-color: rgba(0,0,0,.7);
-	border-radius: 8px;
-	text-align: center;}
-
-#trading_panel .message_box .label {
-	float: left;
-	clear: both;
-	margin-left: 15px;
-	font-size: 25px;
-	font-weight: bold;}
-
-#trading_panel .message_box .label:nth-of-type(2) {
-	margin-top: 15px;}
-
-#trading_panel .message_box textarea {
-	margin: 10px auto;
-	padding: 15px 10px 15px 10px;
-	background-color: #614734;
-	color: #fff;}
-
-#trading_panel .message_box ul.bbbutt {
-	border: 1px solid #614734;}
-
-#trading_panel .message_box #buttons input {
-	background-color: #d8c4b4;
-	color: black;}
-
-#trading_panel .message_box #buttons input:disabled {
-	box-shadow: none;}
-
-#trading_panel .message_replies {
-	clear: both;
-	color: black;
+#wrapper #trading_panel .message_box {
+	max-width: unset;
+	margin: 0;
+	padding: 10px;
+	background-color: unset;
+    border: none;
+	border-radius: 0;
 	text-align: left;}
 
-#trading_panel .message_reply {
+#wrapper #trading_panel .message_box .label {
+	float: left;
+	clear: both;}
+
+#wrapper #trading_panel .message_box .label:nth-of-type(2) {
+	margin-top: 15px;}
+
+#wrapper #trading_panel .message_box textarea {
+	margin: 0;
+    width: 100% !important;}
+
+#wrapper #trading_panel .message_box ul.bbbutt {
+	border: var(--p-img-brdr);}
+
+#wrapper #trading_panel .message_box #buttons input {
+	background-color: unset;
+	color: iinherit;}
+
+#wrapper #trading_panel .message_box #buttons input:disabled {
+	box-shadow: inherit;
+    opacity: .5;}
+
+#wrapper #trading_panel .message_replies {
+	clear: both;
+	color: inherit;
+	text-align: left;}
+
+#wrapper #trading_panel .message_reply {
 	display: inline-block;
 	position: relative;
-	width: 800px;
+	width: calc(100% - 100px);
 	margin-top: 15px;
 	padding: 10px;
-	border-radius: 4px;}
+	border-radius: 0;}
 
-#trading_panel .message_replies .message_reply_self {
-	background-color: #D7D7D7;}
+#wrapper #trading_panel .message_replies .message_reply_self {
+	background-color: var(--c-tgroup);}
 
-#trading_panel .message_replies .message_reply_self:before {
-	content: ' ';
-	position: absolute;
-	width: 0;
-	height: 0;
-	left: -12px;
-	top: 0px;
-	border: 15px solid;
-	border-color: #D7D7D7 transparent transparent transparent;}
+#wrapper #trading_panel .message_replies .message_reply_other:after,
+#wrapper #trading_panel .message_replies .message_reply_self:before {
+	content: none;}
 
-#trading_panel .message_replies .message_reply_other {
+#wrapper #trading_panel .message_replies .message_reply_other {
 	float: right;
-	background-color: #D2BC8C;}
+	background-color: var(--c-edition);}
 
-#trading_panel .message_replies .message_reply_other:after {
-	content: ' ';
+
+
+
+
+
+/***/
+/**********************************************
+*************** BACKPACK **********************
+**********************************************/
+
+/*** Items panel (the panel with all your items) ***/
+#backpack #items {
+	width: 250px;
+	float: left;
+	margin: 0 10px 15px;
+	position: relative;
+	padding: 3px 0px 3px 3px;
+	height: 650px;
+	background-color: rgba(0,0,0,.7);
+	text-align: center;
+	overflow: hidden;}
+
+#backpack #items {width: 375px;}
+
+
+/* The backpack slots */
+#backpack #slots_panel {
+	width: 375px;
+	float: right;
+	margin: 0 10px 15px;
+	padding: 3px 0px 3px 3px;
+	min-height: 650px;
+	background-color: rgba(25, 17, 7, 0.95);
+	border: 2px solid #969696;
+	border-radius: 4px;
+	box-shadow: inset 0px 0px 4px 2px black, 0px 0px 5px 2px black;}
+
+#backpack #slots_panel ul {
+	margin-top: 0;
+	padding: 0;}
+#backpack #slots_panel ul li {
+	padding: 4px;}
+
+#backpack #slots_header {
+	height: 60px;
+	position: relative;
+	padding-left: 100px;
+	margin-bottom: 5px;
+	border-bottom: 2px solid #969696;}
+#backpack #slots_header img {
 	position: absolute;
-	width: 0;
-	height: 0;
-	right: -12px;
-	top: 0px;
-	border: 15px solid;
-	border-color: #D2BC8C transparent transparent transparent;}
+	top: -40px;
+	left: -20px;}
+#backpack #slots_header span {
+	color: #fff2e0;
+	font-size: 3em;
+	font-weight: bold;
+	font-family: ElderScrolls;
+	line-height: 55px;}
+
+#backpack .ui-widget-content {background: none;}
+#backpack .itemslot {
+	list-style-type: none;
+	margin: 4px;
+	width: 106px;
+	height: 106px;
+	float: left;
+	position: relative;
+	background-color: rgba(103, 71, 26, 0.5);
+	border: 1px solid #969696;
+	border-radius: 4px;
+	box-shadow: inset 0px 0px 4px 1px black, 0px 0px 5px 2px black;}
+
+#backpack .itemslot .slot_number {
+	position: absolute;
+	z-index: 1;
+	left: -2px;
+	top: -6px;
+	padding: 2px;
+	background: #4a4a4a;
+	box-shadow: 0px 0px 1px 1px black;
+}
+
+#backpack .itemslot .item {
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 2px;}
+
+#backpack #slots_panel {width: 500px;}
+
+
+/* Buttons */
+#backpack button {
+	cursor: pointer;
+	height: 52px;
+	width: 120px;
+	margin-top: 2px;
+	margin-right: 3px;
+	float: right;
+	border-radius: 5px;
+	font-size: 17px;
+	font-weight: bold;
+	color: #fff2e0;
+	border: 1px solid #969696;
+	background-color: rgba(241, 167, 64, 0.5);
+	box-shadow: 0px 0px 5px 2px black;}
+
+#backpack button:hover {
+	filter: brightness(95%);}
+
+#backpack button:active {
+	box-shadow: inset 2px 2px 3px #000;}
+
+#backpack button:focus {
+	outline: 0;}
+
+#backpack button:disabled {
+	filter: grayscale(85%);
+	color: #1c1c1c;
+	cursor: default;}
+
+
 

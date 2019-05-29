@@ -8,7 +8,8 @@
 /** COLORS **/
 :root {
     --c-quote-brdr:                     rgba(10, 10, 10, .1);
-    --c-quote:                          rgba(10, 10, 10, .05);
+    --c-quote:                          rgba(10, 10, 10, .5);
+    --c-contrast:                       rgba(0, 0, 0, .2);
     --c-txt: 							rgb(50, 50, 50);
     --c-text-s: 						rgb(100, 100, 100);
     --c-curtain:						rgb(110, 110, 110);
