@@ -6903,6 +6903,9 @@ body#user.inventory {}
 	text-align: center;
 	width: 100%;
 	max-height: 600px;}
+.profile .box_art_gallery .gallery_main_slot img {
+    width: auto;
+    max-height: inherit;}
 .profile .box_art_gallery .gallery_row {
 	padding: 0;
 	margin: auto;
