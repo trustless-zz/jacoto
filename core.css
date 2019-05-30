@@ -974,7 +974,8 @@ div,
 #shop .item_description,
 #shop li.item_li.owned:after,
 fancybox-button,
-tr.group_torrent >td a:before {
+tr.group_torrent >td a:before,
+#itemsdiv p {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1346,6 +1347,9 @@ table.gazelles_art_display .hovereffect:hover:before {
 .fancybox-thumbs>ul>li:not(.fancybox-thumbs-active):hover:before {
     border-color: var(--c-b3);}
 
+.fancybox-navigation .fancybox-button--arrow_left /*jumping button fix*/ {
+    left: 6px !important;}
+
 /** close/expand head **/
 #index #recommended .head,
 .box.news_post .head {
@@ -1570,6 +1574,7 @@ table#snatchesrow img,
     box-shadow: var(--p-header-shdw);
     border: var(--p-img-anchor-brdr);}
 
+#user .box.box_items #itemsdiv td div:hover,
 .sidebar .box.box_image_coverart img:hover,
 table#uploadsrow img:hover,
 table#snatchesrow img:hover,
@@ -4430,6 +4435,7 @@ input[type="search"],
 #collections .linkbox a[href^="torrents.php?taglist="],
 .linkbox a[href^="torrents.php?action=editimages&groupid"],
 .linkbox a[href^="torrents.php?action=editgroup&groupid"],
+.linkbox a[href^="?type=viewseed&userid"],
 .linkbox a[href^="?type=hitnrun&userid"],
 #slides >.nobullet a,
 .linkbox a[onclick^="popup_add("],
@@ -4502,6 +4508,7 @@ input[type="search"],
 #collections .linkbox a[href^="torrents.php?taglist="]:before                   {content: 'Search collection';}
 .linkbox a[href^="torrents.php?action=editimages&groupid"]:before               {content: 'Edit Images';}
 .linkbox a[href^="torrents.php?action=editgroup&groupid"]:before                {content: 'Edit description';}
+.linkbox a[href^="?type=viewseed&userid"]:before                                {content: 'Torrent History';}
 .linkbox a[href^="?type=hitnrun&userid"]:before                                 {content: "Hit 'n' Runs";}
 #slides >.nobullet a:before                                                     {content: 'See the Current Pick';}
 .linkbox a[onclick^="popup_add("]:before                                        {content: 'Add a user';}
@@ -5737,12 +5744,69 @@ span.size5 img {
 .profile .box_stats .stat {
 	padding-left: 25px;}
 
+#user .box.box_items #itemsdiv tbody {
+    display: block;}
+#user .box.box_items #itemsdiv tr {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;}
+#user .box.box_items #itemsdiv td {
+    margin-bottom: 10px;
+    display: block;
+    padding: 0;
+    width: calc(25% - 7.5px);}
+#user .box.box_items #itemsdiv tr:last-child td {
+    margin-bottom: 0;}
+#user .box.box_items #itemsdiv td div {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--c-edition);
+    border: var(--p-img-anchor-brdr);
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    box-sizing: border-box;}
+#user .box.box_items #itemsdiv p:first-child {
+    color: var(--c-text-s);
+    text-align: center;
+    min-height: 32px;
+    margin: 7px 7px 0 7px;
+    font-size: 16px;
+    line-height: 16px;}
+#user .box.box_items #itemsdiv td div:hover p:first-child {
+    color: var(--c-txt);}
+#user .box.box_items #itemsdiv td a {
+    background-color: transparent;
+    display: block;
+    width: calc(100% - 40px);
+    margin: 7px auto;}
+#user .box.box_items #itemsdiv img {
+    max-width: unset;
+    width: 100%;
+    padding: 0;
+    float: unset;}
+#user .box.box_items #itemsdiv td a:before {
+    content: '';
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    position: absolute;
+    top: -3px;
+    left: -3px;}
+
+
+#user .box.box_requests #requests td:nth-child(2) {
+    white-space: nowrap;}
+#user .box.box_requests #requests td:nth-child(2) a {
+    vertical-align: inherit;}
+
+.profile .box_stats #gold .stat {
+    background-repeat: no-repeat;
+    background-position: left center;}
 .profile .box_stats #ratio .stat {
 	background: url("https://gazellegames.net/static/styles/game_room/images/icons/ratio.png") no-repeat left center;}
 .profile .box_stats #share_score .stat {
 	background: url("https://gazellegames.net/static/styles/game_room/images/icons/share_score.png") no-repeat left center;}
-.profile .box_stats #gold .stat {
-	background: url("https://gazellegames.net/static/styles/game_room/images/icons/coins.png") no-repeat left center;}
 .profile .box_stats #upload .stat {
 	background: url("https://gazellegames.net/static/styles/game_room/images/icons/sword_upload.png") no-repeat left center;}
 .profile .box_stats #download .stat {
@@ -5752,7 +5816,7 @@ span.size5 img {
 .profile .box_stats #clan .clan_fire {
 	background: url("https://gazellegames.net/static/common/clans/fire_icon.png") no-repeat left center;}
 .profile .box_stats #clan .clan_water {
-	background: url("https://gazellegames.net/static/common/water_icon.png") no-repeat left center;}
+	background: url("https://gazellegames.net/static/common/clans/water_icon.png") no-repeat left center;}
 .profile .box_stats #clan .clan_wind {
 	background: url("https://gazellegames.net/static/common/clans/wind_icon.png") no-repeat left center;}
 
@@ -6867,7 +6931,7 @@ body#user.inventory {}
 .profile .gallery_small_slot img {
 	display: block;}
 .profile .box_art_gallery .gallery_small_slot.selected {
-	border: 3px solid var(--c-sticky-id-brdr);
+	border-color: var(--c-sticky-id-brdr);
 	margin: 0;}
 
 .profile .box_art_gallery .gallery_small_slot img {
@@ -7118,7 +7182,7 @@ body#user.inventory {}
 	padding: 5px;}
 #user #itemsdiv div[style="text-align:center;"],
 #user #itemsdiv span[style="text-decoration: underline;"],
-#user #itemsdiv p {
+#user #itemsdiv p:not(:first-child) {
 	display: none;}
 .select2-search__field {
 	height: 30px;}
@@ -8322,7 +8386,7 @@ table.adventure_table h3 {
     box-shadow: none;}
 
 #wrapper #trading_panel .trade_table .notice {
-    width: calc(100% - 25px);
+    width: calc(100% - 20px);
 	list-style-type: none;
 	margin: 0 0 10px 0;
 	padding: 4px;
@@ -8510,6 +8574,7 @@ table.adventure_table h3 {
 /*** Message Box ***/
 
 #wrapper #trading_panel .message_section {
+    box-sizing: border-box;
 	width: 100%;
 	float: left;
 	clear: both;

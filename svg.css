@@ -200,7 +200,8 @@ img.animate_icon {
 img[title="Gold"],
 #requests_donate img,
 #stats_gold a,
-#wrapper .trade_value .trade_value_gold img {
+#wrapper .trade_value .trade_value_gold img,
+.profile .box_stats #gold .stat {
     background-image: url('icons/gold.svg');}
 h2#username span#tip_user img,
 #wrapper #trading_panel .gold_trade a#gold_trade_add img {
