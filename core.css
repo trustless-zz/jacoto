@@ -429,7 +429,7 @@ pre {
     white-space: pre-wrap;}
 
 strong.mature +strong +br +a[onclick] {
-    margin-top: 0 !important;}
+    /* margin-top: 0 !important; */}
 
 .sub {
     visibility: hidden;}
@@ -1240,6 +1240,7 @@ strong.important_text,
 .wiki_article span[style*="red;"],
 .item_description span[style*="red;"],
 .info_description span[style*="red;"],
+#user .box.box_items #itemsdiv [style*="red;"],
 #user .thin >h2:first-child +.center ~table.border span[style*="red;"],
 #reportsv2 #dynamic_form >table.border td.label [color="red"],
 #userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"],
@@ -2722,7 +2723,8 @@ input.hidden,
 #right_poll,
 #share_score >br,
 #adventureclub form[name="realms_search"] td.label,
-#seedtime_tokens >br {
+#seedtime_tokens >br,
+strong.mature +strong +br {
     display: none;}
 
 .similar {
@@ -3742,6 +3744,9 @@ div.breadcrumbs,
     -webkit-clip-path: polygon(-5px -5px, calc(100% + 5px) -5px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));
     clip-path: polygon(-5px -5px, calc(100% + 5px) -5px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));}
 
+.profile .box_stats:hover .offline,
+.profile .box_stats:hover #last_seen,
+#user .box.box_items #itemsdiv td div:hover p:last-child,
 .forum_post .comment_rating:hover,
 .avatar:hover .forumstat,
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
@@ -4030,11 +4035,12 @@ a[onclick="BBCode.spoiler(this);"] {
     color: var(--c-anchor);
     padding: 0 !important;
     margin: 5px 10px 0 0 !important;
-    cursor: default !important;}
+    /* cursor: default !important; */}
 input[type="button"][value="Show"]:hover,
 input[type="button"][value="Hide"]:hover,
 a[onclick="BBCode.spoiler(this);"]:hover {
-    color: var(--c-anchor-hvr);}
+    color: var(--c-anchor-hvr);
+    background-color: var(--c-anchor-hvr-bcg) !important;}
 
 #searchforum >div,
 #searchthread >div {
@@ -5726,6 +5732,11 @@ span.size5 img {
 .profile .box_stats .online {
 	color: var(--c-on);}
 
+#user .box.box_items #itemsdiv p:first-child,
+.profile .box_stats .offline,
+.profile .box_stats #last_seen {
+    transition-delay: 0s;}
+    
 .profile .box_stats .offline {
 	color: var(--c-off);
 	opacity: 0.5;}
@@ -5736,6 +5747,9 @@ span.size5 img {
 	opacity: 0.9;
 	margin-top: -10px;
     flex: 0 0 100%;}
+.profile .box_stats:hover .offline,
+.profile .box_stats:hover #last_seen {
+    opacity: 1;}
 
 .profile .box_stats #user_stats li {
 	width: 50%;
@@ -5787,12 +5801,28 @@ span.size5 img {
     padding: 0;
     float: unset;}
 #user .box.box_items #itemsdiv td a:before {
+    z-index: 9;
     content: '';
     width: calc(100% + 6px);
     height: calc(100% + 6px);
     position: absolute;
     top: -3px;
     left: -3px;}
+#user .box.box_items #itemsdiv td p:last-child {
+    display: block;
+    position: absolute;
+    top: 46px;
+    background-color: red;
+    left: 20px;
+    width: calc(100% - 60px);
+    height: calc(100% - 83px);
+    margin: 0;
+    background-color: var(--c-item-desc);
+    color: var(--c-txt);
+    padding: 10px;
+    opacity: 0;}
+#user .box.box_items #itemsdiv td div:hover p:last-child {
+    opacity: 1;}
 
 
 #user .box.box_requests #requests td:nth-child(2) {
@@ -8787,3 +8817,32 @@ div#fight_skill_points_assign >table {
 #fight_skill_points_assign #submit {
 	float: right;}
 
+
+/** user review pop-up on #user page **/
+.qtip-default {
+    border: var(--p-main-brdr);
+    background-color: var(--c-box);
+    color: var(--c-txt);}
+.qtip-shadow {
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);}
+.qtip-content {
+    padding: 0;}
+.qtip-default .box {
+    background-color: unset !important;
+    -webkit-box-shadow: unset !important;
+    box-shadow: unset !important;
+    border: unset !important;
+    margin: unset !important;}
+.qtip-default h3 {
+    margin: 0;
+    width: 100%;}
+.qtip-default .pad.review {
+    font-size: 14px;
+    line-height: var(--p-lh);}
+.qtip-default .pad.review p:first-of-type {
+    margin-top: 8px;}
+.qtip-default .pad.review p:last-child {
+    margin-bottom: 0;}
+.qtip .qtip-tip canvas {
+    display: none;}
