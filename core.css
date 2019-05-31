@@ -438,7 +438,7 @@ strong.mature +strong +br +a[onclick] {
 	border-radius: 0px !important;
 	border: var(--p-table-brdr) !important;
 	background: var(--c-box) !important;
-	color: var(--c-anchor-hvr) !important;
+	color: var(--c-low) !important;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 .tooltipster-default .tooltipster-content {
@@ -879,7 +879,7 @@ span.user_title a:hover {
 .next:hover,
 #taglist a:hover,
 .filter_torrents.advanced #taglist td:hover,
-.torrent_details .group_torrent td:first-child a,
+/* .torrent_details .group_torrent td:first-child a, */
 .box_game_ratings a[target="_blank"]:hover,
 /*#requests .thin >.center.box.pad a[onclick],*/
 #requests table.border a[href^="upload.php"],
@@ -907,7 +907,7 @@ span.user_title a:hover {
 #staffpm .linkbox a[onclick],
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a,
 .search.box.pad #cat_list a,
-tr.pad.hidden .linkbox a,
+/* tr.pad.hidden .linkbox a, */
 .colhead_dark a[onclick^="Quote"],
 .head a[onclick^="Quote"],
 
@@ -994,15 +994,15 @@ body >div, /* more info window at #shop */
 #menu a:hover,
 #userinfo_minor a:hover,
 #userinfo_username li:not(.sub) a:hover,
+.box.news_post .head:hover {
+    color: var(--c-anchor-hvr);}
 #menu li.active a,
 #userinfo_minor li.active a,
 #userinfo_username .donateico.active a,
 #userinfo_username .welcome.active a,
 #userinfo_username .sub span.active a,
-.box.news_post .head:hover,
-a:hover .ratings span,
 #header #announcement {
-    color: var(--c-anchor-hvr);}
+    color: var(--c-low);}
 
 .sidebar img {
     border: var(--p-img-brdr);
@@ -1332,7 +1332,7 @@ table.gazelles_art_display .hovereffect:hover:before {
     background: var(--c-txt) !important;}
 .fancybox-button:hover {
     color: var(--c-sb1) !important;
-    background: var(--c-anchor-hvr) !important;}
+    background: var(--c-low) !important;}
 .fancybox-button.disabled:hover,
 .fancybox-button.disabled {
     color: var(--c-main-brdr) !important;
@@ -1679,7 +1679,7 @@ i.fa.fa-fl-pots {
     display: block;
     background: var(--p-searchbar-grdnt);}
 .error_message {
-    color: var(--c-anchor-hvr);
+    color: var(--c-low);
     background-color: var(--c-em-bcg);}
 a .error_message:hover {
     color: var(--c-high);
@@ -2255,7 +2255,7 @@ select {
     height: 26px;
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
-    color: var(--c-anchor-hvr);
+    color: var(--c-low);
     font-size: 14px;
     font-family: OpenSans, Helvetica, Arial, sans-serif;}
 select {
@@ -2275,7 +2275,7 @@ input[type="url"] {
 input[type="search"] {
     /* height: 26px; */}
 input[type="search"]:focus {
-    color: var(--c-anchor-hvr) !important;
+    color: var(--c-low) !important;
     border-color: var(--c-b1) !important;
     outline: none !important;}
 
@@ -2338,7 +2338,7 @@ select:focus,
 input:focus,
 #wrapper #trading_panel .gold_trade input#my_gold_trade_amount:focus,
 #wrapper .select2-container--default .select2-selection--multiple[aria-expanded="true"] {
-    color: var(--c-anchor-hvr);
+    color: var(--c-low);
     border-color: var(--c-b1);
     outline: none;}
 .select2-container--open .select2-dropdown--below {
@@ -2443,7 +2443,7 @@ a[href^="javascript:Vote("] strong:hover,
 .box_tags .stats.nobullet div a:hover,
 #upload td#image_block a:hover,
 #newthreadform #newthreadtext #answer_block a:hover {
-    color: var(--c-anchor-hvr);
+    color: var(--c-low);
     background: var(--p-btn-hvr);}
 button:hover:active,
 #wrapper #trading_panel button:hover:active,
@@ -3037,7 +3037,7 @@ span.secondary_class {
     text-indent: 4px;
     font-size: 18px;
     line-height: 38px;
-    color: var(--c-anchor-hvr);
+    color: var(--c-low);
     z-index: 999;}
 #markread:hover:before {
     color: var(--c-high);
@@ -3765,7 +3765,7 @@ tr.likes td[id^="likers_"]:hover {
     margin: 0 auto;
     display: block;
     width: fit-content;
-    color: var(--c-anchor-hvr);
+    color: var(--c-low);
     background-repeat: no-repeat;
     background-position: right center;
     background-size: 0 0;
@@ -4011,7 +4011,7 @@ ul#noty_bottomRight_layout_container li {
     box-shadow: var(--p-main-shdw) !important;
     border: var(--p-main-brdr) !important;
     background-color: var(--c-b3) !important;
-    color: var(--c-anchor-hvr) !important;}
+    color: var(--c-low) !important;}
 ul#noty_bottomRight_layout_container li[style*="darkred"] {
     background-color: var(--c-em-bcg) !important;}
 
@@ -4848,7 +4848,7 @@ input[class="date_picker"] {
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option.xdsoft_current {
     background: var(--c-b1);
     box-shadow: inset var(--p-main-shdw);
-    color: var(--c-anchor-hvr);}
+    color: var(--c-low);}
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:hover,
 .xdsoft_datetimepicker .xdsoft_calendar td:hover,
 .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box > div > div:hover {
@@ -5228,7 +5228,7 @@ td >img[title="Gold"] {
 .new_status:before {
     content: 'NEW';
     display: inline-block;
-    color: var(--c-anchor-hvr);
+    color: var(--c-low);
     font-size: 13px;
     line-height: 18px;
     padding: 0 3px 0 2px;
@@ -6427,8 +6427,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
     color: var(--c-text-s);
     border: 2px solid var(--c-text-s);}
 #shop li.item_li.owned:hover:after {
-    color: var(--c-anchor-hvr);
-    border-color: var(--c-anchor-hvr);}
+    color: var(--c-low);
+    border-color: var(--c-low);}
 
 #shop li.featured {
     border-color: var(--c-input-brdr);
@@ -6531,7 +6531,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     font-size: 17px;
     line-height: 17px;
     font-weight: 600;
-    color: var(--c-anchor-hvr);
+    color: var(--c-low);
     background-color: var(--c-edition);
     padding: 8px 0;
     position: absolute;
@@ -6545,7 +6545,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     font-size: 17px;
     line-height: 17px;
     font-weight: 600;
-    color: var(--c-anchor-hvr);
+    color: var(--c-low);
     background-color: var(--c-edition);
     padding: 8px 0;
     position: absolute;
@@ -7500,7 +7500,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 	font-style: italic;
 	font-weight: normal;}
 #achievements td .italic:last-child {
-    color: var(--c-anchor-hvr);}
+    color: var(--c-low);}
 
 #seedtime_tokens #tokens_breakdown,
 #achievements {
@@ -7697,7 +7697,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     text-indent: 3px;
     font-weight: 600;
     z-index: 9;
-    color: var(--c-anchor-hvr);
+    color: var(--c-low);
     top: 0;
     right: 0;}
 #crafting_recipes h3,
@@ -7861,7 +7861,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
     color: var(--c-text-s);}
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
-    color: var(--c-anchor-hvr);}
+    color: var(--c-low);}
 .select2-container--default .select2-results > .select2-results__options >li,
 option {
     height: 26px;
@@ -7871,7 +7871,7 @@ option {
 .select2-container--default .select2-results > .select2-results__options >li {
     color: var(--c-txt);}
 .select2-container--default .select2-results > .select2-results__options >li:hover {
-    color: var(--c-anchor-hvr);
+    color: var(--c-low);
     background-color: var(--c-tgroup);}
 #adventureclub table#monsters_search td.tooltip {
     text-align: right;}
@@ -8155,7 +8155,7 @@ table.adventure_table h3 {
 	width: calc(100% - 40px);
 	z-index: 1;}
 #crafting_recipes li.item_li:hover h3 {
-    color: var(--c-anchor-hvr);}
+    color: var(--c-low);}
 
 #crafting_recipes .item_image_div {
 	height: 150px;
