@@ -407,6 +407,25 @@ td >select {
 td >input#file {
     margin: 3px 0;}
 
+/***/
+.r00,
+.r01 {color: var(--c-r01);}
+.r02 {color: var(--c-r02);}
+.r03 {color: var(--c-r03);}
+.r04 {color: var(--c-r04);}
+.r05 {color: var(--c-r05);}
+.r06 {color: var(--c-r06);}
+.r07 {color: var(--c-r07);}
+.r08 {color: var(--c-r08);}
+.r09 {color: var(--c-r09);}
+.r10 {color: var(--c-r10);}
+.r20,
+.r50,
+.r99 {
+    color: var(--c-r10);
+    text-shadow: 0 0 1px var(--c-r99);}
+
+
 .spoilerbox,
 blockquote,
 pre {
@@ -2417,6 +2436,9 @@ tr.likes td[id^="likers_"] >strong,
     margin-bottom: 10px;}
 .box_tags .stats.nobullet li {
     margin-bottom: 2px;}
+.box_tags .stats.nobullet li >a {
+    line-height: 20px;
+    margin: 3px 0;}
 #upload td#image_block a,
 #newthreadform #newthreadtext #answer_block a,
 a[href^="javascript:IndexVote("] strong:before,
@@ -2753,7 +2775,7 @@ strong.mature +strong +br {
     height: auto;
     border: var(--p-img-anchor-brdr);}
 .similar #suggested_header {
-    width: 100%;
+    width: calc(100% - 15px);
     margin: 10px 0;
     font-weight: 600;
     font-size: 19px;
@@ -2858,7 +2880,8 @@ li:not(.suggested_similar) .similar_votes >span {
 .torrent_details .torrent_table tr.pad.hidden .colhead_dark,
 #achievements .colhead,
 .thin#user_fight_attacks table.border .colhead,
-#seedtime_tokens #tokens_breakdown .colhead {
+#seedtime_tokens #tokens_breakdown .colhead,
+#upload #content >div[style="margin:0px auto;width:700px"] .colhead {
     background: var(--p-subcolhead);}
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
@@ -2867,6 +2890,7 @@ li:not(.suggested_similar) .similar_votes >span {
     font-size: 14px;
     line-height: 19px;
     padding: 6px 5px 7px 5px;}
+#upload #content >div[style="margin:0px auto;width:700px"] .colhead td,
 #seedtime_tokens #tokens_breakdown .colhead td,
 .torrent_details .torrent_table tr.pad.hidden .colhead td,
 .torrent_details .torrent_table tr.pad.hidden .colhead_dark td,
