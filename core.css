@@ -496,14 +496,6 @@ tr.unreadpm td:first-child {
 #inbox #messageform >input:first-child +table {
     overflow: hidden;} */
 
-#searchbars ul {
-    margin: 0 auto;
-    max-width: 1314px;
-    padding: 2px 0;
-    display: flex;}
-#searchbars ul li {
-    width: 100%;
-    padding: 0 7px;}
 #top10 .thin.top10_torrents >div >table.border td:nth-child(3),
 #top10 .thin.top10_games >div >table.border td:nth-child(3),
 #rules .thin >form.search_form input#search_string,
@@ -1051,8 +1043,6 @@ img {
     justify-content: center;
     position: relative;
     overflow: hidden;}
-#stats_seeding {
-    border-top: 2px solid var(--c-main-brdr);}
 img[title="Downloaded"],
 img[title="Uploaded"],
 img[title="Leechers"],
@@ -7524,7 +7514,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 	font-style: italic;
 	font-weight: normal;}
 #achievements td .italic:last-child {
-    color: var(--c-low);}
+    /* color: var(--c-low); */}
 
 #seedtime_tokens #tokens_breakdown,
 #achievements {

@@ -368,20 +368,20 @@ img[title="ThumbsDown "],
 /* background-image: url('data:image/svg+xml;utf8,');} */
 
 
-@media (min-width: 1760px) and (min-height: 659px) {
-/** user settings **/
+/* @media (min-width: 1760px) and (min-height: 659px) {
+
     #nav_useredit a {
         background-image: url('icons/dark/nav/useredit.svg');}
-/** logout **/
+
     #nav_logout a {
         background-image: url('icons/dark/nav/logout.svg');}
-/** donate **/
+
     #nav_donate a {
         background-image: url('icons/dark/nav/donate.svg');}
-/** scroll to top **/
+
     #toplink a {
         background-image: url('icons/dark/toplink.svg');}
-/** navbar **/
+
     #nav_torrents a {
         background-image: url('icons/dark/nav/games.svg');}
     #nav_collections a {
@@ -422,3 +422,4 @@ img[title="ThumbsDown "],
     #userinfo_minor:before {
         background-image: url('icons/dark/nav/more.svg');}
 }
+*/

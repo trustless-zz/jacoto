@@ -110,6 +110,90 @@ html {
 .forum_post .colhead_dark a.username {
     position: relative;
     z-index: 9;}
+    
+    
+/*new boring desktop header*/
+#header {
+    border-bottom: var(--p-table-brdr);
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: column;}
+#header #searchbars {
+    width: 100%;
+    background: var(--p-searchbar-grdnt);
+    display: block;
+    order: -99;}
+#header #searchbars ul {
+    max-width: 1314px; /* content, footer */
+    width: 100%;
+    margin: 0 auto;
+    padding: 2px 0;
+    display: flex;}
+#header #searchbars ul li {
+    width: 100%;
+    padding: 0 7px;}
+#header #menu {
+    order: -98;
+    display: block;
+    background-color: var(--c-input);
+    width: 100%;}
+#header #menu ul {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    width: 100%;}
+#header #userinfo_minor li,
+#header #menu ul,
+#header #menu li {
+    margin: 0;
+    padding: 0;}
+#header #menu li a {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 5px 10px;
+    display: block;}
+#header #userinfo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-end;
+    background-color: var(--c-box);}
+#header #userinfo_minor {
+    z-index: 0;
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    position: absolute;
+    justify-content: center;}
+#header #userinfo_username {
+    position: relative;
+    font-size: 15px;
+    line-height: var(--p-lh);
+    z-index: 1;
+    order: 99;}
+#header #userinfo_username #nav_userinfo a  {
+    display: block;
+    line-height: 20px;
+    padding: 5px 8px;}
+#header #userinfo_minor li a {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 5px 8px;
+    display: block;}
+#header #userinfo_stats {
+    position: relative;
+    z-index: 1;
+    order: 98;
+    width: 30px;
+    height: 30px;}
+#header #userinfo_stats li:first-child {
+    margin-top: 30px;}
+    
+    
+    
 }
 
 
@@ -119,7 +203,7 @@ html {
 }
 
 
-
+/*
 @media (min-width: 1760px) and (min-height: 659px) {
     #header {
         font-size: 1em;
@@ -299,6 +383,8 @@ html {
     #userinfo_minor a.notificationsico {
         letter-spacing: var(--p-dot3);}
 }
+*/
+/*
 @media (min-width: 1760px) and (min-height: 659px) and (max-height: 903px) {
     #header .clan_trophy {
         top: 541px;}
@@ -376,3 +462,4 @@ html {
     #userinfo_stats {
         top: 147px;}
 }
+*/
