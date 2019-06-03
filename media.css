@@ -483,3 +483,95 @@ html {
         top: 147px;}
 }
 */
+
+
+
+
+/** logo draft **/
+/* #logo:before {
+    content: '';
+    font-size: 24px;
+    line-height: 34px;
+    width: 128px;
+    height: 34px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(90deg,var(--c-b1) 40%,var(--c-b00));
+    z-index: -99;
+    opacity: 1;
+    pointer-events: none;
+    transform: translateX(-100%);
+        animation: remove .5s linear forwards;
+}
+#logo:after {
+    content: '';
+    width: 128px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 34px;
+    background: linear-gradient(90deg,var(--c-b2) 40%,var(--c-b00));
+    z-index: -99;
+    opacity: 1;
+    pointer-events: none;
+        animation: remove .5s linear forwards;
+    transform: translateX(-100%);
+}
+#logo:hover:after,
+#logo:hover:before {
+    opacity: 1;
+        animation: move .5s linear forwards;
+}
+#logo:hover:after {
+    animation-delay: .05s;}
+
+@keyframes move {
+from {transform: translateX(-100%);}
+to {    transform: translateX(0);}
+}
+@keyframes remove {
+from {transform: translateX(0);}
+to {    transform: translateX(-100%);}
+}
+
+
+#logo a:before {
+    color: var(--c-input);
+    font-weight: 600;
+    content: 'GAZELLE';
+    font-size: 24px;
+    line-height: 34px;
+    width: 128px;
+    height: 34px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+}
+#logo a:after {
+    color: var(--c-box);
+    font-weight: 600;
+    text-align: center;
+    content: 'GAMES';
+    width: 128px;
+    height: 30px;
+    font-size: 24px;
+    line-height: 30px;
+    position: absolute;
+    left: 0;
+    top: 34px;
+    z-index: 1;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#logo a:before,
+#logo a:after {
+    transition: all .3s linear;}
+#logo a:hover:before,
+#logo a:hover:after {
+    opacity: 1;} */

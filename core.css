@@ -1188,9 +1188,6 @@ input[type=submit]:hover:active,
     -o-transition: 0s;
     transition: 0s;}
 
-#userinfo_username .sub span:last-child {
-    border-bottom: 2px solid var(--c-main-brdr);}
-
 #userinfo_minor .highlight,
 #menu li:not(.active):hover,
 #userinfo_minor li:not(.active):hover,
@@ -3040,22 +3037,22 @@ span.secondary_class {
     width: calc(100% - 58px);}
 
 #markread:before {
-    width: 19px;
-    height: 38px;
+    width: 18px;
+    height: 36px;
     position: absolute;
     background-color: var(--c-em-bcg);
-    left: -21px;
+    left: -20px;
     top: -1px;
     cursor: pointer;
-    border-radius: 38px 0 0 38px;
+    border-radius: 36px 0 0 36px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: var(--p-main-brdr);
     clip: rect(-10px, 20px, 50px, -10px);
     content: '✔';
-    text-indent: 4px;
-    font-size: 18px;
-    line-height: 38px;
+    text-indent: 3.5px;
+    font-size: 17px;
+    line-height: 36px;
     color: var(--c-low);
     z-index: 999;}
 #markread:hover:before {
