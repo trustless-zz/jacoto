@@ -40,7 +40,8 @@
     --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
     --p-fade-2:                         linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
     --p-lh: 							1.35714286805; /* calc(19 / 14), 1.357142857142857 says 19px but actually is 18px when measured */
-    --p-dot3:							-.02142857142em;}
+    --p-dot3:							-.02142857142em;
+    --p-head:                           18px;}
 
 /** Get More News - duplicate news bug fix **/
 #index .box.news_post:empty,
@@ -849,8 +850,8 @@ div#fight_skill_points_assign >table {
     font-size: 1em;}
 .head {
     background: var(--p-head-grdnt);
-    font-size: 20px;
-    line-height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
     padding: 9px 10px;}
 .sidebar .head {
     margin: -10px -10px 0;
@@ -1022,6 +1023,7 @@ body >div, /* more info window at #shop */
 img {
     border: 0;
     border-style: none;}
+#keydiv,
 .center,
 #footer {
     text-align: center;}
@@ -1411,9 +1413,9 @@ table.gazelles_art_display .hovereffect:hover:before {
 #newthreadpreview #pollpreview .head.colhead_dark,
 .head[title="Click to expand/collapse"],
 .head[onclick] {
-    height: 20px;}
+    height: var(--p-head);}
 #forums .thin >.box.thin.clear .head.colhead_dark {
-    height: 20px !important;
+    height: var(--p-head) !important;
     padding: 9px 10px!important;}
 #forums .thin >.box.thin.clear .head.colhead_dark strong,
 #newthreadpreview #pollpreview .head.colhead_dark strong,
@@ -1426,7 +1428,7 @@ table.gazelles_art_display .hovereffect:hover:before {
     top: 0;
     padding: 9px 10px;
     width: calc(100% - 20px);
-    height: 20px;}
+    height: var(--p-head);}
 #forums .thin >.box.thin.clear .head.colhead_dark:hover:before,
 #newthreadpreview #pollpreview .head.colhead_dark:hover:before,
 .head[title="Click to expand/collapse"]:hover:before,
@@ -1491,7 +1493,7 @@ table.gazelles_art_display .hovereffect:hover:before {
     margin: 0;
     padding: 0;}
 .sidebar #freeleech_time_left {
-    height: 38px;
+    height: 36px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: var(--p-main-brdr);
@@ -1525,13 +1527,13 @@ td.center.cats_col +td,
     display: block;
     animation: lsfl-pulse-a linear 2s infinite;
     transform-origin: left;
-    height: 38px;
+    height: 36px;
     background-repeat: repeat-x;
-    background-size: 900px 38px;}
+    background-size: 900px 36px;}
 .sidebar #freeleech_time_left .points {
     display: block;
     position: absolute;
-    line-height: 38px;
+    line-height: 36px;
     left: 10px;
     top: 0;
     font-weight: 600;
@@ -1705,9 +1707,11 @@ a .error_message:hover:active {
     background-color: var(--c-img-bcg-anchor);}
 #index #clans a {
     display: block;
-    border: 9px solid var(--c-b3);}
+    border: 8px solid var(--c-b3);
+    border-right-width: 10px;
+    border-left-width: 10px;}
 #index #clans a:hover {
-    border: 9px solid var(--c-b1);}
+    border-color: var(--c-b1);}
 #index #clans a:hover .large_progress_bar { 
     background-color: var(--c-b3);}
 #index #clans a:hover:active .large_progress_bar {
@@ -1904,8 +1908,8 @@ a .error_message:hover:active {
 #manage_collage_table .colhead th,
 .colhead td,
 .colhead_dark td {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
     vertical-align: middle;
     font-weight: normal;
     padding: 9px 5px;
@@ -2624,7 +2628,7 @@ body:not(#upload) #artist_tr + tr td.label,
 .torrent_details .torrent_table >tbody >.colhead_dark strong,
 .torrent_details .torrent_table >tbody >.colhead_dark img {
     position: absolute;
-    line-height: 38px;
+    line-height: 36px;
     top: 0;
     left: 5px;
     z-index: 2;}
@@ -2634,7 +2638,7 @@ body:not(#upload) #artist_tr + tr td.label,
     margin-top: 10px;}
 
 .torrent_details .torrent_table >tbody >.colhead_dark td {
-    height: 20px;
+    height: var(--p-head);
     position: relative;}
 .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1) {
     width: 100%;
@@ -2736,7 +2740,8 @@ input.hidden,
 #share_score >br,
 #adventureclub form[name="realms_search"] td.label,
 #seedtime_tokens >br,
-strong.mature +strong +br {
+strong.mature +strong +br,
+#user #content >#progress_bar ~br {
     display: none;}
 
 .similar {
@@ -2975,7 +2980,7 @@ span.secondary_class {
     display: flex;}
 
 #grouplinks {
-    min-height: 38px;}
+    min-height: 36px;}
 #grouplinks a div {
     opacity: .6;
     filter: grayscale(.4);
@@ -3277,8 +3282,8 @@ img[src="static/common/thumbsup.png"],
 /* revisit later */
 #allreviews h2 {
     background: var(--p-head-grdnt);
-    font-size: 20px;
-    line-height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
     padding: 10px;
     margin: 0;
     width: auto;}
@@ -3454,8 +3459,8 @@ form[name="filter"] h3,
     width: 100%;
     font-weight: 600;
     background: var(--p-head-grdnt);
-    font-size: 20px !important;
-    line-height: 20px;
+    font-size: var(--p-head) !important;
+    line-height: var(--p-head);
     padding: 9px 10px;
     margin: -10px -10px 10px -10px;}
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2) p:last-child,
@@ -3854,7 +3859,7 @@ h2 marquee {
 #reports .thin >.box.pad,
 #forums #reply_box,
 #reportsv2 #report_table >.box.pad {
-    margin-top: -39px;}
+    margin-top: -37px;}
 #reportsv2 #report_table >.box.pad,
 #reports .thin >.box.pad:first-of-type,
 #requests .main_column >table:first-child tr:first-child td,
@@ -3864,7 +3869,7 @@ h2 marquee {
 #user .thin >h2 ~form[method="post"],
 #staffpm .box.vertical_space ~h3 +.box.pad,
 #gazelleview table.gazelleinfo tr:first-child td {
-    padding-top: 48px;}
+    padding-top: 46px;}
 #gazelles .thin >h2:first-child +.box.pad table,
 #wiki .center.thin >.box.pad input[type="text"],
 #wiki .center.thin >.box.pad textarea,
@@ -4156,7 +4161,7 @@ input[type="search"],
     -webkit-filter: none;
     filter: none;
     vertical-align: text-bottom;
-    margin-top: -1px; /* return line-height to 19px */}
+    margin-top: -1px; /* bring line-height back to 19px */}
 #clans td.label img {
     vertical-align: text-bottom;}
 
@@ -4181,7 +4186,7 @@ input[type="search"],
 #inbox .box.vertical_space +h2 +form>.box.pad,
 #inbox #messageform +h2 +form >.box.pad,
 #inbox h2 +#messageform >.box.pad {
-    padding: 48px 10px 10px 10px;
+    padding: 46px 10px 10px 10px;
     position: relative;}
 #gazelles .thin >h2:first-child +.box.pad:before,
 .gazelles_art_display:before,
@@ -4207,9 +4212,9 @@ input[type="search"],
     width: 100%;
     margin: -10px -10px 10px -10px;
     padding: 9px 10px;
-    font-size: 20px;
-    height: 20px;
-    line-height: 20px;
+    font-size: var(--p-head);
+    height: var(--p-head);
+    line-height: var(--p-head);
     background: var(--p-head-grdnt);
     font-weight: 600;
     content: 'Search';}
@@ -4268,7 +4273,7 @@ input[type="search"],
     position: absolute;
     margin: 0;}
 #reportsv2 #dynamic_form >table.border tr:first-child td {
-    padding-top: 49px;}
+    padding-top: 47px;}
 #reportsv2 #dynamic_form >ul:last-of-type {
     margin-bottom: 5px;}
 #reportsv2 #dynamic_form >table.border {
@@ -4371,9 +4376,9 @@ input[type="search"],
     position: absolute;
     top: 0;
     left: 1px;
-    height: 20px;
-    line-height: 20px;
-    font-size: 20px;
+    height: var(--p-head);
+    line-height: var(--p-head);
+    font-size: var(--p-head);
     font-weight: 600;
     padding: 9px 10px;
     background: var(--p-head-grdnt);
@@ -4401,8 +4406,8 @@ input[type="search"],
     width: calc(100% - 22px);
     font-weight: 600;
     background: var(--p-head-grdnt);
-    font-size: 20px !important;
-    line-height: 20px;
+    font-size: var(--p-head) !important;
+    line-height: var(--p-head);
     padding: 9px 10px;
     top: 1px;
     margin: 0 auto;}
@@ -4422,7 +4427,7 @@ input[type="search"],
     left: -1px;
     bottom: -1px;
     width: calc(100% + 2px);
-    height: calc(100% + 40px);
+    height: calc(100% + 38px);
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -4617,8 +4622,8 @@ input[type="search"],
     border: none;
     color: var(--c-txt);
     border-radius: 0px;
-    height: 20px;
-    font-size: 20px;
+    height: var(--p-head);
+    font-size: var(--p-head);
     font-weight: 600;}
 
 #bookmarks #collage_table tbody {
@@ -4645,17 +4650,17 @@ input[type="search"],
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 20px;
+    font-size: var(--p-head);
     width: calc(100% - 20px);
-    height: 20px;
-    line-height: 20px;
+    height: var(--p-head);
+    line-height: var(--p-head);
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
 #collections #coverart.box,
 #bookmarks #collage_table {
     display: block;
-    padding-top: 38px;
+    padding-top: 36px;
     position: relative;}
 
 
@@ -4701,7 +4706,7 @@ input[type="search"],
 #backpack #items-wrapper:before,/**/
 #bookmarks #collage_table tbody:before,
 #crafting_recipes #items_list:before {
-    top: 38px;}
+    top: 36px;}
 #trading_panel .trade_table .items-wrapper:before {
     top: 80px;}
 #backpack #slots_panel ul:after,
@@ -4727,8 +4732,8 @@ td.center.cats_col {
 #collections #torrent_table .colhead td[width="70%"] strong,
 #torrent_table .group.discog td[colspan="5"] >span +br,
 #bookmarks #torrent_table .colhead_dark td[width="70%"] strong {
-    font-size: 20px;
-    line-height: 20px;}
+    font-size: var(--p-head);
+    line-height: var(--p-head);}
 .thin.torrent_history >form#torrent_history_search td.label,
 #bookmarks #torrent_table .discog span[style="float:left;"] >br:first-child,
 #bookmarks #torrent_table .colhead_dark td[width="70%"] a {
@@ -4769,7 +4774,7 @@ td.center.cats_col {
     z-index: 1;
     position: relative;
     padding: 9px 10px;
-    height: 20px;
+    height: var(--p-head);
     width: calc(100% - 20px);
     display: block;}
 #torrents #requests.request_table .colhead span:before{
@@ -4790,10 +4795,10 @@ td.center.cats_col {
     content: 'Filter';
     left: 1px;
     top: 1px;
-    font-size: 20px;
+    font-size: var(--p-head);
     width: calc(100% - 22px);
-    height: 20px;
-    line-height: 20px;
+    height: var(--p-head);
+    line-height: var(--p-head);
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
@@ -4907,20 +4912,20 @@ input[class="date_picker"] {
 #user .thin >h2 ~br +br +h3,
 #user .thin >h2 +h3 {
     margin: 0;
-    font-size: 20px;
-    height: 20px;
+    font-size: var(--p-head);
+    height: var(--p-head);
     width: calc(100% - 22px);
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     position: relative;
     left: 1px;
-    margin-top: -38px;
+    margin-top: -36px;
     bottom: -54px;}
 #user .thin >h2:first-child +form[method="post"]:before {
-    line-height: 20px;
+    line-height: var(--p-head);
     content: 'Create a new notification filter';
-    font-size: 20px;
-    height: 20px;
+    font-size: var(--p-head);
+    height: var(--p-head);
     padding: 9px 10px;
     position: absolute;
     top: 0;
@@ -4942,14 +4947,14 @@ input[class="date_picker"] {
     margin: 6px 0 6px 15px;}
 #rules .thin >.box.pad,
 #chat .thin >.box.pad {
-    padding: 48px 10px 10px 10px !important;}
+    padding: 46px 10px 10px 10px !important;}
 #rules .thin >h2.center:first-child,
 #rules .thin >h3,
 #chat .thin >h3 {
     text-align: left;
     position: relative;
-    margin: -38px 0 0 0;
-    bottom: -39px;
+    margin: -36px 0 0 0;
+    bottom: -37px;
     width: calc(100% - 22px);
     left: 1px;}
 #collections #coverart.box ul,
@@ -4972,9 +4977,9 @@ input[class="date_picker"] {
 
 #rules .thin > .before_rules:before {
     content: 'Contents';
-    font-size: 20px;
-    height: 20px;
-    line-height: 20px;
+    font-size: var(--p-head);
+    height: var(--p-head);
+    line-height: var(--p-head);
     padding: 9px 10px;
     display: block;
     background: var(--p-head-grdnt);
@@ -5033,10 +5038,10 @@ table.adventure_table .colhead td:not(:first-child) {
 #torrents .thin >h2:first-child +.center:before {
     content: 'Filter';
     text-align: left;
-    font-size: 20px;
+    font-size: var(--p-head);
     font-weight: 600;
-    line-height: 20px;
-    height: 20px;
+    line-height: var(--p-head);
+    height: var(--p-head);
     background: var(--p-head-grdnt);
     display: block;
     padding: 9px 10px;
@@ -5053,9 +5058,9 @@ table.adventure_table .colhead td:not(:first-child) {
     font-weight: bold;}
 #collections script +.thin >form:first-child:before {
     content: 'New collection';
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    height: var(--p-head);
     width: 100%;
     padding: 9px 10px;
     background: var(--p-head-grdnt);
@@ -5064,9 +5069,9 @@ table.adventure_table .colhead td:not(:first-child) {
     font-weight: 600;}
 #staffpm #compose:before {   
     content: 'Compose';
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    height: var(--p-head);
     width: 100%;
     padding: 9px 10px;
     background: var(--p-head-grdnt);
@@ -5076,13 +5081,13 @@ table.adventure_table .colhead td:not(:first-child) {
 #staffpm #inbox >form#messageform >table tr:first-child td {
     padding-top: 44px;}
 #staffpm #inbox >form#messageform >h3 {
-    margin: 0 0 -38px 0;
+    margin: 0 0 -36px 0;
     position: relative;
     width: calc(100% - 22px);
     left: 1px;
     top: 1px;}
 #staffpm .box.vertical_space ~h3 {
-    margin: 15px 0 -38px 0;
+    margin: 15px 0 -36px 0;
     position: relative;
     width: calc(100% - 22px);
     left: 1px;
@@ -5144,12 +5149,12 @@ table#likesrow a {
     top: 0;
     left: 0;
     width: 100%;
-    height: 20px;
+    height: var(--p-head);
     padding: 9px 10px;
     z-index: 99;
-    font-size: 20px;
+    font-size: var(--p-head);
     font-weight: 600;
-    line-height: 20px;
+    line-height: var(--p-head);
     background: var(--p-head-grdnt);}
 #todo .thin >form tr:not(.colhead):not(:last-child) td:first-child {
     text-align: right;
@@ -5332,13 +5337,15 @@ td >img[title="Gold"] {
     margin-bottom: 0;}
 
 #rules h3#jump +.box.pad {
-    padding: 38px 0 0 0 !important;}
+    padding: 36px 0 0 0 !important;}
 
 #clans #clan_stats >span[style="float: right;"]:first-child {
-    font-size: 20px;
+    position: relative;
+    top: 1px;
+    font-size: var(--p-head);
     padding: 9px 10px;
-    line-height: 20px;
-    height: 20px;
+    line-height: var(--p-head);
+    height: var(--p-head);
     font-weight: 600;}
 
 h2#username span#tip_user {
@@ -5352,6 +5359,9 @@ h2#username span#tip_user a.tooltip {
 #requests_donate img,
 h2#username span#tip_user a.tooltip img {
     filter: var(--p-contrast);}
+
+
+
 
 
 
@@ -5481,7 +5491,7 @@ span.size5 img {
     display: flex;
     justify-content: space-between;}
 #collections table.collections_art_display tbody {
-    margin: 48px 10px 10px 10px;
+    margin: 46px 10px 10px 10px;
     display: block;}
 .collections_art_display tr:not(:first-child) td {
     margin-top: 10px;}
@@ -5491,10 +5501,10 @@ span.size5 img {
     position: absolute;
     left: 0;
     top: 0;
-    font-size: 20px;
+    font-size: var(--p-head);
     width: calc(100% - 20px);
-    height: 20px;
-    line-height: 20px;
+    height: var(--p-head);
+    line-height: var(--p-head);
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     font-weight: 600;}
@@ -5568,9 +5578,9 @@ span.size5 img {
     padding: 10px 0 0 0;}
 #wiki .sidebar .box_info.pad:before {
     content: 'Info';
-    font-size: 20px;
-    height: 20px;
-    line-height: 20px;
+    font-size: var(--p-head);
+    height: var(--p-head);
+    line-height: var(--p-head);
     background: var(--p-head-grdnt);
     width: 100%;
     display: block;
@@ -5579,9 +5589,9 @@ span.size5 img {
     font-weight: 600;}
 #wiki .box.wiki_article:before {
     content: 'Article';
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    height: var(--p-head);
     width: calc(100% - 20px);
     display: block;
     font-weight: 600;
@@ -5640,9 +5650,9 @@ span.size5 img {
 #wiki .center.thin >.box.pad:before {
     content: 'New article';
     width: 100%;
-    height: 20px;
-    font-size: 20px;
-    line-height: 20px;
+    height: var(--p-head);
+    font-size: var(--p-head);
+    line-height: var(--p-head);
     background: var(--p-head-grdnt);
     display: block;
     padding: 9px 10px;
@@ -5980,7 +5990,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	margin-bottom: 0;
 	padding: 0;	}
 #items_navigation >ul {
-	margin-bottom: 20px;	}
+	margin-bottom: 20px;}
 #items_navigation ul:last-child {
     margin-bottom: 0;}
 
@@ -6038,7 +6048,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #backpack #items-wrapper {
     margin-top: 0;
     text-align: center;
-    height: calc(100% - 38px);
+    height: calc(100% - 36px);
     width: 100%;
     float: left;
     padding: 10px 0 0 10px;
@@ -6676,8 +6686,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	color: var(--c-anchor);}
 
 .ui-widget-header >.ui-dialog-title {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
     margin: 0;
     float: unset;}
 .ui-dialog .ui-dialog-content {
@@ -6862,8 +6872,8 @@ body#user.inventory {}
     width: 100%;
     font-weight: 600;
     background: var(--p-head-grdnt);
-    font-size: 20px !important;
-    line-height: 20px;
+    font-size: var(--p-head) !important;
+    line-height: var(--p-head);
     padding: 9px 10px;
     margin: -10px -10px 10px -10px;}
 
@@ -7207,7 +7217,7 @@ body#user.inventory {}
     font-size: 14px;
     display: flex;}
 #blog .head strong {
-    font-size: 20px;
+    font-size: var(--p-head);
     margin-right: 5px;}
 #blog .head span.time {
     order: 99;
@@ -7301,7 +7311,7 @@ body#user.inventory {}
     width: 40%;}
 #gazelleview table.gazelleinfo td#tags form {
     position: absolute;
-    top: 49px;
+    top: 47px;
     right: 10px;
     text-align: right;
     width: 60%;}
@@ -7518,7 +7528,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 
 #seedtime_tokens #tokens_breakdown,
 #achievements {
-    top: 39px;
+    top: 37px;
     width: calc(100% - 2px);
     margin: 0 auto 25px auto;
 	position: relative;}
@@ -7527,16 +7537,16 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     z-index: 0;
     content: 'Achievements';
     padding: 9px 10px;
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    height: var(--p-head);
     width: calc(100% - 20px);
     font-weight: 600;
     display: block;
     background: var(--p-head-grdnt);
     position: absolute;
     left: 0;
-    top: -38px;}
+    top: -36px;}
 #wrapper #seedtime_tokens #tokens_breakdown:before {
     content: 'Breakdown';}
 #seedtime_tokens #tokens_breakdown:after,
@@ -7544,9 +7554,9 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     content: '';
     position: absolute;
     width: 100%;
-    top: -39px;
+    top: -37px;
     left: -1px;
-    height: calc(100% + 38px);
+    height: calc(100% + 36px);
     z-index: -1;
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
@@ -7576,7 +7586,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     content: '';
     position: absolute;
     width: calc(100% + 20px);
-    height: calc(100% + 106px);
+    height: calc(100% + 104px);
     bottom: -59px;
     left: -11px;
     background-color: var(--c-box);
@@ -7589,11 +7599,11 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     position: absolute;
     text-align: left;
     padding: 9px 10px;
-    top: -48px;
+    top: -46px;
     left: -10px;
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    height: var(--p-head);
     font-weight: 600;
     z-index: 1;
     width: 100%;
@@ -7632,13 +7642,13 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 #share_score {
     position: relative;}
 #share_score >.large_progress_bar {
-    margin: 61px 11px 26px 11px;
+    margin: 59px 11px 26px 11px;
     position: relative;}
 #share_score >.large_progress_bar:before {
     content: '';
     position: absolute;
     width: calc(100% + 20px);
-    height: calc(100% + 58px);
+    height: calc(100% + 56px);
     bottom: -11px;
     left: -11px;
     background-color: var(--c-box);
@@ -7651,24 +7661,24 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     position: absolute;
     text-align: left;
     padding: 9px 10px;
-    top: -48px;
+    top: -46px;
     left: -10px;
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    height: var(--p-head);
     font-weight: 600;
     z-index: 1;
     width: 100%;
     background: var(--p-head-grdnt);}
 #share_score .large_progress_bar +.linkbox {
     position: absolute;
-    top: -39px;
+    top: -37px;
     left: 11px;
     font-weight: 600;
     margin: 0;
     padding: 0;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
     z-index: 1;}
 
 
@@ -7758,7 +7768,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     content: '';
     position: absolute;
     width: 100%;
-    height: calc(100% + 38px);
+    height: calc(100% + 36px);
     left: -1px;
     bottom: -1px;
     z-index: -1;
@@ -7993,7 +8003,7 @@ table.adventure_table h3 {
     position: absolute;
     content: '';
     width: 100%;
-    height: 38px;
+    height: 36px;
     top: 0;
     left: 0;
     background: var(--p-head-grdnt);}
@@ -8010,8 +8020,8 @@ table.adventure_table h3 {
 #wrapper #trading_panel #items >span,
 #equipment #items_inner >span,
 #crafting_panel #items >span {
-    font-size: 20px;
-    line-height: 38px;
+    font-size: var(--p-head);
+    line-height: 36px;
     font-weight: 600;}
 #backpack #items >input,
 #wrapper #trading_panel #items >input,
@@ -8045,9 +8055,9 @@ table.adventure_table h3 {
     content: 'Crafting Place';
     font-weight: 600;
     background: var(--p-head-grdnt);
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    height: var(--p-head);
     padding: 9px 10px;
     display: block;}
 #wrapper #equipment #equip_panel:before {
@@ -8133,7 +8143,7 @@ table.adventure_table h3 {
     margin: 0;
     padding: 10px 0 10px 10px;
     overflow-y: scroll !important;
-    height: calc(100% - 38px);
+    height: calc(100% - 36px);
 	margin-top: 0;
 	text-align: center;
 	width: 100%;}
@@ -8422,9 +8432,9 @@ table.adventure_table h3 {
     width: calc(100% - 20px);
     margin: 0;
     padding: 9px 10px;
-    height: 20px;
-    font-size: 20px;
-    line-height: 20px;
+    height: var(--p-head);
+    font-size: var(--p-head);
+    line-height: var(--p-head);
     color: var(--c-txt);
     font-weight: 600;
     background: var(--p-head-grdnt);
@@ -8505,7 +8515,7 @@ table.adventure_table h3 {
 #wrapper #trading_panel .gold_trade .gold_trade_max {
     position: absolute;
     width: 90px;
-    top: 38px;
+    top: 36px;
     margin: 2px 0;
     right: 85px;
 	display: block;
@@ -8706,9 +8716,9 @@ table.adventure_table h3 {
 #backpack #slots_header img {
     display: none;}
 #backpack #slots_header span {
-    font-size: 20px;
-    line-height: 20px;
-    height: 20px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    height: var(--p-head);
     display: block;
     text-align: left;
     position: relative;
@@ -8786,7 +8796,7 @@ div#fight_skill_points_assign >table {
 #fight_skill_points_assign .achievement_image img {
     padding-left: 15px;
     padding-right: 15px;
-    height: 48px;}
+    height: 46px;}
 
 #fight_skill_points_assign .stat_label span {
 	font-size: 24px;}
@@ -8795,7 +8805,7 @@ div#fight_skill_points_assign >table {
 	padding-top: 8px;}
 
 #fight_skill_points_assign .points {
-	font-size: 38px;
+	font-size: 36px;
     line-height: 1em;
 	text-align: center;}
 #fight_skill_points_assign .plus_sign {

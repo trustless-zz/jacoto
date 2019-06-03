@@ -193,7 +193,27 @@ html {
     margin-top: 30px;}
     
     
-    
+#userhistory .colhead_dark span[id*="bar"],
+#quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
+#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(2) {
+    display: none;}
+ #quickreplypreview .colhead_dark #barpreview,
+ .forum_post .colhead_dark div[style="float: right;"],
+ #newthreadpreview .forum_post .colhead_dark #barpreview {
+     height: 18px;
+     font-size: 0;
+     min-width: 18px;
+     position: absolute;
+     right: 5px;
+     top: 6px;
+     z-index: 999;}
+#quickreplypreview .colhead_dark span[style="float:left;"],
+.forum_post .colhead_dark div[style="float: left;"],
+.forum_post .colhead_dark div[style="float:left;"],
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
+    width: calc(100% - 23px);}
+
 }
 
 
