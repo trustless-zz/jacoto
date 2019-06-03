@@ -497,12 +497,12 @@ html {
     position: absolute;
     left: 0;
     top: 0;
-    background: linear-gradient(90deg,var(--c-b1) 40%,var(--c-b00));
+    background: linear-gradient(90deg,var(--c-b1) 60%,var(--c-b00));
     z-index: -99;
     opacity: 1;
     pointer-events: none;
-    transform: translateX(-100%);
-        animation: remove .5s linear forwards;
+    animation: remove .5s linear forwards;
+    transform: translateX(-70%);
 }
 #logo:after {
     content: '';
@@ -511,32 +511,40 @@ html {
     position: absolute;
     left: 0;
     top: 34px;
-    background: linear-gradient(90deg,var(--c-b2) 40%,var(--c-b00));
+    background: linear-gradient(90deg,var(--c-b2) 60%,var(--c-b00));
     z-index: -99;
     opacity: 1;
     pointer-events: none;
-        animation: remove .5s linear forwards;
-    transform: translateX(-100%);
+    animation: remove .3s linear forwards;
+    transform: translateX(-70%);
 }
 #logo:hover:after,
 #logo:hover:before {
-    opacity: 1;
-        animation: move .5s linear forwards;
+    animation: move .3s linear forwards;
 }
 #logo:hover:after {
     animation-delay: .05s;}
 
 @keyframes move {
-from {transform: translateX(-100%);}
+from {transform: translateX(-70%);}
 to {    transform: translateX(0);}
 }
 @keyframes remove {
 from {transform: translateX(0);}
-to {    transform: translateX(-100%);}
+to {    transform: translateX(-70%);}
 }
 
 
+#logo a {
+    background: url('icons/dark/new_logo.svg')
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 57px 57px;
+    }
+
+
 #logo a:before {
+    text-indent: -10px;
     color: var(--c-input);
     font-weight: 600;
     content: 'GAZELLE';
@@ -553,6 +561,7 @@ to {    transform: translateX(-100%);}
     text-align: center;
 }
 #logo a:after {
+    text-indent: -10px;
     color: var(--c-box);
     font-weight: 600;
     text-align: center;
