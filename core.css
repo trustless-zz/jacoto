@@ -1050,7 +1050,7 @@ a[title="Remove"],
 .forum_post .colhead_dark a[onclick],
 #requests table.border a[href^="upload.php"],
 #requests_donate img,
-#requests .main_column >table:first-child img[title="Gold"] {
+img[title="Gold"] {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
@@ -2094,7 +2094,7 @@ img[title="Seeders"],
 img[title="Snatches"],
 .torrent_table #user_rating_icon img,
 #requests_donate img,
-#requests .main_column >table:first-child img[title="Gold"] {
+img[title="Gold"] {
     padding-left: 18px;}
 .sidebar .userratingdiv img {
     /* border-radius: 50%; */
@@ -2312,7 +2312,8 @@ input[type="checkbox"],
 input[type="radio"],
 #requests table.border a[href^="upload.php"],
 #requests_donate img,
-#requests .main_column >table:first-child img[title="Gold"] {
+#requests .main_column >table:first-child img[title="Gold"],
+ul#noty_bottomRight_layout_container img[title="Gold"] {
     vertical-align: text-top;}
 
 button,
