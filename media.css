@@ -110,9 +110,31 @@ html {
 .forum_post .colhead_dark a.username {
     position: relative;
     z-index: 9;}
+
+/* forum post 'back to top' button */
+#userhistory .colhead_dark span[id*="bar"],
+#quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
+#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(2) {
+    display: none;}
+ #quickreplypreview .colhead_dark #barpreview,
+ .forum_post .colhead_dark div[style="float: right;"],
+ #newthreadpreview .forum_post .colhead_dark #barpreview {
+     height: 18px;
+     font-size: 0;
+     min-width: 18px;
+     position: absolute;
+     right: 5px;
+     top: 6px;
+     z-index: 999;}
+#quickreplypreview .colhead_dark span[style="float:left;"],
+.forum_post .colhead_dark div[style="float: left;"],
+.forum_post .colhead_dark div[style="float:left;"],
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
+    width: calc(100% - 23px);}
+/* /forum post 'back to top' button */
     
-    
-/*new boring desktop header*/
+/** new boring desktop header **/
 #header {
     border-bottom: var(--p-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
@@ -192,27 +214,86 @@ html {
 #header #userinfo_stats li:first-child {
     margin-top: 30px;}
     
+#userinfo_stats li {
+    width: 100%;}
+#stats_ratio,
+#stats_gold,
+#stats_leeching,
+#stats_seeding {
+    display: flex;
+    justify-content: left;
+    position: relative;
+    overflow: hidden;}
     
-#userhistory .colhead_dark span[id*="bar"],
-#quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
-.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
-#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(2) {
-    display: none;}
- #quickreplypreview .colhead_dark #barpreview,
- .forum_post .colhead_dark div[style="float: right;"],
- #newthreadpreview .forum_post .colhead_dark #barpreview {
-     height: 18px;
-     font-size: 0;
-     min-width: 18px;
-     position: absolute;
-     right: 5px;
-     top: 6px;
-     z-index: 999;}
-#quickreplypreview .colhead_dark span[style="float:left;"],
-.forum_post .colhead_dark div[style="float: left;"],
-.forum_post .colhead_dark div[style="float:left;"],
-#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
-    width: calc(100% - 23px);}
+/* logo */
+#logo {
+    height: 64px;
+    width: 64px;
+    top: 40px;
+    left: 0;
+    position: absolute;
+    z-index: 99;}
+#logo a {
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    background-size: 58px 58px;
+    display: block;
+    height: 100%;
+    width: 100%;}
+#logo:before,
+#logo:after {
+    content: '';
+    width: 128px;
+    height: 30px;
+    position: absolute;
+    left: 0;
+    top: 34px;
+    z-index: -99;
+    pointer-events: none;
+    animation: logo_remove .3s linear forwards;
+    transform: translateX(-70%);}
+#logo:before {
+    background: linear-gradient(90deg,var(--c-b1) 60%,var(--c-b00));
+    top: 0px;
+    height: 34px;}
+#logo:after {
+    background: linear-gradient(90deg,var(--c-b2) 60%,var(--c-b00));
+    top: 34px;
+    height: 30px;}
+#logo:hover:after,
+#logo:hover:before {
+    animation: logo_move .3s linear forwards;}
+#logo:hover:after {
+    animation-delay: .05s;}
+#logo a:before {
+    color: var(--c-input);
+    content: 'GAZELLE';
+    line-height: 34px;
+    height: 34px;
+    top: 0;}
+#logo a:after {
+    color: var(--c-box);
+    content: 'GAMES';
+    height: 30px;
+    line-height: 30px;
+    top: 34px;}
+#logo a:before,
+#logo a:after {
+    font-size: 24px;
+    position: absolute;
+    text-indent: -10px;
+    width: 128px;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    text-align: center;
+    pointer-events: none;
+    transition: all .3s linear;}
+#logo a:hover:before,
+#logo a:hover:after {
+    opacity: 1;}
+/* /logo */
 
 }
 
@@ -483,104 +564,3 @@ html {
         top: 147px;}
 }
 */
-
-
-
-
-/** logo draft **/
-/* #logo:before {
-    content: '';
-    font-size: 24px;
-    line-height: 34px;
-    width: 128px;
-    height: 34px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: linear-gradient(90deg,var(--c-b1) 60%,var(--c-b00));
-    z-index: -99;
-    opacity: 1;
-    pointer-events: none;
-    animation: remove .5s linear forwards;
-    transform: translateX(-70%);
-}
-#logo:after {
-    content: '';
-    width: 128px;
-    height: 30px;
-    position: absolute;
-    left: 0;
-    top: 34px;
-    background: linear-gradient(90deg,var(--c-b2) 60%,var(--c-b00));
-    z-index: -99;
-    opacity: 1;
-    pointer-events: none;
-    animation: remove .3s linear forwards;
-    transform: translateX(-70%);
-}
-#logo:hover:after,
-#logo:hover:before {
-    animation: move .3s linear forwards;
-}
-#logo:hover:after {
-    animation-delay: .05s;}
-
-@keyframes move {
-from {transform: translateX(-70%);}
-to {    transform: translateX(0);}
-}
-@keyframes remove {
-from {transform: translateX(0);}
-to {    transform: translateX(-70%);}
-}
-
-
-#logo a {
-    background: url('icons/dark/new_logo.svg')
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 57px 57px;
-    }
-
-
-#logo a:before {
-    text-indent: -10px;
-    color: var(--c-input);
-    font-weight: 600;
-    content: 'GAZELLE';
-    font-size: 24px;
-    line-height: 34px;
-    width: 128px;
-    height: 34px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    opacity: 0;
-    pointer-events: none;
-    text-align: center;
-}
-#logo a:after {
-    text-indent: -10px;
-    color: var(--c-box);
-    font-weight: 600;
-    text-align: center;
-    content: 'GAMES';
-    width: 128px;
-    height: 30px;
-    font-size: 24px;
-    line-height: 30px;
-    position: absolute;
-    left: 0;
-    top: 34px;
-    z-index: 1;
-    opacity: 0;
-    pointer-events: none;
-}
-
-#logo a:before,
-#logo a:after {
-    transition: all .3s linear;}
-#logo a:hover:before,
-#logo a:hover:after {
-    opacity: 1;} */

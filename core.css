@@ -249,6 +249,13 @@ filter: drop-shadow(0px 0 1px black);}
     0% {background-position: 0 0;} 
     100% {background-position: 900px 0;}}
 
+@keyframes logo_move {
+    0% {transform: translateX(-70%);}
+    100% {transform: translateX(0);}}
+@keyframes logo_remove {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-70%);}}
+
 html {
     line-height: var(--p-lh);
     font-size: 14px;
@@ -275,20 +282,6 @@ html {
 #footer {
     max-width: 1300px;
     width: 100%;}
-
-#logo {
-    height: 201px;
-    width: 200px;
-    top: 40px;
-    left: 0;
-    position: absolute;
-    z-index: 99;}
-#logo a {
-    display: block;
-    height: 201px;
-    width: 200px;}
-#logo a:hover{
-    opacity: 1;}
 
 ul {
     margin: 0;
@@ -344,7 +337,6 @@ ul {
 #newthreadpreview #pollpreview .head.colhead_dark a,
 .box.news_post .head a:not(#markread),
 #index #freeleech .group_torrent span:first-child,
-#userinfo_stats #connectable,
 #stats_ratio,
 #stats_seeding a,
 #stats_leeching a,
@@ -575,13 +567,11 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 #online_irc {
     order: 8;}
 #connectable {
-    position: relative;
     order: 2;}
 
 .torrent_table .addbookmark,
 .torrent_table .removebookmark,
 #index #freeleech .group_torrent >span:first-child a,
-#userinfo_stats #connectable .stat span,
 #stats_ratio:before,
 #stats_seeding a,
 #stats_leeching a,
@@ -944,7 +934,6 @@ tr,
 td,
 span,
 img,
-#userinfo_stats #connectable span.stat >span:after,
 .box.news_post .head:before,
 #index #recommended .head:before,
 .torrent_table .show_torrents_link,
@@ -1000,8 +989,6 @@ body >div, /* more info window at #shop */
     -o-transition: auto;
     transition: auto;}
 
-#userinfo_stats li:not(#stats_ratio):not(#connectable):hover,
-#userinfo_stats li:not(#stats_ratio):not(#connectable):hover a,
 #userinfo_username .sub a:hover,
 #menu a:hover,
 #userinfo_minor a:hover,
@@ -1033,18 +1020,6 @@ img {
 #index #freeleech .group_torrent {
     display: flex;}
 
-#userinfo_stats li {
-    width: 100%;}
-#userinfo_stats #stats_ratio, #userinfo_stats #connectable {
-    width: 50%;}
-#stats_ratio,
-#stats_gold,
-#stats_leeching,
-#stats_seeding {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;}
 img[title="Downloaded"],
 img[title="Uploaded"],
 img[title="Leechers"],
@@ -1077,11 +1052,6 @@ a[title="Remove"],
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
-#userinfo_stats #connectable .stat span {
-    height: 26px;
-    background-size: 18px 18px;
-    display: inline-block;
-    width: 18px;}
 #stats_gold a {
     filter: grayscale(0.5);}
 #stats_gold a:hover{
@@ -1105,23 +1075,6 @@ a[title="Remove"],
 #online_irc {
     position: relative;
     overflow: hidden;}
-
-#userinfo_stats #connectable span.stat >span:after {
-    font-size: 14px;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 0 5px;
-    background-color: var(--c-tor-row-hvr);
-    opacity: 0;}
-#userinfo_stats #connectable .r50:after {
-    color: var(--c-on);
-    content: 'Connectable';}
-#userinfo_stats #connectable .r00:after {
-    color: var(--c-off);
-    content: 'Not Connectable';}
-#userinfo_stats #connectable span.stat >span:hover:after {
-    opacity: 1;}
 
 #stats_ratio span.stat span,
 #stats_gold span,

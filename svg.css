@@ -109,7 +109,9 @@
 
 /** logo **/
 #logo a {
-    background-image: url('icons/dark/logo.svg');}
+    background-image: url('icons/dark/new_logo_2.svg');}
+#logo a:hover {
+    background-image: url('icons/blank.svg');}
 
 /** thread status **/
 #forums td.read {
@@ -226,12 +228,6 @@ a[title="Download"],
 /** ratio icon **/
 #stats_ratio:before {
     background-image: url('icons/dark/ratio.svg');}
-
-/** (not)connectable **/
-#userinfo_stats #connectable .r50 {
-    background-image: url('icons/dark/connected.svg');}
-#userinfo_stats #connectable .r00 {
-    background-image: url('icons/dark/disconnected.svg');}
 
 /** show/hide torrents, select **/
 select,
