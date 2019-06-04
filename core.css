@@ -27,6 +27,8 @@
     --p-colhead-tr-bcg-hvr:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-box));
     --p-colhead-tr-bcg-act:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
     --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
+    --p-menu:                           var(--c-tor-row-hvr) linear-gradient(155deg,var(--c-tor-row-hvr),var(--c-input));
+    --p-userinfo:                       var(--c-input) linear-gradient(155deg,var(--c-input),var(--c-box));
     --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b00) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
     --p-unread-brdr:                    1px solid var(--c-b3);
     --p-sticky-brdr:                    1px solid var(--c-input-brdr);
