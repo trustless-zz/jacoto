@@ -214,6 +214,11 @@ html {
 #header #userinfo_stats li:first-child {
     margin-top: 30px;}
     
+#header #announcement {
+    text-align: center;
+    padding: 5px;
+    background: var(--p-head-grdnt);}
+    
 #userinfo_stats li {
     width: 100%;}
 #stats_ratio,
