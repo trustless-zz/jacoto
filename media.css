@@ -176,6 +176,8 @@ html {
     line-height: 24px;
     padding: 5px 10px;
     display: block;}
+#header #menu #nav_index {
+    display: none;}
 #header #userinfo {
     position: relative;
     width: 100%;
@@ -191,14 +193,18 @@ html {
     position: absolute;
     justify-content: center;}
 #header #userinfo_username {
-    position: relative;
+    display: flex;
+    position: absolute;
     font-size: 15px;
     line-height: var(--p-lh);
-    z-index: 1;
-    order: 99;}
-#header #userinfo_username #nav_userinfo a  {
+    z-index: 99;
+    top: -34px;
+    right: 0;
+    height: 34px;}
+#header #userinfo_username #nav_userinfo a {
+    font-size: 18px;
     display: block;
-    line-height: 20px;
+    line-height: 24px;
     padding: 5px 8px;}
 #header #userinfo_minor li a {
     font-size: 15px;
@@ -210,7 +216,15 @@ html {
     z-index: 1;
     order: 98;
     width: auto;
+    width: 30px;
     height: 30px;}
+#header #userinfo_stats li {
+    display: none;}
+#header #userinfo_stats:hover {
+    width: auto;}
+#header #userinfo_stats:hover li {
+    display: block;
+    width: auto;}
 #header #userinfo_stats li:first-child {
     margin-top: 30px;}
     
@@ -230,9 +244,11 @@ html {
     position: relative;
     overflow: hidden;}
 #userinfo_username .sub {
+    white-space: nowrap;
+    z-index: 99;
     position: absolute;
-    top: 30px;
-    right: 0;}
+    top: 34px;
+    right: 10px;}
     
 /* logo */
 #logo {

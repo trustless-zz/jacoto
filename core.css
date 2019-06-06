@@ -264,6 +264,7 @@ html {
     scroll-behavior: smooth;}
 body {
     overflow-x: visible !important; /* on #user, hovering over some objects causes [style="overflow-x: hidden;"] to appear for some reason */
+    overflow-y: hidden !important; /* hiding tooltipster overflow */
     color: var(--c-txt);
     background-color: var(--c-body);
     background-size: 50px 50px;
@@ -356,9 +357,6 @@ ul {
 #top10 td.center.cats_col +td >span,
 #artist #torrent_table .group_torrent td[colspan="2"] {
     font-size:0;}
-
-#nav_userinfo a.username {
-    font-size: 17px;}
 
 .bold {
     font-weight: bold;}
@@ -1148,6 +1146,7 @@ input[type=submit]:hover:active,
 #userinfo_minor li:not(.active):hover,
 #header .clan_trophy:hover a {
     background-color: var(--c-b3);}
+#header #userinfo .sub span a:hover,
 #content .sub span a:hover {
     background-color: var(--c-anchor-hvr-bcg);}
 
@@ -1162,18 +1161,9 @@ input[type=submit]:hover:active,
 #online_irc:hover {
     background-color: var(--c-b4);}
 
-#header .global_buffs a:hover:active,
-#userinfo_username li:hover:active,
 #userinfo_username .donateico.active,
 #userinfo_username .welcome.active,
-#userinfo_username .sub span:not(.active):hover:active,
-#userinfo_username .sub span.active,
-#stats_seeding:hover:active,
-#stats_leeching:hover:active,
-#stats_gold:hover:active,
-#stats_share_score:hover:active,
-#stats_hnr:hover:active,
-#online_irc:hover:active {
+#userinfo_username .sub span.active {
     background-color: var(--c-b2);}
 
 #header .clan_trophy:hover:active a,
@@ -2776,24 +2766,28 @@ li:not(.suggested_similar) .similar_votes >span {
     display: block;
     width: fit-content;
     z-index: 999;}
-#content .sub span {
+.sub span {
     width: 100%;
-    line-height: 28px;
+    line-height: 26px;
     text-align: center;
-    font-size: 16px;
+    font-size: 15px;
     display: block;}
-#content .sub span a {
+#header .sub span a,
+.sub span a {
     display: block;
     padding: 0 5px;
     background-color: var(--c-input);
     border-right: var(--p-table-brdr);
     border-left: var(--p-table-brdr);
     position: relative;}
-#content .sub span:first-child a {
+#header .sub span:nth-child(odd) a,
+.sub span:nth-child(odd) a {
+    background-color: var(--c-tgroup);}
+.sub span:first-child a {
     border-top: var(--p-table-brdr);}
-#content .sub span:last-child a {
+.sub span:last-child a {
     border-bottom: var(--p-table-brdr);}
-#content .sub span a:before {
+.sub span a:before {
     width: 100%;
     height: 100%;
     content: '';
@@ -2803,7 +2797,7 @@ li:not(.suggested_similar) .similar_votes >span {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     z-index: -1;}
-#content .sub span:first-child a:before {
+.sub span:first-child a:before {
     -webkit-clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));
     clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));}
 
@@ -7905,7 +7899,7 @@ table.adventure_table h3 {
     margin: 0 auto -47px auto;
     width: calc(100% - 22px);}
 #wrapper #seedtime_tokens >.large_progress_bar:before {
-    height: calc(100% + 88px);
+    height: calc(100% + 86px);
     bottom: -41px;}
 #wrapper #seedtime_tokens >h3:first-child {
     margin-top: 13px;}
