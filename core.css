@@ -264,7 +264,6 @@ html {
     scroll-behavior: smooth;}
 body {
     overflow-x: visible !important; /* on #user, hovering over some objects causes [style="overflow-x: hidden;"] to appear for some reason */
-    overflow-y: hidden !important; /* hiding tooltipster overflow */
     color: var(--c-txt);
     background-color: var(--c-body);
     background-size: 50px 50px;
@@ -538,7 +537,6 @@ tr.unreadpm td:first-child {
 li:not(.suggested_similar) .similar_votes >a:nth-child(2),
 .tags,
 #index #freeleech .group_torrent >span:first-child,
-#stats_ratio,
 #nav_useredit {
     order: 1;}
 #collections .sidebar .box.box_comment .pad,
@@ -550,24 +548,13 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(2),
 li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 .rating_container:nth-child(2),
 #index #freeleech .group_torrent >a,
-#stats_seeding,
 #nav_logout {
     order: 3;}
 .rating_container:nth-child(3),
-#index #freeleech .group_torrent span.platform,
-#stats_leeching {
+#index #freeleech .group_torrent span.platform {
     order: 4;}
-#index #freeleech .group_torrent span.tor_info,
- #stats_hnr {
+#index #freeleech .group_torrent span.tor_info {
     order: 5;}
- #stats_share_score {
-    order: 6;}
-#stats_gold {
-    order: 7;}
-#online_irc {
-    order: 8;}
-#connectable {
-    order: 2;}
 
 .torrent_table .addbookmark,
 .torrent_table .removebookmark,
@@ -1056,18 +1043,6 @@ img[title="Gold"] {
     filter: grayscale(0.5);}
 #stats_gold a:hover{
     filter: grayscale(0);}
-#stats_gold a:before,
-#stats_leeching a:before,
-#stats_seeding a:before,
-#stats_share_score a:before,
-#stats_hnr a:before,
-#online_irc a:before {
-    content: '';
-    top: 0;
-    left: -200px;
-    width: 600px;
-    height: 26px;
-    position: absolute;}
 #stats_ratio span.stat {
     font-size: 15px;}
 #stats_share_score,
@@ -1141,37 +1116,19 @@ input[type=submit]:hover:active,
     -o-transition: 0s;
     transition: 0s;}
 
-#userinfo_minor .highlight,
-#menu li:not(.active):hover,
-#userinfo_minor li:not(.active):hover,
-#header .clan_trophy:hover a {
+#userinfo_minor .highlight {
     background-color: var(--c-b3);}
 #header #userinfo .sub span a:hover,
 #content .sub span a:hover {
     background-color: var(--c-anchor-hvr-bcg);}
-
-#header .global_buffs a:hover,
-#userinfo_username li:hover,
-#userinfo_username .sub span:not(.active):hover,
-#stats_seeding:hover,
-#stats_leeching:hover,
-#stats_gold:hover,
-#stats_share_score:hover,
-#stats_hnr:hover,
-#online_irc:hover {
-    background-color: var(--c-b4);}
 
 #userinfo_username .donateico.active,
 #userinfo_username .welcome.active,
 #userinfo_username .sub span.active {
     background-color: var(--c-b2);}
 
-#header .clan_trophy:hover:active a,
-#menu li:not(.active):hover:active,
-#userinfo_minor li:not(.active):hover:active,
 #menu li.active,
-#userinfo_minor li.active,
-#userinfo_minor .highlight:hover {
+#userinfo_minor li.active {
     background-color: var(--c-b1) !important;}
 
 .trade_value .trade_value_gold span,
