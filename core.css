@@ -1106,9 +1106,6 @@ input[type=submit]:hover:active,
     -o-transition: 0s;
     transition: 0s;}
 
-#userinfo_minor .highlight { /*revisit*/
-    background-color: var(--c-b3);}
-
 /* #userinfo_username .donateico.active,
 #userinfo_username .welcome.active,
 #userinfo_username .sub span.active {
