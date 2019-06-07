@@ -536,19 +536,16 @@ tr.unreadpm td:first-child {
 #collections .sidebar .box.box_comment .head,
 li:not(.suggested_similar) .similar_votes >a:nth-child(2),
 .tags,
-#index #freeleech .group_torrent >span:first-child,
-#nav_useredit {
+#index #freeleech .group_torrent >span:first-child {
     order: 1;}
 #collections .sidebar .box.box_comment .pad,
 .rating_container:nth-child(1),
-#index #freeleech .group_torrent span.tor_size,
-#nav_donate {
+#index #freeleech .group_torrent span.tor_size {
     order: 2;}
 #collections .sidebar .box.box_comment .subhead,
 li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 .rating_container:nth-child(2),
-#index #freeleech .group_torrent >a,
-#nav_logout {
+#index #freeleech .group_torrent >a {
     order: 3;}
 .rating_container:nth-child(3),
 #index #freeleech .group_torrent span.platform {
@@ -663,13 +660,6 @@ a[onclick="BBCode.spoiler(this);"],
     background-color: var(--c-colhead-click);}
 #toplink a:hover:active {
     background-color: var(--c-colhead-act);}
-
-#nav_logout a,
-#nav_donate a,
-#nav_useredit a {
-    width: 100%;
-    display: block;
-    background-size: 26px 26px;}
 
 .prev,
 .next {
@@ -865,7 +855,6 @@ span.user_title a:hover {
 /*.colhead_dark a,*/
 /*.colhead a,*/
 #toplink a,
-#header a,
 .prev:hover,
 .next:hover,
 #taglist a:hover,

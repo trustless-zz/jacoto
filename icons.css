@@ -363,6 +363,12 @@ img[title="ThumbsDown "],
 #userhistory .colhead_dark a img[alt="Last read post"] {
     background-image: url('icons/dark/read_last_read.svg');}
 
+#nav_useredit a {
+    background-image: url('icons/dark/nav/useredit.svg');}
+#nav_logout a {
+    background-image: url('icons/dark/nav/logout.svg');}
+
+
 /* background-image: url('data:image/svg+xml;utf8,');} */
 
 

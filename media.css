@@ -208,7 +208,7 @@ body {
     font-size: 18px;
     display: block;
     line-height: 24px;
-    padding: 5px 8px;}
+    padding: 5px 8px 5px 5px;}
 #header #userinfo_minor li a {
     font-size: 15px;
     line-height: 20px;
@@ -230,7 +230,11 @@ body {
     -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
     clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
     transition-delay: 0s;}
-    
+
+#nav_logout {
+    order: -2;}
+#nav_useredit {
+    order: -1;}
 #stats_ratio {
     order: 1;}
 #stats_seeding {
@@ -355,6 +359,14 @@ body {
     content: '';}
 #stats_ratio span.stat:before {
     content: ':';}
+
+#header #nav_logout a,
+#header #nav_useredit a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    padding: 7px 5px;
+    background-size: 20px 20px;}
     
 /* logo */
 #logo {
