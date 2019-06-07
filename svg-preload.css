@@ -54,14 +54,6 @@ table.gazelles_art_display .hovereffect:before,
 .torrent_table .removebookmark:hover {
     background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 22"><rect y="3.75" width="16" height="4" fill="rgb(163,0,0)"/><polygon points="0 22 1.061 22 8 15.061 14.939 22 16 22 16 7.25 0 7.25 0 22"/><rect width="16" height="4.25"/></svg>');}
 
-@media (min-width: 1760px) and (min-height: 659px) {
-/* hover */
-    #nav_donate a:hover {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 22"><path d="M18.8,0A7.17081,7.17081,0,0,0,13,2.95313,7.19063,7.19063,0,0,0,0,7.2C0,18.08331,13,22,13,22S26,18.08331,26,7.2A7.2,7.2,0,0,0,18.8,0Z" fill="rgb(193,35,35)"/></svg>');}
-    .active #inboxlia,
-    #inboxlia.highlight {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 38 28"><path d="M0,0V28H38V0ZM36,2v4.551L19,18.18247,2,6.55094V2ZM24.27173,16.393,33.87866,26H4.12134L13.72827,16.393,19,20ZM2,8.36838l10.46875,7.16285L2,26ZM36,26,25.53125,15.53123,36,8.36838Z" transform="translate(0 0.00002)" fill="rgb(0,0,0)"/></svg>');}
-    #userinfo_minor.highlighted:before,
-    #userinfo_minor:hover:before {
-        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28 6"><path d="M3,13a1,1,0,1,1-1,1,1.00113,1.00113,0,0,1,1-1m0-2a3,3,0,1,0,3,3,3,3,0,0,0-3-3Z" transform="translate(0 -11)" fill="rgb(0,0,0)"/><path d="M25,13a1,1,0,1,1-1,1,1.00113,1.00113,0,0,1,1-1m0-2a3,3,0,1,0,3,3,3,3,0,0,0-3-3Z" transform="translate(0 -11)" fill="rgb(0,0,0)"/><path d="M14,13a1,1,0,1,1-1,1,1.00113,1.00113,0,0,1,1-1m0-2a3,3,0,1,0,3,3,3,3,0,0,0-3-3Z" transform="translate(0 -11)" fill="rgb(0,0,0)"/></svg>');}
-}
+
+/* #nav_donate a:hover {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 22"><path d="M18.8,0A7.17081,7.17081,0,0,0,13,2.95313,7.19063,7.19063,0,0,0,0,7.2C0,18.08331,13,22,13,22S26,18.08331,26,7.2A7.2,7.2,0,0,0,18.8,0Z" fill="rgb(193,35,35)"/></svg>');} */
