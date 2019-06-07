@@ -250,6 +250,8 @@ body {
 
 #userinfo_stats li:not(#stats_ratio) {
     background-color: var(--c-box);}
+#header #userinfo .sub span a:hover,
+#content .sub span a:hover,
 #userinfo_username #nav_userinfo a:hover,
 #userinfo_stats li:hover:not(#stats_ratio):not(#connectable) {
     background-color: var(--c-anchor-hvr-bcg);}
@@ -270,10 +272,10 @@ body {
     
 #header #userinfo_stats a:before {
     content: '';
-    top: 0;
-    left: -200px;
+    top: -10px;
+    left: -20px;
     width: 600px;
-    height: 30px;
+    height: 40px;
     position: absolute;}
 
 #stats_gold a,
@@ -302,12 +304,45 @@ body {
     justify-content: left;
     position: relative;
     overflow: hidden;}
-#userinfo_username .sub {
-    white-space: nowrap;
-    z-index: 99;
-    position: absolute;
-    top: 34px;
-    right: 0;}
+
+#userinfo_stats li a ~span {
+    color: var(--c-anchor);}
+#header #userinfo_stats li:hover a ~span {
+    color: var(--c-anchor-hvr);}
+    
+#stats_ratio .stat:after,
+#nav_userinfo a:after {
+    transform: rotate(90deg);
+    content: '';
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin: 0 0 -2px 10px;}
+#header #stats_ratio .stat:after {
+    width: 16px;
+    height: 16px;
+    transition-delay: .3s;
+    margin: 0 0 -2px 11px;}
+#userinfo_stats:hover #stats_ratio .stat:after,
+#userinfo_username .sub[style="visibility: visible;"] ~#nav_userinfo a:after {
+    transform: rotate(0deg);
+    transition-delay: 0s;}
+    
+#stats_ratio span.stat span,
+#stats_gold span,
+#stats_leeching span,
+#stats_seeding span {
+    padding-left: 4px;}
+
+#header #stats_ratio {
+    font-size: 0;}
+#stats_ratio:before {
+    width: 16px;
+    height: 16px;
+    margin: 2px 2px 0 0;
+    content: '';}
+#stats_ratio span.stat:before {
+    content: ':';}
     
 /* logo */
 #logo {
@@ -321,7 +356,8 @@ body {
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
-    background-size: 58px 58px;
+    background-size: auto 58px;
+    background-position: 8px center;
     display: block;
     height: 100%;
     width: 100%;}

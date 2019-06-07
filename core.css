@@ -443,7 +443,7 @@ strong.mature +strong +br +a[onclick] {
     /* margin-top: 0 !important; */}
 
 .sub {
-    visibility: hidden;}
+    visibility: visible !important;}
 
 .tooltipster-default {
 	border-radius: 0px !important;
@@ -638,7 +638,9 @@ h2#username span#tip_user img,
 .inventory .trash_icon,
 #userhistory .colhead_dark a img[alt="Last read post"],
 #wrapper #trading_panel .gold_trade .gold_trade_buttons img,
-#wrapper .trade_value .trade_value_gold img {
+#wrapper .trade_value .trade_value_gold img,
+#nav_userinfo a:after,
+#stats_ratio .stat:after {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -963,7 +965,9 @@ div,
 #shop li.item_li.owned:after,
 fancybox-button,
 tr.group_torrent >td a:before,
-#itemsdiv p {
+#itemsdiv p,
+#nav_userinfo a:after,
+#stats_ratio .stat:after {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1014,7 +1018,6 @@ img[title="Seeders"],
 img[title="Snatches"],
 .torrent_table #user_rating_icon img,
 #index #freeleech .group_torrent >span:first-child a,
-#stats_ratio:before,
 #stats_ratio a,
 #stats_gold a,
 #stats_leeching a,
@@ -1050,19 +1053,6 @@ img[title="Gold"] {
 #online_irc {
     position: relative;
     overflow: hidden;}
-
-#stats_ratio span.stat span,
-#stats_gold span,
-#stats_leeching span,
-#stats_seeding span {
-    padding-left: 4px;}
-
-#stats_ratio:before {
-    content: '';
-    height: 100%;
-    width: 22px;}
-#stats_ratio span.stat:before {
-    content: ':';}
 
 #grouplinks,
 #nav_logout,
@@ -1118,9 +1108,6 @@ input[type=submit]:hover:active,
 
 #userinfo_minor .highlight {
     background-color: var(--c-b3);}
-#header #userinfo .sub span a:hover,
-#content .sub span a:hover {
-    background-color: var(--c-anchor-hvr-bcg);}
 
 #userinfo_username .donateico.active,
 #userinfo_username .welcome.active,
@@ -2717,12 +2704,21 @@ li:not(.suggested_similar) .similar_votes >span {
 
 #content .sub {
     position: relative;
-    height: 0;
+    height: auto;
     top: 33px;
+    margin-bottom: -100%;
     left: 6px;
-    display: block;
+    display: inline-block;
     width: fit-content;
     z-index: 999;}
+#content .sub,
+#userinfo_username .sub {
+    -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) -10px, -10px -10px);
+    clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) -10px, -10px -10px);}
+#userinfo_username .sub[style="visibility: visible;"],
+#content .sub[style="visibility: visible;"] {
+    -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
+    clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));}
 .sub span {
     width: 100%;
     line-height: 26px;
@@ -2757,6 +2753,12 @@ li:not(.suggested_similar) .similar_votes >span {
 .sub span:first-child a:before {
     -webkit-clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));
     clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));}
+#userinfo_username .sub {
+    white-space: nowrap;
+    z-index: 99;
+    position: absolute;
+    top: 34px;
+    right: 0;}
 
 .box_gold #box_gold_scrollbar tr:not(.colhead) td.label {
     background-color: var(--c-sb1);}

@@ -1,6 +1,8 @@
 ﻿/*** eliminating loading time by embedding SVGs **/
 
 /* this won't do */
+#userinfo_stats:hover #stats_ratio .stat:after,
+#userinfo_username .sub[style="visibility: visible;"] ~#nav_userinfo a:after,
 a:hover >img[title="Downloaded"],
 a:hover >img[title="Uploaded"],
 a:hover >img[title="Leechers"],

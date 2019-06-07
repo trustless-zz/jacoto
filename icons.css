@@ -212,16 +212,16 @@ h2#username span#tip_user img,
     background-image: url('icons/gold_minus.svg');}
 
 /** download(ed) **/
-#stats_leeching a {
-    background-image: url('icons/dark/leeching.svg');}
+/* {background-image: url('icons/dark/leeching.svg');} */
 /* anchor */
+#stats_leeching a,
 a[title="Download"],
 #index #freeleech .group_torrent >span:first-child a {
     background-image: url('icons/dark/download.svg');}
 /** uploaded **/
-#stats_seeding a {
-    background-image: url('icons/dark/seeding.svg');}
+/* {background-image: url('icons/dark/seeding.svg');} */
 /* anchor */
+#stats_seeding a,
 #requests table.border a[href^="upload.php"] {
     background-image: url('icons/dark/upload.svg');}
 
@@ -231,7 +231,9 @@ a[title="Download"],
 
 /** show/hide torrents, select **/
 select,
-.torrent_table .show_torrents_link {
+.torrent_table .show_torrents_link,
+#nav_userinfo a:after,
+#stats_ratio .stat:after {
     background-image: url('icons/dark/show.svg');}
 /** forum post user stats **/
 #forums .forum_post .avatar >div:first-child:after {
