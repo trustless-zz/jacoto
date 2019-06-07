@@ -1106,17 +1106,17 @@ input[type=submit]:hover:active,
     -o-transition: 0s;
     transition: 0s;}
 
-#userinfo_minor .highlight {
+#userinfo_minor .highlight { /*revisit*/
     background-color: var(--c-b3);}
 
-#userinfo_username .donateico.active,
+/* #userinfo_username .donateico.active,
 #userinfo_username .welcome.active,
 #userinfo_username .sub span.active {
-    background-color: var(--c-b2);}
+    background-color: var(--c-b2);} */
 
-#menu li.active,
+/* #menu li.active,
 #userinfo_minor li.active {
-    background-color: var(--c-b1) !important;}
+    background-color: var(--c-b1) !important;} */
 
 .trade_value .trade_value_gold span,
 #index span[style="color: gold;"],

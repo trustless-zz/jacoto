@@ -250,11 +250,17 @@ body {
 
 #userinfo_stats li:not(#stats_ratio) {
     background-color: var(--c-box);}
+#header #menu li a:hover,
+#header #userinfo_minor a:hover,
 #header #userinfo .sub span a:hover,
 #content .sub span a:hover,
 #userinfo_username #nav_userinfo a:hover,
 #userinfo_stats li:hover:not(#stats_ratio):not(#connectable) {
     background-color: var(--c-anchor-hvr-bcg);}
+#header #userinfo_username li.active a,
+#header #userinfo_minor li.active a,
+#header #menu li.active a {
+    box-shadow: inset 0 -2px 0px 0px var(--c-b1);}
     
 #header #userinfo_stats:before {
     -webkit-clip-path: polygon(-10px 32px, calc(100% + 10px) 32px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
