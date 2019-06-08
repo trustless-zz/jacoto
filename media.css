@@ -1,6 +1,10 @@
 ﻿@media (min-width: 801px) {
 html {
+    overflow-x: hidden;
     overflow-y: scroll;}
+body {
+    overflow-x: unset !important;}
+
 #torrent_table #hyphen {
     display: none;}
 #groupplatform {
