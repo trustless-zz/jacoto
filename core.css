@@ -3363,7 +3363,7 @@ form[name="filter"] h3,
     margin: 15px 0 0 0;}
 #staff .thin >.box.pad >h3:first-of-type {
     margin: -10px -10px 0 -10px;}
-#gazelleview #titlerow p,
+#wrapper #gazelleview #titlerow p,
 #wrapper #searchthread h3,
 #wrapper #searchforum h3,
 form[name="filter"] h3,
@@ -3374,6 +3374,8 @@ form[name="filter"] h3,
 #staff .thin >.box.pad >h3:first-of-type ~h3 {
     font-weight: 600;
     margin: 10px 0 8px 5px;}
+#wrapper #gazelleview #titlerow p:empty {
+    height: 18px;}
 
 #newthreadform #newthreadtext #answer_block a,
 #upload td#image_block a,

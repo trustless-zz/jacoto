@@ -377,6 +377,7 @@ body {
     position: absolute;
     z-index: 99;}
 #logo a {
+    background-color: transparent;
     -webkit-transition: all .3s linear;
     -o-transition: all .3s linear;
     transition: all .3s linear;
