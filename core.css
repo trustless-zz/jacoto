@@ -263,7 +263,6 @@ html {
     font-size: 14px;
     scroll-behavior: smooth;}
 body {
-    overflow-x: visible !important; /* on #user, hovering over some objects causes [style="overflow-x: hidden;"] to appear for some reason */
     color: var(--c-txt);
     background-color: var(--c-body);
     background-size: 50px 50px;
@@ -2847,10 +2846,21 @@ li:not(.suggested_similar) .similar_votes >span {
 .username_badges img {
     max-height: 18px;
     max-width: 18px;
-    margin: 0 2px 0 3px;
+    margin: 0 2px;
     vertical-align: text-bottom;}
 span.secondary_class {
     line-height: 18px;}
+
+h2 .username_badges img {
+    margin: 2px;}
+h2 .username_badges {
+    position: relative;
+    top: -3px;
+    margin-left: 2px;
+    margin-bottom: -3px;
+    display: inline-block;}
+h2 .username_badges a {
+    display: inline-block;}
 
 .sidebar .userratingdiv tr:not(#reviewrow) {
     display: inline-flex;
@@ -5683,12 +5693,11 @@ span.size5 img {
     flex-flow: wrap;
     justify-content: space-between;}
 #user .box.box_items #itemsdiv td {
-    margin-bottom: 10px;
     display: block;
     padding: 0;
     width: calc(25% - 7.5px);}
-#user .box.box_items #itemsdiv tr:last-child td {
-    margin-bottom: 0;}
+#user .box.box_items #itemsdiv tr:nth-child(n+2) td:not(:empty) {
+    margin-top: 10px;}
 #user .box.box_items #itemsdiv td div {
     position: relative;
     display: block;
@@ -5710,14 +5719,17 @@ span.size5 img {
     color: var(--c-txt);}
 #user .box.box_items #itemsdiv td a {
     background-color: transparent;
-    display: block;
+    display: flex;
     width: calc(100% - 40px);
-    margin: 7px auto;}
+    height: calc(100% - 66px);
+    margin: 7px auto 20px auto;}
 #user .box.box_items #itemsdiv img {
     max-width: unset;
     width: 100%;
     padding: 0;
-    float: unset;}
+    float: unset;
+    align-self: center;
+    height: auto;}
 #user .box.box_items #itemsdiv td a:before {
     z-index: 9;
     content: '';
@@ -6850,10 +6862,12 @@ body#user.inventory {}
 .profile .box_art_gallery .gallery_main_slot {
 	text-align: center;
 	width: 100%;
-	max-height: 600px;}
+	max-height: 700px;}
 .profile .box_art_gallery .gallery_main_slot img {
     width: auto;
-    max-height: inherit;}
+    max-width: 100%;
+    height: auto;
+    max-height: 700px;}
 .profile .box_art_gallery .gallery_row {
 	padding: 0;
 	margin: auto;
@@ -6864,28 +6878,30 @@ body#user.inventory {}
 	white-space: nowrap;
 	overflow: auto !important;}
 .profile .box_art_gallery .gallery_small_slot {
+    display: inline-block;}
+.profile .box_art_gallery .gallery_small_slot a {
 	display: inline-block;
 	max-height: 80px;
 	margin: 1px;
 	overflow: hidden;}
-.profile .box_art_gallery .large_row .gallery_small_slot {
+.profile .box_art_gallery .large_row .gallery_small_slot a {
     border: var(--p-img-brdr);
     width: auto;
     height: 80px;}
-.profile .box_art_gallery .small_row .gallery_small_slot {
+.profile .box_art_gallery .small_row .gallery_small_slot a {
     border: var(--p-img-brdr);
     width: auto;
 	margin: 2px;}
-.profile .box_art_gallery .large_row .gallery_small_slot:hover,
-.profile .box_art_gallery .small_row .gallery_small_slot:hover {
+.profile .box_art_gallery .large_row .gallery_small_slot:hover a,
+.profile .box_art_gallery .small_row .gallery_small_slot:hover a {
     border: var(--p-img-hvr);}
 .profile .gallery_small_slot img {
 	display: block;}
-.profile .box_art_gallery .gallery_small_slot.selected {
-	border-color: var(--c-sticky-id-brdr);
-	margin: 0;}
+.profile .box_art_gallery .gallery_small_slot.selected a {
+	border-color: var(--c-sticky-id-brdr);}
 
 .profile .box_art_gallery .gallery_small_slot img {
+    max-height: 80px;
     width: auto;
     height: 100%;}
 
@@ -8762,5 +8778,7 @@ div#fight_skill_points_assign >table {
     margin-top: 8px;}
 .qtip-default .pad.review p:last-child {
     margin-bottom: 0;}
+.qtip .qtip-tip,
+.qtip .qtip-tip .qtip-vml,
 .qtip .qtip-tip canvas {
-    display: none;}
+    background-color: var(--c-main-brdr) !important;}

@@ -1,8 +1,6 @@
 ﻿@media (min-width: 801px) {
 html {
     overflow-y: scroll;}
-body {
-    overflow-y: hidden !important; /* hiding tooltipster overflow */}
 #torrent_table #hyphen {
     display: none;}
 #groupplatform {
@@ -280,6 +278,7 @@ body {
     width: 100%;
     height: 100%;
     border: var(--p-table-brdr);
+    border-right: 0;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     left: -1px;
