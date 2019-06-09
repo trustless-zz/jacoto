@@ -835,6 +835,7 @@ a {
 a:hover,
 #wiki .wiki_article a:hover img,
 .forum_post td.body a:hover img,
+#profilediv a:hover img,
 .box.news_post >.pad a:hover img,
 .forum_post .colhead_dark a.username:hover,
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
@@ -3896,6 +3897,7 @@ span.size10 {
 #wiki .wiki_article a img,
 #blog .pad img,
 #blog .pad iframe,
+#profilediv img,
 .forum_post td.body img,
 .box.news_post >.pad img {
     max-width: calc(100% - 10px) !important;
@@ -3905,6 +3907,7 @@ span.size10 {
     padding: 5px;}
 #wiki .wiki_article a img,
 #blog .pad img,
+#profilediv img,
 .forum_post td.body img,
 .box.news_post >.pad img {
     max-width: 100% !important;

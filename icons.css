@@ -109,9 +109,9 @@
 
 /** logo **/
 #logo a {
-    background-image: url('icons/dark/new_logo.svg');}
-#logo a:hover {
-    background-image: url('icons/blank.svg');}
+    background-image: url('icons/dark/logo.svg');}
+#logo a:hover { /*preload?*/
+    background-image: url('icons/logo_blank.svg');}
 
 /** thread status **/
 #forums td.read {
@@ -301,7 +301,7 @@ a[title="Original Group"] {
 
 /** edit **/
 /* anchor */
-.forum_post .colhead_dark a[onclick^="Edit"],
+a[onclick^="Edit"],
 a[title="Edit"] {
     background-image: url('icons/dark/tor/ed.svg');}
 
@@ -330,8 +330,7 @@ a[title="Remove"] {
     transform: scaleX(-1);}
 
 /** quote **/
-.colhead_dark a[onclick^="Quote"],
-.head a[onclick^="Quote"] {
+a[onclick^="Quote"] {
     background-image: url('icons/dark/quote.svg');}
 
 /** thumbs **/
