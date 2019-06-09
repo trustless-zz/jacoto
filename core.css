@@ -51,6 +51,366 @@
 #index .box.news_post >.head:nth-child(3) +.pad {
     display: none;}
 
+/** masks **/
+#forums td.read,
+#forums td.read_sticky,
+#forums td.read_locked,
+#forums td.read_locked_sticky,
+.inventory .item_li.featured:before,
+#shop .item_li.featured:before,
+.torrent_table .show_torrents_link,
+#nav_userinfo a:after,
+#stats_ratio .stat:after,
+.torrent_table .addbookmark,
+.torrent_table .removebookmark,
+.xdsoft_datetimepicker .xdsoft_next,
+.xdsoft_datetimepicker .xdsoft_prev,
+#wrapper .prev,
+#wrapper .next {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: var(--c-text-s);}
+#forums td.unread,
+#forums td.unread_sticky,
+#forums td.unread_locked,
+#forums td.unread_locked_sticky,
+tr.likes td[id^="likers_"] >strong:nth-of-type(1),
+tr.likes td[id^="likers_"] >strong:nth-of-type(2),
+#bb_bold,
+#bb_und,
+#bb_ita,
+#bb_img,
+#bb_link,
+#bb_strk,
+#bb_h1,
+#bb_h2,
+#bb_h3,
+#bb_h4,
+#bb_h5,
+#bb_h6,
+#bb_color,
+#bb_tex,
+#bb_quote,
+#bb_list,
+#bb_spoil,
+#bb_cent,
+#bb_lef,
+#bb_righ,
+#bb_pre,
+#bb_youtube,
+#stats_ratio:before,
+img[title="Snatches"],
+img[title="Downloaded"],
+img[title="Uploaded"],
+img[title="Leechers"],
+img[title="Seeders"] {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: var(--c-txt);}
+.forum_post tr.likes >td:first-child a:nth-child(1),
+.forum_post tr.likes >td:first-child a:nth-child(2),
+#stats_seeding a:before,
+#stats_leeching a:before,
+a[title="Download"],
+#index #freeleech .group_torrent >span:first-child a,
+#requests table.border a[href^="upload.php"],
+.torrent_table #user_rating_icon img,
+a >img[title="Snatches"],
+a >img[title="Downloaded"],
+a >img[title="Uploaded"],
+a >img[title="Leechers"],
+a >img[title="Seeders"],
+a[title="Use a FL Token"],
+#collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
+#quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
+#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1),
+a[title="Report"],
+a[title="External Link"],
+a[title="Permalink"],
+a[title="Original Group"],
+a[onclick^="Edit"],
+a[title="Edit"],
+.inventory .trash_icon,
+a[title="Remove"],
+.colhead_dark a[onclick^="Quote"],
+.head a[onclick^="Quote"],
+#userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a img[alt="Last read post"],
+.last_read,
+.read ~td .last_read,
+.read_sticky ~td .last_read,
+.read_locked ~td .last_read,
+.read_locked_sticky ~td .last_read,
+#userhistory .colhead_dark a img[alt="Last read post"],
+#nav_useredit a,
+#nav_logout a {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: var(--c-anchor);}
+
+.forum_post tr.likes >td:first-child a:nth-child(1):hover,
+.forum_post tr.likes >td:first-child a:nth-child(2):hover,
+#stats_leeching:hover a:before,
+a[title="Download"]:hover,
+#index #freeleech .group_torrent >span:first-child a:hover,
+#stats_seeding:hover a:before,
+#requests table.border a[href^="upload.php"]:hover,
+.torrent_table #user_rating_icon img:hover,
+a:hover >img[title="Snatches"],
+a:hover >img[title="Downloaded"],
+a:hover >img[title="Uploaded"],
+a:hover >img[title="Leechers"],
+a:hover >img[title="Seeders"],
+a[title="Use a FL Token"]:hover,
+#collections .sidebar .box.box_comment a[href^="reports.php?action=report"]:hover,
+#quickreplypreview .colhead_dark #barpreview >a:nth-child(1):hover,
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1):hover,
+#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1):hover,
+a[title="Report"]:hover,
+a[title="External Link"]:hover,
+a[title="Permalink"]:hover,
+a[title="Original Group"]:hover,
+a[onclick^="Edit"]:hover,
+a[title="Edit"]:hover,
+.inventory .trash_icon:hover,
+a[title="Remove"]:hover,
+.colhead_dark a[onclick^="Quote"]:hover,
+.head a[onclick^="Quote"]:hover,
+#userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a:hover img[alt="Last read post"],
+.last_read:hover,
+#userhistory .colhead_dark a:hover img[alt="Last read post"],
+#nav_useredit a:hover,
+#nav_logout a:hover {
+    background-color: var(--c-anchor-hvr);}
+
+#userinfo_stats:hover #stats_ratio .stat:after,
+#userinfo_username .sub[style="visibility: visible;"] ~#nav_userinfo a:after {
+    background-color: var(--c-low);}
+
+#forums td.read {
+    -webkit-mask-image: url('icons/dark/read.svg');
+    mask-image: url('icons/dark/read.svg');}
+#forums td.read_sticky {
+    -webkit-mask-image: url('icons/dark/read_sticky.svg');
+    mask-image: url('icons/dark/read_sticky.svg');}
+#forums td.read_locked {
+    -webkit-mask-image: url('icons/dark/read_locked.svg');
+    mask-image: url('icons/dark/read_locked.svg');}
+#forums td.read_locked_sticky {
+    -webkit-mask-image: url('icons/dark/read_locked_sticky.svg');
+    mask-image: url('icons/dark/read_locked_sticky.svg');}
+#forums td.unread {
+    -webkit-mask-image: url('icons/dark/unread.svg');
+    mask-image: url('icons/dark/unread.svg');}
+#forums td.unread_sticky {
+    -webkit-mask-image: url('icons/dark/unread_sticky.svg');
+    mask-image: url('icons/dark/unread_sticky.svg');}
+#forums td.unread_locked {
+    -webkit-mask-image: url('icons/dark/unread_locked.svg');
+    mask-image: url('icons/dark/unread_locked.svg');}
+#forums td.unread_locked_sticky {
+    -webkit-mask-image: url('icons/dark/unread_locked_sticky.svg');
+    mask-image: url('icons/dark/unread_locked_sticky.svg');}
+tr.likes td[id^="likers_"] >strong:nth-of-type(1),
+.forum_post tr.likes >td:first-child a:nth-child(1) {
+    -webkit-mask-image: url('icons/dark/like.svg');
+    mask-image: url('icons/dark/like.svg');}
+tr.likes td[id^="likers_"] >strong:nth-of-type(2),
+.forum_post tr.likes >td:first-child a:nth-child(2) {
+    -webkit-mask-image: url('icons/dark/dislike.svg');
+    mask-image: url('icons/dark/dislike.svg');}
+#bb_bold {
+    -webkit-mask-image: url('icons/dark/bbbutt/bold.svg');
+    mask-image: url('icons/dark/bbbutt/bold.svg');}
+#bb_und {
+    -webkit-mask-image: url('icons/dark/bbbutt/und.svg');
+    mask-image: url('icons/dark/bbbutt/und.svg');}
+#bb_ita {
+    -webkit-mask-image: url('icons/dark/bbbutt/ita.svg');
+    mask-image: url('icons/dark/bbbutt/ita.svg');}
+#bb_img {
+    -webkit-mask-image: url('icons/dark/bbbutt/img.svg');
+    mask-image: url('icons/dark/bbbutt/img.svg');}
+#bb_link {
+    -webkit-mask-image: url('icons/dark/bbbutt/link.svg');
+    mask-image: url('icons/dark/bbbutt/link.svg');}
+#bb_strk {
+    -webkit-mask-image: url('icons/dark/bbbutt/strk.svg');
+    mask-image: url('icons/dark/bbbutt/strk.svg');}
+#bb_h1 {
+    -webkit-mask-image: url('icons/dark/bbbutt/h1.svg');
+    mask-image: url('icons/dark/bbbutt/h1.svg');}
+#bb_h2 {
+    -webkit-mask-image: url('icons/dark/bbbutt/h2.svg');
+    mask-image: url('icons/dark/bbbutt/h2.svg');}
+#bb_h3 {
+    -webkit-mask-image: url('icons/dark/bbbutt/h3.svg');
+    mask-image: url('icons/dark/bbbutt/h3.svg');}
+#bb_h4 {
+    -webkit-mask-image: url('icons/dark/bbbutt/h4.svg');
+    mask-image: url('icons/dark/bbbutt/h4.svg');}
+#bb_h5 {
+    -webkit-mask-image: url('icons/dark/bbbutt/h5.svg');
+    mask-image: url('icons/dark/bbbutt/h5.svg');}
+#bb_h6 {
+    -webkit-mask-image: url('icons/dark/bbbutt/h6.svg');
+    mask-image: url('icons/dark/bbbutt/h6.svg');}
+#bb_color {
+    -webkit-mask-image: url('icons/dark/bbbutt/color.svg');
+    mask-image: url('icons/dark/bbbutt/color.svg');}
+#bb_tex {
+    -webkit-mask-image: url('icons/dark/bbbutt/tex.svg');
+    mask-image: url('icons/dark/bbbutt/tex.svg');}
+#bb_quote {
+    -webkit-mask-image: url('icons/dark/bbbutt/quote.svg');
+    mask-image: url('icons/dark/bbbutt/quote.svg');}
+#bb_list {
+    -webkit-mask-image: url('icons/dark/bbbutt/list.svg');
+    mask-image: url('icons/dark/bbbutt/list.svg');}
+#bb_spoil {
+    -webkit-mask-image: url('icons/dark/bbbutt/spoil.svg');
+    mask-image: url('icons/dark/bbbutt/spoil.svg');}
+#bb_cent {
+    -webkit-mask-image: url('icons/dark/bbbutt/cent.svg');
+    mask-image: url('icons/dark/bbbutt/cent.svg');}
+#bb_lef {
+    -webkit-mask-image: url('icons/dark/bbbutt/lef.svg');
+    mask-image: url('icons/dark/bbbutt/lef.svg');}
+#bb_righ {
+    -webkit-mask-image: url('icons/dark/bbbutt/righ.svg');
+    mask-image: url('icons/dark/bbbutt/righ.svg');}
+#bb_pre {
+    -webkit-mask-image: url('icons/dark/bbbutt/pre.svg');
+    mask-image: url('icons/dark/bbbutt/pre.svg');}
+#bb_youtube {
+    -webkit-mask-image: url('icons/dark/bbbutt/youtube.svg');
+    mask-image: url('icons/dark/bbbutt/youtube.svg');}
+.torrent_table #user_rating_icon img,
+.inventory .item_li.featured:before,
+#shop .item_li.featured:before {
+    -webkit-mask-image: url('icons/dark/featured.svg');
+    mask-image: url('icons/dark/featured.svg');}
+#stats_leeching a:before,
+a[title="Download"],
+#index #freeleech .group_torrent >span:first-child a {
+    -webkit-mask-image: url('icons/dark/download.svg');
+    mask-image: url('icons/dark/download.svg');}
+#stats_seeding a:before,
+#requests table.border a[href^="upload.php"] {
+    -webkit-mask-image: url('icons/dark/upload.svg');
+    mask-image: url('icons/dark/upload.svg');}
+#stats_ratio:before {
+    -webkit-mask-image: url('icons/dark/ratio.svg');
+    mask-image: url('icons/dark/ratio.svg');}
+.torrent_table .show_torrents_link,
+#nav_userinfo a:after,
+#stats_ratio .stat:after {
+    -webkit-mask-image: url('icons/dark/show.svg');
+    mask-image: url('icons/dark/show.svg');}
+img[title="Snatches"] {
+    -webkit-mask-image: url('icons/dark/snatches.svg');
+    mask-image: url('icons/dark/snatches.svg');}
+img[title="Downloaded"],
+img[title="Uploaded"],
+img[title="Leechers"],
+img[title="Seeders"] {
+    -webkit-mask-image: url('icons/dark/seeders.svg');
+    mask-image: url('icons/dark/seeders.svg');}
+img[title="Downloaded"],
+img[title="Leechers"] {
+    transform:scaleY(-1);}
+a[title="Use a FL Token"] {
+    -webkit-mask-image: url('icons/dark/tor/fl.svg');
+    mask-image: url('icons/dark/tor/fl.svg');}
+#collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
+#quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
+#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1),
+a[title="Report"] {
+    -webkit-mask-image: url('icons/dark/tor/rp.svg');
+    mask-image: url('icons/dark/tor/rp.svg');}
+a[title="External Link"] {
+    -webkit-mask-image: url('icons/dark/tor/ln.svg');
+    mask-image: url('icons/dark/tor/ln.svg');}
+a[title="Permalink"] {
+    -webkit-mask-image: url('icons/dark/tor/pl.svg');
+    mask-image: url('icons/dark/tor/pl.svg');}
+a[title="Original Group"] {
+    -webkit-mask-image: url('icons/dark/tor/og.svg');
+    mask-image: url('icons/dark/tor/og.svg');}
+a[onclick^="Edit"],
+a[title="Edit"] {
+    -webkit-mask-image: url('icons/dark/tor/ed.svg');
+    mask-image: url('icons/dark/tor/ed.svg');}
+.inventory .trash_icon,
+a[title="Remove"] {
+    -webkit-mask-image: url('icons/dark/tor/rm.svg');
+    mask-image: url('icons/dark/tor/rm.svg');}
+.torrent_table .addbookmark {
+    -webkit-mask-image: url('icons/dark/addbookmark.svg');
+    mask-image: url('icons/dark/addbookmark.svg');}
+.torrent_table .removebookmark {
+    -webkit-mask-image: url('icons/dark/removebookmark.svg');
+    mask-image: url('icons/dark/removebookmark.svg');}
+.xdsoft_datetimepicker .xdsoft_next:hover:active, /*revisit*/
+.xdsoft_datetimepicker .xdsoft_prev:hover:active,
+.xdsoft_datetimepicker .xdsoft_next,
+.xdsoft_datetimepicker .xdsoft_prev,
+.prev,
+.next {
+    -webkit-mask-image: url('icons/dark/prev.svg');
+    mask-image: url('icons/dark/prev.svg');}
+.xdsoft_datetimepicker .xdsoft_next,
+.next {
+    transform: scaleX(-1);}
+.colhead_dark a[onclick^="Quote"],
+.head a[onclick^="Quote"] {
+    -webkit-mask-image: url('icons/dark/quote.svg');
+    mask-image: url('icons/dark/quote.svg');}
+#userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a img[alt="Last read post"],
+.last_read {
+    -webkit-mask-image: url('icons/dark/last_read.svg');
+    mask-image: url('icons/dark/last_read.svg');}
+.read ~td .last_read,
+.read_sticky ~td .last_read,
+.read_locked ~td .last_read,
+.read_locked_sticky ~td .last_read,
+#userhistory .colhead_dark a img[alt="Last read post"] {
+    -webkit-mask-image: url('icons/dark/read_last_read.svg');
+    mask-image: url('icons/dark/read_last_read.svg');}
+#nav_useredit a {
+    -webkit-mask-image: url('icons/dark/nav/useredit.svg');
+    mask-image: url('icons/dark/nav/useredit.svg');}
+#nav_logout a {
+    -webkit-mask-image: url('icons/dark/nav/logout.svg');
+    mask-image: url('icons/dark/nav/logout.svg');}
+
+#stats_seeding a,
+#stats_leeching a {
+    position: relative;}
+#stats_seeding a:before,
+#stats_leeching a:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;}
+/** /masks **/
+
+
 .amigacd32 {background: url(caticons/amigacd32_dark.svg);}
 .amstradcpc {background: url(caticons/amstradcpc_dark.svg);}
 .atarist {background: url(caticons/atarist_dark.svg);}
@@ -554,22 +914,16 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 
 .torrent_table .addbookmark,
 .torrent_table .removebookmark,
-#index #freeleech .group_torrent >span:first-child a,
 #stats_ratio:before,
 #stats_seeding a,
 #stats_leeching a,
 #stats_gold a,
-#logo a,
+#logo a:before,
 #nav_logout a,
 #toplink a,
 #nav_donate a,
 #nav_useredit a,
 .torrent_table .show_torrents_link,
-img[title="Downloaded"],
-img[title="Uploaded"],
-img[title="Leechers"],
-img[title="Seeders"],
-img[title="Snatches"],
 .torrent_table #user_rating_icon img,
 .ign,
 .meta,
@@ -603,14 +957,6 @@ img[title="Snatches"],
 .Wikipedia,
 .XboxStore,
 .PCGamingWiki,
-a[title="Original Group"],
-a[title="Permalink"],
-a[title="Download"],
-a[title="Use a FL Token"],
-a[title="Report"],
-a[title="External Link"],
-a[title="Edit"],
-a[title="Remove"],
 .prev,
 .next,
 #inbox .box.vertical_space .head a[onclick],
@@ -850,13 +1196,10 @@ span.user_title a:hover {
 .torrent_table .addbookmark,
 .torrent_table .removebookmark,
 .torrent_table td[colspan="4"] >span:first-child >a,
-#index #freeleech .group_torrent >span:first-child a,
 .torrent_table .show_torrents_link,
 /*.colhead_dark a,*/
 /*.colhead a,*/
 #toplink a,
-.prev:hover,
-.next:hover,
 #taglist a:hover,
 .filter_torrents.advanced #taglist td:hover,
 /* .torrent_details .group_torrent td:first-child a, */

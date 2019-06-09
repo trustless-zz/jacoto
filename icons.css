@@ -108,231 +108,15 @@
 }
 
 /** logo **/
-#logo a {
+#logo a:before {
     background-image: url('icons/dark/logo.svg');}
-#logo a:hover { /*preload?*/
-    background-image: url('icons/dark/logo_blank.svg');}
 
-/** thread status **/
-#forums td.read {
-    background-image: url('icons/dark/read.svg');}
-#forums td.read_sticky {
-    background-image: url('icons/dark/read_sticky.svg');}
-#forums td.read_locked {
-    background-image: url('icons/dark/read_locked.svg');}
-#forums td.read_locked_sticky {
-    background-image: url('icons/dark/read_locked_sticky.svg');}
-
-#forums td.unread {
-    background-image: url('icons/dark/unread.svg');}
-#forums td.unread_sticky {
-    background-image: url('icons/dark/unread_sticky.svg');}
-#forums td.unread_locked {
-    background-image: url('icons/dark/unread_locked.svg');}
-#forums td.unread_locked_sticky {
-    background-image: url('icons/dark/unread_locked_sticky.svg');}
-
-/** forum like/dislike **/
-.forum_post tr.likes >td:first-child a:nth-child(1) {
-    background-image: url('icons/dark/a.like.svg');}
-.forum_post tr.likes >td:first-child a:nth-child(2) {
-    background-image: url('icons/dark/a.dislike.svg');}
-
-tr.likes td[id^="likers_"] >strong:nth-of-type(1) {
-    background-image: url(icons/dark/like.svg);}
-tr.likes td[id^="likers_"] >strong:nth-of-type(2) {
-    background-image: url(icons/dark/dislike.svg);}
-
-/** bbbutt **/
-#bb_bold {
-    background-image: url('icons/dark/bbbutt/bold.svg');}
-#bb_und {
-    background-image: url('icons/dark/bbbutt/und.svg');}
-#bb_ita {
-    background-image: url('icons/dark/bbbutt/ita.svg');}
-#bb_img {
-    background-image: url('icons/dark/bbbutt/img.svg');}
-#bb_link {
-    background-image: url('icons/dark/bbbutt/link.svg');}
-#bb_strk {
-    background-image: url('icons/dark/bbbutt/strk.svg');}
-#bb_h1 {
-    background-image: url('icons/dark/bbbutt/h1.svg');}
-#bb_h2 {
-    background-image: url('icons/dark/bbbutt/h2.svg');}
-#bb_h3 {
-    background-image: url('icons/dark/bbbutt/h3.svg');}
-#bb_h4 {
-    background-image: url('icons/dark/bbbutt/h4.svg');}
-#bb_h5 {
-    background-image: url('icons/dark/bbbutt/h5.svg');}
-#bb_h6 {
-    background-image: url('icons/dark/bbbutt/h6.svg');}
-#bb_color {
-    background-image: url('icons/dark/bbbutt/color.svg');}
-#bb_tex {
-    background-image: url('icons/dark/bbbutt/tex.svg');}
-#bb_quote {
-    background-image: url('icons/dark/bbbutt/quote.svg');}
-#bb_list {
-    background-image: url('icons/dark/bbbutt/list.svg');}
-#bb_spoil {
-    background-image: url('icons/dark/bbbutt/spoil.svg');}
-#bb_cent {
-    background-image: url('icons/dark/bbbutt/cent.svg');}
-#bb_lef {
-    background-image: url('icons/dark/bbbutt/lef.svg');}
-#bb_righ {
-    background-image: url('icons/dark/bbbutt/righ.svg');}
-#bb_pre {
-    background-image: url('icons/dark/bbbutt/pre.svg');}
-#bb_youtube {
-    background-image: url('icons/dark/bbbutt/youtube.svg');}
-
-/** invert white icons **/
-img.animate_icon {
-    filter: invert(1);}
-
-/** new shop item **/
-.inventory .item_li.featured:before,
-#shop .item_li.featured:before {
-    background-image: url('icons/dark/featured.svg');}
-
-/** gold **/
-img[title="Gold"],
-#requests_donate img,
-#stats_gold a,
-#wrapper .trade_value .trade_value_gold img,
-.profile .box_stats #gold .stat {
-    background-image: url('icons/gold.svg');}
-h2#username span#tip_user img,
-#wrapper #trading_panel .gold_trade a#gold_trade_add img {
-    background-image: url('icons/gold_plus.svg');}
-#wrapper #trading_panel .gold_trade a#gold_trade_subtract img {
-    background-image: url('icons/gold_minus.svg');}
-
-/** download(ed) **/
-/* {background-image: url('icons/dark/leeching.svg');} */
-/* anchor */
-#stats_leeching a,
-a[title="Download"],
-#index #freeleech .group_torrent >span:first-child a {
-    background-image: url('icons/dark/download.svg');}
-/** uploaded **/
-/* {background-image: url('icons/dark/seeding.svg');} */
-/* anchor */
-#stats_seeding a,
-#requests table.border a[href^="upload.php"] {
-    background-image: url('icons/dark/upload.svg');}
-
-/** ratio icon **/
-#stats_ratio:before {
-    background-image: url('icons/dark/ratio.svg');}
-
-/** show/hide torrents, select **/
-select,
-.torrent_table .show_torrents_link,
-#nav_userinfo a:after,
-#stats_ratio .stat:after {
+select {
     background-image: url('icons/dark/show.svg');}
-/** forum post user stats **/
-#forums .forum_post .avatar >div:first-child:after {
-    background-image: url('icons/dark/show-hor.svg');}
-
 /** number **/
 input[type="number"]::-webkit-inner-spin-button, 
 input[type="number"]::-webkit-outer-spin-button {
     background-image: url('icons/dark/number.svg');}
-
-/** user rating **/
-.torrent_table #user_rating_icon img {
-    background-image: url('icons/dark/rating.svg');}
-
-/** snatches **/
-img[title="Snatches"] {
-    background-image: url('icons/dark/snatches.svg');}
-/* anchor */
-a >img[title="Snatches"] {
-    background-image: url('icons/dark/a.snatches.svg');}
-
-/** seeders/leechers **/
-img[title="Downloaded"],
-img[title="Uploaded"],
-img[title="Leechers"],
-img[title="Seeders"] {
-    background-image: url('icons/dark/seeders.svg');}
-/* anchor */
-a >img[title="Downloaded"],
-a >img[title="Uploaded"],
-a >img[title="Leechers"],
-a >img[title="Seeders"] {
-    background-image: url('icons/dark/a.seeders.svg');}
-img[title="Downloaded"],
-img[title="Leechers"] {
-    transform:scaleY(-1);}
-
-/** fl token **/
-/* anchor */
-a[title="Use a FL Token"] {
-    background-image: url('icons/dark/tor/fl.svg');}
-
-/** report **/
-/* anchor */
-#collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
-#quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
-.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
-#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1),
-a[title="Report"] {
-    background-image: url('icons/dark/tor/rp.svg');}
-
-/** external link **/
-/* anchor */
-a[title="External Link"] {
-    background-image: url('icons/dark/tor/ln.svg');}
-
-/** permalink **/
-/* anchor */
-a[title="Permalink"] {
-    background-image: url('icons/dark/tor/pl.svg');}
-/** original group **/
-/* anchor */
-a[title="Original Group"] {
-    background-image: url('icons/dark/tor/og.svg');}
-
-/** edit **/
-/* anchor */
-a[onclick^="Edit"],
-a[title="Edit"] {
-    background-image: url('icons/dark/tor/ed.svg');}
-
-/** remove **/
-/* anchor */
-.inventory .trash_icon,
-a[title="Remove"] {
-    background-image: url('icons/dark/tor/rm.svg');}
-
-/** bookamrk **/
-.torrent_table .addbookmark {
-    background-image: url('icons/dark/addbookmark.svg');}
-.torrent_table .removebookmark {
-    background-image: url('icons/dark/removebookmark.svg');}
-
-/** cycle **/
-.xdsoft_datetimepicker .xdsoft_next:hover:active,
-.xdsoft_datetimepicker .xdsoft_prev:hover:active,
-.xdsoft_datetimepicker .xdsoft_next,
-.xdsoft_datetimepicker .xdsoft_prev,
-.prev,
-.next {
-    background-image: url('icons/dark/prev.svg');}
-.xdsoft_datetimepicker .xdsoft_next,
-.next {
-    transform: scaleX(-1);}
-
-/** quote **/
-.colhead_dark a[onclick^="Quote"],
-.head a[onclick^="Quote"] {
-    background-image: url('icons/dark/quote.svg');}
 
 /** thumbs **/
 img[src="static/common/thumbsup.png"],
@@ -350,80 +134,48 @@ img[title="ThumbsDown "],
 #thumbsdown img:hover {
     background: url('icons/dark/thumbsdown_simple.svg') var(--c-anchor-hvr-bcg);}
 
-/** jump to last-read **/
-/*unread*/
-#userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a img[alt="Last read post"],
-.last_read {
-    background-image: url('icons/dark/last_read.svg');}
-/*read*/
-.read ~td .last_read,
-.read_sticky ~td .last_read,
-.read_locked ~td .last_read,
-.read_locked_sticky ~td .last_read,
-#userhistory .colhead_dark a img[alt="Last read post"] {
-    background-image: url('icons/dark/read_last_read.svg');}
+/** invert white icons **/
+img.animate_icon {
+    filter: invert(1);}
 
-#nav_useredit a {
-    background-image: url('icons/dark/nav/useredit.svg');}
-#nav_logout a {
-    background-image: url('icons/dark/nav/logout.svg');}
+/** gold **/
+img[title="Gold"],
+#requests_donate img,
+#stats_gold a,
+#wrapper .trade_value .trade_value_gold img,
+.profile .box_stats #gold .stat {
+    background-image: url('icons/gold.svg');}
+h2#username span#tip_user img,
+#wrapper #trading_panel .gold_trade a#gold_trade_add img {
+    background-image: url('icons/gold_plus.svg');}
+#wrapper #trading_panel .gold_trade a#gold_trade_subtract img {
+    background-image: url('icons/gold_minus.svg');}
+
+select {
+    background-image: url('icons/dark/show.svg');}
+/** forum post user stats **/
+#forums .forum_post .avatar >div:first-child:after {
+    background-image: url('icons/dark/show-hor.svg');}
+
+/** number **/
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button {
+    background-image: url('icons/dark/number.svg');}
 
 
-/* background-image: url('data:image/svg+xml;utf8,');} */
+/** thumbs **/
+img[src="static/common/thumbsup.png"],
+img[title="ThumbsUp"],
+img[title="ThumbsUp "],
+#thumbsup img {
+    background-image: url('icons/dark/thumbsup_simple.svg');}
+#thumbsup img:hover {
+    background: url('icons/dark/thumbsup_simple.svg') var(--c-anchor-hvr-bcg);}
+img[src="static/common/thumbsdown.png"],
+img[title="ThumbsDown"],
+img[title="ThumbsDown "],
+#thumbsdown img {
+    background-image: url('icons/dark/thumbsdown_simple.svg');}
+#thumbsdown img:hover {
+    background: url('icons/dark/thumbsdown_simple.svg') var(--c-anchor-hvr-bcg);}
 
-
-/* @media (min-width: 1760px) and (min-height: 659px) {
-
-    #nav_useredit a {
-        background-image: url('icons/dark/nav/useredit.svg');}
-
-    #nav_logout a {
-        background-image: url('icons/dark/nav/logout.svg');}
-
-    #nav_donate a {
-        background-image: url('icons/dark/nav/donate.svg');}
-
-    #toplink a {
-        background-image: url('icons/dark/toplink.svg');}
-
-    #nav_torrents a {
-        background-image: url('icons/dark/nav/games.svg');}
-    #nav_collections a {
-        background-image: url('icons/dark/nav/bundles.svg');}
-    #nav_requests a {
-        background-image: url('icons/dark/nav/requests.svg');}
-    #nav_forums a {
-        background-image: url('icons/dark/nav/forums.svg');}
-    #nav_irc a {
-        background-image: url('icons/dark/nav/irc.svg');}
-    #nav_shop a {
-        background-image: url('icons/dark/nav/shop.svg');}
-    #nav_rules a {
-        background-image: url('icons/dark/nav/rules.svg');}
-    #nav_wiki a {
-        background-image: url('icons/dark/nav/wiki.svg');}
-    #nav_staff a {
-        background-image: url('icons/dark/nav/staff.svg');}
-    #inboxlia {
-        background-image: url('icons/dark/nav/inbox.svg');}
-    a.top10ico {
-        background-image: url('icons/dark/nav/top10.svg');}
-    a.bookmarksico {
-        background-image: url('icons/dark/nav/bookmarks.svg');}
-    a.notificationsico {
-        background-image: url('icons/dark/nav/notifications.svg');}
-    a.torrentsico {
-        background-image: url('icons/dark/nav/uploads.svg');}
-    a.inventoryico {
-        background-image: url('icons/dark/nav/inventory.svg');}
-    a.uploadico {
-        background-image: url('icons/dark/nav/upload.svg');}
-    a.inviteico {
-        background-image: url('icons/dark/nav/invite.svg');}
-    #staffinboxlia {
-        background-image: url('icons/dark/nav/staffpm.svg');}
-    
-    #userinfo_minor:before {
-        background-image: url('icons/dark/nav/more.svg');}
-}
-*/
