@@ -111,7 +111,7 @@
 #logo a {
     background-image: url('icons/dark/logo.svg');}
 #logo a:hover { /*preload?*/
-    background-image: url('icons/logo_blank.svg');}
+    background-image: url('icons/dark/logo_blank.svg');}
 
 /** thread status **/
 #forums td.read {
@@ -330,7 +330,8 @@ a[title="Remove"] {
     transform: scaleX(-1);}
 
 /** quote **/
-a[onclick^="Quote"] {
+.colhead_dark a[onclick^="Quote"],
+.head a[onclick^="Quote"] {
     background-image: url('icons/dark/quote.svg');}
 
 /** thumbs **/
