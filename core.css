@@ -41,6 +41,7 @@
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
     --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
     --p-fade-2:                         linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
+    --p-selected:                       0 -2px 0px 0px var(--c-b1);
     --p-lh: 							1.35714286805; /* calc(19 / 14), 1.357142857142857 says 19px but actually is 18px when measured */
     --p-dot3:							-.02142857142em;
     --p-head:                           18px;}
@@ -74,6 +75,10 @@ td.read_locked_sticky:before,
     mask-repeat: no-repeat;
     mask-size: contain;
     background-color: var(--c-text-s);}
+.torrent_table .addbookmark:hover {
+    background-color: var(--c-on);}
+.torrent_table .removebookmark:hover {
+    background-color: var(--c-off);}
 td.unread:before,
 td.unread_sticky:before,
 td.unread_locked:before,
@@ -933,8 +938,6 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 #index #freeleech .group_torrent span.tor_info {
     order: 5;}
 
-.torrent_table .addbookmark,
-.torrent_table .removebookmark,
 #stats_ratio:before,
 #stats_seeding a,
 #stats_leeching a,
@@ -1214,11 +1217,7 @@ span.user_title a:hover {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
 
-.torrent_table .addbookmark,
-.torrent_table .removebookmark,
-/*.torrent_table td[colspan="4"] >span:first-child >a,*/
-/*.colhead_dark a,*/
-/*.colhead a,*/
+
 #toplink a,
 #taglist a:hover,
 .filter_torrents.advanced #taglist td:hover,
@@ -1226,17 +1225,11 @@ span.user_title a:hover {
 .box_game_ratings a[target="_blank"]:hover,
 /*#requests .thin >.center.box.pad a[onclick],*/
 #requests table.border a[href^="upload.php"],
-.forum_post tr.likes >td:first-child a,
 .bbbutt li a,
-#newthreadform #newthreadtext td.center a[onclick],
 .torrent_details .torrent_table div[id^="history_"] table.border tr:not(.colhead),
-#user a#toggle_css_gallery,
-#user .thin >h2 +form#userform a[onclick],
-#bookmarks #torrent_table td[colspan="3"] >span:first-child a,
 #torrents #requests.request_table .colhead a,
 #forums #forum_search_cat_list td.forum_cat a,
 #collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
-.last_read a,
 #artist #torrent_table .group_torrent td[colspan="2"] >span:first-child a,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child a,
 #uploaded_table             td.center.cats_col +td span:first-child a,
@@ -1247,22 +1240,18 @@ span.user_title a:hover {
 #seeding_not_snatched_table td.center.cats_col +td span:first-child a,
 #downloaded_table           td.center.cats_col +td span:first-child a,
 #extlink_table              td.center.cats_col +td span:first-child a,
-#staffpm .linkbox a[onclick],
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a,
 .search.box.pad #cat_list a,
 /* tr.pad.hidden .linkbox a, */
-.colhead_dark a[onclick^="Quote"],
-.head a[onclick^="Quote"],
-.colhead_dark a[onclick^="Edit"],
 #top10 td.center.cats_col +td >span a,
 #quickreplypreview .colhead_dark #barpreview a,
 .forum_post .colhead_dark div[style="float: right;"] a,
 #newthreadpreview .forum_post .colhead_dark #barpreview a,
-#userhistory .colhead_dark a img[alt="Last read post"],
 #userhistory .colhead_dark span[style="float:left;"] >a[href*="#post"]:nth-of-type(2),
 .torrent_table .show_torrents_link,
 .colhead_dark span.username_badges a {
     background-color: transparent;}
+
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover td {
     background-color: transparent !important;}
@@ -2428,7 +2417,6 @@ img[title="Gold"] {
     border-top: var(--p-sticky-brdr) !important;}
 .torrent_table .addbookmark,
 .torrent_table .removebookmark {
-    background-size: 16px 22px;
     display: inline-block;
     width: 16px;
     height: 22px;}
@@ -5003,10 +4991,11 @@ td.center.cats_col {
 #collections #torrent_table >tbody >tr.colhead >td:nth-child(n+4) {
     width: 18px;}
 #collections #torrent_table .colhead td[width="70%"] strong,
-#torrent_table .group.discog td[colspan="5"] >span +br,
 #bookmarks #torrent_table .colhead_dark td[width="70%"] strong {
     font-size: var(--p-head);
     line-height: var(--p-head);}
+#torrent_table .group.discog td[colspan="5"] >span +br {
+    line-height: 20px;}
 .thin.torrent_history >form#torrent_history_search td.label,
 #bookmarks #torrent_table .discog span[style="float:left;"] >br:first-child,
 #bookmarks #torrent_table .colhead_dark td[width="70%"] a {
@@ -6274,7 +6263,9 @@ table#downloaded_table td.center.cats_col +td >span:before {
 
 
 #items_navigation li#selected a {
-	font-weight: bold;}
+    font-weight: 600;
+    color: var(--c-low);
+    box-shadow: inset var(--p-selected);}
 
 #items_navigation ul ul li {
 	margin-left: 6px;}

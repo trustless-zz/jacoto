@@ -140,6 +140,7 @@ body {
     
 /** new boring desktop header **/
 #header {
+    position: relative;
     border-bottom: var(--p-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
@@ -232,6 +233,53 @@ body {
     -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
     clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
     transition-delay: 0s;}
+    
+#header #alerts {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 40px;
+    height: 40px;
+    background-color: var(--c-txt);
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 20px 20px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 20px 20px;
+    text-align: left;
+    font-size: 0;
+    line-height: 0;}
+#header #alerts:hover {
+    background-color: var(--c-low);}
+#header #alerts .blend {
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    border: var(--p-table-brdr);
+    line-height: 26px;
+    text-align: center;
+    font-size: 15px;
+    position: absolute;
+    width: auto;
+    top: 0;
+    right: 40px;
+    -webkit-clip-path: polygon(calc(100% + 10px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) -10px);
+    clip-path: polygon(calc(100% + 10px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) -10px);
+    transition-delay: 0s;}
+#header #alerts:hover .blend {
+    -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
+    clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
+    transition-delay: .3s;}
+#header #alerts a {
+    background-color: var(--c-input);
+    padding: 0 5px;
+    font-weight: normal;
+    white-space: nowrap;
+    display: block;}
+#header #alerts a:nth-child(odd) {
+    background-color: var(--c-tgroup);}
+    
 
 #nav_logout {
     order: -2;}
@@ -268,7 +316,7 @@ body {
 #header #userinfo_username  .active a,
 #header #userinfo_minor     .active a,
 #header #menu               .active a {
-    box-shadow: inset 0 -2px 0px 0px var(--c-b1);}
+    box-shadow: inset var(--p-selected);}
     
 #header .highlight {
     color: var(--c-em-hvr);
