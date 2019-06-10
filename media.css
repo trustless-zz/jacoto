@@ -256,6 +256,8 @@ body {
 
 #userinfo_stats li:not(#stats_ratio) {
     background-color: var(--c-box);}
+#nav_useredit:hover,
+#nav_logout:hover,
 #header #menu li a:hover,
 #header #userinfo_minor a:hover,
 #header #userinfo .sub span a:hover,
