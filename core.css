@@ -196,10 +196,13 @@ a[title="Remove"]:hover,
 #userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a:hover img[alt="Last read post"],
 .last_read:hover,
 #userhistory .colhead_dark a:hover img[alt="Last read post"],
-#nav_useredit a:hover,
-#nav_logout a:hover {
+#nav_useredit a:hover {
     background-color: var(--c-anchor-hvr);}
+#nav_logout a:hover {
+    background-color: var(--c-off);}
 
+#wrapper .prev:hover,
+#wrapper .next:hover,
 .torrent_table .show_torrents_link:hover:after,
 #userinfo_stats:hover #stats_ratio .stat:after,
 #userinfo_username .sub[style="visibility: visible;"] ~#nav_userinfo a:after {
