@@ -29,6 +29,7 @@
     --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
     --p-menu:                           var(--c-tor-row-hvr) linear-gradient(155deg,var(--c-tor-row-hvr),var(--c-input));
     --p-userinfo:                       var(--c-input) linear-gradient(155deg,var(--c-input),var(--c-box));
+    --p-grouplinks:                     var(--c-tgroup) linear-gradient(155deg,var(--c-tgroup),var(--c-box));
     --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b00) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
     --p-unread-brdr:                    1px solid var(--c-b3);
     --p-sticky-brdr:                    1px solid var(--c-input-brdr);
@@ -1745,7 +1746,7 @@ table.gazelles_art_display .hovereffect:hover:before {
     margin: 0;
     padding: 0;}
 .sidebar #freeleech_time_left {
-    height: 36px;
+    height: 38px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: var(--p-main-brdr);
@@ -1775,13 +1776,13 @@ td.center.cats_col +td,
 #gazelleview table.gazelleinfo {
     position: relative;}
 .sidebar #freeleech_time_left #progress_bar .main_bar {
-    background: var(--p-lsfl-pulse);
+    background: var(--c-b3) var(--p-lsfl-pulse);
     display: block;
     animation: lsfl-pulse-a linear 2s infinite;
     transform-origin: left;
-    height: 36px;
+    height: 100%;
     background-repeat: repeat-x;
-    background-size: 900px 36px;}
+    background-size: 900px 100%;}
 .sidebar #freeleech_time_left .points {
     display: block;
     position: absolute;
@@ -1952,6 +1953,9 @@ a .error_message:hover:active {
     padding: 3px;
     background-color: var(--c-edition);
 	position: relative;}
+.sidebar #freeleech_time_left #progress_bar {
+    padding: 0;
+    height: 100%;}
 #clans .large_progress_bar .main_bar.clan_1_bar {
     animation: expandWidth 0.7s;
     animation-fill-mode: forwards;
@@ -3251,7 +3255,8 @@ h2 .username_badges a {
     line-height: 56px;
     display: flex;}
 
-#grouplinks {
+#wrapper #grouplinks {
+    background: var(--p-grouplinks);
     min-height: 36px;}
 #grouplinks a div {
     opacity: .6;
