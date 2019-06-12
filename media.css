@@ -436,6 +436,31 @@ body {
     mask-size: 20px 20px;
     -webkit-mask-size: 20px 20px;}
     
+.global_buffs {
+    position: absolute !important;
+    top: calc(100% + 1px);
+    right: 0 !important;
+    left: unset !important;
+    width: 200px !important;
+    filter: none !important;
+    line-height: 17px;
+    display: flex;
+    flex-flow: wrap;
+    direction: rtl;}
+#header .clan_trophy {
+    position: absolute !important;
+    top: calc(100% + 1px);
+    right: unset !important;
+    left: 0 !important;
+    bottom: unset !important;
+    width: 64px !important;}
+#header .clan_trophy img {
+    margin: 0 auto;
+    display: block;
+    height: 64px !important;
+    filter: none !important;
+    padding: 10px 0;}
+    
 /* logo */
 #logo {
     height: 64px;

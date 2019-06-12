@@ -125,20 +125,24 @@ input[type="number"]::-webkit-outer-spin-button {
     background-image: url('icons/dark/number.svg');}
 
 /** thumbs **/
+.box.box_likes.box_torrents span.likes_icon.flright img,
 img[src="static/common/thumbsup.png"],
 img[title="ThumbsUp"],
 img[title="ThumbsUp "],
 #thumbsup img {
-    background-image: url('icons/dark/thumbsup_simple.svg');}
+    background-image: url('icons/dark/thumbsup.svg');}
 #thumbsup img:hover {
-    background: url('icons/dark/thumbsup_simple.svg') var(--c-anchor-hvr-bcg);}
+    background-color: var(--c-anchor-hvr-bcg);}
 img[src="static/common/thumbsdown.png"],
 img[title="ThumbsDown"],
 img[title="ThumbsDown "],
 #thumbsdown img {
-    background-image: url('icons/dark/thumbsdown_simple.svg');}
+    background-image: url('icons/dark/thumbsdown.svg');}
 #thumbsdown img:hover {
-    background: url('icons/dark/thumbsdown_simple.svg') var(--c-anchor-hvr-bcg);}
+    background-color: var(--c-anchor-hvr-bcg);}
+
+.username_badges img[title="Donor"] {
+    background-image: url('icons/donate_bar.svg');}
 
 /** invert white icons **/
 img.animate_icon {
@@ -157,31 +161,7 @@ h2#username span#tip_user img,
 #wrapper #trading_panel .gold_trade a#gold_trade_subtract img {
     background-image: url('icons/gold_minus.svg');}
 
-select {
-    background-image: url('icons/dark/show.svg');}
 /** forum post user stats **/
 #forums .forum_post .avatar >div:first-child:after {
     background-image: url('icons/dark/show-hor.svg');}
-
-/** number **/
-input[type="number"]::-webkit-inner-spin-button, 
-input[type="number"]::-webkit-outer-spin-button {
-    background-image: url('icons/dark/number.svg');}
-
-
-/** thumbs **/
-img[src="static/common/thumbsup.png"],
-img[title="ThumbsUp"],
-img[title="ThumbsUp "],
-#thumbsup img {
-    background-image: url('icons/dark/thumbsup_simple.svg');}
-#thumbsup img:hover {
-    background: url('icons/dark/thumbsup_simple.svg') var(--c-anchor-hvr-bcg);}
-img[src="static/common/thumbsdown.png"],
-img[title="ThumbsDown"],
-img[title="ThumbsDown "],
-#thumbsdown img {
-    background-image: url('icons/dark/thumbsdown_simple.svg');}
-#thumbsdown img:hover {
-    background: url('icons/dark/thumbsdown_simple.svg') var(--c-anchor-hvr-bcg);}
 

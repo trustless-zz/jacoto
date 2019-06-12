@@ -150,10 +150,6 @@ a[title="Remove"],
 .head a[onclick^="Quote"],
 #userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a img[alt="Last read post"],
 .last_read,
-.read ~td .last_read,
-.read_sticky ~td .last_read,
-.read_locked ~td .last_read,
-.read_locked_sticky ~td .last_read,
 #userhistory .colhead_dark a img[alt="Last read post"],
 #nav_useredit a,
 #nav_logout a {
@@ -194,7 +190,7 @@ a[title="Remove"]:hover,
 .colhead_dark a[onclick^="Quote"]:hover,
 .head a[onclick^="Quote"]:hover,
 #userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a:hover img[alt="Last read post"],
-.last_read:hover,
+#wrapper .last_read:hover,
 #userhistory .colhead_dark a:hover img[alt="Last read post"],
 #nav_useredit a:hover {
     background-color: var(--c-anchor-hvr);}
@@ -406,6 +402,8 @@ a[title="Remove"] {
     -webkit-mask-image: url('icons/dark/nav/logout.svg');
     mask-image: url('icons/dark/nav/logout.svg');}
 
+.box.box_info span[style="float:right;"],
+.box.box_likes.box_torrents span.likes_icon.flright,
 #forums .forum_index tr:not(.colhead) td:first-child,
 #forums .forum_mythreads tr:not(.colhead) td:first-child,
 #forums .forum_editsubs tr:not(.colhead) td:first-child,
@@ -773,11 +771,18 @@ table {
 td, th {
     padding: 5px;
     text-align: left;}
+.box.box_likes.box_torrents span.likes_icon.flright img,
 #thumbsup img,
 #thumbsdown img,
 .sidebar .box_user_rating img,
 td, th, tr {
     border: 0;}
+
+.box.box_info .head.tooltip span[style="float:right;"] img,
+.box.box_likes.box_torrents span.likes_icon.flright img {
+    width: 20px;
+    height: 20px;
+    padding-left: 20px;}
 
 td.label {
     vertical-align: top;
@@ -1009,7 +1014,9 @@ h2#username span#tip_user img,
 #wrapper #trading_panel .gold_trade .gold_trade_buttons img,
 #wrapper .trade_value .trade_value_gold img,
 #nav_userinfo a:after,
-#stats_ratio .stat:after {
+#stats_ratio .stat:after,
+.box.box_likes.box_torrents span.likes_icon.flright img,
+img[alt="Donor"] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -1252,7 +1259,9 @@ span.user_title a:hover {
 #newthreadpreview .forum_post .colhead_dark #barpreview a,
 #userhistory .colhead_dark span[style="float:left;"] >a[href*="#post"]:nth-of-type(2),
 .torrent_table .show_torrents_link,
-.colhead_dark span.username_badges a {
+.colhead_dark span.username_badges a,
+.last_read a,
+.username_badges a {
     background-color: transparent;}
 
 #torrents .torrent_details .torrent_table div[id^="history_"] table.border tr:last-child:not(.colhead):hover,
@@ -1829,18 +1838,6 @@ table#likesrow img:hover,
     -webkit-box-shadow: none;
     box-shadow: none;}
 
-.global_buffs {
-    position: fixed !important;
-    top: unset !important;
-    left: unset !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    width: 200px !important;
-    border-top: 2px solid var(--c-main-brdr);
-    filter: none !important;
-    line-height: 17px;
-    display: flex;
-    flex-flow: wrap;}
 i.fa.fa-fl-pots {
     color: #6441a5 !important;
 	font-family: OpenSans, Helvetica, Arial, sans-serif;}
@@ -1870,19 +1867,6 @@ i.fa.fa-fl-pots {
 #header .global_buffs a:hover span,
 #header .global_buffs a:hover i {
     color: var(--c-anchor-hvr) !important;}
-
-#header .clan_trophy {
-    position: absolute !important;
-    top: 781px;
-    right: unset !important;
-    left: 0 !important;
-    bottom: unset !important;
-    width: 200px !important;
-    border-top: 2px solid var(--c-main-brdr);}
-#header .clan_trophy img {
-    height: 60px;
-    filter: none !important;
-    padding: 10px 0;}
 
 .sidebar .box.box_badges >.pad {
     text-align: center;
@@ -2211,6 +2195,7 @@ table.adventure_table .colhead td {
     height: 20px;
     width: 20px;
     cursor: default;}
+#grouplinks td,
 #artist #torrent_table .group_torrent >td:not(.edition_info),
 #collections #torrent_table .group_torrent >td:not(.edition_info),
 #bookmarks #torrent_table tr.group_torrent td:not(.edition_info) {
@@ -2412,6 +2397,8 @@ img[title="Gold"] {
     left: 0;}
 .torrent_table .group.sticky {
     background-color: var(--c-edition);}
+#wrapper .torrent_table .group.sticky .empty_group {
+    background-color: unset;}
 .torrent_table .group:hover .empty_group,
 .torrent_table .group:hover {
     background-color: var(--c-tor-row-hvr) !important;}
@@ -2868,6 +2855,7 @@ body:not(#upload) #artist_tr + tr td.label,
     z-index: 2;}
 .torrent_details .torrent_table >tbody >.colhead_dark >td:first-child strong {
     left: 10px;}
+.clan_stat_totals h2:first-child +.large_progress_bar,
 .torrent_details .torrent_table >tbody >.colhead_dark img {
     margin-top: 10px;}
 
@@ -3019,7 +3007,7 @@ strong.mature +strong +br,
     margin-top: 5px;
     justify-content: center;}
 .similar_div .head .flright {
-    margin: -3px 0 0 0;}
+    margin: -4px 0 0 0;}
 a[href^="javascript:IndexVote("] strong:before,
 a[href^="javascript:Vote("] strong:before,
 #requests table.border td.nobr:nth-child(2) strong:before,
@@ -3577,8 +3565,6 @@ img[src="static/common/thumbsup.png"],
 #requests_donate #gold_donation {
     width: calc(100% - 95px);
     margin-bottom: 8px;}
-#clans #clan_stats >div .large_progress_bar {
-    margin-bottom: 8px;}
 #collections table#new_collage input#art {
     width: calc(100% - 95px);}
 #collections table#new_collage input#art,
@@ -3809,7 +3795,6 @@ form[name="filter"] h3,
 #torrents .thin >h2:first-child +.center,
 #user .thin >h2:first-child +.box.pad:last-child,
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2),
-.clan_stat_totals h2:first-child +.large_progress_bar,
 #artist .thin h2:first-child +table.border,
 table.gazellepic,
 #gazelles .thin >h2:first-child +.box.pad,
@@ -4114,6 +4099,7 @@ h2 marquee {
     overflow-x: hidden;}
 #forums .forum_signature td > div:hover {
     opacity: 1;}
+#wrapper .clan_stat_totals table.border tr:last-child,
 #userhistory .forum_post.vertical_margin >tbody >tr:last-child,
 .forum_post tr.likes {
     border-top: var(--p-table-brdr);
@@ -4222,6 +4208,7 @@ tr.likes td[id^="likers_"]:hover {
     background-color: var(--c-box);}
 #wrapper #content table.bbcode_table td {
     border: var(--p-table-brdr);}
+#wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td,
 #running_freeleech td.center.cats_col,
 #inbox .colhead >td:first-child,
 .bbcode_table_div,
@@ -5556,7 +5543,7 @@ td >img[title="Gold"] {
     content: '';
     display: block;
     width: 100%;
-    height: 662px;}
+    height: 594px;}
 
 .clan_stat_totals {
     position: relative;}
@@ -5576,54 +5563,54 @@ td >img[title="Gold"] {
 
 .clan_stat_totals h2:first-child +.large_progress_bar +.center {
     position: absolute;
-    top: 86px;
+    top: 81px;
     left: 10px;}
 .clan_stat_totals h3:nth-of-type(1) {
     position: absolute;
-    top: 91px;
+    top: 86px;
     left: 10px10px;}
 .clan_stat_totals table.border:nth-of-type(1) {
     position: absolute;
-    top: 123px;
+    top: 118px;
     left: 10px;}
 
 .clan_stat_totals table.border:nth-of-type(1) +.center {
     position: absolute;
-    top: 86px;
+    top: 81px;
     right: 10px;}
 .clan_stat_totals h3:nth-of-type(2) {
     position: absolute;
-    top: 91px;
+    top: 86px;
     right: 10px;}
 .clan_stat_totals table.border:nth-of-type(2) {
     position: absolute;
-    top: 123px;
+    top: 118px;
     right: 10px;}
 
 .clan_stat_totals table.border:nth-of-type(2) +.center {
     position: absolute;
-    top: 423px;
+    top: 378px;
     left: 10px;}
 .clan_stat_totals h3:nth-of-type(3) {
     position: absolute;
-    top: 428px;
+    top: 383px;
     left: 10px;}
 .clan_stat_totals table.border:nth-of-type(3) {
     position: absolute;
-    top: 460px;
+    top: 415px;
     left: 10px;}
 
 .clan_stat_totals table.border:nth-of-type(3) +.center {
     position: absolute;
-    top: 423px;
+    top: 378px;
     right: 10px;}
 .clan_stat_totals h3:nth-of-type(4) {
     position: absolute;
-    top: 428px;
+    top: 383px;
     right: 10px;}
 .clan_stat_totals table.border:nth-of-type(4) {
     position: absolute;
-    top: 460px;
+    top: 415px;
     right: 10px;}
 /** /going with position:absolute because display:flex needs containers **/
 
