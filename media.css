@@ -597,13 +597,13 @@ body {
     .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
         width: 783px;}
     
-    #nav_userinfo a.username {
+    #header #nav_userinfo a.username {
         transition-delay: .5s;
         color: transparent;}
-    #userinfo_username:hover #nav_userinfo a.username {
+    #header #userinfo_username:hover #nav_userinfo a.username {
         transition-delay: 0s;
         color: var(--c-anchor);}
-    #header #nav_userinfo:hover a.username {
+    #wrapper #header #nav_userinfo:hover a.username {
         color: var(--c-anchor-hvr);}
     
     #nav_userinfo a:before {
@@ -623,6 +623,7 @@ body {
         opacity: 0;}
     
     #userinfo_username {
+        border-left: var(--p-table-brdr);
         background-color: var(--c-input);
         -webkit-transition: all .1s linear;
         -o-transition: all .1s linear;
