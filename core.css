@@ -1911,7 +1911,7 @@ i.fa.fa-fl-pots {
     clip-path: polygon(-10px 0, calc(100% + 10px) 0, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));} /* shadow cut off */
 .save_message {
     display: block;
-    background: var(--p-searchbar-grdnt);}
+    background: var(--p-head-grdnt);}
 .error_message {
     color: var(--c-low);
     background-color: var(--c-em-bcg);}

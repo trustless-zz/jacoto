@@ -297,9 +297,9 @@ body {
 
 #nav_logout {
     order: -3;}
-#nav_useredit {
-    order: -2;}
 #nav_donate {
+    order: -2;}
+#nav_useredit {
     order: -1;}
 #stats_ratio {
     order: 1;}
@@ -607,6 +607,8 @@ body {
         color: var(--c-anchor-hvr);}
     
     #nav_userinfo a:before {
+        transition-delay: .5s;
+        opacity: 1;
         mask-image: url('icons/dark/nav/user.svg');
         -webkit-mask-image: url('icons/dark/nav/user.svg');
         background-color: var(--c-txt);
@@ -616,6 +618,9 @@ body {
         position: absolute;
         width: 20px;
         height: 20px;}
+    #userinfo_username:hover #nav_userinfo a:before {
+        transition-delay: 0s;
+        opacity: 0;}
     
     #userinfo_username {
         background-color: var(--c-input);
