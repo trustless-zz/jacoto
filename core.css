@@ -152,7 +152,8 @@ a[title="Remove"],
 .last_read,
 #userhistory .colhead_dark a img[alt="Last read post"],
 #nav_useredit a,
-#nav_logout a {
+#nav_logout a,
+#nav_donate a {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -196,6 +197,8 @@ a[title="Remove"]:hover,
     background-color: var(--c-anchor-hvr);}
 #nav_logout a:hover {
     background-color: var(--c-off);}
+#nav_donate a:hover {
+    background-color: var(--c-donate);}
 
 #wrapper .prev:hover,
 #wrapper .next:hover,
@@ -401,6 +404,9 @@ a[title="Remove"] {
 #nav_logout a {
     -webkit-mask-image: url('icons/dark/nav/logout.svg');
     mask-image: url('icons/dark/nav/logout.svg');}
+#nav_donate a {
+    -webkit-mask-image: url('icons/dark/nav/donate.svg');
+    mask-image: url('icons/dark/nav/donate.svg');}
 
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
@@ -656,7 +662,7 @@ body {
     font-family: OpenSans, Helvetica, Arial, sans-serif;
     margin: 0;
     min-height: 100%;
-    min-width: 950px;
+    min-width: 800px;
     overflow-wrap: break-word;
     position: relative;}
 body,
@@ -1393,7 +1399,8 @@ a[title="Remove"],
 .forum_post .colhead_dark a[onclick],
 #requests table.border a[href^="upload.php"],
 #requests_donate img,
-img[title="Gold"] {
+img[title="Gold"],
+.username_badges img[alt="Donor"] {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
@@ -1845,13 +1852,14 @@ i.fa.fa-fl-pots {
     letter-spacing: var(--p-dot3);
     font-size: 12px;
     text-shadow: none !important;}
-.global_buffs .buff_text .buff_multiplier {
-    font-size: 17px !important;}
+#wrapper .global_buffs .buff_text .buff_multiplier {
+    font-size: 17px;}
 .global_buffs>div {
     width: calc(200px / 3);
     padding: 0 !important;
     height: 100%;}
-.global_buffs .fa {
+#wrapper .global_buffs .fa {
+    font-size: 40px;
     filter: none !important;}
 #upload #weblinks td,
 #upload #reviews_table td,
@@ -2355,7 +2363,8 @@ img[title="Seeders"],
 img[title="Snatches"],
 .torrent_table #user_rating_icon img,
 #requests_donate img,
-img[title="Gold"] {
+img[title="Gold"],
+.username_badges img[alt="Donor"] {
     padding-left: 18px;}
 .sidebar .userratingdiv img {
     /* border-radius: 50%; */
@@ -4267,6 +4276,7 @@ span.size10 {
     filter: var(--p-post-img);
     margin: 0 5px;
     padding: 5px;}
+blockquote#description img,
 #wiki .wiki_article a img,
 #blog .pad img,
 #profilediv img,
@@ -4431,6 +4441,7 @@ input[type="search"],
     filter: none;
     vertical-align: text-bottom;
     margin-top: -1px; /* bring line-height back to 19px */}
+.torrent_details .pad.hidden img[title="Gold"],
 #clans td.label img {
     vertical-align: text-bottom;}
 

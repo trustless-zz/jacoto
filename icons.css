@@ -141,7 +141,7 @@ img[title="ThumbsDown "],
 #thumbsdown img:hover {
     background-color: var(--c-anchor-hvr-bcg);}
 
-.username_badges img[title="Donor"] {
+img[alt="Donor"] {
     background-image: url('icons/donate_bar.svg');}
 
 /** invert white icons **/

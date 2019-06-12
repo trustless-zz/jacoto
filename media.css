@@ -296,8 +296,10 @@ body {
     
 
 #nav_logout {
-    order: -2;}
+    order: -3;}
 #nav_useredit {
+    order: -2;}
+#nav_donate {
     order: -1;}
 #stats_ratio {
     order: 1;}
@@ -320,6 +322,7 @@ body {
     background-color: var(--c-box);}
 #nav_useredit:hover,
 #nav_logout:hover,
+#nav_donate:hover,
 #header #menu li a:hover,
 #header #userinfo_minor a:hover,
 #header #userinfo .sub span a:hover,
@@ -427,6 +430,7 @@ body {
 #stats_ratio span.stat:before {
     content: ':';}
 
+#header #nav_donate a,
 #header #nav_logout a,
 #header #nav_useredit a {
     display: block;
@@ -441,23 +445,23 @@ body {
     top: calc(100% + 1px);
     right: 0 !important;
     left: unset !important;
-    width: 200px !important;
+    width: 200px;
     filter: none !important;
     line-height: 17px;
     display: flex;
     flex-flow: wrap;
     direction: rtl;}
-#header .clan_trophy {
+#wrapper #header .clan_trophy {
     position: absolute !important;
     top: calc(100% + 1px);
     right: unset !important;
     left: 0 !important;
     bottom: unset !important;
-    width: 64px !important;}
-#header .clan_trophy img {
+    width: 64px;}
+#wrapper #header .clan_trophy img {
     margin: 0 auto;
     display: block;
-    height: 64px !important;
+    height: 64px;
     filter: none !important;
     padding: 10px 0;}
     
@@ -541,4 +545,151 @@ body {
 @media (min-width: 1300px) {
 #forums .forum_latest >.search.box.pad table#forumlist {
     white-space: nowrap;}
+}
+
+
+
+
+
+
+
+
+
+
+/** scale **/
+@media (max-width: 1421px) {
+    #content,
+    #footer {
+        max-width: 1250px;}
+    #header #searchbars ul {
+        max-width: 1264px;}
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
+        width: 933px;}
+}
+@media (max-width: 1371px) {
+    #content,
+    #footer {
+        max-width: 1200px;}
+    #header #searchbars ul {
+        max-width: 1214px;}
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
+        width: 883px;}
+}
+@media (max-width: 1321px) {
+    #content,
+    #footer {
+        max-width: 1150px;}
+    #header #searchbars ul {
+        max-width: 1164px;}
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
+        width: 833px;}
+}
+@media (max-width: 1271px) {
+    #content,
+    #footer {
+        max-width: 1100px;}
+    #header #searchbars ul {
+        max-width: 1114px;}
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
+        width: 783px;}
+}
+@media (max-width: 1221px) {
+    #content,
+    #footer {
+        max-width: 1050px;}
+    #header #searchbars ul {
+        max-width: 1064px;}
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
+        width: 733px;}
+}
+@media (max-width: 1171px) {
+    #content,
+    #footer {
+        max-width: 1000px;}
+    #header #searchbars ul {
+        max-width: 1014px;}
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
+        width: 683px;}
+    .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
+    #artist #torrent_table .group_torrent td[colspan="2"] >a,
+    #collections #torrent_table .group_torrent td[colspan="3"] >a,
+    #bookmarks #torrent_table td[colspan="3"] >a,
+    #torrents .group_torrent td:first-child >a {
+        word-break: break-all;}
+}
+@media (max-width: 1121px) {
+    #content,
+    #footer {
+        max-width: 950px;}
+    #header #searchbars ul {
+        max-width: 964px;}
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
+        width: 633px;}
+}
+@media (max-width: 1071px) {
+    #content,
+    #footer {
+        max-width: 900px;}
+    #header #searchbars ul {
+        max-width: 914px;}
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
+        width: 583px;}
+}
+@media (max-width: 1021px) {
+    #content,
+    #footer {
+        max-width: 850px;}
+    #header #searchbars ul {
+        max-width: 864px;}
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
+        width: 533px;}
+}
+@media (max-width: 971px) {
+    #content,
+    #footer {
+        max-width: 800px;}
+    #header #searchbars ul {
+        max-width: 814px;}
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
+    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
+        width: 483px;}
+}
+
+@media (max-width: 1750px) {
+    #wrapper .global_buffs {
+        width: calc(200px - 200px / 3);}
+}
+@media (max-width: 1600px) {
+    #wrapper .global_buffs .buff_text .buff_multiplier {
+        font-size: 15px;}
+    #wrapper .global_buffs>div {
+        width: calc(170px / 3);}
+    #wrapper .global_buffs {
+        width: calc(170px - 170px / 3);}
+}
+@media (max-width: 1550px) {
+    #wrapper .global_buffs {
+        width: calc(170px / 3);}
+}
+@media (max-width: 1450px) {
+    #wrapper #header .clan_trophy img {
+        height: 48px;
+        padding: 5px 0;}
+    #wrapper .global_buffs>div,
+    #wrapper .global_buffs,
+    #wrapper #header .clan_trophy {
+        width: 48px;}
+    #wrapper .global_buffs .buff_text {
+        font-size: 11px;}
+    #wrapper .global_buffs .buff_text .buff_multiplier {
+        font-size: 12px;}
 }
