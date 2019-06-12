@@ -189,15 +189,15 @@ body {
     height: 30px;
     display: flex;
     flex-flow: row;
-    justify-content: flex-end;
+    justify-content: center;
     background: var(--p-userinfo);}
 #header #userinfo_minor {
-    z-index: 0;
+    margin: 0 auto;
+    z-index: 99;
     display: flex;
     flex-flow: row;
-    width: 100%;
-    position: absolute;
-    justify-content: center;}
+    width: fit-content;
+    position: absolute;}
 #header #userinfo_username {
     display: flex;
     position: absolute;
@@ -596,6 +596,39 @@ body {
     .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
     .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
         width: 783px;}
+    
+    #nav_userinfo a.username {
+        transition-delay: .5s;
+        color: transparent;}
+    #userinfo_username:hover #nav_userinfo a.username {
+        transition-delay: 0s;
+        color: var(--c-anchor);}
+    #header #nav_userinfo:hover a.username {
+        color: var(--c-anchor-hvr);}
+    
+    #nav_userinfo a:before {
+        mask-image: url('icons/dark/nav/user.svg');
+        -webkit-mask-image: url('icons/dark/nav/user.svg');
+        background-color: var(--c-txt);
+        content: '';
+        right: 26px;
+        top: 7px;
+        position: absolute;
+        width: 20px;
+        height: 20px;}
+    
+    #userinfo_username {
+        background-color: var(--c-input);
+        -webkit-transition: all .1s linear;
+        -o-transition: all .1s linear;
+        transition: all .1s linear;
+        transition-delay: .5s;
+        -webkit-clip-path: polygon(calc(100% - 50px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, calc(100% - 50px) 300px);
+        clip-path: polygon(calc(100% - 50px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, calc(100% - 50px) 300px);}
+    #userinfo_username:hover {
+        transition-delay: 0s;
+        -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, -10px 300px);
+        clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, -10px 300px);}
 }
 @media (max-width: 1221px) {
     #content,

@@ -67,7 +67,8 @@ td.read_locked_sticky:before,
 .xdsoft_datetimepicker .xdsoft_next,
 .xdsoft_datetimepicker .xdsoft_prev,
 #wrapper .prev,
-#wrapper .next {
+#wrapper .next,
+#nav_userinfo a:before {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -1328,7 +1329,8 @@ tr.group_torrent >td a:before,
 #nav_userinfo a:after,
 #stats_ratio .stat:after,
 .torrent_table .show_torrents_link:after,
-#userinfo_stats a:before {
+#userinfo_stats a:before,
+#nav_userinfo a:before {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
