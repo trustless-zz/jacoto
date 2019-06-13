@@ -1258,7 +1258,7 @@ span.user_title a:hover {
 #torrents #requests.request_table .colhead a,
 #forums #forum_search_cat_list td.forum_cat a,
 #collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
-#artist #torrent_table .group_torrent td[colspan="2"] >span:first-child a,
+/* #artist #torrent_table .group_torrent td[colspan="2"] >span:first-child a,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child a,
 #uploaded_table             td.center.cats_col +td span:first-child a,
 #seeding_table              td.center.cats_col +td span:first-child a,
@@ -1268,7 +1268,7 @@ span.user_title a:hover {
 #seeding_not_snatched_table td.center.cats_col +td span:first-child a,
 #downloaded_table           td.center.cats_col +td span:first-child a,
 #extlink_table              td.center.cats_col +td span:first-child a,
-.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a,
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a, */
 .search.box.pad #cat_list a,
 /* tr.pad.hidden .linkbox a, */
 #top10 td.center.cats_col +td >span a,
@@ -4526,7 +4526,7 @@ input[type="search"],
 #user #wrapper .invitetree.pad:before {
     content: 'Invite Tree';}
 #user #wrapper .thin >.header:first-child +.box.pad:before {
-    content: 'Note';}
+    content: 'Info';}
 #user #wrapper .thin >.header:first-child +.box.pad +.box.pad:before {
     content: 'Send invite';}
 #inbox .thin[xmlns] >#messageform:before {
@@ -5458,7 +5458,7 @@ table#likesrow a {
     display: block;}
 
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2):before {
-    content: 'Note';
+    content: 'Info';
     text-align: left;
     display: block;
     margin: -10px -10px 10px -10px;
