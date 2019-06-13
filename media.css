@@ -197,7 +197,7 @@ body {
     display: flex;
     flex-flow: row;
     width: fit-content;
-    position: absolute;}
+    position: relative;}
 #header #userinfo_username {
     display: flex;
     position: absolute;

@@ -936,6 +936,8 @@ tr.unreadpm td:first-child {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;}
+.autocomplete_list li:nth-child(odd) {
+    background-color: var(--c-tgroup);}
 .autocomplete_list li:hover {
     background-color: var(--c-anchor-hvr-bcg);}
 
