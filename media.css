@@ -338,6 +338,11 @@ body {
 #header .highlight {
     color: var(--c-em-hvr);
     box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr)}
+#header #searchbars .autocomplete_list .highlight {
+    color: var(--c-anchor);
+    -webkit-box-shadow: unset;
+    box-shadow: unset;}
+#header #searchbars .autocomplete_list .highlight:hover,
 #header .highlight:hover {
     color: var(--c-anchor-hvr);}
     

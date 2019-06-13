@@ -925,15 +925,19 @@ tr.unreadpm td:first-child {
     top: 40px;
     z-index: -1;
     padding: 0 14px 0 0 !important;}
+#header #searchbars .autocomplete_list {
+    width: 300px;
+    z-index: 999;}
 .autocomplete_list li {
     cursor: pointer;
     color: var(--c-anchor);
     line-height: 24px;}
+.autocomplete_list li {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;}
 .autocomplete_list li:hover {
-    background-color: var(--c-b3);
-    color: var(--c-txt);}
-.autocomplete_list li:hover:active {
-    background-color: var(--c-b1);}
+    background-color: var(--c-anchor-hvr-bcg);}
 
 #index #freeleech .group_torrent >span:not(:first-child) {
     padding: 0 2px;}
@@ -1728,9 +1732,12 @@ table.gazelles_art_display .hovereffect:hover:before {
 #slides .slides_control .center {
     width: 280px;
     margin: 0 auto;}
+#dailygazelle #gazelletitle {
+    display: block;
+    padding: 0 10px;}
 #dailygazelle #gazelletitle a {
     text-align: center;
-    width: max-content;
+    width: fit-content;
     display: block;
     margin: 8px auto 10px auto;}
 
@@ -4473,7 +4480,8 @@ input[type="search"],
     line-height: var(--p-lh);
     vertical-align: middle;}
 #inbox #searchbox label,
-#inbox #searchbox input:not([type="text"]) {
+#inbox #searchbox input:not([type="text"]),
+#upload #remaster_true #remaster_year {
     margin-top: 5px;}
 #inbox .box.vertical_space +h2 +form>.box.pad,
 #inbox #messageform +h2 +form >.box.pad,
