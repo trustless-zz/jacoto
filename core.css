@@ -681,8 +681,7 @@ html {
 #content,
 #footer {
     max-width: 1300px;
-    width: 100%;}
-
+    width: calc(100% - 106px);}
 ul {
     margin: 0;
     padding: 0 0 0 30px;}

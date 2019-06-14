@@ -154,7 +154,7 @@ body {
     order: -99;}
 #header #searchbars ul {
     max-width: 1314px; /* content, footer */
-    width: 100%;
+    width: calc(100% - 92px);
     margin: 0 auto;
     padding: 2px 0;
     display: flex;}
@@ -477,7 +477,7 @@ body {
     top: 40px;
     left: 0;
     position: absolute;
-    z-index: 99;}
+    z-index: 999;}
 #logo a {
     background-color: transparent;
     display: block;
@@ -563,45 +563,11 @@ body {
 
 /** scale **/
 @media (max-width: 1421px) {
-    #content,
-    #footer {
-        max-width: 1250px;}
-    #header #searchbars ul {
-        max-width: 1264px;}
     .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
     .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
-        width: 933px;}
-}
-@media (max-width: 1371px) {
-    #content,
-    #footer {
-        max-width: 1200px;}
-    #header #searchbars ul {
-        max-width: 1214px;}
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
-        width: 883px;}
-}
-@media (max-width: 1321px) {
-    #content,
-    #footer {
-        max-width: 1150px;}
-    #header #searchbars ul {
-        max-width: 1164px;}
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
-        width: 833px;}
+        width: 100%;}
 }
 @media (max-width: 1271px) {
-    #content,
-    #footer {
-        max-width: 1100px;}
-    #header #searchbars ul {
-        max-width: 1114px;}
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
-        width: 783px;}
-    
     #header #nav_userinfo a.username {
         transition-delay: .5s;
         color: transparent;}
@@ -641,25 +607,7 @@ body {
         -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, -10px 300px);
         clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, -10px 300px);}
 }
-@media (max-width: 1221px) {
-    #content,
-    #footer {
-        max-width: 1050px;}
-    #header #searchbars ul {
-        max-width: 1064px;}
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
-        width: 733px;}
-}
 @media (max-width: 1171px) {
-    #content,
-    #footer {
-        max-width: 1000px;}
-    #header #searchbars ul {
-        max-width: 1014px;}
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
-        width: 683px;}
     .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
     #artist #torrent_table .group_torrent td[colspan="2"] >a,
     #collections #torrent_table .group_torrent td[colspan="3"] >a,
@@ -667,47 +615,6 @@ body {
     #torrents .group_torrent td:first-child >a {
         word-break: break-all;}
 }
-@media (max-width: 1121px) {
-    #content,
-    #footer {
-        max-width: 950px;}
-    #header #searchbars ul {
-        max-width: 964px;}
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
-        width: 633px;}
-}
-@media (max-width: 1071px) {
-    #content,
-    #footer {
-        max-width: 900px;}
-    #header #searchbars ul {
-        max-width: 914px;}
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
-        width: 583px;}
-}
-@media (max-width: 1021px) {
-    #content,
-    #footer {
-        max-width: 850px;}
-    #header #searchbars ul {
-        max-width: 864px;}
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
-        width: 533px;}
-}
-@media (max-width: 971px) {
-    #content,
-    #footer {
-        max-width: 800px;}
-    #header #searchbars ul {
-        max-width: 814px;}
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
-    .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
-        width: 483px;}
-}
-
 @media (max-width: 1750px) {
     #wrapper .global_buffs {
         width: calc(200px - 200px / 3);}
