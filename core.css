@@ -2372,7 +2372,13 @@ textarea,
 #wiki .center.thin >.box.pad,
 .inventory .trash_icon,
 .gazelles_art_display,
-#adventureclub .thin >table {
+#adventureclub .thin >table,
+
+#items_navigation,
+#items,
+#slots_panel,
+#equip_panel,
+#trading_panel .trade_table {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -2728,6 +2734,8 @@ a[href^="javascript:Vote("] strong:hover:active,
 
 .flright {
     float: right;}
+.flleft {
+	float: left;}
 .filter_torrents.advanced .flright {
     position: relative;
     margin-right: 5px;
@@ -6297,10 +6305,13 @@ table#downloaded_table td.center.cats_col +td >span:before {
 *****************************************************/
 
 /*** Left Navigation Menu ***/
-#items_navigation {
-	width: 220px;
+#wrapper #items_navigation {
+	width: 222px;
 	float: left;
-	text-align: left;}
+	text-align: left;
+    margin: 0 15px 15px 0;}
+#shop .items_shop #items_navigation {
+    margin: 0 0 15px 0;}
 
 
 #items_navigation ul {
@@ -6531,7 +6542,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 /*** Shop Items ***/
 #items_list {
 	margin: 0 0 0 5px;
-	width: calc(100% - 247px);
+	width: calc(100% - 227px);
 	padding: 0;
 	float: right;
 	display: block;
@@ -6605,7 +6616,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	align-items: center;
 	margin: 0;}
 #shop .featured .item_image_div {
-    width: 185px;}
+    width: 184px;}
 
 #shop .item_center.item_image {
 	max-width: 150px;
@@ -6618,34 +6629,55 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	height: 225px;
 	padding: 10px 0;}
 
+#shop .featured #clickable,
 #shop #clickable {
 	width: calc(100% - 34px);
 	margin: 50px auto 0;}
 
+#shop li.item_type_0.featured #clickable:before,
 #shop li.item_type_0 #clickable {
     background-color: var(--c-type-0);
     outline: 3px solid var(--c-type-0);
     outline-offset: -3px;}
+#shop li.item_type_1.featured #clickable:before,
 #shop li.item_type_1 #clickable {
     background-color: var(--c-type-1);
     outline: 3px solid var(--c-type-1);
     outline-offset: -3px;}
+#shop li.item_type_2.featured #clickable:before,
 #shop li.item_type_2 #clickable {
     background-color: var(--c-type-2);
     outline: 3px solid var(--c-type-2);
     outline-offset: -3px;}
+#shop li.item_type_3.featured #clickable:before,
 #shop li.item_type_3 #clickable {
     background-color: var(--c-type-3);
     outline: 3px solid var(--c-type-3);
     outline-offset: -3px;}
+#shop li.item_type_4.featured #clickable:before,
 #shop li.item_type_4 #clickable {
     background-color: var(--c-type-4);
     outline: 3px solid var(--c-type-4);
     outline-offset: -3px;}
+#shop li.item_type_5.featured #clickable:before,
 #shop li.item_type_5 #clickable {
     background-color: var(--c-type-5);
     outline: 3px solid var(--c-type-5);
     outline-offset: -3px;}
+
+#shop li.item_li.featured #clickable {
+    background-color: unset;
+    outline: unset;}
+
+#shop li.item_type_0.featured #clickable >div {
+    position: relative;}
+#shop li.item_li.featured #clickable:before {
+    content: '';
+    width: 184px;
+    position: absolute;
+    left: 17px;
+    top: 50px;
+    height: 245px;}
 
 
 #shop .submit_section {
@@ -6778,14 +6810,9 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	display: block;
 	width: calc(50% - 10px);}
 
-
 #shop .featured  {
 	visibility: visible;
 	height: auto;}
-
-#shop li.featured #clickable {
-    width: calc(100% - 34px);
-    margin: 50px auto 0;}
 
 .inventory #wrapper #content .item_li.featured h3.center,
 #shop .featured h3.center {
@@ -6798,8 +6825,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #shop .featured #clickable:hover .item_description {
 	opacity: 1;
 	visibility: visible;
-	margin-left: 205px;
-    margin-right: 22px;
+	margin-left: 210px;
+    margin-right: 18px;
 	text-align: left;
 	margin-top: -240px;
 	top: 0px;
@@ -6878,7 +6905,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     background-color: var(--c-edition);
     padding: 8px 0;
     position: absolute;
-    bottom:-33px;
+    top: 38px;
     left: 0;
     width: 100%;
     text-align: center;}
@@ -7087,7 +7114,7 @@ body#user.inventory {}
 /***Inventory Items***/
 
 .inventory #items_list {
-	width: calc(100% - 247px);
+	width: calc(100% - 227px);
 	padding: 0;
 	float: right;
 	display: flex;
@@ -7808,12 +7835,6 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 /*****************************************
 *************ACHIEVEMENTS*****************
 *****************************************/
-.flright {
-	float: right;}
-
-.flleft {
-	float: left;}
-
 .levelcont img {
 	padding-top: 4px;}
 
@@ -8358,19 +8379,21 @@ table.adventure_table h3 {
 #backpack #items,
 #equipment #items,
 #crafting_panel #items {
-	width: 397px;
+    width: 523px;
 	float: left;
-	margin: 0 15px 15px 15px;
-	height: 420px;
+	margin: 0 15px 15px 0;
+	height: 422px;
 	text-align: center;
 	overflow: hidden;}
+#backpack #items {
+    width: 397px;}
 
 /* Size of items selector */
 
 /* The combining panel */
 #crafting_panel #slots_panel {
 	height: 426px;
-	width: 550px;
+	width: 525px;
 	margin-bottom: 15px;}
 #equipment #equip_panel:before,
 #crafting_panel #slots_panel:before {
@@ -8421,7 +8444,7 @@ table.adventure_table h3 {
 #crafting_panel .itemslot#slot_7 {margin: 262px 0 0 136px;}
 #crafting_panel .itemslot#slot_8 {margin: 262px 0 0 262px;}
 #crafting_panel .itemslot#CraftingResult {
-    margin: 136px 0 0 424px;
+    margin: 136px 0 0 397px;
     border-color: var(--c-main-brdr);
     background-color: var(--c-input);}
 
@@ -8538,7 +8561,7 @@ table.adventure_table h3 {
 **************************************************/
 
 #wrapper #equipment #items {
-    height: 792px;}
+    height: 794px;}
 
 /*** Size of items selector ***/
 
@@ -8644,7 +8667,7 @@ table.adventure_table h3 {
 
 #equipment #equip_panel {
 	height: 794px;
-	width: 516px;}
+	width: 518px;}
 
 #equipment .itemslot {
 	width: 114px;
@@ -8722,24 +8745,24 @@ table.adventure_table h3 {
 
 #wrapper #trading_panel .trade_table,
 #wrapper #trading_panel #items {
-	width: 397px;
+	width: 399px;
 	float: left;
 	margin: 0 15px 15px 0;
-	height: 544px;
+	height: 546px;
 	text-align: center;
 	overflow: hidden;
     padding: unset;}
 #wrapper #content #trading_panel .trade_table {
-    height: 535px;
+    height: 537px;
     position: relative;
     display: flex;
     flex-flow: column;
     background-image: unset;}
+#wrapper #trading_panel .linkbox #how_to,
 #wrapper #trading_panel .trade_table#other_trade_table {
 	float: right;}
-
-#wrapper #trading_panel .linkbox #how_to {
-    float: right;}
+#wrapper #content #trading_panel #my_trade_table {
+    margin-right: 15px;}
 
 
 /*** Trade tables ***/
@@ -8820,6 +8843,7 @@ table.adventure_table h3 {
 	background-color: inherit;}
 
 #wrapper #content #trading_panel button:disabled {
+    color: var(--c-text-s);
 	filter: grayscale(85%);
     pointer-events: none;
 	cursor: default;}
@@ -9031,7 +9055,7 @@ table.adventure_table h3 {
 #wrapper #backpack #slots_panel {
     float: right;
     margin-right: 0;
-    width: 529px;}
+    width: 531px;}
 
 #backpack #slots_panel ul li {
 	padding: 4px;}
@@ -9061,7 +9085,6 @@ table.adventure_table h3 {
 #backpack .itemslot .slot_number {
     z-index: 9;
 	position: absolute;
-	z-index: 1;
 	left: -2px;
 	top: -6px;
 	padding: 2px;
@@ -9080,7 +9103,7 @@ table.adventure_table h3 {
 #backpack button {
     z-index: 9;
     float: right;
-    margin: 6px;
+    margin: 5px;
     position: relative;}
 
 input[type=button]:disabled,

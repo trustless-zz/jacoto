@@ -644,3 +644,97 @@ body {
     #wrapper .global_buffs .buff_text .buff_multiplier {
         font-size: 12px;}
 }
+
+
+/*1200 break off*/
+/*     #wrapper #backpack  #items {
+        width: 149px;} */
+
+/* backpack */
+@media (max-width: 1300px) {
+    #wrapper #backpack  #items {
+        width: 275px;}
+}
+@media (max-width: 1178px) {
+    #wrapper #backpack  #items {
+        width: calc(100% - 237px);
+        float: right;
+        margin: 0 0 15px 0;
+        height: 229px;}
+    #wrapper #backpack #slots_panel {
+        margin: 0 auto 15px auto;
+        float: unset;}
+}
+/* crafting */
+@media (max-width: 1420px) {
+    #wrapper #crafting_panel #items {
+        width: 399px;}
+}
+@media (max-width: 1296px) {
+    #wrapper #crafting_panel #items {
+        width: 275px;}
+}
+@media (max-width: 1172px) {
+    #wrapper #crafting_panel #items {
+        width: calc(100% - 237px);
+        float: right;
+        margin: 0 0 15px 0;
+        height: 229px;}
+    #wrapper #crafting_panel #slots_panel {
+        margin: 0 auto 15px auto;
+        float: unset;
+        display: flow-root;}
+}
+/* equipment */
+@media (max-width: 1413px) {
+    #wrapper #equipment #items {
+        width: 399px;}
+}
+@media (max-width: 1289px) {
+    #wrapper #equipment #items {
+        width: 275px;}
+}
+@media (max-width: 1165px) {
+    #wrapper #equipment #items {
+        width: calc(100% - 237px);
+        float: right;
+        margin: 0 0 15px 0;
+        height: 229px;}
+    #wrapper #equipment #equip_panel {
+        margin: 0 auto 15px auto;
+        float: unset;}
+}
+
+/* trading */
+@media (max-width: 1347px) {
+    #wrapper #trading_panel #items {
+        width: 275px;}
+}
+@media (max-width: 1223px) {
+    #wrapper #content #trading_panel #my_trade_table {
+        width: 275px;}
+}
+@media (max-width: 1099px) {
+    #wrapper #content #trading_panel #other_trade_table {
+        width: 275px;}
+}
+@media (max-width: 975px) {
+    #wrapper #trading_panel #items {
+        width: 100%;
+        float: right;
+        margin: 0 0 15px 0;
+        height: 229px;}
+    #wrapper #content #trading_panel #my_trade_table,
+    #wrapper #content #trading_panel #other_trade_table {
+        width: calc(50% - 7.5px);}
+}
+    
+/* shop */
+@media (max-width: 1239px) {
+    #shop li.item_li {
+        width: calc(100% / 3 - 10px);}
+}
+@media (max-width: 1017px) {
+    #shop li.item_li {
+        width: calc(50% - 10px);}
+}
