@@ -6716,7 +6716,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	visibility: visible;
 	position: relative;
 	top: -65px;
-	width: 200px;
+	width: calc(100% - 40px);
 	text-align: center;
 	display: block;
 	padding: 5px 0px;
@@ -6836,7 +6836,9 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	background-color: transparent;}
 
 #shop .featured #cost_info {
-	margin: 0;}
+	margin: 0;
+    left: 20px;
+    width: 178px;}
 
 #shop .featured .submit_section {
 	text-align: left;
