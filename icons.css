@@ -161,6 +161,13 @@ h2#username span#tip_user img,
 #wrapper #trading_panel .gold_trade a#gold_trade_subtract img {
     background-image: url('icons/gold_minus.svg');}
 
+/** banned **/
+img[alt="Banned"] {
+    background-image: url('icons/banned.svg');}
+/** warned **/
+img[alt="Warned"] {
+    background-image: url('icons/warned.svg');}
+
 /** forum post user stats **/
 #forums .forum_post .avatar >div:first-child:after {
     background-image: url('icons/dark/show-hor.svg');}

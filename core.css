@@ -1033,7 +1033,9 @@ h2#username span#tip_user img,
 #nav_userinfo a:after,
 #stats_ratio .stat:after,
 .box.box_likes.box_torrents span.likes_icon.flright img,
-img[alt="Donor"] {
+img[alt="Donor"],
+img[alt="Banned"],
+img[alt="Warned"] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;}
@@ -2389,8 +2391,13 @@ img[title="Snatches"],
 .torrent_table #user_rating_icon img,
 #requests_donate img,
 img[title="Gold"],
-.username_badges img[alt="Donor"] {
+.username_badges img[alt="Donor"],
+.username_badges img[alt="Banned"],
+.username_badges img[alt="Warned"] {
     padding-left: 18px;}
+.box.box_info .head.tooltip span[style="float:right;"] img[alt="Banned"],
+.box.box_info .head.tooltip span[style="float:right;"] img[alt="Warned"] {
+    padding-left: 20px;}
 .sidebar .userratingdiv img {
     /* border-radius: 50%; */
     background-repeat: no-repeat !important;
