@@ -5843,7 +5843,7 @@ span.size5 img {
 
 /* 460/215 */
 /********/
-/* fighting inline background-image */
+/* keeping ratio when scaling */
 .collections_art_display .collection_art {
     height: calc(100% + 100% * .13953488372093);
     width: 100%;
@@ -6367,9 +6367,13 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	float: left;
 	text-align: left;
     margin: 0 15px 15px 0;}
+#wrapper .inventory #items_navigation,
 #shop .items_shop #items_navigation {
     margin: 0 0 15px 0;}
 
+#wrapper #items_list li.item_li:hover {
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);}
 
 #items_navigation ul {
 	margin-bottom: 0;
@@ -7778,7 +7782,8 @@ body#user.inventory {}
 
 
 .gazelles_art_display .gazelle_art {
-    height: 180px;
+    height: 0;
+    padding-top: calc(100% / 1.7);
     background-repeat: no-repeat;
     background-position: center;}
 #gazelleview .gazellepic img {

@@ -139,6 +139,29 @@ body {
 /* /forum post 'back to top' button */
     
 /** new boring desktop header **/
+/* making holidayeffects.css work */ /* otherwise would just set background to respective divs */
+#extra1,
+#extra2,
+#extra3 {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    width: 100%;}
+#extra1 { /* #searchbars */
+    top: 0;
+    background: var(--p-searchbar-grdnt);
+    height: 40px;}
+#extra2 { /* #menu */
+    top: 40px;
+    background: var(--p-menu);
+    height: 34px;}
+#extra3 { /* #userinfo */
+    top: 74px;
+    background: var(--p-userinfo);
+    height: 30px;}
+/* /making holidayeffects.css work */    
+    
 #header {
     position: relative;
     border-bottom: var(--p-table-brdr);
@@ -149,11 +172,11 @@ body {
     flex-flow: column;}
 #header #searchbars {
     width: 100%;
-    background: var(--p-searchbar-grdnt);
+    /* background: var(--p-searchbar-grdnt); */
     display: block;
     order: -99;}
 #header #searchbars ul {
-    max-width: 1314px; /* content, footer */
+    max-width: 1314px;
     width: calc(100% - 92px);
     margin: 0 auto;
     padding: 2px 0;
@@ -164,7 +187,7 @@ body {
 #header #menu {
     order: -98;
     display: block;
-    background: var(--p-menu);
+    /* background: var(--p-menu); */
     width: 100%;}
 #header #menu ul {
     display: flex;
@@ -190,7 +213,7 @@ body {
     display: flex;
     flex-flow: row;
     justify-content: center;
-    background: var(--p-userinfo);}
+    /* background: var(--p-userinfo); */}
 #header #userinfo_minor {
     margin: 0 auto;
     z-index: 99;
@@ -478,6 +501,7 @@ body {
     
 /* logo */
 #logo {
+    background: unset !important;
     height: 64px;
     width: 64px;
     top: 40px;
@@ -601,7 +625,7 @@ body {
     
     #userinfo_username {
         border-left: var(--p-table-brdr);
-        background-color: var(--c-input);
+        background-color: transparent; /* for holidayeffects.css */
         -webkit-transition: all .1s linear;
         -o-transition: all .1s linear;
         transition: all .1s linear;
@@ -609,6 +633,7 @@ body {
         -webkit-clip-path: polygon(calc(100% - 50px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, calc(100% - 50px) 300px);
         clip-path: polygon(calc(100% - 50px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, calc(100% - 50px) 300px);}
     #userinfo_username:hover {
+        background-color: var(--c-input);
         transition-delay: 0s;
         -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, -10px 300px);
         clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, -10px 300px);}
@@ -747,6 +772,7 @@ body {
 @media (max-width: 1017px) {
     #shop li.item_li {
         width: calc(50% - 10px);}
+    #wrapper .inventory li.item_li, /*inventory */
     #shop li.featured {
         width: calc(100% - 10px);}
 }
