@@ -3263,6 +3263,17 @@ li:not(.suggested_similar) .similar_votes >span {
 .thin.torrent_history .linkbox + table[width="100%"] tr:not([class="colhead nobr"]) td:last-child:empty {
     display: none;}
 
+/** error message **/
+#wrapper .thin >h2:first-child +.box.pad:last-child {
+    background-color: unset;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    border: unset;
+    margin: 12px 0 0 0;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;}
+
 .username_badges img {
     max-height: 18px;
     max-width: 18px;
