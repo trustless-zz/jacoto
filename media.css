@@ -369,6 +369,7 @@ body {
     height: 40px;
     position: absolute;}
 
+#stats_share_score a,
 #stats_gold a,
 #stats_leeching a,
 #stats_seeding a {
@@ -390,7 +391,8 @@ body {
 #stats_ratio,
 #stats_gold,
 #stats_leeching,
-#stats_seeding {
+#stats_seeding,
+#stats_share_score {
     display: flex;
     justify-content: left;
     position: relative;
@@ -421,9 +423,13 @@ body {
     
 #stats_ratio span.stat span,
 #stats_gold span,
+#stats_share_score span,
 #stats_leeching span,
 #stats_seeding span {
     padding-left: 4px;}
+#stats_share_score a,
+    #stats_gold a {
+    margin-right: 2px;}
 
 #header #stats_ratio {
     font-size: 0;}
@@ -607,7 +613,7 @@ body {
         -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, -10px 300px);
         clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, -10px 300px);}
 }
-@media (max-width: 1171px) {
+@media (max-width: 1185px) {
     .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
     #artist #torrent_table .group_torrent td[colspan="2"] >a,
     #collections #torrent_table .group_torrent td[colspan="3"] >a,
@@ -646,7 +652,7 @@ body {
 }
 
 
-/*1200 break off*/
+/* revisit 1200 break off*/
 /*     #wrapper #backpack  #items {
         width: 149px;} */
 
@@ -665,6 +671,7 @@ body {
         margin: 0 auto 15px auto;
         float: unset;}
 }
+
 /* crafting */
 @media (max-width: 1420px) {
     #wrapper #crafting_panel #items {
@@ -685,6 +692,7 @@ body {
         float: unset;
         display: flow-root;}
 }
+
 /* equipment */
 @media (max-width: 1413px) {
     #wrapper #equipment #items {
@@ -733,8 +741,12 @@ body {
 @media (max-width: 1239px) {
     #shop li.item_li {
         width: calc(100% / 3 - 10px);}
+    #shop li.featured {
+        width: calc(50% - 10px);}
 }
 @media (max-width: 1017px) {
     #shop li.item_li {
         width: calc(50% - 10px);}
+    #shop li.featured {
+        width: calc(100% - 10px);}
 }

@@ -114,7 +114,10 @@ img[title="Snatches"],
 img[title="Downloaded"],
 img[title="Uploaded"],
 img[title="Leechers"],
-img[title="Seeders"] {
+img[title="Seeders"],
+.profile .box_stats #ratio .stat:before,
+.profile .box_stats #share_score .stat:before,
+td img[alt="Ratio"] {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -155,7 +158,9 @@ a[title="Remove"],
 #userhistory .colhead_dark a img[alt="Last read post"],
 #nav_useredit a,
 #nav_logout a,
-#nav_donate a {
+#nav_donate a,
+#stats_share_score a:before,
+td a img[alt="Ratio"] {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -170,6 +175,7 @@ a[title="Remove"],
 a[title="Download"]:hover,
 #index #freeleech .group_torrent >span:first-child a:hover,
 #stats_seeding:hover a:before,
+#stats_share_score:hover a:before,
 #requests table.border a[href^="upload.php"]:hover,
 .torrent_table #user_rating_icon a:hover img,
 a:hover >img[title="Snatches"],
@@ -195,7 +201,8 @@ a[title="Remove"]:hover,
 #userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a:hover img[alt="Last read post"],
 #wrapper .last_read:hover,
 #userhistory .colhead_dark a:hover img[alt="Last read post"],
-#nav_useredit a:hover {
+#nav_useredit a:hover,
+td a:hover img[alt="Ratio"] {
     background-color: var(--c-anchor-hvr);}
 #nav_logout a:hover {
     background-color: var(--c-off);}
@@ -321,6 +328,8 @@ a[title="Download"],
 #requests table.border a[href^="upload.php"] {
     -webkit-mask-image: url('icons/dark/upload.svg');
     mask-image: url('icons/dark/upload.svg');}
+td img[alt="Ratio"],
+.profile .box_stats #ratio .stat:before,
 #stats_ratio:before {
     -webkit-mask-image: url('icons/dark/ratio.svg');
     mask-image: url('icons/dark/ratio.svg');}
@@ -329,9 +338,14 @@ a[title="Download"],
 #stats_ratio .stat:after {
     -webkit-mask-image: url('icons/dark/show.svg');
     mask-image: url('icons/dark/show.svg');}
+#stats_share_score a:before,
+.profile .box_stats #share_score .stat:before,
 img[title="Snatches"] {
     -webkit-mask-image: url('icons/dark/snatches.svg');
     mask-image: url('icons/dark/snatches.svg');}
+#stats_share_score a:before,
+.profile .box_stats #share_score .stat:before {
+    transform: scaleX(-1) rotate(90deg);}
 img[title="Downloaded"],
 img[title="Uploaded"],
 img[title="Leechers"],
@@ -417,7 +431,8 @@ a[title="Remove"] {
 #forums .forum_editsubs tr:not(.colhead) td:first-child,
 #forums .forum_subscriptions tr:not(.colhead) td:first-child,
 #stats_seeding a,
-#stats_leeching a {
+#stats_leeching a,
+#stats_share_score a {
     position: relative;}
 #forums .forum_index tr:not(.colhead) td:first-child:before,
 #forums .forum_mythreads tr:not(.colhead) td:first-child:before,
@@ -425,7 +440,8 @@ a[title="Remove"] {
 #forums .forum_subscriptions tr:not(.colhead) td:first-child:before,
 .torrent_table .show_torrents_link:after,
 #stats_seeding a:before,
-#stats_leeching a:before {
+#stats_leeching a:before,
+#stats_share_score a:before {
     content: '';
     position: absolute;
     left: 0;
@@ -437,6 +453,7 @@ a[title="Remove"] {
 .box.box_likes.box_torrents span.likes_icon.flright {
     margin-top: -1px;}
 
+#stats_share_score a:before,
 #stats_seeding a:before,
 #stats_leeching a:before {
     -webkit-mask-size: 18px 18px;
@@ -739,6 +756,7 @@ ul {
 #stats_ratio,
 #stats_seeding a,
 #stats_leeching a,
+#stats_share_score a,
 #stats_gold a,
 #nav_userinfo,
 #toplink,
@@ -966,6 +984,7 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 #stats_ratio:before,
 #stats_seeding a,
 #stats_leeching a,
+#stats_share_score a,
 #stats_gold a,
 #logo a:before,
 #nav_logout a,
@@ -1397,6 +1416,7 @@ img[title="Snatches"],
 #stats_gold a,
 #stats_leeching a,
 #stats_seeding a,
+#stats_share_score a,
 a[title="Original Group"],
 a[title="Permalink"],
 a[title="Download"],
@@ -1414,7 +1434,10 @@ a[title="Remove"],
 #requests table.border a[href^="upload.php"],
 #requests_donate img,
 img[title="Gold"],
-.username_badges img[alt="Donor"] {
+.username_badges img[alt="Donor"],
+.username_badges img[alt="Banned"],
+.username_badges img[alt="Warned"],
+td img[alt="Ratio"] {
     width: 18px;
     height: 18px;
     background-size: 18px 18px;}
@@ -2393,7 +2416,8 @@ img[title="Snatches"],
 img[title="Gold"],
 .username_badges img[alt="Donor"],
 .username_badges img[alt="Banned"],
-.username_badges img[alt="Warned"] {
+.username_badges img[alt="Warned"],
+td img[alt="Ratio"] {
     padding-left: 18px;}
 .box.box_info .head.tooltip span[style="float:right;"] img[alt="Banned"],
 .box.box_info .head.tooltip span[style="float:right;"] img[alt="Warned"] {
@@ -5213,6 +5237,8 @@ input[class="date_picker"] {
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table td.label {
     width: 180px;}
 
+.box.box_info span[style="float:right;"] >a,
+.box.box_info span[style="float:right;"] >img,
 #gazelleview table.gazelleinfo td#tags input[type="submit"],
 #top10 .thin >.center tr:first-child td:last-child,
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="text"]:not(:first-child),
@@ -6189,10 +6215,19 @@ span.size5 img {
 .profile .box_stats #gold .stat {
     background-repeat: no-repeat;
     background-position: left center;}
+.profile .box_stats #share_score .stat,
 .profile .box_stats #ratio .stat {
-	background: url("https://gazellegames.net/static/styles/game_room/images/icons/ratio.png") no-repeat left center;}
-.profile .box_stats #share_score .stat {
-	background: url("https://gazellegames.net/static/styles/game_room/images/icons/share_score.png") no-repeat left center;}
+    position: relative;}
+.profile .box_stats #share_score .stat:before,
+.profile .box_stats #ratio .stat:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: -25px;
+    top: 2px;}
+#wrapper .profile .box_stats #share_score .stat:before {
+    left: 0;}
 .profile .box_stats #upload .stat {
 	background: url("https://gazellegames.net/static/styles/game_room/images/icons/sword_upload.png") no-repeat left center;}
 .profile .box_stats #download .stat {
