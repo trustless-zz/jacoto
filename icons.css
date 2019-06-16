@@ -5,112 +5,245 @@
     background-image: url('icons/dark/background.svg') !important;
     background-size: 50px 50px !important;}
 
-/* eliminating loading time by embedding */
 table.gazelles_art_display .hovereffect:before,
 .fancybox-image,
 .lightbox img {
     background-image: url('icons/dark/transparent.svg');}
 
+#torrents #torrentbrowse #torrent_table td.center.cats_col >div[title=""][class=""] {
+    background: url(caticons/missing.svg);}
+.amigacd32 {background: url(caticons/dark/amigacd32.svg);}
+.amstradcpc {background: url(caticons/dark/amstradcpc.svg);}
+.atarist {background: url(caticons/dark/atarist.svg);}
+.fairchildchannelf {background: url(caticons/dark/fairchildchannelf.svg);}
+.gameboycolor {background: url(caticons/dark/gameboycolor.svg);}
+.gamegear {background: url(caticons/dark/gamegear.svg);}
+.nes {background: url(caticons/dark/nes.svg);}
+.newnintendo3ds {background: url(caticons/dark/newnintendo3ds.svg);}
+.nintendo3ds {background: url(caticons/dark/nintendo3ds.svg);}
+.nokian-gage {background: url(caticons/dark/nokian-gage.svg);}
+.rcastudioii {background: url(caticons/dark/rcastudioii.svg);}
+.tangerineoric {background: url(caticons/dark/tangerineoric.svg);}
+.v\.smile {background: url(caticons/dark/v.smile.svg);}
+.watarasupervision {background: url(caticons/dark/watarasupervision.svg);}
+.wiiu {background: url(caticons/dark/wiiu.svg);}
+.Amazon {background: url(weblinks/Amazon.svg);}
+.\33 do {background: url(caticons/dark/3do.svg);}
+.android {background: url(caticons/dark/android.svg);}
+.applebandaipippin {background: url(caticons/dark/applebandaipippin.svg);}
+.apps {background: url();}
+.atari2600 {background: url(caticons/dark/atari2600.svg);}
+.atari5200 {background: url(caticons/dark/atari5200.svg);}
+.atari7800 {background: url(caticons/dark/atari7800.svg);}
+.atarijaguar {background: url(caticons/dark/atarijaguar.svg);}
+.atarilynx {background: url(caticons/dark/atarilynx.svg);}
+.bandaiwonderswan,
+.wonderswan {background: url(caticons/dark/bandaiwonderswan.svg);}
+.bandaiwonderswancolor {background: url(caticons/dark/bandaiwonderswancolor.svg);}
+.boardgame {background: url(caticons/dark/boardgame.svg);}
+.cardgame {background: url(caticons/dark/cardgame.svg);}
+.casioloopy {background: url(caticons/dark/casioloopy.svg);}
+.casiopv-1000 {background: url(caticons/dark/casiopv-1000.svg);}
+.colecovision {background: url(caticons/dark/colecovision.svg);}
+.commodore128 {background: url(caticons/dark/commodore128.svg);}
+.commodore64 {background: url(caticons/dark/commodore64.svg);}
+.commodoreamiga {background: url(caticons/dark/commodoreamiga.svg);}
+.commodoreplus-4 {background: url(caticons/dark/commodoreplus-4.svg);}
+.commodorevic-20 {background: url(caticons/dark/commodorevic-20.svg);}
+.creativision {background: url(caticons/dark/creativision.svg);}
+.dos {background: url(caticons/dark/dos.svg);}
+.dreamcast {background: url(caticons/dark/dreamcast.svg);}
+.dsiware {background: url();}
+.dvd {background: url();}
+.emersonarcadia2001 {background: url(caticons/dark/emersonarcadia2001.svg);}
+.entexadventurevision {background: url(caticons/dark/entexadventurevision.svg);}
+.epochsupercasettevision {background: url(caticons/dark/epochsupercasettevision.svg);}
+.ex-bgcollections {background: url();}
+.ex-bgfullsets {background: url();}
+.ex-bggoldens {background: url();}
+.funtechsuperacan {background: url(caticons/dark/funtechsuperacan.svg);}
+.game\.com,
+.game.com,
+.gamecom {background: url(icon/gamecom56.png);}
+.gameboy {background: url(caticons/dark/gameboy.svg);}
+.gameboyadvance {background: url(caticons/dark/gameboyadvance.svg);}
+.gameparkgp32 {background: url(caticons/dark/gameparkgp32.svg);}
+.generalcomputervectrex {background: url(caticons/dark/generalcomputervectrex.svg);}
+.gizmondo {background: url(caticons/dark/gizmondo.svg);}
+.hartungamemaster,
+.hartunggamemaster {background: url(caticons/dark/hartunggamemaster.svg);}
+.intellivision {background: url(caticons/dark/interactivedvd.svg);}
+.interactivedvd {background: url(caticons/dark/interactivedvd.svg);}
+.ios {background: url(caticons/dark/ios.svg);}
+.linux {background: url(caticons/dark/linux.svg);}
+.mac {background: url(caticons/dark/mac.svg);}
+.magnavox-phillipsodyssey {background: url(caticons/dark/magnavox-phillipsodyssey.svg);}
+.mastersystem {background: url(caticons/dark/mastersystem.svg);}
+.mattelintellivision {background: url(caticons/dark/mattelintellivision.svg);}
+.megadrive {background: url(caticons/dark/megadrive.svg);}
+.memotechmtx {background: url(caticons/dark/memotechmtx.svg);}
+.milesgordonsamcoupe {background: url(caticons/dark/milesgordonsamcoupe.svg);}
+.miniaturewargames {background: url(caticons/dark/miniaturewargames.svg);}
+.msx {background: url(caticons/dark/msx.svg);}
+.msx2 {background: url(caticons/dark/msx2.svg);}
+.music,
+.cats_ost {background: url(caticons/dark/music.svg);}
+.necpc-fx {background: url(caticons/dark/necpc-fx.svg);}
+.necpc-98 {background: url(caticons/dark/necpc-98.svg);}
+.necsupergrafx {background: url(caticons/dark/necsupergrafx.svg);}
+.necturbografx-16 {background: url(caticons/dark/necturbografx-16.svg);}
+.newnintendo3dsvc {background: url();}
+.nintendo3dsvc {background: url();}
+.nintendo64 {background: url(caticons/dark/nintendo64.svg);}
+.nintendods {background: url(caticons/dark/nintendods.svg);}
+.nintendogamecube {background: url(caticons/dark/nintendogamecube.svg);}
+.penandpaperrpg {background: url(caticons/dark/penandpaperrpg.svg);}
+.philipsvideopac {background: url();}
+.philipsvideopac\+ {background: url(caticons/dark/philipsvideopac+.svg);}
+.phonepda {background: url(caticons/dark/phonepda.svg);}
+.pico {background: url(caticons/dark/pico.svg);}
+.playstation1 {background: url(caticons/dark/playstation.svg);}
+.playstation2 {background: url(caticons/dark/playstation2.svg);}
+.playstation3 {background: url(caticons/dark/playstation3.svg);}
+.playstation4 {background: url(caticons/dark/playstation4.svg);}
+.playstationportable {background: url(caticons/dark/playstationportable.svg);}
+.playstationvita {background: url(caticons/dark/playstationvita.svg);}
+.pokemonmini {background: url(caticons/dark/pokemonmini.svg);}
+.psonpsp {background: url();}
+.psponps3 {background: url();}
+.retro-other {background: url(caticons/dark/retro-other.svg);}
+.saturn {background: url(caticons/dark/saturn.svg);}
+.sg-1000 {background: url(caticons/dark/sg-1000.svg);}
+.sharpx1 {background: url(caticons/dark/sharpx1.svg);}
+.sharpx68000 {background: url(caticons/dark/sharpx68000.svg);}
+.snkneogeo {background: url(caticons/dark/snkneogeo.svg);}
+.snkneogeopocket {background: url(caticons/dark/snkneogeopocket.svg);}
+.snes,
+.supernes {background: url(caticons/dark/snes.svg);}
+.switch {background: url(caticons/dark/switch.svg);}
+.taitotypex {background: url(caticons/dark/taitotypex.svg);}
+.tandycolorcomputer {background: url(caticons/dark/tandycolorcomputer.svg);}
+.thomsonmo5 {background: url(caticons/dark/thomsonmo5.svg);}
+.turbografx {background: url();}
+.vectrex {background: url(caticons/dark/vectrex.svg);}
+.virtualboy {background: url(caticons/dark/virtualboy.svg);}
+.wii {background: url(caticons/dark/wii.svg);}
+.wiiuvc {background: url();}
+.wiivc {background: url();}
+.wiiware {background: url();}
+.windows {background: url(caticons/dark/windows.svg);}
+.windows95 {background: url();}
+.windowsxp {background: url();}
+.xbla {background: url();}
+.xbox {background: url(caticons/dark/xbox.svg);}
+.xbox360 {background: url(caticons/dark/xbox360.svg);}
+.xboxon360 {background: url();}
+.zxspectrum {background: url(caticons/dark/zxspectrum.svg);}
+.cats_guides,
+.cats_ebooks,
+.ebook {background: url(caticons/dark/ebook.svg);}
+.cats_applications {background: url(caticons/dark/applications.svg);}
+
 @media (min-width: 801px) {
-#groupplatform a[href$="=Amiga+CD32"] {background-image: url(caticons/amigacd32_dark.svg);}
-#groupplatform a[href$="=Amstrad+CPC"] {background-image: url(caticons/amstradcpc_dark.svg);}
-#groupplatform a[href$="=Atari+ST"] {background-image: url(caticons/atarist_dark.svg);}
-#groupplatform a[href$="=Fairchild+Channel+F"] {background-image: url(caticons/fairchildchannelf_dark.svg);}
-#groupplatform a[href$="=Game+Boy+Color"] {background-image: url(caticons/gameboycolor_dark.svg);}
-#groupplatform a[href$="=Game Gear"] {background-image: url(caticons/gamegear_dark.svg);}
-#groupplatform a[href$="=NES"] {background-image: url(caticons/nes_dark.svg);}
-#groupplatform a[href$="=New+Nintendo+3DS"] {background-image: url(caticons/newnintendo3ds_dark.svg);}
-#groupplatform a[href$="=Nintendo+3DS"] {background-image: url(caticons/nintendo3ds_dark.svg);}
-#groupplatform a[href$="=Nokia+N-Gage"] {background-image: url(caticons/nokian-gage_dark.svg);}
-#groupplatform a[href$="=RCA+Studio+II"] {background-image: url(caticons/rcastudioii_dark.svg);}
-#groupplatform a[href$="=Tangerine+Oric"] {background-image: url(caticons/tangerineoric_dark.svg);}
-#groupplatform a[href$="=V.Smile"] {background-image: url(caticons/v.smile_dark.svg);}
-#groupplatform a[href$="=Watara+Supervision"] {background-image: url(caticons/watarasupervision_dark.svg);}
-#groupplatform a[href$="=Wii+U"] {background-image: url(caticons/wiiu_dark.svg);}
-#groupplatform a[href$="=3DO"] {background-image: url(caticons/3do.svg);}
-#groupplatform a[href$="=Android"] {background-image: url(caticons/android.svg);}
-#groupplatform a[href$="=Apple+Bandai+Pippin"] {background-image: url(caticons/applebandaipippin.svg);}
-#groupplatform a[href$="=Atari+2600"] {background-image: url(caticons/atari2600.svg);}
-#groupplatform a[href$="=Atari+5200"] {background-image: url(caticons/atari5200.svg);}
-#groupplatform a[href$="=Atari+7800"] {background-image: url(caticons/atari7800.svg);}
-#groupplatform a[href$="=Atari+Jaguar"] {background-image: url(caticons/atarijaguar.svg);}
-#groupplatform a[href$="=Atari+Lynx"] {background-image: url(caticons/atarilynx.svg);}
-#groupplatform a[href$="=Bandai+WonderSwan"] {background-image: url(caticons/bandaiwonderswan.svg);}
-#groupplatform a[href$="=Bandai+WonderSwan+Color"] {background-image: url(caticons/bandaiwonderswancolor.svg);}
-#groupplatform a[href$="=Board+Game"] {background-image: url(caticons/boardgame.svg);}
-#groupplatform a[href$="=Card+Game"] {background-image: url(caticons/cardgame.svg);}
-#groupplatform a[href$="=Casio+Loopy"] {background-image: url(caticons/casioloopy.svg);}
-#groupplatform a[href$="=Casio+PV-1000"] {background-image: url(caticons/casiopv-1000.svg);}
-#groupplatform a[href$="=Colecovision"] {background-image: url(caticons/colecovision.svg);}
-#groupplatform a[href$="=Commodore+128"] {background-image: url(caticons/commodore128.svg);}
-#groupplatform a[href$="=Commodore+64"] {background-image: url(caticons/commodore64.svg);}
-#groupplatform a[href$="=Commodore+Amiga"] {background-image: url(caticons/commodoreamiga.svg);}
-#groupplatform a[href$="=Commodore+Plus-4"] {background-image: url(caticons/commodoreplus-4.svg);}
-#groupplatform a[href$="=Commodore+VIC-20"] {background-image: url(caticons/commodorevic-20.svg);}
-#groupplatform a[href$="=CreatiVision"] {background-image: url(caticons/creativision.svg);}
-#groupplatform a[href$="=DOS"] {background-image: url(caticons/dos.svg);}
-#groupplatform a[href$="=Dreamcast"] {background-image: url(caticons/dreamcast.svg);}
-#groupplatform a[href$="=Emerson+Arcadia+2001"] {background-image: url(caticons/emersonarcadia2001.svg);}
-#groupplatform a[href$="=Entex+Adventure+Vision"] {background-image: url(caticons/entexadventurevision.svg);}
-#groupplatform a[href$="=Epoch+Super+Casette+Vision"] {background-image: url(caticons/epochsupercasettevision.svg);}
-#groupplatform a[href$="=Funtech+Super+Acan"] {background-image: url(caticons/funtechsuperacan.svg);}
+#groupplatform a[href$="=Amiga+CD32"] {background-image: url(caticons/dark/amigacd32.svg);}
+#groupplatform a[href$="=Amstrad+CPC"] {background-image: url(caticons/dark/amstradcpc.svg);}
+#groupplatform a[href$="=Atari+ST"] {background-image: url(caticons/dark/atarist.svg);}
+#groupplatform a[href$="=Fairchild+Channel+F"] {background-image: url(caticons/dark/fairchildchannelf.svg);}
+#groupplatform a[href$="=Game+Boy+Color"] {background-image: url(caticons/dark/gameboycolor.svg);}
+#groupplatform a[href$="=Game Gear"] {background-image: url(caticons/dark/gamegear.svg);}
+#groupplatform a[href$="=NES"] {background-image: url(caticons/dark/nes.svg);}
+#groupplatform a[href$="=New+Nintendo+3DS"] {background-image: url(caticons/dark/newnintendo3ds.svg);}
+#groupplatform a[href$="=Nintendo+3DS"] {background-image: url(caticons/dark/nintendo3ds.svg);}
+#groupplatform a[href$="=Nokia+N-Gage"] {background-image: url(caticons/dark/nokian-gage.svg);}
+#groupplatform a[href$="=RCA+Studio+II"] {background-image: url(caticons/dark/rcastudioii.svg);}
+#groupplatform a[href$="=Tangerine+Oric"] {background-image: url(caticons/dark/tangerineoric.svg);}
+#groupplatform a[href$="=V.Smile"] {background-image: url(caticons/dark/v.smile.svg);}
+#groupplatform a[href$="=Watara+Supervision"] {background-image: url(caticons/dark/watarasupervision.svg);}
+#groupplatform a[href$="=Wii+U"] {background-image: url(caticons/dark/wiiu.svg);}
+#groupplatform a[href$="=3DO"] {background-image: url(caticons/dark/3do.svg);}
+#groupplatform a[href$="=Android"] {background-image: url(caticons/dark/android.svg);}
+#groupplatform a[href$="=Apple+Bandai+Pippin"] {background-image: url(caticons/dark/applebandaipippin.svg);}
+#groupplatform a[href$="=Atari+2600"] {background-image: url(caticons/dark/atari2600.svg);}
+#groupplatform a[href$="=Atari+5200"] {background-image: url(caticons/dark/atari5200.svg);}
+#groupplatform a[href$="=Atari+7800"] {background-image: url(caticons/dark/atari7800.svg);}
+#groupplatform a[href$="=Atari+Jaguar"] {background-image: url(caticons/dark/atarijaguar.svg);}
+#groupplatform a[href$="=Atari+Lynx"] {background-image: url(caticons/dark/atarilynx.svg);}
+#groupplatform a[href$="=Bandai+WonderSwan"] {background-image: url(caticons/dark/bandaiwonderswan.svg);}
+#groupplatform a[href$="=Bandai+WonderSwan+Color"] {background-image: url(caticons/dark/bandaiwonderswancolor.svg);}
+#groupplatform a[href$="=Board+Game"] {background-image: url(caticons/dark/boardgame.svg);}
+#groupplatform a[href$="=Card+Game"] {background-image: url(caticons/dark/cardgame.svg);}
+#groupplatform a[href$="=Casio+Loopy"] {background-image: url(caticons/dark/casioloopy.svg);}
+#groupplatform a[href$="=Casio+PV-1000"] {background-image: url(caticons/dark/casiopv-1000.svg);}
+#groupplatform a[href$="=Colecovision"] {background-image: url(caticons/dark/colecovision.svg);}
+#groupplatform a[href$="=Commodore+128"] {background-image: url(caticons/dark/commodore128.svg);}
+#groupplatform a[href$="=Commodore+64"] {background-image: url(caticons/dark/commodore64.svg);}
+#groupplatform a[href$="=Commodore+Amiga"] {background-image: url(caticons/dark/commodoreamiga.svg);}
+#groupplatform a[href$="=Commodore+Plus-4"] {background-image: url(caticons/dark/commodoreplus-4.svg);}
+#groupplatform a[href$="=Commodore+VIC-20"] {background-image: url(caticons/dark/commodorevic-20.svg);}
+#groupplatform a[href$="=CreatiVision"] {background-image: url(caticons/dark/creativision.svg);}
+#groupplatform a[href$="=DOS"] {background-image: url(caticons/dark/dos.svg);}
+#groupplatform a[href$="=Dreamcast"] {background-image: url(caticons/dark/dreamcast.svg);}
+#groupplatform a[href$="=Emerson+Arcadia+2001"] {background-image: url(caticons/dark/emersonarcadia2001.svg);}
+#groupplatform a[href$="=Entex+Adventure+Vision"] {background-image: url(caticons/dark/entexadventurevision.svg);}
+#groupplatform a[href$="=Epoch+Super+Casette+Vision"] {background-image: url(caticons/dark/epochsupercasettevision.svg);}
+#groupplatform a[href$="=Funtech+Super+Acan"] {background-image: url(caticons/dark/funtechsuperacan.svg);}
 #groupplatform a[href$="=Game.com"] {background-image: url(icon/gamecom56.png);}
-#groupplatform a[href$="=Game+Boy"] {background-image: url(caticons/gameboy.svg);}
-#groupplatform a[href$="=Game+Boy+Advance"] {background-image: url(caticons/gameboyadvance.svg);}
-#groupplatform a[href$="=GamePark+GP32"] {background-image: url(caticons/gameparkgp32.svg);}
-#groupplatform a[href$="=General+Computer+Vectrex"] {background-image: url(caticons/generalcomputervectrex.svg);}
-#groupplatform a[href$="=Gizmondo"] {background-image: url(caticons/gizmondo.svg);}
-#groupplatform a[href$="=Hartung+Game+Master"] {background-image: url(caticons/hartunggamemaster.svg);}
-#groupplatform a[href$="=Mattel+Intellivision"] {background-image: url(caticons/mattelintellivision.svg);}
-#groupplatform a[href$="=Interactive+DVD"] {background-image: url(caticons/interactivedvd.svg);}
-#groupplatform a[href$="=iOS"] {background-image: url(caticons/ios.svg);}
-#groupplatform a[href$="=Linux"] {background-image: url(caticons/linux.svg);}
-#groupplatform a[href$="=Mac"] {background-image: url(caticons/mac.svg);}
-#groupplatform a[href$="=Magnavox-Phillips+Odyssey"] {background-image: url(caticons/magnavox-phillipsodyssey.svg);}
-#groupplatform a[href$="=Master+System"] {background-image: url(caticons/mastersystem.svg);}
-#groupplatform a[href$="=Mega+Drive"] {background-image: url(caticons/megadrive.svg);}
-#groupplatform a[href$="=Memotech+MTX"] {background-image: url(caticons/memotechmtx.svg);}
-#groupplatform a[href$="=Miles+Gordon+Sam+Coupe"] {background-image: url(caticons/milesgordonsamcoupe.svg);}
-#groupplatform a[href$="=Miniature WargamesMSX"] {background-image: url(caticons/miniaturewargames.svg);}
-#groupplatform a[href$="=MSX"] {background-image: url(caticons/msx.svg);}
-#groupplatform a[href$="=MSX+2"] {background-image: url(caticons/msx2.svg);}
-#groupplatform a[href$="=NEC+PC-FX"] {background-image: url(caticons/necpc-fx.svg);}
-#groupplatform a[href$="=NEC+PC-98"] {background-image: url(caticons/necpc-98.svg);}
-#groupplatform a[href$="=NEC+SuperGrafx"] {background-image: url(caticons/necsupergrafx.svg);}
-#groupplatform a[href$="=NEC+TurboGrafx-16"] {background-image: url(caticons/necturbografx-16.svg);}
-#groupplatform a[href$="=Nintendo+64"] {background-image: url(caticons/nintendo64.svg);}
-#groupplatform a[href$="=Nintendo+DS"] {background-image: url(caticons/nintendods.svg);}
-#groupplatform a[href$="=Nintendo+GameCube"] {background-image: url(caticons/nintendogamecube.svg);}
-#groupplatform a[href$="=Pen+and+Paper+RPG"] {background-image: url(caticons/penandpaperrpg.svg);}
-#groupplatform a[href$="=Philips+Videopac+"] {background-image: url(caticons/philipsvideopac+.svg);}
-#groupplatform a[href$="=Phone%2FPDA"] {background-image: url(caticons/phonepda.svg);}
-#groupplatform a[href$="=Pico"] {background-image: url(caticons/pico.svg);}
-#groupplatform a[href$="=PlayStation+1"] {background-image: url(caticons/playstation.svg);}
-#groupplatform a[href$="=PlayStation+2"] {background-image: url(caticons/playstation2.svg);}
-#groupplatform a[href$="=PlayStation+3"] {background-image: url(caticons/playstation3.svg);}
-#groupplatform a[href$="=PlayStation+4"] {background-image: url(caticons/playstation4.svg);}
-#groupplatform a[href$="=PlayStation+Portable"] {background-image: url(caticons/playstationportable.svg);}
-#groupplatform a[href$="=PlayStation+Vita"] {background-image: url(caticons/playstationvita.svg);}
-#groupplatform a[href$="=Pokemon+Mini"] {background-image: url(caticons/pokemonmini.svg);}
-#groupplatform a[href$="=Retro+-+Other"] {background-image: url(caticons/retro-other.svg);}
-#groupplatform a[href$="=Saturn"] {background-image: url(caticons/saturn.svg);}
-#groupplatform a[href$="=SG-1000"] {background-image: url(caticons/sg-1000.svg);}
-#groupplatform a[href$="=Sharp+X1"] {background-image: url(caticons/sharpx1.svg);}
-#groupplatform a[href$="=Sharp+X68000"] {background-image: url(caticons/sharpx68000.svg);}
-#groupplatform a[href$="=SNK+Neo+Geo"] {background-image: url(caticons/snkneogeo.svg);}
-#groupplatform a[href$="=SNK+Neo+Geo+Pocket"] {background-image: url(caticons/snkneogeopocket.svg);}
-#groupplatform a[href$="=SNES"] {background-image: url(caticons/snes.svg);}
-#groupplatform a[href$="=Switch"] {background-image: url(caticons/switch.svg);}
-#groupplatform a[href$="=Taito+Type+X"] {background-image: url(caticons/taitotypex.svg);}
-#groupplatform a[href$="=Tandy+Color+Computer"] {background-image: url(caticons/tandycolorcomputer.svg);}
-#groupplatform a[href$="=Thomson+MO5"] {background-image: url(caticons/thomsonmo5.svg);}
-#groupplatform a[href$="=General+Computer+Vectrex"] {background-image: url(caticons/vectrex.svg);}
-#groupplatform a[href$="=Virtual+Boy"] {background-image: url(caticons/virtualboy.svg);}
-#groupplatform a[href$="=Wii"] {background-image: url(caticons/wii.svg);}
-#groupplatform a[href$="=Windows"] {background-image: url(caticons/windows.svg);}
-#groupplatform a[href$="=Xbox"] {background-image: url(caticons/xbox.svg);}
-#groupplatform a[href$="=Xbox+360"] {background-image: url(caticons/xbox360.svg);}
-#groupplatform a[href$="=ZX+Spectrum"] {background-image: url(caticons/zxspectrum.svg);}
+#groupplatform a[href$="=Game+Boy"] {background-image: url(caticons/dark/gameboy.svg);}
+#groupplatform a[href$="=Game+Boy+Advance"] {background-image: url(caticons/dark/gameboyadvance.svg);}
+#groupplatform a[href$="=GamePark+GP32"] {background-image: url(caticons/dark/gameparkgp32.svg);}
+#groupplatform a[href$="=General+Computer+Vectrex"] {background-image: url(caticons/dark/generalcomputervectrex.svg);}
+#groupplatform a[href$="=Gizmondo"] {background-image: url(caticons/dark/gizmondo.svg);}
+#groupplatform a[href$="=Hartung+Game+Master"] {background-image: url(caticons/dark/hartunggamemaster.svg);}
+#groupplatform a[href$="=Mattel+Intellivision"] {background-image: url(caticons/dark/mattelintellivision.svg);}
+#groupplatform a[href$="=Interactive+DVD"] {background-image: url(caticons/dark/interactivedvd.svg);}
+#groupplatform a[href$="=iOS"] {background-image: url(caticons/dark/ios.svg);}
+#groupplatform a[href$="=Linux"] {background-image: url(caticons/dark/linux.svg);}
+#groupplatform a[href$="=Mac"] {background-image: url(caticons/dark/mac.svg);}
+#groupplatform a[href$="=Magnavox-Phillips+Odyssey"] {background-image: url(caticons/dark/magnavox-phillipsodyssey.svg);}
+#groupplatform a[href$="=Master+System"] {background-image: url(caticons/dark/mastersystem.svg);}
+#groupplatform a[href$="=Mega+Drive"] {background-image: url(caticons/dark/megadrive.svg);}
+#groupplatform a[href$="=Memotech+MTX"] {background-image: url(caticons/dark/memotechmtx.svg);}
+#groupplatform a[href$="=Miles+Gordon+Sam+Coupe"] {background-image: url(caticons/dark/milesgordonsamcoupe.svg);}
+#groupplatform a[href$="=Miniature WargamesMSX"] {background-image: url(caticons/dark/miniaturewargames.svg);}
+#groupplatform a[href$="=MSX"] {background-image: url(caticons/dark/msx.svg);}
+#groupplatform a[href$="=MSX+2"] {background-image: url(caticons/dark/msx2.svg);}
+#groupplatform a[href$="=NEC+PC-FX"] {background-image: url(caticons/dark/necpc-fx.svg);}
+#groupplatform a[href$="=NEC+PC-98"] {background-image: url(caticons/dark/necpc-98.svg);}
+#groupplatform a[href$="=NEC+SuperGrafx"] {background-image: url(caticons/dark/necsupergrafx.svg);}
+#groupplatform a[href$="=NEC+TurboGrafx-16"] {background-image: url(caticons/dark/necturbografx-16.svg);}
+#groupplatform a[href$="=Nintendo+64"] {background-image: url(caticons/dark/nintendo64.svg);}
+#groupplatform a[href$="=Nintendo+DS"] {background-image: url(caticons/dark/nintendods.svg);}
+#groupplatform a[href$="=Nintendo+GameCube"] {background-image: url(caticons/dark/nintendogamecube.svg);}
+#groupplatform a[href$="=Pen+and+Paper+RPG"] {background-image: url(caticons/dark/penandpaperrpg.svg);}
+#groupplatform a[href$="=Philips+Videopac+"] {background-image: url(caticons/dark/philipsvideopac+.svg);}
+#groupplatform a[href$="=Phone%2FPDA"] {background-image: url(caticons/dark/phonepda.svg);}
+#groupplatform a[href$="=Pico"] {background-image: url(caticons/dark/pico.svg);}
+#groupplatform a[href$="=PlayStation+1"] {background-image: url(caticons/dark/playstation.svg);}
+#groupplatform a[href$="=PlayStation+2"] {background-image: url(caticons/dark/playstation2.svg);}
+#groupplatform a[href$="=PlayStation+3"] {background-image: url(caticons/dark/playstation3.svg);}
+#groupplatform a[href$="=PlayStation+4"] {background-image: url(caticons/dark/playstation4.svg);}
+#groupplatform a[href$="=PlayStation+Portable"] {background-image: url(caticons/dark/playstationportable.svg);}
+#groupplatform a[href$="=PlayStation+Vita"] {background-image: url(caticons/dark/playstationvita.svg);}
+#groupplatform a[href$="=Pokemon+Mini"] {background-image: url(caticons/dark/pokemonmini.svg);}
+#groupplatform a[href$="=Retro+-+Other"] {background-image: url(caticons/dark/retro-other.svg);}
+#groupplatform a[href$="=Saturn"] {background-image: url(caticons/dark/saturn.svg);}
+#groupplatform a[href$="=SG-1000"] {background-image: url(caticons/dark/sg-1000.svg);}
+#groupplatform a[href$="=Sharp+X1"] {background-image: url(caticons/dark/sharpx1.svg);}
+#groupplatform a[href$="=Sharp+X68000"] {background-image: url(caticons/dark/sharpx68000.svg);}
+#groupplatform a[href$="=SNK+Neo+Geo"] {background-image: url(caticons/dark/snkneogeo.svg);}
+#groupplatform a[href$="=SNK+Neo+Geo+Pocket"] {background-image: url(caticons/dark/snkneogeopocket.svg);}
+#groupplatform a[href$="=SNES"] {background-image: url(caticons/dark/snes.svg);}
+#groupplatform a[href$="=Switch"] {background-image: url(caticons/dark/switch.svg);}
+#groupplatform a[href$="=Taito+Type+X"] {background-image: url(caticons/dark/taitotypex.svg);}
+#groupplatform a[href$="=Tandy+Color+Computer"] {background-image: url(caticons/dark/tandycolorcomputer.svg);}
+#groupplatform a[href$="=Thomson+MO5"] {background-image: url(caticons/dark/thomsonmo5.svg);}
+#groupplatform a[href$="=General+Computer+Vectrex"] {background-image: url(caticons/dark/vectrex.svg);}
+#groupplatform a[href$="=Virtual+Boy"] {background-image: url(caticons/dark/virtualboy.svg);}
+#groupplatform a[href$="=Wii"] {background-image: url(caticons/dark/wii.svg);}
+#groupplatform a[href$="=Windows"] {background-image: url(caticons/dark/windows.svg);}
+#groupplatform a[href$="=Xbox"] {background-image: url(caticons/dark/xbox.svg);}
+#groupplatform a[href$="=Xbox+360"] {background-image: url(caticons/dark/xbox360.svg);}
+#groupplatform a[href$="=ZX+Spectrum"] {background-image: url(caticons/dark/zxspectrum.svg);}
 }
 
 /** logo **/
