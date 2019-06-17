@@ -182,9 +182,6 @@ a[title="Remove"],
 #userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a img[alt="Last read post"],
 .last_read,
 #userhistory .colhead_dark a img[alt="Last read post"],
-#nav_useredit a,
-#nav_logout a,
-#nav_donate a,
 #stats_share_score a:before,
 td a img[alt="Ratio"] {
     -webkit-mask-position: center;
@@ -227,13 +224,8 @@ a[title="Remove"]:hover,
 #userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a:hover img[alt="Last read post"],
 #wrapper .last_read:hover,
 #userhistory .colhead_dark a:hover img[alt="Last read post"],
-#nav_useredit a:hover,
 td a:hover img[alt="Ratio"] {
     background-color: var(--c-anchor-hvr);}
-#nav_logout a:hover {
-    background-color: var(--c-off);}
-#nav_donate a:hover {
-    background-color: var(--c-donate);}
 
 #wrapper .prev:hover,
 #wrapper .next:hover,
@@ -243,132 +235,132 @@ td a:hover img[alt="Ratio"] {
     background-color: var(--c-low);}
 
 #forums td.read:before {
-    -webkit-mask-image: url('icons/dark/read.svg');
-    mask-image: url('icons/dark/read.svg');}
+    -webkit-mask-image: url('icons/read.svg');
+    mask-image: url('icons/read.svg');}
 #forums td.read_sticky:before {
-    -webkit-mask-image: url('icons/dark/read_sticky.svg');
-    mask-image: url('icons/dark/read_sticky.svg');}
+    -webkit-mask-image: url('icons/read_sticky.svg');
+    mask-image: url('icons/read_sticky.svg');}
 #forums td.read_locked:before {
-    -webkit-mask-image: url('icons/dark/read_locked.svg');
-    mask-image: url('icons/dark/read_locked.svg');}
+    -webkit-mask-image: url('icons/read_locked.svg');
+    mask-image: url('icons/read_locked.svg');}
 #forums td.read_locked_sticky:before {
-    -webkit-mask-image: url('icons/dark/read_locked_sticky.svg');
-    mask-image: url('icons/dark/read_locked_sticky.svg');}
+    -webkit-mask-image: url('icons/read_locked_sticky.svg');
+    mask-image: url('icons/read_locked_sticky.svg');}
 #forums td.unread:before {
-    -webkit-mask-image: url('icons/dark/unread.svg');
-    mask-image: url('icons/dark/unread.svg');}
+    -webkit-mask-image: url('icons/unread.svg');
+    mask-image: url('icons/unread.svg');}
 #forums td.unread_sticky:before {
-    -webkit-mask-image: url('icons/dark/unread_sticky.svg');
-    mask-image: url('icons/dark/unread_sticky.svg');}
+    -webkit-mask-image: url('icons/unread_sticky.svg');
+    mask-image: url('icons/unread_sticky.svg');}
 #forums td.unread_locked:before {
-    -webkit-mask-image: url('icons/dark/unread_locked.svg');
-    mask-image: url('icons/dark/unread_locked.svg');}
+    -webkit-mask-image: url('icons/unread_locked.svg');
+    mask-image: url('icons/unread_locked.svg');}
 #forums td.unread_locked_sticky:before {
-    -webkit-mask-image: url('icons/dark/unread_locked_sticky.svg');
-    mask-image: url('icons/dark/unread_locked_sticky.svg');}
+    -webkit-mask-image: url('icons/unread_locked_sticky.svg');
+    mask-image: url('icons/unread_locked_sticky.svg');}
 tr.likes td[id^="likers_"] >strong:nth-of-type(1),
 .forum_post tr.likes >td:first-child a:nth-child(1) {
-    -webkit-mask-image: url('icons/dark/like.svg');
-    mask-image: url('icons/dark/like.svg');}
+    -webkit-mask-image: url('icons/like.svg');
+    mask-image: url('icons/like.svg');}
 tr.likes td[id^="likers_"] >strong:nth-of-type(2),
 .forum_post tr.likes >td:first-child a:nth-child(2) {
-    -webkit-mask-image: url('icons/dark/dislike.svg');
-    mask-image: url('icons/dark/dislike.svg');}
+    -webkit-mask-image: url('icons/dislike.svg');
+    mask-image: url('icons/dislike.svg');}
 #bb_bold {
-    -webkit-mask-image: url('icons/dark/bbbutt/bold.svg');
-    mask-image: url('icons/dark/bbbutt/bold.svg');}
+    -webkit-mask-image: url('icons/bbbutt/bold.svg');
+    mask-image: url('icons/bbbutt/bold.svg');}
 #bb_und {
-    -webkit-mask-image: url('icons/dark/bbbutt/und.svg');
-    mask-image: url('icons/dark/bbbutt/und.svg');}
+    -webkit-mask-image: url('icons/bbbutt/und.svg');
+    mask-image: url('icons/bbbutt/und.svg');}
 #bb_ita {
-    -webkit-mask-image: url('icons/dark/bbbutt/ita.svg');
-    mask-image: url('icons/dark/bbbutt/ita.svg');}
+    -webkit-mask-image: url('icons/bbbutt/ita.svg');
+    mask-image: url('icons/bbbutt/ita.svg');}
 #bb_img {
-    -webkit-mask-image: url('icons/dark/bbbutt/img.svg');
-    mask-image: url('icons/dark/bbbutt/img.svg');}
+    -webkit-mask-image: url('icons/bbbutt/img.svg');
+    mask-image: url('icons/bbbutt/img.svg');}
 #bb_link {
-    -webkit-mask-image: url('icons/dark/bbbutt/link.svg');
-    mask-image: url('icons/dark/bbbutt/link.svg');}
+    -webkit-mask-image: url('icons/bbbutt/link.svg');
+    mask-image: url('icons/bbbutt/link.svg');}
 #bb_strk {
-    -webkit-mask-image: url('icons/dark/bbbutt/strk.svg');
-    mask-image: url('icons/dark/bbbutt/strk.svg');}
+    -webkit-mask-image: url('icons/bbbutt/strk.svg');
+    mask-image: url('icons/bbbutt/strk.svg');}
 #bb_h1 {
-    -webkit-mask-image: url('icons/dark/bbbutt/h1.svg');
-    mask-image: url('icons/dark/bbbutt/h1.svg');}
+    -webkit-mask-image: url('icons/bbbutt/h1.svg');
+    mask-image: url('icons/bbbutt/h1.svg');}
 #bb_h2 {
-    -webkit-mask-image: url('icons/dark/bbbutt/h2.svg');
-    mask-image: url('icons/dark/bbbutt/h2.svg');}
+    -webkit-mask-image: url('icons/bbbutt/h2.svg');
+    mask-image: url('icons/bbbutt/h2.svg');}
 #bb_h3 {
-    -webkit-mask-image: url('icons/dark/bbbutt/h3.svg');
-    mask-image: url('icons/dark/bbbutt/h3.svg');}
+    -webkit-mask-image: url('icons/bbbutt/h3.svg');
+    mask-image: url('icons/bbbutt/h3.svg');}
 #bb_h4 {
-    -webkit-mask-image: url('icons/dark/bbbutt/h4.svg');
-    mask-image: url('icons/dark/bbbutt/h4.svg');}
+    -webkit-mask-image: url('icons/bbbutt/h4.svg');
+    mask-image: url('icons/bbbutt/h4.svg');}
 #bb_h5 {
-    -webkit-mask-image: url('icons/dark/bbbutt/h5.svg');
-    mask-image: url('icons/dark/bbbutt/h5.svg');}
+    -webkit-mask-image: url('icons/bbbutt/h5.svg');
+    mask-image: url('icons/bbbutt/h5.svg');}
 #bb_h6 {
-    -webkit-mask-image: url('icons/dark/bbbutt/h6.svg');
-    mask-image: url('icons/dark/bbbutt/h6.svg');}
+    -webkit-mask-image: url('icons/bbbutt/h6.svg');
+    mask-image: url('icons/bbbutt/h6.svg');}
 #bb_color {
-    -webkit-mask-image: url('icons/dark/bbbutt/color.svg');
-    mask-image: url('icons/dark/bbbutt/color.svg');}
+    -webkit-mask-image: url('icons/bbbutt/color.svg');
+    mask-image: url('icons/bbbutt/color.svg');}
 #bb_tex {
-    -webkit-mask-image: url('icons/dark/bbbutt/tex.svg');
-    mask-image: url('icons/dark/bbbutt/tex.svg');}
+    -webkit-mask-image: url('icons/bbbutt/tex.svg');
+    mask-image: url('icons/bbbutt/tex.svg');}
 #bb_quote {
-    -webkit-mask-image: url('icons/dark/bbbutt/quote.svg');
-    mask-image: url('icons/dark/bbbutt/quote.svg');}
+    -webkit-mask-image: url('icons/bbbutt/quote.svg');
+    mask-image: url('icons/bbbutt/quote.svg');}
 #bb_list {
-    -webkit-mask-image: url('icons/dark/bbbutt/list.svg');
-    mask-image: url('icons/dark/bbbutt/list.svg');}
+    -webkit-mask-image: url('icons/bbbutt/list.svg');
+    mask-image: url('icons/bbbutt/list.svg');}
 #bb_spoil {
-    -webkit-mask-image: url('icons/dark/bbbutt/spoil.svg');
-    mask-image: url('icons/dark/bbbutt/spoil.svg');}
+    -webkit-mask-image: url('icons/bbbutt/spoil.svg');
+    mask-image: url('icons/bbbutt/spoil.svg');}
 #bb_cent {
-    -webkit-mask-image: url('icons/dark/bbbutt/cent.svg');
-    mask-image: url('icons/dark/bbbutt/cent.svg');}
+    -webkit-mask-image: url('icons/bbbutt/cent.svg');
+    mask-image: url('icons/bbbutt/cent.svg');}
 #bb_lef {
-    -webkit-mask-image: url('icons/dark/bbbutt/lef.svg');
-    mask-image: url('icons/dark/bbbutt/lef.svg');}
+    -webkit-mask-image: url('icons/bbbutt/lef.svg');
+    mask-image: url('icons/bbbutt/lef.svg');}
 #bb_righ {
-    -webkit-mask-image: url('icons/dark/bbbutt/righ.svg');
-    mask-image: url('icons/dark/bbbutt/righ.svg');}
+    -webkit-mask-image: url('icons/bbbutt/righ.svg');
+    mask-image: url('icons/bbbutt/righ.svg');}
 #bb_pre {
-    -webkit-mask-image: url('icons/dark/bbbutt/pre.svg');
-    mask-image: url('icons/dark/bbbutt/pre.svg');}
+    -webkit-mask-image: url('icons/bbbutt/pre.svg');
+    mask-image: url('icons/bbbutt/pre.svg');}
 #bb_youtube {
-    -webkit-mask-image: url('icons/dark/bbbutt/youtube.svg');
-    mask-image: url('icons/dark/bbbutt/youtube.svg');}
+    -webkit-mask-image: url('icons/bbbutt/youtube.svg');
+    mask-image: url('icons/bbbutt/youtube.svg');}
 .torrent_table #user_rating_icon img,
 .inventory .item_li.featured:before,
 #shop .item_li.featured:before {
-    -webkit-mask-image: url('icons/dark/featured.svg');
-    mask-image: url('icons/dark/featured.svg');}
+    -webkit-mask-image: url('icons/featured.svg');
+    mask-image: url('icons/featured.svg');}
 #stats_leeching a:before,
 a[title="Download"],
 #index #freeleech .group_torrent >span:first-child a {
-    -webkit-mask-image: url('icons/dark/download.svg');
-    mask-image: url('icons/dark/download.svg');}
+    -webkit-mask-image: url('icons/download.svg');
+    mask-image: url('icons/download.svg');}
 #stats_seeding a:before,
 #requests table.border a[href^="upload.php"] {
-    -webkit-mask-image: url('icons/dark/upload.svg');
-    mask-image: url('icons/dark/upload.svg');}
+    -webkit-mask-image: url('icons/upload.svg');
+    mask-image: url('icons/upload.svg');}
 td img[alt="Ratio"],
 .profile .box_stats #ratio .stat:before,
 #stats_ratio:before {
-    -webkit-mask-image: url('icons/dark/ratio.svg');
-    mask-image: url('icons/dark/ratio.svg');}
+    -webkit-mask-image: url('icons/ratio.svg');
+    mask-image: url('icons/ratio.svg');}
 .torrent_table .show_torrents_link:after,
 #nav_userinfo a:after,
 #stats_ratio .stat:after {
-    -webkit-mask-image: url('icons/dark/show.svg');
-    mask-image: url('icons/dark/show.svg');}
+    -webkit-mask-image: url('icons/show.svg');
+    mask-image: url('icons/show.svg');}
 #stats_share_score a:before,
 .profile .box_stats #share_score .stat:before,
 img[title="Snatches"] {
-    -webkit-mask-image: url('icons/dark/snatches.svg');
-    mask-image: url('icons/dark/snatches.svg');}
+    -webkit-mask-image: url('icons/snatches.svg');
+    mask-image: url('icons/snatches.svg');}
 #stats_share_score a:before,
 .profile .box_stats #share_score .stat:before {
     transform: scaleX(-1) rotate(90deg);}
@@ -376,79 +368,70 @@ img[title="Downloaded"],
 img[title="Uploaded"],
 img[title="Leechers"],
 img[title="Seeders"] {
-    -webkit-mask-image: url('icons/dark/seeders.svg');
-    mask-image: url('icons/dark/seeders.svg');}
+    -webkit-mask-image: url('icons/seeders.svg');
+    mask-image: url('icons/seeders.svg');}
 img[title="Downloaded"],
 img[title="Leechers"] {
     transform:scaleY(-1);}
 a[title="Use a FL Token"] {
-    -webkit-mask-image: url('icons/dark/tor/fl.svg');
-    mask-image: url('icons/dark/tor/fl.svg');}
+    -webkit-mask-image: url('icons/tor/fl.svg');
+    mask-image: url('icons/tor/fl.svg');}
 #collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
 #newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(1),
 a[title="Report"] {
-    -webkit-mask-image: url('icons/dark/tor/rp.svg');
-    mask-image: url('icons/dark/tor/rp.svg');}
+    -webkit-mask-image: url('icons/tor/rp.svg');
+    mask-image: url('icons/tor/rp.svg');}
 a[title="External Link"] {
-    -webkit-mask-image: url('icons/dark/tor/ln.svg');
-    mask-image: url('icons/dark/tor/ln.svg');}
+    -webkit-mask-image: url('icons/tor/ln.svg');
+    mask-image: url('icons/tor/ln.svg');}
 a[title="Permalink"] {
-    -webkit-mask-image: url('icons/dark/tor/pl.svg');
-    mask-image: url('icons/dark/tor/pl.svg');}
+    -webkit-mask-image: url('icons/tor/pl.svg');
+    mask-image: url('icons/tor/pl.svg');}
 a[title="Original Group"] {
-    -webkit-mask-image: url('icons/dark/tor/og.svg');
-    mask-image: url('icons/dark/tor/og.svg');}
+    -webkit-mask-image: url('icons/tor/og.svg');
+    mask-image: url('icons/tor/og.svg');}
 a[onclick^="Edit"],
 a[title="Edit"] {
-    -webkit-mask-image: url('icons/dark/tor/ed.svg');
-    mask-image: url('icons/dark/tor/ed.svg');}
+    -webkit-mask-image: url('icons/tor/ed.svg');
+    mask-image: url('icons/tor/ed.svg');}
 .inventory .trash_icon,
 a[title="Remove"] {
-    -webkit-mask-image: url('icons/dark/tor/rm.svg');
-    mask-image: url('icons/dark/tor/rm.svg');}
+    -webkit-mask-image: url('icons/tor/rm.svg');
+    mask-image: url('icons/tor/rm.svg');}
 .torrent_table .addbookmark {
-    -webkit-mask-image: url('icons/dark/addbookmark.svg');
-    mask-image: url('icons/dark/addbookmark.svg');}
+    -webkit-mask-image: url('icons/addbookmark.svg');
+    mask-image: url('icons/addbookmark.svg');}
 .torrent_table .removebookmark {
-    -webkit-mask-image: url('icons/dark/removebookmark.svg');
-    mask-image: url('icons/dark/removebookmark.svg');}
+    -webkit-mask-image: url('icons/removebookmark.svg');
+    mask-image: url('icons/removebookmark.svg');}
 .xdsoft_datetimepicker .xdsoft_next:hover:active, /*revisit*/
 .xdsoft_datetimepicker .xdsoft_prev:hover:active,
 .xdsoft_datetimepicker .xdsoft_next,
 .xdsoft_datetimepicker .xdsoft_prev,
 .prev,
 .next {
-    -webkit-mask-image: url('icons/dark/prev.svg');
-    mask-image: url('icons/dark/prev.svg');}
+    -webkit-mask-image: url('icons/prev.svg');
+    mask-image: url('icons/prev.svg');}
 .xdsoft_datetimepicker .xdsoft_next,
 .next {
     transform: scaleX(-1);}
 .colhead_dark a[onclick^="Quote"],
 .head a[onclick^="Quote"] {
-    -webkit-mask-image: url('icons/dark/quote.svg');
-    mask-image: url('icons/dark/quote.svg');}
+    -webkit-mask-image: url('icons/quote.svg');
+    mask-image: url('icons/quote.svg');}
 #userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a img[alt="Last read post"],
 .last_read {
-    -webkit-mask-image: url('icons/dark/last_read.svg');
-    mask-image: url('icons/dark/last_read.svg');}
+    -webkit-mask-image: url('icons/last_read.svg');
+    mask-image: url('icons/last_read.svg');}
 .read ~td .last_read,
 .read_sticky ~td .last_read,
 .read_locked ~td .last_read,
 .read_locked_sticky ~td .last_read,
 #userhistory .colhead_dark a img[alt="Last read post"] {
-    -webkit-mask-image: url('icons/dark/read_last_read.svg');
-    mask-image: url('icons/dark/read_last_read.svg');}
-#nav_useredit a {
-    -webkit-mask-image: url('icons/dark/nav/useredit.svg');
-    mask-image: url('icons/dark/nav/useredit.svg');}
-#nav_logout a {
-    -webkit-mask-image: url('icons/dark/nav/logout.svg');
-    mask-image: url('icons/dark/nav/logout.svg');}
-#nav_donate a {
-    -webkit-mask-image: url('icons/dark/nav/donate.svg');
-    mask-image: url('icons/dark/nav/donate.svg');}
+    -webkit-mask-image: url('icons/read_last_read.svg');
+    mask-image: url('icons/read_last_read.svg');}
 
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
@@ -496,31 +479,24 @@ a[title="Remove"] {
 .meta {	background-image: url(weblinks/metacritic.svg);}
 .gamespot {	background-image: url(weblinks/GameSpot.svg);}
 
-.Bandcamp {background-image: url("weblinks/dark/Bandcamp.svg");}
-.Discogs {background-image: url("weblinks/dark/Discogs.svg");}
 .MusicBrainz {background-image: url("weblinks/MusicBrainz.svg");}
 .VGMdb {background-image: url("weblinks/VGMdb.svg");
 filter: drop-shadow(0px 0 1px black);}
-.GamesWebsite {background-image: url("weblinks/dark/GamesWebsite.svg");}
 .BoardGameGeek {background-image: url("weblinks/BoardGameGeek.png");}
 .Desura {background-image: url("weblinks/Desura.svg");}
 .DriveThruRPG {background-image: url("weblinks/DriveThruRPG.png");}
 .GameFAQs {background-image: url("weblinks/GameFAQs.svg");}
 .Giantbomb {background-image: url("weblinks/GiantBomb.svg");}
-.GOG {background-image: url("weblinks/dark/GOG.svg");}
 .GooglePlay {background-image: url("weblinks/GooglePlay.svg");}
-.HowLongToBeat {background-image: url("weblinks/dark/HowLongToBeat.svg");}
 .HumbleBundle {background-image: url("weblinks/HumbleBundle.svg");}
 .Itch {background-image: url("weblinks/Itch.svg");}
 .iTunes {background-image: url("weblinks/iTunes.svg");}
 .MobyGames {background-image: url("weblinks/MobyGames.svg");}
-.NexusMods {background-image: url("weblinks/dark/NexusMods.svg");}
 .Origin {background-image: url("weblinks/Origin.svg");}
 .Ouya {background-image: url("weblinks/Ouya.svg");}
 .PSN {background-image: url("weblinks/PSN.svg");}
 .RPGGeek {background-image: url("weblinks/RPGGeek.png");}
 .RPGnet {background-image: url("weblinks/RPGnet.svg");}
-.Steam {background-image: url("weblinks/dark/Steam.svg");}
 .VNDB {background-image: url("weblinks/VNDB.png");}
 .Wikipedia {background-image: url("weblinks/Wikipedia.png");}
 .XboxStore {background-image: url("weblinks/XboxStore.svg");}
@@ -1412,18 +1388,19 @@ strong.important_text,
 
 #toplink {
     position: absolute;
+    display: contents;
     top: 0;
     left: 0;
-    width: 200px;
-    z-index: 10;
-    text-align: center;
-    line-height: 36px;}
+    width: 0;
+    height: 0;
+    z-index: 999;}
 #toplink a {
     position: fixed;
     z-index: 0;
-    width: 200px;
-    left: 0;
-    bottom: 0;}
+    width: 64px;
+    height: 64px;
+    right: 10px;
+    bottom: 10px;}
 
 .lightbox {
     position: fixed;
@@ -1812,8 +1789,16 @@ i.fa.fa-fl-pots {
     box-shadow: var(--p-header-shdw);
     border: var(--p-main-brdr);
     border-top: 0;
-    -webkit-clip-path: polygon(-10px 0, calc(100% + 10px) 0, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
-    clip-path: polygon(-10px 0, calc(100% + 10px) 0, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));} /* shadow cut off */
+    -webkit-clip-path: polygon(
+        -10px 0,
+        calc(100% + 10px) 0,
+        calc(100% + 10px) calc(100% + 10px),
+        -10px calc(100% + 10px));
+    clip-path: polygon(
+        -10px 0,
+        calc(100% + 10px) 0,
+        calc(100% + 10px) calc(100% + 10px),
+        -10px calc(100% + 10px));} /* shadow cut off */
 .save_message {
     display: block;
     background: var(--p-head-grdnt);}
@@ -2981,12 +2966,28 @@ li:not(.suggested_similar) .similar_votes >span {
     z-index: 999;}
 #content .sub,
 #userinfo_username .sub {
-    -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) -10px, -10px -10px);
-    clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) -10px, -10px -10px);}
+    -webkit-clip-path: polygon(
+        -10px -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) -10px,
+        -10px -10px);
+    clip-path: polygon(
+        -10px -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) -10px,
+        -10px -10px);}
 #userinfo_username .sub[style="visibility: visible;"],
 #content .sub[style="visibility: visible;"] {
-    -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
-    clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));}
+    -webkit-clip-path: polygon(
+        -10px -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) calc(100% + 10px),
+        -10px calc(100% + 10px));
+    clip-path: polygon(
+        -10px -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) calc(100% + 10px),
+        -10px calc(100% + 10px));}
 .sub span {
     width: 100%;
     line-height: 26px;
@@ -3019,8 +3020,16 @@ li:not(.suggested_similar) .similar_votes >span {
     box-shadow: var(--p-header-shdw);
     z-index: -1;}
 .sub span:first-child a:before {
-    -webkit-clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));
-    clip-path: polygon(-5px -1px, calc(100% + 5px) -1px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));}
+    -webkit-clip-path: polygon(
+        -5px -1px,
+        calc(100% + 5px) -1px,
+        calc(100% + 5px) calc(100% + 5px),
+        -5px calc(100% + 5px));
+    clip-path: polygon(
+        -5px -1px,
+        calc(100% + 5px) -1px,
+        calc(100% + 5px) calc(100% + 5px),
+        -5px calc(100% + 5px));}
 #userinfo_username .sub {
     white-space: nowrap;
     z-index: 99;
@@ -3967,12 +3976,28 @@ div.breadcrumbs,
     left: 160px;
     padding: 5px;
     z-index: 99;
-    -webkit-clip-path: polygon(-5px -5px, -5px -5px, -5px -5px, -5px -5px);
-    clip-path: polygon(-5px -5px, -5px -5px, -5px -5px, -5px -5px);}
+    -webkit-clip-path: polygon(
+        -5px -5px,
+        -5px -5px,
+        -5px -5px,
+        -5px -5px);
+    clip-path: polygon(
+        -5px -5px,
+        -5px -5px,
+        -5px -5px,
+        -5px -5px);}
 .avatar:hover .forumstat {
     opacity: 1;
-    -webkit-clip-path: polygon(-5px -5px, calc(100% + 5px) -5px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));
-    clip-path: polygon(-5px -5px, calc(100% + 5px) -5px, calc(100% + 5px) calc(100% + 5px), -5px calc(100% + 5px));}
+    -webkit-clip-path: polygon(
+        -5px -5px,
+        calc(100% + 5px) -5px,
+        calc(100% + 5px) calc(100% + 5px),
+        -5px calc(100% + 5px));
+    clip-path: polygon(
+        -5px -5px,
+        calc(100% + 5px) -5px,
+        calc(100% + 5px) calc(100% + 5px),
+        -5px calc(100% + 5px));}
 
 .profile .box_stats:hover .offline,
 .profile .box_stats:hover #last_seen,

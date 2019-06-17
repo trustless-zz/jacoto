@@ -241,8 +241,16 @@ body {
     padding: 5px 8px;
     display: block;}
 #header #userinfo_stats {
-    -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) 30px, -10px 30px);
-    clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) 30px, -10px 30px);
+    -webkit-clip-path: polygon(
+        -10px -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) 30px,
+        -10px 30px);
+    clip-path: polygon(
+        -10px -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) 30px,
+        -10px 30px);
     position: absolute;
     top: 0;
     right: 0;
@@ -253,8 +261,16 @@ body {
     flex-flow: column;
     transition-delay: .3s;}
 #header #userinfo_stats:hover {
-    -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
-    clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
+    -webkit-clip-path: polygon(
+        -10px -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) calc(100% + 10px),
+        -10px calc(100% + 10px));
+    clip-path: polygon(
+        -10px -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) calc(100% + 10px),
+        -10px calc(100% + 10px));
     transition-delay: 0s;}
     
 #header #alerts {
@@ -282,8 +298,8 @@ body {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: 20px 20px;
-    -webkit-mask-image: url('icons/dark/toolbox.svg');
-    mask-image: url('icons/dark/toolbox.svg');
+    -webkit-mask-image: url('icons/toolbox.svg');
+    mask-image: url('icons/toolbox.svg');
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: 20px 20px;}
@@ -301,12 +317,28 @@ body {
     width: auto;
     top: 0;
     right: 40px;
-    -webkit-clip-path: polygon(calc(100% + 10px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) -10px);
-    clip-path: polygon(calc(100% + 10px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) -10px);
+    -webkit-clip-path: polygon(
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) -10px);
+    clip-path: polygon(
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) -10px);
     transition-delay: 0s;}
 #header #alerts:hover .blend {
-    -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
-    clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
+    -webkit-clip-path: polygon(
+        -10px -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) calc(100% + 10px),
+        -10px calc(100% + 10px));
+    clip-path: polygon(
+        -10px -10px,
+        calc(100% + 10px) -10px,
+        calc(100% + 10px) calc(100% + 10px),
+        -10px calc(100% + 10px));
     transition-delay: .3s;}
 #header #alerts a {
     background-color: var(--c-input);
@@ -370,8 +402,16 @@ body {
     color: var(--c-anchor-hvr);}
     
 #header #userinfo_stats:before {
-    -webkit-clip-path: polygon(-10px 32px, calc(100% + 10px) 32px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
-    clip-path: polygon(-10px 32px, calc(100% + 10px) 32px, calc(100% + 10px) calc(100% + 10px), -10px calc(100% + 10px));
+    -webkit-clip-path: polygon(
+        -10px 32px,
+        calc(100% + 10px) 32px,
+        calc(100% + 10px) calc(100% + 10px),
+        -10px calc(100% + 10px));
+    clip-path: polygon(
+        -10px 32px,
+        calc(100% + 10px) 32px,
+        calc(100% + 10px) calc(100% + 10px),
+        -10px calc(100% + 10px));
     content: '';
     position: absolute;
     width: 100%;
@@ -464,15 +504,35 @@ body {
 #stats_ratio span.stat:before {
     content: ':';}
 
-#header #nav_donate a,
-#header #nav_logout a,
-#header #nav_useredit a {
+#nav_donate a,
+#nav_logout a,
+#nav_useredit a {
     display: block;
     width: 20px;
     height: 20px;
     padding: 7px 5px;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center;
+    mask-repeat: no-repeat;
     mask-size: 20px 20px;
-    -webkit-mask-size: 20px 20px;}
+    -webkit-mask-size: 20px 20px;
+    background-color: var(--c-anchor);}
+#nav_useredit a {
+    -webkit-mask-image: url('icons/nav/useredit.svg');
+    mask-image: url('icons/nav/useredit.svg');}
+#nav_logout a {
+    -webkit-mask-image: url('icons/nav/logout.svg');
+    mask-image: url('icons/nav/logout.svg');}
+#nav_donate a {
+    -webkit-mask-image: url('icons/nav/donate.svg');
+    mask-image: url('icons/nav/donate.svg');}
+#nav_useredit a:hover {
+    background-color: var(--c-anchor-hvr);}
+#nav_logout a:hover {
+    background-color: var(--c-off);}
+#nav_donate a:hover {
+    background-color: var(--c-donate);}
     
 .global_buffs {
     position: absolute !important;
@@ -610,8 +670,8 @@ body {
     #nav_userinfo a:before {
         transition-delay: .5s;
         opacity: 1;
-        mask-image: url('icons/dark/nav/user.svg');
-        -webkit-mask-image: url('icons/dark/nav/user.svg');
+        mask-image: url('icons/nav/user.svg');
+        -webkit-mask-image: url('icons/nav/user.svg');
         background-color: var(--c-txt);
         content: '';
         right: 26px;
@@ -630,13 +690,29 @@ body {
         -o-transition: all .1s linear;
         transition: all .1s linear;
         transition-delay: .5s;
-        -webkit-clip-path: polygon(calc(100% - 50px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, calc(100% - 50px) 300px);
-        clip-path: polygon(calc(100% - 50px) -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, calc(100% - 50px) 300px);}
+        -webkit-clip-path: polygon(
+            calc(100% - 50px) -10px,
+            calc(100% + 10px) -10px,
+            calc(100% + 10px) 300px,
+            calc(100% - 50px) 300px);
+        clip-path: polygon(
+            calc(100% - 50px) -10px,
+            calc(100% + 10px) -10px,
+            calc(100% + 10px) 300px,
+            calc(100% - 50px) 300px);}
     #userinfo_username:hover {
         background-color: var(--c-input);
         transition-delay: 0s;
-        -webkit-clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, -10px 300px);
-        clip-path: polygon(-10px -10px, calc(100% + 10px) -10px, calc(100% + 10px) 300px, -10px 300px);}
+        -webkit-clip-path: polygon(
+            -10px -10px,
+            calc(100% + 10px) -10px,
+            calc(100% + 10px) 300px,
+            -10px 300px);
+        clip-path: polygon(
+            -10px -10px,
+            calc(100% + 10px) -10px,
+            calc(100% + 10px) 300px,
+            -10px 300px);}
 }
 @media (max-width: 1185px) {
     .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
