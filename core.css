@@ -47,6 +47,32 @@
     --p-dot3:							-.02142857142em;
     --p-head:                           18px;}
 
+@font-face {
+    font-family: "OpenSans";
+    src: url(OpenSans-Regular.ttf);}
+@font-face {
+    font-family: "OpenSans";
+    src: url(OpenSans-Italic.ttf);
+    font-style: italic;}
+@font-face {
+    font-family: "OpenSans";
+    src: url(OpenSans-SemiBold.ttf);
+    font-weight: 600;}
+@font-face {
+    font-family: "OpenSans";
+    src: url(OpenSans-SemiBoldItalic.ttf);
+    font-weight: 600;
+    font-style: italic;}
+@font-face {
+    font-family: "OpenSans";
+    src: url(OpenSans-Bold.ttf);
+    font-weight: bold;}
+@font-face {
+    font-family: "OpenSans";
+    src: url(OpenSans-BoldItalic.ttf);
+    font-weight: bold;   
+    font-style: italic;}
+
 /** Get More News - duplicate news bug fix **/
 #index .box.news_post:empty,
 #index .box.news_post >.head:nth-child(3),
@@ -466,65 +492,39 @@ a[title="Remove"] {
     mask-size: auto 18px;}
 /** /masks **/
 
-.ign {	background: url(weblinks/IGN.svg);}
-.meta {	background: url(weblinks/metacritic.svg);}
-.gamespot {	background: url(weblinks/GameSpot.svg);}
+.ign {	background-image: url(weblinks/IGN.svg);}
+.meta {	background-image: url(weblinks/metacritic.svg);}
+.gamespot {	background-image: url(weblinks/GameSpot.svg);}
 
-.Bandcamp {background: url("weblinks/dark/Bandcamp.svg");}
-.Discogs {background: url("weblinks/dark/Discogs.svg");}
-.MusicBrainz {background: url("weblinks/MusicBrainz.svg");}
-.VGMdb {background: url("weblinks/VGMdb.svg");
+.Bandcamp {background-image: url("weblinks/dark/Bandcamp.svg");}
+.Discogs {background-image: url("weblinks/dark/Discogs.svg");}
+.MusicBrainz {background-image: url("weblinks/MusicBrainz.svg");}
+.VGMdb {background-image: url("weblinks/VGMdb.svg");
 filter: drop-shadow(0px 0 1px black);}
-.GamesWebsite {background: url("weblinks/dark/GamesWebsite.svg");}
-.BoardGameGeek {background: url("weblinks/BoardGameGeek.png");}
-.Desura {background: url("weblinks/Desura.svg");}
-.DriveThruRPG {background: url("weblinks/DriveThruRPG.png");}
-.GameFAQs {background: url("weblinks/GameFAQs.svg");}
-.Giantbomb {background: url("weblinks/GiantBomb.svg");}
-.GOG {background: url("weblinks/dark/GOG.svg");}
-.GooglePlay {background: url("weblinks/GooglePlay.svg");}
-.HowLongToBeat {background: url("weblinks/dark/HowLongToBeat.svg");}
-.HumbleBundle {background: url("weblinks/HumbleBundle.svg");}
-.Itch {background: url("weblinks/Itch.svg");}
-.iTunes {background: url("weblinks/iTunes.svg");}
-.MobyGames {background: url("weblinks/MobyGames.svg");}
-.NexusMods {background: url("weblinks/dark/NexusMods.svg");}
-.Origin {background: url("weblinks/Origin.svg");}
-.Ouya {background: url("weblinks/Ouya.svg");}
-.PSN {background: url("weblinks/PSN.svg");}
-.RPGGeek {background: url("weblinks/RPGGeek.png");}
-.RPGnet {background: url("weblinks/RPGnet.svg");}
-.Steam {background: url("weblinks/dark/Steam.svg");}
-.VNDB {background: url("weblinks/VNDB.png");}
-.Wikipedia {background: url("weblinks/Wikipedia.png");}
-.XboxStore {background: url("weblinks/XboxStore.svg");}
-.PCGamingWiki {background: url("weblinks/PCGamingWiki.svg");}
-
-@font-face {
-    font-family: "OpenSans";
-    src: url(OpenSans-Regular.ttf);}
-@font-face {
-    font-family: "OpenSans";
-    src: url(OpenSans-Italic.ttf);
-    font-style: italic;}
-@font-face {
-    font-family: "OpenSans";
-    src: url(OpenSans-SemiBold.ttf);
-    font-weight: 600;}
-@font-face {
-    font-family: "OpenSans";
-    src: url(OpenSans-SemiBoldItalic.ttf);
-    font-weight: 600;
-    font-style: italic;}
-@font-face {
-    font-family: "OpenSans";
-    src: url(OpenSans-Bold.ttf);
-    font-weight: bold;}
-@font-face {
-    font-family: "OpenSans";
-    src: url(OpenSans-BoldItalic.ttf);
-    font-weight: bold;   
-    font-style: italic;}
+.GamesWebsite {background-image: url("weblinks/dark/GamesWebsite.svg");}
+.BoardGameGeek {background-image: url("weblinks/BoardGameGeek.png");}
+.Desura {background-image: url("weblinks/Desura.svg");}
+.DriveThruRPG {background-image: url("weblinks/DriveThruRPG.png");}
+.GameFAQs {background-image: url("weblinks/GameFAQs.svg");}
+.Giantbomb {background-image: url("weblinks/GiantBomb.svg");}
+.GOG {background-image: url("weblinks/dark/GOG.svg");}
+.GooglePlay {background-image: url("weblinks/GooglePlay.svg");}
+.HowLongToBeat {background-image: url("weblinks/dark/HowLongToBeat.svg");}
+.HumbleBundle {background-image: url("weblinks/HumbleBundle.svg");}
+.Itch {background-image: url("weblinks/Itch.svg");}
+.iTunes {background-image: url("weblinks/iTunes.svg");}
+.MobyGames {background-image: url("weblinks/MobyGames.svg");}
+.NexusMods {background-image: url("weblinks/dark/NexusMods.svg");}
+.Origin {background-image: url("weblinks/Origin.svg");}
+.Ouya {background-image: url("weblinks/Ouya.svg");}
+.PSN {background-image: url("weblinks/PSN.svg");}
+.RPGGeek {background-image: url("weblinks/RPGGeek.png");}
+.RPGnet {background-image: url("weblinks/RPGnet.svg");}
+.Steam {background-image: url("weblinks/dark/Steam.svg");}
+.VNDB {background-image: url("weblinks/VNDB.png");}
+.Wikipedia {background-image: url("weblinks/Wikipedia.png");}
+.XboxStore {background-image: url("weblinks/XboxStore.svg");}
+.PCGamingWiki {background-image: url("weblinks/PCGamingWiki.svg");}
 
 @keyframes expandWidth {
 	0% {transform: scaleX(0);}
@@ -6105,10 +6105,8 @@ span.size5 img {
     width: 16px;
     height: 16px;
     position: absolute;
-    left: -25px;
+    left: 0;
     top: 2px;}
-#wrapper .profile .box_stats #share_score .stat:before {
-    left: 0;}
 .profile .box_stats #upload .stat {
 	background: url("https://gazellegames.net/static/styles/game_room/images/icons/sword_upload.png") no-repeat left center;}
 .profile .box_stats #download .stat {
