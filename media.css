@@ -852,3 +852,40 @@ body {
     #shop li.featured {
         width: calc(100% - 10px);}
 }
+
+/* games >filter */ /* 53% */ /* revisit */
+@media (max-width: 1405px) {
+    .filter_torrents input.inputtext[name="filelist"],
+    .filter_torrents input.inputtext.smaller {
+        width: 553px;}
+}
+@media (max-width: 1305px) {
+    .filter_torrents input.inputtext[name="filelist"],
+    .filter_torrents input.inputtext.smaller {
+        width: 506px;}
+}
+@media (max-width: 1205px) {
+    .filter_torrents input.inputtext[name="filelist"],
+    .filter_torrents input.inputtext.smaller {
+        width: 459px;}
+}
+@media (max-width: 1105px) {
+    .filter_torrents input.inputtext[name="filelist"],
+    .filter_torrents input.inputtext.smaller {
+        width: 412px;}
+}
+@media (max-width: 1005px) {
+    .filter_torrents input.inputtext[name="filelist"],
+    .filter_torrents input.inputtext.smaller {
+        width: 365px;}
+}
+@media (max-width: 905px) {
+    .filter_torrents input.inputtext[name="filelist"],
+    .filter_torrents input.inputtext.smaller {
+        width: 318px;}
+}
+@media (max-width: 805px) {
+    .filter_torrents input.inputtext[name="filelist"],
+    .filter_torrents input.inputtext.smaller {
+        width: 271px;}
+}

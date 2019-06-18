@@ -475,8 +475,8 @@ a[title="Remove"] {
     mask-size: auto 18px;}
 /** /masks **/
 
-.ign {	background-image: url(weblinks/IGN.svg);}
-.meta {	background-image: url(weblinks/metacritic.svg);}
+.ign {background-image: url(weblinks/IGN.svg);}
+.meta {background-image: url(weblinks/metacritic.svg);}
 .gamespot {	background-image: url(weblinks/GameSpot.svg);}
 
 .MusicBrainz {background-image: url("weblinks/MusicBrainz.svg");}
@@ -911,15 +911,6 @@ a[onclick="BBCode.spoiler(this);"],
 #index #freeleech .group_torrent >span:first-child a {
     display: inline-block;}
 
-#toplink a {
-    background-size: 150px 24px;
-    opacity: 0.3;}
-#toplink a:hover {
-    opacity: 1;
-    background-color: var(--c-colhead-click);}
-#toplink a:hover:active {
-    background-color: var(--c-colhead-act);}
-
 .prev,
 .next {
     width: 24px;
@@ -1203,7 +1194,29 @@ tr.group_torrent >td a:before,
 #stats_ratio .stat:after,
 .torrent_table .show_torrents_link:after,
 #userinfo_stats a:before,
-#nav_userinfo a:before {
+#nav_userinfo a:before,
+
+#color_leeching,
+#color_leeching .torrent_info_tags,
+#color_leeching a,
+#color_seeding,
+#color_seeding .torrent_info_tags,
+#color_seeding a,
+#color_uploaded,
+#color_uploaded .torrent_info_tags,
+#color_uploaded a,
+#color_snatched,
+#color_snatched .torrent_info_tags,
+#color_snatched a,
+#color_downloaded,
+#color_downloaded .torrent_info_tags,
+#color_downloaded a,
+#wrapper .personal_freeleech_label,
+#wrapper .freeleech_label,
+#wrapper .reported_label,
+#wrapper .trumpable_label,
+#wrapper #reported_tag,
+#wrapper #trumpable_tag {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
@@ -1401,6 +1414,14 @@ strong.important_text,
     height: 64px;
     right: 10px;
     bottom: 10px;}
+#toplink a {
+    background-size: 150px 24px;
+    opacity: 0.3;}
+#toplink a:hover {
+    opacity: 1;
+    background-color: var(--c-colhead-click);}
+#toplink a:hover:active {
+    background-color: var(--c-colhead-act);}
 
 .lightbox {
     position: fixed;
@@ -2067,7 +2088,8 @@ table.adventure_table .colhead td {
 #bookmarks #torrent_table td[colspan="3"],
 #torrents .torrent_details .torrent_table .pad.hidden td,
 #torrents .group_torrent td:first-child,
-#artist #torrent_table .group_torrent td[colspan="2"] {
+#artist #torrent_table .group_torrent td[colspan="2"],
+#torrents .torrent_details tr table tr:not(.colhead_dark):not(.colhead) td {
     white-space: normal;}
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
 #artist #torrent_table .group_torrent td[colspan="2"] >a,
@@ -3060,7 +3082,9 @@ li:not(.suggested_similar) .similar_votes >span {
 .thin#user_fight_attacks table.border .colhead,
 #seedtime_tokens #tokens_breakdown .colhead,
 #upload #content >div[style="margin:0px auto;width:700px"] .colhead,
-#user .thin >.header:first-child ~h3 +.box.pad:last-child .colhead {
+#user .thin >.header:first-child ~h3 +.box.pad:last-child .colhead,
+#torrents .torrent_details tr table .colhead,
+#torrents .torrent_details tr table .colhead_dark {
     background: var(--p-subcolhead);}
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
@@ -3085,7 +3109,9 @@ li:not(.suggested_similar) .similar_votes >span {
 #clans #clan_stats >div .colhead td,
 #staff .thin >.box.pad .colhead td,
 #rules table.required_ratio .colhead td,
-.thin#user_fight_attacks table.border .colhead td {
+.thin#user_fight_attacks table.border .colhead td,
+#torrents .torrent_details tr table .colhead td,
+#torrents .torrent_details tr table .colhead_dark td {
     font-weight: normal;
     position: relative;
     font-size: 16px;
@@ -6190,8 +6216,15 @@ span.size5 img {
 #color_downloaded .torrent_info_tags,
 #color_downloaded a {
 	color: var(--c-download);}
+#wrapper .personal_freeleech_label,
 #wrapper .freeleech_label {
     color: var(--c-fl);}
+.linkbox a[onclick^="show_reported("],
+#wrapper .reported_label,
+#wrapper .trumpable_label,
+#wrapper #reported_tag,
+#wrapper #trumpable_tag {
+    color: var(--c-red);}
 
 #color_leeching:hover,
 #color_leeching:hover .torrent_info_tags,
@@ -6208,7 +6241,13 @@ span.size5 img {
 #color_downloaded:hover,
 #color_downloaded:hover .torrent_info_tags,
 #color_downloaded a:hover,
-#wrapper a:hover .freeleech_label {
+#wrapper a:hover .personal_freeleech_label,
+#wrapper a:hover .freeleech_label,
+#wrapper a:hover .reported_label,
+#wrapper a:hover .trumpable_label,
+#wrapper a:hover #reported_tag,
+#wrapper a:hover #trumpable_tag,
+.linkbox a[onclick^="show_reported("]:hover {
     color: var(--c-anchor-hvr);}
 
 tr.group_torrent >td {
