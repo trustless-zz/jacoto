@@ -309,8 +309,8 @@ tr.likes td[id^="likers_"] >strong:nth-of-type(2),
     -webkit-mask-image: url('icons/bbbutt/tex.svg');
     mask-image: url('icons/bbbutt/tex.svg');}
 #bb_quote {
-    -webkit-mask-image: url('icons/bbbutt/quote.svg');
-    mask-image: url('icons/bbbutt/quote.svg');}
+    -webkit-mask-image: url('icons/quote.svg');
+    mask-image: url('icons/quote.svg');}
 #bb_list {
     -webkit-mask-image: url('icons/bbbutt/list.svg');
     mask-image: url('icons/bbbutt/list.svg');}
