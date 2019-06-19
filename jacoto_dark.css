@@ -40,8 +40,8 @@
     --c-anchor: 						rgb(13, 140, 136);						/* #bd002c */
     --c-anchor-hvr: 					rgb(255, 255, 255);							/* #053d3b #630017 */
     --c-anchor-hvr-bcg: 				rgb(8,53,51);                     /* 10,3rd */  /*rgba(18, 201, 194, .1);*/
-	--c-header-shdw: 					rgba(255,255,255,.1);
-    --c-main-shdw:						rgba(255,255,255,.2);
+	--c-header-shdw: 					rgba(0,0,0,.3);
+    --c-main-shdw:						rgba(0,0,0,.5);
     --c-on: 							rgb(29, 145, 0);						/* #1E9400 */
     --c-bonus:                          rgba(177, 232, 0, .2);
     --c-donate:                         rgb(203, 60, 60);
