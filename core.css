@@ -80,6 +80,7 @@
     display: none;}
 
 /** masks **/
+#toplink a,
 td.read:before,
 td.read_sticky:before,
 td.read_locked:before,
@@ -830,7 +831,6 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 #stats_gold a,
 #logo a:before,
 #nav_logout a,
-#toplink a,
 #nav_donate a,
 #nav_useredit a,
 .torrent_table .show_torrents_link,
@@ -1099,7 +1099,6 @@ span.user_title a:hover {
     color: var(--c-anchor-hvr);}
 
 
-#toplink a,
 #taglist a:hover,
 .filter_torrents.advanced #taglist td:hover,
 /* .torrent_details .group_torrent td:first-child a, */
@@ -1398,30 +1397,6 @@ strong.important_text,
 #index span[style="color: orange;"] {
     color: var(--c-orange) !important;
     text-shadow: var(--p-orange);}
-
-#toplink {
-    position: absolute;
-    display: contents;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    z-index: 999;}
-#toplink a {
-    position: fixed;
-    z-index: 0;
-    width: 64px;
-    height: 64px;
-    right: 10px;
-    bottom: 10px;}
-#toplink a {
-    background-size: 150px 24px;
-    opacity: 0.3;}
-#toplink a:hover {
-    opacity: 1;
-    background-color: var(--c-colhead-click);}
-#toplink a:hover:active {
-    background-color: var(--c-colhead-act);}
 
 .lightbox {
     position: fixed;
@@ -1761,6 +1736,7 @@ i.fa.fa-fl-pots {
     font-size: 17px;}
 .global_buffs>div {
     width: calc(200px / 3);
+    float: unset !important;
     padding: 0 !important;
     height: 100%;}
 #wrapper .global_buffs .fa {
@@ -6896,7 +6872,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     background-color: var(--c-edition);
     padding: 8px 0;
     position: absolute;
-    top: 38px;
+    bottom: -33px;
     left: 0;
     width: 100%;
     text-align: center;}
@@ -9210,3 +9186,8 @@ div#fight_skill_points_assign >table {
 .qtip .qtip-tip .qtip-vml,
 .qtip .qtip-tip canvas {
     background-color: var(--c-main-brdr) !important;}
+
+::-webkit-input-placeholder {   color: var(--c-text-s) !important;}
+::-moz-placeholder {            color: var(--c-text-s) !important;}
+:-ms-input-placeholder {        color: var(--c-text-s) !important;}
+:-moz-placeholder {             color: var(--c-text-s) !important;}

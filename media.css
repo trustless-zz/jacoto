@@ -115,6 +115,30 @@ body {
     position: relative;
     z-index: 9;}
 
+    
+#toplink {
+    position: absolute;
+    display: contents;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    z-index: 999;}
+#toplink a {
+    position: fixed;
+    z-index: 0;
+    width: 44px;
+    height: 44px;
+    right: 10px;
+    bottom: 5px;
+    -webkit-mask-image: url('icons/toplink.svg');
+    mask-image: url('icons/toplink.svg');
+    opacity: 0.5;}
+#toplink a:hover {
+    opacity: 1;
+    background-color: var(--c-txt);}
+#toplink a:hover:active {
+    background-color: var(--c-low);}
 /* forum post 'back to top' button */
 #userhistory .colhead_dark span[id*="bar"],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
@@ -750,6 +774,11 @@ body {
         font-size: 11px;}
     #wrapper .global_buffs .buff_text .buff_multiplier {
         font-size: 12px;}
+    #wrapper #toplink a {
+        bottom: 1px;
+        right: 4px;
+        width: 40px;
+        height: 40px;}
 }
 
 

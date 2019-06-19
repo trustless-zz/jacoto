@@ -1,0 +1,90 @@
+﻿@import url(core.css);
+@import url(icons_cdcdcd.css);
+@import url(media.css);
+
+@import url(https://gazellegames.net/static/styles/game_room/cssFiles/holidayeffects.css);
+
+/** COLORS **/
+:root {
+    --c-low:                            rgb(255, 255, 255);
+    --c-quote-brdr:                     rgba(240, 240, 240, .1);
+    --c-quote:                          rgba(240, 240, 240, .05);
+    --c-contrast:                       rgba(255, 255, 255, .2);
+    --c-txt: 							rgb(205, 205, 205);
+    --c-text-s: 						rgb(155, 155, 155);
+    --c-curtain:						rgb(145, 145, 145);
+    --c-sticky-id-brdr:                 rgb(65,  65,  65);
+    --c-input-brdr:						rgb(60, 60, 60);
+    --c-main-brdr:						rgb(55, 55, 55);
+    --c-sticky-2:                       rgb(50, 50, 50);
+    --c-table-brdr: 					rgb(45, 45, 45);
+    --c-tor-rowb: 						rgb(40, 40, 40);
+    --c-body: 							rgb(35, 35, 35);						/*tor-rowa*/
+    --c-tor-row-hvr: 					rgb(30, 30, 30);
+    --c-edition: 						rgb(25, 25, 25);
+    --c-input:							rgb(20, 20, 20);
+    --c-trowb:							rgb(18, 18, 18);                     /*rowb*/
+    --c-tgroup:							rgb(15, 15, 15);                     
+    --c-box: 							rgb(10, 10, 10);                     /*rowa*/
+    --c-item-desc:                      rgba(10, 10, 10, .8);
+    --c-row-hvr:						rgb(5, 5, 5);
+    --c-high:							rgb(0, 0, 0); /**/
+    --c-b1: 							rgb(7, 77, 74); /*rgb(18, 201, 194);*/
+    --c-b2: 							rgb(29, 71, 57); /*rgb(81, 204, 165);*/
+    --c-b3: 							rgb(8,53,51);                     /*~45%*/
+    --c-b4: 							rgb(22,49,40);                     /*~45%*/
+    --c-sb1:                            rgb(8,62,60);                     /* 10,4th */
+    --c-sb2:                            rgb(25,57,46);                     /* 10,4th */
+    --c-hovereffect: 					rgba(0, 0, 0, .8);
+    --c-b00: 							rgba(0, 0, 0, 0);
+    --c-anchor: 						rgb(13, 140, 136);						/* #bd002c */
+    --c-anchor-hvr: 					rgb(255, 255, 255);							/* #053d3b #630017 */
+    --c-anchor-hvr-bcg: 				rgb(8,53,51);                     /* 10,3rd */  /*rgba(18, 201, 194, .1);*/
+	--c-header-shdw: 					rgba(255,255,255,.1);
+    --c-main-shdw:						rgba(255,255,255,.2);
+    --c-on: 							rgb(29, 145, 0);						/* #1E9400 */
+    --c-bonus:                          rgba(177, 232, 0, .2);
+    --c-donate:                         rgb(203, 60, 60);
+    --c-yellow: 						rgb(145, 145, 0);
+    --c-off: 							rgb(163, 0, 0);							/* #910000 */
+    --c-colhead-click:					rgba(00, 00, 00, .15);
+    --c-colhead-act: 					rgba(00, 00, 00, .3);
+    --c-em-bcg: 						rgb(245, 100, 22);
+    --c-em-hvr: 						rgb(199, 81, 18);
+    --c-em-act: 						rgb(245, 173, 134);
+    --c-fl: 							rgb(100, 65, 165);
+    --c-btn-b1: 						rgb(119, 211, 207);
+    --c-btn-b2: 						rgb(151, 212, 193);
+    --c-red:                            rgb(227, 0, 0);                         /* contrast adjusted */
+    --c-blue:                           rgb(33, 33, 217);
+    --c-o-gold:                         rgb(255, 215, 0);
+    --c-gold:                           rgb(133, 112, 0);                       /* contrast adjusted */
+    --c-orange:                         rgb(156, 101, 0);                       /* contrast adjusted */
+    --p-orange:                         0 0 1px rgb(255, 165, 0);
+    --p-gold:                           0 0 1px rgb(255, 215, 0);
+    --c-leech:                          rgb(163, 135, 0);
+    --c-seed:                           rgb(32, 161, 0);
+    --c-upload:                         rgb(89, 153, 112);
+    --c-snatch:                         rgb(204, 35, 0);
+    --c-download:                       rgb(230, 71, 0);
+    
+    --c-r01:                            rgb(227,    0,      0);
+    --c-r02:                            rgb(213,    24,     0);
+    --c-r03:                            rgb(200,    48,     0);
+    --c-r04:                            rgb(186,    73,     0);
+    --c-r05:                            rgb(172,    97,     0);
+    --c-r06:                            rgb(159,    121,    0);
+    --c-r07:                            rgb(145,    145,    0);
+    --c-r08:                            rgb(131,    145,    0);
+    --c-r09:                            rgb(116,    145,    0);
+    --c-r10:                            rgb(29,     145,    0);
+    --c-r99:                            rgba(29,    145,    0,      .5);
+/*shop*/
+    --c-type-0:                         rgba(116,   56,     66,     .17);
+    --c-type-1:                         rgba(58,    77,     115,    .17);
+    --c-type-2:                         rgba(70,    114,    59,     .17);
+    --c-type-3:                         rgba(115,   118,    0,      .17);
+    --c-type-4:                         rgba(84,    84,     84,     .17);
+    --c-type-5:                         rgba(0,     92,     119,    .17);
+}
+/** /COLORS **/
