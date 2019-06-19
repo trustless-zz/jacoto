@@ -12,7 +12,7 @@
     --c-contrast:                       rgba(255, 255, 255, .2);
     --c-txt: 							rgb(205, 205, 205);
     --c-text-s: 						rgb(155, 155, 155);
-    --c-curtain:						rgb(145, 145, 145);
+    --c-curtain:						rgb(45, 45, 45);
     --c-sticky-id-brdr:                 rgb(65,  65,  65);
     --c-input-brdr:						rgb(60, 60, 60);
     --c-main-brdr:						rgb(55, 55, 55);
@@ -49,8 +49,8 @@
     --c-donate:                         rgb(203, 60, 60);
     --c-yellow: 						rgb(145, 145, 0);
     --c-off: 							rgb(163, 0, 0);							/* #910000 */
-    --c-colhead-click:					rgba(00, 00, 00, .15);
-    --c-colhead-act: 					rgba(00, 00, 00, .3);
+    --c-colhead-click:					rgba(0, 0, 0, .15);
+    --c-colhead-act: 					rgba(0, 0, 0, .3);
     --c-em-bcg: 						rgb(245, 100, 22);
     --c-em-hvr: 						rgb(199, 81, 18);
     --c-em-act: 						rgb(245, 173, 134);
@@ -82,11 +82,11 @@
     --c-r10:                            rgb(29,     145,    0);
     --c-r99:                            rgba(29,    145,    0,      .5);
 /*shop*/
-    --c-type-0:                         rgba(116,   56,     66,     .17);
-    --c-type-1:                         rgba(58,    77,     115,    .17);
-    --c-type-2:                         rgba(70,    114,    59,     .17);
-    --c-type-3:                         rgba(115,   118,    0,      .17);
-    --c-type-4:                         rgba(84,    84,     84,     .17);
-    --c-type-5:                         rgba(0,     92,     119,    .17);
+    --c-type-0:                         rgba(116,   56,     66,     .2);
+    --c-type-1:                         rgba(58,    77,     115,    .2);
+    --c-type-2:                         rgba(70,    114,    59,     .2);
+    --c-type-3:                         rgba(115,   118,    0,      .2);
+    --c-type-4:                         rgba(84,    84,     84,     .2);
+    --c-type-5:                         rgba(0,     92,     119,    .2);
 }
 /** /COLORS **/
