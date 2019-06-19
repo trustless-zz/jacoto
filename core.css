@@ -1104,8 +1104,6 @@ span.user_title a:hover {
 /* .torrent_details .group_torrent td:first-child a, */
 .box_game_ratings a[target="_blank"]:hover,
 /*#requests .thin >.center.box.pad a[onclick],*/
-#requests table.border a[href^="upload.php"],
-.bbbutt li a,
 .torrent_details .torrent_table div[id^="history_"] table.border tr:not(.colhead),
 #torrents #requests.request_table .colhead a,
 #forums #forum_search_cat_list td.forum_cat a,
@@ -2047,6 +2045,8 @@ a .error_message:hover:active {
     border-top: var(--p-table-brdr);
     color: var(--c-text-s);
     vertical-align: middle;}
+#requests table#requests_list tr:not(.colhead):not(.colhead_dark) td {
+    border-top: var(--p-table-brdr);}
 #uploaded_table             td:nth-child(n+3),
 #seeding_table              td:nth-child(n+3),
 #leeching_table             td:nth-child(n+3),
@@ -2396,7 +2396,7 @@ select {
     height: 26px;
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
-    color: var(--c-low);
+    color: unset; /*var(--c-low);*/
     font-size: 14px;
     font-family: OpenSans, Helvetica, Arial, sans-serif;}
 select {
@@ -3559,6 +3559,7 @@ img[src="static/common/thumbsup.png"],
     width: 36px;
     height: 36px;
     float: left;}
+#requests table#requests_list span.time,
 #inbox .box.vertical_space .head span.time,
 .forum_post .colhead_dark .time,
 .forum_post .comment_rating p,
@@ -9187,7 +9188,12 @@ div#fight_skill_points_assign >table {
 .qtip .qtip-tip canvas {
     background-color: var(--c-main-brdr) !important;}
 
+
 ::-webkit-input-placeholder {   color: var(--c-text-s) !important;}
 ::-moz-placeholder {            color: var(--c-text-s) !important;}
 :-ms-input-placeholder {        color: var(--c-text-s) !important;}
 :-moz-placeholder {             color: var(--c-text-s) !important;}
+
+/** firefox hacks **/
+@-moz-document url-prefix() {
+}
