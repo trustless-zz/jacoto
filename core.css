@@ -483,7 +483,7 @@ a[title="Remove"] {
 
 .MusicBrainz {background-image: url("weblinks/MusicBrainz.svg");}
 .VGMdb {background-image: url("weblinks/VGMdb.svg");
-filter: drop-shadow(0px 0 1px black);}
+filter: drop-shadow(0px 0 1px #000);}
 .BoardGameGeek {background-image: url("weblinks/BoardGameGeek.png");}
 .Desura {background-image: url("weblinks/Desura.svg");}
 .DriveThruRPG {background-image: url("weblinks/DriveThruRPG.png");}
@@ -825,77 +825,60 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 #index #freeleech .group_torrent span.tor_info {
     order: 5;}
 
-#stats_ratio:before,
-#stats_seeding a,
-#stats_leeching a,
-#stats_share_score a,
-#stats_gold a,
-#logo a,
-#nav_logout a,
-#nav_donate a,
-#nav_useredit a,
-.torrent_table .show_torrents_link,
-.torrent_table #user_rating_icon img,
+
+.Bandcamp,
+.Discogs,
+.GamesWebsite,
+.GOG,
+.HowLongToBeat,
+.NexusMods,
+.Steam,
 .ign,
 .meta,
 .gamespot,
-.Bandcamp,
-.Discogs,
 .MusicBrainz,
 .VGMdb,
-.GamesWebsite,
-.Amazon,
 .BoardGameGeek,
 .Desura,
 .DriveThruRPG,
 .GameFAQs,
 .Giantbomb,
-.GOG,
 .GooglePlay,
-.HowLongToBeat,
 .HumbleBundle,
 .Itch,
 .iTunes,
 .MobyGames,
-.NexusMods,
 .Origin,
 .Ouya,
 .PSN,
 .RPGGeek,
 .RPGnet,
-.Steam,
 .VNDB,
 .Wikipedia,
 .XboxStore,
 .PCGamingWiki,
-.prev,
-.next,
-#inbox .box.vertical_space .head a[onclick],
-.forum_post .colhead_dark a[onclick],
-.sidebar .userratingdiv img,
-#usersreviewimage img,
-img[src="static/common/thumbsdown.png"],
-img[src="static/common/thumbsup.png"],
-#requests table.border a[href^="upload.php"],
-#requests_donate img,
-img[title="Gold"],
-#forums .forum_index tr:not(.colhead) td:first-child,
-#forums .forum_mythreads tr:not(.colhead) td:first-child,
-#forums .forum_editsubs tr:not(.colhead) td:first-child,
-#forums .forum_subscriptions tr:not(.colhead) td:first-child,
-.forum_post tr.likes >td:first-child a,
-.bbbutt li a,
-tr.likes td[id^="likers_"] >strong,
-.last_read,
-h2#username span#tip_user img,
-.inventory .trash_icon,
-#userhistory .colhead_dark a img[alt="Last read post"],
-#wrapper #trading_panel .gold_trade .gold_trade_buttons img,
-#wrapper .trade_value .trade_value_gold img,
-#nav_userinfo a:after,
-#stats_ratio .stat:after,
+#logo a,
+
 .box.box_likes.box_torrents span.likes_icon.flright img,
+img[src="static/common/thumbsup.png"],
+img[title="ThumbsUp"],
+img[title="ThumbsUp "],
+#thumbsup img,
+
+img[src="static/common/thumbsdown.png"],
+img[title="ThumbsDown"],
+img[title="ThumbsDown "],
+#thumbsdown img,
+
 img[alt="Donor"],
+img[title="Gold"],
+#requests_donate img,
+#stats_gold a,
+#wrapper .trade_value .trade_value_gold img,
+.profile .box_stats #gold .stat,
+
+h2#username span#tip_user img,
+
 img[alt="Banned"],
 img[alt="Warned"] {
     background-size: contain;
@@ -1095,7 +1078,8 @@ a:hover,
 .forum_post .colhead_dark a.post_id:hover,
 a:hover .ratings,
 #user .thin >h2 a.flright:hover,
-span.user_title a:hover {
+span.user_title a:hover,
+.filter_torrents.advanced .flright:hover:before {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
 
@@ -1145,15 +1129,12 @@ tr,
 td,
 span,
 img,
-.box.news_post .head:before,
-#index #recommended .head:before,
 .torrent_table .show_torrents_link,
 .torrent_table td.center:first-child,
 .torrent_table .group,
 #index #clans .large_progress_bar,
 #header .global_buffs i,
 .error_message,
-.edition_info:before,
 .torrent_table tr.group_torrent,
 #userinfo_stats,
 .rating_container,
@@ -1164,35 +1145,59 @@ button,
 input[type=button],
 input[type=submit],
 .fancybox-image,
+.torrent_details #grouplinks a div,
+#torrents .ratings,
+textarea,
+#reviewdate,
+.forum_post .comment_rating,
+.avatar .forumstat,
+div,
+.hovereffect h2,
+#shop .item_description,
+fancybox-button,
+
+/* .box.news_post .head:before,
+#index #recommended .head:before,
+.edition_info:before,
 #forums .thin >.box.thin.clear .head.colhead_dark:before,
 #newthreadpreview #pollpreview .head.colhead_dark:before,
 .head[title="Click to expand/collapse"]:before,
 #torrents #requests.request_table .colhead span:before,
 .head[onclick]:before,
 .torrent_details .torrent_table .colhead_dark td:nth-child(1):before,
-.torrent_details #grouplinks a div,
-#torrents .ratings,
 #markread:before,
-textarea,
 #userinfo_minor:before,
-#reviewdate,
-.forum_post .comment_rating,
-.avatar .forumstat,
-div,
-#forums .forum_post .avatar >div:first-child:after,
-.hovereffect h2,
 #shop li.item_li .item_description:before,
-#shop li.item_li .item_description:after,
-#shop .item_description,
-#shop li.item_li.owned:after,
-fancybox-button,
 tr.group_torrent >td a:before,
-#itemsdiv p,
-#nav_userinfo a:after,
-#stats_ratio .stat:after,
-.torrent_table .show_torrents_link:after,
 #userinfo_stats a:before,
 #nav_userinfo a:before,
+.filter_torrents.advanced .flright:before,
+
+#forums .forum_post .avatar >div:first-child:after,
+#shop li.item_li .item_description:after,
+#shop li.item_li.owned:after,
+#nav_userinfo a:after,
+#stats_ratio .stat:after,
+.torrent_table .show_torrents_link:after, */
+
+tbody:before,
+tbody:after,
+ul:before,
+ul:after,
+li:before,
+li:after,
+div:before,
+div:after,
+tr:before,
+tr:after,
+td:before,
+td:after,
+span:before,
+span:after,
+a:before,
+a:after,
+
+#itemsdiv p,
 
 #color_leeching,
 #color_leeching .torrent_info_tags,
@@ -1209,6 +1214,7 @@ tr.group_torrent >td a:before,
 #color_downloaded,
 #color_downloaded .torrent_info_tags,
 #color_downloaded a,
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -1325,6 +1331,24 @@ td img[alt="Ratio"] {
 #adventureclub table#monsters_search span.info {
     display: block;}
 
+
+tbody:hover:active:before,
+tbody:hover:active:after,
+ul:hover:active:before,
+ul:hover:active:after,
+li:hover:active:before,
+li:hover:active:after,
+div:hover:active:before,
+div:hover:active:after,
+tr:hover:active:before,
+tr:hover:active:after,
+td:hover:active:before,
+td:hover:active:after,
+span:hover:active:before,
+span:hover:active:after,
+a:hover:active:before,
+a:hover:active:after,
+
 #stats_seeding:hover:active,
 #stats_leeching:hover:active,
 #stats_gold:hover:active,
@@ -1336,8 +1360,8 @@ td img[alt="Ratio"] {
 #userinfo_username .sub span:hover:active,
 #userinfo_username >li:hover:active,
 #nav_donate:hover:active,
-.box.news_post .head:hover:active:before,
-#index #recommended .head:hover:active:before,
+/* .box.news_post .head:hover:active:before,
+#index #recommended .head:hover:active:before, */
 .autocomplete_list li:hover:active,
 .torrent_table td.center:hover:active:first-child,
 .colhead_dark a:hover:active,
@@ -1347,12 +1371,12 @@ td img[alt="Ratio"] {
 #toplink a:hover:active,
 #header .clan_trophy:hover:active a,
 .error_message:hover:active,
-.edition_info:hover:active:before,
+/* .edition_info:hover:active:before, */
 button:hover:active,
 .alertable button:hover:active,
 input[type=button]:hover:active,
 input[type=submit]:hover:active,
-#markread:hover:active:before,
+/* #markread:hover:active:before, */
 .slides_control,
 span.torrent_info_tags {
     -webkit-transition: 0s;
@@ -2623,7 +2647,7 @@ a[href^="javascript:Vote("] strong:hover:active,
 .filter_torrents.advanced .flright:before {
     content: '(View Less)';
     position: absolute;
-    bottom: 1039px;}
+    bottom: 1052px;}
 .torrent_notifications table.border .colhead strong,
 #forums #forum_search_cat_list td.forum_cat strong,
 #platcheckbox td[colspan="5"] strong {
@@ -4454,7 +4478,8 @@ input[type="search"],
 #crafting_recipes:before,
 #user .thin >.header:first-child +.box.pad:before,
 #user .thin >.header:first-child +.box.pad +.box.pad:before,
-#user .invitetree.pad:before {
+#user .invitetree.pad:before,
+#forums #newthreadpreview +.box.pad:before {
     display: block;
     text-align: left;
     width: 100%;
@@ -4466,6 +4491,8 @@ input[type="search"],
     background: var(--p-head-grdnt);
     font-weight: 600;
     content: 'Search';}
+#forums #wrapper #newthreadpreview +.box.pad:before {
+    content: 'Create a new thread';}
 #user #wrapper .invitetree.pad:before {
     content: 'Invite Tree';}
 #user #wrapper .thin >.header:first-child +.box.pad:before {
@@ -5075,8 +5102,12 @@ td.center.cats_col {
     content: 'Filter by tags';}
 #wrapper #actual_rules:before {
     content: 'Rules';}
-#wrapper #torrentbrowse .filter_torrents h3 a:before {
-    content: 'switch to ';}
+#torrentbrowse .filter_torrents.basic >h3:before {
+    content: 'Basic';}
+#torrentbrowse .filter_torrents.advanced >h3:before {
+    content: 'Advanced';}
+/* #torrentbrowse .filter_torrents h3 a:before {
+    content: 'switch to ';} */
 input[class="date_picker"] {
     width: 85px;}
 #forums .forums_search .search_form input[class="date_picker"] {
@@ -6223,7 +6254,8 @@ span.size5 img {
 #wrapper a:hover .trumpable_label,
 #wrapper a:hover #reported_tag,
 #wrapper a:hover #trumpable_tag,
-.linkbox a[onclick^="show_reported("]:hover {
+.linkbox a[onclick^="show_reported("]:hover,
+a:hover .ratings span {
     color: var(--c-anchor-hvr);}
 
 tr.group_torrent >td {

@@ -118,22 +118,22 @@ body {
     
 #toplink {
     position: absolute;
-    display: contents;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    z-index: 999;}
+    top: 100vh;
+    left: 50%;
+    width: 44px;
+    height: calc(100% - 100vh);
+    margin-left: 660px;
+    z-index: 1;}
 #toplink a {
-    position: fixed;
-    z-index: 0;
+    position: sticky;
+    display: block;
+    z-index: 999;
     width: 44px;
     height: 44px;
-    left: 50%;
-    margin-left: 660px;
-    bottom: 5px;
-    -webkit-mask-image: url('icons/toplink.svg');
-    mask-image: url('icons/toplink.svg');
+    right: 0;
+    top: calc(100vh - 49px);
+    -webkit-mask-image: url(icons/toplink.svg);
+    mask-image: url(icons/toplink.svg);
     opacity: 0.4;}
 #toplink a:hover {
     opacity: 1;
@@ -170,7 +170,7 @@ body {
 #extra3 {
     content: '';
     position: absolute;
-    z-index: -1;
+    z-index: 998;
     left: 0;
     width: 100%;}
 #extra1 { /* #searchbars */
@@ -188,6 +188,7 @@ body {
 /* /making holidayeffects.css work */    
     
 #header {
+    z-index: 999;
     position: relative;
     border-bottom: var(--p-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
@@ -774,11 +775,13 @@ body {
         font-size: 11px;}
     #wrapper .global_buffs .buff_text .buff_multiplier {
         font-size: 12px;}
-    #wrapper #toplink a {
-        bottom: 1px;
+    #wrapper #toplink {
         left: unset;
         margin-left: unset;
         right: 4px;
+        width: 40px;}
+    #wrapper #toplink a {
+        top: calc(100vh - 44px);
         width: 40px;
         height: 40px;}
 }
