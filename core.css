@@ -19,7 +19,7 @@
     --p-post-img:                       drop-shadow(0 0 3px var(--c-main-brdr));
     --p-post-img-hvr:                   drop-shadow(0 0 3px var(--c-b3));
     --p-unread-stripe:                  2px 0 0 0 var(--c-b3);
-    --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b00), var(--c-anchor)), linear-gradient(to right, var(--c-b1), var(--c-b2));
+    --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b00), var(--c-bg)), linear-gradient(to right, var(--c-b1), var(--c-b2));
     --p-colhead-tr-bcg: 				var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
     --p-subcolhead:                     var(--c-sb1) linear-gradient(155deg,var(--c-sb1),var(--c-sb2));
     --p-post-colhead-bcg:               var(--c-table-brdr) linear-gradient(155deg,var(--c-table-brdr),var(--c-body));
@@ -27,8 +27,9 @@
     --p-colhead-tr-bcg-hvr:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-box));
     --p-colhead-tr-bcg-act:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
     --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
-    --p-menu:                           var(--c-tor-row-hvr) linear-gradient(155deg,var(--c-tor-row-hvr),var(--c-input));
-    --p-userinfo:                       var(--c-input) linear-gradient(155deg,var(--c-input),var(--c-box));
+    --p-menu:                           var(--c-tor-rowb) linear-gradient(155deg,var(--c-tor-rowb),var(--c-tor-row-hvr));
+    --p-userinfo:                       var(--c-tor-row-hvr) linear-gradient(155deg,var(--c-tor-row-hvr),var(--c-input));
+    --p-extra-menu:                     var(--c-input) linear-gradient(155deg,var(--c-input),var(--c-box));    
     --p-grouplinks:                     var(--c-tgroup) linear-gradient(155deg,var(--c-tgroup),var(--c-box));
     --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b00) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
     --p-unread-brdr:                    1px solid var(--c-b3);
@@ -476,9 +477,9 @@ a[title="Remove"] {
     mask-size: auto 18px;}
 /** /masks **/
 
-.ign {background-image: url(weblinks/IGN.svg);}
-.meta {background-image: url(weblinks/metacritic.svg);}
-.gamespot {	background-image: url(weblinks/GameSpot.svg);}
+.ign {background-image: url('weblinks/IGN.svg');}
+.meta {background-image: url('weblinks/metacritic.svg');}
+.gamespot {	background-image: url('weblinks/GameSpot.svg');}
 
 .MusicBrainz {background-image: url("weblinks/MusicBrainz.svg");}
 .VGMdb {background-image: url("weblinks/VGMdb.svg");
@@ -511,11 +512,11 @@ filter: drop-shadow(0px 0 1px black);}
     100% {background-position: 900px 0;}}
 
 @keyframes logo_move {
-    0% {transform: translateX(-70%);}
+    0% {transform: translateX(-60%);}
     100% {transform: translateX(0);}}
 @keyframes logo_remove {
     0% {transform: translateX(0);}
-    100% {transform: translateX(-70%);}}
+    100% {transform: translateX(-60%);}}
 
 html {
     line-height: var(--p-lh);
@@ -829,7 +830,7 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 #stats_leeching a,
 #stats_share_score a,
 #stats_gold a,
-#logo a:before,
+#logo a,
 #nav_logout a,
 #nav_donate a,
 #nav_useredit a,
@@ -1803,8 +1804,6 @@ i.fa.fa-fl-pots {
 a .error_message:hover {
     color: var(--c-high);
     background-color: var(--c-em-hvr);}
-a .error_message:hover:active {
-    background-color: var(--c-em-act);}
 
 
 #index #clans {
@@ -5510,7 +5509,7 @@ td >img[title="Gold"] {
 .new_status:before {
     content: 'NEW';
     display: inline-block;
-    color: var(--c-low);
+    color: var(--c-txt);
     font-size: 13px;
     line-height: 18px;
     padding: 0 3px 0 2px;

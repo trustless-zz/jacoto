@@ -37,9 +37,11 @@
     
     --c-sb1:                            rgb(183, 233, 231);                     /* 10,4th */
     --c-sb2:                            rgb(200, 234, 223);                     /* 10,4th */
+    --c-bg:                             rgb(15, 163, 158);
+    
     --c-hovereffect: 					rgba(255, 255, 255, .8);
     --c-b00: 							rgba(255, 255, 255, 0);
-    --c-anchor: 						rgb(11, 122, 118);						/* #bd002c */
+    --c-anchor: 						rgb(11, 122, 119);						/* #bd002c */
     --c-anchor-hvr: 					rgb(0, 0, 0);							/* #053d3b #630017 */
     --c-anchor-hvr-bcg: 				rgb(204, 237, 236);                     /* 10,3rd */  /*rgba(18, 201, 194, .1);*/
 	--c-header-shdw: 					rgba(0,0,0,.1);

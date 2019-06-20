@@ -37,56 +37,58 @@
     
     --c-sb1:                            rgb(9,60,59);                     /* 10,4th */
     --c-sb2:                            rgb(27,62,51);                     /* 10,4th */
+    --c-bg:                             rgb(13, 145, 141);
+    
     --c-hovereffect: 					rgba(0, 0, 0, .8);
     --c-b00: 							rgba(0, 0, 0, 0);
-    --c-anchor: 						rgb(16, 176, 171);						/* #bd002c */
+    --c-anchor: 						rgb(17, 184, 178);						/* #bd002c */
     --c-anchor-hvr: 					rgb(255, 255, 255);							/* #053d3b #630017 */
     --c-anchor-hvr-bcg: 				rgb(9,53,52);                     /* 10,3rd */  /*rgba(18, 201, 194, .1);*/
 	--c-header-shdw: 					rgba(0,0,0,.3);
     --c-main-shdw:						rgba(0,0,0,.5);
-    --c-on: 							rgb(29, 145, 0);						/* #1E9400 */
+    --c-on: 							rgb(41, 204, 0);						/* #1E9400 */
     --c-bonus:                          rgba(177, 232, 0, .2);
-    --c-donate:                         rgb(203, 60, 60);
-    --c-yellow: 						rgb(145, 145, 0);
-    --c-off: 							rgb(163, 0, 0);							/* #910000 */
+    --c-donate:                         rgb(255, 77, 77);
+    --c-yellow: 						rgb(209, 209, 0);
+    --c-off: 							rgb(255, 0, 0);							/* #910000 */
     --c-colhead-click:					rgba(0, 0, 0, .15);
     --c-colhead-act: 					rgba(0, 0, 0, .3);
     --c-em-bcg: 						rgb(245, 100, 22);
     --c-em-hvr: 						rgb(199, 81, 18);
     --c-em-act: 						rgb(245, 173, 134);
     --c-fl: 							rgb(100, 65, 165);
-    --c-btn-b1: 						rgb(119, 211, 207);
-    --c-btn-b2: 						rgb(151, 212, 193);
-    --c-red:                            rgb(227, 0, 0);                         /* contrast adjusted */
-    --c-blue:                           rgb(33, 33, 217);
-    --c-o-gold:                         rgb(255, 215, 0);
-    --c-gold:                           rgb(133, 112, 0);                       /* contrast adjusted */
-    --c-orange:                         rgb(156, 101, 0);                       /* contrast adjusted */
-    --p-orange:                         0 0 1px rgb(255, 165, 0);
-    --p-gold:                           0 0 1px rgb(255, 215, 0);
-    --c-leech:                          rgb(163, 135, 0);
-    --c-seed:                           rgb(32, 161, 0);
-    --c-upload:                         rgb(89, 153, 112);
-    --c-snatch:                         rgb(204, 35, 0);
-    --c-download:                       rgb(230, 71, 0);
+    --c-btn-b1: 						rgb(27,118,115);
+    --c-btn-b2: 						rgb(58,120,100);
+    --c-red:                            rgb(255, 0, 0);                         /* contrast adjusted */
+    --c-blue:                           rgb(99, 99, 255);
+    --c-o-gold:                         rgb(245, 208, 0);
+    --c-gold:                           rgb(255, 215, 0);                       /* contrast adjusted */
+    --c-orange:                         rgb(255, 165, 0);                       /* contrast adjusted */
+    --p-orange:                         unset;
+    --p-gold:                           unset;
+    --c-leech:                          rgb(194, 162, 0);
+    --c-seed:                           rgb(38, 191, 0);
+    --c-upload:                         rgb(105, 181, 133);
+    --c-snatch:                         rgb(255, 40, 0);
+    --c-download:                       rgb(255, 100, 0);
     
-    --c-r01:                            rgb(227,    0,      0);
-    --c-r02:                            rgb(213,    24,     0);
-    --c-r03:                            rgb(200,    48,     0);
-    --c-r04:                            rgb(186,    73,     0);
-    --c-r05:                            rgb(172,    97,     0);
-    --c-r06:                            rgb(159,    121,    0);
-    --c-r07:                            rgb(145,    145,    0);
-    --c-r08:                            rgb(131,    145,    0);
-    --c-r09:                            rgb(116,    145,    0);
-    --c-r10:                            rgb(29,     145,    0);
-    --c-r99:                            rgba(29,    145,    0,      .5);
+    --c-r01:                            rgb(255,    0,      0);
+    --c-r02:                            rgb(255,    30,     0);
+    --c-r03:                            rgb(255,    60,     0);
+    --c-r04:                            rgb(235,    94,     0);
+    --c-r05:                            rgb(212,    120,    0);
+    --c-r06:                            rgb(181,    139,    0);
+    --c-r07:                            rgb(156,    156,    0);
+    --c-r08:                            rgb(149,    166,    0);
+    --c-r09:                            rgb(141,    176,    0);
+    --c-r10:                            rgb(38,     191,    0);
+    --c-r99:                            rgba(38,    191,    0,      .5);
 /*shop*/
-    --c-type-0:                         rgba(116,   56,     66,     .2);
-    --c-type-1:                         rgba(58,    77,     115,    .2);
-    --c-type-2:                         rgba(70,    114,    59,     .2);
-    --c-type-3:                         rgba(115,   118,    0,      .2);
-    --c-type-4:                         rgba(84,    84,     84,     .2);
-    --c-type-5:                         rgba(0,     92,     119,    .2);
+    --c-type-0:                         rgba(116,   56,     66,     .23);
+    --c-type-1:                         rgba(58,    77,     115,    .23);
+    --c-type-2:                         rgba(70,    114,    59,     .23);
+    --c-type-3:                         rgba(115,   118,    0,      .23);
+    --c-type-4:                         rgba(84,    84,     84,     .23);
+    --c-type-5:                         rgba(0,     92,     119,    .23);
 }
 /** /COLORS **/

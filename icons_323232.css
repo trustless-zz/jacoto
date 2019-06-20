@@ -255,7 +255,7 @@ table.gazelles_art_display .hovereffect:before,
 }
 
 /** logo **/
-#logo a:before {
+#logo a {
     background-image: url('icons/323232/logo.svg');}
 
 select {

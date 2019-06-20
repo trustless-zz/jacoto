@@ -1,4 +1,4 @@
-﻿@media (min-width: 801px) {
+﻿@media (min-width: /*80*/1px) {
 html {
     overflow-x: hidden;
     overflow-y: scroll;}
@@ -129,11 +129,12 @@ body {
     z-index: 0;
     width: 44px;
     height: 44px;
-    right: 10px;
+    left: 50%;
+    margin-left: 660px;
     bottom: 5px;
     -webkit-mask-image: url('icons/toplink.svg');
     mask-image: url('icons/toplink.svg');
-    opacity: 0.5;}
+    opacity: 0.4;}
 #toplink a:hover {
     opacity: 1;
     background-color: var(--c-txt);}
@@ -398,7 +399,7 @@ body {
     order: 8;}
 
 #userinfo_stats li:not(#stats_ratio) {
-    background-color: var(--c-box);}
+    background-color: var(--c-input);}
 #nav_useredit:hover,
 #nav_logout:hover,
 #nav_donate:hover,
@@ -595,47 +596,46 @@ body {
 #logo a {
     background-color: transparent;
     display: block;
-    height: 100%;
-    width: 100%;}
+    /* height: 100%;
+    width: 100%; */}
 #logo:before,
 #logo:after {
     content: '';
-    width: 128px;
+    width: 74px;
     height: 30px;
     position: absolute;
     left: 0;
     top: 34px;
     z-index: -99;
     pointer-events: none;
-    animation: logo_remove .3s linear forwards;
-    transform: translateX(-70%);}
+    animation: logo_remove .25s linear forwards;
+    transform: translateX(-60%);}
 #logo:before {
-    background: linear-gradient(90deg,var(--c-b1) 60%,var(--c-b00));
+    background: linear-gradient(90deg,var(--c-b1) 50%,var(--c-b00));
     top: 0px;
     height: 34px;}
 #logo:after {
-    background: linear-gradient(90deg,var(--c-b2) 60%,var(--c-b00));
+    background: linear-gradient(90deg,var(--c-b2) 50%,var(--c-b00));
     top: 34px;
     height: 30px;}
 #logo:hover:after,
 #logo:hover:before {
-    animation: logo_move .3s linear forwards;}
+    animation: logo_move .325s linear forwards;}
 #logo:hover:after {
     animation-delay: .05s;}
-#logo a:before {
-    content:'';
+#header #logo a {
     position: absolute;
-    opacity: 1;
+    /* opacity: 1; */
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    -webkit-transition: all .3s linear;
-    -o-transition: all .3s linear;
-    transition: all .3s linear;
+    -webkit-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
     background-size: auto 58px;
     background-position: center;}
-#logo a:hover:before {
+/* #logo a:hover:before {
     opacity: 0;}
 #logo a:after {
     content: 'GAZELLE GAMES';
@@ -655,7 +655,7 @@ body {
     height: 64px;
     top: 0;}
 #logo a:hover:after {
-    opacity: 1;}
+    opacity: 1;} */
 /* /logo */
 
 }
@@ -725,7 +725,7 @@ body {
             calc(100% + 10px) 300px,
             calc(100% - 50px) 300px);}
     #userinfo_username:hover {
-        background-color: var(--c-input);
+        background-color: var(--c-tor-row-hvr);
         transition-delay: 0s;
         -webkit-clip-path: polygon(
             -10px -10px,
@@ -776,6 +776,8 @@ body {
         font-size: 12px;}
     #wrapper #toplink a {
         bottom: 1px;
+        left: unset;
+        margin-left: unset;
         right: 4px;
         width: 40px;
         height: 40px;}
