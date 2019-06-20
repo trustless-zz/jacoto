@@ -2914,7 +2914,7 @@ strong.mature +strong +br,
     list-style: none;
     margin: 0px;
     padding: 0px;
-    overflow: auto;
+    overflow-y: scroll;
     display: flex;
     flex-flow: wrap;}
 .similar li {
