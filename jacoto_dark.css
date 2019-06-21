@@ -53,10 +53,10 @@
     --c-off: 							rgb(255, 0, 0);							/* #910000 */
     --c-colhead-click:					rgba(0, 0, 0, .15);
     --c-colhead-act: 					rgba(0, 0, 0, .3);
-    --c-em-bcg: 						rgb(245, 100, 22);
-    --c-em-hvr: 						rgb(199, 81, 18);
-    --c-em-act: 						rgb(245, 173, 134);
-    --c-fl: 							rgb(100, 65, 165);
+    --c-em-bcg: 						rgb(140, 57, 13);
+    --c-em-hvr: 						rgb(230, 94, 21);
+    --c-em-act: 						rgb(102, 42, 9);
+    --c-fl: 							rgb(154, 99, 255);
     --c-btn-b1: 						rgb(27,118,115);
     --c-btn-b2: 						rgb(58,120,100);
     --c-red:                            rgb(255, 0, 0);                         /* contrast adjusted */
