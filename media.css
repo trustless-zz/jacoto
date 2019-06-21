@@ -563,19 +563,19 @@ body {
 .global_buffs {
     position: absolute !important;
     top: calc(100% + 1px);
-    right: 0 !important;
-    left: unset !important;
+    left: 0 !important;
+    right: unset !important;
     width: 200px;
     filter: none !important;
     line-height: 17px;
     display: flex;
     flex-flow: wrap;
-    direction: rtl;}
+    direction: ltr;}
 #wrapper #header .clan_trophy {
     position: absolute !important;
     top: calc(100% + 1px);
-    right: unset !important;
-    left: 0 !important;
+    left: unset !important;
+    right: 0 !important;
     bottom: unset !important;
     width: 64px;}
 #wrapper #header .clan_trophy img {
