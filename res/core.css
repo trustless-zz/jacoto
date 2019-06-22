@@ -16,7 +16,7 @@
     --p-img-anchor-brdr:				3px solid var(--c-b4);
     --p-img-anchor-brdr-hvr:			3px solid var(--c-b1);
     --p-contrast:                       unset; /*drop-shadow(0 0 2px var(--c-contrast));*/
-    --p-post-img:                       drop-shadow(0 0 3px var(--c-main-brdr));
+    --p-post-img:                       drop-shadow(0 0 3px var(--c-post-img));
     --p-post-img-hvr:                   drop-shadow(0 0 3px var(--c-b3));
     --p-unread-stripe:                  2px 0 0 0 var(--c-b3);
     --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b00), var(--c-bg)), linear-gradient(to right, var(--c-b1), var(--c-b2));

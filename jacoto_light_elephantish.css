@@ -6,6 +6,7 @@
 
 /** COLORS **/
 :root {
+    --c-post-img:                       rgb(200, 200, 200);
     --c-description:                    rgb(255, 255, 255);
     --c-low:                            rgb(0, 0, 0);
     --c-quote-brdr:                     rgba(170, 170, 170, .8);
