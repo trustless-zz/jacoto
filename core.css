@@ -1007,7 +1007,8 @@ table.gazelles_art_display,
 #crafting_recipes,
 #wrapper #trading_panel >div:not(.linkbox),
 .backpack #backpack >div,
-div#fight_skill_points_assign >table {
+div#fight_skill_points_assign >table,
+#collections .thin >#reply_box {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -1093,8 +1094,8 @@ span.user_title a:hover,
 /*#requests .thin >.center.box.pad a[onclick],*/
 .torrent_details .torrent_table div[id^="history_"] table.border tr:not(.colhead),
 #torrents #requests.request_table .colhead a,
-#forums #forum_search_cat_list td.forum_cat a,
-#collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
+/* #forums #forum_search_cat_list td.forum_cat a,
+#collections .sidebar .box.box_comment a[href^="reports.php?action=report"], */
 /* #artist #torrent_table .group_torrent td[colspan="2"] >span:first-child a,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child a,
 #uploaded_table             td.center.cats_col +td span:first-child a,
@@ -1627,6 +1628,7 @@ table.gazelles_art_display .hovereffect:hover:before {
     padding: 0 10px;}
 #dailygazelle #gazelletitle a {
     text-align: center;
+    width: -moz-fit-content;
     width: fit-content;
     display: block;
     margin: 8px auto 10px auto;}
@@ -1692,6 +1694,7 @@ td.center.cats_col +td,
     display: block;
     text-align: center;
     margin: 5px auto 0 auto;
+    width: -moz-max-content;
     width: max-content;}
 
 #recommended #vanityhouse tbody {
@@ -2277,7 +2280,29 @@ textarea,
 #items,
 #slots_panel,
 #equip_panel,
-#trading_panel .trade_table {
+#trading_panel .trade_table,
+
+#wiki span.size7,
+#wiki span.size6,
+#wiki span.size5,
+#wiki span.size4,
+
+#backpack #slots_panel ul,
+#wrapper #trading_panel .items-wrapper,
+#crafting_panel #items #items-wrapper,
+#equipment #items #items-wrapper,
+#backpack #items-wrapper,
+
+#backpack .itemslot .item,
+#wrapper #trading_panel .message_section,
+#crafting_recipes #items_list,
+.profile .box_art_gallery .gallery,
+.inventory .save_message,
+.inventory #content li.item_li,
+#shop li.item_li,
+#forums .forum_list .forum_index:before,
+#user .box.box_items #itemsdiv td div,
+#crafting_recipes {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 img[title="Downloaded"],
@@ -2709,6 +2734,7 @@ body:not(#upload) #artist_tr + tr td.label,
     padding: 2px 0px 2px 5px;
     cursor: default;}
 .filter_torrents.advanced .cat_list:not(#taglist) td.label {
+    width: -moz-max-content;
     width: max-content;
     display: block;}
 .filter_torrents.basic tr:nth-of-type(2) td:nth-of-type(3) {
@@ -2849,6 +2875,7 @@ body:not(#upload) #artist_tr + tr td.label,
     list-style: none;
     display: block;
     cursor: default;
+    width: -moz-fit-content;
     width: fit-content;}
 .bbbutt li {
     vertical-align: middle;
@@ -2986,6 +3013,7 @@ li:not(.suggested_similar) .similar_votes >span {
     margin-bottom: -100%;
     left: 6px;
     display: inline-block;
+    width: -moz-fit-content;
     width: fit-content;
     z-index: 999;}
 #content .sub,
@@ -3499,6 +3527,7 @@ img[src="static/common/thumbsup.png"],
 #usersreviewimage {
     width: 36px;}
 #reviewdate {
+    width: -moz-fit-content;
     width: fit-content;
     display: block;
     font-size: 12px;
@@ -3543,6 +3572,7 @@ img[src="static/common/thumbsup.png"],
     font-weight: bold;
     margin-top: -5px;
     display: block;
+    width: -moz-fit-content;
     width: fit-content;
     margin-bottom: -20px;*/}
 #requests_donate #gold_donation {
@@ -3664,6 +3694,7 @@ img[src="static/common/thumbsup.png"],
     padding-top: 13px;}
 
 /** convert ... to head **/
+#collections .thin >#reply_box >h3,
 #user .thin >.header:first-child ~h3,
 #wrapper #trading_panel .message_box .label:first-of-type,
 #seedtime_tokens >h3,
@@ -3715,7 +3746,8 @@ form[name="filter"] h3,
 #wrapper #searchforum h3,
 form[name="filter"] h3,
 #top10 .thin >.linkbox ~div:not(.center) >h3,
-#wrapper .gazelles_art_display:before {
+#wrapper .gazelles_art_display:before,
+#collections .thin >#reply_box >h3 {
     margin: 0;
     width: calc(100% - 20px);}
 #staff .thin >.box.pad >h3:first-of-type ~h3 {
@@ -4048,6 +4080,7 @@ tr.likes td[id^="likers_"]:hover {
     padding: 0 15px;
     margin: 0 auto;
     display: block;
+    width: -moz-fit-content;
     width: fit-content;
     color: var(--c-low);
     background-repeat: no-repeat;
@@ -4280,6 +4313,7 @@ blockquote#description img,
     display: none;}
 .twitter_post {
     margin: 0 5px;
+    width: -moz-fit-content;
     width: fit-content;}
 .twitter_post >br {
     display: none;}
@@ -4354,7 +4388,8 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #wrapper #searchthread table,
 #wrapper #searchforum table,
 .thin#user_fight_attacks >.box.pad,
-.thin#user_fight_attacks table.border {
+.thin#user_fight_attacks table.border,
+#collections .thin >#reply_box >.box.pad {
     background: none;
     border: none;
     -webkit-box-shadow: none;
@@ -4720,8 +4755,6 @@ input[type="search"],
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: var(--p-main-brdr);
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
     z-index: -1;}
 /** /horrible acrobatics because of lack of containers **/
 
@@ -4792,15 +4825,19 @@ input[type="search"],
 .linkbox a[href="inbox.php?action=sentbox"],
 .linkbox a[href="inbox.php"],
 .linkbox a[href="wiki.php?action=create"] {
-    display: contents;
+    /* display: contents; */
     font-size: 0;
     line-height: 0;}
+
 .linkbox >strong,
 .linkbox a,
 #wrapper #content .linkbox a:before,
 #more_news >a:before {
     font-size: 14px;
-    line-height: var(--p-lh);
+    line-height: var(--p-lh);}
+
+.linkbox >strong,
+.linkbox a {
     margin: 0 5px;}
 
 #slides >.nobullet a:before {
@@ -5132,9 +5169,16 @@ input[class="date_picker"] {
     -webkit-box-shadow: none;
     box-shadow: none;
     outline: none;
-    background-size: 20px 24px !important;
-    background-repeat: no-repeat;
-    background-position: center;}
+    background-image: unset !important;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 20px 24px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 20px 24px;}
+.xdsoft_datetimepicker .xdsoft_next:hover:active,
+.xdsoft_datetimepicker .xdsoft_prev:hover:active {
+    background-color: var(--c-low);}
 .xdsoft_datetimepicker .xdsoft_next {
     transform: scaleX(-1);}
 .xdsoft_datetimepicker .xdsoft_calendar td,
@@ -5230,6 +5274,7 @@ input[class="date_picker"] {
     background: var(--p-head-grdnt);
     font-weight: 600;}
 
+#collections .thin >#reply_box >.box.pad,
 #staff .thin >.box.pad {
     padding: 10px !important;}
 #rules .thin >#actual_rules .before_rules >div,
@@ -5924,9 +5969,7 @@ span.size5 img {
 #wiki span.size4 {
 	float: left;
 	width: 100%;
-	padding: 10px 5px;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;}
+	padding: 10px 5px;}
 .wiki_index span.size7 strong,
 .wiki_index span.size6 strong,
 .wiki_index span.size5 strong,
@@ -6101,8 +6144,7 @@ span.size5 img {
     background-color: var(--c-edition);
     border: var(--p-img-anchor-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
-    box-shadow: var(--p-header-shdw);
-    box-sizing: border-box;}
+    box-shadow: var(--p-header-shdw);}
 #user .box.box_items #itemsdiv p:first-child {
     color: var(--c-text-s);
     text-align: center;
@@ -6384,7 +6426,6 @@ table#downloaded_table td.center.cats_col +td >span:before {
     float: left;
     padding: 10px 0 0 10px;
     position: initial;
-    box-sizing: border-box;
     overflow-y: scroll !important;}
     
 #crafting_panel #items #items-wrapper li,
@@ -6561,8 +6602,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	height: 370px;
 	-webkit-box-shadow: var(--p-main-shdw);
 	box-shadow: var(--p-main-shdw);
-	border: var(--p-main-brdr);
-	box-sizing: border-box;}
+	border: var(--p-main-brdr);}
 #shop li.item_li.no_access {
     background-color: var(--c-edition);}
 
@@ -7101,10 +7141,7 @@ body#user.inventory {}
 
 #user.inventory #logo {}
 
-#user.inventory #alerts {
-    position: absolute;
-    top: 274px;
-    width: 100%;} /*revisit*/
+#user.inventory #alerts {} /*revisit*/
 
 .inventory h2 {}
 
@@ -7136,8 +7173,7 @@ body#user.inventory {}
     background-color: var(--c-box);
 	-webkit-box-shadow: var(--p-main-shdw);
 	box-shadow: var(--p-main-shdw);
-	border: var(--p-main-brdr);
-	box-sizing: border-box;}
+	border: var(--p-main-brdr);}
 
 .inventory .item_image_div {
     margin-top: 50px;
@@ -7209,7 +7245,6 @@ body#user.inventory {}
     width: calc(100% - 257px);
     float: right;
     padding: 10px;
-    box-sizing: border-box;
     top: 0;
     -webkit-clip-path: unset;
     clip-path: unset;
@@ -7298,8 +7333,7 @@ body#user.inventory {}
 /*** Image Gallery ***/
 .profile .box_art_gallery .gallery {
     display: inline-block;
-    width: 100%;
-    box-sizing: border-box;}
+    width: 100%;}
 .profile .box_art_gallery .gallery_slot {
  	overflow: hidden;}
 .profile .box_art_gallery .gallery_main_slot {
@@ -7780,6 +7814,7 @@ td .log_green {
 #user .thin >h3:first-child +.linkbox +form input[type="text"] {
     width: calc(100% - 117px);}
 #user .thin >h3:first-child +.linkbox +form ~.box.pad.center {
+    width: -moz-fit-content;
     width: fit-content;
     padding: 0;
     margin: 0 auto;}
@@ -8480,7 +8515,6 @@ table.adventure_table h3 {
 /*** Crafting books ***/
 #crafting_recipes {
     position: relative;
-    box-sizing: border-box;
 	height: 400px;
 	width: 100%;
     min-width: 300px;
@@ -8489,7 +8523,6 @@ table.adventure_table h3 {
 	overflow: hidden;}
 
 #crafting_recipes #items_list {
-    box-sizing: border-box;
     margin: 0;
     padding: 10px 0 10px 10px;
     overflow-y: scroll !important;
@@ -8982,7 +9015,6 @@ table.adventure_table h3 {
 /*** Message Box ***/
 
 #wrapper #trading_panel .message_section {
-    box-sizing: border-box;
 	width: 100%;
 	float: left;
 	clear: both;
@@ -9097,7 +9129,6 @@ table.adventure_table h3 {
 	outline: 1px solid var(--c-sticky-id-brdr);}
 
 #backpack .itemslot .item {
-	box-sizing: border-box;
 	height: 100%;
 	width: 100%;
 	margin: 0;
@@ -9229,6 +9260,23 @@ div#fight_skill_points_assign >table {
 :-ms-input-placeholder {        color: var(--c-text-s) !important;}
 :-moz-placeholder {             color: var(--c-text-s) !important;}
 
+
+
 /** firefox hacks **/
 @-moz-document url-prefix() {
+    /* #bookmarks tags br requires an extra 1px of line-height */
+    #wrapper #torrent_table .group.discog td[colspan="5"] > span + br {
+        line-height: 21px;}
+    
+    /* firefox can't handle margin-bottom: -100%; */
+    #wrapper #content .sub {
+        -webkit-clip-path: unset;
+        clip-path: unset;}
+    #wrapper #content .sub {
+        visibility: hidden !important;}
+    #wrapper #content .sub[style="visibility: visible;"] {
+        visibility: visible !important;}
+    #wrapper #content .sub {
+        height: 0;
+        margin-bottom: unset;}
 }

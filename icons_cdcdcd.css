@@ -261,9 +261,10 @@ table.gazelles_art_display .hovereffect:before,
 select {
     background-image: url('icons/cdcdcd/select.svg');}
 /** number **/
+input[type="number"] {
+    -moz-appearance: textfield;}
 input[type="number"]::-webkit-inner-spin-button, 
 input[type="number"]::-webkit-outer-spin-button {
-    -moz-appearance: textfield;
     background-image: url('icons/cdcdcd/number.svg');}
 
 /** thumbs **/

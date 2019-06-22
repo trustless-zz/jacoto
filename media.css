@@ -470,6 +470,7 @@ body {
     background: var(--p-head-grdnt);}
     
 #userinfo_stats li {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     font-size: 15px;
     line-height: 20px;
