@@ -1,5 +1,5 @@
 ﻿@import url(core.css);
-@import url(icons_cdcdcd.css);
+@import url(icons_grish.css);
 @import url(media.css);
 
 @import url(https://gazellegames.net/static/styles/game_room/cssFiles/holidayeffects.css);
@@ -19,41 +19,38 @@
     --c-sticky-2:                       #30465C;
     --c-table-brdr: 					#2D4257;
     --c-tor-rowb: 						#2A3E52;
-    --c-body: 							#283A4D;						/*tor-rowa*/
+    --c-body: 							#283A4D;
     --c-tor-row-hvr: 					#253647;
     --c-input-focus: 					#223242;
     --c-edition: 						#223242;
     --c-input:							#1B2733;
     --c-input-obj:						#202F3D;
-    --c-trowb:							#1E2D3B;                     /*rowb*/
+    --c-trowb:							#1E2D3B;
     --c-tgroup:							#1D2B38;                     
-    --c-box: 							#1B2733;                     /*rowa*/
+    --c-box: 							#1B2733;
     --c-item-desc:                      rgba(27, 39, 51, .8);
     --c-row-hvr:						#131B24;
-    --c-high:							rgb(0, 0, 0); /**/
-    --c-b1: 							#294763; /*rgb(18, 201, 194);*/
-    --c-b2: 							#2C5169; /*rgb(81, 204, 165);*/
-    
-    --c-b3: 							#1F374D;                     /*~45%*/
-    --c-b4: 							#223F52;                     /*~45%*/
-    
-    --c-sb1:                            #1D3347;                     /* 10,4th */
-    --c-sb2:                            #203B4D;                     /* 10,4th */
-    --c-bg:                             #D9E473;
-    
+    --c-high:							rgb(0, 0, 0);
+    --c-b1: 							#294763;
+    --c-b2: 							#2C5169;    
+    --c-b3: 							#1F374D;
+    --c-b4: 							#223F52;    
+    --c-sb1:                            #1D3347;
+    --c-sb2:                            #203B4D;
+    --c-bg:                             #D9E473;    
     --c-hovereffect: 					rgba(0, 0, 0, .8);
     --c-b00: 							rgba(0, 0, 0, 0);
-    --c-anchor: 						#C6E6F6;						/* #bd002c */
-    --c-anchor-hvr: 					#FFF;							/* #053d3b #630017 */
-    --c-anchor-hvr-bcg: 				unset;                     /* 10,3rd */  /*rgba(18, 201, 194, .1);*/
+    --c-anchor: 						#C6E6F6;
+    --c-anchor-hvr: 					#FFF;
+    --c-anchor-hvr-bcg: 				unset;
     --c-anchor-hvr-bcg-obj:             #304456;
 	--c-header-shdw: 					rgba(0,0,0,.3);
     --c-main-shdw:						rgba(0,0,0,.5);
-    --c-on: 							#69C077;						/* #1E9400 */
+    --c-on: 							#69C077;
     --c-bonus:                          rgba(177, 232, 0, .2);
     --c-donate:                         rgb(255, 77, 77);
     --c-yellow: 						rgb(209, 209, 0);
-    --c-off: 							#BF6A6A;						/* #910000 */
+    --c-off: 							#BF6A6A;
     --c-colhead-click:					rgba(0, 0, 0, .15);
     --c-colhead-act: 					rgba(0, 0, 0, .3);
     --c-em-bcg: 						rgb(140, 57, 13);
@@ -62,11 +59,11 @@
     --c-fl: 							#69C077;
     --c-btn-b1: 						rgb(27,118,115);
     --c-btn-b2: 						rgb(58,120,100);
-    --c-red:                            #DD3434;                         /* contrast adjusted */
+    --c-red:                            #DD3434;
     --c-blue:                           rgb(99, 99, 255);
     --c-o-gold:                         rgb(245, 208, 0);
-    --c-gold:                           rgb(255, 215, 0);                       /* contrast adjusted */
-    --c-orange:                         rgb(255, 165, 0);                       /* contrast adjusted */
+    --c-gold:                           rgb(255, 215, 0);
+    --c-orange:                         rgb(255, 165, 0);
     --p-orange:                         unset;
     --p-gold:                           unset;
     --c-leech:                          #69c077;
