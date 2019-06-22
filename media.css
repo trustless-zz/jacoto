@@ -188,7 +188,7 @@ body {
 /* /making holidayeffects.css work */    
     
 #header {
-    z-index: 999;
+    z-index: 999 !important; /* !important to override holidayeffects.css */
     position: relative;
     border-bottom: var(--p-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
