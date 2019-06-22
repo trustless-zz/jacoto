@@ -744,7 +744,9 @@ td.unread,
 td.unread_sticky,
 td.unread_locked,
 td.unread_locked_sticky,
-tr.unreadpm td:first-child {
+tr.unreadpm td:first-child,
+.torrent_table .sticky td.center:first-child,
+#requests #requests_list .sticky >td:first-child {
     -webkit-box-shadow: inset var(--p-unread-stripe);
     box-shadow: inset var(--p-unread-stripe);}
 /* .forum_index,
@@ -2922,7 +2924,8 @@ strong.mature +strong +br,
     width: calc(20% - 10px);
     margin: 0 10px 10px 0;
     align-self: center;}
-.sidebar .box.box_image_coverart a,
+.sidebar .box.box_image_coverart a {
+    display: inline;}
 #content >a:first-child,
 .similar li >a {
     display: contents;}
@@ -5432,7 +5435,8 @@ table#likesrow td {
 table#uploadsrow a,
 table#snatchesrow a,
 table#likesrow a {
-    display: block;}
+    display: inline;
+    /* display: block; */}
 
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2):before {
     content: 'Info';

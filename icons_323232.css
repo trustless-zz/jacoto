@@ -299,16 +299,16 @@ img[title="Gold"],
     background-image: url('icons/gold.svg');}
 h2#username span#tip_user img,
 #wrapper #trading_panel .gold_trade a#gold_trade_add img {
-    background-image: url('icons/gold_plus.svg');}
+    background-image: url('icons/323232/gold_plus.svg');}
 #wrapper #trading_panel .gold_trade a#gold_trade_subtract img {
-    background-image: url('icons/gold_minus.svg');}
+    background-image: url('icons/323232/gold_minus.svg');}
 
 /** banned **/
 img[alt="Banned"] {
-    background-image: url('icons/banned.svg');}
+    background-image: url('icons/323232/banned.svg');}
 /** warned **/
 img[alt="Warned"] {
-    background-image: url('icons/warned.svg');}
+    background-image: url('icons/323232/warned.svg');}
 
 /** forum post user stats **/
 #forums .forum_post .avatar >div:first-child:after {
