@@ -21,8 +21,10 @@
     --c-tor-rowb: 						rgb(40, 40, 40);
     --c-body: 							rgb(35, 35, 35);						/*tor-rowa*/
     --c-tor-row-hvr: 					rgb(30, 30, 30);
+    --c-input-focus: 					rgb(25, 25, 25);
     --c-edition: 						rgb(25, 25, 25);
     --c-input:							rgb(20, 20, 20);
+    --c-input-obj:						rgb(20, 20, 20);
     --c-trowb:							rgb(18, 18, 18);                     /*rowb*/
     --c-tgroup:							rgb(15, 15, 15);                     
     --c-box: 							rgb(10, 10, 10);                     /*rowa*/
@@ -44,13 +46,14 @@
     --c-anchor: 						rgb(17, 184, 178);						/* #bd002c */
     --c-anchor-hvr: 					rgb(255, 255, 255);							/* #053d3b #630017 */
     --c-anchor-hvr-bcg: 				rgb(9,53,52);                     /* 10,3rd */  /*rgba(18, 201, 194, .1);*/
+    --c-anchor-hvr-bcg-obj:             rgb(9,53,52);
 	--c-header-shdw: 					rgba(0,0,0,.3);
     --c-main-shdw:						rgba(0,0,0,.5);
     --c-on: 							rgb(41, 204, 0);						/* #1E9400 */
     --c-bonus:                          rgba(177, 232, 0, .2);
     --c-donate:                         rgb(255, 77, 77);
     --c-yellow: 						rgb(209, 209, 0);
-    --c-off: 							rgb(255, 0, 0);							/* #910000 */
+    --c-off: 							rgb(255, 20, 20);						/* #910000 */
     --c-colhead-click:					rgba(0, 0, 0, .15);
     --c-colhead-act: 					rgba(0, 0, 0, .3);
     --c-em-bcg: 						rgb(140, 57, 13);
@@ -59,7 +62,7 @@
     --c-fl: 							rgb(154, 99, 255);
     --c-btn-b1: 						rgb(27,118,115);
     --c-btn-b2: 						rgb(58,120,100);
-    --c-red:                            rgb(255, 0, 0);                         /* contrast adjusted */
+    --c-red:                            rgb(255, 10, 10);                         /* contrast adjusted */
     --c-blue:                           rgb(99, 99, 255);
     --c-o-gold:                         rgb(245, 208, 0);
     --c-gold:                           rgb(255, 215, 0);                       /* contrast adjusted */

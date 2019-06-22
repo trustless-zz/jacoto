@@ -21,8 +21,10 @@
     --c-tor-rowb: 						rgb(215, 215, 215);
     --c-body: 							rgb(220, 220, 220);						/*tor-rowa*/
     --c-tor-row-hvr: 					rgb(225, 225, 225);
+    --c-input-focus: 				    rgb(230, 230, 230);
     --c-edition: 						rgb(230, 230, 230);
     --c-input:							rgb(235, 235, 235);
+    --c-input-obj:						rgb(235, 235, 235);
     --c-trowb:							rgb(237, 237, 237);                     /*rowb*/
     --c-tgroup:							rgb(240, 240, 240);                     
     --c-box: 							rgb(245, 245, 245);                     /*rowa*/
@@ -44,6 +46,7 @@
     --c-anchor: 						rgb(11, 122, 119);						/* #bd002c */
     --c-anchor-hvr: 					rgb(0, 0, 0);							/* #053d3b #630017 */
     --c-anchor-hvr-bcg: 				rgb(204, 237, 236);                     /* 10,3rd */  /*rgba(18, 201, 194, .1);*/
+    --c-anchor-hvr-bcg-obj:             rgb(204, 237, 236);
 	--c-header-shdw: 					rgba(0,0,0,.1);
     --c-main-shdw:						rgba(0,0,0,.2);
     --c-img-bcg-anchor: 				rgb(230, 242, 242);

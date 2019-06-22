@@ -28,8 +28,8 @@
     --p-colhead-tr-bcg-act:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
     --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
     --p-menu:                           var(--c-tor-rowb) linear-gradient(155deg,var(--c-tor-rowb),var(--c-tor-row-hvr));
-    --p-userinfo:                       var(--c-tor-row-hvr) linear-gradient(155deg,var(--c-tor-row-hvr),var(--c-input));
-    --p-extra-menu:                     var(--c-input) linear-gradient(155deg,var(--c-input),var(--c-box));    
+    --p-userinfo:                       var(--c-tor-row-hvr) linear-gradient(155deg,var(--c-tor-row-hvr),var(--c-input-obj));
+    --p-extra-menu:                     var(--c-input-obj) linear-gradient(155deg,var(--c-input-obj),var(--c-box));    
     --p-grouplinks:                     var(--c-tgroup) linear-gradient(155deg,var(--c-tgroup),var(--c-box));
     --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b00) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
     --p-unread-brdr:                    1px solid var(--c-b3);
@@ -802,7 +802,7 @@ tr.unreadpm td:first-child,
 .autocomplete_list li:nth-child(odd) {
     background-color: var(--c-tgroup);}
 .autocomplete_list li:hover {
-    background-color: var(--c-anchor-hvr-bcg);}
+    background-color: var(--c-anchor-hvr-bcg-obj);}
 
 #index #freeleech .group_torrent >span:not(:first-child) {
     padding: 0 2px;}
@@ -1754,7 +1754,7 @@ table#likesrow img:hover,
     box-shadow: none;}
 
 i.fa.fa-fl-pots {
-    color: #6441a5 !important;
+    color: var(--c-fl) !important;
 	font-family: OpenSans, Helvetica, Arial, sans-serif;}
 .global_buffs .buff_text {
     letter-spacing: var(--p-dot3);
@@ -2495,13 +2495,11 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .select2-container--default .select2-results > .select2-results__options >li:nth-child(odd),
 select >option:nth-child(odd) {
-    background-color: var(--c-input);}
+    background-color: var(--c-input-obj);}
 textarea:hover,
 textarea:focus,
 #wrapper #trading_panel .message_box textarea:hover,
 #wrapper #trading_panel .message_box textarea:focus,
-.select2-container--default .select2-results > .select2-results__options >li:nth-child(even),
-select >option:nth-child(even),
 select:hover,
 input[type="password"]:hover,
 input[type="password"]:focus,
@@ -2522,6 +2520,9 @@ input[type="url"]:focus,
 #searchthread input[type="search"]:focus */
 input[type="search"]:hover,
 input[type="search"]:focus {
+    background-color: var(--c-input-focus);}
+.select2-container--default .select2-results > .select2-results__options >li:nth-child(even),
+select >option:nth-child(even) {
     background-color: var(--c-edition);}
 #wrapper #trading_panel .message_box textarea:focus,
 textarea:focus,
@@ -2727,7 +2728,7 @@ body:not(#upload) #artist_tr + tr td.label,
     margin-left: 125px;}
 .filter_torrents.advanced #taglist td {
     padding: 0;
-    background-color: var(--c-input);}
+    background-color: var(--c-input-obj);}
 .filter_torrents.advanced #taglist a {
     width: 100%;
     display: block;
@@ -2868,7 +2869,7 @@ body:not(#upload) #artist_tr + tr td.label,
     height: 100%;}
 
 .bbbutt {
-    background-color: var(--c-input);
+    background-color: var(--c-input-obj);
     border: var(--p-img-brdr);
     padding: 3px;
     margin: 5px auto;
@@ -3050,7 +3051,7 @@ li:not(.suggested_similar) .similar_votes >span {
 .sub span a {
     display: block;
     padding: 0 5px;
-    background-color: var(--c-input);
+    background-color: var(--c-input-obj);
     border-right: var(--p-table-brdr);
     border-left: var(--p-table-brdr);
     position: relative;}
@@ -3560,7 +3561,7 @@ img[src="static/common/thumbsup.png"],
     table-layout: fixed;} /*115px=8%*/
 
 #requests tr.sticky {
-    background-color: var(--c-input);}
+    background-color: var(--c-input-obj);}
 #requests_donate tr:nth-child(1) strong,
 #requests_donate tr:nth-child(1) a {
     font-size: 14px;}
@@ -4029,7 +4030,7 @@ div.breadcrumbs,
     opacity: 0;
     width: 194px;
     position: absolute;
-    background-color: var(--c-input);
+    background-color: var(--c-input-obj);
     border: var(--p-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
@@ -8485,7 +8486,7 @@ table.adventure_table h3 {
 #crafting_panel .itemslot#CraftingResult {
     margin: 136px 0 0 397px;
     border-color: var(--c-main-brdr);
-    background-color: var(--c-input);}
+    background-color: var(--c-input-obj);}
 
 /*** Ability icons ***/
 #crafting_panel ul#abilities {
@@ -9125,7 +9126,7 @@ table.adventure_table h3 {
 	top: -6px;
 	padding: 2px;
     font-weight: 600;
-	background: var(--c-input);
+	background: var(--c-input-obj);
 	outline: 1px solid var(--c-sticky-id-brdr);}
 
 #backpack .itemslot .item {

@@ -367,7 +367,7 @@ body {
         -10px calc(100% + 10px));
     transition-delay: .3s;}
 #header #alerts a {
-    background-color: var(--c-input);
+    background-color: var(--c-input-obj);
     padding: 0 5px;
     font-weight: normal;
     white-space: nowrap;
@@ -400,7 +400,7 @@ body {
     order: 8;}
 
 #userinfo_stats li:not(#stats_ratio) {
-    background-color: var(--c-input);}
+    background-color: var(--c-input-obj);}
 #nav_useredit:hover,
 #nav_logout:hover,
 #nav_donate:hover,
@@ -410,7 +410,7 @@ body {
 #content .sub span a:hover,
 #userinfo_username #nav_userinfo a:hover,
 #userinfo_stats li:hover:not(#stats_ratio):not(#connectable) {
-    background-color: var(--c-anchor-hvr-bcg);}
+    background-color: var(--c-anchor-hvr-bcg-obj);}
 #header #userinfo_username  .active a,
 #header #userinfo_minor     .active a,
 #header #menu               .active a {
