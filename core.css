@@ -705,6 +705,9 @@ pre {
     overflow: auto;
     white-space: pre-wrap;}
 
+.torrent_table blockquote#description img {
+    background-color: var(--c-description);}
+
 strong.mature +strong +br +a[onclick] {
     /* margin-top: 0 !important; */}
 
@@ -2073,6 +2076,8 @@ a .error_message:hover {
     border-top: var(--p-table-brdr);
     color: var(--c-text-s);
     vertical-align: middle;}
+.torrent_table tr.pad.hidden td {
+    color: unset;}
 #requests table#requests_list tr:not(.colhead):not(.colhead_dark) td {
     border-top: var(--p-table-brdr);}
 #uploaded_table             td:nth-child(n+3),
@@ -9263,7 +9268,7 @@ div#fight_skill_points_assign >table {
 
 
 
-/** firefox hacks **/
+/** firefox only**/
 @-moz-document url-prefix() {
     /* #bookmarks tags br requires an extra 1px of line-height */
     #wrapper #torrent_table .group.discog td[colspan="5"] > span + br {

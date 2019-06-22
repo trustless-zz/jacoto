@@ -6,9 +6,10 @@
 
 /** COLORS **/
 :root {
+    --c-description:                    #fff;
     --c-low:                            rgb(255, 255, 255);
     --c-quote-brdr:                     rgba(240, 240, 240, .1);
-    --c-quote:                          rgba(240, 240, 240, .05);
+    --c-quote:                          #2B4E66;
     --c-contrast:                       rgba(255, 255, 255, .2);
     --c-txt: 							#FFF;
     --c-text-s: 						#b5b4c2;
@@ -57,8 +58,8 @@
     --c-em-hvr: 						rgb(230, 94, 21);
     --c-em-act: 						rgb(102, 42, 9);
     --c-fl: 							#69C077;
-    --c-btn-b1: 						rgb(27,118,115);
-    --c-btn-b2: 						rgb(58,120,100);
+    --c-btn-b1: 						#2B4E66;
+    --c-btn-b2: 						#2D526B;
     --c-red:                            #DD3434;
     --c-blue:                           rgb(99, 99, 255);
     --c-o-gold:                         rgb(245, 208, 0);
@@ -96,5 +97,19 @@
 a:hover {
     text-decoration: underline;}
 #menu ul li a:hover {
-    color: #69C077;
+    color: var(--c-on);
+    text-decoration: none;}
+button,
+#wrapper #trading_panel button,
+.alertable button,
+input[type=button],
+input[type=submit],
+.similar_votes a,
+.box_tags .stats.nobullet div a,
+a[href^="javascript:IndexVote("] strong,
+a[href^="javascript:Vote("] strong,
+#requests table.border td.nobr:nth-child(2) strong,
+#torrents #requests.request_table #requests_list .requestrows a.brackets,
+#upload td#image_block a,
+#newthreadform #newthreadtext #answer_block a {
     text-decoration: none;}
