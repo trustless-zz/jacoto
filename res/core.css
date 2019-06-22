@@ -50,27 +50,27 @@
 
 @font-face {
     font-family: "OpenSans";
-    src: url(OpenSans-Regular.ttf);}
+    src: url('res/OpenSans-Regular.ttf');}
 @font-face {
     font-family: "OpenSans";
-    src: url(OpenSans-Italic.ttf);
+    src: url('res/OpenSans-Italic.ttf');
     font-style: italic;}
 @font-face {
     font-family: "OpenSans";
-    src: url(OpenSans-SemiBold.ttf);
+    src: url('res/OpenSans-SemiBold.ttf');
     font-weight: 600;}
 @font-face {
     font-family: "OpenSans";
-    src: url(OpenSans-SemiBoldItalic.ttf);
+    src: url('res/OpenSans-SemiBoldItalic.ttf');
     font-weight: 600;
     font-style: italic;}
 @font-face {
     font-family: "OpenSans";
-    src: url(OpenSans-Bold.ttf);
+    src: url('res/OpenSans-Bold.ttf');
     font-weight: bold;}
 @font-face {
     font-family: "OpenSans";
-    src: url(OpenSans-BoldItalic.ttf);
+    src: url('res/OpenSans-BoldItalic.ttf');
     font-weight: bold;   
     font-style: italic;}
 
@@ -1242,8 +1242,7 @@ body >div, /* more info window at #shop */
 #userinfo_username .sub a:hover,
 #menu a:hover,
 #userinfo_minor a:hover,
-#userinfo_username li:not(.sub) a:hover,
-.box.news_post .head:hover {
+#userinfo_username li:not(.sub) a:hover {
     color: var(--c-anchor-hvr);}
 #menu li.active a,
 #userinfo_minor li.active a,

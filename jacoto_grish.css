@@ -1,8 +1,8 @@
-﻿@import url(core.css);
-@import url(icons_grish.css);
-@import url(media.css);
+﻿@import url('res/core.css');
+@import url('res/icons_frish.css');
+@import url('res/media.css');
 
-@import url(https://gazellegames.net/static/styles/game_room/cssFiles/holidayeffects.css);
+@import url('https://gazellegames.net/static/styles/game_room/cssFiles/holidayeffects.css');
 
 /** COLORS **/
 :root {
@@ -47,6 +47,7 @@
     --c-anchor-hvr-bcg-obj:             #304456;
 	--c-header-shdw: 					rgba(0,0,0,.3);
     --c-main-shdw:						rgba(0,0,0,.5);
+    --c-img-bcg-anchor: 				#2B3845;
     --c-on: 							#69C077;
     --c-bonus:                          rgba(177, 232, 0, .2);
     --c-donate:                         rgb(255, 77, 77);
