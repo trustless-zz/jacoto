@@ -50,27 +50,27 @@
 
 @font-face {
     font-family: "OpenSans";
-    src: url('res/OpenSans-Regular.ttf');}
+    src: url('OpenSans-Regular.ttf');}
 @font-face {
     font-family: "OpenSans";
-    src: url('res/OpenSans-Italic.ttf');
+    src: url('OpenSans-Italic.ttf');
     font-style: italic;}
 @font-face {
     font-family: "OpenSans";
-    src: url('res/OpenSans-SemiBold.ttf');
+    src: url('OpenSans-SemiBold.ttf');
     font-weight: 600;}
 @font-face {
     font-family: "OpenSans";
-    src: url('res/OpenSans-SemiBoldItalic.ttf');
+    src: url('OpenSans-SemiBoldItalic.ttf');
     font-weight: 600;
     font-style: italic;}
 @font-face {
     font-family: "OpenSans";
-    src: url('res/OpenSans-Bold.ttf');
+    src: url('OpenSans-Bold.ttf');
     font-weight: bold;}
 @font-face {
     font-family: "OpenSans";
-    src: url('res/OpenSans-BoldItalic.ttf');
+    src: url('OpenSans-BoldItalic.ttf');
     font-weight: bold;   
     font-style: italic;}
 
