@@ -2776,6 +2776,8 @@ body:not(#upload) #artist_tr + tr td.label,
 .filter_torrents.basic input#torrentsbrowsesearch {
     width: calc(100% - 540px);}
 
+/* #requests table#requests_list tr:not(.colhead_dark) td:not(first-child),
+#torrents .torrent_notifications table.border tr:not(.colhead) td, */
 .filter_torrents.advanced td[colspan="7"] {
     color: var(--c-text-s);}
 .torrent_details .torrent_table tr.pad.hidden tr td,
@@ -3470,6 +3472,7 @@ h3 {
 #seeding_not_snatched_table tr:not(.colhead):nth-child(odd),
 #downloaded_table           tr:not(.colhead):nth-child(odd),
 #extlink_table              tr:not(.colhead):nth-child(odd),
+#torrents .torrent_notifications table.border tr:not(.colhead):nth-child(odd),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(odd),
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(odd) td:nth-child(-n+2),
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(even) td:nth-last-child(-n+2) {
@@ -3493,6 +3496,7 @@ h3 {
 #seeding_not_snatched_table tr:not(.colhead):nth-child(even),
 #downloaded_table           tr:not(.colhead):nth-child(even),
 #extlink_table              tr:not(.colhead):nth-child(even),
+#torrents .torrent_notifications table.border tr:not(.colhead):nth-child(even),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(even),
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(even) td:nth-child(-n+2),
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(odd) td:nth-last-child(-n+2) {
@@ -3516,6 +3520,7 @@ h3 {
 #seeding_not_snatched_table tr:not(.colhead):hover,
 #downloaded_table           tr:not(.colhead):hover,
 #extlink_table              tr:not(.colhead):hover,
+#torrents .torrent_notifications table.border tr:not(.colhead):hover,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):hover,
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child):hover td {
     background-color: var(--c-row-hvr) !important;}
@@ -3639,8 +3644,8 @@ img[src="static/common/thumbsup.png"],
     width: 36px;
     height: 36px;
     float: left;}
-#torrents #wrapper .torrent_notifications .noticon ~td >span.time,
-#requests table#requests_list span.time,
+/* #torrents #wrapper .torrent_notifications .noticon ~td >span.time,
+#requests table#requests_list span.time, */
 #inbox .box.vertical_space .head span.time,
 .forum_post .colhead_dark .time,
 .forum_post .comment_rating p,
@@ -3656,6 +3661,10 @@ img[src="static/common/thumbsup.png"],
     margin: 0;
     font-size: 13px;
     line-height: var(--p-lh);}
+
+#torrents .torrent_notifications .noticon +td >strong +strong {
+    font-weight: bold;
+    color: var(--c-low);}
 
 #requests .main_column >table:first-child {
     position: relative;
@@ -5278,6 +5287,7 @@ input[class="date_picker"] {
 #user .thin >h2 +h3 {
     margin: 0;
     font-size: var(--p-head);
+    line-height: var(--p-head);
     height: var(--p-head);
     width: calc(100% - 22px);
     padding: 9px 10px;
@@ -5285,7 +5295,7 @@ input[class="date_picker"] {
     position: relative;
     left: 1px;
     margin-top: -36px;
-    bottom: -54px;}
+    bottom: -49px;}
 #user .thin >h2:first-child +form[method="post"]:before {
     line-height: var(--p-head);
     content: 'Create a new notification filter';
@@ -5888,16 +5898,16 @@ span.size5 img {
     text-align: center;}
 #collections #coverart.box li {
     padding: 0;
-    margin: 5px 0;
+    margin: 5px 10px 5px 0;
+    height: -moz-fit-content;
     height: fit-content;
-    width: calc(20% - 8px);
+    width: calc(20% - 10px);
     align-self: center;}
 #collections #coverart.box >ul:not(.hidden) {
     display: flex;
     flex-flow: wrap;
     width: calc(100% + 1px);
-    justify-content: space-between;
-    padding: 5px 10px;}
+    padding: 5px 0 5px 10px;}
 #collections #coverart.box img {
     width: 100%;
     height: auto;}
