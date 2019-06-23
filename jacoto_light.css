@@ -33,8 +33,8 @@
     --c-item-desc:                      rgba(245, 245, 245, .8);
     --c-row-hvr:						rgb(250, 250, 250);
     --c-high:							rgb(255, 255, 255);
-    --c-b1: 							rgb(18, 201, 194);
-    --c-b2: 							rgb(81, 204, 165);
+    --c-b1: 							rgb(18, 201, 194);/*JAva*/
+    --c-b2: 							rgb(81, 204, 165);/*puerTO riCO*/
     --c-b3: 							rgb(142, 225, 222);
     --c-b4: 							rgb(170, 226, 209);
     --c-sb1:                            rgb(183, 233, 231);
@@ -95,3 +95,12 @@
     --c-type-5:                         rgba(0,     92,     119,    .17);
 }
 /** /COLORS **/
+
+body {
+    background-image: url('res/icons/323232/background.svg');}
+/* disabling custom user backgrounds for now */
+#user[style^="background: url("] {
+    background-image: url('res/icons/323232/background.svg') !important;
+    background-size: 50px 50px !important;}
+#logo a {
+    background-image: url('res/icons/323232/logo.svg');}

@@ -905,6 +905,15 @@ body {
         width: calc(100% - 10px);}
 }
 
+
+/* top10 tags */
+@media (max-width: 1150px) {
+    .thin.top10_tags #ut,
+    .thin.top10_tags #ur,
+    .thin.top10_tags #v {
+        width: calc(100% / 2 - 9.5px);}
+}
+
 /* games >filter */ /* 53% */ /* revisit */
 @media (max-width: 1405px) {
     .filter_torrents input.inputtext[name="filelist"],

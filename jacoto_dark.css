@@ -95,3 +95,12 @@
     --c-type-5:                         rgba(0,     92,     119,    .23);
 }
 /** /COLORS **/
+
+body {
+    background-image: url('res/icons/cdcdcd/background.svg');}
+/* disabling custom user backgrounds for now */
+#user[style^="background: url("] {
+    background-image: url('res/icons/cdcdcd/background.svg') !important;
+    background-size: 50px 50px !important;}
+#logo a {
+    background-image: url('res/icons/cdcdcd/logo.svg');}
