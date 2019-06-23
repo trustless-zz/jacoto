@@ -1161,6 +1161,7 @@ div,
 .hovereffect h2,
 #shop .item_description,
 fancybox-button,
+strong,
 
 /* .box.news_post .head:before,
 #index #recommended .head:before,
@@ -2103,10 +2104,12 @@ table.adventure_table .colhead td {
 #artist #torrent_table .group_torrent td[colspan="2"] >a,
 #collections #torrent_table .group_torrent td[colspan="3"] >a,
 #bookmarks #torrent_table td[colspan="3"] >a,
-#torrents .group_torrent td:first-child >a {
+#torrents .group_torrent td:first-child >a,
+#torrents .torrent_notifications .noticon +td {
     font-size: 13px;
     line-height: 18px;
     margin-left: 2px;}
+#torrents #wrapper .torrent_notifications .noticon +td,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a {
     margin: 0;}
 #top10 .group_torrent td:first-child,
@@ -2146,7 +2149,8 @@ table.adventure_table .colhead td {
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child,
 #bookmarks #torrent_table td[colspan="3"] >span:first-child,
 .torrent_details .group_torrent td:first-child span,
-.torrent_table td[colspan="4"] >span:first-child {
+.torrent_table td[colspan="4"] >span:first-child,
+#torrents .torrent_notifications .noticon +td >span:first-child {
     position: relative;
     z-index: 1;
     font-size: 0;
@@ -2172,7 +2176,8 @@ table.adventure_table .colhead td {
 #seeding_not_snatched_table td.center.cats_col +td span:first-child a,
 #downloaded_table           td.center.cats_col +td span:first-child a,
 #extlink_table              td.center.cats_col +td span:first-child a,
-.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a {
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a,
+#torrents .torrent_notifications .noticon +td >span:first-child >a {
     margin-right: 3px;
     display: inline-block;}
 .torrent_table .show_torrents .show_torrents_link {
@@ -2799,7 +2804,8 @@ body:not(#upload) #artist_tr + tr td.label,
 #user .thin >h2:first-child +.center ~table.border .colhead strong,
 #top10 td.center.cats_col +td >strong,
 #log table#log_table .colhead strong,
-#torrent_history_search #th_search strong {
+#torrent_history_search #th_search strong,
+#torrents .torrent_notifications .noticon +td >strong {
     font-weight: normal;}
 
 .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
@@ -3620,6 +3626,7 @@ img[src="static/common/thumbsup.png"],
     width: 36px;
     height: 36px;
     float: left;}
+#torrents #wrapper .torrent_notifications .noticon ~td >span.time,
 #requests table#requests_list span.time,
 #inbox .box.vertical_space .head span.time,
 .forum_post .colhead_dark .time,

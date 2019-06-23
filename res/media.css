@@ -24,7 +24,8 @@ body {
 #collections .group.discog td.collicon:nth-child(2) >div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #torrent_table td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #top10 td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
-#running_freeleech td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) {
+#running_freeleech td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+#torrents .torrent_notifications .noticon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) {
     background: none;}
 #groupplatform a {
     width: 100%;
@@ -418,13 +419,29 @@ body {
     
 #header .highlight {
     color: var(--c-em-hvr);
-    box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr)}
+    box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr);}
+/* notifications don't get a .highlight */
+#header li[id="notilia nav_notifications"] strong {
+    color: var(--c-em-hvr);}
+#header li[id="notilia nav_notifications"] a.notificationsico {
+    position: relative;}
+#header li[id="notilia nav_notifications"] strong:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr);}
+#header li[id="notilia nav_notifications"].active strong:before {
+    content: none;}
 #header #searchbars .autocomplete_list .highlight {
     color: var(--c-anchor);
     -webkit-box-shadow: unset;
     box-shadow: unset;}
 #header #searchbars .autocomplete_list .highlight:hover,
-#header .highlight:hover {
+#header .highlight:hover,
+#header li[id="notilia nav_notifications"]:hover strong {
     color: var(--c-anchor-hvr);}
     
 #header #userinfo_stats:before {
