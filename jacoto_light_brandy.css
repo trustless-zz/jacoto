@@ -33,22 +33,22 @@
     --c-item-desc:                      rgba(245, 245, 245, .8);
     --c-row-hvr:						rgb(250, 250, 250);
     --c-high:							rgb(255, 255, 255);
-    --c-b1: 							#C95312;/*tia maRIA*/
-    --c-b2: 							#CC6B52;/*chestnut roSE*/
-    --c-b3: 							#E1AB8E;
-    --c-b4: 							#E2B6AB;
-    --c-sb1:                            #E9C9B7;
-    --c-sb2:                            #EACFC9;
-    --c-bg:                             #A2430F;    
+    --c-b1: 							#F29461;/*saNDY BRown*/
+    --c-b2: 							#F2937C;/*Apricot*/
+    --c-b3: 							#F4C9B2;
+    --c-b4: 							#F4C8BE;
+    --c-sb1:                            #F4DBCD;
+    --c-sb2:                            #F4DAD4;
+    --c-bg:                             #C1764D;    
     --c-hovereffect: 					rgba(255, 255, 255, .8);
     --c-b00: 							rgba(255, 255, 255, 0);
-    --c-anchor: 						#7A320B;
+    --c-anchor: 						#8F5739;
     --c-anchor-hvr: 					rgb(0, 0, 0);
-    --c-anchor-hvr-bcg: 				#EDD8CC;
-    --c-anchor-hvr-bcg-obj:             #EDD8CC;
+    --c-anchor-hvr-bcg: 				#F4E3DA;
+    --c-anchor-hvr-bcg-obj:             #F4E3DA;
 	--c-header-shdw: 					rgba(0,0,0,.1);
     --c-main-shdw:						rgba(0,0,0,.2);
-    --c-img-bcg-anchor: 				#F2EBE6;
+    --c-img-bcg-anchor: 				#F5EFEC;
     --c-on: 							rgb(29, 145, 0);
     --c-bonus:                          rgba(177, 232, 0, .2);
     --c-donate:                         rgb(203, 60, 60);
@@ -56,12 +56,12 @@
     --c-off: 							rgb(163, 0, 0);
     --c-colhead-click:					rgba(255, 255, 255, .15);
     --c-colhead-act: 					rgba(255, 255, 255, .3);
-    --c-em-bcg: 						#3884F5;
-    --c-em-hvr: 						#2E6BC7;
-    --c-em-act: 						#629DF5;
+    --c-em-bcg: 						#F04A30;
+    --c-em-hvr: 						#B33724;
+    --c-em-act: 						#F07360;
     --c-fl: 							rgb(100, 65, 165);
-    --c-btn-b1: 						#DD9B77;
-    --c-btn-b2: 						#D1A499;
+    --c-btn-b1: 						#F3BFA3;
+    --c-btn-b2: 						#F3BFB2;
     --c-red:                            rgb(227, 0, 0);
     --c-blue:                           rgb(33, 33, 217);
     --c-o-gold:                         rgb(255, 215, 0);
@@ -103,4 +103,4 @@ body {
     background-image: url('res/icons/323232/background.svg') !important;
     background-size: 50px 50px !important;}
 #logo a {
-    background-image: url('res/icons/323232_seria/logo.svg');}
+    background-image: url('res/icons/323232_brandy/logo.svg');}
