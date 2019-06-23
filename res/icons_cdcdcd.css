@@ -1,11 +1,4 @@
-﻿body {
-    background-image: url('icons/cdcdcd/background.svg');}
-/* disabling custom user backgrounds for now */
-#user[style^="background: url("] {
-    background-image: url('icons/cdcdcd/background.svg') !important;
-    background-size: 50px 50px !important;}
-
-table.gazelles_art_display .hovereffect:before,
+﻿table.gazelles_art_display .hovereffect:before,
 .fancybox-image,
 .lightbox img {
     background-image: url('icons/cdcdcd/transparent.svg');}
@@ -253,10 +246,6 @@ table.gazelles_art_display .hovereffect:before,
 #groupplatform a[href$="=Xbox+360"] {background-image: url(caticons/xbox360.svg);}
 #groupplatform a[href$="=ZX+Spectrum"] {background-image: url(caticons/zxspectrum.svg);}
 }
-
-/** logo **/
-#logo a {
-    background-image: url('icons/cdcdcd/logo.svg');}
 
 select {
     background-image: url('icons/cdcdcd/select.svg');}
