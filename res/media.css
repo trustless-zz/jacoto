@@ -142,6 +142,7 @@ body {
 #toplink a:hover:active {
     background-color: var(--c-low);}
 /* forum post 'back to top' button */
+#artist #requests .colhead_dark a,
 #userhistory .colhead_dark span[id*="bar"],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
