@@ -164,6 +164,9 @@ body {
     width: calc(100% - 23px);}
 /* /forum post 'back to top' button */
     
+.forum_post.sticky_post .colhead_dark div[style="float:left;"] {
+    width: calc(100% - 70px);}
+    
 /** new boring desktop header **/
 /* making holidayeffects.css work */ /* otherwise would just set background to respective divs */
 #extra1,
