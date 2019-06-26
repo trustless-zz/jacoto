@@ -56,9 +56,9 @@
     --c-off: 							#BF6A6A;
     --c-colhead-click:					rgba(0, 0, 0, .15);
     --c-colhead-act: 					rgba(0, 0, 0, .3);
-    --c-em-bcg: 						rgb(140, 57, 13);
-    --c-em-hvr: 						rgb(230, 94, 21);
-    --c-em-act: 						rgb(102, 42, 9);
+    --c-em-bcg: 						rgb(140, 25, 13);
+    --c-em-hvr: 						rgb(230, 42, 21);
+    --c-em-act: 						rgb(115, 36, 28);
     --c-fl: 							#69C077;
     --c-btn-b1: 						#2B4E66;
     --c-btn-b2: 						#2D526B;

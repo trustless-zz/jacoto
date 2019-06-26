@@ -56,9 +56,9 @@
     --c-off: 							rgb(163, 0, 0);
     --c-colhead-click:					rgba(255, 255, 255, .15);
     --c-colhead-act: 					rgba(255, 255, 255, .3);
-    --c-em-bcg: 						rgb(245, 100, 22);
-    --c-em-hvr: 						rgb(199, 81, 18);
-    --c-em-act: 						rgb(245, 173, 134);
+    --c-em-bcg: 						rgb(245, 44, 22);
+    --c-em-hvr: 						rgb(199, 36, 18);
+    --c-em-act: 						rgb(245, 139, 127);
     --c-fl: 							rgb(100, 65, 165);
     --c-btn-b1: 						rgb(119, 211, 207);
     --c-btn-b2: 						rgb(151, 212, 193);
