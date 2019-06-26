@@ -174,7 +174,7 @@ body {
 #extra3 {
     content: '';
     position: absolute;
-    z-index: 998;
+    z-index: 98;
     left: 0;
     width: 100%;}
 #extra1 { /* #searchbars */
@@ -192,7 +192,7 @@ body {
 /* /making holidayeffects.css work */    
     
 #header {
-    z-index: 999 !important; /* !important to override holidayeffects.css */
+    z-index: 99 !important; /* !important to override holidayeffects.css */
     position: relative;
     border-bottom: var(--p-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
