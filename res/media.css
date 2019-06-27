@@ -685,15 +685,14 @@ body {
 
 
 @media (min-width: 1300px) {
-#forums .forum_latest >.search.box.pad table#forumlist {
-    white-space: nowrap;}
+    #forums .forum_latest >.search.box.pad table#forumlist {
+        white-space: nowrap;}
 }
-
-
-
-
-
-
+@media (min-width: 1220px) {
+    #user .box_requests #requests tr:not(.colhead_dark) td:nth-last-child(2),
+    #user .box_requests #requests tr:not(.colhead_dark) .time {
+        white-space: nowrap;}
+}
 
 
 
