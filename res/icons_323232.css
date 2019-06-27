@@ -1,5 +1,4 @@
-﻿table.gazelles_art_display .hovereffect:before,
-.fancybox-image,
+﻿.fancybox-image,
 .lightbox img {
     background-image: url('icons/323232/transparent.svg');}
 #artist .sidebar img,
@@ -12,7 +11,9 @@
 #uploadsrow img,
 #dailygazelle img,
 #slides img,
-.profile .box_art_gallery .gallery_row img {
+.profile .box_art_gallery .gallery_row img,
+.hovereffect,
+#collections #coverart.box img {
     background-image: url('icons/323232/transparent50.svg');}
 
 .Bandcamp {background-image: url("weblinks/323232/Bandcamp.svg");}
