@@ -1,9 +1,19 @@
 ﻿table.gazelles_art_display .hovereffect:before,
 .fancybox-image,
-.lightbox img,
-.box_albumart p:before,
-#artist .sidebar >.box:first-child >div:last-child:before {
+.lightbox img {
     background-image: url('icons/cdcdcd/transparent.svg');}
+#artist .sidebar img,
+.sidebar .box.box_albumart,
+.similar img,
+.screenshots img,
+#vanityhouse img,
+#likesrow img,
+#snatchesrow img,
+#uploadsrow img,
+#dailygazelle img,
+#slides img,
+.profile .box_art_gallery .gallery_row img {
+    background-image: url('icons/cdcdcd/transparent50.svg');}
 
 .Bandcamp {background-image: url("weblinks/cdcdcd/Bandcamp.svg");}
 .Discogs {background-image: url("weblinks/cdcdcd/Discogs.svg");}
