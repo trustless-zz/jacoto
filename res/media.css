@@ -917,6 +917,17 @@ body {
         width: calc(100% / 2 - 9.5px);}
 }
 
+/* forum post image size */
+@media (max-width: 1019px) {
+    #wrapper .forum_post td.body img {
+        max-width: 100% !important;}
+}
+/* news post image size */
+@media (max-width: 1170px) {
+    #wrapper .box.news_post >.pad img {
+        max-width: 100% !important;}
+}
+
 /* games >filter */ /* 53% */ /* revisit */
 @media (max-width: 1405px) {
     .filter_torrents input.inputtext[name="filelist"],
