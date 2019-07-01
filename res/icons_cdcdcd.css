@@ -22,7 +22,8 @@
 #slides img,
 .profile .box_art_gallery .gallery_row img,
 .hovereffect,
-#collections #coverart.box img {
+#collections #coverart.box img,
+.sidebar .box.box_image_coverart a img {
     background-image: url('icons/cdcdcd/transparent50.svg');}
 
 .Bandcamp {background-image: url("weblinks/cdcdcd/Bandcamp.svg");}
