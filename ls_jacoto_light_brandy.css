@@ -1,0 +1,134 @@
+﻿@import url('res/core.css');
+@import url('res/icons_323232.css');
+@import url('res/media.css');
+
+@import url('https://gazellegames.net/static/styles/game_room/cssFiles/holidayeffects.css');
+
+/** COLORS **/
+:root {
+    --c-post-img:                       rgb(200, 200, 200);
+    --c-description:                    rgb(245, 245, 245);
+    --c-low:                            rgb(0, 0, 0);
+    --c-quote-brdr:                     rgba(10, 10, 10, .1);
+    --c-quote:                          rgba(10, 10, 10, .05);
+    --c-contrast:                       rgba(0, 0, 0, .2);
+    --c-txt: 							rgb(50, 50, 50);
+    --c-text-s: 						rgb(100, 100, 100);
+    --c-curtain:						rgb(110, 110, 110);
+    --c-sticky-id-brdr:                 rgb(190, 190, 190);
+    --c-input-brdr:						rgb(195, 195, 195);
+    --c-main-brdr:						rgb(200, 200, 200);
+    --c-sticky-2:                       rgb(205, 205, 205);
+    --c-table-brdr: 					rgb(210, 210, 210);
+    --c-tor-rowb: 						rgb(215, 215, 215);
+    --c-body: 							rgb(220, 220, 220);
+    --c-tor-row-hvr: 					rgb(225, 225, 225);
+    --c-input-focus: 				    rgb(230, 230, 230);
+    --c-edition: 						rgb(230, 230, 230);
+    --c-input:							rgb(235, 235, 235);
+    --c-input-obj:						rgb(235, 235, 235);
+    --c-trowb:							rgb(237, 237, 237);
+    --c-tgroup:							rgb(240, 240, 240);                     
+    --c-box: 							rgb(245, 245, 245);
+    --c-item-desc:                      rgba(245, 245, 245, .8);
+    --c-row-hvr:						rgb(250, 250, 250);
+    --c-high:							rgb(255, 255, 255);
+    --c-b1: 							#F29461;/*saNDY BRown*/
+    --c-b2: 							#F2937C;/*Apricot*/
+    --c-b3: 							#F4C9B2;
+    --c-b4: 							#F4C8BE;
+    --c-sb1:                            #F4DBCD;
+    --c-sb2:                            #F4DAD4;
+    --c-bg:                             #C1764D;    
+    --c-hovereffect: 					rgba(255, 255, 255, .8);
+    --c-b00: 							rgba(255, 255, 255, 0);
+    --c-anchor: 						#8F5739;
+    --c-anchor-hvr: 					rgb(0, 0, 0);
+    --c-anchor-hvr-bcg: 				#F4E3DA;
+    --c-anchor-hvr-bcg-obj:             #F4E3DA;
+	--c-header-shdw: 					rgba(0,0,0,.1);
+    --c-main-shdw:						rgba(0,0,0,.2);
+    --c-img-bcg-anchor: 				#F5EFEC;
+    --c-on: 							rgb(29, 145, 0);
+    --c-bonus:                          rgba(177, 232, 0, .2);
+    --c-donate:                         rgb(203, 60, 60);
+    --c-yellow: 						rgb(145, 145, 0);
+    --c-off: 							rgb(163, 0, 0);
+    --c-colhead-click:					rgba(255, 255, 255, .15);
+    --c-colhead-act: 					rgba(255, 255, 255, .3);
+    --c-em-bcg: 						#F04A30;
+    --c-em-hvr: 						#B33724;
+    --c-em-act: 						#F07360;
+    --c-fl: 							rgb(100, 65, 165);
+    --c-btn-b1: 						#F3BFA3;
+    --c-btn-b2: 						#F3BFB2;
+    --c-red:                            rgb(227, 0, 0);
+    --c-blue:                           rgb(33, 33, 217);
+    --c-o-gold:                         rgb(255, 215, 0);
+    --c-gold:                           rgb(133, 112, 0);
+    --c-orange:                         rgb(156, 101, 0);
+    --p-orange:                         0 0 1px rgb(255, 165, 0);
+    --p-gold:                           0 0 1px rgb(255, 215, 0);
+    --c-leech:                          rgb(163, 135, 0);
+    --c-seed:                           rgb(32, 161, 0);
+    --c-upload:                         rgb(89, 153, 112);
+    --c-snatch:                         rgb(204, 35, 0);
+    --c-download:                       rgb(230, 71, 0);
+    
+    --c-r01:                            rgb(227,    0,      0);
+    --c-r02:                            rgb(213,    24,     0);
+    --c-r03:                            rgb(200,    48,     0);
+    --c-r04:                            rgb(186,    73,     0);
+    --c-r05:                            rgb(172,    97,     0);
+    --c-r06:                            rgb(159,    121,    0);
+    --c-r07:                            rgb(145,    145,    0);
+    --c-r08:                            rgb(131,    145,    0);
+    --c-r09:                            rgb(116,    145,    0);
+    --c-r10:                            rgb(29,     145,    0);
+    --c-r99:                            rgba(29,    145,    0,      .5);
+/*shop*/
+    --c-type-0:                         rgba(116,   56,     66,     .17);
+    --c-type-1:                         rgba(58,    77,     115,    .17);
+    --c-type-2:                         rgba(70,    114,    59,     .17);
+    --c-type-3:                         rgba(115,   118,    0,      .17);
+    --c-type-4:                         rgba(84,    84,     84,     .17);
+    --c-type-5:                         rgba(0,     92,     119,    .17);
+}
+/** /COLORS **/
+
+body {
+    background-image: url('res/icons/323232/background.svg');}
+/* disabling custom user backgrounds for now */
+#user[style^="background: url("] {
+    background-image: url('res/icons/323232/background.svg') !important;
+    background-size: 50px 50px !important;}
+#logo a {
+    background-image: url('res/icons/323232_brandy/logo.svg');}
+
+/* large sidebar */
+@media (min-width: 1387px) {
+#index .main_column {
+    width: calc(100% - 630px);}
+#index .sidebar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 615px;}
+#index .sidebar #stats,
+#index .sidebar #freeleech {
+    width: 100%;}
+#index .sidebar >div.box {
+    width: 300px;}
+#index .sidebar #stats .stats li {
+    float: left;
+    width: 50%;}
+#index #blogposts      {order: 1}
+#index #dailygazelle   {order: 2}
+#index #slides         {order: 3}
+#index #polcont        {order: 4}
+#index #stats          {order: 5}
+#index .box.news_post>.pad img {
+    max-width: 614px !important;}
+#index .sidebar #freeleech_time_left #progress_bar .main_bar {
+    background-size: 1845px 100%;}
+}

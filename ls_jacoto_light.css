@@ -105,7 +105,7 @@ body {
 #logo a {
     background-image: url('res/icons/323232/logo.svg');}
 
-/* sidebar XL*/
+/* large sidebar */
 @media (min-width: 1387px) {
 #index .main_column {
     width: calc(100% - 630px);}
