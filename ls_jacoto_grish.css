@@ -110,6 +110,7 @@ a:hover {
 #menu ul li a:hover {
     color: var(--c-on);
     text-decoration: none;}
+#userinfo_minor li a,
 button,
 #wrapper #trading_panel button,
 .alertable button,
