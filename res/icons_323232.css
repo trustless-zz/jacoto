@@ -6,6 +6,8 @@
 	background-image: url('icons/323232/scrollbar/to_left.svg');}
 ::-webkit-scrollbar-button:horizontal:increment {
 	background-image: url('icons/323232/scrollbar/to_right.svg');}
+::-webkit-resizer {
+    background-image: url('icons/323232/scrollbar/resizer.svg');}
 
 .fancybox-image,
 .lightbox img {
