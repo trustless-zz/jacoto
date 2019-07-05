@@ -384,6 +384,9 @@ body {
 #nav_logout {
     order: -3;}
 #nav_donate {
+    width: 34px;
+    height: 34px;
+    position: relative;
     order: -2;}
 #nav_useredit {
     order: -1;}
@@ -572,7 +575,14 @@ body {
 #nav_logout a {
     -webkit-mask-image: url('icons/nav/logout.svg');
     mask-image: url('icons/nav/logout.svg');}
-#nav_donate a {
+#wrapper #nav_donate a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    z-index: 2;
+    -webkit-mask-size: auto 20px;
+    mask-size: auto 20px;
     -webkit-mask-image: url('icons/nav/donate.svg');
     mask-image: url('icons/nav/donate.svg');}
 #nav_useredit a:hover {
