@@ -6,6 +6,8 @@
 
 /** COLORS **/
 :root {
+    --c-selection:                      rgb(12, 133, 129, .996); /* Chrome is SPECIAL */
+    --c-selection-i:                    rgb(12, 133, 129, .75);
     --c-post-img:                       rgb(200, 200, 200);
     --c-description:                    rgb(245, 245, 245);
     --c-low:                            rgb(0, 0, 0);
@@ -35,6 +37,7 @@
     --c-item-desc:                      rgba(245, 245, 245, .8);
     --c-row-hvr:						rgb(250, 250, 250);
     --c-high:							rgb(255, 255, 255);
+    --c-high-t:							rgb(255, 255, 255);
     --c-b1: 							rgb(18, 201, 194);/*JAva*/
     --c-b2: 							rgb(81, 204, 165);/*puerTO riCO*/
     --c-b3: 							rgb(142, 225, 222);

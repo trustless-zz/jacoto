@@ -6,6 +6,8 @@
 
 /** COLORS **/
 :root {
+    --c-selection:                      rgba(168, 103, 67, .996);
+    --c-selection-i:                    rgba(168, 103, 67, .75);
     --c-post-img:                       rgb(200, 200, 200);
     --c-description:                    rgb(245, 245, 245);
     --c-low:                            rgb(0, 0, 0);
@@ -35,6 +37,7 @@
     --c-item-desc:                      rgba(245, 245, 245, .8);
     --c-row-hvr:						rgb(250, 250, 250);
     --c-high:							rgb(255, 255, 255);
+    --c-high-t:							rgb(255, 255, 255);
     --c-b1: 							#F29461;/*saNDY BRown*/
     --c-b2: 							#F2937C;/*Apricot*/
     --c-b3: 							#F4C9B2;

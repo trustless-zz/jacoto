@@ -6,6 +6,8 @@
 
 /** COLORS **/
 :root {
+    --c-selection:                      rgba(142, 103, 171, .996);
+    --c-selection-i:                    rgba(142, 103, 171, .75);
     --c-post-img:                       rgb(200, 200, 200);
     --c-description:                    rgb(245, 245, 245);
     --c-low:                            rgb(0, 0, 0);
@@ -35,6 +37,7 @@
     --c-item-desc:                      rgba(245, 245, 245, .8);
     --c-row-hvr:						rgb(250, 250, 250);
     --c-high:							rgb(255, 255, 255);
+    --c-high-t:							rgb(255, 255, 255);
     --c-b1: 							#D096FA;/*muaVE*/
     --c-b2: 							#E88FFC;/*heliOTROPE*/
     --c-b3: 							#E4CAF7;
