@@ -12,6 +12,8 @@
     --c-quote-brdr:                     rgba(170, 170, 170, .8);
     --c-quote:                          rgb(240, 240, 240);
     --c-contrast:                       rgba(0, 0, 0, .2);
+    --c-unread-s:                       #94A6B1;
+    --c-unread-i: 						rgb(0, 0, 0);
     --c-txt: 							rgb(0, 0, 0);
     --c-text-s: 						rgb(50, 50, 50);
     --c-curtain:						rgb(110, 110, 110);
