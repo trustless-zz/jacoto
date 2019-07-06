@@ -9,7 +9,8 @@
     --c-selection:                      rgba(163, 100, 65, .996);
     --c-selection-i:                    rgba(163, 100, 65, .75);
     --c-post-img:                       rgb(55, 55, 55);
-    --c-description:                    rgb(225, 225, 225);
+    --p-description:                    invert(1);
+    --c-description:                    rgb(245, 245, 245);
     --c-low:                            rgb(255, 255, 255);
     --c-quote-brdr:                     rgba(240, 240, 240, .1);
     --c-quote:                          rgba(240, 240, 240, .05);

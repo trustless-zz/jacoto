@@ -338,6 +338,7 @@ body {
     background-color: var(--c-low);}
 #header #alerts .blend {
     z-index: 999;
+    opacity: 0;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border: var(--p-table-brdr);
@@ -360,6 +361,7 @@ body {
         calc(100% + 10px) -10px);
     transition-delay: 0s;}
 #header #alerts:hover .blend {
+    opacity: 1;
     -webkit-clip-path: polygon(
         -10px -10px,
         calc(100% + 10px) -10px,

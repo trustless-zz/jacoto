@@ -460,12 +460,15 @@ a[title="Remove"] {
     width: 100%;
     height: 100%;
     z-index: 1;
+    opacity: .75;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: auto 20px;
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: auto 20px;}
+#nav_donate:hover span {
+    opacity: 1;}
 
 #nav_donate .r01 {
     -webkit-mask-image: url('icons/nav/donate_progress/r01.svg');
@@ -780,8 +783,15 @@ pre {
     overflow: auto;
     white-space: pre-wrap;}
 
+.lightbox img[src^="https://gazellegames.net/nfoimg"],
 .torrent_table blockquote#description img {
+    background-image: none !important;
+    -webkit-filter: var(--p-description);
+    filter:         var(--p-description);
     background-color: var(--c-description);}
+.torrent_table blockquote#description img {
+    max-width: 100% !important;
+    margin: 0;}
 
 strong.mature +strong +br +a[onclick] {
     /* margin-top: 0 !important; */}

@@ -9,6 +9,7 @@
     --c-selection:                      rgba(69, 120, 168, .996);
     --c-selection-i:                    rgba(69, 120, 168, .75);
     --c-post-img:                       rgb(0, 0, 0);
+    --p-description:                    unset;
     --c-description:                    #fff;
     --c-low:                            rgb(255, 255, 255);
     --c-quote-brdr:                     #2B4E66;
@@ -130,6 +131,8 @@ a[href^="javascript:Vote("] strong,
 #upload td#image_block a,
 #newthreadform #newthreadtext #answer_block a {
     text-decoration: none;}
+blockquote, pre {
+    filter: drop-shadow(2px 2px 3px var(--c-high-t));}
 
 /* large sidebar */
 @media (min-width: 1387px) {
