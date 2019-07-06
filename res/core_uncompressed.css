@@ -1231,6 +1231,7 @@ table#uploadsrow a {
 #threadpoll li.graph {
     color: transparent;}
 
+/* stacking transition is pain
 a,
 li,
 tr,
@@ -1238,7 +1239,88 @@ td,
 span,
 img,
 strong,
-div,
+div, */
+
+a,
+.sub,
+.similar img,
+.sidebar .box.box_albumart img,
+.sidebar .box.box_user_rating img,
+.screenshots img,
+.show_torrents,
+.hide_torrents,
+.last_read,
+
+.unreadpm,
+.rowa,
+.row_a,
+.rowb,
+.row_b,
+#user .thin >h3:first-child +.linkbox +form ~.box.pad.center tr:not(.colhead),
+#clan_stats >div:not(.clan_stat_totals) tr:not(.colhead),
+#torrents .torrent_details tr table tr:not(.colhead):not(.colhead_dark),
+#collages tr:not(.colhead),
+#upload #content >div >table[style] tr:not(.colhead),
+#reports .thin >table tr:not(.colhead),
+#manage_collage_table tr:not(.colhead):not(:last-child),
+#uploaded_table             tr:not(.colhead),
+#seeding_table              tr:not(.colhead),
+#leeching_table             tr:not(.colhead),
+#snatched_table             tr:not(.colhead),
+#snatched_not_seeding_table tr:not(.colhead),
+#seeding_not_snatched_table tr:not(.colhead),
+#downloaded_table           tr:not(.colhead),
+#extlink_table              tr:not(.colhead),
+#torrents .torrent_notifications table.border tr:not(.colhead),
+.thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead),
+.clan_stat_totals table.border tr:not(.colhead):not(:last-child) td,
+
+#wrapper #items_list li.item_li,
+.inventory .trash_icon,
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight,
+#crafting_panel .itemslot,
+#equipment .itemslot,
+#backpack .itemslot,
+
+#nav_useredit,
+#nav_logout,
+#nav_donate,
+#header #menu li a,
+#header #userinfo_minor a,
+#header #userinfo .sub span a,
+#content .sub span a,
+#userinfo_username #nav_userinfo a,
+#userinfo_stats li:not(#stats_ratio):not(#connectable),
+
+#blog .pad img, #profilediv img,
+#wiki .wiki_article a img,
+.box.news_post>.pad img,
+.forum_post td.body img,
+blockquote#description img,
+
+table#uploadsrow img,
+table#likesrow img,
+table#snatchesrow img,
+#recommended #vanityhouse img,
+#bookmarks #collage_table td img,
+
+.filter_torrents.advanced #taglist td,
+.torrent_table .group .empty_group,
+.xdsoft_datetimepicker .xdsoft_calendar td,
+
+#userinfo_username >li:not(#nav_userinfo),
+#nav_donate span,
+
+.hovereffect,
+.autocomplete_list li,
+td.sign img,
+
+#seedtime_tokens #tokens_breakdown tr:not(.colhead) td:not(.label),
+#user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td:not(.label),
+#achievements tr:not(.colhead):not(:last-child) td:not(.achlabel),
 
 .torrent_table .show_torrents_link,
 .torrent_table td.center:first-child,
@@ -1310,7 +1392,7 @@ a:after, */
 
 #itemsdiv p,
 
-#color_leeching,
+/* #color_leeching,
 #color_leeching .torrent_info_tags,
 #color_leeching a,
 #color_seeding,
@@ -1324,7 +1406,7 @@ a:after, */
 #color_snatched a,
 #color_downloaded,
 #color_downloaded .torrent_info_tags,
-#color_downloaded a,
+#color_downloaded a, */
 
 
 
