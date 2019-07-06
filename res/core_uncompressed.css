@@ -4133,6 +4133,8 @@ input#file {
 .clan_past_stats td.label,
 .ongoing_clan_war td.label {
 	text-align: left;}
+.ongoing_clan_war .large_progress_bar {
+    margin-bottom: 8px;}
 tr.likes td,
 .forum_post tr,
 #top10 .thin >div >table.border td[style="text-align:right"] {
