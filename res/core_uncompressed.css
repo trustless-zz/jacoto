@@ -617,7 +617,8 @@ html {
     width: 100%;}
 #content,
 #wrapper,
-#footer {
+#footer,
+#bookmarks #collage_table td a {
     margin: 0 auto;}
 #content,
 #footer {
@@ -1218,6 +1219,7 @@ span.user_title a:hover,
 .torrent_table .show_torrents_link,
 .colhead_dark span.username_badges a,
 .last_read a,
+#bookmarks #collage_table td a,
 .username_badges a,
 table#likesrow a,
 table#snatchesrow a,
@@ -5447,6 +5449,8 @@ input[class="date_picker"] {
     color: var(--c-txt) !important;
     background: var(--c-b3) !important;
     box-shadow: none !important;}
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today {
+    color: var(--c-on);}
 
 #bookmarks .sidebar .pad {
     padding: 10px 0 0 0 !important;}
