@@ -1579,6 +1579,7 @@ strong.important_text,
 .screenshots img,
 .sidebar .box.box_albumart img,
 .sidebar .box.box_image_coverart a img,
+#bookmarks #collage_table td img,
 .similar img {
     background-size: 16px 16px;
     background-repeat: repeat;

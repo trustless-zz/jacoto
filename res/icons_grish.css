@@ -25,7 +25,8 @@
 .profile .box_art_gallery .gallery_row img,
 .hovereffect,
 #collections #coverart.box img,
-.sidebar .box.box_image_coverart a img {
+.sidebar .box.box_image_coverart a img,
+#bookmarks #collage_table td img {
     background-image: url('icons/cdcdcd/transparent50.svg');}
 
 .Bandcamp {background-image: url("weblinks/grish/Bandcamp.svg");}
