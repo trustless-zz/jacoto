@@ -2435,7 +2435,7 @@ table.adventure_table .colhead td {
     max-width: calc(100% - 10px);
     left: 0;
     top: 0;
-    line-height: 26px;
+    line-height: 25px;
     padding-left: 5px;
     cursor: default;}
 .edition_info:before {
@@ -2522,6 +2522,8 @@ textarea,
 #backpack #items-wrapper,
 
 #donate .box.pad.donation_info,
+
+#wrapper #grouplinks,
 
 #backpack .itemslot .item,
 #wrapper #trading_panel .message_section,
@@ -3497,7 +3499,7 @@ h2 .username_badges a {
 
 #wrapper #grouplinks {
     background: var(--p-grouplinks);
-    min-height: 36px;}
+    min-height: 38px;}
 #grouplinks a div {
     opacity: .6;
     filter: grayscale(.4);
@@ -9714,4 +9716,7 @@ textarea {/* prevent resizer from disappearing */
         scrollbar-color: var(--c-b3) var(--c-input-obj);
         scrollbar-height: 15px;
         scrollbar-width: 15px;}
+    
+    td { /*table border fix, .edition_info - example */
+        background-clip: padding-box;}
 }
