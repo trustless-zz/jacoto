@@ -1596,7 +1596,6 @@ input[type=submit]:hover:active,
 .slides_control,
 a>strong,
 .profile .box_art_gallery .gallery_row a>img,
-#user .box.box_items #itemsdiv p:first-child,
 span.torrent_info_tags,
 table#likesrow a,
 table#snatchesrow a,
@@ -1964,7 +1963,7 @@ table#snatchesrow img,
     box-shadow: var(--p-header-shdw);
     border: var(--p-img-anchor-brdr);}
 
-#user .box.box_items #itemsdiv td div:hover,
+#user .box.box_items #itemsdiv td >div:hover,
 .sidebar .box.box_image_coverart img:hover,
 table#uploadsrow img:hover,
 table#snatchesrow img:hover,
@@ -2541,7 +2540,7 @@ textarea,
 .inventory #content li.item_li,
 #shop li.item_li,
 #forums .forum_list .forum_index:before,
-#user .box.box_items #itemsdiv td div,
+#user .box.box_items #itemsdiv td >div,
 #crafting_recipes {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
@@ -4342,7 +4341,8 @@ div.breadcrumbs,
 
 .profile .box_stats:hover .offline,
 .profile .box_stats:hover #last_seen,
-#user .box.box_items #itemsdiv td div:hover p:last-child,
+#user .box.box_items #itemsdiv td >div:hover p:last-child,
+#user .box.box_items #itemsdiv td >div:hover >div,
 .forum_post .comment_rating:hover,
 .avatar:hover .forumstat,
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
@@ -6480,7 +6480,7 @@ span.size5 img {
     width: calc(25% - 7.5px);}
 #user .box.box_items #itemsdiv tr:nth-child(n+2) td:not(:empty) {
     margin-top: 10px;}
-#user .box.box_items #itemsdiv td div {
+#user .box.box_items #itemsdiv td >div {
     position: relative;
     display: block;
     width: 100%;
@@ -6496,7 +6496,7 @@ span.size5 img {
     margin: 7px 7px 0 7px;
     font-size: 16px;
     line-height: 16px;}
-#user .box.box_items #itemsdiv td div:hover p:first-child {
+#user .box.box_items #itemsdiv td >div:hover p:first-child {
     color: var(--c-txt);}
 #user .box.box_items #itemsdiv td a {
     background-color: transparent;
@@ -6519,11 +6519,11 @@ span.size5 img {
     position: absolute;
     top: -3px;
     left: -3px;}
+#user .box.box_items #itemsdiv td >div >div,
 #user .box.box_items #itemsdiv td p:last-child {
     display: block;
     position: absolute;
     top: 46px;
-    background-color: red;
     left: 20px;
     width: calc(100% - 60px);
     height: calc(100% - 83px);
@@ -6532,7 +6532,8 @@ span.size5 img {
     color: var(--c-txt);
     padding: 10px;
     opacity: 0;}
-#user .box.box_items #itemsdiv td div:hover p:last-child {
+#user .box.box_items #itemsdiv td >div:hover >div,
+#user .box.box_items #itemsdiv td >div:hover p:last-child {
     opacity: 1;}
 
 
@@ -7971,6 +7972,7 @@ body#user.inventory {}
 	padding: 5px;}
 #user #itemsdiv div[style="text-align:center;"],
 #user #itemsdiv span[style="text-decoration: underline;"],
+#user #wrapper #itemsdiv p:empty,
 #user #itemsdiv p:not(:first-child) {
 	display: none;}
 .select2-search__field {
