@@ -305,6 +305,7 @@ body {
     transition-delay: 0s;}
     
 #header #alerts {
+    z-index: 999;
     background-color: transparent;
     position: absolute;
     top: 0;
@@ -316,7 +317,7 @@ body {
     font-size: 0;
     line-height: 0;}
 #header #alerts:hover {
-    background-color: var(--c-anchor-hvr);}
+    background-color: var(--c-anchor-hvr-bcg-obj);}
 #header #alerts:before {
     content: '';
     position: absolute;
@@ -337,14 +338,14 @@ body {
 #header #alerts:hover:before {
     background-color: var(--c-low);}
 #header #alerts .blend {
+    font-size: 0;
+    line-height: 0;
     z-index: 999;
     opacity: 0;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border: var(--p-table-brdr);
-    line-height: 26px;
     text-align: center;
-    font-size: 15px;
     position: absolute;
     width: auto;
     top: 0;
@@ -374,6 +375,8 @@ body {
         -10px calc(100% + 10px));
     transition-delay: .3s;}
 #header #alerts a {
+    font-size: 15px;
+    line-height: 26px;
     background-color: var(--c-input-obj);
     padding: 0 5px;
     font-weight: normal;
