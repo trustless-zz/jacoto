@@ -196,7 +196,8 @@ a[title="Remove"],
 .last_read,
 #userhistory .colhead_dark a img[alt="Last read post"],
 #stats_share_score a:before,
-td a img[alt="Ratio"] {
+td a img[alt="Ratio"],
+#deletereview a {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -237,7 +238,8 @@ a[title="Remove"]:hover,
 #userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a:hover img[alt="Last read post"],
 #wrapper .last_read:hover,
 #userhistory .colhead_dark a:hover img[alt="Last read post"],
-td a:hover img[alt="Ratio"] {
+td a:hover img[alt="Ratio"],
+#deletereview a:hover {
     background-color: var(--c-anchor-hvr);}
 
 #wrapper .prev:hover,
@@ -417,7 +419,8 @@ a[title="Edit"] {
     -webkit-mask-image: url('icons/tor/ed.svg');
     mask-image: url('icons/tor/ed.svg');}
 .inventory .trash_icon,
-a[title="Remove"] {
+a[title="Remove"],
+#deletereview a {
     -webkit-mask-image: url('icons/tor/rm.svg');
     mask-image: url('icons/tor/rm.svg');}
 .torrent_table .addbookmark {
@@ -590,6 +593,9 @@ filter: drop-shadow(0px 0 1px #000);}
 @-webkit-keyframes lsfl-pulse-a {
     0% {background-position: 0 0;} 
     100% {background-position: 900px 0;}}
+@-webkit-keyframes lsfl-pulse-b {
+    0% {background-position: 0 0;} 
+    100% {background-position: 1215px 0;}}
 
 @keyframes logo_move {
     0% {transform: translateX(-60%);}
@@ -1330,6 +1336,7 @@ table#snatchesrow img,
 .clan_trophy img.tooltip,
 .global_buffs .buff_text span,
 tr.likes td[id^="likers_"],
+#forums .forum_signature td > div,
 #user .box.box_items #itemsdiv td div,
 .profile .box_stats .offline,
 .profile .box_stats #last_seen,
@@ -1498,6 +1505,7 @@ a[title="Report"],
 a[title="External Link"],
 a[title="Edit"],
 a[title="Remove"],
+#deletereview a,
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
 #collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
@@ -1528,6 +1536,7 @@ td img[alt="Ratio"],
     position: relative;
     overflow: hidden;}
 
+#deletereview a,
 #grouplinks,
 #nav_logout,
 #nav_donate,
@@ -1868,6 +1877,7 @@ strong.important_text,
     margin: 0;
     padding: 0;}
 .sidebar #freeleech_time_left {
+    width: 100%;
     height: 38px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -2837,7 +2847,8 @@ tr.likes td[id^="likers_"] >strong,
 #snatched_not_seeding_table tr:not(.colhead) td:nth-child(2),
 #seeding_not_snatched_table tr:not(.colhead) td:nth-child(2),
 #downloaded_table           tr:not(.colhead) td:nth-child(2),
-#extlink_table              tr:not(.colhead) td:nth-child(2) {
+#extlink_table              tr:not(.colhead) td:nth-child(2),
+#deletereview {
     font-size: 0;
     line-height: 0;}
 .box_tags .stats.nobullet div a:nth-child(1) {
@@ -3814,6 +3825,10 @@ h3 {
     bottom: -27px;
     font-weight: bold;}
 
+#deletereview {
+    float: right;
+    margin-top: -14px;}
+
 /* revisit later */
 #allreviews h2 {
     background: var(--p-head-grdnt);
@@ -3966,6 +3981,7 @@ h3 {
     padding-top: 13px;}
 
 /** convert ... to head **/
+#allreviews >h1,
 #collections .thin >#reply_box >h3,
 #user .thin >.header:first-child ~h3,
 #wrapper #trading_panel .message_box .label:first-of-type,
@@ -4013,6 +4029,7 @@ form[name="filter"] h3,
     margin: 15px 0 0 0;}
 #staff .thin >.box.pad >h3:first-of-type {
     margin: -10px -10px 0 -10px;}
+#allreviews >h1,
 #wrapper #gazelleview #titlerow p,
 #wrapper #searchthread h3,
 #wrapper #searchforum h3,
@@ -4577,8 +4594,7 @@ span.size10 {
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
     margin: 0 5px;
-    padding: 5px
-}
+    padding: 5px;}
 
 #blog .pad iframe,
 .box.news_post>.pad iframe,

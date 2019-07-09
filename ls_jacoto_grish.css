@@ -158,6 +158,9 @@ blockquote, pre {
 #index #stats          {order: 5}
 #index .box.news_post>.pad img {
     max-width: 614px !important;}
+#index .sidebar #freeleech_time_left .points {
+    font-size: var(--p-head);}
 #index .sidebar #freeleech_time_left #progress_bar .main_bar {
-    background-size: 1845px 100%;}
+    animation: lsfl-pulse-b linear 2.7s infinite;
+    background-size: 1215px 100%;}
 }
