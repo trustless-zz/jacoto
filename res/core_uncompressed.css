@@ -5,21 +5,27 @@
     --p-scroll-grdnt:                   var(--c-b3) linear-gradient(110deg, var(--c-b3), var(--c-b4));
     --p-header-shdw: 					0 0 4px var(--c-header-shdw);
     --p-main-shdw:						0 0 4px var(--c-main-shdw);
-    --p-top-brdr:                       1px solid var(--c-edition);
-    --p-main-brdr:						1px solid var(--c-main-brdr);
-    --p-table-brdr: 					1px solid var(--c-table-brdr);
-    --p-input-brdr: 					1px solid var(--c-input-brdr);
-    --p-quote-brdr:                     1px solid var(--c-quote-brdr);
+    --p-border:                         1px solid;
+    /** --p-top-brdr:                       1px solid var(--c-edition); */
+    /** --p-main-brdr:						1px solid var(--c-main-brdr); */
+    /** --p-table-brdr: 					1px solid var(--c-table-brdr); */
+    /** --p-input-brdr: 					1px solid var(--c-input-brdr); */
+    /** --p-quote-brdr:                     1px solid var(--c-quote-brdr); */
+    /** --p-unread-brdr:                    1px solid var(--c-b3); */
+    /** --p-sticky-brdr: 					1px solid var(--c-b1); */
     --p-input-shdw: 					inset 1px 1px 2px var(--c-header-shdw);
     --p-expand-hvr: 					linear-gradient(to top, var(--c-b1), var(--c-b00));
     --p-expand-act: 					linear-gradient(to top, var(--c-b1), var(--c-b2));
-    --p-img-brdr: 						3px solid var(--c-main-brdr);
-    --p-img-hvr: 						3px solid var(--c-b3);
-    --p-img-anchor-brdr:				3px solid var(--c-b4);
-    --p-img-anchor-brdr-hvr:			3px solid var(--c-b1);
+    
+    --p-img-border:                     3px solid;
+    
+    /** --p-img-brdr: 						3px solid var(--c-main-brdr); */
+    /** --p-img-hvr: 						3px solid var(--c-b3); */
+    /** --p-img-anchor-brdr:				3px solid var(--c-b4); */
+    /** --p-img-anchor-brdr-hvr:			3px solid var(--c-b1); */
     --p-contrast:                       unset; /*drop-shadow(0 0 2px var(--c-contrast));*/
     --p-post-img:                       drop-shadow(0 0 3px var(--c-post-img));
-    --p-post-img-hvr:                   drop-shadow(0 0 3px var(--c-b3));
+    /* --p-post-img-hvr:                   drop-shadow(0 0 3px var(--c-b3)); */
     --p-unread-stripe:                  2px 0 0 0 var(--c-unread-s);
     --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b00), var(--c-bg)), linear-gradient(to right, var(--c-b1), var(--c-b2));
     --p-colhead-tr-bcg: 				var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
@@ -34,10 +40,8 @@
     --p-extra-menu:                     var(--c-input-obj) linear-gradient(155deg,var(--c-input-obj),var(--c-box));    
     --p-grouplinks:                     var(--c-tgroup) linear-gradient(155deg,var(--c-tgroup),var(--c-box));
     --p-lsfl-pulse: 					linear-gradient(to right,var(--c-b00) 20%, var(--c-b1) 60%, var(--c-b2) 100%);
-    --p-unread-brdr:                    1px solid var(--c-b3);
     /* --p-sticky-brdr:                    1px solid var(--c-input-brdr);
     --p-show-hide-brdr-shdw: 			inset -1px 0 0 var(--c-table-brdr); */
-    --p-sticky-brdr: 					1px solid var(--c-b1);
     --p-edition-hvr: 					linear-gradient(to top,var(--c-b3),var(--c-edition));
     --p-edition-act: 					linear-gradient(to top,var(--c-b3),var(--c-b4));
     --p-btn:							linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-body) 100%);
@@ -776,7 +780,8 @@ pre {
 	border-radius: 0px !important;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-quote-brdr);
+    border: var(--p-border);
+    border-color: var(--c-quote-brdr);
     background-color: var(--c-quote);}
 blockquote,
 pre {
@@ -808,7 +813,8 @@ strong.mature +strong +br +a[onclick] {
 
 .tooltipster-default {
 	border-radius: 0px !important;
-	border: var(--p-table-brdr) !important;
+	border: var(--p-border) !important;
+    border-color: var(--c-table-brdr) !important;
 	background: var(--c-box) !important;
 	color: var(--c-low) !important;
     -webkit-box-shadow: var(--p-header-shdw);
@@ -863,7 +869,8 @@ tr.unreadpm td:first-child {
 #searchbars input {
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
-    border: var(--p-input-brdr);
+    border: var(--p-border);
+    border-color: var(--c-input-brdr);
     background-color: var(--c-input);
     font-size: 1em;
     height: 26px;
@@ -875,7 +882,8 @@ tr.unreadpm td:first-child {
 
 .autocomplete_list {
     background: var(--c-box);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     position: absolute;
@@ -1115,7 +1123,8 @@ div#fight_skill_points_assign >table,
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     margin: 0 0 15px 0;}
 #inbox .box.vertical_space:not(:last-of-type),
 .forum_post {
@@ -1469,7 +1478,8 @@ body >div, /* more info window at #shop */
     color: var(--c-low);}
 
 .sidebar img {
-    border: var(--p-img-brdr);
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);
     height: unset;
     max-width: 100% !important;}
 img {
@@ -1674,7 +1684,8 @@ strong.important_text,
 
 .fancybox-image,
 .lightbox img {
-    border: var(--p-img-brdr);}
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);}
 
 #artist .sidebar img,
 #collections #coverart.box img,
@@ -1712,8 +1723,6 @@ strong.important_text,
 .fancybox-is-open .fancybox-bg,
 .curtain {
     opacity: .75;}
-.fancybox-is-zoomable .fancybox-image:hover {
-    border: var(--p-img-hvr);}
 
 .fancybox-thumbs>ul>li:before,
 .fancybox-button {
@@ -1735,7 +1744,8 @@ strong.important_text,
     background-color: var(--c-box);}
 .fancybox-thumbs>ul>li:before {
     opacity: 1;
-    border: var(--p-img-brdr);}
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);}
 .fancybox-thumbs>ul>li.fancybox-thumbs-active:before {
     border-color: var(--c-b1);}
 .fancybox-thumbs>ul>li:not(.fancybox-thumbs-active):hover:before {
@@ -1847,9 +1857,12 @@ strong.important_text,
     margin: 10px auto;}
 #dailygazelle img {
     display: block;}
+.profile .box_art_gallery .large_row .gallery_small_slot:hover a,
+.profile .box_art_gallery .small_row .gallery_small_slot:hover a,
+.fancybox-is-zoomable .fancybox-image:hover,
 .screenshots img:hover,
 .sidebar img:hover {
-    border: var(--p-img-hvr);}
+    border-color: var(--c-b3);}
 #slides >.nobullet {
     margin-left: -11px;}
 #slides .slides_control .center {
@@ -1881,7 +1894,8 @@ strong.important_text,
     height: 38px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     background: var(--p-head-grdnt);
     margin: 0 0 15px 0;}
 #collections table.collections_art_display,
@@ -1954,7 +1968,8 @@ table#snatchesrow img,
 #recommended #vanityhouse img {
     width: 100%;
     height: auto;
-    border: var(--p-img-anchor-brdr);
+    border: var(--p-img-border);
+    border-color: var(--c-b4);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 #recommended #vanityhouse a:first-child {
@@ -1971,7 +1986,8 @@ table#snatchesrow img,
 .sidebar .box.box_image_coverart img {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-img-anchor-brdr);}
+    border: var(--p-img-border);
+    border-color: var(--c-b4);}
 
 #user .box.box_items #itemsdiv td >div:hover,
 .sidebar .box.box_image_coverart img:hover,
@@ -1983,7 +1999,7 @@ table#likesrow img:hover,
 #bookmarks #collage_table img:hover,
 #collections #coverart.box li a:hover,
 .similar img:hover {
-    border: var(--p-img-anchor-brdr-hvr);
+    border-color: var(--c-b1);
     -webkit-box-shadow: none;
     box-shadow: none;}
 
@@ -2046,7 +2062,8 @@ i.fa.fa-fl-pots {
     top: -20px;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     border-top: 0;
     -webkit-clip-path: polygon(
         -10px 0,
@@ -2073,7 +2090,8 @@ a .error_message:hover {
     margin: 0 0 15px 0;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var( --p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     background-color: var(--c-img-bcg-anchor);}
 #index #clans a {
     display: block;
@@ -2304,7 +2322,8 @@ a .error_message:hover {
 .torrent_table .group.rowb {
     background-color: var(--c-tor-rowb);}
 .torrent_table tr:not(.colhead):not(.colhead_dark) td {
-    border-top: var(--p-table-brdr);
+	border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);
     color: var(--c-text-s);
     vertical-align: middle;}
 .torrent_table tr.pad.hidden td {
@@ -2314,7 +2333,8 @@ a .error_message:hover {
 .top10_games div:not(.center)>table.border tr:not(.colhead):not(.colhead_dark) td,
 .top10_torrents div:not(.center)>table.border tr:not(.colhead):not(.colhead_dark) td,
 body#requests table#requests_list tr:not(.colhead):not(.colhead_dark) td {
-    border-top: var(--p-table-brdr);
+	border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);
     border-color: var(--c-edition);}
 #uploaded_table             td:nth-child(n+3),
 #seeding_table              td:nth-child(n+3),
@@ -2425,10 +2445,12 @@ table.adventure_table .colhead td {
     width: 20px;
     overflow: hidden;
     position: relative;
-    border-right: var(--p-table-brdr);
+	border-right: var(--p-border);
+    border-right-color: var(--c-table-brdr);
     /* box-shadow: var(--p-show-hide-brdr-shdw); */}
 #top10 .group_torrent td:first-child {
-    border-right: var(--p-top-brdr);}
+    border-right: var(--p-border);
+    border-color: var(--c-edition);}
 #collections .group.discog td.collicon:hover:nth-child(1),
 .torrent_table td.center:hover:first-child {
     background-color: var(--c-colhead-click);}
@@ -2621,8 +2643,9 @@ td img[alt="Ratio"],
 .torrent_table .group:hover {
     background-color: var(--c-tor-row-hvr) !important;}
 .sticky td {
-    border-bottom: var(--p-sticky-brdr) !important;
-    border-top: var(--p-sticky-brdr) !important;}
+    border-top: var(--p-border) !important;
+    border-bottom: var(--p-border) !important;
+    border-color: var(--c-b1) !important;}
 .torrent_table .addbookmark,
 .torrent_table .removebookmark {
     display: inline-block;
@@ -2695,7 +2718,8 @@ input[type="text"],
 #wrapper .select2-container--default .select2-selection--multiple,
 input[type="url"],
 select {
-    border: var(--p-input-brdr);
+    border: var(--p-border);
+    border-color: var(--c-input-brdr);
     background-color: var(--c-input);
     height: 26px;
     -webkit-box-shadow: var(--p-input-shdw);
@@ -2820,7 +2844,8 @@ a[href^="javascript:Vote("] strong,
     color: var(--c-txt);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     background: var(--p-btn);
     background-size: 200% auto !important;
     display: inline-block;}
@@ -3114,7 +3139,8 @@ body:not(#upload) #artist_tr + tr td.label,
     margin-right: 0;}
 .screenshots img {
     max-width: 100% !important;
-    border: var(--p-img-brdr);}
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);}
 
 .trailer_div .head {
     margin: -10px -10px 10px -10px;}
@@ -3131,7 +3157,8 @@ body:not(#upload) #artist_tr + tr td.label,
 
 .bbbutt {
     background-color: var(--c-input-obj);
-    border: var(--p-img-brdr);
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);
     padding: 3px;
     margin: 5px auto;
     list-style: none;
@@ -3222,13 +3249,15 @@ strong.mature +strong +br,
 .similar img {
     width: 100%;
     height: auto;
-    border: var(--p-img-anchor-brdr);}
+    border: var(--p-img-border);
+    border-color: var(--c-b4);}
 .similar #suggested_header {
     width: calc(100% - 15px);
     margin: 10px 0;
     font-weight: 600;
     font-size: 19px;
-    border-bottom: var(--p-table-brdr);
+	border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);
     text-align: left;
     padding-left: 10px;}
 .similar_div .similar li {
@@ -3316,16 +3345,20 @@ li:not(.suggested_similar) .similar_votes >span {
     display: block;
     padding: 0 5px;
     background-color: var(--c-input-obj);
-    border-right: var(--p-table-brdr);
-    border-left: var(--p-table-brdr);
+	border-right: var(--p-border);
+    border-right-color: var(--c-table-brdr);
+	border-left: var(--p-border);
+    border-left-color: var(--c-table-brdr);
     position: relative;}
 #header .sub span:nth-child(odd) a,
 .sub span:nth-child(odd) a {
     background-color: var(--c-tgroup);}
 .sub span:first-child a {
-    border-top: var(--p-table-brdr);}
+	border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);}
 .sub span:last-child a {
-    border-bottom: var(--p-table-brdr);}
+	border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);}
 .sub span a:before {
     width: 100%;
     height: 100%;
@@ -3587,7 +3620,8 @@ h2 .username_badges a {
     border-radius: 36px 0 0 36px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     clip: rect(-10px, 20px, 50px, -10px);
     content: '✔';
     text-indent: 3.5px;
@@ -3615,7 +3649,8 @@ h2 .username_badges a {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     margin-bottom: 10px;}
 #reply_box .head {
     margin: -10px -10px 10px -10px;}
@@ -3623,7 +3658,8 @@ h2 .username_badges a {
 #wrapper #trading_panel .message_box textarea,
 textarea {
     min-height: 47px; /*28px without webkit stuff*/
-    border: var(--p-input-brdr);
+    border: var(--p-border);
+    border-color: var(--c-input-brdr);
     background-color: var(--c-input);
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
@@ -3778,7 +3814,8 @@ h3 {
     background-color: transparent !important;}
 
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td:nth-child(2) {
-    border-right: var(--p-table-brdr);}
+	border-right: var(--p-border);
+    border-right-color: var(--c-table-brdr);}
 
 .box_series li {
     list-style: disc;
@@ -3788,7 +3825,8 @@ h3 {
 #torrents .torrent_details tr table {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-table-brdr);
+	border: var(--p-border);
+    border-color: var(--c-table-brdr);
     margin: 5px 10px 15px 10px;
     width: calc(100% - 20px);}
 
@@ -3869,7 +3907,8 @@ h3 {
     width: 70% !important;}
 #requests_donate {
     vertical-align: top;
-    border-left: var(--p-table-brdr);}
+	border-left: var(--p-border);
+    border-left-color: var(--c-table-brdr);}
 #torrents .thin >h2:first-child +.center td.label,
 #upload td.label,
 .filter_torrents td.label,
@@ -3888,7 +3927,8 @@ h3 {
     padding: 5px 5px 3px 3px;
     overflow-y: auto;
     overflow-x: hidden;
-    border-top: var(--p-table-brdr);
+	border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);
     opacity: 0.65;}
 .forum_post .comment_rating:hover {
     opacity: 1;}
@@ -4138,13 +4178,15 @@ input[name="toyear"],
 #staff .thin >.box.pad table {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-table-brdr);}
+	border: var(--p-border);
+    border-color: var(--c-table-brdr);}
 #torrents #content>script:first-child+h2+form #freerow td:last-child,
 .profile .box.box_requests td:first-child,
 #upload #content >div >table[style] td {
     width: auto !important;}
 #upload .thin form table .colhead:not(:first-child) {
-    border-top: var(--p-table-brdr);}
+	border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);}
 .thin >#request_form input[name="title"],
 #upload input#release_title,
 #upload input#aliases,
@@ -4245,7 +4287,8 @@ input#file {
     margin: 0 0 5px 10px;}
 .forum_post h3 {
     margin: 0 !important;
-    border-bottom: var(--p-table-brdr);}
+	border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);}
 #forums td.body {
     padding: 10px 10px 15px 10px;}
 .forumstat,
@@ -4326,7 +4369,8 @@ div.breadcrumbs,
     width: 194px;
     position: absolute;
     background-color: var(--c-input-obj);
-    border: var(--p-table-brdr);
+	border: var(--p-border);
+    border-color: var(--c-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     top: 5px;
@@ -4422,7 +4466,8 @@ h2 marquee {
     vertical-align: bottom;}
 #forums .forum_signature td > div {
     opacity: .65;
-    border-top: var(--p-table-brdr);
+	border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);
     margin: 0 10px;
     padding: 6px 3px;
     max-height: 75px;
@@ -4435,11 +4480,13 @@ h2 marquee {
 .forum_post tr.likes,
 .thin.torrent_history table.border tr:not(.colhead):last-child,
 .torrent_details .pad.hidden div[id^=history] tr:not(.colhead):last-child {
-    border-top: var(--p-table-brdr);
+	border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);
     background-color: var(--c-tgroup);}
 
 #torrents #wrapper .torrent_details .pad.hidden div[id^=history] tr:not(.colhead):last-child {
-    border-top: var(--p-table-brdr);
+	border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);
     background-color: var(--c-tgroup)!important;}
 
 .forum_post tr.likes >td:first-child a {
@@ -4543,7 +4590,8 @@ tr.likes td[id^="likers_"]:hover {
     box-shadow: var(--p-header-shdw);
     background-color: var(--c-box);}
 #wrapper #content table.bbcode_table td {
-    border: var(--p-table-brdr);}
+	border: var(--p-border);
+    border-color: var(--c-table-brdr);}
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td,
 #running_freeleech td.center.cats_col,
 #inbox .colhead >td:first-child,
@@ -4646,7 +4694,8 @@ ul#noty_bottomRight_layout_container li {
     border-radius: 0 !important;
     -webkit-box-shadow: var(--p-main-shdw) !important;
     box-shadow: var(--p-main-shdw) !important;
-    border: var(--p-main-brdr) !important;
+    border: var(--p-border) !important;
+    border-color: var(--c-main-brdr) !important;
     background-color: var(--c-b3) !important;
     color: var(--c-low) !important;}
 ul#noty_bottomRight_layout_container li[style*="darkred"] {
@@ -4884,7 +4933,8 @@ input[type="search"],
 #inbox #messageform #preview {
     padding: 10px;
     margin: 0 0 15px 0;
-    border: var(--p-table-brdr); 
+	border: var(--p-border);
+    border-color: var(--c-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 #inbox .box.vertical_space +h2 +form >.box.pad tbody,
@@ -4921,7 +4971,8 @@ input[type="search"],
 
 #reportsv2 #dynamic_form >table.border {
     position: relative;
-    border: var(--p-table-brdr);
+	border: var(--p-border);
+    border-color: var(--c-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     margin-bottom: 36px;}
@@ -5009,8 +5060,10 @@ input[type="search"],
     z-index: 0;
     width: 100%;
     height: 100%;
-    border-left: var(--p-main-brdr);
-    border-bottom: var(--p-table-brdr);
+    border-left: var(--p-border);
+    border-left-color: var(--c-main-brdr);
+    border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);
     top: 0;
     left: -1px;}
 
@@ -5039,8 +5092,10 @@ input[type="search"],
     font-weight: 600;
     padding: 9px 10px;
     background: var(--p-head-grdnt);
-    border-top: var(--p-main-brdr);
-    border-right: var(--p-main-brdr);}
+    border-top: var(--p-border);
+    border-top-color: var(--c-main-brdr);
+    border-right: var(--p-border);
+    border-right-color: var(--c-main-brdr);}
 #collections table.collections_art_display:before {
     content: 'Collections';}
 #gazelleview table.gazelleinfo:before {
@@ -5094,7 +5149,8 @@ input[type="search"],
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     z-index: -1;}
 
 #donate #wrapper .box.pad.donation_info:before {
@@ -5285,9 +5341,11 @@ input[type="search"],
     border-radius: 0;
     color: var(--c-txt);
     background-color: var(--c-box);
-    border: var(--p-main-brdr);}
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);}
 .ui-dialog {
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     padding: 0px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -5514,7 +5572,8 @@ input[class="date_picker"] {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     color: var(--c-txt);
 	font-family: OpenSans, Helvetica, Arial, sans-serif;}
 .xdsoft_datetimepicker .xdsoft_label {
@@ -5540,21 +5599,24 @@ input[class="date_picker"] {
     transform: scaleX(-1);}
 .xdsoft_datetimepicker .xdsoft_calendar td,
 .xdsoft_datetimepicker .xdsoft_calendar th {
-    border: var(--p-table-brdr);
+	border: var(--p-border);
+    border-color: var(--c-table-brdr);
     background: var(--c-input);
     color: var(--c-txt);}
 .xdsoft_datetimepicker .xdsoft_calendar th {
     color: var(--c-text-s);
     background-color: var(--c-tor-row-hvr);}
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select {
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     background-color: var(--c-box);}
 .xdsoft_scrollbar > .xdsoft_scroller {
     background-color: var(--c-sticky-id-brdr) !important;}
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:nth-child(even) {
     background-color: var(--c-tgroup);}
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select {
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     background-color: var(--c-box);}
 .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default,
 .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
@@ -5900,7 +5962,8 @@ td >img[title="Gold"] {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     margin: 10px 0;}
 #searchforum table,
 #searchthread table {
@@ -5954,7 +6017,8 @@ td >img[title="Gold"] {
     line-height: 18px;
     padding: 0 3px 0 2px;
     background: var(--p-head-grdnt);
-    outline: var(--p-table-brdr);}
+    outline: var(--p-border);
+    outline-color: var(--c-table-brdr);}
 
 
 /** going with position:absolute because display:flex needs containers **/
@@ -6335,7 +6399,8 @@ span.size5 img {
 .wiki_index span.size6 strong,
 .wiki_index span.size5 strong,
 .wiki_index span.size4 strong {
-	border-bottom: var(--p-table-brdr);	}
+	border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);}
 /* #wiki .postlist {
 	margin: 0;} */
 #wiki.wiki_index .wiki_article .postlist {
@@ -6377,7 +6442,8 @@ span.size5 img {
 #user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td {
     padding: 5px;}
 #user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td:not(.label) {
-    border: var(--p-table-brdr);}
+	border: var(--p-border);
+    border-color: var(--c-table-brdr);}
 #user #wrapper .box.box_gold #box_gold_scrollbar .colhead +tr td {
     border-top: none;}
 #user #wrapper .box.box_gold #box_gold_scrollbar tr:last-child td {
@@ -6502,7 +6568,8 @@ span.size5 img {
     width: 100%;
     height: 100%;
     background-color: var(--c-edition);
-    border: var(--p-img-anchor-brdr);
+    border: var(--p-img-border);
+    border-color: var(--c-b4);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 #user .box.box_items #itemsdiv p:first-child {
@@ -6829,7 +6896,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
     position: relative;
     font-weight: 600;
     color: var(--c-txt);
-    border: var(--p-img-brdr);
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 #wrapper #trading_panel .item:hover,
@@ -6963,7 +7031,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	height: 370px;
 	-webkit-box-shadow: var(--p-main-shdw);
 	box-shadow: var(--p-main-shdw);
-	border: var(--p-main-brdr);}
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);}
 #shop li.item_li.no_access {
     background-color: var(--c-edition);}
 
@@ -7389,7 +7458,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
     font-weight: 600;
 	width: 100%;
     padding-left: 5px;
-	border-bottom: var(--p-table-brdr);}
+	border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);}
 
 .more_info p:last-of-type {
     margin-bottom: 0;}
@@ -7432,7 +7502,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
 .ui-widget-header .ui-state-default,
 .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close {
     background: var(--c-box);
-	border: var(--p-table-brdr);
+	border: var(--p-border);
+    border-color: var(--c-table-brdr);
 	color: var(--c-anchor);}
 
 .ui-widget-header >.ui-dialog-title {
@@ -7534,7 +7605,8 @@ body#user.inventory {}
     background-color: var(--c-box);
 	-webkit-box-shadow: var(--p-main-shdw);
 	box-shadow: var(--p-main-shdw);
-	border: var(--p-main-brdr);}
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);}
 
 .inventory .item_image_div {
     margin-top: 50px;
@@ -7601,7 +7673,8 @@ body#user.inventory {}
     background: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     display: block;
     width: calc(100% - 257px);
     float: right;
@@ -7674,7 +7747,8 @@ body#user.inventory {}
 	font-size: 2.5em; */}
 
 .alertable {
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     color: var(--c-txt);
     background-color: var(--c-box);
     border-radius: 0;}
@@ -7723,16 +7797,15 @@ body#user.inventory {}
 	margin: 1px;
 	overflow: hidden;}
 .profile .box_art_gallery .large_row .gallery_small_slot a {
-    border: var(--p-img-brdr);
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);
     width: auto;
     height: 80px;}
 .profile .box_art_gallery .small_row .gallery_small_slot a {
-    border: var(--p-img-brdr);
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);
     width: auto;
 	margin: 2px;}
-.profile .box_art_gallery .large_row .gallery_small_slot:hover a,
-.profile .box_art_gallery .small_row .gallery_small_slot:hover a {
-    border: var(--p-img-hvr);}
 .profile .gallery_small_slot img {
 	display: block;}
 .profile .box_art_gallery .gallery_small_slot.selected a {
@@ -8227,7 +8300,8 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     -webkit-box-shadow: var(--p-header-shdw) !important;
     box-shadow: var(--p-header-shdw) !important;
     filter: none !important;
-    border: var(--p-img-brdr) !important;
+    border: var(--p-img-border) !important;
+    border-color: var(--c-main-brdr) !important;
 	height: auto !important;
 	width: 400px !important;
 	max-width: 400px !important;
@@ -8307,15 +8381,18 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);}
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);}
 
 #achievements tr:not(.colhead) td {
-    border-bottom: var(--p-table-brdr);}
+	border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);}
 #wrapper #achievements tr:last-child td {
     font-size: 11px !important;
     padding-left: 10px;
     border: none;
-    border-top: var(--p-table-brdr);}
+	border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);}
 
 #user #content >#progress_bar ~.flleft.linkbox {
     text-align: left;}
@@ -8338,7 +8415,8 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     z-index: -1;}
 #user #content >#progress_bar:after {
     content: 'User class progress';
@@ -8400,7 +8478,8 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     z-index: -1;}
 #share_score >.large_progress_bar:after {
     content: '';
@@ -8439,7 +8518,8 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     font-weight: 600;}
 
 #share_score_breakdown tr:not(:first-child):not(:last-child) {
-    border-bottom: var(--p-table-brdr);}
+	border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);}
 
 
 .large_progress_bar > span {
@@ -8521,7 +8601,8 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-main-brdr);}
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);}
 #wrapper .thin#user_fight_attacks >.box.pad >h3 {
     width: calc(100% - 22px);
     margin: 0 auto;
@@ -8626,7 +8707,8 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 #wrapper #content .select2-container--default .select2-selection--multiple .select2-selection__choice {
     margin: 1px 4px 1px 0;
     background-color: var(--c-edition);
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     padding: 1px 3px 2px 3px;}
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
     color: var(--c-text-s);}
@@ -8705,7 +8787,8 @@ table.adventure_table h3 {
 #wrapper #seedtime_tokens >.linkbox {
     margin-bottom: 27px;}
 #seedtime_tokens #tokens_breakdown td:last-child {
-    border-left: var(--p-table-brdr);}
+	border-left: var(--p-border);
+    border-left-color: var(--c-table-brdr);}
 
 
 #wrapper #seedtime_tokens .large_progress_bar .last_drop {
@@ -9198,7 +9281,8 @@ table.adventure_table h3 {
 	word-break: break-word;
 	line-height: 80px;
 	background-color: var(--c-edition);
-	border: var(--p-table-brdr);
+	border: var(--p-border);
+    border-color: var(--c-table-brdr);
 	border-radius: 0;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
@@ -9359,7 +9443,8 @@ table.adventure_table h3 {
     font-size: 24px;
     line-height: 26px;
     font-weight: bold;
-    border-top: var(--p-table-brdr);
+	border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);
     background-color: var(--c-tgroup);}
 
 #wrapper .trade_value_inner {
@@ -9404,7 +9489,8 @@ table.adventure_table h3 {
     width: 100% !important;}
 
 #wrapper #trading_panel .message_box ul.bbbutt {
-	border: var(--p-img-brdr);}
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);}
 
 #wrapper #trading_panel .message_box #buttons input {
 	background-color: unset;
@@ -9567,9 +9653,11 @@ div#fight_skill_points_assign >table {
 	color: var(--c-txt);}
 
 #fight_skill_points_assign tr.skill_tr:not(:nth-last-child(2)){
-    border-bottom: var(--p-table-brdr);}
+	border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);}
 #fight_skill_points_assign tr.submit_section {
-    border-top: var(--p-table-brdr);
+	border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);
     background-color: var(--c-tgroup);}
 #fight_skill_points_assign tr.submit_section span {
     font-size: 16px;
@@ -9588,7 +9676,8 @@ div#fight_skill_points_assign >table {
 
 /** user review pop-up on #user page **/
 .qtip-default {
-    border: var(--p-main-brdr);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
     background-color: var(--c-box);
     color: var(--c-txt);}
 .qtip-shadow {
@@ -9647,18 +9736,18 @@ img::selection {
 
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-button {
-    border: var(--p-table-brdr);
+	border: var(--p-border);
     border-color: var(--c-tor-row-hvr);}
 
 ::-webkit-scrollbar-thumb:vertical {
-    border-right: var(--p-table-brdr);
-    border-left: var(--p-table-brdr);
+    border-right: var(--p-border);
+    border-left: var(--p-border);
     border-color: var(--c-tor-row-hvr);
     background: var(--p-scroll-grdnt);}
 
 ::-webkit-scrollbar-thumb:horizontal {
-    border-top: var(--p-table-brdr);
-    border-bottom: var(--p-table-brdr);
+    border-top: var(--p-border);
+    border-bottom: var(--p-border);
     border-color: var(--c-tor-row-hvr);
     background: var(--p-head-grdnt);}
 

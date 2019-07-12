@@ -85,7 +85,8 @@ body {
     line-height: 32px;
     padding: 0 4px 0 8px;
     background-color: var(--c-table-brdr) !important;
-    border-right: var(--p-main-brdr);
+    border-right: var(--p-border);
+    border-right-color: var(--c-main-brdr);
     clip: rect(0, 15px, 32px, 0);}
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:before,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:before,
@@ -195,7 +196,8 @@ body {
 #header {
     z-index: 99 !important; /* !important to override holidayeffects.css */
     position: relative;
-    border-bottom: var(--p-table-brdr);
+    border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     margin-bottom: 20px;
@@ -344,7 +346,8 @@ body {
     opacity: 0;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-table-brdr);
+    border: var(--p-border);
+    border-color: var(--c-table-brdr);
     text-align: center;
     position: absolute;
     width: auto;
@@ -471,7 +474,8 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    border: var(--p-table-brdr);
+    border: var(--p-border);
+    border-color: var(--c-table-brdr);
     border-right: 0;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
@@ -745,7 +749,8 @@ body {
         opacity: 0;}
     
     #userinfo_username {
-        border-left: var(--p-table-brdr);
+        border-left: var(--p-border);
+        border-left-color: var(--c-table-brdr);
         background-color: transparent; /* for holidayeffects.css */
         -webkit-transition: all .1s linear;
         -o-transition: all .1s linear;
