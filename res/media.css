@@ -25,7 +25,8 @@ body {
 #torrent_table td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #top10 td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #running_freeleech td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
-#torrents .torrent_notifications .noticon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) {
+#torrents .torrent_notifications .noticon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+#torrents .thin.torrent_history >form#torrent_history_search ~table td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) {
     background: none;}
 #groupplatform a {
     width: 100%;
