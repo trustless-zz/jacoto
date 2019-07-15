@@ -1378,6 +1378,7 @@ input[type=submit],
 .fancybox-image,
 .torrent_details #grouplinks a div,
 #torrents .ratings,
+#torrents .ratings span,
 #reviewdate,
 .forum_post .comment_rating,
 .avatar .forumstat,
@@ -1619,7 +1620,8 @@ span.torrent_info_tags,
 table#likesrow a,
 table#snatchesrow a,
 table#uploadsrow a,
-.group_torrent td:first-child >a span {
+.group_torrent td:first-child >a span,
+.box_game_ratings a[target="_blank"] {
     -webkit-transition: 0s;
     -o-transition: 0s;
     transition: 0s;}
