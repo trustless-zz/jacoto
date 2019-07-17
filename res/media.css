@@ -94,9 +94,29 @@ body {
         15.5px 0,
         15.5px 32px,
         0 32px);/* .5 because Chrome is SPECIAL */}
+
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:before,
+#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:before,
+.forum_post .colhead_dark a.post_id:before,
+    
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
+#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
+.forum_post .colhead_dark a.post_id:hover {
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;}
+    
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"],
+#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"],
+.forum_post .colhead_dark a.post_id {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;}
+
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:before,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:before,
 .forum_post .colhead_dark a.post_id:before {
+    color: var(--c-anchor);
     position: absolute;
     content: '#';
     font-size: 24px;
@@ -105,9 +125,15 @@ body {
     top: 0;
     height: 100%;
     background-color: var(--c-table-brdr);}
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover:before,
+#quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover:before,
+.forum_post .colhead_dark a.post_id:hover:before {
+    color: var(--c-anchor-hvr);}
+
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover {
+    transition-delay: .3s;
     /* clip: rect(0, 300px, 32px, 0); */
     clip-path: polygon(
         0 0,

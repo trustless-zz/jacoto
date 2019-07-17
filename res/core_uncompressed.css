@@ -1622,9 +1622,9 @@ table#snatchesrow a,
 table#uploadsrow a,
 .group_torrent td:first-child >a span,
 .box_game_ratings a[target="_blank"] {
-    -webkit-transition: 0s;
-    -o-transition: 0s;
-    transition: 0s;}
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;}
 
 /* #userinfo_username .donateico.active,
 #userinfo_username .welcome.active,
@@ -4409,9 +4409,9 @@ div.breadcrumbs,
 #user .box.box_items #itemsdiv td >div:hover >div,
 .forum_post .comment_rating:hover,
 .avatar:hover .forumstat,
-#newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
+/* #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
-.forum_post .colhead_dark a.post_id:hover,
+.forum_post .colhead_dark a.post_id:hover, */
 #forums .forum_signature td > div:hover,
 tr.likes td[id^="likers_"]:hover {
     transition-delay: .3s;}
@@ -4573,12 +4573,14 @@ tr.likes td[id^="likers_"]:hover {
     margin-left: auto !important;}
 
 #forums .forum_post.forum_unread .avatar >div:before {
-    border-left: 1px solid var(--c-b3);}
+    border-left: var(--p-border);
+    border-left-color: var(--c-unread-br);}
 #content .forum_post.forum_unread {
-    border-color: var(--c-b3);}
+    border-color: var(--c-unread-br);}
 
 #forums .forum_post.sticky_post .avatar >div:before {
-    border-left: 1px solid var(--c-input-brdr);}
+    border-left: var(--p-border);
+    border-left-color: var(--c-input-brdr);}
 #content .forum_post.sticky_post {
     border-color: var(--c-input-brdr);}
 
@@ -7245,7 +7247,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 
 .inventory #wrapper #content li.item_li.new,
 #shop li.new {
-    border-color: var(--c-sb1);}
+    border-color: var(--c-unread-br);}
 .inventory #wrapper #content li.item_li.new h3.center,
 #shop li.new h3.center {
     background: var(--p-subcolhead);}
