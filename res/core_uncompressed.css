@@ -9876,8 +9876,7 @@ textarea {/* prevent resizer from disappearing */
 /* whutbbcode */
 #wrapper .wbbcode {
     width: auto !important;}
-/* .wbbcode ~.bbbutt,
-.wbbemot img[alt=":loveflac:"] {
+/* .wbbcode ~.bbbutt {
     display: none;} */
 
 #wrapper .wbbcode .wbbbuttons {
@@ -9939,6 +9938,7 @@ textarea {/* prevent resizer from disappearing */
     -webkit-mask-image: url('icons/bbbutt/strk.svg');
     mask-image: url('icons/bbbutt/strk.svg');}
 .wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-exclamation-sign {
+    width: 20px;
     -webkit-mask-image: url('icons/bbbutt/whut/important.svg');
     mask-image: url('icons/bbbutt/whut/important.svg');}
 .wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-arrow-right {
@@ -9989,8 +9989,12 @@ textarea {/* prevent resizer from disappearing */
 .wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-eye-open {
     -webkit-mask-image: url('icons/bbbutt/whut/mature.svg');
     mask-image: url('icons/bbbutt/whut/msource.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-music {/*artist*/}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-download {/*tor id*/}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-music {
+    -webkit-mask-image: url('icons/bbbutt/whut/plat.svg');
+    mask-image: url('icons/bbbutt/whut/plat.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-download {
+    -webkit-mask-image: url('icons/bbbutt/whut/id.svg');
+    mask-image: url('icons/bbbutt/whut/id.svg');}
 .wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-user {
     -webkit-mask-image: url('icons/nav/user.svg');
     mask-image: url('icons/nav/user.svg');}
@@ -10006,11 +10010,13 @@ textarea {/* prevent resizer from disappearing */
 .wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-ban-circle {
     width: 24px;
     -webkit-mask-image: url('icons/bbbutt/whut/nobb.svg');
-    mask-image: url('icons/bbbutt/whut/nobb.svg');}
+    mask-image: url('icons/bbbutt/whut/emnobb.svg');}
 .wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-remove-sign {
     -webkit-mask-image: url('icons/tor/rm.svg');
     mask-image: url('icons/tor/rm.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-fire {/*emo*/}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-fire {
+    -webkit-mask-image: url('icons/bbbutt/whut/emoticons.svg');
+    mask-image: url('icons/bbbutt/whut/emoticons.svg');}
 .wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-wrench {
     -webkit-mask-image: url(icons/nav/useredit.svg);
     mask-image: url(icons/nav/useredit.svg);}
