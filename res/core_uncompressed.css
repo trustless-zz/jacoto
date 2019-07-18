@@ -1446,6 +1446,7 @@ a:after, */
 #color_downloaded a, */
 
 .wbbcode.wbbimg .wbbbuttons .whutbbutton span,
+.wbbcode.wbbimgless .whutbbutton,
 
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
@@ -9865,14 +9866,17 @@ textarea {/* prevent resizer from disappearing */
 .wbbcode.wbbimgless button span {
     margin: 0;}
 
-#wrapepr .wbbemot {
+#wrapper .wbbemot {
     -webkit-box-shadow: none;
     box-shadow: none;
     border: var(--p-img-border);
     border-color: var(--c-main-brdr);
     background-color: var(--c-input-obj);
-    padding: 3px !important;
-    max-height: unset;}
+    padding: 3px 6px;
+    max-height: unset;
+    width: -moz-max-content;
+    width: fit-content;
+    margin: .2em auto;}
 
 .wbbcode.wbbimgless .whutbbutton {
     text-shadow: 1px 1px 1px var(--c-body);
@@ -9902,14 +9906,31 @@ textarea {/* prevent resizer from disappearing */
     height: auto;
     vertical-align: middle;
     display: inline-block;
-    margin: 3px 4px;
-    padding: 0;
+    margin: 2px 3px;
+    padding: 1px;
     align-self: center;
     background: unset;
     color: unset;
     border: unset;
     border-radius: unset;
     box-shadow: unset;}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton.wbbpressed {
+    background-color: var(--c-box);}
+
+.wbbcode .wbbshortcut {
+    color: var(--c-txt);}
+.wbbcode .wbbshortcut li {
+    border-radius: unset;
+    border: var(--p-border);
+    border-color: var(--c-table-brdr);
+    background-color: var(--c-input-obj);}
+.wbbcode .wbbshortcut li strong {
+    border-radius: unset;
+    border: var(--p-border);
+    border-color: var(--c-table-brdr);
+    background-color: var(--c-box);}
+.wbbcode .wbbcon {
+    color: var(--c-red);}
 
 .wbbcode.wbbimg .wbbbuttons .whutbbutton span {
     opacity: .8;
@@ -9925,6 +9946,7 @@ textarea {/* prevent resizer from disappearing */
     mask-size: contain;
     background-image: unset;
     background-color: var(--c-txt);}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton.wbbpressed span,
 .wbbcode.wbbimg .wbbbuttons .whutbbutton span:hover {
     opacity: 1;}
 
