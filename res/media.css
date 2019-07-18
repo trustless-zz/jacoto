@@ -612,10 +612,10 @@ body {
     padding: 7px 5px;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 20px 20px;
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: 20px 20px;
-    -webkit-mask-size: 20px 20px;
     background-color: var(--c-anchor);}
 #nav_useredit a {
     -webkit-mask-image: url('icons/nav/useredit.svg');
@@ -630,8 +630,8 @@ body {
     width: 24px;
     z-index: 2;
     -webkit-mask-size: auto 20px;
-    mask-size: auto 20px;
     -webkit-mask-image: url('icons/nav/donate.svg');
+    mask-size: auto 20px;
     mask-image: url('icons/nav/donate.svg');}
 #nav_useredit a:hover {
     background-color: var(--c-anchor-hvr);}
@@ -774,8 +774,8 @@ body {
     #nav_userinfo a:before {
         transition-delay: .5s;
         opacity: 1;
-        mask-image: url('icons/nav/user.svg');
         -webkit-mask-image: url('icons/nav/user.svg');
+        mask-image: url('icons/nav/user.svg');
         background-color: var(--c-txt);
         content: '';
         right: 26px;
