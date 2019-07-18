@@ -9994,8 +9994,12 @@ textarea {/* prevent resizer from disappearing */
 .wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-user {
     -webkit-mask-image: url('icons/nav/user.svg');
     mask-image: url('icons/nav/user.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-share {/*wiki*/}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-info-sign {/*rule*/}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-share {
+    -webkit-mask-image: url('icons/bbbutt/whut/wiki.svg');
+    mask-image: url('icons/bbbutt/whut/wiki.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-info-sign {
+    -webkit-mask-image: url('icons/bbbutt/whut/rules.svg');
+    mask-image: url('icons/bbbutt/whut/rules.svg');}
 .wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-pencil {
     -webkit-mask-image: url('icons/bbbutt/tex.svg');
     mask-image: url('icons/bbbutt/tex.svg');}
