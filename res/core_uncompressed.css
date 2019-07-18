@@ -1526,9 +1526,6 @@ a[title="Remove"],
 #requests table.border a[href^="upload.php"],
 #requests_donate img,
 img[title="Gold"],
-.username_badges img[alt="Donor"],
-.username_badges img[alt="Banned"],
-.username_badges img[alt="Warned"],
 td img[alt="Ratio"],
 #top10 img[alt="Up Votes"],
 #top10 img[alt="Down Votes"] {
@@ -2586,9 +2583,6 @@ img[title="Snatches"],
 .torrent_table #user_rating_icon img,
 #requests_donate img,
 img[title="Gold"],
-.username_badges img[alt="Donor"],
-.username_badges img[alt="Banned"],
-.username_badges img[alt="Warned"],
 td img[alt="Ratio"],
 #top10 img[alt="Up Votes"],
 #top10 img[alt="Down Votes"] {
@@ -3001,6 +2995,18 @@ body:not(#upload) #artist_tr + tr td.label,
 #user .thin >h2 +form#userform tr:not(.colhead_dark) td,
 #upload input#getYT {
     vertical-align: top;}
+
+#request_form >strong ~#new_uploaded,
+#request_form >strong ~#new_ratio,
+#request_form >strong ~#new_gold {
+    line-height: 26px;
+    display: inline-block;
+    margin-top: 2px;}
+#request_form >strong ~#new_uploaded +#button,
+#request_form >strong ~#new_ratio +#button,
+#request_form >strong ~#new_gold +#button {
+    margin-top: 2px;}
+
 #forums #forum_search_cat_list td.forum_cat,
 #platcheckbox td[colspan="5"] {
     padding: 4px 5px !important;
@@ -3513,13 +3519,23 @@ li:not(.suggested_similar) .similar_votes >span {
 
 .username_badges img {
     max-height: 18px;
-    max-width: 18px;
+    /* max-width: 18px; */
     margin: 0 2px;
     vertical-align: text-bottom;}
 span.secondary_class {
     line-height: 18px;}
 .colhead_dark .username_badges {
     margin-left: 2px;}
+
+.username_badges img[alt="Warned"],
+.username_badges img[alt="Donor"] {
+    height: 16px;
+    width: 18.5px;
+    padding-left: 18.5px;}
+.username_badges img[alt="Banned"] {
+    height: 16px;
+    width: 16px;
+    padding-left: 16px;}
 
 h2 .username_badges img {
     margin: 2px;}
@@ -3529,6 +3545,7 @@ h2 .username_badges {
     margin-left: 2px;
     margin-bottom: -3px;
     display: inline-block;}
+.colhead_dark .username_badges a,
 h2 .username_badges a {
     display: inline-block;}
 
@@ -6133,11 +6150,19 @@ h2#username span#tip_user a.tooltip img {
     filter: var(--p-contrast);}
 
 
-
-
-
-
+h2 .user_title img {
+    max-height: 21px;}
+/* h2 .user_title span.size3,
+h2 .user_title span.size4,
+h2 .user_title span.size5,
+h2 .user_title span.size6,
+h2 .user_title span.size7,
+h2 .user_title span.size8,
+h2 .user_title span.size9,
+h2 .user_title span.size10 {
+    line-height: 19px;} */
 .forum_post .user_title img {
+    vertical-align: sub;
     max-height: 19px;}
 .user_title img {
     display: inline-block;

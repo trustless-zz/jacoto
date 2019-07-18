@@ -43,6 +43,7 @@ body {
     position: inherit;
     font-size: 21px;
     line-height: 21px;}
+#wiki #groupplatform,
 #wrapper .box.news_post #groupplatform,
 #wrapper .forum_post #groupplatform,
 #existing_freeleech_pots #groupplatform,
@@ -61,6 +62,7 @@ body {
     position: inherit;
     font-size: 15px;
     line-height: var(--p-lh);}
+#wiki #groupplatform a,
 #wrapper .box.news_post #groupplatform a,
 #wrapper .forum_post #groupplatform a,
 #wrapper .box.box_requests #groupplatform a,
