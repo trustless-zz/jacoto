@@ -10014,4 +10014,6 @@ textarea {/* prevent resizer from disappearing */
 .wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-wrench {
     -webkit-mask-image: url(icons/nav/useredit.svg);
     mask-image: url(icons/nav/useredit.svg);}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-question-sign {/*shortcuts*/}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-question-sign {
+    -webkit-mask-image: url('icons/bbbutt/whut/shortcuts.svg');
+    mask-image: url('icons/bbbutt/whut/shortcuts.svg');}
