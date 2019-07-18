@@ -2839,6 +2839,7 @@ a[href^="javascript:Vote("] strong,
     outline: 0;
     padding: 5px 10px;
     color: var(--c-txt);
+    text-shadow: 1px 1px 1px var(--c-body);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border: var(--p-border);
@@ -9839,45 +9840,12 @@ textarea {/* prevent resizer from disappearing */
     background-position: center;}
 /** /webkit scrollbar **/
 
-/** firefox only **/
-@-moz-document url-prefix() {
-    /* #bookmarks tags br requires an extra 1px of line-height */
-    #wrapper #torrent_table .group.discog td[colspan="5"] > span + br {
-        line-height: 21px;}
-    
-    /* firefox can't handle margin-bottom: -100%; */
-    #wrapper #content .sub {
-        -webkit-clip-path: unset;
-        clip-path: unset;}
-    #wrapper #content .sub {
-        visibility: hidden !important;}
-    #wrapper #content .sub[style="visibility: visible;"] {
-        visibility: visible !important;}
-    #wrapper #content .sub {
-        height: 0;
-        margin-bottom: unset;}
-    
-    #achievements {
-        margin-bottom: 60px;}
-    
-    * {
-        scrollbar-color: var(--c-b3) var(--c-input-obj);
-        scrollbar-height: 15px;
-        scrollbar-width: 15px;}
-    
-    td { /* table border fix, .edition_info - example */
-        background-clip: padding-box;}
-}
-/** /firefox only **/
-
-
-
-
-/* whutbbcode */
+/** WhutBBCode **/
 #wrapper .wbbcode {
     width: auto !important;}
-/* .wbbcode ~.bbbutt {
-    display: none;} */
+.wbbcode ~.bbbutt,
+.wbbemot img[alt=":loveflac:"] {
+    display: none;}
 
 #wrapper .wbbcode .wbbbuttons {
     background-color: var(--c-input-obj);
@@ -9892,6 +9860,41 @@ textarea {/* prevent resizer from disappearing */
     cursor: default;
     width: -moz-fit-content;
     width: fit-content;}
+
+.wbbcode.wbbimgless button:active span,
+.wbbcode.wbbimgless button span {
+    margin: 0;}
+
+#wrapepr .wbbemot {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);
+    background-color: var(--c-input-obj);
+    padding: 3px !important;
+    max-height: unset;}
+
+.wbbcode.wbbimgless .whutbbutton {
+    text-shadow: 1px 1px 1px var(--c-body);
+    border-radius: unset;
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
+    line-height: 1em;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 2px;
+    color: var(--c-txt);
+    margin: 3px;
+    background: var(--p-btn);}
+.wbbcode.wbbimgless .whutbbutton:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: var(--c-low);
+    background: var(--p-btn-hvr);}
+.wbbcode.wbbimgless .whutbbutton:hover:active {
+    background: var(--p-btn-act);}
 
 .wbbcode.wbbimg .wbbbuttons .whutbbutton {
     text-shadow: unset;
@@ -10023,3 +10026,36 @@ textarea {/* prevent resizer from disappearing */
 .wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-question-sign {
     -webkit-mask-image: url('icons/bbbutt/whut/shortcuts.svg');
     mask-image: url('icons/bbbutt/whut/shortcuts.svg');}
+/** /WhutBBCode **/
+
+
+/** firefox only **/
+@-moz-document url-prefix() {
+    /* #bookmarks tags br requires an extra 1px of line-height */
+    #wrapper #torrent_table .group.discog td[colspan="5"] > span + br {
+        line-height: 21px;}
+    
+    /* firefox can't handle margin-bottom: -100%; */
+    #wrapper #content .sub {
+        -webkit-clip-path: unset;
+        clip-path: unset;}
+    #wrapper #content .sub {
+        visibility: hidden !important;}
+    #wrapper #content .sub[style="visibility: visible;"] {
+        visibility: visible !important;}
+    #wrapper #content .sub {
+        height: 0;
+        margin-bottom: unset;}
+    
+    #achievements {
+        margin-bottom: 60px;}
+    
+    * {
+        scrollbar-color: var(--c-b3) var(--c-input-obj);
+        scrollbar-height: 15px;
+        scrollbar-width: 15px;}
+    
+    td { /* table border fix, .edition_info - example */
+        background-clip: padding-box;}
+}
+/** /firefox only **/
