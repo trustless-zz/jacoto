@@ -3191,7 +3191,8 @@ body:not(#upload) #artist_tr + tr td.label,
     margin: 0;
     height: 18px;
     width: 18px;}
-.bbbutt li a:hover {
+#wrapper .bbbutt li a:hover {
+    background-color: var(--c-low);
     opacity: 1;}
 #bb_h1 {
     width: 22.41px;}
@@ -9947,8 +9948,9 @@ textarea {/* prevent resizer from disappearing */
     background-image: unset;
     background-color: var(--c-txt);}
 .wbbcode.wbbimg .wbbbuttons .whutbbutton.wbbpressed span,
-.wbbcode.wbbimg .wbbbuttons .whutbbutton span:hover {
-    opacity: 1;}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton:hover span {
+    opacity: 1;
+    background-color: var(--c-low);}
 
 .wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-bold {
     -webkit-mask-image: url('icons/bbbutt/bold.svg');
