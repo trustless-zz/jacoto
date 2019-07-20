@@ -184,12 +184,6 @@ body {
 #toplink a:hover:active {
     background-color: var(--c-low);}
 /* forum post 'back to top' button */
-#artist #requests .colhead_dark a,
-#userhistory .colhead_dark span[id*="bar"],
-#quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
-.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
-#newthreadpreview .forum_post .colhead_dark #barpreview a:nth-child(2) {
-    display: none;}
  #quickreplypreview .colhead_dark #barpreview,
  .forum_post .colhead_dark div[style="float: right;"],
  #newthreadpreview .forum_post .colhead_dark #barpreview {
