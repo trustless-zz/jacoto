@@ -5,6 +5,8 @@
     .thin {
         display: flex;
         flex-wrap: wrap;}
+    .thin.clear {
+        flex-direction: column;}
     .sidebar {
         display: flex;
         flex-flow: row wrap;
@@ -12,11 +14,13 @@
         float: none;
         width: 100%;
         order: 2;}
+    .linkbox,
     .thin >form,
     .main_column_bg,
     .main_column,
     .box,
-    #reply_box {
+    #reply_box,
+    .thin >div {
         width: 100%;}
     #reply_box >.pad {
         width: auto;}
@@ -92,6 +96,9 @@
         float: right !important;
         margin: -12px 5px;
         clear: both;}
+    #forums .last_read a {
+        padding: 5px;
+        margin: -5px 0 0 -5px;}
     
 	div[class*="thin forum_"] td:nth-of-type(1) {
         width: 25px !important;}
@@ -100,9 +107,13 @@
         padding-right: 10px;}
 	div[class*="thin forum_"] td {
         padding: 15px 0px;}
-
-/*******************************************************/
-
+    
+    .thin >.thin.clear,
+    .thin >.forum_post:first-of-type {
+        margin-top: 12px !important;}
+    .thin >.thin.clear ~.forum_post:first-of-type {
+        margin-top: 0 !important;}
+    
 	#forums .forum_index td:nth-of-type(1) {
         width: 25px;}
 	#forums .forum_index td:nth-of-type(2) {
@@ -134,9 +145,7 @@
         margin-top: 1px !important;
         margin-left: 2px;}
 	#forums .forum_post .colhead_dark div[style="float:left;"] a {
-        font-size: 1em; }
-
-
+        font-size: 1em;}
 	#forums .forum_post .colhead_dark div[style="float:left;"] .time {
 		order: 10;
 		font-size: 1em;
@@ -151,13 +160,10 @@
 		display: block;
 		padding-left: 3px;
 		margin-top: 1px;}
-
 	#forums #content .thin table.sticky_post {
         width: 95%;}
 	#forums #content .thin table {
         word-break:break-word;}
-	#forums .linkbox {
-        margin: 10px auto;}
 	#forums td.body {
         padding: 10px 10px 25px 10px; max-width: 50px;}
 	#forums td.body br {
@@ -188,7 +194,7 @@
 		display: none;}
 
 	div.breadcrumbs {
-        text-align: center;
+        text-align: right;
         width: 100%;
 		padding-top: 10px;}
 
@@ -206,15 +212,12 @@
         padding: 0 !important;}
 	.forum_latest .search td {
         width: 100%;
-        border: 0;
         padding: 0 !important;
         background: none;}
 	#forums #content #otherop td {
         background-color: transparent;}
 	#forums #content .search table tr {
         background-color: transparent;}
-	#forums #content .forum_latest table td {
-        border: 0;}
 	.forum_latest td:nth-of-type(2) {
         padding-right: 0 !important;}
 }
