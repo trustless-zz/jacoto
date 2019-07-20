@@ -47,8 +47,9 @@
     --p-btn:							linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-body) 100%);
     --p-btn-hvr:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-btn-b2) 100%);
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
-    --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%);
+    /* --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%); */
     --p-fade-2:                         linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
+    --p-fade-2-h:                       linear-gradient(to right, var(--c-box) 50%, var(--c-b00) 100%);
     --p-selected:                       0 -2px 0px 0px var(--c-b1);
     --p-lh: 							1.35714286805; /* calc(19 / 14), 1.357142857142857 says 19px but actually is 18px when measured */
     --p-dot3:							-.02142857142em;
@@ -619,7 +620,7 @@ body {
     font-family: OpenSans, Helvetica, Arial, sans-serif;
     margin: 0;
     min-height: 100%;
-    min-width: 800px;
+    /* min-width: 800px; */
     overflow-wrap: break-word;
     position: relative;}
 body,
@@ -1491,8 +1492,6 @@ img {
 .center,
 #footer {
     text-align: center;}
-.main_column {
-    width: calc(100% - 315px);}
 
 #index #freeleech .group_torrent {
     display: flex;}
@@ -1841,15 +1840,37 @@ strong.important_text,
 /** /close/expand head **/
 
 
+#index #slides {
+    padding: 10px 0;}
+#index #slides >.head {
+    margin: -10px 0 0 0;}
+
 .slides_control {
-    height: 345px !important}
+    height: 345px !important;
+    width: 100% !important;}
+
 #slides >ul,
 #slides .slides_container,
 #slides .slides_container ul {
-    width: 300px;
-    margin: 0;}
+    margin: 0;
+    width: 100%;}
 #slides .slides_container {
-    left: -11px;}
+    position: relative;}
+#slides .slides_container:before,
+#slides .slides_container:after {
+    content: '';
+    top: 0;
+    height: 100%;
+    width: 10px;
+    position: absolute;
+    background: var(--p-fade-2-h);
+    z-index: 99;}
+#slides .slides_container:before {
+    left: 0;}
+#slides .slides_container:after {
+    right: 0;
+    transform: scaleX(-1);}
+
 #dailygazelle img,
 #slides img {
     max-height: 280px !important;
@@ -1863,10 +1884,12 @@ strong.important_text,
 .screenshots img:hover,
 .sidebar img:hover {
     border-color: var(--c-b3);}
-#slides >.nobullet {
-    margin-left: -11px;}
+#index #slides a.prev {
+    margin-left: 10px;}
+#index #slides a.next {
+    margin-right: 10px;}
 #slides .slides_control .center {
-    width: 280px;
+    width: calc(100% - 18px);
     margin: 0 auto;}
 #dailygazelle #gazelletitle {
     display: block;
@@ -3241,13 +3264,12 @@ strong.mature +strong +br,
 
 .similar {
     position: relative;
-    padding: 5px 0 8px 10px;}
+    padding: 0 0 0 10px;}
 .similar ul {
-    padding: 5px 0;
+    padding: 5px 0 0 0;
     max-height: 350px;
     list-style: none;
     margin: 0px;
-    padding: 0px;
     overflow-y: scroll;
     display: flex;
     flex-flow: wrap;}
@@ -3299,7 +3321,7 @@ li:not(.suggested_similar) .similar_votes >span {
     padding: 0 10px;
     font-weight: 600;
     line-height: 26px;}
-.similar:before,
+/* .similar:before,
 .similar:after {
     position: absolute;
     content: '';
@@ -3311,7 +3333,7 @@ li:not(.suggested_similar) .similar_votes >span {
     top: 5px;}
 .similar:after {
     transform: scaleY(-1);
-    bottom: 8px;}
+    bottom: 8px;} */
 
 #content .sub {
     position: relative;
@@ -5454,7 +5476,10 @@ input[type="search"],
 #bookmarks #collage_table tbody:after,
 #bookmarks #collage_table tbody:before,
 #crafting_recipes #items_list:before,
-#crafting_recipes #items_list:after {
+#crafting_recipes #items_list:after,
+
+.similar:before,
+.similar:after {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;
@@ -5476,13 +5501,17 @@ input[type="search"],
     top: 36px;}
 #trading_panel .trade_table .items-wrapper:before {
     top: 80px;}
+.similar:before {
+    top: 0;}
 #backpack #slots_panel ul:after,
 #crafting_panel #items #items-wrapper:after,
 #equipment #items #items-wrapper:after,
 #trading_panel .items-wrapper:after,
 #backpack #items-wrapper:after,/**/
 #bookmarks #collage_table tbody:after,
-#crafting_recipes #items_list:after {
+#crafting_recipes #items_list:after,
+
+.similar:after{
     transform: scaleY(-1);
     bottom: 0;}
 #wrapper #trading_panel .trade_table .items-wrapper:after {
@@ -6736,6 +6765,7 @@ span.size5 img {
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label {
     color: var(--c-fl);}
+#torrents .torrent_notifications .noticon+td >.trumpable_label,
 .linkbox a[onclick^="show_reported("],
 #wrapper .reported_label,
 #wrapper .trumpable_label,

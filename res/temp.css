@@ -1,0 +1,39 @@
+﻿@media (max-width: 800px) {
+    #content,
+    #footer {
+        width: 96%;}
+    img {
+        max-width: calc(100% - 20px) !important;}
+    .thin {
+        display: flex;
+        flex-wrap: wrap;}
+    .sidebar {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        float: none;
+        width: 100%;
+        order: 2;}
+    .box {
+        width: 100%;}
+    #index .main_column .box:nth-child(n+3),
+    #more_news {
+        display: none;}
+    .sidebar #freeleech.box {
+        order: 1;}
+    .sidebar #blogposts {
+        order: 2;}
+    .sidebar #dailygazelle {
+        order: 3;}
+    .sidebar #slides {
+        order: 4;}
+    .sidebar #polcont {
+        order: 5;}
+    #index #stats {
+        order: 6;}
+    .sidebar #polcont,
+    .sidebar #slides {
+        width: calc(50% - 7.5px);}
+    .sidebar #dailygazelle img {
+        max-height: unset !important;}
+}

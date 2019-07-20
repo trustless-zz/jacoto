@@ -4,6 +4,8 @@ html {
     overflow-y: scroll;}
 body {
     overflow-x: unset !important;}
+.main_column {
+    width: calc(100% - 315px);}    
 
 #torrent_table #hyphen {
     display: none;}
