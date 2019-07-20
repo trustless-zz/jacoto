@@ -2,8 +2,8 @@
     #content,
     #footer {
         width: 96%;}
-    img {
-        max-width: calc(100% - 20px) !important;}
+    /* img {
+        max-width: calc(100% - 20px) !important;} */
     .thin {
         display: flex;
         flex-wrap: wrap;}
