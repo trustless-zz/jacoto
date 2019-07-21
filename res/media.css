@@ -9,6 +9,12 @@ body {
 
 #torrent_table #hyphen {
     display: none;}
+    
+.filter_torrents.advanced .flright:before {
+    content: '(View Less)';
+    position: absolute;
+    bottom: 1052px;}
+    
 #groupplatform {
     width: 34px;
     height: 34px;

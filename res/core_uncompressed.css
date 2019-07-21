@@ -2976,10 +2976,6 @@ a[href^="javascript:Vote("] strong:hover:active,
     margin-right: 5px;
     line-height: 19px;
     margin-top: 3px;}
-.filter_torrents.advanced .flright:before {
-    content: '(View Less)';
-    position: absolute;
-    bottom: 1052px;}
 .torrent_notifications table.border .colhead strong,
 #forums #forum_search_cat_list td.forum_cat strong,
 #platcheckbox td[colspan="5"] strong {

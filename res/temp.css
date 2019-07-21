@@ -1,7 +1,7 @@
 ﻿@media (max-width: 800px) {
     #content,
     #footer {
-        width: 96%;}
+        width: 96.25%;}
     .thin {
         display: flex;
         flex-wrap: wrap;}
@@ -24,33 +24,30 @@
         width: 100%;}
     #reply_box >.pad {
         width: auto;}
+    
     #forums .forum_index td:nth-of-type(4),
 	#forums .forum_index td:nth-of-type(5),
 	#forums .forum_index td:nth-of-type(6),
 	#forums .forum_index .colhead,
 	#forums .forum_signature td,
-    
     #forums .forum_post .colhead_dark div[style="float:left;"] a[title="Sticky this post"],
     #forums .forum_post .colhead_dark div[style="float: right;"] a,
     #forums .forum_post .colhead_dark div[style="float:left;"] .user_title,
-    
     #forums .linkbox_top ,
     #forums .forum_post .avatar>div:first-child:after,
 	.avatar .forumstat,
 	.username_badges,
-    
     div[class*="thin forum_"] td:nth-of-type(3),
 	div[class*="thin forum_"] td:nth-of-type(4),
-    
     #reply_box #barpreview[style="float:right;"],
     #index .main_column .box:nth-child(n+3),
     #more_news,
-    
     #forums .sticky_post .colhead_dark,
 	#forums .sticky_post .avatar,
 	.sticky_post .forum_signature,
 	.sticky_post .likes {
 		display: none;}
+    
     #reply_box .forum_post .colhead_dark .username {
         display: inline;}
     .sidebar #freeleech.box {
@@ -223,6 +220,1186 @@
 }
 
 
+/*******************************************************************
+********************MOBILE DISPLAYS (<800px)************************
+*******************************************************************/
+@media screen and (max-width: 800px) {
+
+/*****************************************
+**************DEFAULT STYLES**************
+*****************************************/
+	a {
+	  overflow-wrap: break-word;
+	  word-wrap: break-word;
+	  word-break: break-word;
+	  -ms-hyphens: auto;
+	  -moz-hyphens: auto;
+	  -webkit-hyphens: auto;
+	  hyphens: auto;}
+
+
+	span.size4 img {
+		float: none;
+		padding: 5px 5px 5px 0;
+		box-shadow: none !important;}
+
+	span.size5 img {
+		float: none;
+		padding:5px 0 5px 5px;
+		box-shadow: none !important;}
+
+
+
+/*****************************************
+****************BBCODE********************
+*****************************************/
+	.bbbutt {
+	    height: auto;
+		width: 93%;}
+
+	.bbbutt li {
+		width: 13.5%;
+		float: left;
+		padding: 7px 0;}
+
+	.bbbutt li select {
+		margin-top: 5px;}
+
+	.bbbutt li:last-of-type {
+		display: block;
+		float: none;
+		margin-left: 10px;}
+
+
+/*****************************************
+************TORRENTS BROWSE***************
+******************************************/    
+	.torrent_table a[href*="edit"],
+	#torrents #torrentbrowse .torrent_table .colhead,
+	#torrents #content #torrentbrowse div:nth-of-type(2),
+	#torrents #torrentbrowse .torrent_table #groupplatform,
+	#torrents #torrentbrowse .torrent_table a.addbookmark,
+	#torrents #torrentbrowse .torrent_table a.removebookmark,
+	#torrents #torrentbrowse .torrent_table #hyphen,
+	#torrents #torrentbrowse .torrent_table #grouprating,
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(1),					/* Down arrow */
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(4), 					/* User Rating */
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(6),					/* --- */
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(7) {					/* Max Size */
+		display: none;}
+    
+    .filter_torrents.advanced #taglist {
+        font-size: 14px;}
+    .rating_container {
+        background-color: var(--c-input-obj);
+        opacity: 1;}
+
+	#torrents #torrentbrowse .torrent_table .group {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		height: auto;}
+    #torrents #torrentbrowse .torrent_table .group.sticky {
+        border-bottom: var(--p-border);
+        border-left: var(--p-border);
+        border-bottom-color: var(--c-b1);
+        border-left-color: var(--c-b1);}
+
+
+	#torrents #torrentbrowse .torrent_table td {
+		display: inline-block;
+		width: 96%;
+        width: 100%;
+		overflow: hidden;}
+
+
+	#torrents .rowb td {background-color: transparent;}
+	#torrents .rowa td {background-color: transparent;}
+
+	.group:hover, .torrent:hover {background-color: inherit;}
+
+	/*Category Icon*/
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(2) {
+		order: 1;
+		background-color:inherit;
+		text-align:right;
+		padding: 10px 10px 0 0 !important;}
+    #torrents #torrentbrowse .torrent_table td:nth-of-type(2) >div {
+        display: inline-block;}  
+
+	#torrents #torrentbrowse #content .center {
+		text-align:right;
+		padding-right: 10px;
+		width: 50px;}
+
+	/*Game Title*/
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) {
+		order: 2;
+		margin-top: -39px;
+		z-index:2;
+		width: calc(100% - 50px);
+		padding: 5px 5px 0 0;
+        padding-right: 45px; /* 'When | Snatches | Seeders | Leechers' displacement when empty fix */
+		margin-left: 5px;
+        border-top: none !important;}
+    #torrents #torrentbrowse .torrent_table td:not(.cats_col) {
+        border: none !important;}
+
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) a {
+		font-size: 20px;}
+
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) .tags a {
+		font-size: 1em;
+		margin-left: 0px;
+		line-height: 20px;}
+
+	.tags_ratings {
+        padding: 0 0 3px 0;}
+	.tags_ratings .tags {
+        font-size: 13px;}
+    
+	#torrents .tags a {
+		padding-left: 2px;}
+
+	/*When | Snatches | Seeders | Leechers*/
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(5) {  	/*Time Uploaded*/
+		order: 3;
+		float: left;
+		width: auto;
+		padding: 0 5px 0 7px;}
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(5):after {
+		content: "\00a0\00a0 |";}
+
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(8) {		/*Snatches*/
+		order: 4;
+		float: left;
+		width: auto;
+		padding: 0px 0;}
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(8):before {
+		content: "Snatches: ";}
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(8):after {
+		content: "\00a0\00a0 | \00a0";}
+
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(9) {		/*Seeders*/
+		order: 5;
+		float: left;
+		width: auto;
+		padding: 0px 0;}
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(9):before {
+		content: "Seeders: ";}
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(9):after {
+		content: "";}
+
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(10) { 	/*Leechers*/
+		order: 6;
+		float: left;
+		width: auto;
+		padding: 0 0 10px;}
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(10):before {
+		content: "\00a0\00a0 | \00a0 Leechers: ";}
+
+	/*Torrent Checked Status*/
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(11) {	/*Checked Status*/
+		order: 8;
+		text-align: right;
+		margin-top: -45px;
+		margin-right: 20px;}
+	#torrents #content .notchecked,
+	#torrents #content .checked {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		background-size: contain;
+		opacity: .5;}
+
+	/* Search box */
+	#torrentbrowse {display: flex; flex-direction: column;}
+	#torrents #torrentbrowse .filter_torrents {
+        display: block;}
+    #torrents #torrentbrowse .filter_torrents .box.pad {
+        box-sizing: border-box;}
+	#torrentbrowse form {
+		order: 4;
+		width: 100%;}
+	.filter_torrents h3 {width: 95%;}
+	#torrentbrowse form td {display: block;}
+	#torrentbrowse form td input, #torrentbrowse form td select {margin: 5px;}
+	.filter_torrents.basic tr:nth-of-type(2) td:nth-of-type(3) {top: -2px; left: 20px;}
+
+	#torrents .filter_torrents td.label {
+        text-align: left;
+		background-color: var(--c-edition);
+        width: calc(100% - 10px) !important;
+		display: block;
+		padding: 5px;}
+
+	#torrents .cat_list {width: 100% !important; margin-left: 0px !important;}
+	#torrents .filter_torrents table.cat_list td.label {background-color: transparent !important;}
+	#torrents .filter_torrents table.cat_list td {display: inline-block; width: 32%;}
+	#torrents .filter_torrents.basic td.label {background-color: transparent !important;}
+	.filter_torrents.basic .submit span {left: 0px; width: 100%; padding-bottom: 5px;}
+
+	#torrentbrowse .group_torrent {
+	    display: none;}
+
+	.sticky td {border-bottom: none !important;}
+    
+    
+    
+
+/*****************************************
+*********NOTIFICATIONS PAGES**************
+*****************************************/
+	#torrents .torrent_notifications .group_torrent {display: block;}
+	#torrents .torrent_notifications td {color: white;}
+
+	#torrents .torrent_notifications td:nth-child(2) {width: auto; }
+
+	#torrents .torrent_notifications .colhead,
+	#torrents .torrent_notifications td:nth-child(3),
+	#torrents .torrent_notifications td:nth-child(4),
+	#torrents .torrent_notifications td:nth-child(5),
+	#torrents .torrent_notifications td:nth-child(6)
+		{display: none !important;}
+
+/*****************************************
+**************GAMES PAGES*****************
+*****************************************/
+	/* #torrents h2 {width: 98%;} */
+	#torrents .groupoptions {top: -7px;}
+
+	/**** Layout of main column vs. sidebar ****/
+	#torrents .main_column_bg {width: 100%;}
+	#torrents .main_column {width: 100%; padding: 0;}
+	#torrents .sidebar {width: 100%;}
+	#torrents h2 {font-size: 1.2em;}
+	#torrents .sidebar .box {width: 49%; margin-right: 1%;}
+
+	#torrents #content .new_status {margin: auto 4px; float: none;}
+
+	/**** Bring tables, td, tr back to default (mostly) from the browse page *****/
+	#torrents .main_column tr.group {
+		display: inline;
+		margin-bottom:0px;}
+	#torrents .main_column td {
+		display: inline;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		color: white;}
+	#torrents .main_column td:nth-child(1) {
+		display:block;}
+	#torrents .main_column td:nth-child(2) {
+		width: auto;
+		float: none;
+		padding: 0px;}
+	#torrents .main_column td:nth-child(3) {
+		margin-left: 0px;
+		min-height: auto;
+		padding: 0px}
+	#torrents .main_column td:nth-child(4) {
+		margin-left: 0px;
+		float: none;
+		color: var(--white);}
+	#torrents .main_column td:nth-child(5) {
+		display: inline;}
+	#torrents .main_column td:nth-child(6) {
+		color: var(--white);}
+	#torrents .main_column td:nth-child(7) {
+		float: none;
+		margin-left: 0px;
+		color: var(--white);
+		display:none;}
+	#torrents .main_column td:nth-child(8) {
+		float: none;
+		color: var(--white);
+		margin-left: 0px;}
+	#torrents .main_column td:nth-child(9) {
+		padding-bottom:0px;
+		color: var(--white);}
+
+	/****Group Links****/
+	#grouplinks {height: auto;}
+	#torrents .main_column #grouplinks td {
+		padding: 7px 20px 7px 10px;
+		float: left;}
+
+	/****Torrent Table****/
+	#torrents .main_column .torrent_table .colhead_dark {display:none;}
+	#torrents .main_column .torrent_table {
+		position: relative;
+		display: block;
+		max-height: 300px;
+		overflow: auto;
+		overflow-x: none;}
+
+	#torrents .main_column tr.group_torrent {
+		padding: 10px 2px;
+		display: block;
+		border-bottom: 1px solid var(--grey);}
+
+	#torrents .main_column tr.group_torrent:hover {
+		background-color:transparent;}
+
+	tbody[id^="edition_"], tbody[id*=" edition_"] {line-height: 1.6em;}
+
+	#torrents .main_column .torrent_table tbody {
+		width: 99%;
+		display: block;}
+
+	/****Release name + DL/ED/RP links*****/
+	#torrents .main_column tr.group_torrent td:nth-child(1) {
+		display: block;
+		font-size: 1.1em;
+		font-weight:bold;
+		color: var(--darkBlue);
+		height: auto;}
+
+	#torrents .main_column tr.group_torrent td:nth-child(1) a {
+		margin-left: -10px;}
+
+	/****The dropdown menu with DL, RP, ED, etc.****/
+	#torrents .main_column tr.group_torrent td:nth-child(1) span {
+		background: url("../images/mobile/download.png") no-repeat scroll right top rgb(238, 243, 249);
+		background-color: transparent;
+		color: transparent;
+		float: right;
+		margin-right: 5px;
+		overflow: hidden;}
+
+	#torrents .main_column tr.group_torrent td:nth-child(1) span:hover {
+		height: auto;
+		padding-top: 32px;
+		background-color: transparent !important;}
+
+	#torrents .main_column tr.group_torrent td:nth-child(1) span a {
+		display: none;
+		position: relative;
+		z-index: 5;
+		margin: 0 !important;
+		border-bottom: 1px var(--darkBlue2) solid !important;
+		color: var(--white);}
+
+	#torrents .main_column tr.group_torrent td:nth-child(1) span:hover a {
+		display:block;
+		background:#2b4e66;
+		border:0 solid var(--white);
+		height: auto;
+		float: left;
+		width: 35% !important;
+		text-align: center;
+		right: -46px;}
+
+	#torrents .main_column tr.group_torrent td:nth-child(1) span:hover a:hover {
+		background: var(--darkBlue);
+		text-decoration: none;}
+
+	/****Size****/
+	#torrents .main_column tr.group_torrent td:nth-child(2) {
+		display:inline;
+		float: left;
+		padding-right: 0px;}
+
+	/****Snatches/Size****/
+	#torrents .main_column tr.group_torrent td:nth-child(3) {
+		display:inline;
+		float: left;
+		padding-right: 5px;
+		padding-left: 5px;}
+
+	#torrents .main_column tr.group_torrent td:nth-child(3):before {
+		content: "| Size:\00a0 ";}
+
+	#torrents .main_column tr.group_torrent td:nth-child(3):after {
+		content: " | Snatches:";}
+
+	/****Seeders****/
+	#torrents .main_column tr.group_torrent td:nth-child(5):before {
+		content: "| Seeders: \00a0 ";
+		vertical-align: 1px;}
+
+	/*****Leechers***/
+	#torrents .main_column tr.group_torrent td:nth-child(6):before {
+		content: "| Leechers: \00a0 ";
+		vertical-align: 1px;}
+
+	/*****Remove the snatches/seeders/leechers from external links*****/
+	#torrents .main_column tr.ext_link_tr td:nth-child(5):before,
+	#torrents .main_column tr.ext_link_tr td:nth-child(6):before,
+	#torrents .main_column tr.ext_link_tr td:nth-child(3):before,
+	#torrents .main_column tr.ext_link_tr td:nth-child(3):after {
+		content: "";}
+
+	#torrents .main_column tr.ext_link_tr td:nth-child(3) {
+		display: none;
+	}
+
+	/****To set the headers back, as they get messed with above****/
+	#torrents .main_column tr.group_torrent td.edition_info:nth-child(1) {
+		display: block !important;
+		font-size:1em;
+		color: var(--white);}
+
+	/****Non-Torrent_Table Sections in Main Column****/
+	#torrents .main_column #collages td:nth-child(2) {display:none;}
+	#torrents #collages {margin-top: 25px; padding-bottom: 10px;}
+	#torrents #collages .colhead {display: block; font-weight:bold;}
+	#torrents #collages tr {padding:0 5px 10px 5px; display: block;}
+	#torrents #collages tr.colhead {padding: 5px 5px 5px 15px;}
+
+	#torrents .main_column .screenshots img {
+		max-width: 49% !important;}
+
+	#torrents .main_column .screenshots {
+		position: relative;
+		max-height: 300px;
+		overflow-y: scroll;}
+
+	#torrents .main_column td#usersreviewimage:nth-child(1) {
+		float: left;
+		margin: 0 5px 5px 5px;}
+
+	tr#usersreviewimage {
+		margin-bottom:10px;}
+
+	.userreviews tr {
+		padding-bottom: 10px;
+		display: inline-block;}
+
+	/****Sidebar boxes****/
+	#torrents .sidebar .box .body {padding: 5px;}
+
+	#torrents .sidebar {display: flex; flex-direction:row;}
+	#torrents .sidebar .box_albumart {order: 1;}
+	#torrents .sidebar .box_weblinks {order: 3; width: 100%;}
+	#torrents .sidebar .box_user_rating {order: 4}
+	#torrents .sidebar .box_game_ratings {order: 2}
+	#torrents .sidebar .box_game_info {order: 5}
+	#torrents .sidebar .box_series {order: 6}
+	#torrents .sidebar .box_tags {order: 7}
+	#torrents .sidebar .box_add_tags {order: 8}
+	#torrents .sidebar .box_torrent_checking {order: 9}
+	.box_albumart img {
+		width: 95% !important;
+		height: auto !important;
+		max-width: 95% !important;
+		min-width:95% !important;}
+
+	#torrents .sidebar td:nth-child(1) {display: block;}
+	#torrents .sidebar td:nth-child(2) {width: auto; float: none;}
+
+	#torrents .userratingdiv td {text-align: center;}
+	#torrents .userratingdiv table {background:none;}
+
+	#torrents #weblinksdiv .body {padding: 0px;}
+	#torrents #weblinksdiv .body.center {margin: 10px 5px;}
+
+	#torrents select {min-width:auto;}
+
+	/*.box_tags li div {display: none !important;}*/
+	.box_tags li div {color: transparent;}
+	.box_tags li div a {color: transparent;}
+	.box_tags li div a:last-of-type {color: var(--lightBlue);}
+
+	/****Comments****/
+	#torrents .main_column .forum_post .time,
+	#torrents .main_column .forum_post a[href*="report"],
+	#torrents .main_column .forum_post a[href="#"] {
+		display: none;}
+
+	#torrents #commentsdiv {
+		position: relative;
+		max-height: 300px;
+		overflow: auto;}
+
+	#torrents .main_column .forum_post .colhead_dark td {
+		padding: 3px;}
+
+	#torrents .main_column .forum_post td {
+		display:block;}
+
+	#torrents .main_column .forum_post td.body {
+		padding: 10px;
+	    	margin-left: 100px;
+	    	display: block;}
+
+	#torrents .main_column .forum_post .body a {
+		display: inline-block;}
+
+	#torrents .forum_post blockquote {
+		width: auto;}
+
+	#torrents .forum_post .comment_rating .flleft {
+		float: left;}
+
+	#torrents #commentsdiv form textarea {
+		max-width: 95%;
+		height: 100px;}
+
+	.avatar {
+		min-width: 100px;
+		max-width: 100px;
+		float: left;
+		margin:5px;}
+
+	#torrents textarea {
+		margin-left: -5px;
+		max-width: 95% !important;}
+
+	/*Revision History Page*/
+	#torrents .thin.torrent_history td:nth-child(1) {display:inline;}
+	#torrents .thin.torrent_history tr {padding: 10px 5px; display: block;}
+	#torrents .thin.torrent_history .colhead {display: none;}
+	#torrents .thin.torrent_history td {color: white;}
+	#torrents .thin.torrent_history td:nth-child(2) {width: auto; float: none; padding: 0 15px; display: inline}
+
+	/*Torrent Edit Page*/
+	.torrent_edit form {width: 100%;}
+	#torrents .torrent_edit td {color: white;}
+	#torrents .torrent_edit td:nth-child(1) {display: block; width: 100%}
+	#torrents .torrent_edit td:nth-child(2) {width: auto; padding: 10px 5px;}
+	#torrents .torrent_edit td.label {
+		background-color: var(--mediumBlue);
+    		box-shadow: 0px 5px 10px var(--black);
+		padding: 5px;
+		display: block;}
+	#torrents .torrent_edit textarea {margin: 0;}
+	#torrents .torrent_edit select, #torrents .torrent_edit input {margin: 10px 0}
+
+	/*** No zoom on hover for mobile ***/
+	.screenshots img:hover {
+		-moz-transform: none;
+		-webkit-transform: none;
+		transform: none;}
+
+	.screenshots a:hover:nth-of-type(4n) {
+		position: relative;
+		right: 0px;}
+
+	/*** New Tag ***/
+	#torrents #content .new_status {
+		background-image: url("../images/icons/new-mobile.png");}
+
+	/*** User Reviews ***/
+	#reviewdate {
+	    display: inline-block; margin-top: 2px;}
+
+/*****************************************
+****************UPLOADS*******************
+*****************************************/
+	#upload #content div,
+	#upload #content #thin {
+		display:none;}
+
+	#upload #content:after {
+		content: "Disabled on mobile devices.";}
+
+
+/*****************************************
+**************COLLECTIONS*****************
+*****************************************/
+	#collections .center {display: none;}
+	.collections_art_display td {display: block; float: left; width: calc(50% - 3px); padding: 1px;}
+
+	#collections .thin .linkbox:nth-of-type(2) a[href*="page"] {display: none;}
+	#collections .thin .linkbox:nth-of-type(2) strong {display: none;}
+	#collections .thin .linkbox:nth-of-type(2) {color: transparent;}
+	.collections_art_display {margin-top: -40px;}
+	#collections .hovereffect:hover h2 {display: none;}
+
+	#collections .collections .linkbox:nth-of-type(2) a[href*="page"] {display: inline;}
+	#collections .collections .linkbox:nth-of-type(2) strong {display: inline;}
+	#collections .collections .linkbox:nth-of-type(2) {color: var(--white);}
+
+	#collections .thin {display: flex;}
+	#collections .thin .main_column {order: 1;}
+	#collections .thin .sidebar {order: 2;}
+
+	#collections ul.collage_images li {width: calc(33% - 3px); padding: 1px;}
+	#collections ul.collage_images img {width: 100%;}
+	#collections .sidebar .box {width: 48%; display: none;}
+	#collections .sidebar .box:nth-of-type(even) {margin-left: 2%;}
+	#collections form textarea {height: 75px;}
+
+	#collections .sidebar .box_albumart,
+	#collections .sidebar .box_description,
+	#collections .sidebar .box_comment,
+	#collections .sidebar #reply_box .box {display: block; width: 100%;}
+
+	#collections #reply_box {width: 99%;}
+	#collections .sidebar h3 {font-size: 1.3em; margin: 5px 0px 0px 5px; border-bottom: 1px solid var(--white); width: 100%;}
+	#collections .sidebar div:nth-of-type(10) {width: 100%;}
+	#collections .sidebar #reply_box .box {width: 100%;}
+
+	#collections .box_addtorrent .subhead {padding: 10px 0 0 5px;}
+
+	#collections input, #collections textarea {max-width: 300px !important;}
+	#collections .box_addtorrent input {max-width: 140px !important;}
+
+	#collections #easysort {background: url('../images/smokeybackground.jpg');}
+	#collections #easysort tr {display: inline;}
+	#collections #easysort td {display: block; width: 70%; float: left;}
+	#collections #easysort td select {margin: 5px 0; width: 40%;}
+
+	#collections #manage_collage_table th:nth-of-type(5),
+	#collections #manage_collage_table td:nth-of-type(5)
+		{display: none;}
+	#collections #manage_collage_table th:nth-of-type(6),
+	#collections #manage_collage_table td:nth-of-type(6)
+		{width: 100px;}
+
+/*****************************************
+******************BLOG********************
+*****************************************/
+	#blog .thin {
+		display: block !important;}
+
+	#blog img,
+	#blog iframe {
+		max-width: 100% !important;
+		height: auto !important;}
+
+/*****************************************
+**************STAFF PAGES*****************
+*****************************************/
+
+	.permission_container {width: 93%;}
+
+	#staffpm .message_table td:nth-of-type(4) {padding-bottom: 0px;}
+	#staffpm td:nth-of-type(4):before {content: "Status:\00a0"}
+	#staffpm td:nth-of-type(4) {color: var(--grey); font-size: .8em;}
+	#staffpm td:nth-of-type(5) {color: var(--grey); font-size: 1em;}
+	#staffpm td:nth-of-type(6):before {content: "Assigned to:\00a0"}
+	#staffpm td:nth-of-type(6) {color: var(--grey); font-size: .8em;}
+	#staffpm td:nth-of-type(7):before {content: "Last PM by:\00a0"}
+	#staffpm td:nth-of-type(7) {color: var(--grey); padding-bottom: 25px; font-size: .8em;}
+
+	#inbox input[value="Resolve selected"] {display:none;}
+
+	#inbox .message_table td:nth-of-type(1) {display: block; padding-top: 25px; font-size: 1.1em;}
+	#inbox .message_table td:nth-of-type(1) a {color: var(--lightBlue);}
+	#inbox .message_table td:nth-of-type(2) {padding-top: 0px; padding-bottom: 5px; font-size: .8em;}
+
+	#staffpm #inbox {margin-top: -20px;}
+
+	#tm_stats #quick_links {display: block;}
+	#tm_stats table#tms {margin-top: 25px;}
+	#tm_stats #tms td {display:block; float: left; width: 48%; height: auto !important;}
+	#tm_stats #tm_info {height: 100px;}
+	#tm_stats #tms #avatar {height: 200px; }
+	#tm_stats #tms img {max-height: 100%}
+	#tm_stats td#platform_name {min-width: 150px;}
+
+	#reportsv2 .box {width: 95% !important;}
+	#reportsv2 #content table tr {display: flex; flex-direction: column;}
+	#reportsv2 #content table tr td:nth-of-type(1) {order:2;}
+	#reportsv2 #content table tr td:nth-of-type(2) {order:1;}
+	#reportsv2 #content table tr td table tr {display: flex; flex-direction: row;}
+	#reportsv2 #content table tr td table tr td {display: inline; width: 98%;}
+	#reportsv2 #content table tr td.colhead {font-size: 1em;}
+	#reportsv2 h3 {line-height: 0px; margin-top: 40px; margin-bottom: 0px; color: var(--darkGreen);}
+	#reportsv2 textarea, #reportsv2 input {max-width: 300px;}
+	#reportsv2 #all_reports {width: 95% !important;}
+	#reportsv2 #all_reports input[type=button]:disabled {color: #e6e6e6; background: #53616b;}
+	#reportsv2 #all_reports input[type=button]:disabled:hover {box-shadow: none;}
+
+	#staffpm .linkbox {margin: 10px 0 20px;}
+
+	#tools #recommended {display:block;}
+	#tools #recommended input {max-width: 200px !important;}
+	#tools #recommended #slides {width: 100%;}
+	#tools #recommended #torrent_form td:nth-of-type(1) {display: none;}
+	#tools #recommended #torrent_form td:nth-of-type(2) {max-width: 100px;}
+
+	/*Gazelle Manager */
+	input[name="addGazelle"], input[name="gazelleTitle"] {max-width: 250px;}
+	#gazelle_images form {width: 100%;}
+	#gazelle_images table th:nth-of-type(3),
+	#gazelle_images table th:nth-of-type(4),
+	#gazelle_images table th:nth-of-type(5),
+	#gazelle_images table th:nth-of-type(7),
+	#gazelle_images table th:nth-of-type(9),
+	#gazelle_images table td:nth-of-type(3),
+	#gazelle_images table td:nth-of-type(4),
+	#gazelle_images table td:nth-of-type(5),
+	#gazelle_images table td:nth-of-type(7),
+	#gazelle_images table td:nth-of-type(9) {
+		display: none;}
+	#gazelleview form {display:block !important;}
+	#gazelles input[type="text"] {max-width: 250px;}
+	#gazelles form td#uploader, #gazelles form td#tags {display: block;}
+	#gazelle_images .box form table td {display: block; }
+	#gazelle_images .box form table td div {text-align:left !important;}
+	#gazelle_images .box form table p {max-width: 300px !important;}
+	.gazelleinfo td {display: block;}
+
+	/* Sessions Page */
+	#user .thin table#sessions_table td {display: inline-block; width: 15%;}
+	#user .thin table#sessions_table .rowa td {background: none;}
+	#user .thin table#sessions_table .rowb td {background: none;}
+
+	/* User Applications */
+	#tools .user_applications table .colhead {display: none;}
+	#tools .user_applications table tr {width: 98%; float: none; margin: 1%;}
+	#tools .user_applications table td {display: block; padding: 10px 5px;}
+
+	#tools .user_applications table td:nth-of-type(2):before {content: "Email: "; display: block; font-weight: bold;}
+	#tools .user_applications table td:nth-of-type(3):before {content: "Origin: "; display: block; font-weight: bold;}
+	#tools .user_applications table td:nth-of-type(4):before {content: "Referer: "; display: block; font-weight: bold;}
+	#tools .user_applications table td:nth-of-type(5):before {content: "What can you contribute?: "; display: block; font-weight: bold;}
+	#tools .user_applications table td:nth-of-type(6):before {content: "IP: "; display: block; font-weight: bold;}
+	#tools .user_applications table td:nth-of-type(7):before {content: "When Applied: "; display: block; font-weight: bold;}
+	#tools .user_applications table td.center {text-align: left; margin-bottom: 20px;}
+
+	#tools table[style="width: 960px; text-align: center;"] {max-width: 400px;}
+	#tools table[style="width: 960px; text-align: center;"] textarea,
+	#tools table[style="width: 960px; text-align: center;"] input {
+		max-width: 100% !important;
+		display: block;}
+	#tools table[style="width: 960px; text-align: center;"] .colhead:last-of-type {background: none;}
+	#tools table[style="width: 960px; text-align: center;"] .colhead:last-of-type td {display: block !important;}
+	#tools table[style="width: 960px; text-align: center;"] .colhead:last-of-type input {width: 135px;}
+
+	#tools table[style="width: 960px; text-align: center;"] tr.colhead {text-align: left;}
+
+/*****************************************
+****************REQUESTS******************
+*****************************************/
+	#requests .center {
+		display: none;
+		margin: 0 !important;}
+
+	#requests .thin table .colhead_dark {display: none;}
+	#requests .thin table td:nth-of-type(1) {
+		width: 98% !important;
+		display: block;
+		padding-top: 25px;
+		font-size: 1.2em;
+		color: var(--lightBlue);
+		font-weight:bold;}
+	#requests .thin table td:nth-of-type(1) a {color: var(--lightBlue); font-weight:bold !important;}
+	#requests .thin table td:nth-of-type(2) {display: none;}
+	#requests .thin table td:nth-of-type(3):before {content: "Bounty:\00a0"; color: var(--grey);}
+	#requests .thin table td:nth-of-type(3) {
+		width: 100% !important;
+		display: block;
+		text-align: left;
+		font-size: .8em;
+		margin-top: -10px;
+		padding-bottom: 25px;
+		color: var(--darkGreen);}
+	#requests .thin table td:nth-of-type(4) {display: none;}
+	#requests .thin table td:nth-of-type(5) {display: none;}
+	#requests .thin table td:nth-of-type(6) {display: none;}
+	#requests .thin table td:nth-of-type(7) {display: none;}
+	#requests .thin table td:nth-of-type(8) {display: none;}
+	#requests .thin table td:nth-of-type(1) .tags a {font-size: .8em !important; font-weight:normal !important;}
+
+	#requests .thin form table td:nth-of-type(2) {display: block; padding-left: 10px;}
+
+	#requests .main_column {width: 100%; float: none;}
+	#requests .thin .main_column table td.label {
+		width: 100% !important;
+		display: block;
+		float: left;
+		padding: 10px 5px;
+		font-size: 1em;
+		color: var(--white);}
+	#requests .thin .main_column table td:nth-of-type(2) {
+		width: auto;
+		display: inline-block;
+		padding: 10px 5px;}
+
+	#requests .sidebar {width: 100%;}
+	#requests .sidebar .box {width: 48%;}
+	#requests .sidebar .box:nth-of-type(1) {margin-right: 3%;}
+	#requests .sidebar .box:nth-of-type(3) {margin-right: 3%;}
+	#requests .main_column input {padding: 5px !important; margin: 5px !important;}
+	#requests form textarea {max-width: 95%; height: 50px;}
+	#requests .box table {background: none;}
+
+/*****************************************
+*************STAFF PAGE*******************
+*****************************************/
+	#staff td:nth-of-type(1) {width: 120px;}
+	#staff td:nth-of-type(2) {display: none;}
+	#staff .colhead {display:none;}
+	#staff td.nobr {padding: 10px;}
+	#staff .thin .box table td {padding: 0 10px;}
+
+/*****************************************
+*****************WIKI*********************
+*****************************************/
+	#wiki .main_column {width: 100%;}
+	#wiki .header {width: 100%;}
+	#wiki ol {margin: 15px auto;}
+	.wiki_index .wiki_article ul li {width: 90%; padding: 5px 0;}
+
+/*****************************************
+*************USER PROFILE*****************
+*****************************************/
+	#user .main_column, #user .main_column_bg {
+		width: 100%;
+		display: flex;
+	    flex-direction: column;}
+	#user img, #user iframe {max-width: 100% !important; height: auto !important;}
+
+	#user .thin form {order: 1}
+	#user .box {order: 2}
+
+	#user .sidebar img {width: inherit;}
+	#user .avatar {float: none;}
+
+	#user .thin table td {display: block; }
+	#user .thin form {width: 100%;}
+
+	#user td.label {
+		background-color: #2b4e66;
+	    box-shadow: 0px 5px 10px #000;
+    	margin: 15px 2px;
+		width: 70%;}
+	#user select {min-width: auto; width: 95% !important}
+	#user table {min-width: 100% !important}
+	#user .thin table td.right {text-align: left;}
+	#user form input[type="text"], #user form textarea, #user form select {
+		max-width: 100% !important;
+		width: 100% !important;
+		margin: 10px 0;}
+	#styleurl {display: block; width: 100%;}
+
+	.box_image_coverart img {margin-top: 15px;}
+
+	/* Snatches, Likes, Uploads boxes */
+	#user .likes_icon img {width: 20px; float: right;}
+	#snatchesrow td, #uploadsrow td, #likesrow td {width: 100%;}
+	#snatchesrow img, #uploadsrow img,  #likesrow img {
+		min-width: 0%;
+		width: 24%;
+		float: left;
+		min-height: 117px !important;
+		max-height: 117px;
+		margin-top: 5px;}
+	#snatchesrow td:nth-of-type(5), #uploadsrow td:nth-of-type(5), #likesrow td:nth-of-type(5) {
+		display:none !important;}
+
+	/* Community Stats Box */
+	.profile .box_community #community_stats {margin-left: -25px; overflow: hidden;}
+	.profile .box_community #community_stats ul {display: block; width: 100%; float: none;}
+
+	/* Invites Page */
+	#user table#invitee_list td {display: inline-block; width: 24%; height: 100%; vertical-align:middle;}
+	#user table#invitee_list td:nth-of-type(2),
+	#user table#invitee_list td:nth-of-type(5),
+	#user table#invitee_list td:nth-of-type(6) {display: none;}
+
+/*****************************************
+****************TOP 10********************
+*****************************************/
+	#top10 h3 {margin-left: 5px;}
+	#top10 h3 small {display: block; color: transparent; margin-left: -10px;}
+
+	#top10 .linkbox {
+		display: block;
+		width: 100%;}
+	#top10 table .colhead {display: none;}
+	#top10 .top10_torrents table td:nth-of-type(3){padding: 20px 10px;}
+	#top10 .top10_games table td:nth-of-type(3){padding: 20px 10px;}
+	#top10 table td:nth-of-type(5) {display: none;}
+	#top10 table td:nth-of-type(6) {display: none;}
+	#top10 table td:nth-of-type(7) {display: none;}
+	#top10 table td:nth-of-type(8) {display: none;}
+	#top10 table td:nth-of-type(9) {display: none;}
+	#top10 table td:nth-of-type(10) {display: none;}
+ 	#top10 .content_basiccontainer {display: none;}
+
+	#top10 .top10_tags table td:nth-of-type(4) {display: none;}
+	#top10 .top10_tags table td {padding: 0 5px;}
+	#top10 .top10_users table td {padding: 0 5px;}
+	#top10 .top10_uploaders table td {padding: 0 5px;}
+
+	.top10_torrents span {display: none;}
+	.top10_torrents strong span {display: inline;}
+
+	/*** Uploaders ***/
+	#top10 #ul table td:nth-of-type(4),
+	#top10 #ul table td:nth-of-type(5),
+	#top10 #ul table td:nth-of-type(6),
+	#top10 #ul table td:nth-of-type(7),
+	#top10 #ul table td:nth-of-type(8),
+	#top10 #ul table td:nth-of-type(9) {display: none;}
+	#top10 #ul table td:nth-of-type(3) {display: table-cell;}
+
+	/*** Downloaders ***/
+	#top10 #dl table td:nth-of-type(3),
+	#top10 #dl table td:nth-of-type(4),
+	#top10 #dl table td:nth-of-type(6),
+	#top10 #dl table td:nth-of-type(7),
+	#top10 #dl table td:nth-of-type(8),
+	#top10 #dl table td:nth-of-type(9) {display: none;}
+	#top10 #dl table td:nth-of-type(5) {display: table-cell;}
+
+	/*** Torrents Uploaded ***/
+	#top10 #numul table td:nth-of-type(3),
+	#top10 #numul table td:nth-of-type(4),
+	#top10 #numul table td:nth-of-type(5),
+	#top10 #numul table td:nth-of-type(6),
+	#top10 #numul table td:nth-of-type(8),
+	#top10 #numul table td:nth-of-type(9) {display: none;}
+	#top10 #numul table td:nth-of-type(7) {display: table-cell;}
+
+	/*** Fastest Uploaders ***/
+	#top10 #uls table td:nth-of-type(3),
+	#top10 #uls table td:nth-of-type(5),
+	#top10 #uls table td:nth-of-type(6),
+	#top10 #uls table td:nth-of-type(7),
+	#top10 #uls table td:nth-of-type(8),
+	#top10 #uls table td:nth-of-type(9) {display: none;}
+	#top10 #uls table td:nth-of-type(4) {display: table-cell;}
+
+	/*** Fastest Downloaders ***/
+	#top10 #dls table td:nth-of-type(3),
+	#top10 #dls table td:nth-of-type(4),
+	#top10 #dls table td:nth-of-type(5),
+	#top10 #dls table td:nth-of-type(7),
+	#top10 #dls table td:nth-of-type(8),
+	#top10 #dls table td:nth-of-type(9) {display: none;}
+	#top10 #dls table td:nth-of-type(6) {display: table-cell;}
+
+	/*** Snatchers ***/
+	#top10 #snatched table td:nth-of-type(4),
+	#top10 #snatched table td:nth-of-type(6),
+	#top10 #snatched table td:nth-of-type(7),
+	#top10 #snatched table td:nth-of-type(8),
+	#top10 #snatched table td:nth-of-type(9) {display: none;}
+	#top10 #snatched table td:nth-of-type(5) {display: table-cell;}
+
+	/*** IRC Lines ***/
+	#top10 #irc table td:nth-of-type(4),
+	#top10 #irc table td:nth-of-type(5),
+	#top10 #irc table td:nth-of-type(6),
+	#top10 #irc table td:nth-of-type(7),
+	#top10 #irc table td:nth-of-type(8),
+	#top10 #irc table td:nth-of-type(9) {display: none;}
+
+	/*** Forum Posts ***/
+	#top10 #forum table td:nth-of-type(3),
+	#top10 #forum table td:nth-of-type(5),
+	#top10 #forum table td:nth-of-type(6),
+	#top10 #forum table td:nth-of-type(7),
+	#top10 #forum table td:nth-of-type(8),
+	#top10 #forum table td:nth-of-type(9) {display: none;}
+
+	/*** Profile Views ***/
+	#top10 #views table td:nth-of-type(4),
+	#top10 #views table td:nth-of-type(5),
+	#top10 #views table td:nth-of-type(6),
+	#top10 #views table td:nth-of-type(7),
+	#top10 #views table td:nth-of-type(8),
+	#top10 #views table td:nth-of-type(9) {display: none;}
+
+	/*** Top 10 for Month***/
+	#top10 .top10_uploaders #numul table td:nth-of-type(3),
+	#top10 .top10_uploaders #numul table td:nth-of-type(5),
+	#top10 .top10_uploaders #numul table td:nth-of-type(6),
+	#top10 .top10_uploaders #numul table td:nth-of-type(7),
+	#top10 .top10_uploaders #numul table td:nth-of-type(8),
+	#top10 .top10_uploaders #numul table td:nth-of-type(9) {display: none;}
+	#top10 .top10_uploaders #numul table td:nth-of-type(4) {display: table-cell;}
+
+	#top10 .top10_uploaders #numuloneago table td:nth-of-type(3),
+	#top10 .top10_uploaders #numultwoago table td:nth-of-type(3) {display: none;}
+
+	/*** Highest Rated Games***/
+	#top10 #upvoted table td:nth-of-type(4),
+	#top10 #upvoted table td:nth-of-type(5),
+	#top10 #upvoted table td:nth-of-type(6),
+	#top10 #upvoted table td:nth-of-type(9) {display: none;}
+	#top10 #upvoted table td:nth-of-type(8) {display: table-cell;}
+
+	/*** Lowest Rated Games***/
+	#top10 #downvoted table td:nth-of-type(4),
+	#top10 #downvoted table td:nth-of-type(5),
+	#top10 #downvoted table td:nth-of-type(6),
+	#top10 #downvoted table td:nth-of-type(7),
+	#top10 #downvoted table td:nth-of-type(8),
+	#top10 #downvoted table td:nth-of-type(9) {display: none;}
+	#top10 #downvoted table td:nth-of-type(9) {display: table-cell;}
+
+/*****************************************
+****************DONATE********************
+*****************************************/
+	.donate_box_wrapper {width: 49%; padding: 0; margin: 0;}
+
+/*****************************************
+****************RULES*********************
+*****************************************/
+	#rules #content .search_form {height: 100%;}
+	#rules .before_rules {width: 100%;}
+
+/*****************************************
+**************BOOKMARKS*******************
+*****************************************/
+	#bookmarks .sidebar {display: none;}
+	#bookmarks table#collage_table td {width: 32%; float: left; display: block; height: 160px; padding:7px 1px;}
+	#bookmarks table#collage_table tr {display:inline;}
+	#bookmarks table#collage_table td[colspan^=""] {width: auto;}
+
+/*****************************************
+*************GAZELLE VIEWER***************
+*****************************************/
+	.gazelles_art_display td {width: 50%;}
+	#gazelles .gazelle_art {background-size: cover;}
+
+	#gazelles .pad form {display: none;}
+	#gazelles .hovereffect:hover h2 {display: none;}
+
+/*****************************************
+*****************INBOX********************
+*****************************************/
+	#inbox .box, #inbox .pad {padding: 0; width: 100%;}
+	#inbox form {width: 100%;}
+	#inbox td {display: block; padding: 0 10px;}
+	/*#inbox #searchbox {display: none;}*/
+	#inbox tr.colhead {display:none;}
+	#inbox #messageform td:nth-of-type(1) {float: right; padding-top: 17px;}
+	#inbox #messageform td:nth-of-type(2) {display: block; padding-top: 25px;}
+	#inbox #messageform td:nth-of-type(2) a {font-size: 1.1em; color: var(--lightBlue); font-weight:bold;}
+	#staffpm #inbox #messageform td:nth-of-type(2) a {font-size: 1.4em; font-weight: bold;}
+	#inbox #messageform td:nth-of-type(3) {display: block; color: var(--grey); font-size: .8em;}
+	#inbox td:nth-of-type(3):before {content:"With:"; color: var(--grey)}
+	#inbox td:nth-of-type(4) {display: block; padding-bottom: 25px; color: var(--grey) }
+	#inbox input[value="Delete messages"] {display:none;}
+
+	#inbox tr.unreadpm td:nth-of-type(2) a {color: var(--darkGreen) !important;}
+
+	#inbox .box .body {padding: 10px 5px;}
+	#inbox a[onclick^="Quote("] {font-size: .8em;}
+	#inbox span[style^="width: 80%;"] {display: none; float: none !important;}
+	#inbox span[style^="width: 20%;"] {display: none; float: none !important;}
+	#inbox textarea {width: 95%; margin-left: 5px;}
+	#inbox td.label {width: auto; padding-left: 10px;}
+
+	#inbox #searchbox div {height: auto;}
+
+/*****************************************
+*************ACHIEVEMENTS*****************
+*****************************************/
+	#progress_bar {width: auto;}
+	.flright {float: none; margin-top: 0px !important;}
+	.flleft {float: none;}
+
+	#achievements td {border-right: rgba(198,230,246,.3) solid 1px;}
+	#achievements .colhead td:first-of-type, #achievements .colhead td:last-of-type {border: none;}
+
+/*****************************************
+*****************LOG**********************
+*****************************************/
+	#log form table:nth-of-type(2) td {float: left;}
+	#log .center {width: 100%;}
+
+/*****************************************
+****************FRIENDS*******************
+*****************************************/
+	#friends .avatar {width: 75px; min-width:75px; max-width:75px;}
+	#friends .avatar img {width: 75px;}
+
+	#friends table {margin: 20px 0;}
+	#friends td span {font-size: .9em; float: none !important;}
+	#friends td .time {display: block;}
+	#friends textarea {width: 70%;}
+
+	#friends td:nth-of-type(2) {display: block;}
+	#friends td:nth-of-type(3) {display: inline-flex;}
+
+/*****************************************
+****************TODO**********************
+*****************************************/
+	#todo table .colhead {display: none;}
+	#todo table td {display: block; padding: 0 5px;}
+	#todo table td:first-of-type {padding-top: 10px;}
+	#todo table td:last-of-type {padding-bottom: 10px;}
+	#todo table td:nth-of-type(3):before {content: "Added By: ";}
+	#todo table td:nth-of-type(4):before {content: "Date Added: ";}
+	#todo table td:nth-of-type(5):before {content: "Priority: ";}
+	#todo table td:nth-of-type(6):before {content: "Status: ";}
+	#todo table td:nth-of-type(7):before {content: "Last Edited: ";}
+	#todo table td:nth-of-type(8):before {content: "Completion Time: ";}
+
+	#todo .center {text-align:left;}
+
+/*****************************************
+**************SHARE SCORE*****************
+*****************************************/
+	#share_score_breakdown td {
+		display: block;
+		width: 95% !important;
+		text-align: center;
+		height: auto !important;}
+
+	#share_score_breakdown .label {
+		margin-left: 2% !important;}
+
+
+
+
+
+	/* Silvertea's code to fix hover of username */
+	#searchbars ul {
+	    left: 170px;}
+	#userinfo_username .sub,
+	#forums #content .thin .sub {
+	    visibility: visible !important;
+	    width: 25px;
+	    height: 25px;
+	    background-image: url('../images/icons/sub128.png');
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position: center;}
+	#userinfo_username .sub {
+	    top: 32px;
+	    left: 130px;
+	    margin: 0;
+	    position: absolute;}
+	#userinfo_username .sub span {
+	    top: 37px;
+	    left: 0;
+	    font-size: inherit;}
+	#forums #content .thin .sub {
+	    margin: -25px 0 0 0;
+	    right: calc(-100% + 25px);
+	    top: 35px;
+	    font-size: 1.1em;
+		z-index: 1;}
+	#forums #content .thin .sub span {
+	    left: -135px;
+	    top: -10px;}
+	#userinfo_username .sub span,
+	#forums #content .thin .sub span {
+	    display: none;
+	    margin: 0;
+	    position: relative;
+	    border-bottom: 1px var(--darkBlue2) solid;
+	    background: var(--mediumBlue);
+	    width: 130px;
+	    height: 38px;
+	    padding: 5px 0 0 0;}
+	#userinfo_username .sub:hover span,
+	#forums #content .thin .sub:hover span {
+	    display: block;}
+	#userinfo_username .sub a,
+	#forums #content .thin .sub a {
+	    display: block;
+	    font-weight: 400;
+	    padding: 10px 8px;}
+
+
+}
+
+
+
+
+
+
 #header {display:none;}
 /*******************************************************/
 
@@ -238,6 +1415,12 @@ body {
 
 #torrent_table #hyphen {
     display: none;}
+    
+.filter_torrents.advanced .flright:before {
+    content: '(View Less)';
+    position: absolute;
+    bottom: 1052px;}
+    
 #groupplatform {
     width: 34px;
     height: 34px;
