@@ -3081,7 +3081,7 @@ body:not(#upload) #artist_tr + tr td.label,
 
 .linkbox {
     margin-bottom: 5px;
-    padding: 6px;
+    padding: 5px;
     text-align: center;}
 #pageslinksdiv .invisible a,
 .linkbox .selected a {
@@ -3769,7 +3769,7 @@ a[href^="javascript:Vote("] strong:hover,
 #user .thin >h3:first-child,
 h2 {
     padding: 0;
-    margin: 0 0 0 10px;
+    margin: 0 0 12px 10px;
     font-size: 21px;
     line-height: 21px;
     height: auto;
@@ -4181,32 +4181,39 @@ form[name="filter"] h3,
 #requests table input#amount_box {
     width: 110px;}
 
-#user .thin >h2:first-child +.center,
-#staff .thin >.header +.box.pad,
-#collections table#manage_collage_table,
-#torrents .thin >.header:first-child +table,
-.thin.torrent_history table.border,
-#collections .thin >h2:first-child +.center,
-#user .thin >h2 +form#userform,
-.thin >#request_form,
+
+
+/* #log .thin >.header +.box.pad,
+table.gazellepic,
 #user .thin >h2 ~form[method="post"],
+.thin >#request_form,
+#user .thin >h2 +form#userform,
+.thin.torrent_history table.border,
+#collections table#manage_collage_table,
+#shop_search,
+#staff .thin >.header +.box.pad,
+#user .thin >h2:first-child +.center,
+#torrents .thin >.header:first-child +table,
+#collections .thin >h2:first-child +.center,
 #torrents .thin >h2:first-child +.center,
 #user .thin >h2:first-child +.box.pad:last-child,
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2),
 #artist .thin h2:first-child +table.border,
-table.gazellepic,
 #gazelles .thin >h2:first-child +.box.pad,
-#log .thin >.header +.box.pad,
 #torrents #content>script:first-child +h2 +form,
-#user #content>h2:first-child+table {
-    margin-top: 12px;}
-.backpack #backpack >h2:first-child,
+#user #content>h2:first-child +table {
+    margin-top: 12px;} */
+/* .backpack #backpack >h2:first-child,
 .equipment #equipment >h2:first-child,
 #crafting_panel >h2:first-child,
 .thin.global_buffs_shop >div:first-child,
 .thin.freeleech_shop >div:first-child,
 #fight_skill_points_assign >h2:first-child {
-    margin-bottom: 12px;}
+    margin-bottom: 12px;} */
+#user #content >.flright a[href="wiki.php?action=article&id=30"] {
+    margin-top: -12px;
+    display: inline-block;}
+
 input[name="fromyear"],
 input[name="toyear"],
 #upload input#remaster_year,
@@ -4531,7 +4538,7 @@ h2 marquee {
 #userhistory .forum_post.vertical_margin>tbody>tr:last-child,
 #wrapper .clan_stat_totals table.border tr:last-child,
 .forum_post tr.likes,
-.thin.torrent_history table.border tr:not(.colhead):last-child,
+.thin.torrent_history table.border:not(#th_search) tr:not(.colhead):last-child,
 .torrent_details .pad.hidden div[id^=history] tr:not(.colhead):last-child {
 	border-top: var(--p-border);
     border-top-color: var(--c-table-brdr);
@@ -5380,8 +5387,8 @@ input[type="search"],
 #user input[type="text"][name="custom_censor_content"] {
     width: calc(100% - 225px);
     margin: 5px 0 2px 0;}
-#user .thin >h2 +form#userform tr:not(.colhead_dark) td {
-    /*padding: 6px 5px;*/}
+/*#user .thin >h2 +form#userform tr:not(.colhead_dark) td {
+    padding: 6px 5px;}*/
 #user .thin >h2 +form#userform ul {
     list-style: none;
     padding: 0 5px;
@@ -7036,11 +7043,10 @@ table#downloaded_table td.center.cats_col +td >span:before {
 **********************************************/
 
 /*** Search bar ***/
-#shop_search  {
+#shop_search {
     position: relative;
     z-index: 2;
-    text-align: left;
-    margin-top: 12px;}
+    text-align: left;}
 
 #shop_search #search_query {
     width: calc(100% - 405px);}
