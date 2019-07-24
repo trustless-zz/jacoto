@@ -9590,6 +9590,8 @@ table.adventure_table h3 {
 #wrapper #trading_panel .message_box #buttons input {
 	background-color: unset;
 	color: inherit;}
+#wrapper #trading_panel .message_box #buttons input:hover {
+    color: var(--c-low);}
 
 #wrapper #trading_panel .message_box #buttons input:disabled {
 	box-shadow: inherit;
@@ -9611,7 +9613,9 @@ table.adventure_table h3 {
     width: calc(100% - 112px);
 	margin-top: 15px;
 	padding: 10px;
-	border-radius: 0;}
+	border-radius: 0;
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);}
 
 /* #wrapper #trading_panel .message_replies .message_reply_other:after,
 #wrapper #trading_panel .message_replies .message_reply_self:before {
@@ -9636,7 +9640,7 @@ table.adventure_table h3 {
     float: left;
     border: var(--p-border);
     border-color: var(--c-body);
-	background-color: var(--c-input-obj));
+	background-color: var(--c-input-obj);
     margin-left: 12px;}
 #wrapper #trading_panel .message_replies .message_reply_other {
     border: var(--p-border);
