@@ -1120,7 +1120,9 @@ table.gazelles_art_display,
 #wrapper #trading_panel >div:not(.linkbox),
 .backpack #backpack >div,
 div#fight_skill_points_assign >table,
-#collections .thin >#reply_box {
+#collections .thin >#reply_box,
+#user .box.pad >#buffs_table,
+#user .box.pad >#effects_table {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
