@@ -7825,6 +7825,13 @@ body#user.inventory {}
 	border-bottom: none;
 	font-size: 2.5em; */}
 
+.thin.inventory.others_inventory .item_li >form {
+    margin-top: 49px;}
+.thin.inventory.others_inventory .item_li .item_image_div {
+    margin-top: 1px;}
+#wrapper .thin.inventory.others_inventory .item_li {
+    padding-bottom: 53px;}
+
 .alertable {
     border: var(--p-border);
     border-color: var(--c-main-brdr);
@@ -9561,7 +9568,16 @@ table.adventure_table h3 {
 	clear: both;}
 
 #wrapper #trading_panel .message_box .label:nth-of-type(2) {
-	margin-top: 15px;}
+    padding: 8px 0;
+    display: block;
+    width: 100%;
+    border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);
+    font-weight: 600;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    text-indent: 10px;
+	margin: 15px 0 0 0;}
 
 #wrapper #trading_panel .message_box textarea {
 	margin: 0;
@@ -9573,11 +9589,15 @@ table.adventure_table h3 {
 
 #wrapper #trading_panel .message_box #buttons input {
 	background-color: unset;
-	color: iinherit;}
+	color: inherit;}
 
 #wrapper #trading_panel .message_box #buttons input:disabled {
 	box-shadow: inherit;
     opacity: .5;}
+
+#wrapper #trading_panel .message_box .message_notice {
+    display: inline-block;
+    margin-top: 5px;}
 
 #wrapper #trading_panel .message_replies {
 	clear: both;
@@ -9587,21 +9607,43 @@ table.adventure_table h3 {
 #wrapper #trading_panel .message_reply {
 	display: inline-block;
 	position: relative;
-	width: calc(100% - 100px);
+	/*width: calc(100% - 100px);*/
+    width: calc(100% - 112px);
 	margin-top: 15px;
 	padding: 10px;
 	border-radius: 0;}
 
-#wrapper #trading_panel .message_replies .message_reply_self {
-	background-color: var(--c-tgroup);}
-
-#wrapper #trading_panel .message_replies .message_reply_other:after,
+/* #wrapper #trading_panel .message_replies .message_reply_other:after,
 #wrapper #trading_panel .message_replies .message_reply_self:before {
-	content: none;}
+	content: none;} */
 
+#wrapper #trading_panel .message_replies .message_reply_self:before,
+#wrapper #trading_panel .message_replies .message_reply_other:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: calc(50% - 12px);
+    border: 12px solid;}
+#wrapper #trading_panel .message_replies .message_reply_self:before {
+    left: -24px;
+    border-color: transparent var(--c-body) transparent transparent;}
+#wrapper #trading_panel .message_replies .message_reply_other:after {
+    right: -24px;
+    border-color: transparent transparent transparent var(--c-table-brdr);}
+
+#wrapper #trading_panel .message_replies .message_reply_self {
+    float: left;
+    border: var(--p-border);
+    border-color: var(--c-body);
+	background-color: var(--c-input-obj));
+    margin-left: 12px;}
 #wrapper #trading_panel .message_replies .message_reply_other {
+    border: var(--p-border);
+    border-color: var(--c-table-brdr);
 	float: right;
-	background-color: var(--c-edition);}
+	background-color: var(--c-tor-row-hvr);
+    margin-right: 12px;}
 
 
 
