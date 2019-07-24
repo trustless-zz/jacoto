@@ -7313,8 +7313,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	padding: 0;
 	font-size: 35px;
 	font-weight: bold;
-	text-shadow: 2px 2px 2px #000;
-	color: #19ea19;
+	text-shadow: 2px 2px 2px var(--c-box);
+	color: var(--c-on);
 	text-align: left;
 	vertical-align: top;
 	position: absolute;}
