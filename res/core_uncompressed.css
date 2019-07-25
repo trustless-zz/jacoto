@@ -4894,6 +4894,7 @@ input[type="search"],
     filter: none;
     vertical-align: text-bottom;
     margin-top: -1px; /* bring line-height back to 19px */}
+.item_li #item_type img,
 .torrent_details .pad.hidden img[title="Gold"],
 #clans td.label img {
     vertical-align: text-bottom;}
@@ -7075,7 +7076,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     line-height: 26px;
     vertical-align: top;}
 
-
+.inventory #content li.no_items,
 #shop #content li.no_items,
 #loading {
 	list-style: none;
@@ -7521,14 +7522,14 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	top: 0;
 	left: 0;
 	width: 200px;
-	padding: 10px 0 0 10px;}
+	padding: 10px 0 10px 10px;}
 
 .more_info .col_2 {
 	position: absolute;
 	top: 0;
 	right: 0;
 	left: 200px;
-	padding: 10px 10px 0 30px;}
+	padding: 10px 10px 10px 30px;}
 
 .more_info .info_box span.label {
 	display: block;
