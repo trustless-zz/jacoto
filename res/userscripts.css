@@ -299,8 +299,8 @@ Universal torrent gallery
 https://gist.github.com/po5/c27eeed4412c64d7befb37feb868511e/raw/universal-torrent-gallery.user.js
 https://gazellegames.net/forums.php?action=viewthread&threadid=16978&postid=1021780#post1021780
 ***/
-#userscript-gallery-toggle,
-#userscript-gallery-container {
+#wrapper #userscript-gallery-toggle,
+#wrapper #userscript-gallery-container {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: var(--c-box);
@@ -309,8 +309,8 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=16978&postid=1021
     border-color: var(--c-main-brdr);
     position: relative;}
 
-/* shadows/borders on pseudo-elements because there's no container
-the whole thing is a mess as a result really */
+/* shadows/borders on pseudo-elements because there's no container,
+really the whole thing is a mess as a result */
 #userscript-gallery-toggle:before,
 #userscript-gallery-container:before {
     z-index: -2;
@@ -336,13 +336,15 @@ the whole thing is a mess as a result really */
     border-bottom-color: var(--c-main-brdr);
     position: absolute;
     content: '';}
-#userscript-gallery-container {
+#wrapper #userscript-gallery-container {
     margin-bottom: 15px;
     border-top: none;
     padding: 10px 0 0 10px;
     display: flex;
     flex-flow: row wrap;}
-#userscript-gallery-toggle {
+#wrapper #userscript-gallery-toggle {
+    background-image: unset;
+    margin: 0;
     border-bottom: none;
     background: var(--p-head-grdnt);
     text-align: left;
@@ -352,7 +354,7 @@ the whole thing is a mess as a result really */
     line-height: var(--p-head);
     padding: 0;}
 
-.userscript-gallery-group {
+#wrapper .userscript-gallery-group {
     align-self: center;
     width: -moz-fit-content;
     height: fit-content;
@@ -392,7 +394,7 @@ the whole thing is a mess as a result really */
     -o-transition: none;
     transition: none;}
 
-#userscript-gallery-toggle a {
+#wrapper #userscript-gallery-toggle a {
     cursor: default;
     width: 100%;
     height: 100%;
