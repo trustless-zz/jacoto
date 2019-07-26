@@ -1,0 +1,286 @@
+﻿/***
+WhutBBCode
+***/
+#wrapper .wbbcode {
+    width: auto !important;}
+.wbbcode ~.bbbutt,
+.wbbemot img[alt=":loveflac:"] {
+    display: none;}
+
+.wbbcode.wbbimg .wbbbuttons .whutbbutton span,
+.wbbcode.wbbimgless .whutbbutton {
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;}
+
+#wrapper .wbbcode .wbbbuttons {
+    background-color: var(--c-input-obj);
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);
+    padding: 3px;
+    margin: 5px auto;
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    cursor: default;
+    width: -moz-fit-content;
+    width: fit-content;}
+
+.wbbcode.wbbimgless button:active span,
+.wbbcode.wbbimgless button span {
+    margin: 0;}
+
+#wrapper .wbbemot {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);
+    background-color: var(--c-input-obj);
+    padding: 3px 6px;
+    max-height: unset;
+    width: -moz-max-content;
+    width: fit-content;
+    margin: .2em auto;}
+
+.wbbcode.wbbimgless .whutbbutton {
+    text-shadow: 1px 1px 1px var(--c-body);
+    border-radius: unset;
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
+    line-height: 1em;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 2px;
+    color: var(--c-txt);
+    margin: 3px;
+    background: var(--p-btn);}
+.wbbcode.wbbimgless .whutbbutton:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: var(--c-low);
+    background: var(--p-btn-hvr);}
+.wbbcode.wbbimgless .whutbbutton:hover:active {
+    background: var(--p-btn-act);}
+
+.wbbcode.wbbimg .wbbbuttons .whutbbutton {
+    text-shadow: unset;
+    width: auto;
+    height: auto;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 2px 3px;
+    padding: 1px;
+    align-self: center;
+    background: unset;
+    color: unset;
+    border: unset;
+    border-radius: unset;
+    box-shadow: unset;}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton.wbbpressed {
+    background-color: var(--c-box);}
+
+.wbbcode .wbbshortcut {
+    color: var(--c-txt);}
+.wbbcode .wbbshortcut li {
+    border-radius: unset;
+    border: var(--p-border);
+    border-color: var(--c-table-brdr);
+    background-color: var(--c-input-obj);}
+.wbbcode .wbbshortcut li strong {
+    border-radius: unset;
+    border: var(--p-border);
+    border-color: var(--c-table-brdr);
+    background-color: var(--c-box);}
+.wbbcode .wbbcon {
+    color: var(--c-red);}
+
+.wbbcode.wbbimg .wbbbuttons .whutbbutton span {
+    opacity: .8;
+    display: inline-block;
+    margin: 0;
+    height: 18px;
+    width: 18px;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-image: unset;
+    background-color: var(--c-txt);}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton.wbbpressed span,
+.wbbcode.wbbimg .wbbbuttons .whutbbutton:hover span {
+    opacity: 1;
+    background-color: var(--c-low);}
+
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-bold {
+    -webkit-mask-image: url('icons/bbbutt/bold.svg');
+    mask-image: url('icons/bbbutt/bold.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-text-width {
+    -webkit-mask-image: url('icons/bbbutt/und.svg');
+    mask-image: url('icons/bbbutt/und.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-italic {
+    -webkit-mask-image: url('icons/bbbutt/ita.svg');
+    mask-image: url('icons/bbbutt/ita.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-minus {
+    -webkit-mask-image: url('icons/bbbutt/strk.svg');
+    mask-image: url('icons/bbbutt/strk.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-exclamation-sign {
+    width: 20px;
+    -webkit-mask-image: url('icons/bbbutt/whut/important.svg');
+    mask-image: url('icons/bbbutt/whut/important.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-arrow-right {
+    -webkit-mask-image: url('icons/bbbutt/whut/heading.svg');
+    mask-image: url('icons/bbbutt/whut/heading.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-leaf {
+    -webkit-mask-image: url('icons/bbbutt/whut/code.svg');
+    mask-image: url('icons/bbbutt/whut/code.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-tint {
+    -webkit-mask-image: url('icons/bbbutt/color.svg');
+    mask-image: url('icons/bbbutt/color.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-text-height {
+    -webkit-mask-image: url('icons/bbbutt/whut/size.svg');
+    mask-image: url('icons/bbbutt/whut/size.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-align-left {
+    -webkit-mask-image: url('icons/bbbutt/lef.svg');
+    mask-image: url('icons/bbbutt/lef.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-align-center {
+    -webkit-mask-image: url('icons/bbbutt/cent.svg');
+    mask-image: url('icons/bbbutt/cent.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-align-right {
+    -webkit-mask-image: url('icons/bbbutt/righ.svg');
+    mask-image: url('icons/bbbutt/righ.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-list-alt {
+    -webkit-mask-image: url('icons/bbbutt/whut/n_list.svg');
+    mask-image: url('icons/bbbutt/whut/n_list.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-list {
+    -webkit-mask-image: url('icons/bbbutt/list.svg');
+    mask-image: url('icons/bbbutt/list.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-globe {
+    -webkit-mask-image: url('icons/bbbutt/link.svg');
+    mask-image: url('icons/bbbutt/link.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-picture {
+    -webkit-mask-image: url('icons/bbbutt/img.svg');
+    mask-image: url('icons/bbbutt/img.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-comment {
+    -webkit-mask-image: url('icons/quote.svg');
+    mask-image: url('icons/quote.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-asterisk {
+    -webkit-mask-image: url('icons/bbbutt/pre.svg');
+    mask-image: url('icons/bbbutt/pre.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-tasks {
+    -webkit-mask-image: url('icons/bbbutt/whut/source.svg');
+    mask-image: url('icons/bbbutt/whut/source.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-warning-sign {
+    -webkit-mask-image: url('icons/bbbutt/spoil.svg');
+    mask-image: url('icons/bbbutt/spoil.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-eye-open {
+    -webkit-mask-image: url('icons/bbbutt/whut/mature.svg');
+    mask-image: url('icons/bbbutt/whut/mature.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-music {
+    -webkit-mask-image: url('icons/bbbutt/whut/plat.svg');
+    mask-image: url('icons/bbbutt/whut/plat.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-download {
+    -webkit-mask-image: url('icons/bbbutt/whut/id.svg');
+    mask-image: url('icons/bbbutt/whut/id.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-user {
+    -webkit-mask-image: url('icons/nav/user.svg');
+    mask-image: url('icons/nav/user.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-share {
+    -webkit-mask-image: url('icons/bbbutt/whut/wiki.svg');
+    mask-image: url('icons/bbbutt/whut/wiki.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-info-sign {
+    -webkit-mask-image: url('icons/bbbutt/whut/rules.svg');
+    mask-image: url('icons/bbbutt/whut/rules.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-pencil {
+    -webkit-mask-image: url('icons/bbbutt/tex.svg');
+    mask-image: url('icons/bbbutt/tex.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-ban-circle {
+    width: 24px;
+    -webkit-mask-image: url('icons/bbbutt/whut/nobb.svg');
+    mask-image: url('icons/bbbutt/whut/nobb.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-remove-sign {
+    -webkit-mask-image: url('icons/tor/rm.svg');
+    mask-image: url('icons/tor/rm.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-fire {
+    -webkit-mask-image: url('icons/bbbutt/whut/emoticons.svg');
+    mask-image: url('icons/bbbutt/whut/emoticons.svg');}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-wrench {
+    -webkit-mask-image: url(icons/nav/useredit.svg);
+    mask-image: url(icons/nav/useredit.svg);}
+.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-question-sign {
+    -webkit-mask-image: url('icons/bbbutt/whut/shortcuts.svg');
+    mask-image: url('icons/bbbutt/whut/shortcuts.svg');}
+/***
+/WhutBBCode
+***/
+
+
+/***
+Quick Crafter
+***/
+#quick-crafter {
+    width: 100% !important;
+    -webkit-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+    padding: 10px !important;
+    background-color: var(--c-box) !important;
+    -webkit-box-shadow: var(--p-main-shdw) !important;
+    box-shadow: var(--p-main-shdw) !important;
+    border: var(--p-border) !important;
+    border-color: var(--c-main-brdr) !important;
+    margin: 0 0 15px 0 !important;}
+#quick-crafter:before {
+    content: 'Quick Crafter';
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: -10px -10px 10px -10px;
+    padding: 9px 10px;
+    font-size: var(--p-head);
+    height: var(--p-head);
+    line-height: var(--p-head);
+    background: var(--p-head-grdnt);
+    font-weight: 600;}
+
+#quick-crafter >p[style^="float:right"]:last-child {
+    margin: 0 !important;
+    padding: 5px 0 0 0 !important;
+    float: unset !important;
+    text-align: right !important;}
+
+#quick-crafter button {
+    margin-top: 5px !important;}
+#quick-crafter br +button {
+    margin-top: 8px !important;}
+#quick-crafter button +br {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 0;
+    border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);
+    margin-top: 8px;}
+
+#quick-crafter #clear_button {
+    color: var(--c-red);}
+
+#quick-crafter #current_craft_box {
+    background-color: var(--c-tgroup);
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 5px;
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);}
+#quick-crafter #crafting-submenu >p:first-child {
+    margin-top: 0;}
+#quick-crafter #crafting-submenu >p:first-child +p {
+    margin-bottom: 8px;}
+/***
+/Quick Crafter
+***/
