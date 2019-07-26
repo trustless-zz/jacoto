@@ -1,5 +1,7 @@
 ﻿/***
 WhutBBCode
+https://greasyfork.org/en/scripts/1024-whutbbcode
+https://github.com/hateradio/wbb
 ***/
 #wrapper .wbbcode {
     width: auto !important;}
@@ -221,6 +223,8 @@ WhutBBCode
 
 /***
 Quick Crafter
+https://github.com/KingKrab23/Quick_Craft/raw/master/GGn%20Quick%20Crafting.user.js
+https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=1192484#post1192484
 ***/
 #quick-crafter {
     width: 100% !important;
@@ -269,6 +273,8 @@ Quick Crafter
 #quick-crafter #clear_button {
     color: var(--c-red);}
 
+#quick-crafter #current_craft_box:empty {
+    display: none;}
 #quick-crafter #current_craft_box {
     background-color: var(--c-tgroup);
     width: -moz-fit-content;
@@ -283,4 +289,11 @@ Quick Crafter
     margin-bottom: 8px;}
 /***
 /Quick Crafter
+***/
+
+
+/***
+Universal torrent gallery
+https://gist.github.com/po5/c27eeed4412c64d7befb37feb868511e/raw/universal-torrent-gallery.user.js
+https://gazellegames.net/forums.php?action=viewthread&threadid=16978&postid=1021780#post1021780
 ***/
