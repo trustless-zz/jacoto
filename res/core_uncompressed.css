@@ -3865,6 +3865,7 @@ h3 {
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child):hover td {
     background-color: var(--c-row-hvr) !important;}
 
+#reports .thin>table >tbody >.colhead +tr:last-child,
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td:empty {
     background-color: transparent !important;}
 
@@ -4257,6 +4258,7 @@ input[name="toyear"],
     width: calc(100% - 5px) !important;}
 #upload input#remaster_title {
     width: calc(100% - 45px);}
+#reports .thin>table >tbody >tr >td:nth-child(2),
 #upload #weblinks input[type="text"],
 #upload #reviews_table input#gamespotscoreuri,
 #upload #reviews_table input#ignuri,
@@ -4550,6 +4552,10 @@ h2 marquee {
 	border-top: var(--p-border);
     border-top-color: var(--c-table-brdr);
     background-color: var(--c-tgroup)!important;}
+
+#reports .thin>table >tbody >.colhead +tr:last-child >td:first-child {
+    text-align: center;
+    background-color: var(--c-tgroup);}
 
 .forum_post tr.likes >td:first-child a {
     width: 22px;
@@ -5072,7 +5078,7 @@ input[type="search"],
     line-height: 0;}
 #reportsv2 select#type {
     position: absolute;
-    top: 23px;
+    top: 21px;
     right: 10px;}
 
 #inbox #messageform #quickpost .comp h3 {
