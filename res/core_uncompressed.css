@@ -5648,6 +5648,7 @@ input[class="date_picker"] {
     border-color: var(--c-main-brdr);
     color: var(--c-txt);
 	font-family: OpenSans, Helvetica, Arial, sans-serif;}
+.fancybox-error,
 .xdsoft_datetimepicker .xdsoft_label {
     background-color: var(--c-box);}
 .xdsoft_datetimepicker .xdsoft_next:hover:active,
