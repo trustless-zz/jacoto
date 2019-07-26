@@ -284,6 +284,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     border: var(--p-img-border);
     border-color: var(--c-main-brdr);}
 #quick-crafter #crafting-submenu >p:first-child {
+    font-weight: 600;
     margin-top: 0;}
 #quick-crafter #crafting-submenu >p:first-child +p {
     margin-bottom: 8px;}
