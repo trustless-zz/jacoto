@@ -258,6 +258,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     text-align: right !important;}
 
 #quick-crafter button {
+    color: var(--c-txt) !important;
     margin-top: 5px !important;}
 #quick-crafter br +button {
     margin-top: 8px !important;}
@@ -298,3 +299,112 @@ Universal torrent gallery
 https://gist.github.com/po5/c27eeed4412c64d7befb37feb868511e/raw/universal-torrent-gallery.user.js
 https://gazellegames.net/forums.php?action=viewthread&threadid=16978&postid=1021780#post1021780
 ***/
+#userscript-gallery-toggle,
+#userscript-gallery-container {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: var(--c-box);
+    border: var(--p-border);
+    margin: 0;
+    border-color: var(--c-main-brdr);
+    position: relative;}
+
+/* shadows/borders on pseudo-elements because there's no container
+the whole thing is a mess as a result actually */
+#userscript-gallery-toggle:before,
+#userscript-gallery-container:before {
+    z-index: -2;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    position: absolute;
+    content: '';}
+#userscript-gallery-toggle:before {
+    top: 0;
+    height: calc(100% + 1px);}
+#userscript-gallery-container:before {
+    bottom: 0;
+    height: calc(100% - 1px);}
+#userscript-gallery-toggle:after {
+    z-index: -1;
+    width: calc(100% + 2px);
+    height: 0;
+    left: -1px;
+    bottom: -1px;
+    border-bottom: var(--p-border);
+    border-bottom-color: var(--c-main-brdr);
+    position: absolute;
+    content: '';}
+#userscript-gallery-container {
+    margin-bottom: 15px;
+    border-top: none;
+    padding: 10px 0 0 10px;
+    display: flex;
+    flex-flow: row wrap;}
+#userscript-gallery-toggle {
+    border-bottom: none;
+    background: var(--p-head-grdnt);
+    text-align: left;
+    width: 100%;
+    background: var(--p-head-grdnt);
+    font-size: var(--p-head) !important;
+    line-height: var(--p-head);
+    padding: 0;}
+
+.userscript-gallery-group {
+    align-self: center;
+    width: -moz-fit-content;
+    height: fit-content;
+    margin: 0 10px 10px 0;
+    width: calc(100% / 6 - 10px);}
+
+#userscript-gallery-toggle strong {
+    font-weight: 600;
+    position: relative;
+    width: 100%;
+    display: block;
+    height: 100%;
+    margin: 0;
+    padding: 9px 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 1;}
+
+#userscript-gallery-toggle strong:before {
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+    z-index: -1;
+    content: '';
+    background: var(--p-expand-hvr);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;}
+#userscript-gallery-toggle:hover strong:before {
+    opacity: 1;}
+#userscript-gallery-toggle:hover:active strong:before {
+    background: var(--p-expand-act);
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;}
+
+#userscript-gallery-toggle a {
+    cursor: default;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    font-size: 0;}
+
+#userscript-gallery-container.userscript-gallery-hidden +div,
+#userscript-gallery-container.userscript-gallery-hidden +table {
+    margin-top: 15px;}
+
+/*wip*/

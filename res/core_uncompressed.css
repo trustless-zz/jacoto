@@ -5483,15 +5483,17 @@ input[type="search"],
     position: relative;}
 
 
-#crafting_panel #items #items-wrapper.custom-state-active:before,
+/* #crafting_panel #items #items-wrapper.custom-state-active:before,
 #equipment #items #items-wrapper.custom-state-active:before,
 #trading_panel .items-wrapper.custom-state-active:before,
-#backpack #items-wrapper.custom-state-active:before,/**/
+#backpack #items-wrapper.custom-state-active:before,
 #crafting_panel #items #items-wrapper.custom-state-active:after,
 #equipment #items #items-wrapper.custom-state-active:after,
 #trading_panel .items-wrapper.custom-state-active:after,
-#backpack #items-wrapper.custom-state-active:after/**/ {
-    opacity: 0;}
+#backpack #items-wrapper.custom-state-active:after {
+    opacity: 0;} */
+.item.ui-draggable-dragging {
+    z-index: 99;}
 
 #backpack #slots_panel ul:before,
 #backpack #slots_panel ul:after,
@@ -8974,7 +8976,7 @@ table.adventure_table h3 {
 	text-align: center;
 	overflow: hidden;}
 #backpack #items {
-    width: 397px;}
+    width: 399px;}
 
 /* Size of items selector */
 
