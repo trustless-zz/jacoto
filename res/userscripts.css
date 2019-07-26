@@ -310,22 +310,22 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=16978&postid=1021
     position: relative;}
 
 /* shadows/borders on pseudo-elements because there's no container
-the whole thing is a mess as a result actually */
+the whole thing is a mess as a result really */
 #userscript-gallery-toggle:before,
 #userscript-gallery-container:before {
     z-index: -2;
-    width: 100%;
-    left: 0;
+    width: calc(100% + 2px);
+    left: -1px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     position: absolute;
     content: '';}
 #userscript-gallery-toggle:before {
-    top: 0;
-    height: calc(100% + 1px);}
+    top: -1px;
+    height: calc(100% + 2px);}
 #userscript-gallery-container:before {
-    bottom: 0;
-    height: calc(100% - 1px);}
+    bottom: -1px;
+    height: 100%;}
 #userscript-gallery-toggle:after {
     z-index: -1;
     width: calc(100% + 2px);
@@ -405,6 +405,6 @@ the whole thing is a mess as a result actually */
 
 #userscript-gallery-container.userscript-gallery-hidden +div,
 #userscript-gallery-container.userscript-gallery-hidden +table {
-    margin-top: 15px;}
+    margin-top: 16px;}
 
 /*wip*/
