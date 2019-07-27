@@ -7431,6 +7431,10 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	visibility: visible;
 	height: auto; }
 
+/* hiding image in :hover description (Rick's Portal Gun - example) */
+li.item_li #clickable .item_description img {
+    display: none !important;}
+
 /***Out of Stock Items ()**/
 #shop li.item_li.nostock #clickable .item_description {
     visibility: visible;
@@ -7440,18 +7444,18 @@ table#downloaded_table td.center.cats_col +td >span:before {
     padding: 0;
     background-color: var(--c-box);
     color: transparent;
-    height: 38px;
-    bottom: 50%;
+    height: 34px;
+    bottom: 28px;
     top: unset;}
 #shop li.item_li.nostock #clickable .item_description:before {
     opacity: .7;
     content: 'OUT OF STOCK';
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 18px;
     font-weight: 600;
     color: var(--c-box);
     background-color: var(--c-red);
-    padding: 9px 0;
+    padding: 8px 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -7469,14 +7473,14 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #shop li.item_li.no_access #clickable .item_description:after {
     opacity: 0;
     content: 'requirements not met';
-    font-size: 17px;
-    line-height: 17px;
+    font-size: 16px;
+    line-height: 16px;
     font-weight: 600;
     color: var(--c-low);
     background-color: var(--c-edition);
     padding: 8px 0;
     position: absolute;
-    bottom: -33px;
+    bottom: -32px;
     left: 0;
     width: 100%;
     text-align: center;}
@@ -9293,7 +9297,8 @@ table.adventure_table h3 {
 	border-color: var(--c-sticky-id-brdr);}
 
 #equipment #avatar_preview {
-	margin-top: 15px;}
+    text-align: center;
+	margin-top: 10px;}
 
 /*** Position item slots ***/
 #equipment .itemslot#slot_1 {margin: 68px 0 0 200px;}
