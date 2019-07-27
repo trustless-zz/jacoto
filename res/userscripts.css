@@ -533,8 +533,8 @@ really the whole thing is a mess as a result */
 #wrapper .userscript-gallery-title a:hover {
     color: var(--c-anchor-hvr);}
 
-#userscript-gallery-container.userscript-gallery-hidden +div,
-#userscript-gallery-container.userscript-gallery-hidden +table {
+#wrapper #userscript-gallery-container.userscript-gallery-hidden +div,
+#wrapper #userscript-gallery-container.userscript-gallery-hidden +table {
     margin-top: 16px;}
 
 @media (min-width: 1295px) {
