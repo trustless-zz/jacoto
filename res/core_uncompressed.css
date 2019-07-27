@@ -34,7 +34,7 @@
     --p-sticky-colhead-bcg:             var(--c-input-brdr) linear-gradient(155deg,var(--c-input-brdr),var(--c-sticky-2));
     --p-colhead-tr-bcg-hvr:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-box));
     --p-colhead-tr-bcg-act:				var(--c-box) linear-gradient(to top,var(--c-b3),var(--c-b4));
-    --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition));
+    /* --p-forum-colhead:					linear-gradient(to top,var(--c-table-brdr),var(--c-edition)); */
     --p-menu:                           var(--c-tor-rowb) linear-gradient(155deg,var(--c-tor-rowb),var(--c-tor-row-hvr));
     --p-userinfo:                       var(--c-tor-row-hvr) linear-gradient(155deg,var(--c-tor-row-hvr),var(--c-input-obj));
     --p-extra-menu:                     var(--c-input-obj) linear-gradient(155deg,var(--c-input-obj),var(--c-box));    
@@ -1688,6 +1688,7 @@ strong.important_text,
     border: var(--p-img-border);
     border-color: var(--c-main-brdr);}
 
+#wrapper .userscript-gallery-image,
 #artist .sidebar img,
 #collections #coverart.box img,
 #dailygazelle img,

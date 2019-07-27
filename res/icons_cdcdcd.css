@@ -12,6 +12,7 @@
 .fancybox-image,
 .lightbox img {
     background-image: url('icons/cdcdcd/transparent.svg');}
+#wrapper .userscript-gallery-image,
 #artist .sidebar img,
 .sidebar .box.box_albumart img,
 .similar img,

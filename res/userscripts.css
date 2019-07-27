@@ -355,11 +355,44 @@ really the whole thing is a mess as a result */
     padding: 0;}
 
 #wrapper .userscript-gallery-group {
-    align-self: center;
+    align-self: start;
     width: -moz-fit-content;
     height: fit-content;
     margin: 0 10px 10px 0;
-    width: calc(100% / 6 - 10px);}
+    padding-bottom: 16px;
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-top: var(--p-img-border);
+    border-bottom: var(--p-img-border);
+    border-top-color: var(--c-table-brdr);
+    border-bottom-color: var(--c-table-brdr);}
+#wrapper .userscript-gallery-title,
+#wrapper .userscript-gallery-details {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-left: var(--p-img-border);
+    border-right: var(--p-img-border);
+    border-left-color: var(--c-table-brdr);
+    border-right-color: var(--c-table-brdr);}
+
+#wrapper a.userscript-gallery-link {
+    border: var(--p-img-border);
+    border-color: var(--c-b4);
+    background-color: transparent;}
+#wrapper a.userscript-gallery-link:hover {
+    border-color: var(--c-b1);}
+
+#wrapper .userscript-gallery-group:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;}
+
+#wrapper a.userscript-gallery-link,
+#wrapper .userscript-gallery-group {
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;}
 
 #userscript-gallery-toggle strong {
     font-weight: 600;
@@ -405,8 +438,121 @@ really the whole thing is a mess as a result */
     z-index: 2;
     font-size: 0;}
 
+#wrapper .userscript-gallery-image {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100%;
+    max-height: 100%;}
+
+#wrapper .userscript-gallery-details {
+    background-color: var(--c-tor-row-hvr);
+    background-image: unset;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    font-size: 12px;
+    line-height: 16px;
+    max-height: 16px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transition: max-height .45s ease;
+    -o-transition: max-height .45s ease;
+    transition: max-height .45s ease;}
+#wrapper .userscript-gallery-details:hover {
+    max-height: 1000%;}
+#wrapper .userscript-gallery-title {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    background: var(--c-edition) linear-gradient(155deg,var(--c-edition),var(--c-tgroup));
+    -webkit-box-shadow: none;
+    box-shadow: none;}
+#wrapper .userscript-gallery-image[src="https://ptpimg.me/5975tp.png"] {
+    padding-left: 100%;
+    height: 100%;}
+
+.userscript-gallery-title >a,
+.userscript-gallery-title >span:first-child a {
+    font-size: 14px;
+    line-height: 14px;
+    position: relative;
+    z-index: 2;
+    display: inline-block;
+    padding: 5px;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;}
+
+.userscript-gallery-title >a +span a,
+.userscript-gallery-title #hyphen,
+.userscript-gallery-title #groupname {
+    display: none;}
+
+.userscript-gallery-title >a +span {
+    opacity: .12;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;}
+
+#wrapper .userscript-gallery-title >a +span:before {
+    content: none;}
+
+#wrapper .userscript-gallery-title >span:first-child {
+    width: 100%;
+    height: 100%;
+    display: inline-block;}
+#wrapper .userscript-gallery-title >span:first-child:before {
+    opacity: .12;
+    width: 100%;
+    height: 100%;}
+
+#wrapper .userscript-gallery-title >#color_leeching:first-child:before,
+.userscript-gallery-title >a +#color_leeching {
+	background-color: var(--c-leech);}
+#wrapper .userscript-gallery-title >#color_seeding:first-child:before,
+.userscript-gallery-title >a +#color_seeding {
+	background-color: var(--c-seed);}
+#wrapper .userscript-gallery-title >#color_uploaded:first-child:before,
+.userscript-gallery-title >a +#color_uploaded {
+	background-color: var(--c-upload);}
+#wrapper .userscript-gallery-title >#color_snatched:first-child:before,
+.userscript-gallery-title >a +#color_snatched {
+	background-color: var(--c-snatch);}
+#wrapper .userscript-gallery-title >#color_downloaded:first-child:before,
+.userscript-gallery-title >a +#color_downloaded {
+	background-color: var(--c-download);}
+
+#wrapper .userscript-gallery-title a {
+    color: var(--c-anchor);}
+#wrapper .userscript-gallery-title a:hover {
+    color: var(--c-anchor-hvr);}
+
 #userscript-gallery-container.userscript-gallery-hidden +div,
 #userscript-gallery-container.userscript-gallery-hidden +table {
     margin-top: 16px;}
 
-/*wip*/
+@media (min-width: 1295px) {
+    #wrapper .userscript-gallery-group {
+        width: calc(100% / 6 - 10px);}
+}
+@media (max-width: 1294px) {
+    #wrapper .userscript-gallery-group {
+        width: calc(100% / 5 - 10px);}
+}
+@media (max-width: 1097px) {
+    #wrapper .userscript-gallery-group {
+        width: calc(100% / 4 - 10px);}
+}
+@media (max-width: 901px) {
+    #wrapper .userscript-gallery-group {
+        width: calc(100% / 3 - 10px);}
+}
+/***
+/Universal torrent gallery
+***/
