@@ -364,16 +364,16 @@ really the whole thing is a mess as a result */
     box-shadow: var(--p-header-shdw);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-top: var(--p-img-border);
-    border-bottom: var(--p-img-border);
+    border-top: var(--p-border);
+    border-bottom: var(--p-border);
     border-top-color: var(--c-table-brdr);
     border-bottom-color: var(--c-table-brdr);}
 #wrapper .userscript-gallery-title,
 #wrapper .userscript-gallery-details {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-left: var(--p-img-border);
-    border-right: var(--p-img-border);
+    border-left: var(--p-border);
+    border-right: var(--p-border);
     border-left-color: var(--c-table-brdr);
     border-right-color: var(--c-table-brdr);}
 
