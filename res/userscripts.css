@@ -490,6 +490,7 @@ really the whole thing is a mess as a result */
     text-overflow: ellipsis;
     background-image: unset;}
 
+.torrent_notifications #userscript-gallery-container #groupplatform +a,
 .userscript-gallery-title >a +span a,
 .userscript-gallery-title #hyphen,
 .userscript-gallery-title #groupname {
