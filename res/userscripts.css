@@ -337,6 +337,7 @@ really the whole thing is a mess as a result */
     position: absolute;
     content: '';}
 #wrapper #userscript-gallery-container {
+    gap: 0;
     margin-bottom: 15px;
     border-top: none;
     padding: 10px 0 0 10px;
@@ -356,7 +357,7 @@ really the whole thing is a mess as a result */
 
 #wrapper .userscript-gallery-group {
     align-self: start;
-    width: -moz-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     margin: 0 10px 10px 0;
     padding-bottom: 16px;
@@ -473,7 +474,8 @@ really the whole thing is a mess as a result */
     height: 100%;}
 
 .userscript-gallery-title >a,
-.userscript-gallery-title >span:first-child a {
+.userscript-gallery-title >span:first-child a,
+.torrent_notifications #userscript-gallery-container #groupplatform a {
     font-size: 14px;
     line-height: 14px;
     position: relative;
@@ -485,7 +487,8 @@ really the whole thing is a mess as a result */
     box-sizing: border-box;
     height: 100%;
     overflow: hidden;
-    text-overflow: ellipsis;}
+    text-overflow: ellipsis;
+    background-image: unset;}
 
 .userscript-gallery-title >a +span a,
 .userscript-gallery-title #hyphen,
@@ -511,6 +514,11 @@ really the whole thing is a mess as a result */
     opacity: .12;
     width: 100%;
     height: 100%;}
+
+.torrent_notifications #userscript-gallery-container #groupplatform {
+    top: 0;
+    left: 0;
+    position: inherit;}
 
 #wrapper .userscript-gallery-title >#color_leeching:first-child:before,
 .userscript-gallery-title >a +#color_leeching {
