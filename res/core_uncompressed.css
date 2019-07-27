@@ -4923,6 +4923,8 @@ input[type="search"],
     image-rendering: -webkit-optimize-contrast;
     image-rendering: pixelated;
     -ms-interpolation-mode: nearest-neighbor;}
+.sidebar img.pixelart {
+    width: 278px;}
 
 #inbox #searchbox label,
 #inbox #searchbox input {
