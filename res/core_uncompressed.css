@@ -7445,10 +7445,11 @@ li.item_li #clickable .item_description img {
     font-size: 0;
     line-height: 0;
     padding: 0;
-    background-color: var(--c-box);
+    /* background-color: var(--c-box); */
+    background-color: transparent;
     color: transparent;
     height: 34px;
-    bottom: 28px;
+    bottom: calc(50% - 17px); /* 28px */
     top: unset;}
 #shop li.item_li.nostock #clickable .item_description:before {
     opacity: .7;
