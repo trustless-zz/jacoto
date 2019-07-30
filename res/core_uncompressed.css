@@ -1189,6 +1189,7 @@ a {
 a:hover,
 #wiki .wiki_article a:hover img,
 .forum_post td.body a:hover img,
+.forum_signature a:hover img,
 #profilediv a:hover img,
 .box.news_post >.pad a:hover img,
 .forum_post .colhead_dark a.username:hover,
@@ -1326,10 +1327,12 @@ a,
 #userinfo_username #nav_userinfo a,
 #userinfo_stats li:not(#stats_ratio):not(#connectable),
 
-#blog .pad img, #profilediv img,
+#blog .pad img,
+#profilediv img,
 #wiki .wiki_article a img,
 .box.news_post>.pad img,
 .forum_post td.body img,
+.forum_signature img,
 blockquote#description img,
 
 table#uploadsrow img,
@@ -4517,7 +4520,7 @@ marquee {
     vertical-align: bottom;
     max-width: 60%;}
 .colhead_dark marquee {
-    height: 19px;
+    max-height: 19px; /* need more testing */
     max-width: 25%;}
 h2 marquee {
     margin-top: -4px;
@@ -4683,9 +4686,17 @@ span.size1 {
 span.size2 {
     font-size: 1em;
     line-height: 1em}
+.forum_post .colhead_dark span.size4,
+.forum_post .colhead_dark span.size5,
+.forum_post .colhead_dark span.size6,
+.forum_post .colhead_dark span.size7,
+.forum_post .colhead_dark span.size8,
+.forum_post .colhead_dark span.size9,
+.forum_post .colhead_dark span.size10,
 span.size3 {
     font-size: 1.25em;
     line-height: 1em}
+.forum_post .colhead_dark marquee span.size4, /* need more testing */
 span.size4 {
     font-size: 1.5em;
     line-height: 1em}

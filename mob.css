@@ -8,8 +8,8 @@
 
 /** COLORS **/
 :root {
-    --c-selection:                      rgb(12, 133, 129, .996); /* Chrome is SPECIAL */
-    --c-selection-i:                    rgb(12, 133, 129, .75);
+    --c-selection:                      rgba(12, 133, 129, .996); /* Chrome is SPECIAL */
+    --c-selection-i:                    rgba(12, 133, 129, .75);
     --c-post-img:                       rgb(200, 200, 200);
     --p-description:                    unset;
     --c-description:                    rgb(245, 245, 245);

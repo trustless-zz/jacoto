@@ -7,8 +7,8 @@
 
 /** COLORS **/
 :root {
-    --c-selection:                      rgba(12, 133, 129, .996); /* Chrome is SPECIAL */
-    --c-selection-i:                    rgba(12, 133, 129, .75);
+    --c-selection:                      rgba(71, 123, 166, .996); /* Chrome is SPECIAL */
+    --c-selection-i:                    rgba(71, 123, 166, .75);
     --c-post-img:                       rgb(200, 200, 200);
     --p-description:                    unset;
     --c-description:                    rgb(245, 245, 245);
@@ -16,9 +16,9 @@
     --c-quote-brdr:                     rgba(10, 10, 10, .1);
     --c-quote:                          rgba(10, 10, 10, .05);
     --c-contrast:                       rgba(0, 0, 0, .2);
-    --c-unread-s:                       rgb(142, 225, 222);
+    --c-unread-s:                       #9ECFF8;
     --c-unread-i:                       rgb(50, 50, 50);
-    --c-unread-br:                      rgb(142, 225, 222);
+    --c-unread-br:                      #9ECFF8;
     --c-txt: 							rgb(50, 50, 50);
     --c-text-s: 						rgb(100, 100, 100);
     --c-curtain:						rgb(110, 110, 110);
@@ -41,22 +41,22 @@
     --c-row-hvr:						rgb(250, 250, 250);
     --c-high:							rgb(255, 255, 255);
     --c-high-t:							rgb(255, 255, 255);
-    --c-b1: 							rgb(18, 201, 194);/*JAva*/
-    --c-b2: 							rgb(81, 204, 165);/*puerTO riCO*/
-    --c-b3: 							rgb(142, 225, 222);
-    --c-b4: 							rgb(170, 226, 209);
-    --c-sb1:                            rgb(183, 233, 231);
-    --c-sb2:                            rgb(200, 234, 223);
-    --c-bg:                             rgb(15, 163, 158);    
+    --c-b1: 							#6CBAFA;/*MALIBU*/
+    --c-b2: 							#87B2FC;/*#90AFFC*/
+    --c-b3: 							#9ECFF8;
+    --c-b4: 							#AFCAF9;
+    --c-sb1:                            #D0E5F6;
+    --c-sb2:                            #D7E3F7;
+    --c-bg:                             #5795C8;    
     --c-hovereffect: 					rgba(255, 255, 255, .8);
     --c-b00: 							rgba(255, 255, 255, 0);
-    --c-anchor: 						rgb(11, 122, 119);
+    --c-anchor: 						#417096;
     --c-anchor-hvr: 					rgb(0, 0, 0);
-    --c-anchor-hvr-bcg: 				rgb(204, 237, 236);
-    --c-anchor-hvr-bcg-obj:             rgb(204, 237, 236);
+    --c-anchor-hvr-bcg: 				#DCEAF6;
+    --c-anchor-hvr-bcg-obj:             #DCEAF6;
 	--c-header-shdw: 					rgba(0,0,0,.1);
     --c-main-shdw:						rgba(0,0,0,.2);
-    --c-img-bcg-anchor: 				rgb(230, 242, 242);
+    --c-img-bcg-anchor: 				#E9F0F5;
     --c-on: 							rgb(29, 145, 0);
     --c-bonus:                          rgba(177, 232, 0, .2);
     --c-donate:                         rgb(203, 60, 60);
@@ -68,8 +68,8 @@
     --c-em-hvr: 						rgb(199, 36, 18);
     --c-em-act: 						rgb(245, 139, 127);
     --c-fl: 							rgb(100, 65, 165);
-    --c-btn-b1: 						rgb(119, 211, 207);
-    --c-btn-b2: 						rgb(151, 212, 193);
+    --c-btn-b1: 						#A9D4F8;
+    --c-btn-b2: 						#B8D0F9;
     --c-red:                            rgb(227, 0, 0);
     --c-blue:                           rgb(33, 33, 217);
     --c-o-gold:                         rgb(255, 215, 0);
@@ -112,34 +112,3 @@ body {
     background-size: 50px 50px !important;}
 #logo a {
     background-image: url('res/icons/323232/logo.svg');}
-
-/* large sidebar */
-@media (min-width: 1387px) {
-#index .main_column {
-    width: calc(100% - 630px);}
-#index .sidebar {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 615px;}
-#index .sidebar #stats,
-#index .sidebar #freeleech {
-    width: 100%;}
-#index .sidebar >div.box {
-    width: 300px;}
-#index .sidebar #stats .stats li {
-    float: left;
-    width: 50%;}
-#index #blogposts      {order: 1}
-#index #dailygazelle   {order: 2}
-#index #slides         {order: 3}
-#index #polcont        {order: 4}
-#index #stats          {order: 5}
-#index .box.news_post>.pad img {
-    max-width: 614px !important;}
-#index .sidebar #freeleech_time_left .points {
-    font-size: var(--p-head);}
-#index .sidebar #freeleech_time_left #progress_bar .main_bar {
-    animation: lsfl-pulse-b linear 2.7s infinite;
-    background-size: 1215px 100%;}
-}
