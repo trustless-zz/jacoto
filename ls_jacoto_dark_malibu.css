@@ -16,9 +16,9 @@
     --c-quote-brdr:                     rgba(240, 240, 240, .1);
     --c-quote:                          rgba(240, 240, 240, .05);
     --c-contrast:                       rgba(255, 255, 255, .2);
-    --c-unread-s:                       #274258;
+    --c-unread-s:                       #253F53;
     --c-unread-i:                       rgb(205, 205, 205);
-    --c-unread-br:                      #274258;
+    --c-unread-br:                      #253F53;
     --c-txt: 							rgb(205, 205, 205);
     --c-text-s: 						rgb(155, 155, 155);
     --c-curtain:						rgb(45, 45, 45);
@@ -43,10 +43,10 @@
     --c-high-t:							rgb(0, 0, 0);
     --c-b1: 							#325775;
     --c-b2: 							#415578;
-    --c-b3: 							#274258;
-    --c-b4: 							#32415A;    
-    --c-sb1:                            #233B4E;
-    --c-sb2:                            #2D3A50;
+    --c-b3: 							#253F53;
+    --c-b4: 							#303E55;    
+    --c-sb1:                            #203444;
+    --c-sb2:                            #283346;
     --c-bg:                             #5280AF;    
     --c-hovereffect: 					rgba(0, 0, 0, .8);
     --c-b00: 							rgba(0, 0, 0, 0);
