@@ -52,11 +52,11 @@
     --c-b00: 							rgba(0, 0, 0, 0);
     --c-anchor: 						#63ABE6;
     --c-anchor-hvr: 					rgb(255, 255, 255);
-    --c-anchor-hvr-bcg: 				#1B2A36;
-    --c-anchor-hvr-bcg-obj:             #1B2A36;
+    --c-anchor-hvr-bcg: 				#1A2834;
+    --c-anchor-hvr-bcg-obj:             #1A2834;
 	--c-header-shdw: 					rgba(0,0,0,.3);
     --c-main-shdw:						rgba(0,0,0,.5);
-    --c-img-bcg-anchor: 				rgb(11,26,25);
+    --c-img-bcg-anchor: 				#121A20;
     --c-on: 							rgb(41, 204, 0);
     --c-bonus:                          rgba(177, 232, 0, .2);
     --c-donate:                         rgb(255, 77, 77);
