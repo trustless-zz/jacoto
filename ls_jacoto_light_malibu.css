@@ -112,3 +112,34 @@ body {
     background-size: 50px 50px !important;}
 #logo a {
     background-image: url('res/icons/323232_malibu/logo.svg');}
+
+/* large sidebar */
+@media (min-width: 1387px) {
+#index .main_column {
+    width: calc(100% - 630px);}
+#index .sidebar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 615px;}
+#index .sidebar #stats,
+#index .sidebar #freeleech {
+    width: 100%;}
+#index .sidebar >div.box {
+    width: 300px;}
+#index .sidebar #stats .stats li {
+    float: left;
+    width: 50%;}
+#index #blogposts      {order: 1}
+#index #dailygazelle   {order: 2}
+#index #slides         {order: 3}
+#index #polcont        {order: 4}
+#index #stats          {order: 5}
+#index .box.news_post>.pad img {
+    max-width: 614px !important;}
+#index .sidebar #freeleech_time_left .points {
+    font-size: var(--p-head);}
+#index .sidebar #freeleech_time_left #progress_bar .main_bar {
+    animation: lsfl-pulse-b linear 2.7s infinite;
+    background-size: 1215px 100%;}
+}
