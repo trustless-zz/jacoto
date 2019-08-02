@@ -272,7 +272,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     margin-top: 8px;}
 
 #quick-crafter #clear_button {
-    color: var(--c-red);}
+    color: var(--c-red) !important;}
 
 #quick-crafter #current_craft_box:empty {
     display: none;}
@@ -304,9 +304,11 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=16978&postid=1021
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: var(--c-box);
-    border: var(--p-border);
     margin: 0;
+    border: var(--p-border);
     border-color: var(--c-main-brdr);
+    -webkit-box-shadow: none;
+    box-shadow: none;
     position: relative;}
 
 /* shadows/borders on pseudo-elements because there's no container,

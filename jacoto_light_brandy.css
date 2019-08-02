@@ -42,11 +42,11 @@
     --c-high:							rgb(255, 255, 255);
     --c-high-t:							rgb(255, 255, 255);
     --c-b1: 							#F29461;/*saNDY BRown*/
-    --c-b2: 							#F2937C;/*Apricot*/
+    --c-b2: 							#F5977A;/*Apricot*/
     --c-b3: 							#F4C9B2;
-    --c-b4: 							#F4C8BE;
+    --c-b4: 							#F5CABD;
     --c-sb1:                            #F4DBCD;
-    --c-sb2:                            #F4DAD4;
+    --c-sb2:                            #F5DBD3;
     --c-bg:                             #C1764D;    
     --c-hovereffect: 					rgba(255, 255, 255, .8);
     --c-b00: 							rgba(255, 255, 255, 0);
@@ -69,7 +69,7 @@
     --c-em-act: 						#F07360;
     --c-fl: 							rgb(100, 65, 165);
     --c-btn-b1: 						#F3BFA3;
-    --c-btn-b2: 						#F3BFB2;
+    --c-btn-b2: 						#F5C1B1;
     --c-red:                            rgb(227, 0, 0);
     --c-blue:                           rgb(33, 33, 217);
     --c-o-gold:                         rgb(255, 215, 0);

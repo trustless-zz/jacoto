@@ -4434,7 +4434,7 @@ div.breadcrumbs,
 
 .avatar .forumstat {
     opacity: 0;
-    width: 194px;
+    width: max-content;
     position: absolute;
     background-color: var(--c-input-obj);
 	border: var(--p-border);
