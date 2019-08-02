@@ -1122,7 +1122,10 @@ table.gazelles_art_display,
 div#fight_skill_points_assign >table,
 #collections .thin >#reply_box,
 #user .box.pad >#buffs_table,
-#user .box.pad >#effects_table {
+#user .box.pad >#effects_table,
+#wiki .thin >.center >form:first-child,
+#wiki .thin >table,
+#wiki .thin >.box.pad.center {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -1159,7 +1162,8 @@ div#fight_skill_points_assign >table,
 #searchthread form,
 #searchforum form,
 #shop_search,
-#user .thin >h3:first-child +.linkbox +form {
+#user .thin >h3:first-child +.linkbox +form,
+#wiki .thin >.center >form:first-child {
     padding: 10px;}
 .sidebar .body {
     padding: 10px 0 0 0;}
@@ -1303,6 +1307,7 @@ a,
 #seeding_not_snatched_table tr:not(.colhead),
 #downloaded_table           tr:not(.colhead),
 #extlink_table              tr:not(.colhead),
+#wiki .thin >table tr:not(.colhead),
 #torrents .torrent_notifications table.border tr:not(.colhead),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead),
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td,
@@ -2593,6 +2598,8 @@ textarea,
 
 #wrapper #grouplinks,
 
+#wiki .thin >.box.pad.center,
+
 #backpack .itemslot .item,
 #wrapper #trading_panel .message_section,
 #crafting_recipes #items_list,
@@ -3093,6 +3100,7 @@ body:not(#upload) #artist_tr + tr td.label,
 .linkbox .selected a {
     color: var(--c-txt) !important;
     pointer-events: none;}
+#wiki .thin >.center >form:first-child .label strong,
 #user h2 +form#userform td.label strong,
 #forums .forum_index strong,
 #upload #content >div >table[style] .colhead strong,
@@ -3161,6 +3169,9 @@ body:not(#upload) #artist_tr + tr td.label,
     min-width: 36px;}
 .torrent_details .torrent_table >tbody >.colhead_dark td.sign {
     min-width: 18px;}
+
+#wiki .thin >.center >form:first-child .label {
+    width: 71px;}
 
 .screenshots {
     display: flex;
@@ -3815,6 +3826,7 @@ h3 {
 #seeding_not_snatched_table tr:not(.colhead):nth-child(odd),
 #downloaded_table           tr:not(.colhead):nth-child(odd),
 #extlink_table              tr:not(.colhead):nth-child(odd),
+#wiki .thin >table tr:not(.colhead):nth-child(odd),
 #torrents .torrent_notifications table.border tr:not(.colhead):nth-child(odd),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(odd),
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(odd) td:nth-child(-n+2),
@@ -3839,6 +3851,7 @@ h3 {
 #seeding_not_snatched_table tr:not(.colhead):nth-child(even),
 #downloaded_table           tr:not(.colhead):nth-child(even),
 #extlink_table              tr:not(.colhead):nth-child(even),
+#wiki .thin >table tr:not(.colhead):nth-child(even),
 #torrents .torrent_notifications table.border tr:not(.colhead):nth-child(even),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(even),
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(even) td:nth-child(-n+2),
@@ -3864,6 +3877,7 @@ h3 {
 #seeding_not_snatched_table tr:not(.colhead):hover,
 #downloaded_table           tr:not(.colhead):hover,
 #extlink_table              tr:not(.colhead):hover,
+#wiki .thin >table tr:not(.colhead):hover,
 #torrents .torrent_notifications table.border tr:not(.colhead):hover,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):hover,
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child):hover td {
@@ -4081,6 +4095,7 @@ h3 {
     padding-top: 13px;}
 
 /** convert ... to head **/
+#wiki .thin >.box.pad.center >p:first-child,
 #allreviews >h1,
 #collections .thin >#reply_box >h3,
 #user .thin >.header:first-child ~h3,
@@ -4277,7 +4292,8 @@ input[name="toyear"],
 #torrents .thin >h2:first-child +.center input[type="text"],
 #collections table#new_collage input#name,
 #torrents #content>script:first-child+h2+form #freerow input[type=text],
-#top10 .thin >.center input[type="text"] {
+#top10 .thin >.center input[type="text"],
+#wiki .thin >.center >form input[type="text"] {
     width: 100%;}
 #upload #weblinks tr:nth-child(1) td:nth-child(3),
 #upload #reviews_table td:first-child {
@@ -4598,6 +4614,10 @@ h2 marquee {
 #user input#park_message,
 #forums #reply_box #quickpost {
     width: 100% !important;}
+
+#wiki .center.thin >.box.pad form h3 {
+    margin: 10px 0 8px 5px;
+    font-weight: 600;}
 
 tr.likes td[id^="likers_"] >strong {
     background-position: center left;
@@ -4977,7 +4997,8 @@ input[type="search"],
 #user .thin >.header:first-child +.box.pad +.box.pad:before,
 #user .invitetree.pad:before,
 #torrents #content>script:first-child+h2+form:before,
-#forums #newthreadpreview +.box.pad:before {
+#forums #newthreadpreview +.box.pad:before,
+#wiki .thin >.center >form:first-child:before {
     display: block;
     text-align: left;
     width: 100%;
