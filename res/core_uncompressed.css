@@ -2629,6 +2629,7 @@ td img[alt="Ratio"],
     padding-left: 20px;}
 #wrapper .sidebar .userratingdiv img {
     /* border-radius: 50%; */
+    cursor: pointer;
     background-repeat: no-repeat !important;
     background-position: center !important;
     background-size: 50px 50px !important;
