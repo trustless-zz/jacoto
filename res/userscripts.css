@@ -585,3 +585,76 @@ http://www.mediafire.com/?97dqca3w9ekaweo
 /***
 /GGn Buffer Calculator
 ***/
+
+
+/***
+Steam uploady
+https://gazellegames.net/forums.php?action=viewthread&threadid=10942#steam
+https://git.alice.gensokyo.eu/FlatBartender/ggn_scripts/raw/master/GGn%20New%20Uploady.user.js
+***/
+a#fill_win,
+a#fill_lin,
+a#fill_mac {
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
+    margin: 0 2px;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 14px;
+    font-family: OpenSans,Helvetica,Arial,sans-serif!important;
+    font-weight: 400;
+    cursor: pointer;
+    outline: 0;
+    padding: 5px 10px;
+    color: var(--c-txt);
+    text-shadow: 1px 1px 1px var(--c-body);
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
+    background: var(--p-btn);
+    background-size: 200% auto!important;
+    display: inline-block;}
+
+a#fill_win:hover,
+a#fill_lin:hover,
+a#fill_mac:hover {
+    color: var(--c-low);
+    background: var(--p-btn-hvr);
+    -webkit-box-shadow: none;
+    box-shadow: none;}
+a#fill_win:hover:active,
+a#fill_lin:hover:active,
+a#fill_mac:hover:active {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    background: var(--p-btn-act);}
+
+a#fill_win ~a[href="forums.php?action=viewthread&threadid=10942#steam"],
+a#fill_lin ~a[href="forums.php?action=viewthread&threadid=10942#steam"],
+a#fill_mac ~a[href="forums.php?action=viewthread&threadid=10942#steam"] {
+    text-decoration: line-through;}
+/***
+/Steam uploady
+***/
+
+
+/***
+Group description helper
+https://gazellegames.net/forums.php?action=viewthread&threadid=10942&postid=394206#post394206
+https://git.alice.gensokyo.eu/FlatBartender/ggn_scripts/src/master/GGn%20site%20links.user.js
+***/
+#reviews_table >tbody +tr td {
+    width: 100%;
+    display: flex;}
+input#search_weblinks,
+input#validate_weblinks {
+    margin-right: 5px;}
+input#gameswebsiteuri ~input#search_weblinks,
+input#gameswebsiteuri input#validate_weblinks {
+    margin-top: 5px;}
+/***
+/Group description helper
+***/
