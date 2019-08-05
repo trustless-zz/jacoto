@@ -1845,22 +1845,23 @@ body {
     order: -2;}
 #nav_useredit {
     order: -1;}
+    
 #stats_ratio {
-    order: 1;}
+    order: -9;}
 #stats_seeding {
-    order: 2;}
+    order: 1;}
 #stats_leeching {
-    order: 3;}
+    order: 2;}
 #stats_hnr {
-    order: 4;}
+    order: 3;}
 #stats_share_score {
-    order: 5;}
+    order: 4;}
 #stats_gold {
-    order: 6;}
+    order: 5;}
 #online_irc {
-    order: 7;}
+    order: 6;}
 #connectable {
-    order: 8;}
+    order: 7;}
 
 #userinfo_stats li:not(#stats_ratio) {
     background-color: var(--c-input-obj);}
@@ -2280,7 +2281,7 @@ body {
         width: 149px;} */
 
 /* backpack */
-@media (max-width: 1300px) {
+@media (max-width: 1302px) {
     #wrapper #backpack  #items {
         width: 275px;}
 }

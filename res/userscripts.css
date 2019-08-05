@@ -567,3 +567,21 @@ really the whole thing is a mess as a result */
 /***
 /Universal torrent gallery
 ***/
+
+
+/***
+GGn Buffer Calculator
+https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=5823#post5823
+http://www.mediafire.com/?97dqca3w9ekaweo
+***/
+@media (min-width: /*80*/1px) {
+    #userinfo_stats li.my_buffer {
+        order: -1;
+        background-color: var(--c-input-obj) !important;}
+    #userinfo_stats li.my_buffer >span {
+        color: var(--c-txt) !important;
+        margin: 0 !important;}
+}
+/***
+/GGn Buffer Calculator
+***/
