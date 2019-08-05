@@ -2725,6 +2725,7 @@ td img[alt="Ratio"],
 #reportsv2 h2,
 form[name="filter"] {
     text-align: left;}
+#upload #weblinks td,
 #forums td.label,
 td.label {
     text-align: right;}
@@ -4050,8 +4051,11 @@ h3 {
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:first-child,
 #reportsv2 #dynamic_form >table.border td:first-child,
 #upload #dynamic_form + table.border.slice td:first-child,
-#upload #releaseinfo tr:not(.colhead) td:first-child,
-#upload #groupinfo tr:not(.colhead) td:first-child,
+
+/* #upload #releaseinfo tr:not(.colhead) td:first-child,
+#upload #groupinfo tr:not(.colhead) td:first-child, */
+#upload #dynamic_form tr:not(.colhead) td:first-child,
+
 #upload #torrent_properties tr:not(.colhead) td:first-child,
 .thin >#request_form >table td:first-child,
 #requests .main_column >table:first-child td:first-child {
@@ -4062,8 +4066,11 @@ h3 {
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:last-child,
 #reportsv2 #dynamic_form >table.border td:last-child,
 #upload #dynamic_form + table.border.slice td:last-child,
-#upload #releaseinfo tr:not(.colhead) td:last-child,
-#upload #groupinfo tr:not(.colhead) td:last-child,
+
+/* #upload #releaseinfo tr:not(.colhead) td:last-child,
+#upload #groupinfo tr:not(.colhead) td:last-child, */
+#upload #dynamic_form tr:not(.colhead) td:last-child,
+
 #upload #torrent_properties tr:not(.colhead) td:last-child,
 .thin >#request_form >table td:last-child,
 #requests .main_column >table:first-child td:last-child {
@@ -4072,9 +4079,13 @@ h3 {
 #user .thin >h2 +form#userform >table.border .colhead_dark +tr td,
 #reportsv2 #dynamic_form >table.border tr:first-child td,
 #upload #dynamic_form + table.border.slice tr:first-child td,
-#upload #releaseinfo tr:nth-child(2) td,
+
+/* #upload #releaseinfo tr:nth-child(2) td,
 #upload #groupinfo tr:nth-child(2) td,
-#upload #groupinfo .colhead +tr td,
+#upload #groupinfo .colhead +tr td, */
+#upload #dynamic_form tr:nth-child(2) td,
+#upload #dynamic_form .colhead +tr td,
+
 #upload #torrent_properties tr:nth-child(2) td,
 .thin >#request_form >table tr:nth-child(2) td {
     padding-top: 10px;}
@@ -4083,8 +4094,11 @@ h3 {
 #forums .forums_search .search_form >table.layout.border >tbody >tr:last-child >td,
 #user .thin >h2 +form#userform >table.border tr:last-child td,
 #upload #dynamic_form + table.border.slice tr:last-child td,
-#upload #releaseinfo tr:last-child td,
-#upload #groupinfo tr:last-child td,
+
+/* #upload #releaseinfo tr:last-child td,
+#upload #groupinfo tr:last-child td, */
+#upload #dynamic_form tr:last-child td,
+
 #upload #torrent_properties tr:last-child td,
 .thin >#request_form >table tr:last-child td,
 #requests .main_column >table:first-child tr:last-child td {
@@ -4092,9 +4106,13 @@ h3 {
 #user .thin >h2 +form#userform >table.border .colhead_dark +tr td.label,
 #reportsv2 #dynamic_form >table.border tr:last-child td,
 #upload #dynamic_form + table.border.slice tr:first-child td.label,
-#upload #releaseinfo tr:nth-child(2) td.label,
+
+/* #upload #releaseinfo tr:nth-child(2) td.label,
 #upload #groupinfo tr:nth-child(2) td.label,
-#upload #groupinfo .colhead +tr td.label,
+#upload #groupinfo .colhead +tr td.label, */
+#upload #dynamic_form tr:nth-child(2) td.label,
+#upload #dynamic_form .colhead +tr td.label,
+
 #upload #torrent_properties tr:nth-child(2) td.label,
 .thin >#request_form >table tr:nth-child(2) td.label {
     padding-top: 13px;}
@@ -4252,8 +4270,10 @@ input[name="year"] {
     margin-right: 5px;}
 #upload input#tags,
 .thin >#request_form input#tags {
-    width: calc(100% - 175px);
-    margin-left: 5px;}
+    width: calc(100% - 175px);}
+.thin >#request_form select#genre_tags,
+#upload select#genre_tags {
+    margin-right: 5px;}
 
 #upload #content >div[style="margin:0px auto;width:700px"] {
     width: 100% !important;
@@ -4402,6 +4422,8 @@ tr.likes td,
 .forum_post tr,
 #top10 .thin >div >table.border td[style="text-align:right"] {
 	text-align: left !important;}
+#upload #weblinks td[colspan="2"],
+#upload #weblinks td[colspan="4"],
 #forums td,
 #torrents #content>script:first-child+h2+form .colhead td {
 	text-align: center;}
@@ -8852,6 +8874,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     font-weight: 600;}
 #adventureclub table#attacks_search input#search_query {
     width: calc(100% - 460px);}
+#user #wrapper form tr#badges_tr +tr td.label,
 #adventureclub tbody#advanced_search tr:first-child td {
     padding-top: 10px;}
 #adventureclub tbody#advanced_search tr:first-child td.label {

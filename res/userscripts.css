@@ -658,3 +658,25 @@ input#gameswebsiteuri input#validate_weblinks {
 /***
 /Group description helper
 ***/
+
+
+/***
+New PTPIMG It
+https://gazellegames.net/forums.php?action=viewthread&threadid=10942&postid=394206#post394206
+https://git.alice.gensokyo.eu/FlatBartender/ggn_scripts/src/master/GGn%20PTPImg%20It.user.js
+***/
+input#ptpimg_save,
+#image_block input#ptpimg_it_screenshots {
+    margin: 0 0 8px 0 !important;}
+input#ptpimg_it_cover ~input[value="PTPImg It"],
+#image_block input#ptpimg_it_screenshots ~span input[type="button"] {
+    display: none;}
+#image_block input#ptpimg_it_screenshots ~span input[type=text] {
+    width: calc(100% - 75px)!important;}
+input#ptpimg_api_key {
+    width: 100%;}
+#wrapper #image_block input#ptpimg_it_screenshots +br +span input[type="text"] {
+    margin: 0;}
+/***
+/New PTPIMG It
+***/
