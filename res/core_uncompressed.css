@@ -2390,7 +2390,8 @@ table.adventure_table .colhead td {
 #torrents .torrent_details .torrent_table .pad.hidden td,
 #torrents .group_torrent td:first-child,
 #artist #torrent_table .group_torrent td[colspan="2"],
-#torrents .torrent_details tr table tr:not(.colhead_dark):not(.colhead) td {
+#torrents .torrent_details tr table tr:not(.colhead_dark):not(.colhead) td,
+#torrent_table tr.group td.center +td a /*artist*/{
     white-space: normal;}
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
 #artist #torrent_table .group_torrent td[colspan="2"] >a,
@@ -4476,6 +4477,7 @@ div.breadcrumbs,
     padding-top: 6px;
     padding-bottom: 6px;}
 
+#shop .colhead:only-child, /* for empty existing_freeleech_pots etc. */
 #gazelleview #torrent_comments >h1:first-child,
 .avatar .forumstat >strong:first-child,
 .avatar .forumstat >br:first-of-type {
