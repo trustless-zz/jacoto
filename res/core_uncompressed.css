@@ -7,6 +7,7 @@
     --p-main-shdw:						0 0 4px var(--c-main-shdw);
     --p-border:                         1px solid;
     --p-img-border:                     3px solid;
+    --p-graph-sh:                       0 1px 2px var(--c-header-shdw);
     
     /** --p-top-brdr:                       1px solid var(--c-edition); */
     /** --p-main-brdr:						1px solid var(--c-main-brdr); */
@@ -1321,8 +1322,8 @@ table#uploadsrow a {
 
 #torrents .torrent_details .torrent_table div[id^=history_] table.border tr:last-child:not(.colhead) td {
     background-color: unset!important;}
-#threadpoll li.graph {
-    color: transparent;}
+/* #threadpoll li.graph {
+    color: transparent;} */
 
 /* stacking transition is pain
 a,
@@ -2245,12 +2246,25 @@ a .error_message:hover {
     background-color: var(--c-b1);}
 .large_progress_bar,
 #progress_bar {
+    -webkit-box-shadow: inset var(--p-graph-sh);
+    box-shadow: inset var(--p-graph-sh);
     height: 14px;
     display: flex;
     justify-content: space-between;
     padding: 3px;
     background-color: var(--c-edition);
 	position: relative;}
+li.graph {
+    width: calc(100% - 6px);
+    height: 14px;
+    margin: 2px auto 8px auto;
+    padding: 3px;
+    background-color: var(--c-edition);
+    -webkit-box-shadow: inset var(--p-graph-sh);
+    box-shadow: inset var(--p-graph-sh);}
+.poll li:not(.graph) {
+    margin: 0;
+    padding: 0 0 0 5px;}
 .sidebar #freeleech_time_left #progress_bar {
     padding: 0;
     height: 100%;}
@@ -3392,6 +3406,7 @@ input.hidden,
 #seedtime_tokens >br,
 strong.mature +strong +br,
 #user #content >#progress_bar ~br,
+#index .poll >br,
 
 /* forum post 'back to top' button */
 #artist #requests .colhead_dark a,
@@ -5970,6 +5985,7 @@ input[class="date_picker"] {
     bottom: -37px;
     width: calc(100% - 22px);
     left: 1px;}
+ul.poll,
 #collections #coverart.box ul,
 #rules .thin >#actual_rules >div ul,
 #rules .thin >.before_rules ul {
@@ -6093,6 +6109,9 @@ table.adventure_table .colhead td:not(:first-child) {
     font-weight: 600;} 
 #staffpm #inbox >form#messageform >table tr:first-child td {
     padding-top: 44px;}
+#staffpm #inbox >form#messageform >table tr:first-child td input[type="checkbox"] {
+    margin-top: auto;
+    margin-bottom: auto;}
 #staffpm #inbox >form#messageform >h3 {
     margin: 0 0 -36px 0;
     position: relative;
@@ -8063,8 +8082,9 @@ body#user.inventory {}
 	width: 130px;
 	height: 14px;}
 .box_fights_stats .stat_bar progress::-webkit-progress-bar {
-	background-color: var(--c-body);
-	box-shadow: inset var(--p-main-shdw);}
+	background-color: var(--c-tor-row-hvr);
+    -webkit-box-shadow: inset var(--p-graph-sh);
+    box-shadow: inset var(--p-graph-sh);}
 
 .box_fights_stats .stat_bar progress::-webkit-progress-value {}
 .box_fights_stats .stat_bar progress::-moz-progress-bar {}
