@@ -2503,6 +2503,8 @@ body#requests table#requests_list tr:not(.colhead):not(.colhead_dark) td {
 #searchthread tr,
 #searchthread tbody,
 
+#existing_freeleech_pots .colhead,
+
 #uploaded_table             td:nth-child(n+3),
 #seeding_table              td:nth-child(n+3),
 #leeching_table             td:nth-child(n+3),
