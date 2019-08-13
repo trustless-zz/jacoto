@@ -2262,6 +2262,8 @@ li.graph {
     background-color: var(--c-edition);
     -webkit-box-shadow: inset var(--p-graph-sh);
     box-shadow: inset var(--p-graph-sh);}
+#threadpoll li.graph {
+    background-color: var(--c-tor-row-hvr); /* preserving contrast */}
 .poll li:not(.graph) {
     margin: 0;
     padding: 0 0 0 5px;}
