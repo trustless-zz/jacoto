@@ -7163,8 +7163,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #backpack .item h3 {
     margin: unset;
     margin-block-end: 1em;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 15px;
+    line-height: 1em;
 	position: absolute;
 	bottom: 2px;
 	width: 100px;}
@@ -7172,19 +7172,19 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #crafting_panel .item.used,
 #equipment .item.used,
 #wrapper #trading_panel .item.used {
-	background: url('https://gazellegames.net/static/styles/game_room/images/shop/itempattern.png') repeat, url('https://gazellegames.net/static/styles/game_room/images/icons/equipment_used.png') 95% 5% no-repeat #1b1b1d !important;}
+	background: url('https://gazellegames.net/static/styles/game_room/images/shop/itempattern.png') repeat, url('https://gazellegames.net/static/styles/game_room/images/icons/equipment_used.png') 95% 5% no-repeat;}
 
 #crafting_panel .item.broken,
 #equipment .item.broken,
 #wrapper #trading_panel .item.broken {
-	background: url('https://gazellegames.net/static/styles/game_room/images/shop/itempattern.png') repeat, url('https://gazellegames.net/static/styles/game_room/images/icons/equipment_broken.png') 95% 5% no-repeat #1b1b1d !important;}
+	background: url('https://gazellegames.net/static/styles/game_room/images/shop/itempattern.png') repeat, url('https://gazellegames.net/static/styles/game_room/images/icons/equipment_broken.png') 95% 5% no-repeat;}
 
 #crafting_panel .item img,
 #equipment .item img,
 #wrapper #trading_panel .item img,
 #backpack .item img {
-	max-width: 94px;
-	max-height: 94px;
+	max-width: 100px;
+	max-height: 100px;
 	padding: 3px;}
 
 #crafting_panel .item img.equipment_level,
@@ -8805,9 +8805,14 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 #share_score .large_progress_bar .five_marker,
 #share_score .large_progress_bar .fifteen_marker {
     text-shadow:
+        -1px -1px 0 var(--c-box),
+        1px -1px 0 var(--c-box),
+        -1px 1px 0 var(--c-box),
+        1px 1px 0 var(--c-box);
+    /* text-shadow:
         0 0 5px var(--c-box),
         0 0 3px var(--c-box),
-        0 0 1px var(--c-box);}
+        0 0 1px var(--c-box); */}
 
 
 #share_score .large_progress_bar .main_section {
@@ -9171,6 +9176,19 @@ table.adventure_table h3 {
     margin: 136px 0 0 397px;
     border-color: var(--c-main-brdr);
     background-color: var(--c-input-obj);}
+
+#wrapper #crafting_panel .item .item_count {
+    color: var(--c-txt);
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    line-height: 1em;
+    font-size: 13px;
+    text-shadow:
+        -1px -1px 0 var(--c-edition),
+        1px -1px 0 var(--c-edition),
+        -1px 1px 0 var(--c-edition),
+        1px 1px 0 var(--c-edition);}
 
 /*** Ability icons ***/
 #crafting_panel ul#abilities {
