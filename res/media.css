@@ -854,7 +854,10 @@ body {
     #wrapper .global_buffs,
     #wrapper #header .clan_trophy {
         width: 48px;}
+    #wrapper .global_buffs .fa {
+        font-size: 35.461px;}
     #wrapper .global_buffs .buff_text {
+        line-height: var(--p-lh);
         font-size: 11px;}
     #wrapper .global_buffs .buff_text .buff_multiplier {
         font-size: 12px;}
