@@ -127,6 +127,7 @@
 .nintendogamecube {background-image: url(caticons/nintendogamecube.svg);}
 .ouya {background-image: url(caticons/ouya.svg);}
 .penandpaperrpg {background-image: url(caticons/cdcdcd/penandpaperrpg.svg);}
+.philipscd-i {background-image: url(caticons/cdcdcd/philipscd-i.svg);}
 .philipsvideopac {background-image: url();}
 .philipsvideopac\+ {background-image: url(caticons/philipsvideopac+.svg);}
 .phonepda {background-image: url(caticons/cdcdcd/phonepda.svg);}
@@ -245,6 +246,7 @@
 #groupplatform a[href$="=Nintendo+GameCube"] {background-image: url(caticons/nintendogamecube.svg);}
 #groupplatform a[href$="=Ouya"] {background-image: url(caticons/ouya.svg);}
 #groupplatform a[href$="=Pen+and+Paper+RPG"] {background-image: url(caticons/cdcdcd/penandpaperrpg.svg);}
+#groupplatform a[href$="=Philips+CD-i"] {background-image: url(caticons/cdcdcd/philipscd-i.svg);}
 #groupplatform a[href$="=Philips+Videopac+"] {background-image: url(caticons/philipsvideopac+.svg);}
 #groupplatform a[href$="=Phone%2FPDA"] {background-image: url(caticons/cdcdcd/phonepda.svg);}
 #groupplatform a[href$="=Pico"] {background-image: url(caticons/pico.svg);}
