@@ -8805,10 +8805,11 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 #share_score .large_progress_bar .five_marker,
 #share_score .large_progress_bar .fifteen_marker {
     text-shadow:
-        -1px -1px 0 var(--c-box),
-        1px -1px 0 var(--c-box),
-        -1px 1px 0 var(--c-box),
-        1px 1px 0 var(--c-box);
+        -1px  -1px  0   var(--c-box),
+         1px  -1px  0   var(--c-box),
+        -1px   1px  0   var(--c-box),
+         1px   1px  0   var(--c-box),
+         0     0    5px var(--c-box);
     /* text-shadow:
         0 0 5px var(--c-box),
         0 0 3px var(--c-box),
