@@ -2391,6 +2391,7 @@ li.graph {
 .nintendogamecube,
 .philipscd-i,
 .nokian-gage,
+.ouya,
 .penandpaperrpg,
 .philipsvideopac,
 .philipsvideopac\+,
@@ -3454,6 +3455,7 @@ strong.mature +strong +br,
     margin: 10px 0;
     font-weight: 600;
     font-size: 19px;
+    line-height: 1em;
 	border-bottom: var(--p-border);
     border-bottom-color: var(--c-table-brdr);
     text-align: left;
