@@ -7200,12 +7200,62 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	max-height: 100px;
 	padding: 3px;}
 
-#crafting_panel .item img.equipment_level,
+/* #crafting_panel .item img.equipment_level,
 #equipment .item img.equipment_level,
 #wrapper #trading_panel .item img.equipment_level {
 	position: absolute;
 	top: 2px;
-	left: 2px;}
+	left: 2px;} */
+#wrapper #content .item img.equipment_level {
+    display: none;}
+
+#wrapper #content li.item[title^="Level:"]:before {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--c-tgroup);
+    width: 20px;
+    height: 18px;
+    border: var(--p-border);
+    border-color: var(--c-table-brdr);}
+#wrapper #content li.item[title="Level: 0"]:before {
+    content: '0';
+    color: var(--c-text-s);}
+#wrapper #content li.item[title="Level: 1"]:before {
+    content: '1';
+    color: var(--c-r01);}
+#wrapper #content li.item[title="Level: 2"]:before {
+    content: '2';
+    color: var(--c-r02);}
+#wrapper #content li.item[title="Level: 3"]:before {
+    content: '3';
+    color: var(--c-r03);}
+#wrapper #content li.item[title="Level: 4"]:before {
+    content: '4';
+    color: var(--c-r04);}
+#wrapper #content li.item[title="Level: 5"]:before {
+    content: '5';
+    color: var(--c-r05);}
+#wrapper #content li.item[title="Level: 6"]:before {
+    content: '6';
+    color: var(--c-r06);}
+#wrapper #content li.item[title="Level: 7"]:before {
+    content: '7';
+    color: var(--c-r07);}
+#wrapper #content li.item[title="Level: 8"]:before {
+    content: '8';
+    color: var(--c-r08);}
+#wrapper #content li.item[title="Level: 9"]:before {
+    content: '9';
+    color: var(--c-r09);}
+#wrapper #content li.item[title="Level: 10"]:before {
+    content: '10';
+    color: var(--c-r10);}
+
+
 
 #crafting_panel .item:hover,
 #equipment .item:hover,
