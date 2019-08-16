@@ -4584,8 +4584,10 @@ div.breadcrumbs,
 #forums .forum_index tr:not(.colhead) td,
 #inbox .thin >.box.pad #messageform tr:not(.colhead) td:nth-child(2) {
     font-size: 15px;
-    padding-top: 6px;
-    padding-bottom: 6px;}
+    /* padding-top: 6px;
+    padding-bottom: 6px; */
+    padding-top: 7px;
+    padding-bottom: 7px;}
 
 #shop .colhead:only-child, /* for empty existing_freeleech_pots etc. */
 #gazelleview #torrent_comments >h1:first-child,
