@@ -3413,6 +3413,7 @@ input.hidden,
 strong.mature +strong +br,
 #user #content >#progress_bar ~br,
 #index .poll >br,
+#footer_image,
 
 /* forum post 'back to top' button */
 #artist #requests .colhead_dark a,
@@ -4501,6 +4502,14 @@ input#file {
 #copyright {
     text-align: left;
     width: 50%;}
+#copyright p:nth-child(n+2) {
+    margin: 5px 0 0 0;}
+#server_stats >strong:not(:first-child) {
+    margin-left: 2px;}
+#server_stats:before {
+    content: 'jacoto stylesheet by SilverTea';
+    display: block;
+    margin-bottom: 5px;}
 
 #forums h3 {
 	padding: 0px;
@@ -5471,6 +5480,7 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 .linkbox a[href^="reports.php?action=report&type=request&"],
 .linkbox a[href="requests.php?type=voted"],
 .linkbox a[href="requests.php?type=created"],
+.linkbox a[href="requests.php"],
 .linkbox a[href="requests.php?action=new&request_currency=upload"],
 .linkbox a[href="requests.php?action=new&request_currency=gold"],
 #inbox .linkbox a[href="#quickpost"],
@@ -5549,6 +5559,7 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 .linkbox a[href^="requests.php?action=new&artistid"]:before                     {content: 'Add Request';}
 .linkbox a[href^="reports.php?action=report&type=request&"]:before              {content: 'Report Request';}
 .linkbox a[href="requests.php?type=voted"]:before                               {content: "Requests I've voted on";}
+.linkbox a[href="requests.php"]:before                                          {content: 'All requests';}
 .linkbox a[href="requests.php?type=created"]:before                             {content: 'My requests';}
 .linkbox a[href="requests.php?action=new&request_currency=upload"]:before       {content: 'New GB request';}
 .linkbox a[href="requests.php?action=new&request_currency=gold"]:before         {content: 'New gold request';}
