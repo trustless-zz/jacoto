@@ -674,6 +674,8 @@ html,
 .forum_post .body,
 #forums .thin table,
 
+#torrents #content >#newlink input#newlink,
+
 #user input#irckey,
 #user input#email,
 #user input#avatar,
@@ -686,6 +688,7 @@ input[type="search"],
 #torrents .center.thin table#weblinks_edit input[type="text"],
 #torrents .center.thin >.box.pad input#trailer,
 
+#torrents #content >script ~form #torrent_link input[name="internallink"],
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad input[type="text"] {
     width: 100%;}
 #content,
@@ -1203,10 +1206,12 @@ div#fight_skill_points_assign >table,
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad,
 #tools .thin >.box.pad,
 #tools .thin >table,
-#tools .thin >.box,
+#tools .thin >.box:not(#recommended),
 #tools #content >table,
 #tools #addgroup,
-#tools #mastergroups {
+#tools #mastergroups,
+#torrents #content >#newlink,
+#torrents #content >#currentlinks {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -1246,7 +1251,9 @@ div#fight_skill_points_assign >table,
 #user .thin >h3:first-child +.linkbox +form,
 #wiki .thin >.center >form:first-child,
 #tools #addgroup,
-#tools #mastergroups #searchgroups {
+#tools #mastergroups #searchgroups,
+#torrents #content >#newlink,
+#torrents #content >#currentlinks {
     padding: 10px;}
 .sidebar .body {
     padding: 10px 0 0 0;}
@@ -2485,7 +2492,9 @@ li.graph {
     font-weight: normal;
     padding: 9px 5px;
     overflow: hidden;}
+.thin#user_fight_attacks table.border .colhead td:first-child,
 #manage_collage_table .colhead >th:first-child,
+#tools .thin >table .colhead >td:first-child,
 .colhead >td:first-child,
 .colhead_dark >td:first-child {
     padding-left: 10px;}
@@ -2662,6 +2671,10 @@ table.adventure_table .colhead td {
     height: 15px;
     position: relative;
     background-color: var(--c-edition);}
+.edition_info +td { /* concealing &nbsp; */
+    background-color: var(--c-edition);
+    font-size: 0;
+    line-height: 0;}
 .edition_info strong {
     font-weight: 600;
     position: absolute;
@@ -3303,7 +3316,8 @@ body:not(#upload) #artist_tr + tr td.label,
 #top10 td.center.cats_col +td >strong,
 #log table#log_table .colhead strong,
 #torrent_history_search #th_search strong,
-#torrents .torrent_notifications .noticon +td >strong {
+#torrents .torrent_notifications .noticon +td >strong,
+#torrents #content >#newlink td strong {
     font-weight: normal;}
 
 .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
@@ -3456,6 +3470,7 @@ strong.mature +strong +br,
 
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad td.label,
 #user .box.box_suggested_tags .head.tooltip >span:last-child,
+#torrents #content >script ~form #torrent_link .colhead:first-child,
 
 /* forum post 'back to top' button */
 #artist #requests .colhead_dark a,
@@ -3981,6 +3996,7 @@ a[href^="javascript:Vote("] strong:hover,
 #quickreplybuttons input {
     margin: 0 5px;}
 
+#torrents #content >span[style="float:right;"]:first-child,
 #tools .thin >#recommended >.head.colhead_dark:first-child,
 #user .thin >h3:first-child,
 h2 {
@@ -3991,6 +4007,9 @@ h2 {
     height: auto;
     width: calc(100% - 10px);
     font-weight: bold;}
+
+#torrents #wrapper #content >span[style="float:right;"]:first-child {
+    width: unset;}
 
 h3 {
     padding: 0;
@@ -4332,6 +4351,7 @@ h3 {
     padding-bottom: 0;}
 
 /** convert ... to head **/
+#torrents #content >#currentlinks >h2,
 #tools #mastergroups >h2,
 #tools #addgroup >h1,
 #wiki .thin >.box.pad.center >p:first-child,
@@ -5238,7 +5258,8 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 #forums #newthreadpreview +.box.pad:before,
 #wiki .thin >.center >form:first-child:before,
 .permissions:before,
-#tools .thin >.box.pad:first-child:before {
+#tools .thin >.box.pad:first-child:before,
+#torrents #content >#newlink:before {
     display: block;
     text-align: left;
     width: 100%;
@@ -5254,6 +5275,7 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     content: 'Toolbox';}
 #tools .thin >.box.pad:first-child:before {
     content: 'Chart';}
+#torrents #content >#newlink:before,
 #torrents #wrapper #content>script:first-child+h2+form:before {
     content: 'Form';}
 #forums #wrapper #newthreadpreview +.box.pad:before {
@@ -5554,6 +5576,8 @@ a[onclick="BBCode.spoiler(this);"]:hover {
 .linkbox +.linkbox {
     margin-top: -5px;}
 
+/* #torrents #content >#currentlinks td ul.thin strong, //link groups -revisit
+#torrents #content >#currentlinks td ul.thin a, */
 .torrent_details .pad.hidden div[id^=peers] .linkbox {
     font-size: 14px;
     line-height: var(--p-lh);}
@@ -5884,6 +5908,7 @@ td.center.cats_col {
     width: 170px;}
 
 #staffpm #inbox,
+#torrents #content >#newlink td,
 #top10 .thin >.center td,
 #user script +.thin h2 +#userform,
 #collections .sidebar form#quickpostform.pad,
@@ -6045,6 +6070,7 @@ input[class="date_picker"] {
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table td.label {
     width: 180px;}
 
+#torrents #content >#newlink td em,
 #tools #mastergroups #searchgroups input[type="submit"],
 #tools #addgroup input[type="submit"],
 .box.box_info span[style="float:right;"] >a,
@@ -6106,6 +6132,7 @@ input[class="date_picker"] {
 #rules .thin >#actual_rules .before_rules >div,
 #rules .thin >#actual_rules >div {
     padding: 0 0 10px 0 !important;}
+#torrents #content >#currentlinks td,
 #rules .thin >#actual_rules >div:last-child {
     padding: 0 !important;}
 #rules .thin >#actual_rules h2 {
@@ -9097,8 +9124,6 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     margin: 0 auto;
     position: relative;
     z-index: 1;}
-.thin#user_fight_attacks table.border .colhead td:first-child {
-    padding-left: 10px;}
 .thin#user_fight_attacks td.label {
     padding: 5px 10px;
     background-color: var(--c-edition);
