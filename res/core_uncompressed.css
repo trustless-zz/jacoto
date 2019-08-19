@@ -5014,6 +5014,8 @@ span.size9 {
 span.size10 {
     font-size: 3em;
     line-height: 1em}
+.user_title span[style="font-family: lucida console;"] {
+    line-height: 1em;}
 
 .twitter-tweet {
     max-width: calc(100% - 10px)!important;
