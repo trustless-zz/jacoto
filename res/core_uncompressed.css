@@ -1806,6 +1806,7 @@ strong.important_text,
     right: 0;
     margin: auto;}
 
+img#authcode,
 .fancybox-image,
 .lightbox img {
     border: var(--p-img-border);
@@ -2147,7 +2148,6 @@ table#snatchesrow img,
     margin-bottom: 5px;
     position: relative;}
 
-img#authcode,
 .hovereffect,
 #bookmarks #collage_table img,
 #collections #coverart.box li a,
@@ -3965,6 +3965,7 @@ textarea {
 textarea:focus {
     outline-width: 1px !important;}
 
+img#authcode,
 .similar img,
 .screenshots img,
 .sidebar img {
