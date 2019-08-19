@@ -1045,6 +1045,7 @@ img[title="Gold"],
 
 h2#username span#tip_user img,
 
+img[src="https://gazellegames.net/static/common/symbols/disabled.png"], /* disabled (Just fine!) */
 img[alt="Banned"],
 img[alt="Warned"] {
     background-size: contain;
@@ -2146,7 +2147,7 @@ table#snatchesrow img,
     margin-bottom: 5px;
     position: relative;}
 
-
+img#authcode,
 .hovereffect,
 #bookmarks #collage_table img,
 #collections #coverart.box li a,
@@ -3526,7 +3527,13 @@ strong.mature +strong +br,
     margin-top: 5px;
     justify-content: center;}
 .similar_div .head .flright {
+    width: calc(100% - 130px);
+    text-align: right;
     margin: -4px 0 0 0;}
+.similar_div .head .flright form input[type="text"] {
+    width: 100%;
+    min-width: 170px;
+    max-width: calc(50% + 60px);}
 a[href^="javascript:IndexVote("] strong:before,
 a[href^="javascript:Vote("] strong:before,
 #requests table.border td.nobr:nth-child(2) strong:before,
@@ -3713,6 +3720,9 @@ li:not(.suggested_similar) .similar_votes >span {
     font-size: 16px;
     line-height: 16px;
     padding: 8px 5px;}
+#top10 #wrapper .thin.top10_torrents    >.linkbox ~div:not(.center) >table.border .colhead td,
+#top10 #wrapper .thin.top10_games       >.linkbox ~div:not(.center) >table.border .colhead td {
+    padding: 7px 5px;}
 
 #searchforum,
 #searchthread,
@@ -3795,6 +3805,7 @@ span.secondary_class {
     height: 16px;
     width: 18.5px;
     padding-left: 18.5px;}
+.username_badges img[src="https://gazellegames.net/static/common/symbols/disabled.png"], /* disabled (Just fine!) */
 .username_badges img[alt="Banned"] {
     height: 16px;
     width: 16px;
@@ -5427,7 +5438,7 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     float: left;
     margin: 0 !important;
     padding: 0 0 0 18px !important;
-    max-width: calc(25% - 18px);
+    /*max-*/ width: calc(25% - 18px);
     font-size: 13px;
     line-height: var(--p-lh);}
 .profile #community_stats li.comm_stats_head {
