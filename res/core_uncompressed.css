@@ -2772,6 +2772,8 @@ textarea,
 
 #wrapper #grouplinks,
 
+#wrapper #trading_panel .linkbox,
+
 #wiki .thin >.box.pad.center,
 
 #backpack .itemslot .item,
@@ -3251,7 +3253,7 @@ body:not(#upload) #artist_tr + tr td.label,
     width: 100%;
     display: block;
     padding: 2px 0px 2px 5px;
-    cursor: default;}
+    /* cursor: default; */}
 .filter_torrents.advanced .cat_list:not(#taglist) td.label {
     width: -moz-max-content;
     width: max-content;
@@ -10275,12 +10277,14 @@ div#fight_skill_points_assign >table {
 :-moz-placeholder {             color: var(--c-text-s) !important;}
 
 ::-moz-selection {
+    text-shadow: none;
     color: var(--c-high-t);
     background-color: var(--c-selection);}
 img::-moz-selection {
     color: var(--c-high-t);
     background-color: var(--c-selection-i);}
 ::selection {
+    text-shadow: none;
     color: var(--c-high-t);
     background-color: var(--c-selection);}
 img::selection {

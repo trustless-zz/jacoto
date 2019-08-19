@@ -252,10 +252,14 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     font-weight: 600;}
 
 #quick-crafter >p[style^="float:right"]:last-child {
-    margin: 0 !important;
-    padding: 5px 0 0 0 !important;
+    margin: 0 -10px -10px -10px !important;
+    padding: 10px!important;
+    line-height: 1em;
     float: unset !important;
-    text-align: right !important;}
+    text-align: right !important;
+    border-top: var(--p-border);
+    border-top-color: var(--c-table-brdr);
+    background-color: var(--c-tgroup);}
 
 #quick-crafter button {
     color: var(--c-txt) !important;
@@ -285,6 +289,8 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     border: var(--p-img-border);
     border-color: var(--c-main-brdr);}
 #quick-crafter #crafting-submenu >p:first-child {
+    font-size: 15px;
+    line-height: 1em;
     font-weight: 600;
     margin-top: 0;}
 #quick-crafter #crafting-submenu >p:first-child +p {
