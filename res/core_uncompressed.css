@@ -1493,6 +1493,7 @@ fancybox-button,
 .box.news_post .head:before,
 #index #recommended .head:before,
 .edition_info:before,
+.edition_info +td:before,
 #forums .thin >.box.thin.clear .head.colhead_dark:before,
 #newthreadpreview #pollpreview .head.colhead_dark:before,
 .head[title="Click to expand/collapse"]:before,
@@ -1728,6 +1729,7 @@ a:hover:active:after, */
 #header .clan_trophy:hover:active a,
 .error_message:hover:active,
 .edition_info:hover:active:before,
+.edition_info:hover:active +td:before,
 button:hover:active,
 .alertable button:hover:active,
 input[type=button]:hover:active,
@@ -2673,6 +2675,8 @@ table.adventure_table .colhead td {
     position: relative;
     background-color: var(--c-edition);}
 .edition_info +td { /* concealing &nbsp; */
+    height: 15px;
+    position: relative;
     background-color: var(--c-edition);
     font-size: 0;
     line-height: 0;}
@@ -2685,6 +2689,7 @@ table.adventure_table .colhead td {
     line-height: 25px;
     padding-left: 5px;
     cursor: default;}
+.edition_info +td:before,
 .edition_info:before {
     content: '';
     width: 100%;
@@ -2694,8 +2699,10 @@ table.adventure_table .colhead td {
     top: 0;
     background: var(--p-edition-hvr);
     opacity: 0;}
+.edition_info:hover +td:before,
 .edition_info:hover:before {
     opacity: 1;}
+.edition_info:hover:active +td:before,
 .edition_info:hover:active:before {
     background: var(--p-edition-act);}
 
@@ -2851,6 +2858,8 @@ td img[alt="Ratio"],
     left: 0;}
 .torrent_table .group.sticky {
     background-color: var(--c-edition);}
+.sidebar .body >table,
+.box.userreviews_div .userreviews >table,
 #wrapper .torrent_table .group.sticky .empty_group {
     background-color: unset;}
 .torrent_table .group:hover .empty_group,
@@ -3097,9 +3106,9 @@ tr.likes td[id^="likers_"] >strong,
     font-size: 0;
     line-height: 0;}
 .box_tags .stats.nobullet div a:nth-child(1) {
-    margin-right: 2px;}
+    margin-right: 3px;}
 .box_tags .stats.nobullet div a:nth-child(2) {
-    margin-left: 3px;}
+    margin-left: 4px;}
 .box_tags .stats.nobullet div a:nth-child(3) {
     margin-left: 5px;}
 .box_tags .stats.nobullet div {
@@ -5309,7 +5318,7 @@ a[onclick="BBCode.spoiler(this);"]:hover {
     content: 'New message';}
 #wrapper #crafting_recipes:before {
     margin: 0;
-    content: 'Crafting recipes';}
+    content: 'Crafting Recipes';}
 .thin.torrent_history >form#torrent_history_search:before {
     content: 'Search by Torrent Name';}
 .box.pad.box_buffs_info:before,

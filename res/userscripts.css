@@ -548,6 +548,7 @@ really the whole thing is a mess as a result */
 #wrapper .userscript-gallery-title a {
     color: var(--c-anchor);}
 #wrapper .userscript-gallery-title a:hover {
+    background-color: var(--c-anchor-hvr-bcg-obj);
     color: var(--c-anchor-hvr);}
 
 #wrapper #userscript-gallery-container.userscript-gallery-hidden +div,

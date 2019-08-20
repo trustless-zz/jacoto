@@ -1,7 +1,24 @@
-﻿/* pulled 26 july 2019 */
+﻿.thin.torrent_details >h2,
+.thin.torrent_details >.linkbox,
+.thin.torrent_details #torrent_comments >.linkbox {
+    text-shadow: 0 0 10px #000, 0 0 6px #000, 0 0 3px #000;}
+
+/* crysis
+color: #506377; 29.4%
+color: #0f150e; 27.2%
+color: #7a96ac; 20.8%
+color: #303639; 18.0%
+color: #adc2c9; 3.4%
+color: #c09ea3; 0.4%
+color: #817883; 0.4%
+color: #c5494c; 0.3%
+/crysis */
+
+
 
 /* Profile and game themes for Game Room
    by chris10000 */
+/* pulled 26 july 2019 */
 
 @media screen and (min-width: 1100px) {
 
