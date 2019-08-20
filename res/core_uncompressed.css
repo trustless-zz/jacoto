@@ -2740,6 +2740,7 @@ textarea,
 #requests .main_column >table:first-child,
 #upload #content >div[style="margin:0px auto;width:700px"],
 #forums .linkbox.linkbox_bottom +br +h3,
+.box.box_info iframe,
 .forum_post td.body iframe,
 #blog .pad iframe,
 .box.news_post >.pad iframe,
@@ -5037,6 +5038,7 @@ span.size10 {
     padding: 5px;}
 
 #blog .pad iframe,
+.box.box_info iframe,
 .box.news_post>.pad iframe,
 .forum_post td.body iframe {
     width: 650px;
@@ -6459,8 +6461,10 @@ td >img[title="Gold"] {
     display: inline-block;
     color: var(--c-txt);
     font-size: 13px;
-    line-height: 18px;
-    padding: 0 3px 0 2px;
+    line-height: 1em;
+    margin-top: 2px;
+    vertical-align: bottom;
+    padding: 1px 3px 1px 2px;
     background: var(--p-head-grdnt);
     outline: var(--p-border);
     outline-color: var(--c-table-brdr);}
