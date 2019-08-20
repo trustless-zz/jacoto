@@ -4678,6 +4678,7 @@ div.breadcrumbs,
 #forums h4 {
     margin: 0;
     padding: 0;}
+#existing_freeleech_pots tr:not(.colhead) td:nth-child(n+2):not(:last-child),
 #bookmarks span.time {
     font-size: 13px;}
 #forums .forum_index.forum_latest tr span[style="float:right;"],
@@ -5087,7 +5088,7 @@ ul#noty_bottomRight_layout_container li {
     box-shadow: var(--p-main-shdw) !important;
     border: var(--p-border) !important;
     border-color: var(--c-main-brdr) !important;
-    background-color: var(--c-b3) !important;
+    background-color: var(--c-sb) !important;
     color: var(--c-low) !important;}
 ul#noty_bottomRight_layout_container li[style*="darkred"] {
     background-color: var(--c-em-bcg) !important;}
@@ -8578,6 +8579,7 @@ body#user.inventory {}
 /*****************************************
 ***************ITEM CREATOR***************
 *****************************************/
+/* no access? */
 #book_contents,
 #packadvanced {
 	width: 99%;}
@@ -8602,6 +8604,7 @@ body#user.inventory {}
 /**********************************************
 ************Fighting System Managers**********
 **********************************************/
+/* no access? */
 #attack_edit_form .label {
 	width: 150px;}
 #attack_edit_form tr.colhead > td {
