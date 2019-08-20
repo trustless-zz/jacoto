@@ -10406,10 +10406,12 @@ textarea {/* prevent resizer from disappearing */
     #achievements {
         margin-bottom: 60px;}
     
-    * {
+    :root {
         scrollbar-color: var(--c-b3) var(--c-input-obj);
-        scrollbar-height: 15px;
+        scrollbar-height: 15px; /* a man can dream */
         scrollbar-width: 15px;}
+    html * { /* dreaming won't get you anywhere */
+        scrollbar-width: thin;}
     
     td { /* table border fix, .edition_info - example */
         background-clip: padding-box;}
