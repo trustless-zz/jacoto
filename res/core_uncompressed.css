@@ -6455,15 +6455,14 @@ td >img[title="Gold"] {
 #wrapper .new_status {
     position: relative;
     z-index: 0;
+    margin-top: 1px;
     margin-left: 5px;}
 .new_status:before {
     content: 'NEW';
     display: inline-block;
     color: var(--c-txt);
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1em;
-    margin-top: 2px;
-    vertical-align: bottom;
     padding: 1px 3px 1px 2px;
     background: var(--p-head-grdnt);
     outline: var(--p-border);
