@@ -5097,7 +5097,7 @@ ul#noty_bottomRight_layout_container li {
     box-shadow: var(--p-main-shdw) !important;
     border: var(--p-border) !important;
     border-color: var(--c-main-brdr) !important;
-    background-color: var(--c-sb) !important;
+    background-color: var(--c-sb1) !important;
     color: var(--c-low) !important;}
 ul#noty_bottomRight_layout_container li[style*="darkred"] {
     background-color: var(--c-em-bcg) !important;}
