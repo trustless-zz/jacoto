@@ -1538,6 +1538,7 @@ a:before,
 a:after, */
 
 #itemsdiv p,
+.item .item_count,
 
 /* #color_leeching,
 #color_leeching .torrent_info_tags,
@@ -9482,17 +9483,23 @@ table.adventure_table h3 {
     background-color: var(--c-input-obj);}
 
 #wrapper #crafting_panel .item .item_count {
+    border: var(--p-border);
+    border-color: var(--c-table-brdr);
+    background-color: var(--c-tgroup);
+    padding: 0 2px;
     color: var(--c-txt);
     position: absolute;
     top: 2px;
     right: 2px;
-    line-height: 1em;
+    line-height: 15px;
     font-size: 13px;
-    text-shadow:
+    /* text-shadow:
         -1px -1px 0 var(--c-edition),
         1px -1px 0 var(--c-edition),
         -1px 1px 0 var(--c-edition),
-        1px 1px 0 var(--c-edition);}
+        1px 1px 0 var(--c-edition);*/}
+#wrapper #crafting_panel .item:hover .item_count {
+    background-color: var(--c-box);}
 
 /*** Ability icons ***/
 #crafting_panel ul#abilities {
