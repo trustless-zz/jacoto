@@ -3546,7 +3546,7 @@ strong.mature +strong +br,
     margin-top: 5px;
     justify-content: center;}
 .similar_div .head .flright {
-    width: calc(100% - 130px);
+    width: calc(100% - 180px);
     text-align: right;
     margin: -4px 0 0 0;}
 .similar_div .head .flright form input[type="text"] {
