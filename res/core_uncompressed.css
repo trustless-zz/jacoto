@@ -5104,11 +5104,12 @@ ul#noty_bottomRight_layout_container li {
     -webkit-box-shadow: var(--p-main-shdw) !important;
     box-shadow: var(--p-main-shdw) !important;
     border: var(--p-border) !important;
-    border-color: var(--c-main-brdr) !important;
+    border-color: var(--c-unread-br) !important;
     background-color: var(--c-sb1) !important;
     color: var(--c-low) !important;}
 ul#noty_bottomRight_layout_container li[style*="darkred"] {
-    background-color: var(--c-em-bcg) !important;}
+    border-color: var(--c-em-hvr) !important;
+    background-color: var(--c-em-act) !important;}
 
 table.forum_post td.body {
     -webkit-hyphens: auto;
