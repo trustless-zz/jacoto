@@ -192,6 +192,7 @@ a[title="Report"],
 a[title="External Link"],
 a[title="Permalink"],
 a[title="Original Group"],
+a[title="Trumpable"],
 a[onclick^="Edit"],
 a[title="Edit"],
 .inventory .trash_icon,
@@ -235,6 +236,7 @@ a[title="Report"]:hover,
 a[title="External Link"]:hover,
 a[title="Permalink"]:hover,
 a[title="Original Group"]:hover,
+a[title="Trumpable"]:hover,
 a[onclick^="Edit"]:hover,
 a[title="Edit"]:hover,
 .inventory .trash_icon:hover,
@@ -420,6 +422,9 @@ a[title="Permalink"] {
 a[title="Original Group"] {
     -webkit-mask-image: url('icons/tor/og.svg');
     mask-image: url('icons/tor/og.svg');}
+a[title="Trumpable"] {
+    -webkit-mask-image: url('icons/tor/tr.svg');
+    mask-image: url('icons/tor/tr.svg');}
 a[onclick^="Edit"],
 a[title="Edit"] {
     -webkit-mask-image: url('icons/tor/ed.svg');
@@ -1633,6 +1638,7 @@ img[title="Snatches"],
 #stats_seeding a,
 #stats_share_score a,
 a[title="Original Group"],
+a[title="Trumpable"],
 a[title="Permalink"],
 a[title="Download"],
 a[title="Use a FL Token"],
