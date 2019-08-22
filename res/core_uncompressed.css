@@ -596,6 +596,7 @@ filter: drop-shadow(0px 0 1px #000);}
 .Wikipedia {background-image: url("weblinks/Wikipedia.png");}
 .XboxStore {background-image: url("weblinks/XboxStore.svg");}
 .PCGamingWiki {background-image: url("weblinks/PCGamingWiki.svg");}
+.Nintendo {background-image: url("weblinks/Nintendo.svg");}
 
 @keyframes expandWidth {
 	0% {transform: scaleX(0);}
@@ -1028,6 +1029,10 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 .Wikipedia,
 .XboxStore,
 .PCGamingWiki,
+.Amazon,
+.Nintendo,
+.EpicGames,
+
 #logo a,
 
 .box.box_likes.box_torrents span.likes_icon.flright img,
@@ -1975,6 +1980,26 @@ img#authcode,
     background: var(--p-expand-act);}
 /** /close/expand head **/
 
+#torrents .center.thin >h2#non_wiki_editing ~.box.pad form input[type="text"][name="name"] {
+    width: calc(100% - 85px);}
+#torrents .center.thin >h2#non_wiki_editing ~.box.pad form [type="text"][name="targetgroupid"] {
+    width: calc(100% - 181px);}
+
+#torrents .center.thin >h2#non_wiki_editing ~.box.pad form [type="text"][name="targetgroupid"] +div,
+#torrents .center.thin >h2#non_wiki_editing ~.box.pad form input[type="text"][name="name"] +div {
+    vertical-align: top;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    margin-left: 5px;}
+#torrents .center.thin >h2#non_wiki_editing ~.box.pad form h3 {
+    margin: 0;
+    font-size: 1em;
+    font-weight: normal;
+    display: inline-block;
+    width: -moz-fit-content;
+    width: fit-content;
+    line-height: var(--p-lh);}
 
 .sidebar #slides {
     padding: 10px 0;}
