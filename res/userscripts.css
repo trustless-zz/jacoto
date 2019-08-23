@@ -687,3 +687,35 @@ input#ptpimg_api_key {
 /***
 /New PTPIMG It
 ***/
+
+
+/***
+GGn EZ Collection Management
+https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=952920#post952920
+https://greasyfork.org/en/scripts/372437-ggn-ez-collection-management
+***/
+#collections table#manage_collage_table tr:not(.colhead) td:nth-child(7) {
+    padding: 0 0 0 2px;}
+#collections table#manage_collage_table tr:not(.colhead) td:nth-child(6) input[type="text"] {
+    width: 100%;}
+/** Chromium table border rendering bug workaround **/
+#collections table#manage_collage_table {
+    position: relative;}
+#collections table#manage_collage_table tr:nth-last-child(2) td:nth-child(7):before {
+    border-right: var(--p-border);
+    width: 0;
+    height: 100%;}
+#collections table#manage_collage_table tr:nth-last-child(2) td:nth-child(7):after {
+    border-bottom: var(--p-border);
+    width: 100%;
+    height: 0;}
+#collections table#manage_collage_table tr:nth-last-child(2) td:nth-child(7):before,
+#collections table#manage_collage_table tr:nth-last-child(2) td:nth-child(7):after {
+    content: '';
+    right: -1px;
+    bottom: -1px;
+    position: absolute;
+    border-color: var(--c-main-brdr);
+/***
+/GGn EZ Collection Management
+***/
