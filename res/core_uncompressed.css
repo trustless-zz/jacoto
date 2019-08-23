@@ -441,8 +441,8 @@ a[title="Remove"],
 .torrent_table .removebookmark {
     -webkit-mask-image: url('icons/removebookmark.svg');
     mask-image: url('icons/removebookmark.svg');}
-.xdsoft_datetimepicker .xdsoft_next:hover:active, /*revisit*/
-.xdsoft_datetimepicker .xdsoft_prev:hover:active,
+.xdsoft_datetimepicker .xdsoft_next:active, /*revisit*/
+.xdsoft_datetimepicker .xdsoft_prev:active,
 .xdsoft_datetimepicker .xdsoft_next,
 .xdsoft_datetimepicker .xdsoft_prev,
 .prev,
@@ -1702,54 +1702,54 @@ td img[alt="Ratio"],
     display: block;}
 
 
-/* tbody:hover:active:before,
-tbody:hover:active:after,
-ul:hover:active:before,
-ul:hover:active:after,
-li:hover:active:before,
-li:hover:active:after,
-div:hover:active:before,
-div:hover:active:after,
-tr:hover:active:before,
-tr:hover:active:after,
-td:hover:active:before,
-td:hover:active:after,
-span:hover:active:before,
-span:hover:active:after,
-a:hover:active:before,
-a:hover:active:after, */
+/* tbody:active:before,
+tbody:active:after,
+ul:active:before,
+ul:active:after,
+li:active:before,
+li:active:after,
+div:active:before,
+div:active:after,
+tr:active:before,
+tr:active:after,
+td:active:before,
+td:active:after,
+span:active:before,
+span:active:after,
+a:active:before,
+a:active:after, */
 
-#stats_seeding:hover:active,
-#stats_leeching:hover:active,
-#stats_gold:hover:active,
-#stats_share_score:hover:active,
-#stats_hnr:hover:active,
-#online_irc:hover:active,
-#menu li:hover:active,
-#userinfo_minor li:hover:active,
-#userinfo_username .sub span:hover:active,
-#userinfo_username >li:hover:active,
-#nav_donate:hover:active,
-.box.news_post .head:hover:active:before,
-#index #recommended .head:hover:active:before,
-.autocomplete_list li:hover:active,
-.torrent_table td.center:hover:active:first-child,
-.colhead_dark a:hover:active,
-.colhead a:hover:active,
-#index #clans .large_progress_bar:hover:active,
-#header .global_buffs a:hover:active,
-#toplink a:hover:active,
-#header .clan_trophy:hover:active a,
-.error_message:hover:active,
-.edition_info:hover:active:before,
-.edition_info:hover:active +td:before,
-button:hover:active,
-.alertable button:hover:active,
-input[type=button]:hover:active,
-input[type=submit]:hover:active,
-#markread:hover:active:before,
-.box.box_coltags .pad li a:nth-child(n+2):hover:active,
-.box.box_coltags .head span[title="Add Tags"] a:hover:active,
+#stats_seeding:active,
+#stats_leeching:active,
+#stats_gold:active,
+#stats_share_score:active,
+#stats_hnr:active,
+#online_irc:active,
+#menu li:active,
+#userinfo_minor li:active,
+#userinfo_username .sub span:active,
+#userinfo_username >li:active,
+#nav_donate:active,
+.box.news_post .head:active:before,
+#index #recommended .head:active:before,
+.autocomplete_list li:active,
+.torrent_table td.center:active:first-child,
+.colhead_dark a:active,
+.colhead a:active,
+#index #clans .large_progress_bar:active,
+#header .global_buffs a:active,
+#toplink a:active,
+#header .clan_trophy:active a,
+.error_message:active,
+.edition_info:active:before,
+.edition_info:active +td:before,
+button:active,
+.alertable button:active,
+input[type=button]:active,
+input[type=submit]:active,
+#markread:active:before,
+.box.box_coltags .pad li a:nth-child(n+2):active,
+.box.box_coltags .head span[title="Add Tags"] a:active,
 .slides_control,
 a>strong,
 .profile .box_art_gallery .gallery_row a>img,
@@ -1759,8 +1759,8 @@ table#snatchesrow a,
 table#uploadsrow a,
 .group_torrent td:first-child >a span,
 .box_game_ratings a[target="_blank"],
-input[type="checkbox"]:hover:active,
-input[type="radio"]:hover:active {
+input[type="checkbox"]:active,
+input[type="radio"]:active {
     -webkit-transition: none;
     -o-transition: none;
     transition: none;}
@@ -1972,14 +1972,14 @@ img#authcode,
 #index #recommended .head:hover:before,
 .box.news_post .head:hover:before {
     opacity: 1;}
-#forums .thin >.box.thin.clear .head.colhead_dark:hover:active:before,
-#newthreadpreview #pollpreview .head.colhead_dark:hover:active:before,
-.torrent_table .colhead_dark td[onclick]:hover:active:before,
-.head[title="Click to expand/collapse"]:hover:active:before,
-#torrents #requests.request_table .colhead:hover:active span:before,
-.head[onclick]:hover:active:before,
-#index #recommended .head:hover:active:before,
-.box.news_post .head:hover:active:before {
+#forums .thin >.box.thin.clear .head.colhead_dark:active:before,
+#newthreadpreview #pollpreview .head.colhead_dark:active:before,
+.torrent_table .colhead_dark td[onclick]:active:before,
+.head[title="Click to expand/collapse"]:active:before,
+#torrents #requests.request_table .colhead:active span:before,
+.head[onclick]:active:before,
+#index #recommended .head:active:before,
+.box.news_post .head:active:before {
     background: var(--p-expand-act);}
 /** /close/expand head **/
 
@@ -2310,7 +2310,7 @@ a .error_message:hover {
     border-color: var(--c-b1);}
 #index #clans a:hover .large_progress_bar { 
     background-color: var(--c-b3);}
-#index #clans a:hover:active .large_progress_bar {
+#index #clans a:active .large_progress_bar {
     background-color: var(--c-b1);}
 .large_progress_bar,
 #progress_bar {
@@ -2695,8 +2695,8 @@ table.adventure_table .colhead td {
 #collections .group.discog td.collicon:hover:nth-child(1),
 .torrent_table td.center:hover:first-child {
     background-color: var(--c-colhead-click);}
-#collections .group.discog td.collicon:hover:active:nth-child(1),
-.torrent_table td.center:hover:active:first-child {
+#collections .group.discog td.collicon:active:nth-child(1),
+.torrent_table td.center:active:first-child {
     background-color: var(--c-colhead-act);}
 .torrent_table .show_torrents_link:before {
     content: '';
@@ -2737,8 +2737,8 @@ table.adventure_table .colhead td {
 .edition_info:hover +td:before,
 .edition_info:hover:before {
     opacity: 1;}
-.edition_info:hover:active +td:before,
-.edition_info:hover:active:before {
+.edition_info:active +td:before,
+.edition_info:active:before {
     background: var(--p-edition-act);}
 
 .torrent_table tr.group_torrent {
@@ -2871,9 +2871,9 @@ td img[alt="Ratio"],
 .colhead td >a:hover,
 .colhead th >a:hover {
     background-color: var(--c-colhead-click);}
-.colhead_dark td >a:hover:active,
-.colhead td >a:hover:active,
-.colhead th >a:hover:active {
+.colhead_dark td >a:active,
+.colhead td >a:active,
+.colhead th >a:active {
     background-color: var(--c-colhead-act);}
 
 .torrent_table .group.rowa .empty_group {
@@ -3193,21 +3193,21 @@ a[href^="javascript:Vote("] strong:hover,
 .box.box_coltags .head span[title="Add Tags"] a:hover {
     color: var(--c-low);
     background: var(--p-btn-hvr);}
-button:hover:active,
-#wrapper #trading_panel button:hover:active,
-.alertable button:hover:active,
-input[type=button]:hover:active,
-input[type=submit]:hover:active,
-.similar_votes a:hover:active,
-a[href^="javascript:IndexVote("] strong:hover:active,
-a[href^="javascript:Vote("] strong:hover:active,
-#requests table.border td.nobr:nth-child(2) strong:hover:active,
-#torrents #requests.request_table #requests_list .requestrows a.brackets:hover:active,
-.box_tags .stats.nobullet div a:hover:active,
+button:active,
+#wrapper #trading_panel button:active,
+.alertable button:active,
+input[type=button]:active,
+input[type=submit]:active,
+.similar_votes a:active,
+a[href^="javascript:IndexVote("] strong:active,
+a[href^="javascript:Vote("] strong:active,
+#requests table.border td.nobr:nth-child(2) strong:active,
+#torrents #requests.request_table #requests_list .requestrows a.brackets:active,
+.box_tags .stats.nobullet div a:active,
 #image_block a:active,
-#newthreadform #newthreadtext #answer_block a:hover:active,
-.box.box_coltags .pad li a:nth-child(n+2):hover:active,
-.box.box_coltags .head span[title="Add Tags"] a:hover:active {
+#newthreadform #newthreadtext #answer_block a:active,
+.box.box_coltags .pad li a:nth-child(n+2):active,
+.box.box_coltags .head span[title="Add Tags"] a:active {
     background: var(--p-btn-act);}
 
 .filter_torrents .submit {
@@ -3967,7 +3967,7 @@ h2 .username_badges {
 #markread:hover:before {
     color: var(--c-high-t);
     background-color: var(--c-em-hvr);}
-#markread:hover:active:before {
+#markread:active:before {
     background-color: var(--c-em-act);}
 
 .sidebar .addtagsdiv input#tags {
@@ -6113,8 +6113,8 @@ input[class="date_picker"] {
 .fancybox-error,
 .xdsoft_datetimepicker .xdsoft_label {
     background-color: var(--c-box);}
-.xdsoft_datetimepicker .xdsoft_next:hover:active,
-.xdsoft_datetimepicker .xdsoft_prev:hover:active,
+.xdsoft_datetimepicker .xdsoft_next:active,
+.xdsoft_datetimepicker .xdsoft_prev:active,
 .xdsoft_datetimepicker .xdsoft_next,
 .xdsoft_datetimepicker .xdsoft_prev {
     -webkit-box-shadow: none;
@@ -6127,8 +6127,8 @@ input[class="date_picker"] {
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: 20px 24px;}
-.xdsoft_datetimepicker .xdsoft_next:hover:active,
-.xdsoft_datetimepicker .xdsoft_prev:hover:active {
+.xdsoft_datetimepicker .xdsoft_next:active,
+.xdsoft_datetimepicker .xdsoft_prev:active {
     background-color: var(--c-low);}
 .xdsoft_datetimepicker .xdsoft_next {
     transform: scaleX(-1);}

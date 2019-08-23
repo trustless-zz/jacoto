@@ -64,7 +64,7 @@ https://github.com/hateradio/wbb
     box-shadow: none;
     color: var(--c-low);
     background: var(--p-btn-hvr);}
-.wbbcode.wbbimgless .whutbbutton:hover:active {
+.wbbcode.wbbimgless .whutbbutton:active {
     background: var(--p-btn-act);}
 
 .wbbcode.wbbimg .wbbbuttons .whutbbutton {
@@ -430,7 +430,7 @@ really the whole thing is a mess as a result */
     opacity: 0;}
 #userscript-gallery-toggle:hover strong:before {
     opacity: 1;}
-#userscript-gallery-toggle:hover:active strong:before {
+#userscript-gallery-toggle:active strong:before {
     background: var(--p-expand-act);
     -webkit-transition: none;
     -o-transition: none;
@@ -631,9 +631,9 @@ a#fill_mac:hover {
     background: var(--p-btn-hvr);
     -webkit-box-shadow: none;
     box-shadow: none;}
-a#fill_win:hover:active,
-a#fill_lin:hover:active,
-a#fill_mac:hover:active {
+a#fill_win:active,
+a#fill_lin:active,
+a#fill_mac:active {
     -webkit-transition: none;
     -o-transition: none;
     transition: none;

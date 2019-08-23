@@ -1994,7 +1994,7 @@ body {
 #toplink a:hover {
     opacity: 1;
     background-color: var(--c-txt);}
-#toplink a:hover:active {
+#toplink a:active {
     background-color: var(--c-low);}
 /* forum post 'back to top' button */
  #quickreplypreview .colhead_dark #barpreview,
