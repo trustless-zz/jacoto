@@ -1757,7 +1757,9 @@ table#likesrow a,
 table#snatchesrow a,
 table#uploadsrow a,
 .group_torrent td:first-child >a span,
-.box_game_ratings a[target="_blank"] {
+.box_game_ratings a[target="_blank"],
+input[type="checkbox"]:hover:active,
+input[type="radio"]:hover:active {
     -webkit-transition: none;
     -o-transition: none;
     transition: none;}
@@ -5163,6 +5165,46 @@ input[type="button"][value="Hide"]:hover,
 a[onclick="BBCode.spoiler(this);"]:hover {
     color: var(--c-anchor-hvr);
     background-color: var(--c-anchor-hvr-bcg) !important;}
+
+input[type="checkbox"],
+input[type="radio"] {
+    position: relative;
+    display: inline-block;
+    padding: 6px;
+    border: var(--p-border);
+    border-color: var(--c-input-brdr);
+    background-color: var(--c-input);
+    -webkit-box-shadow: var(--p-input-shdw);
+    box-shadow: var(--p-input-shdw);
+    -webkit-appearance: none;}
+input[type="radio"]:checked:after,
+input[type="radio"] {
+    border-radius: 50%;}
+input[type="radio"]:checked:after {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+    background: var(--c-txt);
+    content: '';
+    border-radius: 50%;}
+input[type="checkbox"]:checked:after {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    background: var(--c-txt);
+    content: '';}
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+    border-color: var(--c-b1);
+    background-color: var(--c-input-focus);}
+input[type="checkbox"]:active,
+input[type="radio"]:active {
+    border-color: var(--c-b1);
+    background-color: var(--c-b3);}
 
 #searchforum >div,
 #searchthread >div {
