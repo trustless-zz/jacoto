@@ -1799,6 +1799,9 @@ strong.important_text,
 #userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"],
 .torrent_details blockquote#description [style="color: #ff0000;"] {
     color: var(--c-red) !important;}
+
+.item_description span[style*="orange;"],
+.info_description span[style*="orange;"],
 #index span[style="color: orange;"] {
     color: var(--c-orange) !important;
     text-shadow: var(--p-orange);}
