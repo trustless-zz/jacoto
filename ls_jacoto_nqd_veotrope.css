@@ -7,8 +7,8 @@
 
 /** COLORS **/
 :root {
-    --c-selection:                      rgba(12, 130, 128, .996);
-    --c-selection-i:                    rgba(12, 130, 128, .75);
+    --c-selection:                      rgba(140, 101, 168, .996);
+    --c-selection-i:                    rgba(140, 101, 168, .75);
     --c-post-img:                       rgb(10, 10, 10);
     --p-description:                    invert(1);
     --c-description:                    rgb(210, 210, 210);
@@ -16,9 +16,9 @@
     --c-quote-brdr:                     rgba(240, 240, 240, .1);
     --c-quote:                          rgba(240, 240, 240, .05);
     --c-contrast:                       rgba(255, 255, 255, .2);
-    --c-unread-s:                       #136764;
+    --c-unread-s:                       #6F5283;
     --c-unread-i:                       rgb(240, 240, 240);
-    --c-unread-br:                      #175D5A;
+    --c-unread-br:                      #634C74;
     --c-txt: 							rgb(240, 240, 240);
     --c-text-s: 						rgb(190, 190, 190);
     --c-curtain:						rgb(80, 80, 80);
@@ -41,22 +41,22 @@
     --c-row-hvr:						rgb(40, 40, 40);
     --c-high:							rgb(35, 35, 35);
     --c-high-t:							rgb(0, 0, 0);
-    --c-b1: 							#0B7874;
-    --c-b2: 							#317A63;
-    --c-b3: 							#175D5A;
-    --c-b4: 							#305E4F;
-    --c-sb1:                            #1C5351;
-    --c-sb2:                            #2F5448;
-    --c-bg:                             #10AAA5;    
+    --c-b1: 							#825D9C;
+    --c-b2: 							#925A9E;
+    --c-b3: 							#634C74;
+    --c-b4: 							#6D4A75;
+    --c-sb1:                            #584565;
+    --c-sb2:                            #604466;
+    --c-bg:                             #B08ACB;    
     --c-hovereffect: 					rgba(0, 0, 0, .8);
     --c-b00: 							rgba(0, 0, 0, 0);
-    --c-anchor: 						#14DBD5;
+    --c-anchor: 						#DEB6FA;
     --c-anchor-hvr: 					rgb(255, 255, 255);
-    --c-anchor-hvr-bcg: 				rgb(40,73,72);
-    --c-anchor-hvr-bcg-obj:             rgb(40,73,72);
+    --c-anchor-hvr-bcg: 				#4B4052;
+    --c-anchor-hvr-bcg-obj:             #4B4052;
 	--c-header-shdw: 					rgba(0,0,0,.3);
     --c-main-shdw:						rgba(0,0,0,.5);
-    --c-img-bcg-anchor: 				#2A3433;
+    --c-img-bcg-anchor: 				#353137;
     --c-on: 							rgb(43, 214, 0);
     --c-bonus:                          rgba(177, 232, 0, .2);
     --c-donate:                         rgb(255, 140, 140);
@@ -67,9 +67,9 @@
     --c-em-bcg: 						rgb(140, 25, 13);
     --c-em-hvr: 						rgb(230, 42, 21);
     --c-em-act: 						rgb(115, 36, 28);
-    --c-fl: 							rgb(180, 140, 255);
-    --c-btn-b1: 						#116A67;
-    --c-btn-b2: 						#306C59;
+    --c-fl: 							#3CBA42;
+    --c-btn-b1: 						#735488;
+    --c-btn-b2: 						#805289;
     --c-red:                            rgb(255, 90, 90);
     --c-blue:                           rgb(134, 134, 255);
     --c-o-gold:                         rgb(245, 208, 0);
@@ -111,7 +111,7 @@ body {
     background-image: url('res/icons/f0f0f0/background.svg') !important;
     background-size: 50px 50px !important;}
 #logo a {
-    background-image: url('res/icons/f0f0f0/logo.svg');}
+    background-image: url('res/icons/f0f0f0_veotrope/logo.svg');}
 
 /* large sidebar */
 @media (min-width: 1387px) {
