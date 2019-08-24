@@ -1,5 +1,5 @@
 ﻿@import url('res/core.css');
-@import url('res/icons_cdcdcd.css');
+@import url('res/icons_f0f0f0.css');
 @import url('res/userscripts.css');
 @import url('res/media.css');
 
@@ -114,7 +114,7 @@ body {
     background-image: url('res/icons/f0f0f0/background.svg') !important;
     background-size: 50px 50px !important;}
 #logo a {
-    background-image: url('res/icons/cdcdcd/logo.svg');}
+    background-image: url('res/icons/f0f0f0/logo.svg');}
 
 /* large sidebar */
 @media (min-width: 1387px) {
