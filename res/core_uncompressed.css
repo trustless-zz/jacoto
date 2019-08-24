@@ -1305,7 +1305,8 @@ a:hover,
 a:hover .ratings,
 #user .thin >h2 a.flright:hover,
 span.user_title a:hover,
-.filter_torrents.advanced .flright:hover:before {
+.filter_torrents.advanced .flright:hover:before,
+.ui-widget-content a:hover {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
 
@@ -7782,7 +7783,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #shop #cost_info strong[title^="If you buy this you will have -"] {
     color: var(--c-red);}
 
-.ui-widget #quickreplypreview .colhead_dark a {
+.ui-widget #quickreplypreview .colhead_dark a,
+.ui-widget-content a {
     color: var(--c-anchor);}
 
 /*** Confirmation Box ***/
@@ -8086,9 +8088,6 @@ li.item_li #clickable .item_description img {
     float: unset;}
 .ui-dialog .ui-dialog-content {
     padding: 10px;}
-
-.ui-widget-content a {
-    color: var(--c-anchor);}
 
 .ui-dialog table {
 	background: none;}
