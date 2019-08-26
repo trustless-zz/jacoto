@@ -687,27 +687,28 @@ body {
 #logo:after {
     content: '';
     width: 74px;
-    height: 30px;
     position: absolute;
     left: 0;
-    top: 34px;
     z-index: -99;
     pointer-events: none;
-    animation: logo_remove .25s linear forwards;
-    transform: translateX(-60%);}
+    -webkit-transition: all .25s linear;
+    transition: all .25s linear;
+    /* animation: logo_remove .25s linear forwards;
+    transform: translateX(-60%); */}
 #logo:before {
-    background: linear-gradient(90deg,var(--c-b1) 50%,var(--c-b00));
+    background: linear-gradient(135deg,var(--c-b1) calc(100% - 53px),var(--c-b00) calc(100% - 24px)) no-repeat -35px 0;
     top: 0px;
     height: 34px;}
 #logo:after {
-    background: linear-gradient(90deg,var(--c-b2) 50%,var(--c-b00));
+    background: linear-gradient(135deg,var(--c-b2) calc(100% - 74px),var(--c-b00) calc(100% - 45px)) no-repeat -35px 0;
     top: 34px;
     height: 30px;}
 #logo:hover:after,
 #logo:hover:before {
-    animation: logo_move .325s linear forwards;}
-#logo:hover:after {
-    animation-delay: .05s;}
+    background-position: 0 0;
+    /* animation: logo_move .325s linear forwards; */}
+/* #logo:hover:after {
+    animation-delay: .05s;} */
 #header #logo a {
     position: absolute;
     /* opacity: 1; */
@@ -715,9 +716,9 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    -webkit-transition: all .25s linear;
+    /* -webkit-transition: all .25s linear;
     -o-transition: all .25s linear;
-    transition: all .25s linear;
+    transition: all .25s linear; */
     background-size: auto 58px;
     background-position: center;}
 /* #logo a:hover:before {
