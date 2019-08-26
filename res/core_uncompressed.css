@@ -4087,11 +4087,12 @@ h3 {
     font-weight: bold !important;}
 
 .unreadpm {
-    background-color: var(--c-tgroup);
+    /* background-color: var(--c-tgroup); */
     /* box-shadow: inset 0 -2px 0 0 var(--c-b3); */}
 
 .rowa,
 .row_a,
+#inbox .thin>.box.pad #messageform tr:not(.colhead):nth-child(odd),
 #tools .thin > table .rowb +.rowb:nth-child(odd), /* table with just rowb */
 #user .thin >h3:first-child +.linkbox +form ~.box.pad.center tr:not(.colhead):nth-child(odd),
 #clan_stats >div:not(.clan_stat_totals) tr:not(.colhead):nth-child(odd),
@@ -4121,6 +4122,7 @@ h3 {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
+#inbox .thin>.box.pad #messageform tr:not(.colhead):nth-child(even),
 #user .thin >h3:first-child +.linkbox +form ~.box.pad.center tr:not(.colhead):nth-child(even),
 #torrents .thin >.header +table tr.rowa:nth-child(even), /* (view log) hisotry for game */
 #clan_stats >div:not(.clan_stat_totals) tr:not(.colhead):nth-child(even),
@@ -4146,7 +4148,7 @@ h3 {
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(even) td:nth-child(-n+2),
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(odd) td:nth-last-child(-n+2) {
     background-color: var(--c-trowb);}
-.unreadpm:hover,
+/* .unreadpm:hover, = */#inbox .thin>.box.pad #messageform tr:not(.colhead):hover,
 .rowa:hover,
 .row_a:hover,
 .rowb:hover,
@@ -6700,9 +6702,9 @@ span.size5 img {
      border-collapse:collapse;}
 #inbox table td[width="40%"] {
      width: 60% !important;}
-#inbox tr.unreadpm td,
+/* #inbox tr.unreadpm td,
 #inbox tr.unreadpm td a {
-     font-weight: 600;}
+     font-weight: 600;} */
 #inbox .comp td {
      padding: 0;}
 #inbox .userclasses {
