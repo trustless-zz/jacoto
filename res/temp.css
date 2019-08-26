@@ -1,38 +1,46 @@
-﻿/*******************************************************************
+﻿@media screen and (max-width: 700px) {
+    .newsdate {
+        display: none;}
+    .box.news_post .head strong:before {
+        content: none;}
+}
+
+/*******************************************************************
 ********************MOBILE DISPLAYS (<800px)************************
 *******************************************************************/
 @media screen and (max-width: 800px) {
-
+	#header {display:none;}
+	.global_buffs {display: none;}
 /*****************************************
 **************DEFAULT STYLES**************
 *****************************************/
-	body {
-		background:url('../images/background-mobile.jpg') bottom;
-		background-size:cover;
-		background-attachment:fixed;
-		overflow-x: hidden;}
+	body {}
 
-	#content {
-		top: 10px;}
+    .main_column >div {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;}
+    
+	#content {}
 
 	h2 {
 		height: auto;
-		width: 99%;}
+		width: 100%;}
 
 	img {
 		max-width: 100% !important;}
 
 	form {
 		max-width: 100%;}
-
+    
+    .main_column_bg,
+    .main_column,
 	.box {
 		width: 100%;}
 
 	td.nobr {
 		white-space: normal;}
 
-	input, textarea {
-		max-width: 300px !important;}
+	input, textarea {}
 
 	a {
 	  overflow-wrap: break-word;
@@ -43,11 +51,9 @@
 	  -webkit-hyphens: auto;
 	  hyphens: auto;}
 
-	.box, table {
-		background: url('../images/smokeybackground-mobile.png');
-		background-size:cover;}
+	.box, table {}
 
-	::-webkit-scrollbar {
+	/* ::-webkit-scrollbar {
 		width: 12px;}
 
 	::-webkit-scrollbar-track {
@@ -59,7 +65,7 @@
 	    -webkit-box-shadow: inset 0 0 6px rgba(255,255,255,0.4);}
 
 	::-webkit-scrollbar-corner {
-		background-color:transparent;}
+		background-color:transparent;} */
 
 	span.size4 img {
 		float: none;
@@ -71,7 +77,6 @@
 		padding:5px 0 5px 5px;
 		box-shadow: none !important;}
 
-	.global_buffs {display: none;}
 /*
 	.global_buffs {
 		margin-top: -50px;}
@@ -97,7 +102,7 @@
 /*****************************************
 ****************BBCODE********************
 *****************************************/
-	.bbbutt {
+	/* .bbbutt {
 	    height: auto;
 		width: 93%;}
 
@@ -112,240 +117,7 @@
 	.bbbutt li:last-of-type {
 		display: block;
 		float: none;
-		margin-left: 10px;}
-
-/*****************************************
-****************HEADER********************
-*****************************************/
-	#header {
-		height:174px;}
-
-	#header #logo,
-	#header #logo.power_logo
-	#header #logo.power_logo2
-	#header #logo.power_logo3 {
-		height: 100px;
-		background-size:cover;
-		background: url('../images/logo-small.png') no-repeat bottom center;
-		margin-left: -10px;}
-
-	#header #logo a {
-		top: 0px;
-		height: 100px;}
-
-	#announcement {
-		font-size: 1.1em;
-		box-sizing: border-box;}
-
-	.clan_trophy {
-		display: none;}
-
-/*****************************************
-*************USERINFO BAR*****************
-*****************************************/
-	#userinfo_username {
-		left: 0px;
-		margin-left: 0px;
-		margin-top: 13px;}
-
-	.welcome {
-		margin-left: 10px;}
-
-	#us_pop span {
-		display: block;
-		width: 130px;
-		margin-top: -4px;
-		margin-left: 14px;}
-
-	ul#userinfo_minor{
-		background:url("../images/person.png") no-repeat;
-		background-size: 25px auto;
-		width:25px;
-		overflow:visible;
-		left:50px;
-		top:37px;
-		z-index: 3;
-		padding: 0;
-		margin: 0;}
-
-	ul#userinfo_minor:hover {
-		background-position:0px 0px;
-		height:auto;
-		width: 25px;
-		padding-top:38px;
-		background-color:transparent;}
-
-	ul#userinfo_minor li {
-		width: 150px;
-		min-height: 35px;
-		font-size: 1.1em;
-		padding-top:5px;}
-
-	ul#userinfo_minor.highlighted {
-		background:url("../images/personred.png") no-repeat !important;
-		background-size: 25px auto !important;
-		background-position: 0px 0px !important;}
-
-	#userinfo_username {
-		width: 100%;}
-
-	#userinfo #userinfo_username .donateico {
-		width: 90px !important;
-		left: auto !important;
-		right: 5px !important;
-		top: -1px !important;
-		margin-top: 3px !important;}
-
-	#userinfo #userinfo_username .donateico a {
-		font-family: Roboto !important;
-		left: 0px !important;
-		text-shadow: none !important;
-		font-size: 1em !important;}
-
-	#userinfo_stats {
-		background:url("../images/mobile/statsicon.png") no-repeat;
-		background-color:transparent;
-		background-size: 25px auto;
-		top: 38px;
-		left: 90px;
-		width: 25px;
-		margin: 0;
-		padding: 0;
-		overflow: visible;
-		z-index:2;}
-
-	ul#userinfo_stats:before {
-		content: none;
-		margin-top: 0px;
-		display: block;
-		margin-left: -26px;
-		margin-bottom: 8px;
-		color: var(--darkGreen);}
-
-	ul#userinfo_stats:hover {
-		background-position:0px 0px;
-		padding-left: 0px;
-		padding-top:37px;
-		width: 25px;
-		background:url("../images/mobile/statsicon.png") no-repeat;
-		background-color:transparent;
-		background-size: 25px auto;
-		z-index:3;}
-
-	ul#userinfo_stats li {
-		width:170px;
-		padding-top:11px;
-		margin: 0 !important;
-		z-index:3;}
-
-	ul#userinfo_stats:hover li {
-		top: 0px;}
-
-	#searchbars ul {
-		background:url("../images/mobile/searchicon.png") no-repeat;
-		background-color:transparent;
-		background-size: contain;
-		top: 141px;
-		left: 135px;
-		width: 23px;
-		height: 23px;
-		margin: 0;
-		padding: 0;
-		overflow: visible}
-
-	#searchbars ul::before {
-		content:none;
-		margin-top: 8px;
-		display: block;
-		margin-left: -24px;
-		margin-bottom: 8px;
-		color: var(--darkGreen);}
-
-	#searchbars ul:hover {
-		padding-left: 0px;
-		padding-top:35px;
-		width: 23px;
-		background-size: contain;}
-
-	#searchbars ul li {
-		display: none;
-		padding: 1px 4px;
-		width: 150px;}
-
-	#searchbars input[type="text"] {
-		height: 35px;}
-
-	#searchbars ul:hover li ul li {
-		left: 0px;}
-
-	#searchbars ul:hover li {
-		left: 0px;
-		background-color: var(--mediumBlue);}
-
-	#searchbars ul:hover li ul li {
-		left: 23px;
-		padding: 10px 0px;}
-
-/*****************************************
-*****************MENU*********************
-*****************************************/
-	#menu {
-		font-family: roboto;
-		font-size:1.1em;}
-
-	#menu ul {
-		background:url("../images/mobile/hamburgermenuicon.png") no-repeat scroll right top rgb(238, 243, 249);
-		background-size: 25px auto;
-		background-color: transparent;
-		display:block;
-		height:22px;
-		width:30px;
-		position:absolute;
-		margin-top: 5px;
-		left: 5px;
-		max-width: 30px;}
-
-	#menu ul:hover {
-		height:auto;
-		padding-top:34px;
-		z-index:99999;}
-
-	#menu ul a {
-		text-shadow: none;}
-
-	#menu ul li {
-		display:none;
-		position:relative;
-		z-index:5;
-		margin:0!important;
-		border-bottom: 1px var(--darkBlue2) solid !important;
-		padding:6px;
-		left:5px;
-		top:0px;
-		width: 120px;
-	    height: 24px;}
-
-	#menu ul:hover li {
-		background: var(--mediumBlue);
-		border:0 solid var(--white);
-		display:block;
-		margin-top:-1px}
-
-	#menu ul li:first-child {
-		border-top:0}
-
-	#menu ul li a {
-		color:var(--white);
-		display:block;
-		font-weight:400;
-		text-decoration:none;
-		position:relative;
-		float:left;
-		width: 90px;}
-
-	#menu ul li:hover {
-		background: var(--darkBlue);
-		border-bottom:none}
+		margin-left: 10px;} */
 
 /*****************************************
 **************ALERTS BARS*****************
@@ -405,10 +177,10 @@
 	#alerts:hover .blend {
 		opacity: 1;}
 
-/*****************************************
+/***********************************************************************
 ****************FOOTER********************
 *****************************************/
-	#server_stats,
+	/* #server_stats,
 	#toplink,
 	#site_debug,
 	#copyright {
@@ -419,13 +191,13 @@
 		background-color: var(--darkBlue);}
 
 	#content {
-		margin-bottom: 0px;}
+		margin-bottom: 0px;} */
 
 /*****************************************
 **************FRONT PAGE******************
 *****************************************/
 	#content  {
-		width: 95%;}
+        width: calc(100% - 30px);}
 
 	.thin {
 		display: flex;
@@ -438,22 +210,17 @@
 		flex-wrap: wrap;
 		flex-direction: row;}
 
-	.sidebar img {
-		width: 90%;}
+	.sidebar img {}
 
 	.main_column {
 		float:none;
 		width: auto;
 		order: 1;}
 
-	.newsdate {
-		display: none;}
+	.newsdate {}
 
 	/**** Hide news items ***/
-	#index .main_column .box:nth-child(3n),
-	#index .main_column .box:nth-child(4n),
-	#index .main_column .box:nth-child(5n),
-	#index .main_column .box:nth-child(6n),
+	#index .main_column .box:nth-child(n+3),
 	#more_news {
 		display:none !important;}
 
@@ -464,36 +231,27 @@
 	.sidebar .colhead_dark,
 	.head {
 		margin-bottom: 0px;}
-
+    #index #stats,
+    #polcont,
+	#slides,
 	#dailygazelle {width: 100%;}
 	#dailygazelle a {margin: 3px 0px;}
-	#dailygazelle .colhead_dark {margin-bottom: 15px;}
-
-	#slides .colhead_dark li {padding-left: 0px;}
-	#slides {width: 100%; margin-right: 0%;}
-	.slides_container {
-		height: 300px;
-		width: auto;
-		left: 0px;
-		margin: 10px auto 0;}
-	.slides_control {width: 100% !important;}
+    #dailygazelle img {max-height: 100% !important;}
+	.slides_container {}
+	.slides_control {}
 	.sidebar #slides ul {width: 100%; margin: 0 auto;}
-	#slides .center a {
-		font-size: .9em;
-		line-height: 15px;
-		width: 100%;
-		display: inline-block;}
+	#slides .center a {}
 
-	.sidebar #slides ul a {
+	/* .sidebar #slides ul a {
 		max-width: 80%;
 		width: 80%;
 		margin: 0 auto;
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		display: inline-block !important;}
+		display: inline-block !important;} */
 
-	#polcont {width: 100%;}
+	/* #polcont {width: 100%;}
 	#polcont p {margin-left: -10px;}
 	.poll li {
 		margin-right:0;
@@ -502,11 +260,9 @@
 		min-height: 9px;
 		padding: 5px 0px;}
 	#polcont ul {margin-right: 0px;}
-	#left_poll, #right_poll {display: none;}
-	#index #stats {width: 100%;}
-	#polcont li {padding: 2px 0px;}
+	#polcont li {padding: 2px 0px;} */
 
-/*****************************************
+/*****************************************revisit
 ************TORRENTS BROWSE***************
 ******************************************/
 	.torrent_table a[href*="edit"],
