@@ -4071,6 +4071,9 @@ h2 {
     width: calc(100% - 10px);
     font-weight: bold;}
 
+hr {
+    border-color: var(--c-txt);}
+
 #torrents #wrapper #content >span[style="float:right;"]:first-child {
     width: unset;}
 
