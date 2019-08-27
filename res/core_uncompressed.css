@@ -1801,6 +1801,9 @@ strong.important_text,
 .torrent_details blockquote#description [style="color: #ff0000;"] {
     color: var(--c-red) !important;}
 
+#user .thin >h2:first-child +.center ~table.border span[style*="green;"] {
+    color: var(--c-green) !important;}
+
 .item_description span[style*="orange;"],
 .info_description span[style*="orange;"],
 #index span[style="color: orange;"] {
