@@ -1,5 +1,5 @@
 ﻿@import url('res/core.css');
-@import url('res/icons_cdcdcd.css');
+@import url('res/icons_9b9b9b.css');
 @import url('res/userscripts.css');
 @import url('res/media.css');
 
@@ -17,10 +17,10 @@
     --c-quote:                          #0a0a0a;
     --c-contrast:                       rgba(255, 255, 255, .2);
     --c-unread-s:                       #968074;
-    --c-unread-i: 						rgb(205, 205, 205);
+    --c-unread-i: 						rgb(180, 180, 180);
     --c-unread-br:                      #7a685e;   
-    --c-txt: 							rgb(205, 205, 205);
-    --c-text-s: 						rgb(155, 155, 155);
+    --c-txt: 							rgb(180, 180, 180);
+    --c-text-s: 						rgb(145, 145, 145);
     --c-curtain:						rgb(45, 45, 45);
     --c-sticky-id-brdr:                 #52545C;
     --c-input-brdr:						#4D5057;
@@ -105,10 +105,10 @@
 /** /COLORS **/
 
 body {
-    background-image: url('res/icons/cdcdcd_elephantish/background.svg');}
+    background-image: url('res/icons/9b9b9b_elephantish/background.svg');}
 /* disabling custom user backgrounds for now */
 #user[style^="background: url("] {
-    background-image: url('res/icons/cdcdcd_elephantish/background.svg') !important;
+    background-image: url('res/icons/9b9b9b_elephantish/background.svg') !important;
     background-size: 50px 50px !important;}
 #logo a {
-    background-image: url('res/icons/cdcdcd_elephantish/logo.svg');}
+    background-image: url('res/icons/9b9b9b_elephantish/logo.svg');}

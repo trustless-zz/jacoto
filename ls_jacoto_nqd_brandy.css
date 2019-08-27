@@ -1,5 +1,5 @@
 ﻿@import url('res/core.css');
-@import url('res/icons_f0f0f0.css');
+@import url('res/icons_c3c3c3.css');
 @import url('res/userscripts.css');
 @import url('res/media.css');
 
@@ -17,10 +17,10 @@
     --c-quote:                          rgba(240, 240, 240, .05);
     --c-contrast:                       rgba(255, 255, 255, .2);
     --c-unread-s:                       #995D3D;
-    --c-unread-i:                       rgb(240, 240, 240);
+    --c-unread-i:                       rgb(195, 195, 195);
     --c-unread-br:                      #724C37;
-    --c-txt: 							rgb(240, 240, 240);
-    --c-text-s: 						rgb(190, 190, 190);
+    --c-txt: 							rgb(195, 195, 195);
+    --c-text-s: 						rgb(170, 170, 170);
     --c-curtain:						rgb(80, 80, 80);
     --c-sticky-id-brdr:                 rgb(100, 100, 100);
     --c-input-brdr:						rgb(95, 95, 95);
@@ -105,13 +105,13 @@
 /** /COLORS **/
 
 body {
-    background-image: url('res/icons/f0f0f0/background.svg');}
+    background-image: url('res/icons/c3c3c3/background.svg');}
 /* disabling custom user backgrounds for now */
 #user[style^="background: url("] {
-    background-image: url('res/icons/f0f0f0/background.svg') !important;
+    background-image: url('res/icons/c3c3c3/background.svg') !important;
     background-size: 50px 50px !important;}
 #logo a {
-    background-image: url('res/icons/f0f0f0_brandy/logo.svg');}
+    background-image: url('res/icons/c3c3c3_brandy/logo.svg');}
 
 /* large sidebar */
 @media (min-width: 1387px) {
