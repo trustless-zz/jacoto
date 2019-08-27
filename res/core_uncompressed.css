@@ -6552,9 +6552,9 @@ td >img[title="Gold"] {
     font-size: 14px;
     line-height: 1em;
     padding: 1px 3px 1px 2px;
-    background: var(--p-head-grdnt);
+    background: var(--p-subcolhead);
     outline: var(--p-border);
-    outline-color: var(--c-table-brdr);}
+    outline-color: var(--c-unread-br);}
 
 
 /** going with position:absolute because display:flex needs containers **/
