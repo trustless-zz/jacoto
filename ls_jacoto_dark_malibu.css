@@ -1,5 +1,5 @@
 ﻿@import url('res/core.css');
-@import url('res/icons_9b9b9b.css');
+@import url('res/icons_a5a5a5.css');
 @import url('res/userscripts.css');
 @import url('res/media.css');
 
@@ -17,10 +17,10 @@
     --c-quote:                          rgba(240, 240, 240, .05);
     --c-contrast:                       rgba(255, 255, 255, .2);
     --c-unread-s:                       #325775;
-    --c-unread-i:                       rgb(155, 155, 155);
+    --c-unread-i:                       rgb(165, 165, 165);
     --c-unread-br:                      #253F53;
-    --c-txt: 							rgb(155, 155, 155);
-    --c-text-s: 						rgb(130, 130, 130);
+    --c-txt: 							rgb(165, 165, 165);
+    --c-text-s: 						rgb(140, 140, 140);
     --c-curtain:						rgb(45, 45, 45);
     --c-sticky-id-brdr:                 rgb(65, 65, 65);
     --c-input-brdr:						rgb(60, 60, 60);
@@ -106,13 +106,13 @@
 /** /COLORS **/
 
 body {
-    background-image: url('res/icons/9b9b9b/background.svg');}
+    background-image: url('res/icons/a5a5a5/background.svg');}
 /* disabling custom user backgrounds for now */
 #user[style^="background: url("] {
-    background-image: url('res/icons/9b9b9b/background.svg') !important;
+    background-image: url('res/icons/a5a5a5/background.svg') !important;
     background-size: 50px 50px !important;}
 #logo a {
-    background-image: url('res/icons/9b9b9b_malibu/logo.svg');}
+    background-image: url('res/icons/a5a5a5_malibu/logo.svg');}
 
 /* large sidebar */
 @media (min-width: 1387px) {

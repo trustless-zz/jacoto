@@ -11,7 +11,7 @@
 
 .fancybox-image,
 .lightbox img {
-    background-image: url('icons/9b9b9b/transparent.svg');}
+    background-image: url('icons/a5a5a5/transparent.svg');}
 #wrapper .userscript-gallery-image,
 #artist .sidebar img,
 .sidebar .box.box_albumart img,
@@ -28,7 +28,7 @@
 #collections #coverart.box img,
 .sidebar .box.box_image_coverart a img,
 #bookmarks #collage_table td img {
-    background-image: url('icons/9b9b9b/transparent50.svg');}
+    background-image: url('icons/a5a5a5/transparent50.svg');}
 
 .Bandcamp {background-image: url("weblinks/grish/Bandcamp.svg");}
 .Discogs {background-image: url("weblinks/grish/Discogs.svg");}

@@ -1,5 +1,5 @@
 ﻿@import url('res/core.css');
-@import url('res/icons_9b9b9b.css');
+@import url('res/icons_a5a5a5.css');
 @import url('res/userscripts.css');
 @import url('res/media.css');
 
@@ -106,10 +106,10 @@
 /** /COLORS **/
 
 body {
-    background-image: url('res/icons/9b9b9b_elephantish/background.svg');}
+    background-image: url('res/icons/a5a5a5_elephantish/background.svg');}
 /* disabling custom user backgrounds for now */
 #user[style^="background: url("] {
-    background-image: url('res/icons/9b9b9b_elephantish/background.svg') !important;
+    background-image: url('res/icons/a5a5a5_elephantish/background.svg') !important;
     background-size: 50px 50px !important;}
 #logo a {
-    background-image: url('res/icons/9b9b9b_elephantish/logo.svg');}
+    background-image: url('res/icons/a5a5a5_elephantish/logo.svg');}
