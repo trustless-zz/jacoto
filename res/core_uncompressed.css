@@ -5574,6 +5574,7 @@ input[type="radio"]:active {
     top: 0;
     left: -1px;}
 
+table.forum_index, /* unread stripe is getting cut NOW? -REVISIT*/
 #reportsv2 #dynamic_form >table.border {
     border-collapse: inherit;
     border-spacing: 0;}
