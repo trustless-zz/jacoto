@@ -28,7 +28,7 @@
     --p-contrast:                       unset; /*drop-shadow(0 0 2px var(--c-contrast));*/
     --p-post-img:                       drop-shadow(0 0 3px var(--c-post-img));
     /* --p-post-img-hvr:                   drop-shadow(0 0 3px var(--c-b3)); */
-    --p-unread-stripe:                  2px 0 0 0 var(--c-unread-s);
+    /* --p-unread-stripe:                  2px 0 0 0 var(--c-unread-s); */
     --p-poll-grdnt:						linear-gradient(to bottom, var(--c-b00), var(--c-bg)), linear-gradient(to right, var(--c-b1), var(--c-b2));
     --p-colhead-tr-bcg: 				var(--c-box) linear-gradient(to top,var(--c-table-brdr),var(--c-box));
     --p-subcolhead:                     var(--c-sb1) linear-gradient(155deg,var(--c-sb1),var(--c-sb2));
@@ -529,6 +529,63 @@ a[title="Remove"],
     mask-image: url('icons/nav/donate_progress/r10.svg');
     background-color: var(--c-r10);}
 
+
+
+.clan_stat_totals,
+
+.profile .box_stats #share_score .stat,
+.profile .box_stats #ratio .stat,
+
+#shop li.item_type_0.featured #clickable >div,
+
+.gazelle_art[style*="Error"],
+
+#share_score,
+
+.backpack #backpack >div,
+#equipment >div,
+#crafting_panel >div,
+#wrapper #trading_panel #items >div:not(.linkbox),
+
+#backpack #items >span,
+#backpack #items >input,
+#wrapper #trading_panel #items >span,
+#wrapper #trading_panel #items >input,
+#equipment #items_inner >span,
+#equipment #items_inner >input,
+#crafting_panel #items >span,
+#crafting_panel #items >input,
+
+tr.group_torrent >td,
+#tools #mastergroups,
+#slides .slides_container,
+
+#usersreview,
+
+#collections table.collections_art_display,
+#donate .box.pad.donation_info,
+#forums .forum_post .avatar,
+#forums .forums_search .search_form,
+#forums .thin>.box.thin.clear .head.colhead_dark,
+#gazelleview table.gazelleinfo,
+#newthreadpreview #pollpreview .head.colhead_dark,
+#newthreadpreview .forum_post .colhead_dark span[style="float: left;"],
+#quickreplypreview .colhead_dark span[style="float:left;"],
+#reportsv2 #report_table,
+#torrent_table #displayname,
+#torrent_table .group.discog td[colspan="5"],
+#user .thin>h2:first-child+form[method=post],
+#wrapper #trading_panel .gold_trade input#my_gold_trade_amount,
+.forum_post .colhead_dark a[onclick],
+.forum_post .colhead_dark div[style="float: left;"],
+.forum_post .colhead_dark div[style="float:left;"],
+.forum_post span.user_title,
+.head[onclick],
+.head[title="Click to expand/collapse"],
+.sidebar #freeleech_time_left #progress_bar,
+input[type=number],
+td.center.cats_col+td,
+
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
 #forums .forum_index tr:not(.colhead) td:first-child,
@@ -537,8 +594,10 @@ a[title="Remove"],
 #forums .forum_subscriptions tr:not(.colhead) td:first-child,
 #stats_seeding a,
 #stats_leeching a,
-#stats_share_score a {
+#stats_share_score a,
+tr.unreadpm td:first-child {
     position: relative;}
+
 #forums .forum_index tr:not(.colhead) td:first-child:before,
 #forums .forum_mythreads tr:not(.colhead) td:first-child:before,
 #forums .forum_editsubs tr:not(.colhead) td:first-child:before,
@@ -914,15 +973,15 @@ li.active,
 #forums td.unread_locked_sticky ~td h4.min_padding {
     font-weight: 600 !important;}
 
-#requests #requests_list .sticky >td:first-child,
-.torrent_table .sticky td.center:first-child,
-td.unread,
-td.unread_sticky,
-td.unread_locked,
-td.unread_locked_sticky,
-tr.unreadpm td:first-child {
+/* #requests #requests_list .sticky >td:first-child:after,
+.torrent_table .sticky td.center:first-child:after,
+td.unread:after,
+td.unread_sticky:after,
+td.unread_locked:after,
+td.unread_locked_sticky:after,
+tr.unreadpm td:first-child:after {
     -webkit-box-shadow: inset var(--p-unread-stripe);
-    box-shadow: inset var(--p-unread-stripe);}
+    box-shadow: inset var(--p-unread-stripe);} */
 /* .forum_index,
 .forum_mythreads >table,
 .forum_editsubs >table,
@@ -2043,9 +2102,6 @@ img#authcode,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a {
     margin: 0;}
 
-#tools #mastergroups,
-#slides .slides_container {
-    position: relative;}
 #slides .slides_container:before,
 #slides .slides_container:after {
     content: '';
@@ -2111,30 +2167,7 @@ img#authcode,
     border-color: var(--c-main-brdr);
     background: var(--p-head-grdnt);
     margin: 0 0 15px 0;}
-#collections table.collections_art_display,
-#donate .box.pad.donation_info,
-#forums .forum_post .avatar,
-#forums .forums_search .search_form,
-#forums .thin>.box.thin.clear .head.colhead_dark,
-#gazelleview table.gazelleinfo,
-#newthreadpreview #pollpreview .head.colhead_dark,
-#newthreadpreview .forum_post .colhead_dark span[style="float: left;"],
-#quickreplypreview .colhead_dark span[style="float:left;"],
-#reportsv2 #report_table,
-#torrent_table #displayname,
-#torrent_table .group.discog td[colspan="5"],
-#user .thin>h2:first-child+form[method=post],
-#wrapper #trading_panel .gold_trade input#my_gold_trade_amount,
-.forum_post .colhead_dark a[onclick],
-.forum_post .colhead_dark div[style="float: left;"],
-.forum_post .colhead_dark div[style="float:left;"],
-.forum_post span.user_title,
-.head[onclick],
-.head[title="Click to expand/collapse"],
-.sidebar #freeleech_time_left #progress_bar,
-input[type=number],
-td.center.cats_col+td {
-    position: relative;}
+
 .sidebar #freeleech_time_left #progress_bar .main_bar {
     background: var(--c-b3) var(--p-lsfl-pulse);
     display: block;
@@ -2634,7 +2667,9 @@ table.adventure_table .colhead td {
 .torrent_table .show_torrents_link {
     height: 20px;
     width: 20px;
-    cursor: default;}
+    cursor: default;
+    z-index: 2;
+    position: relative;}
 #grouplinks td,
 #artist #torrent_table .group_torrent >td:not(.edition_info),
 #collections #torrent_table .group_torrent >td:not(.edition_info),
@@ -4226,8 +4261,6 @@ h3 {
     color: var(--c-txt);}
 
 /* '#allreviewslink' shouldn't be inside of a review 'tr' */
-#usersreview {
-    position: relative;}
 .box.userreviews_div {
     padding-bottom: 27px;}
 #allreviewslink {
@@ -5530,6 +5563,7 @@ input[type="radio"]:active {
 #inbox h2 +#messageform >.box.pad textarea#quickpost {
     margin: 10px auto;}
 #inbox tr.unreadpm td:first-child input[type="checkbox"] {
+    z-index: 2;
     margin: 3px 3px 3px 2px;}
 
 .profile #community_stats:not([style="display: none;"]) {
@@ -5574,7 +5608,7 @@ input[type="radio"]:active {
     top: 0;
     left: -1px;}
 
-table.forum_index, /* unread stripe is getting cut NOW? -REVISIT*/
+/* table.forum_index, -unread stripe is getting cut NOW?*/
 #reportsv2 #dynamic_form >table.border {
     border-collapse: inherit;
     border-spacing: 0;}
@@ -6568,8 +6602,6 @@ td >img[title="Gold"] {
     width: 100%;
     height: 594px;}
 
-.clan_stat_totals {
-    position: relative;}
 .clan_stat_totals h3 {
     font-weight: 600;
     margin-left: 52px;
@@ -7161,9 +7193,6 @@ span.size5 img {
 .profile .box_stats #gold .stat {
     background-repeat: no-repeat;
     background-position: left center;}
-.profile .box_stats #share_score .stat,
-.profile .box_stats #ratio .stat {
-    position: relative;}
 .profile .box_stats #share_score .stat:before,
 .profile .box_stats #ratio .stat:before {
     content: '';
@@ -7266,26 +7295,45 @@ span.size5 img {
 a:hover .ratings span {
     color: var(--c-anchor-hvr);}
 
-tr.group_torrent >td {
-    position: relative;}
+#requests #requests_list .sticky >td:first-child:after, /* using pseudo element to avoid border-collapse bug */
+.torrent_table .sticky td.center:first-child:after,
+td.unread:after,
+td.unread_sticky:after,
+td.unread_locked:after,
+td.unread_locked_sticky:after,
+tr.unreadpm td:first-child:after,
+
 #color_leeching:before,
 #color_seeding:before,
 #color_uploaded:before,
 #color_snatched:before,
 #color_downloaded:before {
-    opacity: .8;
     content: '';
     height: 100%;
     width: 2px;
     position: absolute;
     top: 0;
     left: 0;}
+#color_leeching:before,
+#color_seeding:before,
+#color_uploaded:before,
+#color_snatched:before,
+#color_downloaded:before {
+    opacity: .8;}
 tr:hover #color_leeching:before,
 tr:hover #color_seeding:before,
 tr:hover #color_uploaded:before,
 tr:hover #color_snatched:before,
 tr:hover #color_downloaded:before {
     opacity: 1;}
+#requests #requests_list .sticky >td:first-child:after,
+.torrent_table .sticky td.center:first-child:after,
+td.unread:after,
+td.unread_sticky:after,
+td.unread_locked:after,
+td.unread_locked_sticky:after,
+tr.unreadpm td:first-child:after {
+    background-color: var(--c-unread-s);}
 #color_leeching:before      {background-color: var(--c-leech);}
 #color_seeding:before       {background-color: var(--c-seed);}
 #color_uploaded:before      {background-color: var(--c-upload);}
@@ -7721,8 +7769,6 @@ table#downloaded_table td.center.cats_col +td >span:before {
     background-color: unset;
     outline: unset;}
 
-#shop li.item_type_0.featured #clickable >div {
-    position: relative;}
 #shop li.item_li.featured #clickable:before {
     content: '';
     width: 184px;
@@ -8791,8 +8837,6 @@ body#user.inventory {}
     width: calc(25% - 7.5px);
     margin-bottom: 10px;}
 
-.gazelle_art[style*="Error"] {
-    position: relative;}
 .gazelle_art[style*="Error"]:before {
     content: 'ERROR';
     position: absolute;
@@ -9094,8 +9138,6 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 **************** SHARE SCORE PAGE *******************
 ****************************************************/
 /* presudo element galore */
-#share_score {
-    position: relative;}
 #share_score >.large_progress_bar {
     margin: 59px 11px 26px 11px;
     position: relative;}
@@ -9450,11 +9492,6 @@ table.adventure_table h3 {
 .crafting_manager .select2-container {
 	width: 100% !important;}
 
-.backpack #backpack >div,
-#equipment >div,
-#crafting_panel >div,
-#wrapper #trading_panel #items >div:not(.linkbox) {
-    position: relative;}
 #backpack #slots_header:before,
 #backpack #items:before,
 #wrapper #trading_panel #items:before,
@@ -9467,15 +9504,6 @@ table.adventure_table h3 {
     top: 0;
     left: 0;
     background: var(--p-head-grdnt);}
-#backpack #items >span,
-#backpack #items >input,
-#wrapper #trading_panel #items >span,
-#wrapper #trading_panel #items >input,
-#equipment #items_inner >span,
-#equipment #items_inner >input,
-#crafting_panel #items >span,
-#crafting_panel #items >input {
-    position: relative;}
 #backpack #items >span,
 #wrapper #trading_panel #items >span,
 #equipment #items_inner >span,
