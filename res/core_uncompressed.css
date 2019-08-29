@@ -3180,7 +3180,8 @@ tr.likes td[id^="likers_"] >strong,
 #extlink_table              tr:not(.colhead) td:nth-child(2),
 #deletereview,
 .box.box_coltags .pad li,
-.box.box_coltags .head span[title="Add Tags"] a {
+.box.box_coltags .head span[title="Add Tags"] a,
+#image_block >a[onclick] {
     font-size: 0;
     line-height: 0;}
 .box_tags .stats.nobullet div a:nth-child(1) {
@@ -3204,6 +3205,7 @@ tr.likes td[id^="likers_"] >strong,
 .box_tags .stats.nobullet li >a {
     line-height: 20px;
     margin: 3px 0;}
+#image_block >a[onclick]:before,
 #image_block a,
 #newthreadform #newthreadtext #answer_block a,
 a[href^="javascript:IndexVote("] strong:before,
@@ -3623,6 +3625,7 @@ strong.mature +strong +br,
     width: 100%;
     min-width: 170px;
     max-width: calc(50% + 60px);}
+#image_block >a[onclick]:nth-of-type(1):before,
 a[href^="javascript:IndexVote("] strong:before,
 a[href^="javascript:Vote("] strong:before,
 #requests table.border td.nobr:nth-child(2) strong:before,
@@ -3630,6 +3633,7 @@ a[href^="javascript:Vote("] strong:before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(1):before,
 .box.box_coltags .head span[title="Add Tags"] a:before {
     content: '+';}
+#image_block >a[onclick]:nth-of-type(2):before,
 .box_tags .stats.nobullet div a:nth-child(1):before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(2):before {
     content: '-';}
@@ -3864,7 +3868,7 @@ li:not(.suggested_similar) .similar_votes >span {
     display: none;}
 
 /** error message **/
-#wrapper .thin >h2:first-child +.box.pad:last-child {
+#wrapper .thin:not(.center) >h2:first-child +.box.pad:last-child { /*the same structure as 'Edit Images' page */
     background-color: unset;
     -webkit-box-shadow: unset;
     box-shadow: unset;
@@ -4742,6 +4746,7 @@ input#file {
 .ongoing_clan_war td.label,
 #torrents .center.thin >.box.pad #image_block {
 	text-align: left;}
+#image_block >span:last-of-type input,
 #torrents .center.thin >.box.pad input[name="summary"],
 .ongoing_clan_war .large_progress_bar {
     margin-bottom: 8px;}
@@ -5218,11 +5223,14 @@ input[type="radio"] {
     display: inline-block;
     padding: 6px 6px 5px 5px;
     border: var(--p-border);
-    border-color: var(--c-input-brdr);
     background-color: var(--c-input);
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
     -webkit-appearance: none;}
+input[type="checkbox"] {
+    border-color: var(--c-input-brdr);}
+input[type="radio"] {
+    border-color: var(--c-sticky-id-brdr);}
 input[type="checkbox"]:checked,
 input[type="radio"]:checked {
     /* background-color: var(--c-body); */
