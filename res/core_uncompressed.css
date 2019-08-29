@@ -9592,7 +9592,7 @@ table.adventure_table h3 {
     border-color: var(--c-main-brdr);
     background-color: var(--c-input-obj);}
 
-#wrapper #crafting_panel .item .item_count {
+#wrapper .item .item_count {
     border: var(--p-border);
     border-color: var(--c-table-brdr);
     background-color: var(--c-tgroup);
@@ -9608,7 +9608,7 @@ table.adventure_table h3 {
         1px -1px 0 var(--c-edition),
         -1px 1px 0 var(--c-edition),
         1px 1px 0 var(--c-edition);*/}
-#wrapper #crafting_panel .item:hover .item_count {
+#wrapper .item:hover .item_count {
     background-color: var(--c-box);}
 
 /*** Ability icons ***/

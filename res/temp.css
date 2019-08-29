@@ -350,6 +350,7 @@
 
 	/*When | Snatches | Seeders | Leechers*/
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(5) {  	/*Time Uploaded*/
+        border: none;
 		order: 3;
 		float: left;
 		width: auto;
@@ -358,6 +359,7 @@
 		content: "\00a0\00a0 |";}
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(8) {		/*Snatches*/
+        border: none;
 		order: 4;
 		float: left;
 		width: auto;
@@ -368,6 +370,7 @@
 		content: "\00a0\00a0 | \00a0";}
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(9) {		/*Seeders*/
+        border: none;
 		order: 5;
 		float: left;
 		width: auto;
@@ -378,6 +381,7 @@
 		content: "";}
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(10) { 	/*Leechers*/
+        border: none;
 		order: 6;
 		float: left;
 		width: auto;
