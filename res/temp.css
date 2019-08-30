@@ -14,6 +14,16 @@
     .clan_trophy,
 	.global_buffs {display: none;}
     
+    #header #userinfo_username {
+        display: flex;
+        position: absolute;
+        font-size: 15px;
+        line-height: var(--p-lh);
+        z-index: 99;
+        top: 38px;
+        right: 0;
+        height: 38px;}
+    
     #header {
         display: flex;
         flex-flow: row wrap;}
@@ -42,7 +52,7 @@
         width: 65px;
         top: 0;
         left: 0;
-        position: absolute;
+        position: relative;
         z-index: 999;}
     #logo a {
         background-color: transparent;
@@ -88,6 +98,8 @@
         background-size: 28px 28px;
         background-position: top left;
         background-repeat: no-repeat;}
+    
+    #userinfo_stats >li,
     ul#userinfo_minor >li,
     #header >#searchbars >ul,
     #menu ul {
@@ -121,6 +133,26 @@
         margin: 0;
         background-position: top left;
         background-repeat: no-repeat;}
+    
+    #userinfo_stats {
+        position: absolute;
+        background-size: 28px 28px;
+        top: 5px;
+        background-repeat: no-repeat;
+        left: 204px;
+        width: 28px;
+        font-size: 16px;
+        background-color: red;
+        height: 28px;
+        margin: 0;
+        padding: 0;
+        overflow: visible;
+        z-index: 99;
+        text-align: center !important;
+        display: flex;
+        flex-flow: column;
+        flex-direction: row;
+        flex-wrap: wrap;}
     
 /*****************************************
 **************DEFAULT STYLES**************
@@ -1664,7 +1696,7 @@
 
 
 
-	/* Silvertea's code to fix hover of username */
+	/*
 	#searchbars ul {
 	    left: 170px;}
 	#userinfo_username .sub,
@@ -1714,7 +1746,7 @@
 	    padding: 10px 8px;}
 
 
-}
+} */
 
 
 
@@ -2516,7 +2548,7 @@ body {
     .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
         width: 100%;}
 }
-@media (max-width: 1280px) {
+@media (min-width: 801px) and (max-width: 1280px) {
     #header #nav_userinfo a.username {
         transition-delay: .5s;
         color: transparent;}

@@ -761,12 +761,12 @@ body {
 
 
 /** scale **/
-@media (max-width: 1421px) {
+@media (min-width: 801px) and (max-width: 1421px) {
     .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
     .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
         width: 100%;}
 }
-@media (max-width: 1280px) {
+@media (min-width: 801px) and (max-width: 1280px) {
     #header #nav_userinfo a.username {
         transition-delay: .5s;
         color: transparent;}
@@ -824,7 +824,7 @@ body {
             calc(100% + 10px) 300px,
             -10px 300px);}
 }
-@media (max-width: 1185px) {
+@media (min-width: 801px) and (max-width: 1185px) {
     .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
     #artist #torrent_table .group_torrent td[colspan="2"] >a,
     #collections #torrent_table .group_torrent td[colspan="3"] >a,
@@ -832,11 +832,11 @@ body {
     #torrents .group_torrent td:first-child >a {
         word-break: break-all;}
 }
-@media (max-width: 1750px) {
+@media (min-width: 801px) and (max-width: 1750px) {
     #wrapper .global_buffs {
         width: calc(200px - 200px / 3);}
 }
-@media (max-width: 1600px) {
+@media (min-width: 801px) and (max-width: 1600px) {
     #wrapper .global_buffs .buff_text .buff_multiplier {
         font-size: 15px;}
     #wrapper .global_buffs>div {
@@ -844,11 +844,11 @@ body {
     #wrapper .global_buffs {
         width: calc(170px - 170px / 3);}
 }
-@media (max-width: 1550px) {
+@media (min-width: 801px) and (max-width: 1550px) {
     #wrapper .global_buffs {
         width: calc(170px / 3);}
 }
-@media (max-width: 1450px) {
+@media (min-width: 801px) and (max-width: 1450px) {
     #wrapper #header .clan_trophy img {
         height: 48px;
         padding: 5px 0;}
@@ -880,11 +880,11 @@ body {
         width: 149px;} */
 
 /* backpack */
-@media (max-width: 1302px) {
+@media (min-width: 801px) and (max-width: 1302px) {
     #wrapper #backpack  #items {
         width: 275px;}
 }
-@media (max-width: 1178px) {
+@media (min-width: 801px) and (max-width: 1178px) {
     #wrapper #backpack  #items {
         width: calc(100% - 237px);
         float: right;
@@ -896,15 +896,15 @@ body {
 }
 
 /* crafting */
-@media (max-width: 1420px) {
+@media (min-width: 801px) and (max-width: 1420px) {
     #wrapper #crafting_panel #items {
         width: 399px;}
 }
-@media (max-width: 1296px) {
+@media (min-width: 801px) and (max-width: 1296px) {
     #wrapper #crafting_panel #items {
         width: 275px;}
 }
-@media (max-width: 1172px) {
+@media (min-width: 801px) and (max-width: 1172px) {
     #wrapper #crafting_panel #items {
         width: calc(100% - 237px);
         float: right;
@@ -917,15 +917,15 @@ body {
 }
 
 /* equipment */
-@media (max-width: 1413px) {
+@media (min-width: 801px) and (max-width: 1413px) {
     #wrapper #equipment #items {
         width: 399px;}
 }
-@media (max-width: 1289px) {
+@media (min-width: 801px) and (max-width: 1289px) {
     #wrapper #equipment #items {
         width: 275px;}
 }
-@media (max-width: 1165px) {
+@media (min-width: 801px) and (max-width: 1165px) {
     #wrapper #equipment #items {
         width: calc(100% - 237px);
         float: right;
@@ -937,19 +937,19 @@ body {
 }
 
 /* trading */
-@media (max-width: 1347px) {
+@media (min-width: 801px) and (max-width: 1347px) {
     #wrapper #trading_panel #items {
         width: 275px;}
 }
-@media (max-width: 1223px) {
+@media (min-width: 801px) and (max-width: 1223px) {
     #wrapper #content #trading_panel #my_trade_table {
         width: 275px;}
 }
-@media (max-width: 1099px) {
+@media (min-width: 801px) and (max-width: 1099px) {
     #wrapper #content #trading_panel #other_trade_table {
         width: 275px;}
 }
-@media (max-width: 975px) {
+@media (min-width: 801px) and (max-width: 975px) {
     #wrapper #trading_panel #items {
         width: 100%;
         float: right;
@@ -961,13 +961,13 @@ body {
 }
     
 /* shop */
-@media (max-width: 1239px) {
+@media (min-width: 801px) and (max-width: 1239px) {
     #shop li.item_li {
         width: calc(100% / 3 - 10px);}
     #shop li.featured {
         width: calc(50% - 10px);}
 }
-@media (max-width: 1017px) {
+@media (min-width: 801px) and (max-width: 1017px) {
     #shop li.item_li {
         width: calc(50% - 10px);}
     #wrapper .inventory li.item_li, /*inventory */
@@ -977,7 +977,7 @@ body {
 
 
 /* top10 tags */
-@media (max-width: 1150px) {
+@media (min-width: 801px) and (max-width: 1150px) {
     .thin.top10_tags #ut,
     .thin.top10_tags #ur,
     .thin.top10_tags #v {
@@ -985,48 +985,48 @@ body {
 }
 
 /* forum post image size */
-@media (max-width: 1019px) {
+@media (min-width: 801px) and (max-width: 1019px) {
     #wrapper .forum_post td.body img {
         max-width: 100% !important;}
 }
 /* news post image size */
-@media (max-width: 1170px) {
+@media (min-width: 801px) and (max-width: 1170px) {
     #wrapper .box.news_post >.pad img {
         max-width: 100% !important;}
 }
 
 /* games >filter */ /* 53% */ /* revisit */
-@media (max-width: 1405px) {
+@media (min-width: 801px) and (max-width: 1405px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 553px;}
 }
-@media (max-width: 1305px) {
+@media (min-width: 801px) and (max-width: 1305px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 506px;}
 }
-@media (max-width: 1205px) {
+@media (min-width: 801px) and (max-width: 1205px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 459px;}
 }
-@media (max-width: 1105px) {
+@media (min-width: 801px) and (max-width: 1105px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 412px;}
 }
-@media (max-width: 1005px) {
+@media (min-width: 801px) and (max-width: 1005px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 365px;}
 }
-@media (max-width: 905px) {
+@media (min-width: 801px) and (max-width: 905px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 318px;}
 }
-@media (max-width: 805px) {
+@media (min-width: 801px) and (max-width: 805px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 271px;}
