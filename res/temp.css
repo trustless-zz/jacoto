@@ -9,8 +9,119 @@
 ********************MOBILE DISPLAYS (<800px)************************
 *******************************************************************/
 @media screen and (max-width: 800px) {
-	#header {display:none;}
+	/* #header {display:none;} */
+    #alerts,
+    .clan_trophy,
 	.global_buffs {display: none;}
+    
+    #header {
+        display: flex;
+        flex-flow: row wrap;}
+    
+    #extra1,
+    #extra2,
+    #extra3 {
+        content: '';
+        position: absolute;
+        z-index: 98;
+        left: 0;
+        width: 100%;
+        height: 38px;}
+    #extra2 { /* #menu */
+        top: 0px;
+        background: var(--p-menu);}
+    #extra3 { /* #userinfo */
+        top: 38px;
+        background: var(--p-userinfo);}
+    
+    #wrapper #header #logo a {
+        background-size: auto 70px;}
+    #logo {
+        background: unset !important;
+        height: 76px;
+        width: 65px;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 999;}
+    #logo a {
+        background-color: transparent;
+        display: block;}
+    #logo:before,
+    #logo:after {
+        content: '';
+        width: 65px;
+        height: 38px;
+        position: absolute;
+        left: 0;
+        z-index: -99;
+        pointer-events: none;
+        -webkit-transition: all .25s linear;
+        transition: all .25s linear;}
+    #logo:before {
+        background: linear-gradient(135deg,var(--c-b1) calc(100% - 53px),var(--c-b00) calc(100% - 24px)) no-repeat -21px 0;
+        top: 0px;}
+    #logo:after {
+        background: linear-gradient(135deg,var(--c-b2) calc(100% - 74px),var(--c-b00) calc(100% - 45px)) no-repeat -21px 0;
+        top: 38px;}
+    #logo:hover:after,
+    #logo:hover:before {
+        background-position: 0 0;}
+    #header #logo a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-position: center;}
+    
+    #menu {
+        z-index: 99;
+        display: inline-block;
+        max-height: 184px;
+        position: absolute;
+        top: 5px;
+        left: 75px;
+        width: 28px;
+        background-color: red;
+        height: 28px;
+        background-size: 28px 28px;
+        background-position: top left;
+        background-repeat: no-repeat;}
+    ul#userinfo_minor >li,
+    #header >#searchbars >ul,
+    #menu ul {
+        display: none;}
+    
+    #header >#searchbars {
+        margin: 0 !important;
+        display: inline-block;
+        max-height: 184px;
+        position: absolute;
+        width: 28px;
+        background-color: red;
+        height: 28px;
+        background-size: 28px 28px;
+        background-position: top left;
+        background-repeat: no-repeat;
+        top: 5px;
+        left: 118px;
+        z-index: 99;}
+    
+    ul#userinfo_minor {
+        position: absolute;
+        background-size: 28px 28px;
+        width: 28px;
+        height: 28px;
+        left: 161px;
+        top: 5px;
+        background-color: red;
+        z-index: 99;
+        padding: 0;
+        margin: 0;
+        background-position: top left;
+        background-repeat: no-repeat;}
+    
 /*****************************************
 **************DEFAULT STYLES**************
 *****************************************/
