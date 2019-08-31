@@ -2264,7 +2264,7 @@ i.fa.fa-fl-pots {
     width: calc(200px / 3);
     float: unset !important;
     padding: 0 !important;
-    height: 100%;}
+    height: auto;}
 #wrapper .global_buffs .fa {
     font-size: 40px;
     filter: none !important;}
