@@ -147,11 +147,80 @@
         top: 8px;
         left: 58px;
         width: 28px;
-        background-color: red;
         height: 28px;
         background-size: 28px 28px;
         background-position: top left;
         background-repeat: no-repeat;}
+    
+    #wrapper #header .global_buffs:before,
+    #header #alerts:before,
+    #header .sub:before,
+    #userinfo_stats:before,
+    #userinfo_minor:before,
+    #header >#searchbars:before,
+    #menu:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 28px;
+        height: 28px;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        background-color: var(--c-txt);}
+    
+    #wrapper #header .global_buffs:before {
+        -webkit-mask-image: url('icons/mobile/buffs.svg');
+        mask-image: url('icons/mobile/buffs.svg');}
+    #wrapper #header .global_buffs:hover:before {
+        -webkit-mask-image: url('icons/mobile/buffs_hover.svg');
+        mask-image: url('icons/mobile/buffs_hover.svg');}
+    
+    #header #alerts:before {
+        -webkit-mask-image: url('icons/mobile/toolbox.svg');
+        mask-image: url('icons/mobile/toolbox.svg');}
+    #header #alerts:hover:before {
+        -webkit-mask-image: url('icons/mobile/toolbox_hover.svg');
+        mask-image: url('icons/mobile/toolbox_hover.svg');}
+    
+    #header .sub:before {
+        -webkit-mask-image: url('icons/mobile/header-sub.svg');
+        mask-image: url('icons/mobile/header-sub.svg');}
+    #header .sub:hover:before {
+        -webkit-mask-image: url('icons/mobile/header-sub_hover.svg');
+        mask-image: url('icons/mobile/header-sub_hover.svg');}
+    
+    #userinfo_stats:before {
+        -webkit-mask-image: url('icons/mobile/stats.svg');
+        mask-image: url('icons/mobile/stats.svg');}
+    #userinfo_stats:hover:before {
+        -webkit-mask-image: url('icons/mobile/stats_hover.svg');
+        mask-image: url('icons/mobile/stats_hover.svg');}
+    
+    #userinfo_minor:before {
+        -webkit-mask-image: url('icons/mobile/minor.svg');
+        mask-image: url('icons/mobile/minor.svg');}
+    #userinfo_minor:hover:before {
+        -webkit-mask-image: url('icons/mobile/minor_hover.svg');
+        mask-image: url('icons/mobile/minor_hover.svg');}
+    
+    #header >#searchbars:before {
+        -webkit-mask-image: url('icons/mobile/search.svg');
+        mask-image: url('icons/mobile/search.svg');}
+    #header >#searchbars:hover:before {
+        -webkit-mask-image: url('icons/mobile/search_hover.svg');
+        mask-image: url('icons/mobile/search_hover.svg');}
+    
+    #menu:before {
+        -webkit-mask-image: url('icons/mobile/menu.svg');
+        mask-image: url('icons/mobile/menu.svg');}
+    #menu:hover:before {
+        -webkit-mask-image: url('icons/mobile/menu_hover.svg');
+        mask-image: url('icons/mobile/menu_hover.svg');}
     
     #wrapper #header .global_buffs >div,
     #alerts >div,
@@ -168,7 +237,6 @@
         max-height: 184px;
         position: absolute;
         width: 28px;
-        background-color: red;
         height: 28px;
         background-size: 28px 28px;
         background-position: top left;
@@ -450,7 +518,8 @@
 /*****************************************
 **************FRONT PAGE******************
 *****************************************/
-	#content  {
+	#content,
+    #footer  {
         width: calc(100% - 30px);}
 
 	.thin {
