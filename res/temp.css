@@ -159,6 +159,7 @@
     #userinfo_minor:before,
     #header >#searchbars:before,
     #menu:before {
+        z-index: 2;
         content: '';
         position: absolute;
         top: 0;
@@ -172,6 +173,28 @@
         mask-repeat: no-repeat;
         mask-size: contain;
         background-color: var(--c-txt);}
+    #wrapper #header .global_buffs:after,
+    #header #alerts:after,
+    #header .sub:after,
+    #userinfo_stats:after,
+    #userinfo_minor:after,
+    #header >#searchbars:after,
+    #menu:after {
+        z-index: 1;
+        content: '';
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: 38px;
+        height: 38px;}
+    #wrapper #header .global_buffs:hover:after,
+    #header #alerts:hover:after,
+    #header .sub:hover:after,
+    #userinfo_stats:hover:after,
+    #userinfo_minor:hover:after,
+    #header >#searchbars:hover:after,
+    #menu:hover:after {
+        background-color: var(--c-anchor-hvr-bcg-obj);}
     
     #wrapper #header .global_buffs:before {
         -webkit-mask-image: url('icons/mobile/buffs.svg');
@@ -252,7 +275,6 @@
         height: 28px;
         left: 144px;
         top: 8px;
-        background-color: red;
         z-index: 99;
         padding: 0;
         margin: 0;
@@ -267,7 +289,6 @@
         left: 187px;
         width: 28px;
         font-size: 16px;
-        background-color: red;
         height: 28px;
         margin: 0;
         padding: 0;
@@ -286,7 +307,6 @@
         height: 28px;
         width: 28px;
         background-size: 28px 28px;
-        background-color: red;
         background-position: top left;
         background-repeat: no-repeat;
         visibility: visible !important;
@@ -302,7 +322,6 @@
         height: 28px;
         width: 28px;
         background-size: 28px 28px;
-        background-color: red;
         background-position: top left;
         background-repeat: no-repeat;
         top: 8px;
@@ -323,7 +342,6 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-                background-color: red;
     width: 28px;
     height: 28px;
     background-size: 28px 28px;
