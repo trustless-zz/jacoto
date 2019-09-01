@@ -1057,6 +1057,8 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1),
     margin-left: 2px;}
 #index #freeleech .group_torrent span.platform:before {
     content: '- ';}
+#friends table.forum_post.vertical_margin .colhead span.time:before {
+    content: 'Last Online: ';}
 
 .Bandcamp,
 .Discogs,

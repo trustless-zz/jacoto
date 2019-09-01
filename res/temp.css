@@ -10,23 +10,78 @@
 *******************************************************************/
 @media screen and (max-width: 800px) {
 	/* #header {display:none;} */
-    #alerts,
-    .clan_trophy,
-	.global_buffs {display: none;}
+    .clan_trophy {display: none;}
     
+    #header #userinfo {
+        order: 3;}
     #header #userinfo_username {
         display: flex;
-        position: absolute;
+        /* position: absolute; */
         font-size: 15px;
         line-height: var(--p-lh);
         z-index: 99;
-        top: 38px;
+        top: 0;
         right: 0;
-        height: 38px;}
+        height: 44px;}
+    #userinfo_username #nav_userinfo a.username {
+        font-size: 18px;
+        line-height: 44px;
+        padding: 0 10px 0 5px;
+        display: inline-block;}
     
-    #header {
+    #nav_donate a,
+    #nav_logout a,
+    #nav_useredit a {
+        display: block;
+        width: 20px;
+        height: 20px;
+        padding: 12px 8px;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: 20px 20px;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: 20px 20px;
+        background-color: var(--c-anchor);}
+    #nav_useredit a {
+        -webkit-mask-image: url('icons/nav/useredit.svg');
+        mask-image: url('icons/nav/useredit.svg');}
+    #nav_logout a {
+        -webkit-mask-image: url('icons/nav/logout.svg');
+        mask-image: url('icons/nav/logout.svg');}
+    #wrapper #nav_donate a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24px;
+        z-index: 2;
+        -webkit-mask-size: auto 20px;
+        -webkit-mask-image: url('icons/nav/donate.svg');
+        mask-size: auto 20px;
+        mask-image: url('icons/nav/donate.svg');}
+    
+    #nav_logout {
+        order: -3;}
+    #nav_donate {
+        width: 40px;
+        height: 44px;
+        position: relative;
+        order: -2;}
+    #nav_useredit {
+        order: -1;}
+    
+#header {
+    z-index: 99 !important; /* !important to override holidayeffects.css */
+    position: relative;
+    border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    margin-bottom: 20px;
         display: flex;
-        flex-flow: row wrap;}
+        flex-flow: row wrap;
+        position: relative;
+        justify-content: space-between;}
     
     #extra1,
     #extra2,
@@ -36,20 +91,19 @@
         z-index: 98;
         left: 0;
         width: 100%;
-        height: 38px;}
+        height: 44px;}
     #extra2 { /* #menu */
         top: 0px;
         background: var(--p-menu);}
-    #extra3 { /* #userinfo */
-        top: 38px;
-        background: var(--p-userinfo);}
     
     #wrapper #header #logo a {
-        background-size: auto 70px;}
+        background-size: auto 38px;}
     #logo {
+        order: 1;
+        
         background: unset !important;
-        height: 76px;
-        width: 65px;
+        height: 44px;
+        width: 38px;
         top: 0;
         left: 0;
         position: relative;
@@ -60,8 +114,8 @@
     #logo:before,
     #logo:after {
         content: '';
-        width: 65px;
-        height: 38px;
+        width: 38px;
+        height: 44px;
         position: absolute;
         left: 0;
         z-index: -99;
@@ -69,7 +123,7 @@
         -webkit-transition: all .25s linear;
         transition: all .25s linear;}
     #logo:before {
-        background: linear-gradient(135deg,var(--c-b1) calc(100% - 53px),var(--c-b00) calc(100% - 24px)) no-repeat -21px 0;
+        background: linear-gradient(135deg,var(--c-b1) calc(100% - 48px),var(--c-b00) calc(100% - 31px)) no-repeat -15px 0;
         top: 0px;}
     #logo:after {
         background: linear-gradient(135deg,var(--c-b2) calc(100% - 74px),var(--c-b00) calc(100% - 45px)) no-repeat -21px 0;
@@ -90,8 +144,8 @@
         display: inline-block;
         max-height: 184px;
         position: absolute;
-        top: 5px;
-        left: 75px;
+        top: 8px;
+        left: 58px;
         width: 28px;
         background-color: red;
         height: 28px;
@@ -99,6 +153,9 @@
         background-position: top left;
         background-repeat: no-repeat;}
     
+    #wrapper #header .global_buffs >div,
+    #alerts >div,
+    #header .sub >span,
     #userinfo_stats >li,
     ul#userinfo_minor >li,
     #header >#searchbars >ul,
@@ -116,8 +173,8 @@
         background-size: 28px 28px;
         background-position: top left;
         background-repeat: no-repeat;
-        top: 5px;
-        left: 118px;
+        top: 8px;
+        left: 101px;
         z-index: 99;}
     
     ul#userinfo_minor {
@@ -125,8 +182,8 @@
         background-size: 28px 28px;
         width: 28px;
         height: 28px;
-        left: 161px;
-        top: 5px;
+        left: 144px;
+        top: 8px;
         background-color: red;
         z-index: 99;
         padding: 0;
@@ -137,9 +194,9 @@
     #userinfo_stats {
         position: absolute;
         background-size: 28px 28px;
-        top: 5px;
+        top: 8px;
         background-repeat: no-repeat;
-        left: 204px;
+        left: 187px;
         width: 28px;
         font-size: 16px;
         background-color: red;
@@ -153,6 +210,58 @@
         flex-flow: column;
         flex-direction: row;
         flex-wrap: wrap;}
+    
+    #header .sub {
+        clip-path: unset;
+        opacity: 1;
+        
+        height: 28px;
+        width: 28px;
+        background-size: 28px 28px;
+        background-color: red;
+        background-position: top left;
+        background-repeat: no-repeat;
+        visibility: visible !important;
+        top: 8px;
+        left: 230px;
+        right: unset;
+        position: absolute;
+        z-index: 99;}
+    #header #alerts {
+        clip-path: unset;
+        opacity: 1;
+        
+        height: 28px;
+        width: 28px;
+        background-size: 28px 28px;
+        background-color: red;
+        background-position: top left;
+        background-repeat: no-repeat;
+        top: 8px;
+        left: 273px;
+        right: unset;
+        position: absolute;
+        z-index: 99;}
+    
+    #wrapper #header .global_buffs {
+        position: absolute;
+        filter: none;
+        left: 316px;
+        top: 8px;
+        
+        right: 0;
+        z-index: 99;
+        direction: rtl;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+                background-color: red;
+    width: 28px;
+    height: 28px;
+    background-size: 28px 28px;
+    background-repeat: no-repeat;
+    background-position: top right;
+    flex-direction: row;}
     
 /*****************************************
 **************DEFAULT STYLES**************
@@ -267,7 +376,7 @@
 /*****************************************
 **************ALERTS BARS*****************
 *****************************************/
-	#announcement {
+	/* #announcement {
 		top: 0px;
 		width: 100%;
 		padding: 5px 0;}
@@ -320,7 +429,7 @@
 	.blend:hover,
 	.blend a,
 	#alerts:hover .blend {
-		opacity: 1;}
+		opacity: 1;} */
 
 /***********************************************************************
 ****************FOOTER********************
