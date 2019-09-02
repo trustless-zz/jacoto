@@ -1088,11 +1088,11 @@
 	#torrentbrowse .group_torrent {
 	    display: none;}
 
-/*****************************************revisit
+/*****************************************
 *********NOTIFICATIONS PAGES**************
 *****************************************/
 	#torrents .torrent_notifications .group_torrent {display: block;}
-	#torrents .torrent_notifications td {color: red;}
+	#torrents .torrent_notifications td {color: var(--c-text-s);}
 
 	#torrents .torrent_notifications td:nth-child(2) {width: auto; }
 
@@ -1103,7 +1103,7 @@
 	#torrents .torrent_notifications td:nth-child(6)
 		{display: none !important;}
 
-/*****************************************
+/*****************************************revisit
 **************GAMES PAGES*****************
 *****************************************/
 	/* #torrents h2 {width: 98%;}
@@ -2084,8 +2084,8 @@
 *************ACHIEVEMENTS*****************
 *****************************************/
 	#progress_bar {width: auto;}
-	.flright {float: none; margin-top: 0px !important;}
-	.flleft {float: none;}
+	/*.flright {float: none; margin-top: 0px !important;}
+	.flleft {float: none;} */
 
 	#achievements td {border-right: rgba(198,230,246,.3) solid 1px;}
 	#achievements .colhead td:first-of-type, #achievements .colhead td:last-of-type {border: none;}
