@@ -92,9 +92,9 @@
         left: 0;
         width: 100%;
         height: 44px;}
-    #extra2 { /* #menu */
-        top: 0px;
-        background: var(--p-menu);}
+    #extra3 { /* #userinfo */
+        top: 0;
+        background: var(--p-userinfo);;}
     
     #wrapper #header #logo a {
         background-size: auto 38px;}
@@ -248,10 +248,7 @@
     #wrapper #header .global_buffs >div,
     #alerts >div,
     #header .sub >span,
-    #userinfo_stats >li,
-    ul#userinfo_minor >li,
-    #header >#searchbars >ul,
-    #menu ul {
+    #userinfo_stats >li {
         display: none;}
     
     #header >#searchbars {
@@ -348,6 +345,118 @@
     background-repeat: no-repeat;
     background-position: top right;
     flex-direction: row;}
+    
+    
+    
+    
+    #menu ul {
+        width: 100%;
+        flex-wrap: wrap;
+        display: none;
+        margin: 0;
+        padding: 0;
+        top: 42px;
+        left: 0;
+        position: absolute;}
+    
+    ul#userinfo_minor:hover li,
+	#menu:hover ul {
+		display:flex;}
+    
+    #menu ul li {
+        margin: 0;
+        padding: 0;
+        position: relative;
+        top: 0;
+        left: -43px;
+        display: block;}
+    #userinfo_minor li a,
+    #menu ul li a {
+        border: var(--p-border);
+        border-color: var(--c-table-brdr);
+        font-size: 18px;
+        display: block;
+        line-height: 1em;
+        font-weight: 400;
+        position: relative;
+        padding: 8px;
+        text-align: center;}
+    #userinfo_minor li a {
+        width: 110px;}
+    #menu ul li a {
+        width: 84px;}
+    #userinfo_minor li:not(:last-child) a,
+    #menu ul li:not(:last-child) a {
+        border-bottom: none;}
+    #userinfo_minor li:nth-child(odd) a,
+    #menu ul li:nth-child(odd) a {
+        background-color: var(--c-box);}
+    #userinfo_minor li:nth-child(even) a,
+    #menu ul li:nth-child(even) a {
+        background-color: var(--c-trowb);}
+    
+    #userinfo_minor li:before,
+    #menu ul li:before {
+        -webkit-box-shadow: var(--p-main-shdw);
+        box-shadow: var(--p-main-shdw);
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;}
+    #header #userinfo_minor li:before {
+        width: 128px;}
+    
+    #header #searchbars >ul >li:before {
+        -webkit-box-shadow: var(--p-main-shdw);
+        box-shadow: var(--p-main-shdw);
+        content: '';
+        position: absolute;
+        width: 135px;
+        z-index: -1;
+        height: 34px;}
+    
+    
+    #header >#searchbars >ul {
+        height: auto;
+        width: 100%;
+        padding: 0;
+        display: none;
+        margin-top: 42px;
+        margin-left: -86px;}
+    #header >#searchbars:hover >ul {
+        display: block;
+        width: 135px;}
+    #header >#searchbars input {
+        font-size: 17px;
+        line-height: 32px;
+        height: 34px;
+        margin: 0;}
+    
+    #searchbars >ul >li {
+        padding: 0;
+        width: 135px;}    
+    #header #searchbars .autocomplete_list {
+        width: 220px;
+        left: 54px;
+        top: 42px;
+        padding: 0 !important;}
+    #header #searchbars .autocomplete_list li {
+        padding-left: 5px;
+        font-size: 16px;
+        line-height: 30px;}
+    
+    
+    ul#userinfo_minor li {
+        position: relative;
+        font-size: 18px;
+        top: 42px;
+        left: -129px;
+        display: none;
+        text-align: center;
+        flex-flow: column;}
     
 /*****************************************
 **************DEFAULT STYLES**************
