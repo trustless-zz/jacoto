@@ -12,6 +12,13 @@
 	/* #header {display:none;} */
     .clan_trophy {display: none;}
     
+    #header #announcement {
+        text-align: center;
+        padding: 5px;
+        background: var(--p-head-grdnt);
+        width: 100%;
+        order: 99;}
+    
     #header #userinfo {
         order: 3;}
     #header #userinfo_username {
@@ -123,14 +130,14 @@
         -webkit-transition: all .25s linear;
         transition: all .25s linear;}
     #logo:before {
-        background: linear-gradient(135deg,var(--c-b1) calc(100% - 48px),var(--c-b00) calc(100% - 31px)) no-repeat -15px 0;
+        background: linear-gradient(135deg,var(--c-b1) calc(100% - 48px),var(--c-b00) calc(100% - 31px)) no-repeat 0 0; /*-15px 0*/
         top: 0px;}
-    #logo:after {
+    /* #logo:after {
         background: linear-gradient(135deg,var(--c-b2) calc(100% - 74px),var(--c-b00) calc(100% - 45px)) no-repeat -21px 0;
-        top: 38px;}
-    #logo:hover:after,
+        top: 38px;} */
+    /* #logo:hover:after,
     #logo:hover:before {
-        background-position: 0 0;}
+        background-position: 0 0;} */
     #header #logo a {
         position: absolute;
         width: 100%;
@@ -140,7 +147,23 @@
         background-position: center;}
     
     #menu {
-        z-index: 99;
+        z-index: 100;}
+    #header >#searchbars {
+        z-index: 101;}
+    ul#userinfo_minor {
+        z-index: 102;}
+    #userinfo_stats {
+        z-index: 103;}
+    #header .sub {
+        z-index: 104;}
+    #header #alerts {
+        z-index: 105;}
+    #wrapper #header .global_buffs {
+        z-index: 106;}
+    #header #userinfo {
+        z-index: 107;}
+    
+    #menu {
         display: inline-block;
         max-height: 184px;
         position: absolute;
@@ -230,6 +253,11 @@
     #userinfo_minor:hover:before {
         -webkit-mask-image: url('icons/mobile/minor_hover.svg');
         mask-image: url('icons/mobile/minor_hover.svg');}
+    #header ul.highlighted:before {
+        transform: rotate(90deg);
+        background-color: var(--c-em-hvr);}
+    #header .highlight {
+        color: var(--c-em-hvr);}
     
     #header >#searchbars:before {
         -webkit-mask-image: url('icons/mobile/search.svg');
@@ -245,12 +273,6 @@
         -webkit-mask-image: url('icons/mobile/menu_hover.svg');
         mask-image: url('icons/mobile/menu_hover.svg');}
     
-    #wrapper #header .global_buffs >div,
-    #alerts >div,
-    #header .sub >span,
-    #userinfo_stats >li {
-        display: none;}
-    
     #header >#searchbars {
         margin: 0 !important;
         display: inline-block;
@@ -262,8 +284,7 @@
         background-position: top left;
         background-repeat: no-repeat;
         top: 8px;
-        left: 101px;
-        z-index: 99;}
+        left: 101px;}
     
     ul#userinfo_minor {
         position: absolute;
@@ -272,7 +293,6 @@
         height: 28px;
         left: 144px;
         top: 8px;
-        z-index: 99;
         padding: 0;
         margin: 0;
         background-position: top left;
@@ -290,7 +310,6 @@
         margin: 0;
         padding: 0;
         overflow: visible;
-        z-index: 99;
         text-align: center !important;
         display: flex;
         flex-flow: column;
@@ -310,8 +329,7 @@
         top: 8px;
         left: 230px;
         right: unset;
-        position: absolute;
-        z-index: 99;}
+        position: absolute;}
     #header #alerts {
         clip-path: unset;
         opacity: 1;
@@ -324,8 +342,7 @@
         top: 8px;
         left: 273px;
         right: unset;
-        position: absolute;
-        z-index: 99;}
+        position: absolute;}
     
     #wrapper #header .global_buffs {
         position: absolute;
@@ -334,7 +351,6 @@
         top: 8px;
         
         right: 0;
-        z-index: 99;
         direction: rtl;
         display: flex;
         flex-wrap: wrap;
@@ -359,6 +375,7 @@
         left: 0;
         position: absolute;}
     
+    #userinfo_stats:hover li,
     ul#userinfo_minor:hover li,
 	#menu:hover ul {
 		display:flex;}
@@ -370,8 +387,10 @@
         top: 0;
         left: -43px;
         display: block;}
+    .sub span a,
     #userinfo_minor li a,
-    #menu ul li a {
+    #menu ul li a,
+    #header #alerts .blend a {
         border: var(--p-border);
         border-color: var(--c-table-brdr);
         font-size: 18px;
@@ -379,22 +398,38 @@
         line-height: 1em;
         font-weight: 400;
         position: relative;
-        padding: 8px;
+        padding: 9px;
         text-align: center;}
     #userinfo_minor li a {
         width: 110px;}
     #menu ul li a {
         width: 84px;}
+    ul#userinfo_stats li#online_irc:nth-last-child(2) {
+        border-bottom: var(--p-border);
+        border-bottom-color: var(--c-table-brdr);}
+    
+    #header #alerts .blend a:not(:last-child),
+    .sub span:not(:last-child) a,
+    ul#userinfo_stats li:not(:last-child),
+    ul#userinfo_stats .my_buffer,
     #userinfo_minor li:not(:last-child) a,
     #menu ul li:not(:last-child) a {
         border-bottom: none;}
+    
+    #header #alerts .blend a:nth-child(odd),
+    #userinfo_stats li:nth-child(odd),
     #userinfo_minor li:nth-child(odd) a,
     #menu ul li:nth-child(odd) a {
         background-color: var(--c-box);}
+    #header #alerts .blend a:nth-child(even),
+    #userinfo_stats li:nth-child(even),
     #userinfo_minor li:nth-child(even) a,
     #menu ul li:nth-child(even) a {
         background-color: var(--c-trowb);}
     
+    .global_buffs .individual_buff:before,
+    .sub span:before,
+    ul#userinfo_stats li:after,
     #userinfo_minor li:before,
     #menu ul li:before {
         -webkit-box-shadow: var(--p-main-shdw);
@@ -406,8 +441,13 @@
         width: 100%;
         height: 100%;
         z-index: -1;}
+    .sub span:before {
+        width: 157px;}
     #header #userinfo_minor li:before {
         width: 128px;}
+    ul#userinfo_stats #stats_gold a,
+    ul#userinfo_stats li a:before {
+        margin: 8px 0;}
     
     #header #searchbars >ul >li:before {
         -webkit-box-shadow: var(--p-main-shdw);
@@ -416,7 +456,7 @@
         position: absolute;
         width: 135px;
         z-index: -1;
-        height: 34px;}
+        height: 36px;}
     
     
     #header >#searchbars >ul {
@@ -431,8 +471,8 @@
         width: 135px;}
     #header >#searchbars input {
         font-size: 17px;
-        line-height: 32px;
-        height: 34px;
+        line-height: 34px;
+        height: 36px;
         margin: 0;}
     
     #searchbars >ul >li {
@@ -446,7 +486,7 @@
     #header #searchbars .autocomplete_list li {
         padding-left: 5px;
         font-size: 16px;
-        line-height: 30px;}
+        line-height: 32px;}
     
     
     ul#userinfo_minor li {
@@ -457,6 +497,107 @@
         display: none;
         text-align: center;
         flex-flow: column;}
+    
+    #userinfo_stats:hover {
+        width: 230px;}
+    
+    #userinfo_stats .my_buffer,
+    ul#userinfo_stats li {
+        border: var(--p-border);
+        border-color: var(--c-table-brdr);
+        margin: 42px 0 -42px 0;
+        width: 220px;
+        line-height: 34px;
+        padding: 0 5px;
+        display: none;
+        justify-content: center;
+        position: relative;
+        top: 0;
+        left: -172px;
+        overflow: visible;}
+    
+    #wrapper .sub span {
+        top: 0;
+        right: 135px;
+        display: none;
+        position: relative;}
+    #header .sub span {
+        top: 42px;
+        left: -215px;}
+    
+    #header #alerts .blend {
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        left: -258px;
+        top: 42px;
+        display: none;}
+    
+    .global_buffs .individual_buff i {
+        display: none;}
+    #wrapper #header .global_buffs .buff_text {
+        font-size: 13px;}
+    #wrapper #header .global_buffs .buff_text .buff_multiplier {
+        font-size: 14px;}
+    
+    .global_buffs .individual_buff {
+        position: relative;
+        border: var(--p-border);
+        border-color: var(--c-table-brdr);
+        background-color: var(--c-box);
+        display: none;
+        width: auto;
+        padding: 5px;
+        max-width: 80px;
+        margin: 0;
+        max-height: 80px;
+        height: auto;}
+    .global_buffs>div {
+        min-width: 80px;}
+    
+    .global_buffs:hover .individual_buff,
+    #header #alerts:hover .blend,
+    #wrapper .sub:hover span {
+        display: block;}
+    
+    #header .global_buffs a {
+        opacity: 1;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;}
+    
+    #wrapper #header .global_buffs:hover {
+        padding-top: 42px;
+        width: calc(100% - 331px);
+        height: auto;}
+    
+    #wrapper .sub span a {
+        height: 100%;
+        width: 145px;
+        text-align: center;
+        line-height: 34px;
+        font-size: 17px;}
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 /*****************************************
 **************DEFAULT STYLES**************
