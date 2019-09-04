@@ -1106,6 +1106,87 @@
 /*****************************************revisit
 **************GAMES PAGES*****************
 *****************************************/
+    .thin.torrent_details >h2:first-child {
+        width: calc(100% - 40px);}
+    
+    #wrapper #content .linkbox.groupoptions {
+        display: flex;
+        flex-flow: row wrap;
+        z-index: 999;
+        padding: 0;
+        margin: 0;
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        right: 0;
+        top: 0;}
+    #wrapper #content .linkbox.groupoptions:before {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: 0;
+        top: 0;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        -webkit-mask-image: url(icons/nav/useredit.svg);
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        mask-image: url(icons/nav/useredit.svg);
+        background-color: var(--c-text-s);}
+    
+    #wrapper #content .linkbox.groupoptions:hover {
+        padding-top: 25px;
+        width: 100%;
+        height: auto;}
+    
+    #wrapper #content .linkbox.groupoptions >a {
+        position: relative;
+        border: var(--p-border);
+        border-color: var(--c-table-brdr);
+        background-color: var(--c-box);
+        margin: 0;
+        display: none;}
+    #wrapper #content .linkbox.groupoptions >a:before {
+        padding: 8px;
+        display: block;
+        font-size: 17px;
+        line-height: 1em;}
+    
+    #wrapper #content .linkbox.groupoptions >a:after {
+        -webkit-box-shadow: var(--p-main-shdw);
+        box-shadow: var(--p-main-shdw);
+        content: '';
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        height: 100%;}
+    #wrapper #content .linkbox.groupoptions:hover >a {
+        display: inline-block;}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 	/* #torrents h2 {width: 98%;}
 	#torrents .groupoptions {top: -7px;} */
 
@@ -1127,7 +1208,7 @@
 		margin: 0;
 		padding: 0;
 		text-align: left;
-		color: white;}
+		/* color: white; */}
 	#torrents .main_column td:nth-child(1) {
 		display:block;}
 	#torrents .main_column td:nth-child(2) {
@@ -1141,29 +1222,30 @@
 	#torrents .main_column td:nth-child(4) {
 		margin-left: 0px;
 		float: none;
-		color: var(--white);}
+		/* color: var(--white); */}
 	#torrents .main_column td:nth-child(5) {
 		display: inline;}
 	#torrents .main_column td:nth-child(6) {
-		color: var(--white);}
+		/* color: var(--white); */}
 	#torrents .main_column td:nth-child(7) {
 		float: none;
 		margin-left: 0px;
-		color: var(--white);
+		/* color: var(--white); */
 		display:none;}
 	#torrents .main_column td:nth-child(8) {
 		float: none;
-		color: var(--white);
+		/* color: var(--white); */
 		margin-left: 0px;}
 	#torrents .main_column td:nth-child(9) {
 		padding-bottom:0px;
-		color: var(--white);}
+		/* color: var(--white); */}
 
 	/****Group Links****/
 	#grouplinks {height: auto;}
 	#torrents .main_column #grouplinks td {
-		padding: 7px 20px 7px 10px;
-		float: left;}
+        display: table-cell;
+		padding: 8px 10px;
+		float: unset;}
 
 	/****Torrent Table****/
 	#torrents .main_column .torrent_table .colhead_dark {display:none;}
@@ -1185,7 +1267,7 @@
 	tbody[id^="edition_"], tbody[id*=" edition_"] {line-height: 1.6em;}
 
 	#torrents .main_column .torrent_table tbody {
-		width: 99%;
+		/* width: 99%; */
 		display: block;}
 
 	/****Release name + DL/ED/RP links*****/
