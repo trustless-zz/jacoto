@@ -247,9 +247,11 @@
         -webkit-mask-image: url('icons/mobile/stats_hover.svg');
         mask-image: url('icons/mobile/stats_hover.svg');}
     
+    #torrents .main_column tr.group_torrent td:nth-child(1) span:before,
     #userinfo_minor:before {
         -webkit-mask-image: url('icons/mobile/minor.svg');
         mask-image: url('icons/mobile/minor.svg');}
+    #torrents .main_column tr.group_torrent td:nth-child(1) span:hover:before,
     #userinfo_minor:hover:before {
         -webkit-mask-image: url('icons/mobile/minor_hover.svg');
         mask-image: url('icons/mobile/minor_hover.svg');}
@@ -351,7 +353,7 @@
         top: 8px;
         
         right: 0;
-        direction: rtl;
+    direction: ltr;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
@@ -493,43 +495,51 @@
         position: relative;
         font-size: 18px;
         top: 42px;
-        left: -129px;
+        right: 97px;
+        width: -moz-fit-content;
+        width: fit-content;
         display: none;
         text-align: center;
         flex-flow: column;}
     
     #userinfo_stats:hover {
-        width: 230px;}
+        width: 200px;}
     
     #userinfo_stats .my_buffer,
     ul#userinfo_stats li {
         border: var(--p-border);
         border-color: var(--c-table-brdr);
         margin: 42px 0 -42px 0;
-        width: 220px;
+        width: 190px;
         line-height: 34px;
         padding: 0 5px;
         display: none;
         justify-content: center;
         position: relative;
         top: 0;
-        left: -172px;
+        left: -167px;
         overflow: visible;}
     
     #wrapper .sub span {
         top: 0;
+        width: -moz-fit-content;
+        width: fit-content;
         right: 135px;
         display: none;
         position: relative;}
     #header .sub span {
         top: 42px;
-        left: -215px;}
+        right: 124px;
+        left: unset;}
     
     #header #alerts .blend {
+        -webkit-box-shadow: var(--p-main-shdw);
+        box-shadow: var(--p-main-shdw);
+        white-space: nowrap;
         font-size: 0;
         line-height: 0;
         position: absolute;
-        left: -258px;
+        right: -5px;
         top: 42px;
         display: none;}
     
@@ -1209,6 +1219,14 @@
 		padding: 0;
 		text-align: left;
 		/* color: white; */}
+    #torrents #wrapper .main_column tr.group_torrent td:nth-child(1) a {
+        margin-left: unset;}
+    #torrents .main_column .torrent_table tr.group_torrent td:not([colspan="6"]) {
+        border: none;
+        vertical-align: top;}
+    .torrent_table tr.pad.hidden >td[colspan="6"] {
+        border-top: none;}
+    
 	#torrents .main_column td:nth-child(1) {
 		display:block;}
 	#torrents .main_column td:nth-child(2) {
@@ -1244,7 +1262,7 @@
 	#grouplinks {height: auto;}
 	#torrents .main_column #grouplinks td {
         display: table-cell;
-		padding: 8px 10px;
+		padding: 8px;
 		float: unset;}
 
 	/****Torrent Table****/
@@ -1257,14 +1275,24 @@
 		overflow-x: none;}
 
 	#torrents .main_column tr.group_torrent {
-		padding: 10px 2px;
+		/* padding: 10px 2px; */
 		display: block;
-		border-bottom: 1px solid var(--grey);}
+		/* border-bottom: var(--p-border);
+        border-bottom-color: var(--c-table-brdr); */}
+    #torrents .main_column tbody[id^="edition"] tr.group_torrent {
+        border-top: var(--p-border);
+        border-top-color: var(--c-table-brdr);
+        padding: 10px 4px;}
+    #torrents .main_column tbody tr.group_torrent{
+        border-bottom: var(--p-border);
+        border-bottom-color: var(--c-table-brdr);}
+    .edition_info strong {
+        position: relative;}
 
 	#torrents .main_column tr.group_torrent:hover {
 		background-color:transparent;}
 
-	tbody[id^="edition_"], tbody[id*=" edition_"] {line-height: 1.6em;}
+	/* tbody[id^="edition_"], tbody[id*=" edition_"] {line-height: 1.6em;} */
 
 	#torrents .main_column .torrent_table tbody {
 		/* width: 99%; */
@@ -1273,48 +1301,162 @@
 	/****Release name + DL/ED/RP links*****/
 	#torrents .main_column tr.group_torrent td:nth-child(1) {
 		display: block;
-		font-size: 1.1em;
-		font-weight:bold;
-		color: var(--darkBlue);
+		font-weight: 600;
+		/* font-size: 1.1em;
+		font-weight: bold;
+		color: var(--darkBlue);*/
 		height: auto;}
+    #wrapper .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
+    #artist #wrapper #torrent_table .group_torrent td[colspan="2"] >a,
+    #collections #wrapper #torrent_table .group_torrent td[colspan="3"] >a,
+    #bookmarks #wrapper #torrent_table td[colspan="3"] >a,
+    #torrents #wrapper .group_torrent td:first-child >a,
+    #torrents #wrapper .torrent_notifications .noticon +td {
+        font-size: 14px;
+        line-height: var(--p-lh);}
 
 	#torrents .main_column tr.group_torrent td:nth-child(1) a {
 		margin-left: -10px;}
 
 	/****The dropdown menu with DL, RP, ED, etc.****/
 	#torrents .main_column tr.group_torrent td:nth-child(1) span {
-		background: url("../images/mobile/download.png") no-repeat scroll right top rgb(238, 243, 249);
-		background-color: transparent;
-		color: transparent;
+		/* color: transparent; */
+        position: relative;
 		float: right;
-		margin-right: 5px;
-		overflow: hidden;}
+        width: 25px;
+        height: 25px;
+		margin-left: 10px;
+		margin-right: 0;
+		/* overflow: hidden; */}
+    
+	#torrents .main_column tr.group_torrent td:nth-child(1) span:before {
+        z-index: 2;
+        transform: rotate(90deg);
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25px;
+        height: 25px;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        background-color: var(--c-txt);}
+    #torrents .main_column tr.group_torrent td:nth-child(1) span:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 25px;
+        height: 35px;
+        top: -5px;
+        right: 0;
+        background-color: transparent;}
+    #torrents .main_column tr.group_torrent td:nth-child(1) span:hover:after {
+        background-color: var(--c-anchor-hvr-bcg-obj);}
 
 	#torrents .main_column tr.group_torrent td:nth-child(1) span:hover {
 		height: auto;
-		padding-top: 32px;
-		background-color: transparent !important;}
+		padding-top: 35px;
+        max-width: 96px;
+        width: -moz-fit-content;
+        width: fit-content;
+        margin-bottom: 5px;
+		/* background-color: transparent !important */;}
 
 	#torrents .main_column tr.group_torrent td:nth-child(1) span a {
 		display: none;
 		position: relative;
 		z-index: 5;
 		margin: 0 !important;
-		border-bottom: 1px var(--darkBlue2) solid !important;
-		color: var(--white);}
+        width: 30px !important;
+        height: 26px !important;
+        padding: 0 !important;
+        -webkit-mask-image: unset;
+        mask-image: unset;
+        background-color: var(--c-box) !important;
+        border: var(--p-border);
+        border-color: var(--c-table-brdr);
+		/* border-bottom: 1px var(--darkBlue2) solid !important;
+		color: var(--white); */}
+    
+    #torrents .main_column tr.group_torrent td:nth-child(1) span a:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: 0;
+        top: 0;
+        -webkit-box-shadow: var(--p-header-shdw);
+        box-shadow: var(--p-header-shdw);}
+    
+a[title="Download"]:before {
+    -webkit-mask-image: url('icons/download.svg');
+    mask-image: url('icons/download.svg');}
+a[title="Use a FL Token"]:before {
+    -webkit-mask-image: url('icons/tor/fl.svg');
+    mask-image: url('icons/tor/fl.svg');}
+a[title="Report"]:before {
+    -webkit-mask-image: url('icons/tor/rp.svg');
+    mask-image: url('icons/tor/rp.svg');}
+a[title="External Link"]:before {
+    -webkit-mask-image: url('icons/tor/ln.svg');
+    mask-image: url('icons/tor/ln.svg');}
+a[title="Permalink"]:before {
+    -webkit-mask-image: url('icons/tor/pl.svg');
+    mask-image: url('icons/tor/pl.svg');}
+a[title="Original Group"]:before {
+    -webkit-mask-image: url('icons/tor/og.svg');
+    mask-image: url('icons/tor/og.svg');}
+a[title="Trumpable"]:before {
+    -webkit-mask-image: url('icons/tor/tr.svg');
+    mask-image: url('icons/tor/tr.svg');}
+a[title="Edit"]:before {
+    -webkit-mask-image: url('icons/tor/ed.svg');
+    mask-image: url('icons/tor/ed.svg');}
+a[title="Remove"]:before {
+    -webkit-mask-image: url('icons/tor/rm.svg');
+    mask-image: url('icons/tor/rm.svg');}
+    
+a[title="Download"]:before,
+a[title="Use a FL Token"]:before,
+a[title="Report"]:before,
+a[title="External Link"]:before,
+a[title="Permalink"]:before,
+a[title="Original Group"]:before,
+a[title="Trumpable"]:before,
+a[title="Edit"]:before,
+a[title="Remove"]:before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 18px 18px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: 18px 18px;
+    background-color: var(--c-anchor);}
+    
+    
 
 	#torrents .main_column tr.group_torrent td:nth-child(1) span:hover a {
 		display:block;
-		background:#2b4e66;
-		border:0 solid var(--white);
+		/* background:#2b4e66;
+		border:0 solid var(--white); */
 		height: auto;
 		float: left;
-		width: 35% !important;
+		/* width: 35% !important; */
 		text-align: center;
-		right: -46px;}
+		/* right: -46px; */}
 
 	#torrents .main_column tr.group_torrent td:nth-child(1) span:hover a:hover {
-		background: var(--darkBlue);
+		/* background: var(--darkBlue); */
 		text-decoration: none;}
 
 	/****Size****/
@@ -1360,8 +1502,8 @@
 	/****To set the headers back, as they get messed with above****/
 	#torrents .main_column tr.group_torrent td.edition_info:nth-child(1) {
 		display: block !important;
-		font-size:1em;
-		color: var(--white);}
+		/* font-size:1em;
+		color: var(--white); */}
 
 	/****Non-Torrent_Table Sections in Main Column****/
 	#torrents .main_column #collages td:nth-child(2) {display:none;}
@@ -1370,24 +1512,30 @@
 	#torrents #collages tr {padding:0 5px 10px 5px; display: block;}
 	#torrents #collages tr.colhead {padding: 5px 5px 5px 15px;}
 
-	#torrents .main_column .screenshots img {
-		max-width: 49% !important;}
+	#torrents .main_column .screenshots img {}
+    
+    #torrents .main_column .box.screenshots_div >.body {
+        padding-top: 0;
+        padding-right: 0;}
 
 	#torrents .main_column .screenshots {
+        padding-top: 10px;
 		position: relative;
 		max-height: 300px;
 		overflow-y: scroll;}
 
 	#torrents .main_column td#usersreviewimage:nth-child(1) {
 		float: left;
-		margin: 0 5px 5px 5px;}
+		margin: 5px;}
 
 	tr#usersreviewimage {
 		margin-bottom:10px;}
 
 	.userreviews tr {
 		padding-bottom: 10px;
-		display: inline-block;}
+		display: flex;}
+    #wrapper td#usersreview {
+        width: 100%;}
 
 	/****Sidebar boxes****/
 	#torrents .sidebar .box .body {padding: 5px;}
@@ -1422,7 +1570,7 @@
 	/*.box_tags li div {display: none !important;}*/
 	.box_tags li div {color: transparent;}
 	.box_tags li div a {color: transparent;}
-	.box_tags li div a:last-of-type {color: var(--lightBlue);}
+	.box_tags li div a:last-of-type {/* color: var(--lightBlue) */;}
 
 	/****Comments****/
 	#torrents .main_column .forum_post .time,
@@ -1505,7 +1653,7 @@
 
 	/*** User Reviews ***/
 	#reviewdate {
-	    display: inline-block; margin-top: 2px;}
+        margin-top: 2px;}
 
 /*****************************************
 ****************UPLOADS*******************
