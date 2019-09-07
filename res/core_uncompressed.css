@@ -744,6 +744,9 @@ html,
 
 #torrents #content >#newlink input#newlink,
 
+/*.torrent_edit input#release_title,*/
+.torrent_edit input[type="text"][name="title"],
+
 #user input#irckey,
 #user input#email,
 #user input#avatar,
@@ -1286,7 +1289,9 @@ div#fight_skill_points_assign >table,
 #tools #addgroup,
 #tools #mastergroups,
 #torrents #content >#newlink,
-#torrents #content >#currentlinks {
+#torrents #content >#currentlinks,
+#torrents .torrent_edit >.thin:first-of-type:not(:last-child) >form,
+#torrents .torrent_edit >.thin:first-of-type ~.thin >form {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -4397,8 +4402,12 @@ h3 {
 #requests .main_column >table:first-child td:first-child,
 
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad tr td.label+ td,
-#tools .thin >#recommended >.head.colhead_dark:first-child +form.pad tr td:first-child {
+#tools .thin >#recommended >.head.colhead_dark:first-child +form.pad tr td:first-child,
+
+#torrents .torrent_edit >.thin:first-of-type:not(:last-child) >form tr:not(.colhead) td:first-child,
+#torrents .torrent_edit >.thin:first-of-type ~.thin >form td:first-child {
     padding-left: 10px;}
+
 #gazelleview table.gazelleinfo tr td:last-child,
 #todo .thin >form tr:not(.colhead) td:last-child,
 #forums .forums_search .search_form >table.layout.border >tbody >tr >td:last-child,
@@ -4414,8 +4423,12 @@ h3 {
 .thin >#request_form >table td:last-child,
 #requests .main_column >table:first-child td:last-child,
 
-#tools .thin >#recommended >.head.colhead_dark:first-child +form.pad .colhead ~tr td:last-child {
+#tools .thin >#recommended >.head.colhead_dark:first-child +form.pad .colhead ~tr td:last-child,
+
+#torrents .torrent_edit >.thin:first-of-type:not(:last-child) >form tr:not(.colhead) td:last-child,
+#torrents .torrent_edit >.thin:first-of-type ~.thin >form td:last-child {
     padding-right: 10px;}
+
 #todo .thin >form tr:nth-child(2) td,
 #user .thin >h2 +form#userform >table.border .colhead_dark +tr td,
 #reportsv2 #dynamic_form >table.border tr:first-child td,
@@ -4428,8 +4441,11 @@ h3 {
 #upload #dynamic_form .colhead +tr td,
 
 #upload #torrent_properties tr:nth-child(2) td,
-.thin >#request_form >table tr:nth-child(2) td {
+.thin >#request_form >table tr:nth-child(2) td,
+
+#torrents .torrent_edit >.thin:first-of-type:not(:last-child) >form .colhead +tr td {
     padding-top: 10px;}
+
 #gazelleview table.gazelleinfo tr:last-child td,
 #todo .thin >form tr:last-child td,
 #forums .forums_search .search_form >table.layout.border >tbody >tr:last-child >td,
@@ -4444,8 +4460,12 @@ h3 {
 .thin >#request_form >table tr:last-child td,
 #requests .main_column >table:first-child tr:last-child td,
 
-#tools .thin >#recommended >.head.colhead_dark:first-child +form.pad tr:last-child td {
+#tools .thin >#recommended >.head.colhead_dark:first-child +form.pad tr:last-child td,
+
+#torrents .torrent_edit >.thin:first-of-type:not(:last-child) >form tr:not(.colhead):last-child td,
+#torrents .torrent_edit >.thin:first-of-type ~.thin >form tr:last-child td {
     padding-bottom: 10px;}
+
 #user .thin >h2 +form#userform >table.border .colhead_dark +tr td.label,
 #reportsv2 #dynamic_form >table.border tr:last-child td,
 #upload #dynamic_form + table.border.slice tr:first-child td.label,
@@ -4465,6 +4485,7 @@ h3 {
     padding-bottom: 0;}
 
 /** convert ... to head **/
+#torrents .torrent_edit >.thin:first-of-type ~.thin >h2,
 #torrents #content >#currentlinks >h2,
 #tools #mastergroups >h2,
 #tools #addgroup >h1,
@@ -4529,12 +4550,14 @@ form[name="filter"] h3,
     margin: 10px 0 8px 5px;}
 #wrapper #gazelleview #titlerow p:empty {
     height: 18px;}
+#torrents .torrent_edit >.thin:first-of-type ~.thin >h2,
 #user .thin >.header:first-child ~h3 {
     margin: 0;
     position: relative;
     top: 1px;
     left: 1px;
     width: calc(100% - 22px);}
+#torrents .torrent_edit >.thin:first-of-type ~.thin >form,
 #user .thin >.header:first-child ~h3 +.box.pad:last-child {
     margin-top: -36px;
     padding-top: 46px;}
@@ -4613,11 +4636,11 @@ input#year,
 input[name="year"] {
     width: 45px;}
 .thin >#request_form input[name="image"] {
-    width: calc(100% - 100px);
+    width: calc(100% - 95px);
     margin-right: 5px;}
 #upload input#tags,
 .thin >#request_form input#tags {
-    width: calc(100% - 175px);}
+    width: calc(100% - 171px);}
 .thin >#request_form select#genre_tags,
 #upload select#genre_tags {
     margin-right: 5px;}
@@ -4642,13 +4665,13 @@ input[name="year"] {
 	border-top: var(--p-border);
     border-top-color: var(--c-table-brdr);}
 .thin >#request_form input[name="title"],
-#upload input#release_title,
-#upload input#aliases,
-#upload input#title,
-#upload #announce_uri input {
-    width: calc(100% - 5px) !important;}
-#upload input#remaster_title {
-    width: calc(100% - 45px);}
+/* #upload */input#release_title,
+/* #upload */input#aliases,
+/* #upload */input#title,
+/* #upload */#announce_uri input {
+    width: 100% !important;}
+/* #upload */input#remaster_title {
+    width: calc(100% - 40px);}
 #upload #weblinks tr:nth-child(1) td:nth-child(3),
 /* #upload */ #reviews_table td:first-child {
     width: 135px;}
@@ -4676,7 +4699,7 @@ input[name="year"] {
     width: 165px;}
 #torrents .center.thin >.box.pad form input[name="image"],
 #upload input#image {
-    width: calc(100% - 100px);}
+    width: calc(100% - 95px);}
 #upload #weblinks tr td:nth-child(3) {
     padding-left: 20px;}
 #upload input#trailer {
@@ -4686,7 +4709,7 @@ input[name="year"] {
 #upload textarea#release_desc {
     margin-bottom: 2px !important;}
 #image_block input[type="text"] {
-    width: calc(100% - 165px) !important;}
+    width: calc(100% - 160px) !important;}
 #newthreadform #newthreadtext #answer_block br +input,
 #upload td#image_block input[type="text"]:not(#screen0),
 #torrents .center.thin >.box.pad #image_block >span:not(first-child) input[type="text"] {
@@ -4752,6 +4775,7 @@ input#file {
 .ongoing_clan_war td.label,
 #torrents .center.thin >.box.pad #image_block {
 	text-align: left;}
+#torrents .torrent_edit >.thin select#groupremasters,
 #image_block >span:last-of-type input,
 #torrents .center.thin >.box.pad input[name="summary"],
 .ongoing_clan_war .large_progress_bar {
@@ -5566,6 +5590,7 @@ input[type="radio"]:active {
     padding: 0;
     width: 100%;
     font-size: 14px;}
+#torrents .torrent_edit td.label,
 #inbox #messageform #quickpost .comp td:first-child {
     vertical-align: top;
     text-align: right;
