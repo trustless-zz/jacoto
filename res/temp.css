@@ -639,6 +639,12 @@
 	form {
 		max-width: 100%;}
     
+    #tools .sidebar {
+        height: -moz-fit-content;
+        height: fit-content;}
+    
+    #tools .thin>#recommended>div:not(.sidebar),
+    #tools .thin>#recommended>form,
     .filter_torrents td.label,
     .main_column_bg,
     .main_column,
@@ -1203,6 +1209,11 @@
     
     
     
+    /* snatched/seeding/etc. stripe */
+    tr.group_torrent >td {
+        position: unset;}
+    tr.group_torrent {
+        position: relative;}
     
     
     
@@ -2031,9 +2042,9 @@ a[title="Remove"]:before {
 
 	#staffpm .linkbox {margin: 10px 0 20px;}
 
-	#tools #recommended {display:block;}
+	/* #tools #recommended {display:block;}
 	#tools #recommended input {max-width: 200px !important;}
-	#tools #recommended #slides {width: 100%;}
+	#tools #recommended #slides {width: 100%;} */
 	#tools #recommended #torrent_form td:nth-of-type(1) {display: none;}
 	#tools #recommended #torrent_form td:nth-of-type(2) {max-width: 100px;}
 
