@@ -25,7 +25,7 @@
     /** --p-img-hvr: 						3px solid var(--c-b3); */
     /** --p-img-anchor-brdr:				3px solid var(--c-b4); */
     /** --p-img-anchor-brdr-hvr:			3px solid var(--c-b1); */
-    --p-contrast:                       unset; /*drop-shadow(0 0 2px var(--c-contrast));*/
+    /*--p-contrast:                       unset;*/ /*drop-shadow(0 0 2px var(--c-contrast));*/
     --p-post-img:                       drop-shadow(0 0 3px var(--c-post-img));
     /* --p-post-img-hvr:                   drop-shadow(0 0 3px var(--c-b3)); */
     /* --p-unread-stripe:                  2px 0 0 0 var(--c-unread-s); */
@@ -1124,7 +1124,7 @@ img[title="Gold"],
 
 h2#username span#tip_user img,
 
-img[src="https://gazellegames.net/static/common/symbols/disabled.png"], /* disabled (Just fine!) */
+#wrapper img[src="https://gazellegames.net/static/common/symbols/disabled.png"], /* disabled (Just fine!) */
 img[alt="Banned"],
 img[alt="Warned"] {
     background-size: contain;
@@ -3917,8 +3917,8 @@ span.secondary_class {
     height: 16px;
     width: 18.5px;
     padding-left: 18.5px;}
-.username_badges img[src="https://gazellegames.net/static/common/symbols/disabled.png"], /* disabled (Just fine!) */
-.username_badges img[alt="Banned"] {
+#wrapper img[src="https://gazellegames.net/static/common/symbols/disabled.png"], /* disabled (Just fine!) */
+img[alt="Banned"] {
     height: 16px;
     width: 16px;
     padding-left: 16px;}
@@ -6542,10 +6542,10 @@ table.adventure_table .colhead td:not(:first-child) {
     padding: 0 5px;}
 
 h2#username span#tip_user img {
-    padding-left: 32px;
-    width: 32px;
-    height: 32px;
-    background-size: 32px 32px;}
+    padding-left: 28px;
+    width: 28px;
+    height: 28px;
+    background-size: 28px 28px;}
 
 table#uploadsrow tbody,
 table#snatchesrow tbody,
@@ -6767,14 +6767,11 @@ td >img[title="Gold"] {
 h2#username span#tip_user {
     display: inline-block;
     vertical-align: bottom;
-    margin-bottom: -6px;
-    margin-top: -10px;}
+    margin-bottom: -5px;
+    margin-top: -11px;}
 h2#username span#tip_user a.tooltip {
     display: block;
     padding: 2px;}
-#requests_donate img,
-h2#username span#tip_user a.tooltip img {
-    filter: var(--p-contrast);}
 
 
 h2 .user_title img {
@@ -7905,7 +7902,6 @@ table#downloaded_table td.center.cats_col +td >span:before {
     width: 18px;
     height: 18px;
     padding-left: 18px;
-    filter: var(--p-contrast);
     opacity: 1;}
 
 #shop li.item_li.nostock #cost_info,
@@ -8689,6 +8685,7 @@ body#user.inventory {}
 	padding:1px 3px 1px 15px;
 	font-size:1em;
 	height: 45px;}
+h2 span.secondary_class,
 #tm_time input[type="text"] {
 	vertical-align: middle;}
 #tms_form {
@@ -10139,8 +10136,7 @@ table.adventure_table h3 {
 	margin: 0;
     width: 18px;
     height: 18px;
-    padding-left: 18px;
-    filter: var(--p-contrast);}
+    padding-left: 18px;}
 
 #wrapper #trading_panel .gold_trade .gold_trade_box_right {
 	height: 100%;
@@ -10175,7 +10171,6 @@ table.adventure_table h3 {
     display: inline-block;}
 
 #wrapper #trading_panel .gold_trade .gold_trade_buttons img {
-    filter: var(--p-contrast);
     margin: 0;
 	height: 26px;
 	width: 26px;
@@ -10195,7 +10190,6 @@ table.adventure_table h3 {
     background-color: var(--c-tgroup);}
 
 #wrapper .trade_value .trade_value_gold img {
-    filter: var(--p-contrast);
     vertical-align: bottom;
 	height: 26px;
 	width: 26px;

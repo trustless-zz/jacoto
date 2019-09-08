@@ -322,7 +322,7 @@ h2#username span#tip_user img,
     background-image: url('icons/grish/gold_minus.svg');}
 
 /** banned **/
-img[src="https://gazellegames.net/static/common/symbols/disabled.png"], /* disabled (Just fine!) */
+#wrapper img[src="https://gazellegames.net/static/common/symbols/disabled.png"], /* disabled (Just fine!) */
 img[alt="Banned"] {
     background-image: url('icons/grish/banned.svg');}
 /** warned **/
