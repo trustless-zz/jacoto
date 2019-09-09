@@ -1959,8 +1959,12 @@ img#authcode,
     color: var(--c-main-brdr) !important;
     background: var(--c-text-s) !important;}
 
+
+input:disabled,
+button:disabled,
 input.disabled,
-input[disabled="disabled"] {
+input[disabled] {
+	cursor: default;
     pointer-events: none;
     opacity: .5;}
 
@@ -10075,6 +10079,7 @@ table.adventure_table h3 {
 	background-color: inherit;}
 
 #wrapper #content #trading_panel button:disabled {
+    opacity: 1;
     color: var(--c-text-s);
 	filter: grayscale(85%);
     pointer-events: none;
@@ -10368,12 +10373,6 @@ table.adventure_table h3 {
     float: right;
     margin: 5px;
     position: relative;}
-
-input[type=button]:disabled,
-#backpack button:disabled {
-    pointer-events: none;
-	cursor: default;
-	opacity: .5;}
 
 
 
