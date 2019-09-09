@@ -3585,6 +3585,8 @@ strong.mature +strong +br,
 
 #menu #nav_index,
 
+#artist td.edition_info ~td, /* checked/unchecked leftover */
+
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad td.label,
 #user .box.box_suggested_tags .head.tooltip >span:last-child,
 #torrents #content >script ~form #torrent_link .colhead:first-child,
@@ -5821,6 +5823,7 @@ input[type="radio"]:active {
 
 /** manually removing embedded brackets **/
 #more_news >a,
+.linkbox a[href^="artist.php?action=edit&artistid"],
 .linkbox a[href^="torrents.php?action=linkgroups&"],
 .linkbox a[href^="ajax.php?action=torrentgroup&"],
 #comments .linkbox a[href="comments.php?action=requests&type=voted"],
@@ -5905,6 +5908,7 @@ input[type="radio"]:active {
     display: inline-block;}
 
 #more_news >a:before                                                            {content: 'Get More News';}
+.linkbox a[href^="artist.php?action=edit&artistid"]:before                      {content: 'Edit';}
 .linkbox a[href^="torrents.php?action=linkgroups&"]:before                      {content: 'Link groups';}
 .linkbox a[href^="ajax.php?action=torrentgroup&"]:before                        {content: 'Export to json';}
 #comments .linkbox a[href="comments.php?action=requests&type=voted"]:before     {content: "Display comments left on requests you've voted on";}
