@@ -749,6 +749,8 @@ html,
 
 .forum_list,
 
+#artist .center.thin >h2 +.box.pad input[type="text"],
+
 #user input#irckey,
 #user input#email,
 #user input#avatar,
@@ -1292,7 +1294,8 @@ div#fight_skill_points_assign >table,
 #tools #mastergroups,
 #torrents #content >#newlink,
 #torrents #content >#currentlinks,
-#torrents .torrent_edit >.thin >form {
+#torrents .torrent_edit >.thin >form,
+#artist .center.thin >.box.pad {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -4046,6 +4049,7 @@ h2 .username_badges {
 .sidebar .addtagsdiv input#tags {
     width: 100% !important;
     margin-top: 8px;}
+#artist .center.thin >h2 +.box.pad div:last-child input[type="submit"],
 .sidebar .addtagsdiv input[type="submit"] {
     margin-top: 8px;}
 .sidebar .addtagsdiv >strong {
@@ -4498,6 +4502,7 @@ h3 {
     padding-bottom: 0;}
 
 /** convert ... to head **/
+#artist .center.thin >h2,
 #torrents .torrent_edit >.thin >h2,
 #torrents #content >#currentlinks >h2,
 #tools #mastergroups >h2,
@@ -4570,10 +4575,18 @@ form[name="filter"] h3,
     top: 1px;
     left: 1px;
     width: calc(100% - 22px);}
+#artist .center.thin >h2 +.box.pad,
 #torrents .torrent_edit >.thin:first-of-type ~.thin >form,
 #user .thin >.header:first-child ~h3 +.box.pad:last-child {
     margin-top: -36px;
     padding-top: 46px;}
+
+#artist .center.thin >h2 {
+    margin: 0;
+    width: calc(100% - 22px);
+    left: 1px;
+    top: 1px;
+    position: relative;}
 
 #newthreadform #newthreadtext #answer_block a,
 #image_block a,
@@ -5026,6 +5039,7 @@ h2 marquee {
 #wiki .center.thin >.box.pad form h3 {
     margin: 10px 0 8px 5px;
     font-weight: 600;}
+#artist .center.thin >h2 +.box.pad h3,
 #torrents .center.thin >.box.pad form h3 {
     text-align: left;
     font-weight: 600;
