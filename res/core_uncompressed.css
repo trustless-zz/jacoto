@@ -6777,7 +6777,7 @@ td >img[title="Gold"] {
 h2#username span#tip_user {
     display: inline-block;
     vertical-align: bottom;
-    margin-bottom: -5px;
+    margin-bottom: -4px;
     margin-top: -11px;}
 h2#username span#tip_user a.tooltip {
     display: block;
@@ -6798,7 +6798,7 @@ h2 .user_title span.size10 {
 .forum_post .user_title img {
     vertical-align: sub;
     max-height: 19px;}
-.user_title img {
+#wrapper .user_title img {
     display: inline-block;
     vertical-align: middle;} /*bottom*/
 /* ---gameroom--- ../images with size=4 code will float left, size=5 will float right */
