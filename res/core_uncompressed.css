@@ -6468,9 +6468,9 @@ table.adventure_table .colhead td:not(:first-child) {
     font-size: 15px;}
 
 .last_read {
-    margin: 3px 0 3px 8px;
-    width: 10px;
-    height: 14px;}
+    margin: 2px 0 0 5px;
+    width: 16px;
+    height: 16px;}
 .last_read a {
     display: block;
     width: 100%;
