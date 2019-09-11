@@ -2357,6 +2357,7 @@ a .error_message:hover {
 
 
 #index #clans {
+    width: 100%;
     margin: 0 0 15px 0;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -2878,6 +2879,8 @@ textarea,
 #donate .box.pad.donation_info,
 
 #wrapper #grouplinks,
+
+#index #clans,
 
 #wrapper #trading_panel .linkbox,
 
@@ -9013,9 +9016,12 @@ td .log_green {
 #friends input[type=submit] {
      margin: 3px 3px 5px 3px;}
 #friends textarea[name="comment"] {
+    height: inherit;/* increasing initial height of comment field */
     margin-top: 5px;}
 #friends h2.center {
      text-align:left;}
+#friends td.col_avatar.avatar +td[valign="top"] {/* increasing initial height of comment field */
+    height: 127px;} 
 
 /*****************************************
 **************USER SEARCH*****************
