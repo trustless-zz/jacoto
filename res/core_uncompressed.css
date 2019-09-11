@@ -3784,6 +3784,7 @@ li:not(.suggested_similar) .similar_votes >span {
 
 .box_gold #box_gold_scrollbar tr:not(.colhead) td.label {
     background-color: var(--c-sb1);}
+#friends .forum_post.vertical_margin .colhead,
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
 .forum_post .colhead_dark {
@@ -3812,6 +3813,7 @@ li:not(.suggested_similar) .similar_votes >span {
 #tools #content >.header +table .colhead,
 #tools #mastergroups table .colhead {
     background: var(--p-subcolhead);}
+#friends .forum_post.vertical_margin .colhead,
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
 .forum_post .colhead_dark td {
@@ -4966,6 +4968,13 @@ h2 marquee {
     margin-top: -4px;
     line-height: var(--p-lh);
     vertical-align: text-bottom;}
+
+#blog .pad marquee,
+.box.box_info marquee,
+.box.news_post >.pad marquee,
+.forum_post td.body marquee {
+    vertical-align: text-bottom;
+    max-width: 100%;}
 
 #forums .forum_signature td {
     text-align: left;
@@ -9008,7 +9017,8 @@ td .log_green {
 ****************FRIENDS*******************
 *****************************************/
 #friends .colhead a.username {
-    font-weight: bold;}
+    font-weight: bold;
+    margin-left: 3px;}
 #friends td.col_avatar.avatar {
     width: 150px;}
 #friends td.left {
@@ -9022,6 +9032,8 @@ td .log_green {
      text-align:left;}
 #friends td.col_avatar.avatar +td[valign="top"] {/* increasing initial height of comment field */
     height: 127px;} 
+#friends .colhead span.time {
+    margin-right: 3px;}
 
 /*****************************************
 **************USER SEARCH*****************
