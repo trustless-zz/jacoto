@@ -1801,14 +1801,15 @@ a[title="Remove"]:before {
     
 	#forums .last_read {
 		float: right !important;
-		margin: -12.5px 5px;
+		margin: -12.5px 5px !important;
 		clear: both;
-		height: 25px; width: 25px;
+		height: 25px;
+        width: 25px;
         -webkit-mask-size: 18px 18px;
         mask-size: 18px 18px;}
-	#forums .last_read a {
+	/* #forums .last_read a {
 		height: 25px;
-		width: 25px;}
+		width: 25px;} */
 	#forums .forum_list table {
         background: none;}
     
