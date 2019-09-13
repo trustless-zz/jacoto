@@ -1857,7 +1857,8 @@ a[title="Remove"]:before {
 		left: 6px;
         width: 100%;
 		color: var(--c-txt);}
-	.forum_post .colhead_dark div[style="float:left;"] a[title="Sticky this post"] {display: none;}
+	.forum_post .colhead_dark div[style="float:left;"] a[title="Sticky this post"] {
+        display: none;}
 	/* .forum_post .colhead_dark div[style="float: right;"] {color: transparent;}
 	.forum_post .colhead_dark div[style="float: right;"] a {display: none;} */
     .forum_post .colhead_dark .username {
@@ -1866,7 +1867,7 @@ a[title="Remove"]:before {
         /* padding-left: 3px;
 		margin-top: 1px; */}
 
-	#forums #content .thin table.sticky_post {width: 90%;}
+	/* #forums #content .thin table.sticky_post {width: 90%;} */
 	.sticky_post .colhead_dark,
 	.sticky_post .avatar,
 	.sticky_post .forum_signature,
@@ -1939,6 +1940,7 @@ a[title="Remove"]:before {
 	    border-bottom: 1px solid var(--lightBlue);
 	    padding-bottom: 0px;
     	margin: 10px 0px 0px 3px;} */
+    /* revisit */
 
 	#forums #content .thin table#otherop {min-height:auto;}
 
