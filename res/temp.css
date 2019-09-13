@@ -643,6 +643,7 @@
         height: -moz-fit-content;
         height: fit-content;}
     
+    .linkbox,
     #tools .thin>#recommended>div:not(.sidebar),
     #tools .thin>#recommended>form,
     .filter_torrents td.label,
@@ -1773,19 +1774,23 @@ a[title="Remove"]:before {
 	#forums .forum_index td:nth-of-type(1) {width: 25px;}
 	#forums .forum_index td:nth-of-type(2) {width: 25%; padding-right: 10px;}
 	#forums .forum_index td:nth-of-type(2) a {font-size: 1em;}
-
-#forums .forum_index tr:not(.colhead) td:first-child,
-#forums .forum_mythreads tr:not(.colhead) td:first-child,
-#forums .forum_editsubs tr:not(.colhead) td:first-child,
-#forums .forum_subscriptions tr:not(.colhead) td:first-child {
-    padding-right: 8px;
-    padding-left: 8px;}
+    
+    #forums .forum_index tr:not(.colhead) td:first-child,
+    #forums .forum_mythreads tr:not(.colhead) td:first-child,
+    #forums .forum_editsubs tr:not(.colhead) td:first-child,
+    #forums .forum_subscriptions tr:not(.colhead) td:first-child {
+        padding-right: 8px;
+        padding-left: 8px;}
 
 	#forums span[style="float:right;"] {
 		float: none!important;
-		/* color: var(--grey); */
+        color: var(--c-text-s);
 		display: block;
 		clear: both;}
+    /* #forums .forum_index.forum_latest tr span[style="float:right;"],
+    #forums .forum_mythreads tr span[style="float:right;"],
+    #forums .last_poster {
+        line-height: calc(1em + 2px);} */
 
 	#forums span[style="float:right;"] a {/*color: var(--grey);*/}
 	#forums .forum_index tr td {padding: 15px 0px;}
@@ -1796,62 +1801,73 @@ a[title="Remove"]:before {
     
 	#forums .last_read {
 		float: right !important;
-		margin: -10px 5px;
+		margin: -12.5px 5px;
 		clear: both;
-		height: 25px; width: 25px;}
+		height: 25px; width: 25px;
+        -webkit-mask-size: 18px 18px;
+        mask-size: 18px 18px;}
 	#forums .last_read a {
 		height: 25px;
 		width: 25px;}
-	#forums .forum_list table {background: none;}
+	#forums .forum_list table {
+        background: none;}
+    
+    #forums .forum_editsubs tr:not(.colhead) td:first-child,
+    #forums .forum_index tr:not(.colhead) td:first-child,
+    #forums .forum_mythreads tr:not(.colhead) td:first-child,
+    #forums .forum_subscriptions tr:not(.colhead) td:first-child {
+        height: 38px;}
+    
 
-	div[class*="thin forum_"] td:nth-of-type(1) {width: 25px !important;}
-	div[class*="thin forum_"] td:nth-of-type(2) {width: calc(100% - 25px) !important; padding-right: 10px;}
-	div[class*="thin forum_"] td:nth-of-type(3) {display: none;}
-	div[class*="thin forum_"] td:nth-of-type(4) {display: none;}
-	div[class*="thin forum_"] td {padding: 15px 0px;}
+	div[class*="thin forum_"] >table td:nth-of-type(1) {width: 25px !important;}
+	div[class*="thin forum_"] >table td:nth-of-type(2) {width: calc(100% - 25px) !important; padding-right: 10px;}
+	div[class*="thin forum_"] >table td:nth-of-type(3) {display: none;}
+	div[class*="thin forum_"] >table td:nth-of-type(4) {display: none;}
+	div[class*="thin forum_"] >table td {padding: 15px 0px;}
 
 	#forums #content .forum_index span[style="float:left;"] {padding-right: 40px;}
 
-	#forums .forum_post .colhead_dark {
-		font-size: .8em;
+	.forum_post .colhead_dark {
+		/* font-size: .8em;
 		padding: 5px 0;
 		width: 100%;
-		min-height: 30px;}
-	#forums .forum_post .colhead_dark div[style="float:left;"] {
+		min-height: 30px; */}
+	.forum_post .colhead_dark div[style="float:left;"] {
 		display: flex;
-		flex-direction:row;
+		flex-flow: row wrap;
 		color: transparent;
 		width: 100%}
-	#forums .forum_post .colhead_dark div[style="float:left;"] label{
-		color: var(--white);}
-	#forums .forum_post .colhead_dark div[style="float:left;"] input{
+	/* #forums .forum_post .colhead_dark div[style="float:left;"] label{
+		color: var(--white);} */
+	.forum_post .colhead_dark div[style="float:left;"] input {
 		height: inherit;}
 
-	#forums .forum_post .colhead_dark div[style="float:left;"] strong {color: var(--white);}
-	#forums .forum_post .colhead_dark div[style="float:left;"] strong a {margin-left:-10px; margin-right: 4px;}
-	#forums .forum_post .colhead_dark a.post_id {margin-top: 2px !important; margin-left: 2px;}
-	#forums .forum_post .colhead_dark div[style="float:left;"] a {/*padding: 0px 3px;*/ font-size: 1em; }
+	.forum_post .colhead_dark div[style="float:left;"] strong {
+        color: var(--c-txt);}
+	.forum_post .colhead_dark div[style="float:left;"] strong a {
+        margin-left:-10px; margin-right: 4px;}
+	/* #forums .forum_post .colhead_dark a.post_id {margin-top: 2px !important; margin-left: 2px;} */
+	.forum_post .colhead_dark div[style="float:left;"] a {/*padding: 0px 3px;*/ /* font-size: 1em; */}
 
-	#forums .forum_post .colhead_dark div[style="float:left;"] .user_title {display: none;}
-	#forums .forum_post .colhead_dark div[style="float:left;"] .time {
+	.forum_post .colhead_dark div[style="float:left;"] .user_title {display: none;}
+	.forum_post .colhead_dark div[style="float:left;"] .time {
 		order: 10;
 		font-size: 1em;
-		margin: 20px 0;
 		left: 6px;
-		position: absolute;
-		color: var(--white);}
-	#forums .forum_post .colhead_dark div[style="float:left;"] a[title="Sticky this post"] {display: none;}
-	#forums .forum_post .colhead_dark div[style="float: right;"] {color: transparent;}
-	#forums .forum_post .colhead_dark div[style="float: right;"] a {display: none;}
-	#forums .forum_post .colhead_dark .username {
-		font-size: 1.2em !important;
-		display: block;
-		padding-left: 3px;
-		margin-top: 1px;}
+        width: 100%;
+		color: var(--c-txt);}
+	.forum_post .colhead_dark div[style="float:left;"] a[title="Sticky this post"] {display: none;}
+	/* .forum_post .colhead_dark div[style="float: right;"] {color: transparent;}
+	.forum_post .colhead_dark div[style="float: right;"] a {display: none;} */
+    .forum_post .colhead_dark .username {
+		/* font-size: 16px; */
+        display: block;
+        /* padding-left: 3px;
+		margin-top: 1px; */}
 
 	#forums #content .thin table.sticky_post {width: 90%;}
-	#forums .sticky_post .colhead_dark,
-	#forums .sticky_post .avatar,
+	.sticky_post .colhead_dark,
+	.sticky_post .avatar,
 	.sticky_post .forum_signature,
 	.sticky_post .likes {
 		display: none;}
@@ -1865,15 +1881,35 @@ a[title="Remove"]:before {
         margin-right: auto;}
 	#forums .linkbox_top {display: none;}
 
-	.avatar .forumstat {display: none;}
+	.avatar .forumstat {
+        /* display: none; */
+        left: 110px;}
+    .avatar:hover .forumstat {
+        transition-delay: unset;}
+    
+    #wrapper #quickreplypreview .colhead_dark #barpreview,
+    #wrapper .forum_post .colhead_dark div[style="float: right;"],
+    #wrapper #newthreadpreview .forum_post .colhead_dark #barpreview {
+        top: 15px;}
+    
 	.username_badges {display: none;}
-	#forums .box {margin-top: 0px; padding: 0px;}
-	#forums .forum_post tr {background-color:rgba(38, 63, 88, .3);}
-	#forums td.body {padding: 10px 10px 25px 10px; max-width: 50px;}
-	#forums td.body br {line-height: 10px;}
-	td.avatar { /*box-shadow:none; */ background-color: transparent;}
+	/* #forums .box {margin-top: 0px; padding: 0px;} */
+	/* #forums .forum_post tr {background-color:rgba(38, 63, 88, .3);} */
+	/* #forums td.body {padding: 10px 10px 25px 10px; max-width: 50px;}
+    #forums td.body br {line-height: 10px;}
+	td.avatar { box-shadow:none;  background-color: transparent;} */
 
-	tr.likes td:nth-of-type(1) {
+    
+    #forums #reply_box, #inbox #messageform+h2+form,
+    #inbox .box.vertical_space+h2+form,
+    #inbox h2+#messageform,
+    #reports .thin>.box.pad,
+    #reportsv2 #report_table>.box.pad {
+        width: 100%;}
+    
+    tr.likes td[id^=likers_] {
+        opacity: .65;}
+	/* tr.likes td:nth-of-type(1) {
 		vertical-align: top;
 		padding-bottom: 20px;
 		padding-left: 10px;}
@@ -1885,9 +1921,9 @@ a[title="Remove"]:before {
 		color: rgba(255,255,255,0.2)}
 
 	tr.likes, tr.likes a {
-		color: rgba(255,255,255,0.2)}
+		color: rgba(255,255,255,0.2)} */
 
-	#forums .forum_post img {max-width: 90% !important;}
+	/* #forums .forum_post img {max-width: 90% !important;}
 	#forums .forum_post iframe {max-width: 90% !important; height: auto !important;}
 
 	#forums blockquote {width: 90%;}
@@ -1895,7 +1931,7 @@ a[title="Remove"]:before {
 	#forums #quickreplybuttons {display: block !important;}
 	#forums .edit_form {width: 100%;}
 	#forums #quickreplytext {margin-top: 5px;}
-	#forums form textarea {margin-top: 5px;}
+	#forums form textarea {margin-top: 5px;} */
 
 	/* #forums h3, #forums h2 {
 		width: 99%;
