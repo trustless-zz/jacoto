@@ -1119,8 +1119,9 @@
     #wrapper .filter_torrents select,
     #wrapper .filter_torrents.basic input#torrentsbrowsesearch,
     #wrapper .filter_torrents input.inputtext.smaller,
+    #wrapper .filter_torrents input.inputtext.smallest[name="releasegroup"],
     #wrapper .filter_torrents input.inputtext[name="filelist"] {
-        width: calc(100% - 10px);}
+        width: calc(100% - 10px) !important;}
 
 	#torrents .cat_list {
         width: 100% !important;
@@ -2021,16 +2022,27 @@ a[title="Remove"]:before {
 	#collections .collections .linkbox:nth-of-type(2) strong {display: inline;}
 	/* #collections .collections .linkbox:nth-of-type(2) {color: var(--white);} */
 
-	#collections .thin {display: flex;}
-	#collections .thin .main_column {order: 1;}
-	#collections .thin .sidebar {order: 2;}
+	/* #collections .thin {flex-flow: row wrap;} */
+    #collections .thin .sidebar {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;}
+    #collections .thin >.header:first-child {
+        order: -3;}
+    #collections .sidebar .box_albumart,	
+	#collections .thin .main_column {
+        order: -2;}
+    #collections .sidebar .box_description,
+	#collections .thin .sidebar {
+        order: -1;}
 
-	#collections ul.collage_images li {width: calc(33% - 3px); padding: 1px;}
-	#collections ul.collage_images img {width: 100%;}
-	#collections .sidebar .box {width: 48%; display: none;}
-	#collections .sidebar .box:nth-of-type(even) {margin-left: 2%;}
-	#collections form textarea {height: 75px;}
+	/* #collections ul.collage_images li {width: calc(33% - 3px); padding: 1px;}
+	#collections ul.collage_images img {width: 100%;} */
+    #collections .sidebar .box {width: calc(50% - 7.5px);}
+	/* #collections .sidebar .box:nth-of-type(even) {margin-left: 2%;} */
+	/*#collections form textarea {height: 75px;} */
 
+    
 	#collections .sidebar .box_albumart,
 	#collections .sidebar .box_description,
 	#collections .sidebar .box_comment,
@@ -2048,10 +2060,10 @@ a[title="Remove"]:before {
 	#collections .sidebar div:nth-of-type(10) {width: 100%;}
 	#collections .sidebar #reply_box .box {width: 100%;}
 
-	#collections .box_addtorrent .subhead {padding: 10px 0 0 5px;}
+	/* #collections .box_addtorrent .subhead {padding: 10px 0 0 5px;} */
 
 	/* #collections input, #collections textarea {max-width: 300px !important;} */
-	#collections .box_addtorrent input {max-width: 140px !important;}
+	/* #collections .box_addtorrent input {max-width: 140px !important;} */
 
 	/* #collections #easysort {background: url('../images/smokeybackground.jpg');} */
 	#collections #easysort tr {display: inline;}
@@ -2064,6 +2076,9 @@ a[title="Remove"]:before {
 	#collections #manage_collage_table th:nth-of-type(6),
 	#collections #manage_collage_table td:nth-of-type(6)
 		{width: 100px;}
+    
+    #collections .sidebar .box.box_comment +.box.pad {
+        font-size: var(--p-head);}
 
 /***************************************** ^revisit
 ******************BLOG********************

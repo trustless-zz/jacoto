@@ -757,6 +757,8 @@ html,
 
 #collections script+.thin>form:first-child,
 
+#collections table#edit_collage input#art,
+
 #user input#irckey,
 #user input#email,
 #user input#avatar,
@@ -1301,7 +1303,8 @@ div#fight_skill_points_assign >table,
 #torrents #content >#newlink,
 #torrents #content >#currentlinks,
 #torrents .torrent_edit >.thin >form,
-#artist .center.thin >.box.pad {
+#artist .center.thin >.box.pad,
+#collections .thin >h2:first-child +form:last-child /* edit description page */ {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -1343,7 +1346,8 @@ div#fight_skill_points_assign >table,
 #tools #addgroup,
 #tools #mastergroups #searchgroups,
 #torrents #content >#newlink,
-#torrents #content >#currentlinks {
+#torrents #content >#currentlinks,
+#collections .thin >h2:first-child +form:last-child /* edit description page */ {
     padding: 10px;}
 .sidebar .body {
     padding: 10px 0 0 0;}
@@ -3448,7 +3452,8 @@ body:not(#upload) #artist_tr + tr td.label,
 #log table#log_table .colhead strong,
 #torrent_history_search #th_search strong,
 #torrents .torrent_notifications .noticon +td >strong,
-#torrents #content >#newlink td strong {
+#torrents #content >#newlink td strong,
+#collections table#edit_collage td.label strong {
     font-weight: normal;}
 
 .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
@@ -5089,7 +5094,8 @@ tr.likes td[id^="likers_"] >strong:nth-of-type(2),
 #torrents .center.thin >.box.pad input#ignuri,
 #torrents .center.thin >.box.pad input#gamespotscoreuri,
 #torrents .center.thin >.box.pad form input[name="image"],
-#request_form input[type="text"] {
+#request_form input[type="text"],
+#collections table#edit_collage input#art {
     margin-bottom: 2px;}
 tr.likes td[id^="likers_"] >strong:after {
     content: ':';
@@ -5372,8 +5378,6 @@ input[type="radio"]:active {
     -webkit-box-shadow: none;
     box-shadow: none;
     margin: 0;}
-#collections .sidebar .box.box_comment +.box.pad {
-    margin-bottom: 15px;}
 .sidebar .box_badges img {
     margin: 0 2px;}
 
@@ -5471,6 +5475,7 @@ input[type="radio"]:active {
 #inbox h2 +#messageform >.box.pad {
     padding: 46px 10px 10px 10px;
     position: relative;}
+#collections .thin >h2:first-child +form:last-child:before, /* edit description page */
 #gazelles .thin >h2:first-child +.box.pad:before,
 .gazelles_art_display:before,
 #actual_rules:before,
@@ -5514,6 +5519,7 @@ input[type="radio"]:active {
     content: 'Toolbox';}
 #tools .thin >.box.pad:first-child:before {
     content: 'Chart';}
+#collections .thin >h2:first-child +form:last-child:before, /* edit description page */
 #torrents #content >#newlink:before,
 #torrents #wrapper #content>script:first-child+h2+form:before {
     content: 'Form';}
@@ -6474,6 +6480,7 @@ abbr {
 #top10 .thin >div >table.border .colhead strong,
 #artist .main_column table .colhead_dark strong {
     font-weight: normal;}
+#collections table#edit_collage td.label,
 #collections table#new_collage td.label,
 #collections .thin >h2:first-child +.center td.label {
     width: 75px;}
@@ -7032,6 +7039,8 @@ span.size5 img {
 #collections .sidebar .box.box_comment a[href^="reports.php?action=report"] {
     float: right;}
 #collections .sidebar .box.box_comment +.box.pad {
+    width: 100%;
+    margin-bottom: 15px;
     font-weight: bold;
     text-align: center;}
 
@@ -9955,6 +9964,11 @@ table.adventure_table h3 {
 #equipment #equip_panel {
 	height: 794px;
 	width: 518px;}
+
+#equipment #equip_panel >form { /* 'Unequip All' button */
+    position: absolute;
+    right: 5px;
+    top: 5px;}
 
 #equipment .itemslot {
 	width: 114px;
