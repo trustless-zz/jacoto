@@ -9268,6 +9268,10 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     width: 10px;
     opacity: .5;}
 
+#user #seedtime_tokens,
+#user #achievements {
+    margin-bottom: 48px;}
+
 
 /****************************************************
 **************** SHARE SCORE PAGE *******************
@@ -9489,6 +9493,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     width: 120px;}
 #adventureclub .inline_list +.inline_list {
     margin-top: 5px;}
+#user #content>#progress_bar~.linkbox,
 #adventureclub table#monsters_search td.label:first-child {
     width: auto;}
 #adventureclub #adventure_search table#attacks_search tr:nth-child(2) td:not(.label),
@@ -10662,8 +10667,11 @@ textarea {/* prevent resizer from disappearing */
         height: 0;
         margin-bottom: unset;}
     
-    #achievements {
-        margin-bottom: 60px;}
+    #user #wrapper #seedtime_tokens,
+    #user #wrapper #achievements {
+        margin-bottom: 81px;}
+    #wrapper #footer {
+        margin-top: 43px;}
     
     :root {
         scrollbar-color: var(--c-b3) var(--c-input-obj);
