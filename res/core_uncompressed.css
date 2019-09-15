@@ -749,7 +749,6 @@ html,
 
 .forum_list,
 
-.linkbox,
 .thin >.header:first-child,
 #forums .forums_search .search_form,
 
@@ -3421,7 +3420,8 @@ body:not(#upload) #artist_tr + tr td.label,
 .linkbox {
     margin-bottom: 5px;
     padding: 5px;
-    text-align: center;}
+    text-align: center;
+    width: 100%;}
 #pageslinksdiv .invisible a,
 .linkbox .selected a {
     color: var(--c-txt) !important;
@@ -3605,6 +3605,8 @@ strong.mature +strong +br,
 #footer_image,
 
 #menu #nav_index,
+
+#footer >br,
 
 #artist td.edition_info ~td, /* checked/unchecked leftover */
 
@@ -4780,7 +4782,7 @@ input#file {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 10px auto;
+    margin: 45px auto 10px auto;
     font-size: 13px;
     line-height: var(--p-lh);}
 #disclaimer_container {
@@ -9270,7 +9272,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 
 #user #seedtime_tokens,
 #user #achievements {
-    margin-bottom: 48px;}
+    margin-bottom: 83px;}
 
 
 /****************************************************
@@ -10666,12 +10668,6 @@ textarea {/* prevent resizer from disappearing */
     #wrapper #content .sub {
         height: 0;
         margin-bottom: unset;}
-    
-    #user #wrapper #seedtime_tokens,
-    #user #wrapper #achievements {
-        margin-bottom: 81px;}
-    #wrapper #footer {
-        margin-top: 43px;}
     
     :root {
         scrollbar-color: var(--c-b3) var(--c-input-obj);
