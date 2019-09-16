@@ -1028,10 +1028,10 @@ tr.unreadpm td:first-child:after {
     position: absolute;
     text-align: left;
     top: 40px;
-    z-index: -1;
-    padding: 0 14px 0 0 !important;}
+    z-index: -1;}
 #header #searchbars .autocomplete_list {
-    width: 300px;
+    padding: 0;
+    width: 316px;
     z-index: 999;}
 .autocomplete_list li {
     cursor: pointer;
@@ -1040,11 +1040,45 @@ tr.unreadpm td:first-child:after {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;}
+#torrents #torrentsbrowsecomplete li:nth-child(odd),
 .autocomplete_list li:nth-child(odd) {
     background-color: var(--c-tgroup);}
+#torrents #torrentsbrowsecomplete li.highlight,
+#torrents #torrentsbrowsecomplete li:hover,
 .autocomplete_list li.highlight,
 .autocomplete_list li:hover {
     background-color: var(--c-anchor-hvr-bcg-obj);}
+
+#torrents #autocomplete {
+    position: absolute;
+    margin-top: -56px;
+    width: 316px;}
+#torrents ul#torrentsbrowsecomplete {
+    list-style: none;
+    position: relative;
+    top: 6px;
+    left: 141px;
+    display: block;
+    z-index: 1000;
+    margin: 0;
+    height: auto;
+    padding: 0;
+    background: var(--c-box);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);}
+#torrents #torrentsbrowsecomplete li {
+    cursor: pointer;
+    width: 100%;
+    padding: 0 7px;
+    box-sizing: border-box;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;}
+
+
 
 #index #freeleech .group_torrent >span:not(:first-child) {
     padding: 0 2px;}
@@ -1547,6 +1581,7 @@ tr.likes td[id^="likers_"],
 
 .hovereffect,
 .autocomplete_list li,
+#torrents #torrentsbrowsecomplete li,
 td.sign img,
 
 #seedtime_tokens #tokens_breakdown tr:not(.colhead) td:not(.label),
@@ -2903,6 +2938,11 @@ textarea,
 
 #tools #recommended >form.pad,
 
+#header #searchbars .autocomplete_list,
+#header #searchbars .autocomplete_list li,
+
+#torrents #torrentsbrowsecomplete li,
+
 #backpack .itemslot .item,
 #wrapper #trading_panel .message_section,
 #crafting_recipes #items_list,
@@ -3392,16 +3432,18 @@ body:not(#upload) #artist_tr + tr td.label,
 .filter_torrents.basic tr:nth-of-type(2) td:nth-of-type(3) {
     width: 150px;
     position: relative;
-    top: -25px;}
+    top: -34px;}
 .filter_torrents.basic tr:nth-of-type(2) td:nth-of-type(4) {
     position: relative;
-    top: -25px;}
+    top: -34px;
+    width: 23px;}
 .filter_torrents.basic .submit {
-    margin-top: -25px;}
+    margin-top: -31px;}
 .filter_torrents.basic .submit span {
     position: relative;
-    left: calc(100% - 240px);
-    top: 3px;}
+    left: 400px;
+    top: 2px;
+    line-height: 24px;}
 .filter_torrents.basic input#torrentsbrowsesearch {
     width: calc(100% - 540px);}
 
@@ -5652,6 +5694,7 @@ input[type="radio"]:active {
     vertical-align: top;
     text-align: right;
     width: 80px;}
+.filter_torrents.advanced .submit,
 #inbox #messageform #quickpost .comp td:first-child h3 {
     line-height: 26px;}
 #inbox #messageform #quickpost .comp td {
