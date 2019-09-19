@@ -9,6 +9,8 @@
 :root {
     --c-selection:                      rgba(12, 133, 129, .996); /* Chrome is SPECIAL */
     --c-selection-i:                    rgba(12, 133, 129, .75);
+    --c-blackout:                       rgb(10, 10, 10);
+    --c-blackout-show:                  rgb(200, 200, 200);
     --c-post-img:                       rgb(200, 200, 200);
     --p-description:                    unset;
     --c-description:                    rgb(245, 245, 245);

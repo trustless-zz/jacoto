@@ -9,6 +9,8 @@
 :root {
     --c-selection:                      rgba(168, 103, 67, .996);
     --c-selection-i:                    rgba(168, 103, 67, .75);
+    --c-blackout:                       rgb(10, 10, 10);
+    --c-blackout-show:                  rgb(200, 200, 200);
     --c-post-img:                       rgb(200, 200, 200);
     --p-description:                    unset;
     --c-description:                    rgb(245, 245, 245);
