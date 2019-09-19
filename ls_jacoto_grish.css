@@ -10,6 +10,7 @@
     --c-selection:                      rgba(69, 120, 168, .996);
     --c-selection-i:                    rgba(69, 120, 168, .75);
     --c-blackout:                       rgb(0, 0, 0);
+    --c-blackout-show:                  rgb(255, 255, 255);
     --c-post-img:                       rgb(0, 0, 0);
     --p-description:                    unset;
     --c-description:                    #fff;
