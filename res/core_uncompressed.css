@@ -5056,6 +5056,7 @@ h2 marquee {
     overflow-x: hidden;}
 #forums .forum_signature td > div:hover {
     opacity: 1;}
+#collections table#manage_collage_table tbody tr:last-child,
 #userhistory .forum_post.vertical_margin>tbody>tr:last-child,
 #wrapper .clan_stat_totals table.border tr:last-child,
 .forum_post tr.likes,
@@ -7001,7 +7002,7 @@ span.size5 img {
 #sort_table {
     border: 0px!important;
     position: relative;
-    z-index:9999999}
+    z-index:9999;}
 #sort_table select {
     min-width: auto;}
 
@@ -8908,14 +8909,16 @@ h2 span.secondary_class,
 *****************************************/
 #blog .head {
     font-size: 14px;
-    line-height: 14px;}
+    line-height: var(--p-head);
+    display: flex;
+    flex-flow: row wrap;}
 #blog .head strong {
     font-size: var(--p-head);
     margin-right: 5px;
     line-height: var(--p-head);}
 #blog .head span.time {
-    float: right;
-    line-height: 21px;}
+    margin-left: auto;
+    order: 9;}
 
 /*****************************************
 ***************ITEM CREATOR***************
@@ -9332,6 +9335,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     width: 10px;
     opacity: .5;}
 
+#tools .thin >#recommended >form,
 #shop #wrapper #items_list,
 #wrapper .freeleech_shop_main,
 #wrapper .global_buffs_shop_main {

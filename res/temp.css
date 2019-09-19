@@ -571,10 +571,22 @@
     .global_buffs>div {
         min-width: 80px;}
     
+    
+    #reportsv2 form#report_table div#dynamic_form table.border tr,
+    #reportsv2 form#report_table div#dynamic_form table.border td,
+    #collections table#edit_collage tr,
+    #collections table#edit_collage td,
     .global_buffs:hover .individual_buff,
     #header #alerts:hover .blend,
     #wrapper .sub:hover span {
         display: block;}
+    
+    #reportsv2 #wrapper #dynamic_form >table.border td {
+        text-align: left;
+        padding-top: 5px;
+        padding-bottom: 5px;}
+    #reportsv2 #wrapper #dynamic_form >table.border tr:first-child td.label {
+        padding-top: 41px;}
     
     #header .global_buffs a {
         opacity: 1;
@@ -620,6 +632,9 @@
 *****************************************/
 	body {}
     
+    #reportsv2 #wrapper #dynamic_form >table.border td,
+    #reportsv2 .box,
+	#reportsv2 #all_reports,
     #collections .sidebar #reply_box .box,
     td.label,
     #forums .forums_search .search_form .cat_list td,
@@ -645,7 +660,11 @@
         height: -moz-fit-content;
         height: fit-content;}
     
+    #reportsv2 form#report_table div#dynamic_form table.border tr,
+    #reportsv2 form#report_table div#dynamic_form table.border td,
+    #collections #easysort,
     #collections #reply_box,
+    #collections table#edit_collage td.label,
     #collections #wrapper table#new_collage td.label,
     #collections .thin >h2:first-child +.center td.label,
     #tools .thin>#recommended>div:not(.sidebar),
@@ -1092,11 +1111,18 @@
     #torrentbrowse form td select {
         margin: 5px;}
     
+    #reportsv2 textarea,
+    #reportsv2 input,
+    #collections table#edit_collage input#art,
+    #collections table#edit_collage textarea,
     #collections #wrapper table#new_collage td textarea,
     #collections #wrapper table#new_collage td select,
     #collections #wrapper table#new_collage td input {
         margin-top: 5px;
         margin-bottom: 5px;}
+    
+    #reportsv2 #wrapper #report_table >input[type="submit"] {
+        bottom: 20px;}
     
 	.filter_torrents.basic tr:nth-of-type(2) td:nth-of-type(3) {
         top: 3px; left: 25px;}
@@ -1819,6 +1845,7 @@ a[title="Remove"]:before {
 	#forums span[style="float:right;"] a {/*color: var(--grey);*/}
 	#forums .forum_index tr td {padding: 15px 0px;}
     
+    #collections table#edit_collage td.label,
     #collections #wrapper table#new_collage td.label,
     #collections .thin >h2:first-child +.center td.label,
     .filter_torrents td.label,
@@ -2070,9 +2097,9 @@ a[title="Remove"]:before {
 	#collections #easysort td {display: block; width: 70%; float: left;}
 	#collections #easysort td select {margin: 5px 0; width: 40%;}
 
-	#collections #manage_collage_table th:nth-of-type(5),
+	/* #collections #manage_collage_table th:nth-of-type(5),
 	#collections #manage_collage_table td:nth-of-type(5)
-		{display: none;}
+		{display: none;} */
 	#collections #manage_collage_table th:nth-of-type(6),
 	#collections #manage_collage_table td:nth-of-type(6)
 		{width: 100px;}
@@ -2083,8 +2110,8 @@ a[title="Remove"]:before {
 /***************************************** ^revisit
 ******************BLOG********************
 *****************************************/
-	#blog .thin {
-		display: block !important;}
+	/* #blog .thin {
+		display: block !important;} */
 
 	#blog img,
 	#blog iframe {
@@ -2095,21 +2122,54 @@ a[title="Remove"]:before {
 **************STAFF PAGES*****************
 *****************************************/
 
-	.permission_container {width: 93%;}
-
+	/* .permission_container {width: 93%;} */
+    
+    #staffpm #wrapper #inbox >form#messageform >h3 {
+        margin: 0;
+        z-index: 2;}
+#staffpm #inbox >form#messageform >table {
+    background: none;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    position: relative;
+    width: calc(100% - 2px);
+    top: 1px;
+    left: 0;
+    margin: 0 auto 17px auto;}
+#staffpm #inbox >form#messageform >table:before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    content: '';
+    position: absolute;
+    left: -1px;
+    bottom: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 38px);
+    background-color: var(--c-box);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
+    z-index: -1;}
+    
+    #staffpm table.message_table.checkboxes td:last-child {
+        margin-bottom: 10px;}
 	#staffpm .message_table td:nth-of-type(4) {padding-bottom: 0px;}
 	#staffpm td:nth-of-type(4):before {content: "Status:\00a0"}
-	#staffpm td:nth-of-type(4) {color: var(--grey); font-size: .8em;}
-	#staffpm td:nth-of-type(5) {color: var(--grey); font-size: 1em;}
+	#staffpm td:nth-of-type(4) {color: var(--c-text-s); font-size: .8em;}
+	#staffpm td:nth-of-type(5) {color: var(--c-text-s); font-size: 1em;}
 	#staffpm td:nth-of-type(6):before {content: "Assigned to:\00a0"}
-	#staffpm td:nth-of-type(6) {color: var(--grey); font-size: .8em;}
+	#staffpm td:nth-of-type(6) {color: var(--c-text-s); font-size: .8em;}
 	#staffpm td:nth-of-type(7):before {content: "Last PM by:\00a0"}
-	#staffpm td:nth-of-type(7) {color: var(--grey); padding-bottom: 25px; font-size: .8em;}
+	#staffpm td:nth-of-type(7) {color: var(--c-text-s); padding-bottom: 25px; font-size: .8em;}
 
-	#inbox input[value="Resolve selected"] {display:none;}
+	#inbox input[value="Resolve selected"] {
+        /* display:none; */
+        float: right;}
 
 	#inbox .message_table td:nth-of-type(1) {display: block; padding-top: 25px; font-size: 1.1em;}
-	#inbox .message_table td:nth-of-type(1) a {color: var(--lightBlue);}
+	/* #inbox .message_table td:nth-of-type(1) a {color: var(--lightBlue);} */
 	#inbox .message_table td:nth-of-type(2) {padding-top: 0px; padding-bottom: 5px; font-size: .8em;}
 
 	#staffpm #inbox {margin-top: -20px;}
@@ -2122,18 +2182,16 @@ a[title="Remove"]:before {
 	#tm_stats #tms img {max-height: 100%}
 	#tm_stats td#platform_name {min-width: 150px;}
 
-	#reportsv2 .box {width: 95% !important;}
 	#reportsv2 #content table tr {display: flex; flex-direction: column;}
 	#reportsv2 #content table tr td:nth-of-type(1) {order:2;}
 	#reportsv2 #content table tr td:nth-of-type(2) {order:1;}
 	#reportsv2 #content table tr td table tr {display: flex; flex-direction: row;}
 	#reportsv2 #content table tr td table tr td {display: inline; width: 98%;}
 	#reportsv2 #content table tr td.colhead {font-size: 1em;}
-	#reportsv2 h3 {line-height: 0px; margin-top: 40px; margin-bottom: 0px; color: var(--darkGreen);}
-	#reportsv2 textarea, #reportsv2 input {max-width: 300px;}
-	#reportsv2 #all_reports {width: 95% !important;}
-	#reportsv2 #all_reports input[type=button]:disabled {color: #e6e6e6; background: #53616b;}
-	#reportsv2 #all_reports input[type=button]:disabled:hover {box-shadow: none;}
+	/* #reportsv2 h3 {line-height: 0px; margin-top: 40px; margin-bottom: 0px; color: var(--darkGreen);}*/
+
+	/* #reportsv2 #all_reports input[type=button]:disabled {color: #e6e6e6; background: #53616b;}
+	#reportsv2 #all_reports input[type=button]:disabled:hover {box-shadow: none;} */
 
 	#staffpm .linkbox {margin: 10px 0 20px;}
 
@@ -2167,8 +2225,8 @@ a[title="Remove"]:before {
 
 	/* Sessions Page */
 	#user .thin table#sessions_table td {display: inline-block; width: 15%;}
-	#user .thin table#sessions_table .rowa td {background: none;}
-	#user .thin table#sessions_table .rowb td {background: none;}
+	/* #user .thin table#sessions_table .rowa td {background: none;}
+	#user .thin table#sessions_table .rowb td {background: none;} */
 
 	/* User Applications */
 	#tools .user_applications table .colhead {display: none;}
@@ -2196,7 +2254,7 @@ a[title="Remove"]:before {
 
 /*****************************************
 ****************REQUESTS******************
-*****************************************/
+***************************************** revisit */
 	#requests .center {
 		display: none;
 		margin: 0 !important;}
@@ -2495,8 +2553,8 @@ a[title="Remove"]:before {
 	#inbox td {display: block; padding: 0 10px;}
 	/*#inbox #searchbox {display: none;}*/
 	#inbox tr.colhead {display:none;}
-	#inbox #messageform td:nth-of-type(1) {float: right; padding-top: 17px;}
-	#inbox #messageform td:nth-of-type(2) {display: block; padding-top: 25px;}
+	#inbox #messageform td:nth-of-type(1) {float: right; padding-top: 10px;}
+	#inbox #messageform td:nth-of-type(2) {display: block; padding-top: 10px;}
 	#inbox #messageform td:nth-of-type(2) a {font-size: 1.1em; color: var(--lightBlue); font-weight:bold;}
 	#staffpm #inbox #messageform td:nth-of-type(2) a {font-size: 1.4em; font-weight: bold;}
 	#inbox #messageform td:nth-of-type(3) {display: block; color: var(--grey); font-size: .8em;}
