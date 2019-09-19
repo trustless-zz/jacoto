@@ -1408,6 +1408,7 @@ a {
     border: 0;
     background-color: transparent;}
 a:hover,
+#wrapper .redacted_bbcode_show a:hover,
 #wiki .wiki_article a:hover img,
 .forum_post td.body a:hover img,
 .forum_signature a:hover img,
@@ -10583,11 +10584,15 @@ div#fight_skill_points_assign >table {
 #fight_skill_points_assign #submit {
 	float: right;}
 
+#wrapper .redacted_bbcode a,
 #wrapper .redacted_bbcode {
-    color: var(--c-blackout);
+    color: var(--c-blackout);}
+#wrapper .redacted_bbcode {
     background-color: var(--c-blackout);}
 #wrapper .redacted_bbcode_show {
     color: var(--c-blackout-show);}
+#wrapper .redacted_bbcode_show a {
+    color: var(--c-blackout-a);}
 
 /** user review pop-up on #user page **/
 .qtip-default {

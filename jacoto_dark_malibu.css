@@ -10,6 +10,7 @@
     --c-selection:                      rgba(70, 121, 163, .996);
     --c-selection-i:                    rgba(70, 121, 163, .75);
     --c-blackout:                       rgb(60, 60, 60);
+    --c-blackout-a:                     rgb(186, 224, 255);
     --c-blackout-show:                  rgb(220, 220, 220);
     --c-post-img:                       rgb(55, 55, 55);
     --p-description:                    invert(1);
