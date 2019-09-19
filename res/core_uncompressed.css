@@ -10584,10 +10584,10 @@ div#fight_skill_points_assign >table {
 	float: right;}
 
 #wrapper .redacted_bbcode {
-    color: var(--c-txt);
-    background-color: var(--c-txt);}
+    color: var(--c-blackout);
+    background-color: var(--c-blackout);}
 #wrapper .redacted_bbcode_show {
-    color: var(--c-high-t);}
+    color: var(--c-blackout-show);}
 
 /** user review pop-up on #user page **/
 .qtip-default {
