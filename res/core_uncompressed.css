@@ -3649,8 +3649,9 @@ strong.mature +strong +br,
 #menu #nav_index,
 
 #footer >br,
+#clans #clan_stats >br,
 
-#artist td.edition_info ~td, /* checked/unchecked leftover */
+#artist td.edition_info ~td, /* torrent checked/unchecked leftover */
 
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad td.label,
 #user .box.box_suggested_tags .head.tooltip >span:last-child,
@@ -4196,6 +4197,7 @@ a[href^="javascript:Vote("] strong:hover,
 #quickreplybuttons input {
     margin: 0 5px;}
 
+#clans #clan_stats >span[style="float: right;"]:first-child +.box.pad,
 #torrents #content >span[style="float:right;"]:first-child,
 #tools .thin >#recommended >.head.colhead_dark:first-child,
 #user .thin >h3:first-child,
@@ -5424,6 +5426,18 @@ input[type="radio"]:active {
     margin: 0;}
 .sidebar .box_badges img {
     margin: 0 2px;}
+
+#clans #wrapper #clan_stats >span[style="float: right;"]:first-child +.box.pad {
+    position: relative;
+    z-index: 1;
+    top: 1px;
+    margin-bottom: 13px;
+    padding-top: 8px;
+    padding-bottom: 7px;
+    background: none;
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;}
 
 #torrents .center.thin table#weblinks_edit td:nth-child(odd) {
     width: 200px;
@@ -6860,7 +6874,8 @@ td >img[title="Gold"] {
     padding: 9px 10px;
     line-height: var(--p-head);
     height: var(--p-head);
-    font-weight: 600;}
+    font-weight: 600;
+    z-index: 9;}
 
 h2#username span#tip_user {
     display: inline-block;
@@ -8457,8 +8472,9 @@ body#user.inventory {}
 	display: none;}
 
 .inventory .bottom_linkbox {
+    width: calc(100% - 237px);
 	clear: both;
-	margin-left: 257px;}
+	margin-left: 237px;}
 
 .inventory .trash_icon {
     cursor: pointer;
@@ -9313,6 +9329,10 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     width: 10px;
     opacity: .5;}
 
+#shop #wrapper #items_list,
+#wrapper .freeleech_shop_main,
+#wrapper .global_buffs_shop_main {
+    margin-bottom: 30px;}
 #user #seedtime_tokens,
 #user #achievements {
     margin-bottom: 83px;}
@@ -9727,7 +9747,7 @@ table.adventure_table h3 {
 #equipment #equip_panel:before,
 #crafting_panel #slots_panel:before {
     text-align: left;
-    content: 'Crafting Place';
+    content: 'Crafting Table';
     font-weight: 600;
     background: var(--p-head-grdnt);
     font-size: var(--p-head);
