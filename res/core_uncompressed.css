@@ -1663,6 +1663,8 @@ a:after, */
 #itemsdiv p,
 .item .item_count,
 
+.redacted_bbcode,
+
 /* #color_leeching,
 #color_leeching .torrent_info_tags,
 #color_leeching a,
@@ -10581,6 +10583,11 @@ div#fight_skill_points_assign >table {
 #fight_skill_points_assign #submit {
 	float: right;}
 
+#wrapper .redacted_bbcode {
+    color: var(--c-txt);
+    background-color: var(--c-txt);}
+#wrapper .redacted_bbcode_show {
+    color: var(--c-high-t);}
 
 /** user review pop-up on #user page **/
 .qtip-default {
