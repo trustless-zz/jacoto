@@ -4749,7 +4749,8 @@ input[name="fromyear"],
 input[name="toyear"],
 input#remaster_year,
 input#year,
-input[name="year"] {
+input[name="year"],
+.requests_outer_table input[name="year"] {
     width: 45px;}
 .thin >#request_form input[name="image"] {
     width: calc(100% - 95px);
