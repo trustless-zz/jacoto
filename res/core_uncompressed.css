@@ -2909,6 +2909,9 @@ textarea,
 .forum_post td.body iframe,
 #blog .pad iframe,
 .box.news_post >.pad iframe,
+
+div[id^="twitch-embed-"],
+
 #reports .thin >h3,
 #reportsv2 #report_table >h3,
 #reportsv2 #dynamic_form >table.border:before,
@@ -5280,7 +5283,12 @@ span.size10 {
 .box.news_post>.pad iframe,
 .forum_post td.body iframe {
     width: 650px;
-    height: 370px;
+    height: 370px;}
+#blog .pad iframe,
+.box.box_info iframe,
+.box.news_post>.pad iframe,
+.forum_post td.body iframe,
+div[id^="twitch-embed-"] {
     max-width: calc(100% - 10px)!important;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
@@ -5301,7 +5309,7 @@ span.size10 {
 .box.news_post>.pad img,
 .forum_post td.body img,
 blockquote#description img {
-    max-width: 714px!important;
+    max-width: 714px !important;
     width: auto;
     height: auto;
     -webkit-filter: var(--p-post-img);
@@ -5312,8 +5320,18 @@ blockquote#description img {
     -webkit-filter: none;
     filter: none;}
 
+#wrapper div[id^="twitch-embed-"] >iframe {
+    max-width: unset !important;
+    -webkit-filter: unset;
+    filter: unset;
+    margin: 0;
+    padding: 0;
+    width: 854px;
+    height: 480px;}
+
 .twitter_post h4 {
     display: none;}
+div[id^="twitch-embed-"],
 .twitter_post {
     margin: 0 5px;
     width: -moz-fit-content;
@@ -5323,10 +5341,13 @@ blockquote#description img {
 .twitter-tweet {
     margin: 0 !important;}
 /* twitter align test */
+div[style="text-align:center;"] >div[id^="twitch-embed-"],
 div[style="text-align:center;"] >.twitter_post {
     margin: 0 auto !important;}
+div[style="text-align:left;"] >div[id^="twitch-embed-"],
 div[style="text-align:left;"] >.twitter_post {
     margin: 0 auto 0 5px !important;}
+div[style="text-align:right;"] >div[id^="twitch-embed-"],
 div[style="text-align:right;"] >.twitter_post {
     margin: 0 5px 0 auto !important;}
 
@@ -6928,13 +6949,22 @@ h2 .user_title span.size10 {
     vertical-align: middle;} /*bottom*/
 /* ---gameroom--- ../images with size=4 code will float left, size=5 will float right */
 span.size4 iframe,
+span.size4 div[id^="twitch-embed-"],
 span.size4 .twitter_post,
 span.size4 img {
-    float: left; margin-right: 10px !important;}
+    float: left;
+    margin-right: 10px !important;}
 span.size5 iframe,
+span.size5 div[id^="twitch-embed-"],
 span.size5 .twitter_post,
 span.size5 img {
-    float: right; margin-left: 10px !important;}
+    float: right;
+    margin-left: 10px !important;}
+
+#wrapper span.size4 div[id^="twitch-embed-"] >iframe,
+#wrapper span.size5 div[id^="twitch-embed-"] >iframe {
+    float: unset;
+    margin: 0;}
 
 /*****************************************************************************************************/
 
