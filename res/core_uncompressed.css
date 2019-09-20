@@ -777,6 +777,10 @@ html,
 
 #collections table#edit_collage input#art,
 
+#requests form#request_form,
+.thin.top10_games >div,
+.thin.top10_torrents >div,
+
 #user input#irckey,
 #user input#email,
 #user input#avatar,
@@ -2967,6 +2971,8 @@ div[id^="twitch-embed-"],
 #header #searchbars .autocomplete_list li,
 
 #torrents #torrentsbrowsecomplete li,
+
+#requests form#request_form,
 
 #backpack .itemslot .item,
 #wrapper #trading_panel .message_section,
@@ -6612,9 +6618,11 @@ table.adventure_table .colhead td:not(:first-child) {
     display: inline-block;}
 
 #userhistory .colhead_dark a img[alt="Last read post"] {
-    padding-left: 10px;
-    width: 10px;
-    height: 14px;}
+    padding-left: 16px;
+    width: 16px;
+    height: 16px;
+    margin-top: -2px;
+    margin-bottom: -2px;}
 
 #staff .thin >.box.pad table .colhead td:nth-child(2) {
     width: 185px !important;}

@@ -572,6 +572,8 @@
         min-width: 80px;}
     
     
+    #requests form#request_form tr,
+    #requests form#request_form td,
     #reportsv2 form#report_table div#dynamic_form table.border tr,
     #reportsv2 form#report_table div#dynamic_form table.border td,
     #collections table#edit_collage tr,
@@ -632,6 +634,8 @@
 *****************************************/
 	body {}
     
+    .sidebar >div >.box,
+    #requests .thin table td,
     #reportsv2 #wrapper #dynamic_form >table.border td,
     #reportsv2 .box,
 	#reportsv2 #all_reports,
@@ -714,6 +718,9 @@
 		float: none;
 		padding:5px 0 5px 5px;
 		box-shadow: none !important;}
+    
+        #requests form#request_form tr:nth-child(2) td {
+        margin-top: 0;}
 
 /*
 	.global_buffs {
@@ -920,6 +927,9 @@
     #torrents #requests_list tr:first-child {
         display: none;}
     
+    #requests #wrapper .sticky>td:first-child:after {
+        content: none;}
+    
     #torrents #requests_list tr.requestrows {
         display: flex;
         flex-flow: row;}
@@ -951,18 +961,24 @@
         background-color: var(--c-tgroup);}
     .torrent_table .group.sticky {
         background-color: var(--c-box);}
-    .sticky td {
+    #requests .sticky td,
+    #torrents .sticky td {
         border: none !important;}
-    .sticky td:nth-of-type(11) {
+    #requests .sticky td:nth-of-type(3),
+    #torrents .sticky td:nth-of-type(11) {
         border-bottom: var(--p-border) !important;
         border-bottom-color: var(--c-b1) !important;}
-    .sticky td:nth-of-type(3) {
+    #requests .sticky td:nth-of-type(1),
+    #torrents .sticky td:nth-of-type(3) {
         border-top: var(--p-border) !important;
         border-top-color: var(--c-b1) !important;}
     
-    .sticky {
+    #requests .sticky,
+    #torrents .sticky {
+        display: block;
         position: relative;}
-    .sticky:before {
+    #requests .sticky:before,
+    #torrents .sticky:before {
         content: '';
         position: absolute;
         top: 0;
@@ -1105,12 +1121,18 @@
 	.filter_torrents h3 {width: 95%;}
 	#torrentbrowse form td {display: block;}
     
+    #requests form#request_form td select,
+    #requests form#request_form td input[type="text"]:not([name="image"]):not(#amount_box),
+    #requests form#request_form td input[type="checkbox"],
     #collections .center td input,
     #collections .center td select,
 	#torrentbrowse form td input,
     #torrentbrowse form td select {
         margin: 5px;}
     
+    #requests form#request_form td textarea,
+    #requests form#request_form td input[name="image"],
+    #requests form#request_form td #amount_box,
     #reportsv2 textarea,
     #reportsv2 input,
     #collections table#edit_collage input#art,
@@ -1130,6 +1152,7 @@
     /*td.label ~td:last-child {
         padding-bottom: 5px !important;
         margin-bottom: 5px !important;} */
+    #requests table#requests_list .tags,
     tr:not(:first-child) >td.label {
         margin-top: 5px;}
 	td.label {
@@ -1139,6 +1162,8 @@
 		display: block;
 		padding: 5px;}
     
+    #requests form#request_form td select:not(#current_unit),
+    #requests form#request_form td input[type="text"]:not([name="image"]):not(#amount_box),
     #collections #wrapper table#new_collage select,
     #collections #wrapper .center td input[type="text"],
     #collections #wrapper .center td select,
@@ -1148,6 +1173,9 @@
     #wrapper .filter_torrents input.inputtext.smallest[name="releasegroup"],
     #wrapper .filter_torrents input.inputtext[name="filelist"] {
         width: calc(100% - 10px) !important;}
+    
+    #requests #wrapper #request_form input[type="button"] {
+        vertical-align: unset;}
 
 	#torrents .cat_list {
         width: 100% !important;
@@ -1629,6 +1657,7 @@ a[title="Remove"]:before {
 
 	/****Sidebar boxes****/
 	/* #torrents .sidebar .box .body {padding: 5px;} */
+    #requests form#request_form td.label,
     #collections .thin >h2:first-child +.center td.label,
     #forums .forum_latest >.search.box.pad td.label,
     #requests .sidebar .box_votes table td.label,
@@ -1637,6 +1666,9 @@ a[title="Remove"]:before {
     #torrents .thin >h2:first-child +.center td.label {
         padding: 5px;}
     
+    #requests form#request_form .colhead {
+        margin: 0;
+        padding: 9px 10px;}
 
 	#torrents .sidebar {
         display: flex;
@@ -1693,6 +1725,7 @@ a[title="Remove"]:before {
 		/* padding: 10px;
         margin-left: 100px;
         display: block;*/}
+    #user .box.box_gold #box_gold_scrollbar td,
     #torrents .torrent_edit td,
     #torrents #content>script:first-child+h2+form #torrent_link .label:first-child,
     #torrents .center.thin >.box.pad td.label {
@@ -1787,6 +1820,9 @@ a[title="Remove"]:before {
 	/*** User Reviews ***/
 	#reviewdate {
         margin-top: 2px;}
+    
+    #user #wrapper .box.box_gold #box_gold_scrollbar tr:first-child td.label {
+        background-color: unset;}
 
 /*****************************************
 ****************UPLOADS*******************
@@ -1845,6 +1881,7 @@ a[title="Remove"]:before {
 	#forums span[style="float:right;"] a {/*color: var(--grey);*/}
 	#forums .forum_index tr td {padding: 15px 0px;}
     
+    #requests form#request_form td.label,
     #collections table#edit_collage td.label,
     #collections #wrapper table#new_collage td.label,
     #collections .thin >h2:first-child +.center td.label,
@@ -1882,30 +1919,41 @@ a[title="Remove"]:before {
 
 	#forums #content .forum_index span[style="float:left;"] {padding-right: 40px;}
 
+    #requests .forum_post .colhead_dark div[style="float: left;"] >strong {
+        display: flex;
+        flex-flow: row wrap;}
+    
 	.forum_post .colhead_dark {
 		/* font-size: .8em;
 		padding: 5px 0;
 		width: 100%;
 		min-height: 30px; */}
-	.forum_post .colhead_dark div[style="float:left;"] {
+	.forum_post .colhead_dark div[style="float: left;"],
+    .forum_post .colhead_dark div[style="float:left;"] {
 		display: flex;
 		flex-flow: row wrap;
 		color: transparent;
 		width: 100%}
 	/* #forums .forum_post .colhead_dark div[style="float:left;"] label{
 		color: var(--white);} */
-	.forum_post .colhead_dark div[style="float:left;"] input {
+	.forum_post .colhead_dark div[style="float: left;"] input,
+    .forum_post .colhead_dark div[style="float:left;"] input {
 		height: inherit;}
 
-	.forum_post .colhead_dark div[style="float:left;"] strong {
+	.forum_post .colhead_dark div[style="float: left;"] strong,
+    .forum_post .colhead_dark div[style="float:left;"] strong {
         color: var(--c-txt);}
-	.forum_post .colhead_dark div[style="float:left;"] strong a {
+	.forum_post .colhead_dark div[style="float: left;"] strong a,
+    .forum_post .colhead_dark div[style="float:left;"] strong a {
         margin-left:-10px; margin-right: 4px;}
 	/* #forums .forum_post .colhead_dark a.post_id {margin-top: 2px !important; margin-left: 2px;} */
 	.forum_post .colhead_dark div[style="float:left;"] a {/*padding: 0px 3px;*/ /* font-size: 1em; */}
 
-	.forum_post .colhead_dark div[style="float:left;"] .user_title {display: none;}
-	.forum_post .colhead_dark div[style="float:left;"] .time {
+	.forum_post .colhead_dark div[style="float: left;"] .user_title,
+    .forum_post .colhead_dark div[style="float:left;"] .user_title {
+        display: none;}
+	.forum_post .colhead_dark div[style="float: left;"] .time,
+    .forum_post .colhead_dark div[style="float:left;"] .time {
 		order: 10;
 		/* font-size: 1em; */
 		left: 6px;
@@ -2255,38 +2303,55 @@ a[title="Remove"]:before {
 /*****************************************
 ****************REQUESTS******************
 ***************************************** revisit */
+    #requests #wrapper .main_column>table:first-child {
+        top: unset;
+        margin-bottom: unset;}
+    #requests #wrapper .main_column>table:first-child:before {
+        top: 0;
+        left: 0;
+        width: calc(100% - 22px);
+        display: block;
+        position: relative;}
+    #requests #wrapper .main_column>table:first-child tr:first-child td {
+        padding-top: 5px;}
+    #requests #wrapper table input[name=link] {
+        max-width: unset;}
+    
 	#requests .center {
 		display: none;
 		margin: 0 !important;}
 
-	#requests .thin table .colhead_dark {display: none;}
-	#requests .thin table td:nth-of-type(1) {
-		/* width: 98% !important; */
-		/* display: block;
-		padding-top: 25px;
-		font-size: 1.2em; */
+	#requests .thin table:not(.forum_post) .colhead_dark {display: none;}
+	#requests .thin table:not(.forum_post) td:nth-of-type(1) {
+		width: 100% !important;
+		display: block;
+		padding-top: 11px;
+		/* font-size: 1.2em; */
 		/* color: var(--lightBlue); */
 		/* cfont-weight:bold; */}
-	#requests .thin table td:nth-of-type(1) a {
+	#requests .thin table:not(.forum_post) td:nth-of-type(1) a {
         /*color: var(--lightBlue); */
         font-weight:bold !important;}
-	#requests .thin table td:nth-of-type(2) {display: none;}
-	#requests .thin table td:nth-of-type(3):before {content: "Bounty:\00a0"; color: var(--grey);}
-	#requests .thin table td:nth-of-type(3) {
+	#requests .thin table:not(.forum_post) td:nth-of-type(2) {display: none;}
+	#requests .thin table:not(.forum_post) td:nth-of-type(3):before {
+        content: "Bounty:\00a0";
+        color: var(--grey);}
+	#requests .thin table:not(.forum_post) td:nth-of-type(3) {
 		width: 100% !important;
 		display: block;
 		text-align: left;
-		font-size: .8em;
+		font-size: 13px;
 		margin-top: -10px;
-		padding-bottom: 25px;
+		padding-bottom: 11px;
+        border-top: none !important;
 		/* color: var(--darkGreen); */}
-	#requests .thin table td:nth-of-type(4) {display: none;}
-	#requests .thin table td:nth-of-type(5) {display: none;}
-	#requests .thin table td:nth-of-type(6) {display: none;}
-	#requests .thin table td:nth-of-type(7) {display: none;}
-	#requests .thin table td:nth-of-type(8) {display: none;}
-	#requests .thin table td:nth-of-type(1) .tags a {
-        font-size: .8em !important;
+	#requests .thin table:not(.forum_post) td:nth-of-type(4) {display: none;}
+	#requests .thin table:not(.forum_post) td:nth-of-type(5) {display: none;}
+	#requests .thin table:not(.forum_post) td:nth-of-type(6) {display: none;}
+	#requests .thin table:not(.forum_post):not(.forum_post) td:nth-of-type(7) {display: none;}
+	#requests .thin table:not(.forum_post) td:nth-of-type(8) {display: none;}
+	#requests .thin table:not(.forum_post) td:nth-of-type(1) .tags a {
+        /* font-size: .8em !important; */
         font-weight:normal !important;}
 
 	#requests .thin form table td:nth-of-type(2) {display: block; padding-left: 10px;}
@@ -2295,19 +2360,22 @@ a[title="Remove"]:before {
 	#requests .thin .main_column table td.label {
 		width: 100% !important;
 		display: block;
-		float: left;
-		padding: 10px 5px;
-		font-size: 1em;
+		text-align: left;
+		padding: 5px;
 		/* color: var(--white); */}
-	#requests .thin .main_column table td:nth-of-type(2) {
-		width: auto;
+	#requests .thin .main_column table:not(.forum_post) td:nth-of-type(2) {
+		width: 100%;
 		display: inline-block;
 		padding: 10px 5px;}
 
-	#requests .sidebar {width: 100%;}
-	#requests .sidebar .box {width: 48%;}
-	#requests .sidebar .box:nth-of-type(1) {margin-right: 3%;}
-	#requests .sidebar .box:nth-of-type(3) {margin-right: 3%;}
+	#requests .sidebar {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        width: 100%;}
+	#requests .sidebar .box {width: calc(50% - 7.5px);}
+	#requests .sidebar .box:nth-of-type(1) {/* margin-right: 3%; */}
+	#requests .sidebar .box:nth-of-type(3) {/* margin-right: 3%; */}
 	#requests .main_column input {padding: 5px !important; margin: 5px !important;}
 	#requests form textarea {
         /* max-width: 95%;
@@ -2338,7 +2406,10 @@ a[title="Remove"]:before {
 		width: 100%;
 		display: flex;
 	    flex-direction: column;}
-	#user img, #user iframe {max-width: 100% !important; height: auto !important;}
+	#user img,
+    #user iframe {
+        max-width: 100% !important;
+        height: auto !important;}
 
 	#user .thin form {order: 1}
 	#user .box {order: 2}
@@ -2365,24 +2436,42 @@ a[title="Remove"]:before {
 	#user .likes_icon img {width: 20px; float: right;}
 	#snatchesrow td, #uploadsrow td, #likesrow td {width: 100%;}
 	#snatchesrow img, #uploadsrow img,  #likesrow img {
-		min-width: 0%;
+		/* min-width: 0%;
 		width: 24%;
 		float: left;
 		min-height: 117px !important;
 		max-height: 117px;
-		margin-top: 5px;}
+		margin-top: 5px; */}
 	#snatchesrow td:nth-of-type(5), #uploadsrow td:nth-of-type(5), #likesrow td:nth-of-type(5) {
-		display:none !important;}
+		/* display:none !important;*/}
 
 	/* Community Stats Box */
-	.profile .box_community #community_stats {margin-left: -25px; overflow: hidden;}
-	.profile .box_community #community_stats ul {display: block; width: 100%; float: none;}
+	.profile .box_community #community_stats {
+        /* margin-left: -25px; */
+        overflow: hidden;}
+	.profile .box_community #community_stats ul {
+        display: block;
+        width: calc(50% - 18px);
+        float: none;}
+    .profile .box_community #community_stats >ul:not(:last-child) {
+        margin-bottom: 20px !important;}
 
 	/* Invites Page */
-	#user table#invitee_list td {display: inline-block; width: 24%; height: 100%; vertical-align:middle;}
+	/* #user table#invitee_list td {
+        display: inline-block;
+        width: 24%;
+        height: 100%;
+        vertical-align:middle;}
 	#user table#invitee_list td:nth-of-type(2),
 	#user table#invitee_list td:nth-of-type(5),
-	#user table#invitee_list td:nth-of-type(6) {display: none;}
+	#user table#invitee_list td:nth-of-type(6) {
+        display: none;} */
+    #user table#invitee_list .colhead {display: none;}
+    #user .thin>.header:first-child~h3+.box.pad:last-child {order: unset;}
+    
+    #wrapper #markread:before {
+        left: unset;
+        right: -1px;}
 
 /*****************************************
 ****************TOP 10********************
@@ -2393,9 +2482,12 @@ a[title="Remove"]:before {
 	#top10 .linkbox {
 		display: block;
 		width: 100%;}
-	#top10 table .colhead {display: none;}
-	#top10 .top10_torrents table td:nth-of-type(3){padding: 20px 10px;}
-	#top10 .top10_games table td:nth-of-type(3){padding: 20px 10px;}
+	#top10 table .colhead {
+        display: none;}
+    
+	#top10 .top10_torrents table td:nth-of-type(3),
+	#top10 .top10_games table td:nth-of-type(3) {
+        padding: 10px 5px;}
 	#top10 table td:nth-of-type(5) {display: none;}
 	#top10 table td:nth-of-type(6) {display: none;}
 	#top10 table td:nth-of-type(7) {display: none;}
@@ -2405,10 +2497,18 @@ a[title="Remove"]:before {
  	#top10 .content_basiccontainer {display: none;}
 
 	#top10 .top10_tags table td:nth-of-type(4) {display: none;}
-	#top10 .top10_tags table td {padding: 0 5px;}
-	#top10 .top10_users table td {padding: 0 5px;}
-	#top10 .top10_uploaders table td {padding: 0 5px;}
-
+	#top10 .top10_tags table td {padding: 1px 5px;}
+	#top10 .top10_users table td {padding: 1px 5px;}
+	#top10 .top10_uploaders table td {padding: 1px 5px;}
+    
+    #top10 .thin.top10_tags,
+    #top10 .thin.top10_uploaders,
+    #top10 .thin.top10_users {
+        justify-content: space-between;}
+    #top10 .thin.top10_tags #ut,
+    #top10 .thin.top10_tags #ur,
+    #top10 .thin.top10_tags #v {
+        width: unset;}
 	.top10_torrents span {display: none;}
 	.top10_torrents strong span {display: inline;}
 
@@ -2520,6 +2620,8 @@ a[title="Remove"]:before {
 /*****************************************
 ****************DONATE********************
 *****************************************/
+    #donate .thin {
+        display: block;}
 	.donate_box_wrapper {width: 49%; padding: 0; margin: 0;}
 
 /*****************************************
@@ -2530,11 +2632,13 @@ a[title="Remove"]:before {
 
 /*****************************************
 **************BOOKMARKS*******************
-*****************************************/
+***************************************** revisit */
+    #bookmarks .main_column {
+        width: 100%;}
 	#bookmarks .sidebar {display: none;}
-	#bookmarks table#collage_table td {width: 32%; float: left; display: block; height: 160px; padding:7px 1px;}
-	#bookmarks table#collage_table tr {display:inline;}
-	#bookmarks table#collage_table td[colspan^=""] {width: auto;}
+    /* #bookmarks table#collage_table td {width: 32%; float: left; display: block; height: 160px; padding:7px 1px;} */
+	/* #bookmarks table#collage_table tr {display:inline;} */
+	/* bookmarks table#collage_table td[colspan^=""] {width: auto;} */
 
 /*****************************************
 *************GAZELLE VIEWER***************
