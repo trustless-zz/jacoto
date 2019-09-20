@@ -106,8 +106,7 @@ td.read_locked_sticky:before,
 .xdsoft_datetimepicker .xdsoft_prev,
 #wrapper .prev,
 #wrapper .next,
-#nav_userinfo a:before,
-tr.participated >td:nth-child(2):before {
+#nav_userinfo a:before {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -153,7 +152,8 @@ img[title="Seeders"],
 .profile .box_stats #share_score .stat:before,
 td img[alt="Ratio"],
 #top10 img[alt="Up Votes"],
-#top10 img[alt="Down Votes"] {
+#top10 img[alt="Down Votes"],
+tr.participated >td:nth-child(2):before {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -627,11 +627,11 @@ tr.unreadpm td:first-child {
     mask-image: url('icons/participated.svg');
     mask-size: auto 16px;}
 
-#wrapper tr.participated >td.unread                 +td:before,
+/* #wrapper tr.participated >td.unread                 +td:before,
 #wrapper tr.participated >td.unread_sticky          +td:before,
 #wrapper tr.participated >td.unread_locked          +td:before,
 #wrapper tr.participated >td.unread_locked_sticky   +td:before {
-    background-color: var(--c-txt);}
+    background-color: var(--c-txt);} */
 
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright {
