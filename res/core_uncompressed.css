@@ -627,11 +627,12 @@ tr.unreadpm td:first-child {
     mask-image: url('icons/participated.svg');
     mask-size: auto 16px;}
 
-/* #wrapper tr.participated >td.unread                 +td:before,
+#wrapper tr.participated >td.unread                 +td:before,
 #wrapper tr.participated >td.unread_sticky          +td:before,
 #wrapper tr.participated >td.unread_locked          +td:before,
 #wrapper tr.participated >td.unread_locked_sticky   +td:before {
-    background-color: var(--c-txt);} */
+    -webkit-mask-image: url('icons/participated_unread.svg');
+    mask-image: url('icons/participated_unread.svg');}
 
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright {
