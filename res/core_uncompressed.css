@@ -4247,6 +4247,7 @@ h2 {
 
 hr {
     opacity: .75;
+    border-style: solid;
     border-color: var(--c-text-s);}
 
 #torrents #wrapper #content >span[style="float:right;"]:first-child {
