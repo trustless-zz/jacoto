@@ -5977,6 +5977,7 @@ input[type="radio"]:active {
 
 /** manually removing embedded brackets **/
 #more_news >a,
+.linkbox a[href^="user.php?action=notify_handle&label"],
 .linkbox a[href^="artist.php?action=edit&artistid"],
 .linkbox a[href^="torrents.php?action=linkgroups&"],
 .linkbox a[href^="ajax.php?action=torrentgroup&"],
@@ -6062,6 +6063,7 @@ input[type="radio"]:active {
     display: inline-block;}
 
 #more_news >a:before                                                            {content: 'Get More News';}
+.linkbox a[href^="user.php?action=notify_handle&label"]:before                  {content: 'Add to notifications';}
 .linkbox a[href^="artist.php?action=edit&artistid"]:before                      {content: 'Edit';}
 .linkbox a[href^="torrents.php?action=linkgroups&"]:before                      {content: 'Link groups';}
 .linkbox a[href^="ajax.php?action=torrentgroup&"]:before                        {content: 'Export to json';}
