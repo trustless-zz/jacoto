@@ -5654,8 +5654,10 @@ input[type="radio"]:active {
     content: 'Info';}
 #user .thin >h2:first-child +.center input[type="text"] {
     width: calc(100% - 105px);}
-#inbox #messageform table ~input {
-    margin: 8px 0 10px 5px;}
+#inbox #messageform table ~input,
+#inbox #messageform input:first-child +div input {
+    margin: 10px 0 10px 5px;}
+#inbox #messageform input:first-child +div input:first-child,
 #inbox #messageform table+input,
 #torrents #content>script:first-child+h2+form #specialed {
     margin-left: 10px;}
