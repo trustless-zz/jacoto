@@ -781,6 +781,8 @@ html,
 .thin.top10_games >div,
 .thin.top10_torrents >div,
 
+.thin.torrent_history >form#torrent_history_search input[type="text"][name="tags"],
+
 #user input#irckey,
 #user input#email,
 #user input#avatar,
@@ -3047,6 +3049,7 @@ td img[alt="Ratio"],
     position: absolute;
     top: 0;
     left: 0;}
+#inbox #wrapper #content tr.sticky,
 .torrent_table .group.sticky {
     background-color: var(--c-edition);}
 .sidebar .body >table,
@@ -3113,7 +3116,8 @@ td.label {
 #requests .sidebar .box_votes table td,
 .requests_outer_table td,
 .filter_torrents td,
-#torrents .thin >h2:first-child +.center td {
+#torrents .thin >h2:first-child +.center td,
+.thin.torrent_history >form#torrent_history_search td {
     padding: 2px 5px 4px 5px;}
 #collections .thin >h2:first-child +.center td.label,
 #forums .forum_latest >.search.box.pad td.label,
@@ -4242,6 +4246,7 @@ h2 {
     font-weight: bold;}
 
 hr {
+    opacity: .75;
     border-color: var(--c-text-s);}
 
 #torrents #wrapper #content >span[style="float:right;"]:first-child {
@@ -5647,8 +5652,8 @@ input[type="radio"]:active {
 #wrapper #crafting_recipes:before {
     margin: 0;
     content: 'Crafting Recipes';}
-.thin.torrent_history >form#torrent_history_search:before {
-    content: 'Search by Torrent Name';}
+/* .thin.torrent_history >form#torrent_history_search:before {
+    content: 'Search by Torrent Name';} */
 .box.pad.box_buffs_info:before,
 .box.pad.box_freeleech_info:before {
     content: 'Info';}
@@ -6294,7 +6299,7 @@ td.center.cats_col {
     line-height: var(--p-head);}
 #torrent_table .group.discog td[colspan="5"] >span +br {
     line-height: 20px;}
-.thin.torrent_history >form#torrent_history_search td.label,
+/* .thin.torrent_history >form#torrent_history_search td.label, */
 #bookmarks #torrent_table .discog span[style="float:left;"] >br:first-child,
 #bookmarks #torrent_table .colhead_dark td[width="70%"] a {
     display: none;}
@@ -6303,6 +6308,12 @@ td.center.cats_col {
     margin-bottom: -5px;}
 #requests td.label {
     width: 170px;}
+
+.thin.torrent_history >form#torrent_history_search td.label {
+    width: 163px;
+    line-height: 26px;}
+.thin.torrent_history >form#torrent_history_search table#th_search >tbody >tr:last-child >td.label {
+    padding-top: 10px;}
 
 #staffpm #inbox,
 #torrents #content >#newlink td,
@@ -6313,7 +6324,7 @@ td.center.cats_col {
 #torrents #requests.request_table tr:not(.colhead) td,
 #user .thin >h2:first-child +.center td,
 .thin.torrent_history >form#torrent_history_search >.box.pad,
-.thin.torrent_history >form#torrent_history_search td,
+/* .thin.torrent_history >form#torrent_history_search td, */
 #user .thin >h2:first-child +.box.pad:last-child,
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2) +.box.pad,
 .box.pad.box_add_buff,
