@@ -2974,6 +2974,14 @@ div[id^="twitch-embed-"],
 
 #torrents #torrentsbrowsecomplete li,
 
+#inbox #searchbox,
+
+#inbox .box.vertical_space +h2 +form>.box.pad,
+#inbox #messageform +h2 +form >.box.pad,
+#inbox h2 +#messageform >.box.pad,
+
+#forums #threadpoll,
+
 #requests form#request_form,
 
 #backpack .itemslot .item,
@@ -3386,6 +3394,8 @@ a[href^="javascript:Vote("] strong:active,
     position: relative;
     margin-right: 5px;
     line-height: 19px;
+    margin-top: 3px;}
+#user #content >span[style="float: right;"]:first-child { /*sharescore*/
     margin-top: 3px;}
 .torrent_notifications table.border .colhead strong,
 #forums #forum_search_cat_list td.forum_cat strong,
@@ -3831,7 +3841,6 @@ li:not(.suggested_similar) .similar_votes >span {
     text-align: center;
     font-size: 15px;
     display: block;}
-#header .sub span a,
 .sub span a {
     display: block;
     padding: 0 5px;
@@ -5330,6 +5339,11 @@ blockquote#description img {
     filter: var(--p-post-img);
     margin: -4px 0;
     padding: 7px;}
+#wiki .wiki_article a:hover img,
+.forum_post td.body a:hover img,
+.forum_signature a:hover img,
+#profilediv a:hover img,
+.box.news_post >.pad a:hover img,
 blockquote#description img {
     -webkit-filter: none;
     filter: none;}
@@ -5538,6 +5552,7 @@ input[type="radio"]:active {
 #newthreadpreview #pollpreview {
     margin-bottom: 20px;}
 #forums #threadpoll {
+    width: 100%;
     padding: 10px 20px;
     background-color: var(--c-tgroup);}
 #collections .sidebar >h3 ~.box.pad,
@@ -9190,8 +9205,9 @@ td .log_green {
     margin-top: 5px;}
 #friends h2.center {
      text-align:left;}
-#friends td.col_avatar.avatar +td[valign="top"] {/* increasing initial height of comment field */
-    height: 127px;} 
+#friends td.col_avatar.avatar +td[valign="top"] {
+    width: 100%;
+    height: 127px;/* increasing initial height of comment field */} 
 #friends .colhead span.time {
     margin-right: 3px;}
 
@@ -9454,6 +9470,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     width: 100%;
     background: var(--p-head-grdnt);}
 #share_score .large_progress_bar +.linkbox {
+    text-align: left;
     position: absolute;
     top: -37px;
     left: 11px;

@@ -183,7 +183,7 @@
     
     #wrapper #header .global_buffs:before,
     #header #alerts:before,
-    #header .sub:before,
+    .sub:before,
     #userinfo_stats:before,
     #userinfo_minor:before,
     #header >#searchbars:before,
@@ -204,7 +204,7 @@
         background-color: var(--c-txt);}
     #wrapper #header .global_buffs:after,
     #header #alerts:after,
-    #header .sub:after,
+    .sub:after,
     #userinfo_stats:after,
     #userinfo_minor:after,
     #header >#searchbars:after,
@@ -218,7 +218,7 @@
         height: 38px;}
     #wrapper #header .global_buffs:hover:after,
     #header #alerts:hover:after,
-    #header .sub:hover:after,
+    .sub:hover:after,
     #userinfo_stats:hover:after,
     #userinfo_minor:hover:after,
     #header >#searchbars:hover:after,
@@ -253,10 +253,12 @@
         -webkit-mask-image: url('icons/mobile/stats_hover.svg');
         mask-image: url('icons/mobile/stats_hover.svg');}
     
+    #content .sub:before,
     #torrents .main_column tr.group_torrent td:nth-child(1) span:not(.new_status):before,
     #userinfo_minor:before {
         -webkit-mask-image: url('icons/mobile/minor.svg');
         mask-image: url('icons/mobile/minor.svg');}
+    #content .sub:hover:before,
     #torrents .main_column tr.group_torrent td:nth-child(1) span:not(.new_status):hover:before,
     #userinfo_minor:hover:before {
         -webkit-mask-image: url('icons/mobile/minor_hover.svg');
@@ -572,6 +574,7 @@
         min-width: 80px;}
     
     
+    .box.thin.clear,
     #requests form#request_form tr,
     #requests form#request_form td,
     #reportsv2 form#report_table div#dynamic_form table.border tr,
@@ -600,12 +603,12 @@
         width: calc(100% - 331px);
         height: auto;}
     
-    #wrapper .sub span a {
+    .sub span a {
         height: 100%;
         width: 145px;
         text-align: center;
-        line-height: 34px;
-        font-size: 17px;}
+        /* line-height: 34px;
+        font-size: 17px; */}
     
 
     
@@ -623,6 +626,28 @@
     
     
     
+    /*sub*/
+    #content .sub:before {
+        transform: rotate(90deg);}
+    #wrapper #content .sub {
+        opacity: 1;
+        -webkit-clip-path: unset;
+        clip-path: unset;
+        margin: -28px 0 0 0;
+        left: calc(100% - 61px);
+        top: 38px;
+        z-index: 1;}
+    #content .sub {
+        visibility: visible !important;
+        width: 28px;
+        height: 28px;}
+    #wrapper #content .sub span {
+        right: unset;
+        left: -175px;
+        top: -6px;}
+    #content .sub span a {}
+    
+    
     
     
     
@@ -634,6 +659,7 @@
 *****************************************/
 	body {}
     
+    #share_score_breakdown td,
     .sidebar >div >.box,
     #requests .thin table td,
     #reportsv2 #wrapper #dynamic_form >table.border td,
@@ -1704,6 +1730,12 @@ a[title="Remove"]:before {
 	/*  .box_tags li div {color: transparent;}
 	.box_tags li div a {color: transparent;} */
 	.box_tags li div a:last-of-type {/* color: var(--lightBlue) */;}
+    
+#friends .forum_post.vertical_margin .colhead,
+#collections .sidebar .box.box_comment .head,
+#inbox .box.vertical_space .head,
+.forum_post .colhead_dark td {
+    padding: 5px;}
 
 	/****Comments****/
 	#torrents .main_column .forum_post .time, /*
@@ -1994,7 +2026,7 @@ a[title="Remove"]:before {
     #wrapper #quickreplypreview .colhead_dark #barpreview,
     #wrapper .forum_post .colhead_dark div[style="float: right;"],
     #wrapper #newthreadpreview .forum_post .colhead_dark #barpreview {
-        top: 15px;}
+        top: 13px;}
     
 	.username_badges {display: none;}
 	/* #forums .box {margin-top: 0px; padding: 0px;} */
@@ -2643,49 +2675,117 @@ a[title="Remove"]:before {
 /*****************************************
 *************GAZELLE VIEWER***************
 *****************************************/
-	.gazelles_art_display td {width: 50%;}
-	#gazelles .gazelle_art {background-size: cover;}
+	/* .gazelles_art_display td {width: 50%;}
+	#gazelles .gazelle_art {background-size: cover;} */
 
 	#gazelles .pad form {display: none;}
 	#gazelles .hovereffect:hover h2 {display: none;}
+    #gazelleview table.gazelleinfo td#tags {
+        padding-top: 10px;}
 
 /*****************************************
 *****************INBOX********************
 *****************************************/
-	#inbox .box, #inbox .pad {padding: 0; width: 100%;}
-	#inbox form {width: 100%;}
-	#inbox td {display: block; padding: 0 10px;}
+	#inbox .box, #inbox .pad {
+        padding: 0;
+        width: 100%;}
+	#inbox form {
+        width: 100%;}
+	#inbox #messageform td {
+        display: block;
+        padding: 0 10px;}
 	/*#inbox #searchbox {display: none;}*/
-	#inbox tr.colhead {display:none;}
-	#inbox #messageform td:nth-of-type(1) {float: right; padding-top: 10px;}
-	#inbox #messageform td:nth-of-type(2) {display: block; padding-top: 10px;}
-	#inbox #messageform td:nth-of-type(2) a {font-size: 1.1em; color: var(--lightBlue); font-weight:bold;}
-	#staffpm #inbox #messageform td:nth-of-type(2) a {font-size: 1.4em; font-weight: bold;}
-	#inbox #messageform td:nth-of-type(3) {display: block; color: var(--grey); font-size: .8em;}
-	#inbox td:nth-of-type(3):before {content:"With:"; color: var(--grey)}
-	#inbox td:nth-of-type(4) {display: block; padding-bottom: 25px; color: var(--grey) }
+	#inbox tr.colhead {
+        display:none;}
+	#inbox #messageform td:nth-of-type(1) {
+        border: none !important;
+        float: right;
+        padding-top: 8px;}
+	#inbox #messageform td:nth-of-type(2) {
+        display: block;
+        border-top: var(--p-border);
+        border-top-color: var(--c-edition);
+        padding-top: 8px !important;
+        padding-bottom: 5px !important;
+        border-bottom: none !important;}
+    #inbox .sticky +.sticky >td:nth-of-type(2) {
+        border-top: none !important;}
+	#inbox #messageform td:nth-of-type(2) a {
+        font-size: 16px;
+        color: var(--c-anchor);
+        font-weight: normal;}
+	#inbox #messageform td:nth-of-type(3) {
+        border: none !important;
+        display: block;
+        color: var(--c-text-s);
+        font-size: 13px;}
+	#inbox #messageform td:nth-of-type(3):before {
+        content:"With:";
+        color: var(--c-text-s);}
+    #staffpm #inbox #messageform td:nth-of-type(3):before {
+        content: none;}
+    #inbox #messageform td:nth-of-type(4) {
+        border-top: none !important;
+        display: block;
+        padding-bottom: 8px;
+        color: var(--c-text-s);}
 	#inbox input[value="Delete messages"] {display:none;}
 
-	#inbox tr.unreadpm td:nth-of-type(2) a {color: var(--darkGreen) !important;}
+	/* #inbox tr.unreadpm td:nth-of-type(2) a {color: var(--darkGreen) !important;} */
+    #inbox tr.unreadpm td:first-child:after {
+        content: none;}
+    
+    #inbox tr.unreadpm td {
+        position: relative;}
+    #inbox tr.unreadpm td:nth-of-type(2):after,
+    #inbox tr.unreadpm td:nth-of-type(3):after,
+    #inbox tr.unreadpm td:nth-of-type(4):after {
+        content: '';
+        height: 100%;
+        width: 2px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--c-unread-s);}
+    #inbox #messageform tr.unreadpm td:nth-of-type(2) a {
+        font-weight: 700;}
 
-	#inbox .box .body {padding: 10px 5px;}
-	#inbox a[onclick^="Quote("] {font-size: .8em;}
-	#inbox span[style^="width: 80%;"] {display: none; float: none !important;}
-	#inbox span[style^="width: 20%;"] {display: none; float: none !important;}
-	#inbox textarea {width: 95%; margin-left: 5px;}
-	#inbox td.label {width: auto; padding-left: 10px;}
+	/* #inbox .box .body {padding: 10px 5px;} */
+	/* #inbox a[onclick^="Quote("] {font-size: .8em;} */
+    #inbox span[style^="width: 80%;"] input {
+        width: calc(100% - 71px) !important;}
+    #inbox span[style^="width: 20%;"] select {
+        width: calc(100% - 56px) !important;}
+    
+    #inbox #messageform+h2+form>.box.pad tbody {
+        width: 100%;
+        flex-flow: column wrap;}
+    #inbox #wrapper #messageform+h2+form>.box.pad tr,
+    #inbox #wrapper .box.vertical_space+h2+form>.box.pad tr {
+        display: block;
+        width: 100%;}
+	/* #inbox textarea {width: 95%; margin-left: 5px;} */
+	#inbox td.label {
+        width: 100%;
+        text-align: left;}
 
 	#inbox #searchbox div {height: auto;}
 
 /*****************************************
 *************ACHIEVEMENTS*****************
 *****************************************/
-	#progress_bar {width: auto;}
-	/*.flright {float: none; margin-top: 0px !important;}
-	.flleft {float: none;} */
+	/* #progress_bar {width: auto;} */
+    
+    /* REVISIT 799 .flright {
+        text-align: right;
+        float: none;
+        margin-top: 5px !important;}
+    #user #content>#progress_bar~.flright.linkbox,
+    #user #content>#progress_bar~.flleft.linkbox {
+        display: none;} */
 
-	#achievements td {border-right: rgba(198,230,246,.3) solid 1px;}
-	#achievements .colhead td:first-of-type, #achievements .colhead td:last-of-type {border: none;}
+	/* #achievements td {border-right: rgba(198,230,246,.3) solid 1px;}
+	#achievements .colhead td:first-of-type, #achievements .colhead td:last-of-type {border: none;} */
 
 /*****************************************
 *****************LOG**********************
@@ -2696,7 +2796,7 @@ a[title="Remove"]:before {
 /*****************************************
 ****************FRIENDS*******************
 *****************************************/
-	#friends .avatar {width: 75px; min-width:75px; max-width:75px;}
+	/* #friends .avatar {width: 75px; min-width:75px; max-width:75px;}
 	#friends .avatar img {width: 75px;}
 
 	#friends table {margin: 20px 0;}
@@ -2705,7 +2805,7 @@ a[title="Remove"]:before {
 	#friends textarea {width: 70%;}
 
 	#friends td:nth-of-type(2) {display: block;}
-	#friends td:nth-of-type(3) {display: inline-flex;}
+	#friends td:nth-of-type(3) {display: inline-flex;} */
 
 /*****************************************
 ****************TODO**********************
@@ -2727,13 +2827,18 @@ a[title="Remove"]:before {
 **************SHARE SCORE*****************
 *****************************************/
 	#share_score_breakdown td {
+        background-color: unset;
 		display: block;
-		width: 95% !important;
+		width: 100% !important;
 		text-align: center;
 		height: auto !important;}
+    #wrapper #share_score tr.colhead td {
+        text-indent: 5px;
+        text-align: left;}
+    #share_score tr.colhead td:first-child:empty {
+        display: none;}
 
-	#share_score_breakdown .label {
-		margin-left: 2% !important;}
+	#share_score_breakdown .label {}
 
 
 
@@ -2807,7 +2912,7 @@ a[title="Remove"]:before {
 .forum_post .colhead_dark div[style="float: left;"],
 .forum_post .colhead_dark div[style="float:left;"],
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
-    width: calc(100% - 23px);}
+    width: calc(100% - 64px);}
 /* /forum post 'back to top' button */
 
 
