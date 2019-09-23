@@ -6075,6 +6075,7 @@ input[type="radio"]:active {
 
 .linkbox >strong,
 .linkbox a {
+    white-space: nowrap;
     margin: 0 5px;}
 
 #slides >.nobullet a:before {
