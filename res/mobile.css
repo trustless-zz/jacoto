@@ -1080,7 +1080,7 @@
         top: 15px;}
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) a {
-		font-size: 19px;}
+		font-size: 18px;}
     #torrents #torrentbrowse .torrent_table #groupplatform a {
         font-size: 0;}
 
@@ -2405,8 +2405,11 @@ a[title="Remove"]:before {
 		/* color: var(--lightBlue); */
 		/* cfont-weight:bold; */}
 	#requests .thin table:not(.forum_post) td:nth-of-type(1) a {
-        /*color: var(--lightBlue); */
-        font-weight:bold !important;}
+        font-size: 17px;
+        /*color: var(--lightBlue);
+        font-weight:bold !important; */}
+    #requests .thin table:not(.forum_post) td:nth-of-type(1) .tags {
+        font-size: 12px;}
 	#requests .thin table:not(.forum_post) td:nth-of-type(2) {display: none;}
 	#requests .thin table:not(.forum_post) td:nth-of-type(3):before {
         content: "Bounty:\00a0";
