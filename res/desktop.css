@@ -15,7 +15,7 @@ body {
     position: absolute;
     bottom: 1077px;}
     
-#groupplatform {
+/* #groupplatform {
     width: 34px;
     height: 34px;
     position: absolute;
@@ -80,7 +80,7 @@ body {
     background-image: none;
     width: unset;
     height: unset;
-    display: inherit;}
+    display: inherit;} */
     
     
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"],
@@ -189,7 +189,7 @@ body {
     background-color: var(--c-txt);}
 #toplink a:active {
     background-color: var(--c-low);}
-/* forum post 'back to top' button */
+/* forum post 'back to top' button
  #quickreplypreview .colhead_dark #barpreview,
  .forum_post .colhead_dark div[style="float: right;"],
  #newthreadpreview .forum_post .colhead_dark #barpreview {
@@ -205,10 +205,10 @@ body {
 .forum_post .colhead_dark div[style="float:left;"],
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
     width: calc(100% - 23px);}
-/* /forum post 'back to top' button */
+/forum post 'back to top' button
     
 .forum_post.sticky_post .colhead_dark div[style="float:left;"] {
-    width: calc(100% - 70px);}
+    width: calc(100% - 70px);}*/
     
 /** new boring desktop header **/
 /* making holidayeffects.css work */ /* otherwise would just set background to respective divs */

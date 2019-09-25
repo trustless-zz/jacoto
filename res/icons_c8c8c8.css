@@ -27,7 +27,7 @@
 .hovereffect,
 #collections #coverart.box img,
 .sidebar .box.box_image_coverart a img,
-#bookmarks #collage_table td img {
+#bookmarks #coverart .collage_images img {
     background-image: url('icons/c8c8c8/transparent50.svg');}
 
 .Bandcamp {background-image: url("weblinks/c8c8c8/Bandcamp.svg");}
