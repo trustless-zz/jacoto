@@ -3936,7 +3936,7 @@ strong.mature +strong +br,
     height: auto;
     border: var(--p-img-border);
     border-color: var(--c-b4);}
-.similar #suggested_header {
+#wrapper .similar #suggested_header {
     width: calc(100% - 15px);
     margin: 10px 0;
     font-weight: 600;

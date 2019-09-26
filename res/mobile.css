@@ -32,13 +32,27 @@
     #header ul#userinfo_minor li {
         right: -5px;}
     
-    #wrapper #recommended #vanityhouse td {
+    #wrapper .similar li {
+        width: calc(50% - 10px);}
+    #wrapper #recommended #vanityhouse td,
+    #wrapper .screenshots a {
         width: calc(50% - 5px);}
+    .screenshots a:nth-child(2n) {
+        margin-right: 0;}
+    
+    #wrapper .similar_div .head .flright {
+        width: unset;}
+    #wrapper .similar_div .head .flright form input[type="text"] {
+        width: unset;
+        min-width: unset;
+        max-width: unset;}
 }
 
 @media screen and (max-width: 420px) {
     #wrapper .global_buffs .individual_buff {
         margin-left: -5px;}
+    #torrents #wrapper .sidebar .box {
+        width: 100%;}
 }
 
 @media (min-width: 700px) and (max-width: 800px) {
@@ -1739,6 +1753,7 @@ a[title="Remove"]:before {
 
 	#torrents .main_column .screenshots {
         padding-top: 10px;
+        padding-right: 10px;
 		position: relative;
 		max-height: 300px;
 		overflow-y: scroll;}
