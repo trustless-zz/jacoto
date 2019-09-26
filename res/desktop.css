@@ -235,7 +235,8 @@ body {
 /* /making holidayeffects.css work */    
     
 #header {
-    z-index: 99 !important; /* !important to override holidayeffects.css */
+/*
+    z-index: 99 !important;
     position: relative;
     border-bottom: var(--p-border);
     border-bottom-color: var(--c-table-brdr);
@@ -243,6 +244,7 @@ body {
     box-shadow: var(--p-header-shdw);
     margin-bottom: 20px;
     display: flex;
+*/
     flex-flow: column;}
 #header #searchbars {
     width: 100%;
@@ -296,16 +298,18 @@ body {
     width: fit-content;
     position: relative;}
 #header #userinfo_username {
-    display: flex;
+/*    display: flex;*/
     position: absolute;
+/*
     font-size: 15px;
     line-height: var(--p-lh);
     z-index: 99;
+*/
     top: -34px;
     right: 0;
     height: 34px;}
 #header #userinfo_username #nav_userinfo a {
-    font-size: 18px;
+/*    font-size: 18px;*/
     display: block;
     line-height: 24px;
     padding: 5px 8px 5px 5px;}
@@ -431,6 +435,7 @@ body {
     background-color: var(--c-anchor-hvr-bcg-obj);}
     
 
+/*
 #nav_logout {
     order: -3;}
 #nav_donate {
@@ -440,6 +445,7 @@ body {
     order: -2;}
 #nav_useredit {
     order: -1;}
+*/
     
 #stats_ratio {
     order: -9;}
@@ -540,10 +546,12 @@ body {
 #stats_seeding a {
     padding: 1px 0;}
     
+/*
 #header #announcement {
     text-align: center;
     padding: 5px;
     background: var(--p-head-grdnt);}
+*/
     
 #userinfo_stats li {
     -webkit-box-sizing: border-box;
@@ -597,36 +605,45 @@ body {
     #stats_gold a {
     margin-right: 2px;}
 
+/*
 #header #stats_ratio {
     font-size: 0;}
+*/
+/*
 #stats_ratio:before {
     width: 16px;
     height: 16px;
     margin: 2px 2px 0 0;
     content: '';}
+*/
+/*
 #stats_ratio span.stat:before {
     content: ':';}
+*/
 
 #nav_donate a,
 #nav_logout a,
 #nav_useredit a {
-    display: block;
+/*    display: block;
     width: 20px;
-    height: 20px;
+    height: 20px;*/
     padding: 7px 5px;
-    -webkit-mask-position: center;
+/*    -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: 20px 20px;
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: 20px 20px;
-    background-color: var(--c-anchor);}
+    background-color: var(--c-anchor);*/}
+/*
 #nav_useredit a {
     -webkit-mask-image: url('icons/nav/useredit.svg');
     mask-image: url('icons/nav/useredit.svg');}
 #nav_logout a {
     -webkit-mask-image: url('icons/nav/logout.svg');
     mask-image: url('icons/nav/logout.svg');}
+*/
+/*
 #wrapper #nav_donate a {
     position: absolute;
     top: 0;
@@ -637,6 +654,7 @@ body {
     -webkit-mask-image: url('icons/nav/donate.svg');
     mask-size: auto 20px;
     mask-image: url('icons/nav/donate.svg');}
+*/
 #nav_useredit a:hover {
     background-color: var(--c-anchor-hvr);}
 #nav_logout a:hover {
@@ -671,18 +689,18 @@ body {
     
 /* logo */
 #logo {
-    background: unset !important;
+/*    background: unset !important;*/
     height: 64px;
     width: 64px;
     top: 40px;
-    left: 0;
+/*    left: 0;*/
     position: absolute;
-    z-index: 999;}
+    /*z-index: 999;*/}
+/*
 #logo a {
     background-color: transparent;
-    display: block;
-    /* height: 100%;
-    width: 100%; */}
+    display: block;}
+*/
 #logo:before,
 #logo:after {
     content: '';
@@ -710,17 +728,17 @@ body {
 /* #logo:hover:after {
     animation-delay: .05s;} */
 #header #logo a {
-    position: absolute;
+/*    position: absolute;*/
     /* opacity: 1; */
-    width: 100%;
+/*    width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
+    left: 0;*/
     /* -webkit-transition: all .25s linear;
     -o-transition: all .25s linear;
     transition: all .25s linear; */
     background-size: auto 58px;
-    background-position: center;}
+    /*background-position: center;*/}
 /* #logo a:hover:before {
     opacity: 0;}
 #logo a:after {

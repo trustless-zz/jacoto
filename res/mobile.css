@@ -18,26 +18,30 @@
 	/* #header {display:none;} */
     .clan_trophy {display: none;}
     
+/*
     #header #announcement {
         text-align: center;
         padding: 5px;
         background: var(--p-head-grdnt);
         width: 100%;
         order: 99;}
+*/
     
     #header #userinfo {
         order: 3;}
     #header #userinfo_username {
-        display: flex;
+/*        display: flex;*/
         /* position: absolute; */
+/*
         font-size: 15px;
         line-height: var(--p-lh);
         z-index: 99;
-        top: 0;
-        right: 0;
+*/
+/*        top: 0;*/
+/*        right: 0;*/
         height: 44px;}
     #userinfo_username #nav_userinfo a.username {
-        font-size: 18px;
+/*        font-size: 18px;*/
         line-height: 44px;
         padding: 0 10px 0 5px;
         display: inline-block;}
@@ -45,23 +49,28 @@
     #nav_donate a,
     #nav_logout a,
     #nav_useredit a {
+/*
         display: block;
         width: 20px;
         height: 20px;
+*/
         padding: 12px 8px;
-        -webkit-mask-position: center;
+/*        -webkit-mask-position: center;
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: 20px 20px;
         mask-position: center;
         mask-repeat: no-repeat;
         mask-size: 20px 20px;
-        background-color: var(--c-anchor);}
+        background-color: var(--c-anchor);*/}
+/*
     #nav_useredit a {
         -webkit-mask-image: url('icons/nav/useredit.svg');
         mask-image: url('icons/nav/useredit.svg');}
     #nav_logout a {
         -webkit-mask-image: url('icons/nav/logout.svg');
         mask-image: url('icons/nav/logout.svg');}
+*/
+/*
     #wrapper #nav_donate a {
         position: absolute;
         top: 0;
@@ -72,7 +81,9 @@
         -webkit-mask-image: url('icons/nav/donate.svg');
         mask-size: auto 20px;
         mask-image: url('icons/nav/donate.svg');}
+*/
     
+/*
     #nav_logout {
         order: -3;}
     #nav_donate {
@@ -82,50 +93,55 @@
         order: -2;}
     #nav_useredit {
         order: -1;}
+*/
     
 #header {
-    z-index: 99 !important; /* !important to override holidayeffects.css */
+/*
+    z-index: 99 !important;
     position: relative;
     border-bottom: var(--p-border);
     border-bottom-color: var(--c-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     margin-bottom: 20px;
-        display: flex;
+    display: flex;
+*/
         flex-flow: row wrap;
         position: relative;
         justify-content: space-between;}
     
+/*
     #extra1,
     #extra2,
-    #extra3 {
+*/
+    #extra3 { /* #userinfo */
         content: '';
         position: absolute;
         z-index: 98;
         left: 0;
         width: 100%;
-        height: 44px;}
-    #extra3 { /* #userinfo */
+        height: 44px;
         top: 0;
         background: var(--p-userinfo);;}
     
-    #wrapper #header #logo a {
+    #header #logo a {
         background-size: auto 38px;}
     #logo {
         order: 1;
         
-        background: unset !important;
+/*        background: unset !important;*/
         height: 44px;
         width: 38px;
         top: 0;
-        left: 0;
+/*        left: 0;*/
         position: relative;
-        z-index: 999;}
+        /*z-index: 999;*/}
+/*
     #logo a {
         background-color: transparent;
         display: block;}
-    #logo:before,
-    #logo:after {
+*/
+    #logo:before {
         content: '';
         width: 38px;
         height: 44px;
@@ -144,13 +160,13 @@
     /* #logo:hover:after,
     #logo:hover:before {
         background-position: 0 0;} */
-    #header #logo a {
+/*    #header #logo a {
         position: absolute;
         width: 100%;
         height: 100%;
         top: 0;
         left: 0;
-        background-position: center;}
+        background-position: center;}*/
     
     #menu {
         z-index: 100;}
@@ -293,33 +309,25 @@
         position: absolute;
         width: 28px;
         height: 28px;
-        background-size: 28px 28px;
-        background-position: top left;
-        background-repeat: no-repeat;
         top: 8px;
         left: 101px;}
     
     ul#userinfo_minor {
         position: absolute;
-        background-size: 28px 28px;
         width: 28px;
         height: 28px;
         left: 144px;
         top: 8px;
         padding: 0;
-        margin: 0;
-        background-position: top left;
-        background-repeat: no-repeat;}
+        margin: 0;}
     
     #userinfo_stats {
         position: absolute;
-        background-size: 28px 28px;
         top: 8px;
-        background-repeat: no-repeat;
         left: 187px;
         width: 28px;
-        font-size: 16px;
         height: 28px;
+        font-size: 16px;
         margin: 0;
         padding: 0;
         overflow: visible;
@@ -332,13 +340,9 @@
     #header .sub {
         clip-path: unset;
         opacity: 1;
-        
         height: 28px;
         width: 28px;
-        background-size: 28px 28px;
-        background-position: top left;
-        background-repeat: no-repeat;
-        visibility: visible !important;
+/*        visibility: visible !important;*/
         top: 8px;
         left: 230px;
         right: unset;
@@ -346,12 +350,8 @@
     #header #alerts {
         clip-path: unset;
         opacity: 1;
-        
         height: 28px;
         width: 28px;
-        background-size: 28px 28px;
-        background-position: top left;
-        background-repeat: no-repeat;
         top: 8px;
         left: 273px;
         right: unset;
@@ -364,15 +364,12 @@
         top: 8px;
         
         right: 0;
-    direction: ltr;
+        direction: ltr;
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
     width: 28px;
     height: 28px;
-    background-size: 28px 28px;
-    background-repeat: no-repeat;
-    background-position: top right;
     flex-direction: row;}
     
     
@@ -628,15 +625,21 @@
     
     
     
+/*
    #header #stats_ratio {
     font-size: 0;}
+*/
+/*
 #stats_ratio:before {
     width: 16px;
     height: 16px;
     margin: 2px 2px 0 0;
     content: '';}
+*/
+/*
 #stats_ratio span.stat:before {
     content: ':';}
+*/
     
     
     
