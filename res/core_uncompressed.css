@@ -820,6 +820,8 @@ html,
 
 #user .thin >h2:first-child +.center,
 
+.thin.inventory >.center,
+
 #user input#irckey,
 #user input#email,
 #user input#avatar,
@@ -2472,6 +2474,16 @@ table.bbcode_table td,
     opacity: 1;}
 
 /* desktop/mobile duplicate merge */
+#stats_ratio,
+#stats_gold,
+#stats_leeching,
+#stats_seeding,
+#stats_share_score {
+    display: flex;
+    justify-content: left;
+    position: relative;
+    overflow: hidden;}
+
     #header #announcement {
         text-align: center;
         padding: 5px;
@@ -3178,6 +3190,9 @@ div[id^="twitch-embed-"],
 
 #inbox #searchbox,
 
+.freeleech_shop_main >div,
+.global_buffs_shop_main >div,
+
 #inbox .box.vertical_space +h2 +form>.box.pad,
 #inbox #messageform +h2 +form >.box.pad,
 #inbox h2 +#messageform >.box.pad,
@@ -3189,6 +3204,9 @@ div[id^="twitch-embed-"],
 #requests form#request_form,
 
 #user .thin >h2:first-child +.center,
+
+.thin.inventory >.center,
+.thin.inventory >.center >form,
 
 #backpack .itemslot .item,
 #wrapper #trading_panel .message_section,
@@ -7493,6 +7511,7 @@ span.size5 img {
 
 .collections_art_display tr {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;}
 .collections_art_display tbody {
     margin: 46px 10px 10px 10px;
@@ -8303,8 +8322,10 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #loading {
 	margin-left: 250px;}
 
+/*
 #shop #items_navigation {
 	float: left;	}
+*/
 
 /*** Shop Items ***/
 #items_list {

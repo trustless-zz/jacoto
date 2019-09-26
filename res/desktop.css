@@ -534,6 +534,7 @@ body {
     top: -1px;
     z-index: -9;}
     
+/*
 #header #userinfo_stats a:after {
     content: '';
     top: -10px;
@@ -541,6 +542,7 @@ body {
     width: 600px;
     height: 40px;
     position: absolute;}
+*/
 
 #stats_share_score a,
 #stats_gold a,
@@ -554,6 +556,13 @@ body {
     padding: 5px;
     background: var(--p-head-grdnt);}
 */
+#header #userinfo_stats a:after {
+    content: '';
+    top: -10px;
+    left: -100px;
+    width: 600px;
+    height: 60px;
+    position: absolute;}
     
 #userinfo_stats li {
     -webkit-box-sizing: border-box;
@@ -564,15 +573,6 @@ body {
     width: 100%;}
 #userinfo_stats #stats_ratio {
     justify-content: flex-end;}
-#stats_ratio,
-#stats_gold,
-#stats_leeching,
-#stats_seeding,
-#stats_share_score {
-    display: flex;
-    justify-content: left;
-    position: relative;
-    overflow: hidden;}
 
 #userinfo_stats li a ~span {
     color: var(--c-anchor);}

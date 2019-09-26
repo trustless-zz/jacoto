@@ -1,84 +1,4 @@
-﻿@media screen and (max-width: 699px) {
-    .newsdate {
-        display: none;}
-    .box.news_post .head strong:before {
-        content: none;}
-    
-    #extra4 {
-        content: '';
-        position: absolute;
-        z-index: 98;
-        left: 0;
-        width: 100%;
-        height: 40px;
-        top: 44px;
-        background: var(--p-extra-menu);}
-    #header #userinfo {
-        width: 100%;}
-    #header #userinfo #userinfo_username {
-        direction: rtl;}
-    #header #userinfo_username #nav_userinfo a.username {
-        line-height: 40px;}
-    #header #userinfo #userinfo_username,
-    #header #nav_donate {
-        height: 40px;}
-    #header #nav_donate a,
-    #header #nav_logout a,
-    #header #nav_useredit a {
-        padding: 10px 8px;}
-    
-    #wrapper #header #userinfo {
-        z-index: 99;}
-    /* #wrapper #header .sub span,
-    #header ul#userinfo_minor li {
-        right: 97px;} */
-    
-    #wrapper .similar li {
-        width: calc(50% - 10px);}
-    #wrapper #recommended #vanityhouse td,
-    #wrapper .screenshots a {
-        width: calc(50% - 5px);}
-    .screenshots a:nth-child(2n) {
-        margin-right: 0;}
-    
-    #wrapper .similar_div .head .flright {
-        width: unset;}
-    #wrapper .similar_div .head .flright form input[type="text"] {
-        width: unset;
-        min-width: unset;
-        max-width: unset;}
-    
-    #wrapper #shop_search #search_query {
-        width: 100%;}
-    #wrapper #shop_search tbody:not(#advanced_search) select {
-        margin-top: 7px;}
-    
-    #shop #wrapper #content li.item_li {
-        width: calc(100% / 2 - 10px);}
-}
-
-@media screen and (max-width: 499px) {
-    #shop #wrapper #content li.item_li {
-        width: calc(100% - 10px);}
-}
-
-@media screen and (max-width: 420px) {
-    #wrapper .global_buffs .individual_buff {
-        margin-left: -5px;}
-    #torrents #wrapper .sidebar .box {
-        width: 100%;}
-}
-
-@media (min-width: 700px) and (max-width: 800px) {
-    .similar li {
-        width: calc(25% - 10px);}
-}
-
-
-/*******************************************************************
-********************MOBILE DISPLAYS (<800px)************************
-*******************************************************************/
-@media screen and (max-width: 800px) {
+﻿@media (max-width: 800px) {
 	/* #header {display:none;} */
     .clan_trophy {display: none;}
     
@@ -246,8 +166,10 @@
         z-index: 105;}
     #wrapper #header .global_buffs {
         z-index: 106;}
+/*
     #header #userinfo {
         z-index: 107;}
+*/
     
     #menu {
         display: inline-block;
@@ -408,8 +330,8 @@
         height: 28px;
         width: 28px;
 /*        visibility: visible !important;*/
-        top: 8px;
         left: 230px;
+        top: 8px;
         right: unset;
         position: absolute;}
     #header #alerts {
@@ -554,7 +476,7 @@
         font-size: 17px;
         line-height: 34px;
         height: 36px;
-        margin: 0;}
+        margin: 0 !important;}
     
     #searchbars >ul >li {
         padding: 0;
@@ -581,14 +503,17 @@
         text-align: center;
         flex-flow: column;}
     
+/*
     #userinfo_stats:hover {
         width: 200px;}
+*/
     
     #userinfo_stats .my_buffer,
     ul#userinfo_stats li {
         border: var(--p-border);
         border-color: var(--c-table-brdr);
         margin: 42px 0 -42px 0;
+        min-width: 190px;
         width: 190px;
         line-height: 34px;
         padding: 0 5px;
@@ -598,6 +523,11 @@
         top: 0;
         left: -167px;
         overflow: visible;}
+    
+    #userinfo >ul {
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;}
     
     #wrapper .sub span {
         top: 0;
@@ -748,6 +678,7 @@
 *****************************************/
 	body {}
     
+    .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable.ui-resizable,
     #torrents .main_column .torrent_table,
     #share_score_breakdown td,
     .sidebar >div >.box,
@@ -834,9 +765,16 @@
 		float: none;
 		padding:5px 0 5px 5px;
 		box-shadow: none !important;}
-    
-        #requests form#request_form tr:nth-child(2) td {
+    #user .thin >h2 +form#userform >table.border td.label,
+    #requests form#request_form tr:nth-child(2) td {
         margin-top: 0;}
+    
+    #user .thin >h2 +form#userform >table.border .colhead_dark +tr td {
+        padding-top: 5px !important;}
+    #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:first-child {
+        padding-left: 5px !important;}
+    #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:last-child {
+        padding-right: 5px !important;}
 
 /*
 	.global_buffs {
@@ -1126,7 +1064,91 @@
         right: 10px;
         left: unset;
         top: 10px;}
-
+    #bookmarks .torrent_table #groupplatform,
+    #collections .torrent_table #groupplatform {
+        left: -36px;
+        right: unset;}
+    .torrent_notifications .torrent_table #groupplatform {
+        left: 2px;}
+    
+    #userinfo_stats >li a {
+        position: unset;}
+    
+    #header #userinfo_stats a:after {
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;}
+    
+    #stats_gold a {
+        background: none;}
+    #stats_leeching a:before,
+    #stats_seeding a:before,
+    #stats_share_score a:before {
+        content: none !important;}
+            
+    #stats_gold a,
+    #stats_leeching a,
+    #stats_seeding a,
+    #stats_share_score a {
+        width: 0;
+        height: 0;}
+    
+    #stats_leeching:before {
+        -webkit-mask-image: url('icons/download.svg');
+        mask-image: url('icons/download.svg');}
+    #stats_seeding:before {
+        -webkit-mask-image: url('icons/upload.svg');
+        mask-image: url('icons/upload.svg');}
+    #stats_share_score:before {
+        -webkit-mask-image: url('icons/snatches.svg');
+        mask-image: url('icons/snatches.svg');
+        transform: scaleX(-1) rotate(90deg);}
+    
+    #stats_leeching:before,
+    #stats_seeding:before,
+    #stats_share_score:before {
+        margin: 8px 0;
+        -webkit-transition: all .1s linear;
+        -o-transition: all .1s linear;
+        transition: all .1s linear;
+        -webkit-mask-size: 18px 18px;
+        mask-size: 18px 18px;
+        content: '';
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        -webkit-mask-position: center;
+        -webkit-mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: contain;
+        background-color: var(--c-anchor);}
+    #stats_gold:before {
+        filter: grayscale(0.5);
+        content: '';
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 18px;
+        height: 18px;
+        -webkit-transition: all .1s linear;
+        -o-transition: all .1s linear;
+        transition: all .1s linear;
+        margin: 8px 0;
+        width: 18px;
+        height: 18px;
+        background-size: 18px 18px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-image: url(icons/gold.svg);}
+    
 	/* #torrents #torrentbrowse #content .center {
 		text-align:right;
 		padding-right: 10px;
@@ -1146,6 +1168,10 @@
         position: absolute;
         right: 53px;
         top: 15px;}
+    #bookmarks .torrent_table .removebookmark {
+        position: static;
+        right: unset;
+        top: unset;}
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) a {
 		font-size: 18px;}
@@ -1169,7 +1195,6 @@
 
 	/*When | Snatches | Seeders | Leechers*/
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(5) {  	/*Time Uploaded*/
-        font-size: 10.5px;
         border: none;
 		order: 3;
 		float: left;
@@ -1179,7 +1204,6 @@
 		content: "\00a0\00a0 |";}
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(8) {		/*Snatches*/
-        font-size: 10.5px;
         border: none;
 		order: 4;
 		float: left;
@@ -1191,7 +1215,6 @@
 		content: "\00a0\00a0 | \00a0";}
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(9) {		/*Seeders*/
-        font-size: 10.5px;
         border: none;
 		order: 5;
 		float: left;
@@ -1203,7 +1226,6 @@
 		content: "";}
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(10) { 	/*Leechers*/
-        font-size: 10.5px; /* revisit 799 */
         border: none;
 		order: 6;
 		float: left;
@@ -1348,8 +1370,7 @@
         position: absolute;
         right: 0;
         top: 0;}
-    #wrapper .inventory #items_navigation:before,
-    #shop .items_shop #items_navigation:before,
+    #wrapper #content #items_navigation:before,
     #wrapper #content .linkbox.groupoptions:before {
         z-index: 2;
         content: '';
@@ -1367,8 +1388,7 @@
         mask-size: contain;
         mask-image: url(icons/mobile/groupoptions.svg);
         background-color: var(--c-txt);}
-    #wrapper .inventory #items_navigation:hover:before,
-    #shop .items_shop #items_navigation:hover:before,
+    #wrapper #content #items_navigation:hover:before,
     #wrapper #content .linkbox.groupoptions:hover:before {
         -webkit-mask-image: url(icons/mobile/groupoptions_hover.svg);
         mask-image: url(icons/mobile/groupoptions_hover.svg);}
@@ -1392,6 +1412,7 @@
         border-color: var(--c-table-brdr);
         background-color: var(--c-box);
         margin: 0;
+        z-index: 9;
         display: none;}
     #wrapper #content .linkbox.groupoptions >a:before {
         padding: 8px;
@@ -1539,8 +1560,11 @@
     #torrents .main_column tbody tr.group_torrent{
         border-bottom: var(--p-border);
         border-bottom-color: var(--c-table-brdr);}
+    #collections tr.group_torrent >td,
     .edition_info strong {
         position: relative;}
+    #collections .edition_info strong {
+        position: absolute;}
 
 	#torrents .main_column tr.group_torrent:hover {
 		/* background-color:transparent; */}
@@ -1809,7 +1833,9 @@ a[title="Remove"]:before {
 
 	/****Sidebar boxes****/
 	/* #torrents .sidebar .box .body {padding: 5px;} */
+    #collections #wrapper .thin form.search_form td.label,
     #requests form#request_form td.label,
+    #user #wrapper .thin >h2 +form#userform >table.border td.label,
     #collections .thin >h2:first-child +.center td.label,
     #forums .forum_latest >.search.box.pad td.label,
     #requests .sidebar .box_votes table td.label,
@@ -1986,18 +2012,6 @@ a[title="Remove"]:before {
 /*****************************************
 ****************UPLOADS*******************
 *****************************************/
-	#upload #content div,
-	#upload #content #thin,
-    #upload #content center,
-    #upload #content br {
-		display:none;}
-
-	#upload #content:after {
-        font-size: 2em;
-        line-height: 2em;
-        text-align: left;
-        padding: 10px;
-		content: "Uploading is disabled on mobile devices.";}
 
 /*****************************************
 *****************FORUMS*******************
@@ -2040,6 +2054,7 @@ a[title="Remove"]:before {
 	#forums span[style="float:right;"] a {/*color: var(--grey);*/}
 	#forums .forum_index tr td {padding: 15px 0px;}
     
+    #collections #wrapper .thin form.search_form td.label,
     #requests form#request_form td.label,
     #collections table#edit_collage td.label,
     #collections #wrapper table#new_collage td.label,
@@ -2088,33 +2103,46 @@ a[title="Remove"]:before {
 		padding: 5px 0;
 		width: 100%;
 		min-height: 30px; */}
-	.forum_post .colhead_dark div[style="float: left;"],
-    .forum_post .colhead_dark div[style="float:left;"] {
+    #wrapper #quickreplypreview .colhead_dark span[style="float:left;"],
+    #wrapper .forum_post .colhead_dark div[style="float: left;"],
+    #wrapper .forum_post .colhead_dark div[style="float:left;"],
+    #wrapper #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
 		display: flex;
 		flex-flow: row wrap;
 		color: transparent;
-        width: calc(100% - 60px);} /* revisit 799 */
+        width: calc(100% - 60px);}
 	/* #forums .forum_post .colhead_dark div[style="float:left;"] label{
 		color: var(--white);} */
-	.forum_post .colhead_dark div[style="float: left;"] input,
-    .forum_post .colhead_dark div[style="float:left;"] input {
+    #wrapper #quickreplypreview .colhead_dark span[style="float:left;"] input,
+    #wrapper .forum_post .colhead_dark div[style="float: left;"] input,
+    #wrapper .forum_post .colhead_dark div[style="float:left;"] input,
+    #wrapper #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] input {
 		height: inherit;}
 
-	.forum_post .colhead_dark div[style="float: left;"] strong,
-    .forum_post .colhead_dark div[style="float:left;"] strong {
+    #wrapper #quickreplypreview .colhead_dark span[style="float:left;"] strong,
+    #wrapper .forum_post .colhead_dark div[style="float: left;"] strong,
+    #wrapper .forum_post .colhead_dark div[style="float:left;"] strong,
+    #wrapper #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] strong {
         color: var(--c-txt);}
-	.forum_post .colhead_dark div[style="float: left;"] strong a,
-    .forum_post .colhead_dark div[style="float:left;"] strong a {
+        #wrapper #quickreplypreview .colhead_dark span[style="float:left;"] strong a,
+    #wrapper .forum_post .colhead_dark div[style="float: left;"] strong a,
+    #wrapper .forum_post .colhead_dark div[style="float:left;"] strong a,
+    #wrapper #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] strong a {
         margin-left:-10px;
         margin-right: 4px;}
 	/* #forums .forum_post .colhead_dark a.post_id {margin-top: 2px !important; margin-left: 2px;} */
 	.forum_post .colhead_dark div[style="float:left;"] a {/*padding: 0px 3px;*/ /* font-size: 1em; */}
 
-	.forum_post .colhead_dark div[style="float: left;"] .user_title,
-    .forum_post .colhead_dark div[style="float:left;"] .user_title {
+    #wrapper #quickreplypreview .colhead_dark span[style="float:left;"] .user_title,
+    #wrapper .forum_post .colhead_dark div[style="float: left;"] .user_title,
+    #wrapper .forum_post .colhead_dark div[style="float:left;"] .user_title,
+    #wrapper #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] .user_title {
         display: none;}
-	.forum_post .colhead_dark div[style="float: left;"] .time,
-    .forum_post .colhead_dark div[style="float:left;"] .time {
+    
+    #wrapper #quickreplypreview .colhead_dark span[style="float:left;"] .time,
+    #wrapper .forum_post .colhead_dark div[style="float: left;"] .time,
+    #wrapper .forum_post .colhead_dark div[style="float:left;"] .time,
+    #wrapper #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] .time {
 		order: 10;
 		/* font-size: 1em; */
 		left: 6px;
@@ -2251,7 +2279,7 @@ a[title="Remove"]:before {
 	#collections .thin .linkbox:nth-of-type(2) a[href*="page"] {display: none;}
 	#collections .thin .linkbox:nth-of-type(2) strong {display: none;}
 	#collections .thin .linkbox:nth-of-type(2) {color: transparent;}
-	.collections_art_display {margin-top: -40px;}
+/*	.collections_art_display {margin-top: -40px;}*/
 	#collections .hovereffect:hover h2 {display: none;}
 
 	#collections .collections .linkbox:nth-of-type(2) a[href*="page"] {display: inline;}
@@ -2982,26 +3010,43 @@ a[title="Remove"]:before {
 
     
     #shop_search #item_search tr {
-        display: flex;
-        flex-flow: row;}
+        display: flex;}
     #shop_search #item_search #advanced_search tr:first-child {
         margin-top: 8px;}
     #shop_search #item_search #advanced_search tr {
         flex-flow: row wrap;}
+    #shop_search #item_search tbody:not(#advanced_search) tr {
+        flex-flow: column;}
     #shop_search #item_search tbody:not(#advanced_search) tr:first-child td.label {
         display: none;}
     #shop_search #item_search tr:first-child span.flright {
         white-space: nowrap;
         line-height: 26px;
         margin-left: 5px;}
+    #user .thin >h2 +form#userform >table.border td.label,
     #shop_search #item_search #advanced_search td.label {
+        background-color: var(--c-edition);
         text-align: left;
         width: 100%;}
     #shop_search #item_search #advanced_search td {
         max-width: unset;}
+    #shop_search #item_search select {
+        margin: 5px auto !important;
+        width: 100% !important;}
+    #shop_search #item_search select:last-of-type {
+        margin-bottom: 10px !important;}
+    #wrapper #shop_search #search_query {
+        margin-bottom: 5px;
+        width: 100% !important;}
     
-    #wrapper .inventory #items_navigation,
-    #shop .items_shop #items_navigation {
+    .inventory #wrapper .trash_icon {
+        max-width: unset !important;
+        height: 18px !important;}
+    
+    #shop_search #item_search tbody:not(#advanced_search) td:last-child {
+        margin: -26px 0 0 auto;}
+    
+    #wrapper #content #items_navigation {
         width: 0;
         height: 0;
         padding: 0;
@@ -3011,12 +3056,11 @@ a[title="Remove"]:before {
         -webkit-box-shadow: none;
         box-shadow: none;
         position: absolute;
-        z-index: 9;
+        z-index: 99;
         top: 0;
         right: 0;}
     
-    #wrapper .inventory #items_navigation:hover,
-    #shop .items_shop #items_navigation:hover {
+    #wrapper #content #items_navigation:hover {
         padding: 10px;
         width: 222px;
         height: auto;
@@ -3027,47 +3071,37 @@ a[title="Remove"]:before {
         border-color: var(--c-main-brdr);
         margin: 0 0 15px 0;}
     
-    #wrapper #content .inventory #items_navigation:before,
-    #shop #content  .items_shop #items_navigation:before {
+    #wrapper #content #items_navigation:before {
         top: 3px;
         right: 3px;}
+/*
+    #wrapper #content .inventory #items_navigation:before {
+        top: 7px;
+        right: 6px;}
+*/
     
-    #wrapper .inventory #items_navigation:hover >h3,
-    #wrapper .inventory #items_navigation:hover >ul,
-    #shop .items_shop #items_navigation:hover >h3,
-    #shop .items_shop #items_navigation:hover >ul {
+    #wrapper #items_navigation:hover >ul,
+    #wrapper #items_navigation:hover >h3 {
         display: block;}
-    #wrapper .inventory #items_navigation:hover >a,
-    #shop .items_shop #items_navigation:hover >a {
+    #wrapper #items_navigation:hover >a {
         display: initial;}
     
-    #wrapper .inventory #items_navigation >h3,
-    #wrapper .inventory #items_navigation >ul,
-    #wrapper .inventory #items_navigation >a,
-    #shop .items_shop #items_navigation >h3,
-    #shop .items_shop #items_navigation >ul,
-    #shop .items_shop #items_navigation >a {
+    #wrapper #items_navigation >h3,
+    #wrapper #items_navigation >ul,
+    #wrapper #items_navigation >a {
         display: none;}
     
     #wrapper #items_list {
         width: 100%;
-        margin: 0;}
+        margin: 0 0 15px 0;}
     #shop #wrapper li.item_li {
         margin: 0 5px 10px 5px;
         width: calc(100% / 3 - 10px);}
     #shop #wrapper li.featured {
         width: calc(100% - 10px);}
     
-    .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable.ui-resizable {
-        width: 100% !important;}
-    .more_info #img_box img {
-        max-width: 75px;
-        width: 75px;
-        height: auto;}
-    .more_info .col_1 {
-        width: 75px;}
-    .more_info .col_2 {
-        left: 75px;}
+    .inventory #wrapper #content li.item_li {
+        margin: 0 5px 10px 5px;}
     
     
     
@@ -3078,7 +3112,8 @@ a[title="Remove"]:before {
 **************************************************/
 
 
-	#items_list {margin: 10px 0 0; width: calc(100% - 50px);}
+/*	#items_list {margin: 10px 0 0; width: calc(100% - 50px);}*/
+/*
 	#items_navigation {
 	margin: 10px 0 0;
 	width: 20px;
@@ -3089,17 +3124,22 @@ a[title="Remove"]:before {
 	#items_navigation ul, #items_navigation h3 {visibility: hidden;}
 	#items_navigation:hover {width: 200px;}
 	#items_navigation:hover ul, #items_navigation:hover h3 {visibility: visible;}
+*/
 
+/*
 	#shop li[class*="item_type_"] {width: 97%;}
 	#shop .featured .item_description, #shop .featured #clickable:hover .item_description {display: none;}
 	#shop li.featured #clickable {width: 195px;}
+*/
+/*
 	#shop .item_image_div {width: auto;}
 	#shop #cost_info {width: auto;}
+*/
 	#shop .featured .submit_section {text-align: center;}
-	#shop img.item_center.item_image  {max-width: 150px !important;}
+/*	#shop img.item_center.item_image  {max-width: 150px !important;}*/
 
 	#shop #content li.no_items, #loading {margin-left: 50px;}
-	#shop_search {display: none;}
+/*	#shop_search {display: none;}*/
 
 	.more_info .col_1 {width: 75px;}
 	.more_info #img_box img {max-width: 75px; width: 75px; height: auto;}
@@ -3119,15 +3159,19 @@ a[title="Remove"]:before {
 	#user.log .thin table td:first-of-type {
 	width: 33%;}
 
+/*
 	.inventory h2 {display: none;}
 	.inventory #items_list {width: calc(100% - 40px);}
 	.inventory #content li.item_li {width: 100%;}
+*/
 	.inventory .bottom_linkbox {margin: 0 auto;}
-	.inventory li.item_li .flright {float: right;}
+/*	.inventory li.item_li .flright {float: right;}*/
+/*
 	.inventory li.item_li input, .inventory li.item_li button, .inventory li.item_li select {
 	padding: 8px;}
+*/
 
-	#user .inventory form input[type="text"], #user .inventory form textarea {width: 150px !important; margin-left: 120px;}
+/*	#user .inventory form input[type="text"], #user .inventory form textarea {width: 150px !important; margin-left: 120px;}*/
 
 	/***Equipment/Crafting Panel***/
 	#equipment #items,
@@ -3139,28 +3183,57 @@ a[title="Remove"]:before {
 	#trading_panel .trade_table,
 	#trading_panel .message_section,
 	#trading_panel button {display: none;}
-	#equipment:after {
-	content: "Equipment Manager disabled on mobile";
-	padding: 50px 0px;
-	display: block;
-	text-align:center;}
+    
+    #crafting_panel div,
+    #crafting_panel h2,
+    
+    
+    #equipment div,
+    #equipment h2,
+    
+    #upload #content div,
+	#upload #content #thin,
+    #upload #content center,
+    #upload #content br {
+		display:none;}
+    
+    #wrapper #crafting_recipes li.item_li {
+        width: calc(100% / 4 - 10px);}
+    
+	#equipment:after,
+    #crafting_panel:after,
+    #trading_panel:after,
+    #upload #content:after {
+        font-weight: 600;
+        font-size: 19px;
+        line-height: 2em;
+        text-align: left;
+        padding: 10px;
+        width: 100%;
+        display: block;
+        margin: 0 0 15px 0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;}
+   
+    #equipment:after {
+        content: "Equipment Manager is disabled on mobile.";}
+    
 	#crafting_panel:after {
-	content: "Crafting Manager disabled on mobile";
-	padding: 50px 0px;
-	display: block;
-	text-align:center;}
+        content: "Crafting Manager is disabled on mobile.";}
+    
 	#trading_panel:after {
-	content: "Trading disabled on mobile";
-	padding: 50px 0px;
-	display: block;
-	text-align: center;}
+        content: "Trading is disabled on mobile.";}
+
+    #upload #content:after {
+		content: "Uploading is disabled on mobile.";}
 
 	/***Freeleech Shop***/
-	.freeleech_shop_main {width: calc(100% - 55px);}
-	#shop.fl_shop #alerts {top: 143px;}
+    #wrapper .freeleech_shop_main,
+    #wrapper .global_buffs_shop_main {
+        width: 100%;}
 
 	.freeleech_shop .box_add_freeleech {height: auto;}
-	.box_add_freeleech .body {margin-top: 10px;}
+/*	.box_add_freeleech .body {margin-top: 10px;}*/
 
 	#existing_freeleech_pots tr.colhead,
 
@@ -3175,59 +3248,158 @@ a[title="Remove"]:before {
 	#existing_freeleech_pots td:nth-of-type(5):before {content: "Current Pot: "}
 
 	#existing_freeleech_pots tr {display: block; padding: 10px 5px;}
+/*
 	#existing_freeleech_pots tr:nth-of-type(odd) {background-color: rgba(24, 59, 88, 0.85);}
 	#existing_freeleech_pots tr:nth-of-type(even) {background-color: rgba(27, 47, 63, 0.85);}
+*/
     
-    
-    
-    
+    #site_style_tr .preview_wrapper {
+        width: calc(25% - 13px);}
+}
 
-	/*
-	#searchbars ul {
-	    left: 170px;}
-	#userinfo_username .sub,
-	#forums #content .thin .sub {
-	    visibility: visible !important;
-	    width: 25px;
-	    height: 25px;
-	    background-image: url('../images/icons/sub128.png');
-	    background-size: contain;
-	    background-repeat: no-repeat;
-	    background-position: center;}
-	#userinfo_username .sub {
-	    top: 32px;
-	    left: 130px;
-	    margin: 0;
-	    position: absolute;}
-	#userinfo_username .sub span {
-	    top: 37px;
-	    left: 0;
-	    font-size: inherit;}
-	#forums #content .thin .sub {
-	    margin: -25px 0 0 0;
-	    right: calc(-100% + 25px);
-	    top: 35px;
-	    font-size: 1.1em;
-		z-index: 1;}
-	#forums #content .thin .sub span {
-	    left: -135px;
-	    top: -10px;}
-	#userinfo_username .sub span,
-	#forums #content .thin .sub span {
-	    display: none;
-	    margin: 0;
-	    position: relative;
-	    border-bottom: 1px var(--darkBlue2) solid;
-	    background: var(--mediumBlue);
-	    width: 130px;
-	    height: 38px;
-	    padding: 5px 0 0 0;}
-	#userinfo_username .sub:hover span,
-	#forums #content .thin .sub:hover span {
-	    display: block;}
-	#userinfo_username .sub a,
-	#forums #content .thin .sub a {
-	    display: block;
-	    font-weight: 400;
-	    padding: 10px 8px;}*/
+
+
+
+
+@media (min-width: 700px) and (max-width: 800px) {
+    .similar li {
+        width: calc(25% - 10px);}
+}
+
+@media (min-width: 650px) and (max-width: 800px) {
+    #torrents #torrentbrowse .torrent_table td:nth-of-type(10),
+    #torrents #torrentbrowse .torrent_table td:nth-of-type(9),
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(8),
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(5) {
+        font-size: 14px;}
+}
+@media (min-width: 600px) and  (max-width: 649px) {
+    #torrents #torrentbrowse .torrent_table td:nth-of-type(10),
+    #torrents #torrentbrowse .torrent_table td:nth-of-type(9),
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(8),
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(5) {
+        font-size: 12px;}
+}
+@media (max-width: 599px) {
+    #torrents #torrentbrowse .torrent_table td:nth-of-type(10),
+    #torrents #torrentbrowse .torrent_table td:nth-of-type(9),
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(8),
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(5) {
+        font-size: 10.5px;}
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+	#equipment:after,
+    #crafting_panel:after,
+    #trading_panel:after,
+    #upload #content:after{
+        font-size: 19px;}
+}
+
+@media (max-width: 699px) {
+    .newsdate {
+        display: none;}
+    .box.news_post .head strong:before {
+        content: none;}
+    #extra4 {
+        content: '';
+        position: absolute;
+        z-index: 98;
+        left: 0;
+        width: 100%;
+        height: 40px;
+        top: 44px;
+        background: var(--p-extra-menu);}
+    #header #userinfo {
+        width: 100%;}
+    #header #userinfo #userinfo_username {
+        direction: rtl;}
+    #header #userinfo_username #nav_userinfo a.username {
+        line-height: 40px;}
+    #header #userinfo #userinfo_username,
+    #header #nav_donate {
+        height: 40px;}
+    #header #nav_donate a,
+    #header #nav_logout a,
+    #header #nav_useredit a {
+        padding: 10px 8px;}
+    #wrapper #header #userinfo {
+        z-index: 99;}
+    /* #wrapper #header .sub span,
+    #header ul#userinfo_minor li {
+        right: 97px;} */
+    #wrapper .similar li {
+        width: calc(50% - 10px);}
+    #wrapper #recommended #vanityhouse td,
+    #wrapper .screenshots a {
+        width: calc(50% - 5px);}
+    .screenshots a:nth-child(2n) {
+        margin-right: 0;}
+    #wrapper .similar_div .head .flright {
+        width: unset;}
+    #wrapper .similar_div .head .flright form input[type="text"] {
+        width: unset;
+        min-width: unset;
+        max-width: unset;}
+    #quickreplypreview .colhead_dark #barpreview,
+    .forum_post .colhead_dark div[style="float: right;"],
+    #newthreadpreview .forum_post .colhead_dark #barpreview {
+        display: none;}
+    body #wrapper #content .sub {
+        left: calc(100% - 34px);}
+    #wrapper #content #quickreplypreview .colhead_dark span[style="float:left;"],
+    #wrapper #content .forum_post .colhead_dark div[style="float: left;"],
+    #wrapper #content .forum_post .colhead_dark div[style="float:left;"],
+    #wrapper #content #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
+        width: calc(100% - 33px);}
+    #wrapper #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"],
+    #wrapper #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"],
+    #wrapper .forum_post .colhead_dark a.post_id {
+        line-height: 19px;
+        font-size: 12px;}
+/*
+    #wrapper #shop_search #search_query {
+        width: 100%;}
+    #wrapper #shop_search tbody:not(#advanced_search) select {
+        margin-top: 7px;}
+*/
+    
+    #shop #wrapper #content li.item_li {
+        width: calc(50% - 10px);}
+    .inventory #wrapper #content li.item_li {
+        width: calc(100% - 10px);}
+    #wrapper .collections_art_display td {
+        width: calc(50% - 5px);}
+    .collections_art_display tr:first-child td:nth-child(n+3) {
+        margin-top: 10px;}
+    
+    #bookmarks #coverart .collage_images li,
+    #collections #coverart.box li {
+        width: calc(100% / 3 - 10px);}
+}
+
+@media (max-width: 499px) {
+    #wrapper #equipment:after,
+    #wrapper #crafting_panel:after,
+    #wrapper #trading_panel:after,
+    #wrapper #upload #content:after {
+        font-size: 17px;}
+    #quickreplychecks {
+        clear: both;
+        display: block !important;
+        margin-bottom: 5px;}
+    #wrapper #content #crafting_recipes li.item_li {
+        width: calc(100% / 2 - 10px);}
+    #shop #wrapper #content li.item_li {
+        width: calc(100% - 10px);}
+    #site_style_tr .preview_wrapper {
+        width: calc(50% - 12px);
+        margin: 5px;}
+}
+
+@media (max-width: 420px) {
+    #wrapper .global_buffs .individual_buff {
+        margin-left: -5px;}
+    #torrents #wrapper .sidebar .box {
+        width: 100%;}
 }
