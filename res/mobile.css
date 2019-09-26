@@ -14,8 +14,11 @@
         top: 44px;
         background: var(--p-extra-menu);}
     #header #userinfo {
-        direction: rtl;
         width: 100%;}
+    #header #userinfo #userinfo_username {
+        direction: rtl;}
+    #header #userinfo #userinfo_username .sub {
+        direction: ltr;}
     #header #userinfo_username #nav_userinfo a.username {
         line-height: 40px;}
     #header #userinfo #userinfo_username,
@@ -500,7 +503,7 @@
         height: 100%;
         z-index: -1;}
     .sub span:before {
-        width: 157px;}
+        width: 100%;}
     #header #userinfo_minor li:before {
         width: 128px;}
     ul#userinfo_stats #stats_gold a,
@@ -1341,12 +1344,15 @@
         -webkit-mask-position: center;
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: contain;
-        -webkit-mask-image: url(icons/nav/useredit.svg);
+        -webkit-mask-image: url(icons/mobile/groupoptions.svg);
         mask-position: center;
         mask-repeat: no-repeat;
         mask-size: contain;
-        mask-image: url(icons/nav/useredit.svg);
+        mask-image: url(icons/mobile/groupoptions.svg);
         background-color: var(--c-text-s);}
+    #wrapper #content .linkbox.groupoptions:hover:before {
+        -webkit-mask-image: url(icons/mobile/groupoptions_hover.svg);
+        mask-image: url(icons/mobile/groupoptions_hover.svg);}
     
     #wrapper #content .linkbox.groupoptions:hover {
         padding-top: 25px;
