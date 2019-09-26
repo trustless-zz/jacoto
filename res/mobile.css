@@ -47,6 +47,19 @@
         width: unset;
         min-width: unset;
         max-width: unset;}
+    
+    #wrapper #shop_search #search_query {
+        width: 100%;}
+    #wrapper #shop_search tbody:not(#advanced_search) select {
+        margin-top: 7px;}
+    
+    #shop #wrapper #content li.item_li {
+        width: calc(100% / 2 - 10px);}
+}
+
+@media screen and (max-width: 499px) {
+    #shop #wrapper #content li.item_li {
+        width: calc(100% - 10px);}
 }
 
 @media screen and (max-width: 420px) {
@@ -1335,6 +1348,8 @@
         position: absolute;
         right: 0;
         top: 0;}
+    #wrapper .inventory #items_navigation:before,
+    #shop .items_shop #items_navigation:before,
     #wrapper #content .linkbox.groupoptions:before {
         z-index: 2;
         content: '';
@@ -1352,6 +1367,8 @@
         mask-size: contain;
         mask-image: url(icons/mobile/groupoptions.svg);
         background-color: var(--c-txt);}
+    #wrapper .inventory #items_navigation:hover:before,
+    #shop .items_shop #items_navigation:hover:before,
     #wrapper #content .linkbox.groupoptions:hover:before {
         -webkit-mask-image: url(icons/mobile/groupoptions_hover.svg);
         mask-image: url(icons/mobile/groupoptions_hover.svg);}
@@ -2963,6 +2980,207 @@ a[title="Remove"]:before {
 
 
 
+    
+    #shop_search #item_search tr {
+        display: flex;
+        flex-flow: row;}
+    #shop_search #item_search #advanced_search tr:first-child {
+        margin-top: 8px;}
+    #shop_search #item_search #advanced_search tr {
+        flex-flow: row wrap;}
+    #shop_search #item_search tbody:not(#advanced_search) tr:first-child td.label {
+        display: none;}
+    #shop_search #item_search tr:first-child span.flright {
+        white-space: nowrap;
+        line-height: 26px;
+        margin-left: 5px;}
+    #shop_search #item_search #advanced_search td.label {
+        text-align: left;
+        width: 100%;}
+    #shop_search #item_search #advanced_search td {
+        max-width: unset;}
+    
+    #wrapper .inventory #items_navigation,
+    #shop .items_shop #items_navigation {
+        width: 0;
+        height: 0;
+        padding: 0;
+        margin: 0;
+        background: none;
+        border: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        position: absolute;
+        z-index: 9;
+        top: 0;
+        right: 0;}
+    
+    #wrapper .inventory #items_navigation:hover,
+    #shop .items_shop #items_navigation:hover {
+        padding: 10px;
+        width: 222px;
+        height: auto;
+        background-color: var(--c-box);
+        -webkit-box-shadow: var(--p-main-shdw);
+        box-shadow: var(--p-main-shdw);
+        border: var(--p-border);
+        border-color: var(--c-main-brdr);
+        margin: 0 0 15px 0;}
+    
+    #wrapper #content .inventory #items_navigation:before,
+    #shop #content  .items_shop #items_navigation:before {
+        top: 3px;
+        right: 3px;}
+    
+    #wrapper .inventory #items_navigation:hover >h3,
+    #wrapper .inventory #items_navigation:hover >ul,
+    #shop .items_shop #items_navigation:hover >h3,
+    #shop .items_shop #items_navigation:hover >ul {
+        display: block;}
+    #wrapper .inventory #items_navigation:hover >a,
+    #shop .items_shop #items_navigation:hover >a {
+        display: initial;}
+    
+    #wrapper .inventory #items_navigation >h3,
+    #wrapper .inventory #items_navigation >ul,
+    #wrapper .inventory #items_navigation >a,
+    #shop .items_shop #items_navigation >h3,
+    #shop .items_shop #items_navigation >ul,
+    #shop .items_shop #items_navigation >a {
+        display: none;}
+    
+    #wrapper #items_list {
+        width: 100%;
+        margin: 0;}
+    #shop #wrapper li.item_li {
+        margin: 0 5px 10px 5px;
+        width: calc(100% / 3 - 10px);}
+    #shop #wrapper li.featured {
+        width: calc(100% - 10px);}
+    
+    .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable.ui-resizable {
+        width: 100% !important;}
+    .more_info #img_box img {
+        max-width: 75px;
+        width: 75px;
+        height: auto;}
+    .more_info .col_1 {
+        width: 75px;}
+    .more_info .col_2 {
+        left: 75px;}
+    
+    
+    
+    
+    
+    /**************************************************
+************PALOOZA OTHER SCREEN SIZES*************
+**************************************************/
+
+
+	#items_list {margin: 10px 0 0; width: calc(100% - 50px);}
+	#items_navigation {
+	margin: 10px 0 0;
+	width: 20px;
+	overflow: hidden;
+	-moz-transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	transition: all 0.5s;}
+	#items_navigation ul, #items_navigation h3 {visibility: hidden;}
+	#items_navigation:hover {width: 200px;}
+	#items_navigation:hover ul, #items_navigation:hover h3 {visibility: visible;}
+
+	#shop li[class*="item_type_"] {width: 97%;}
+	#shop .featured .item_description, #shop .featured #clickable:hover .item_description {display: none;}
+	#shop li.featured #clickable {width: 195px;}
+	#shop .item_image_div {width: auto;}
+	#shop #cost_info {width: auto;}
+	#shop .featured .submit_section {text-align: center;}
+	#shop img.item_center.item_image  {max-width: 150px !important;}
+
+	#shop #content li.no_items, #loading {margin-left: 50px;}
+	#shop_search {display: none;}
+
+	.more_info .col_1 {width: 75px;}
+	.more_info #img_box img {max-width: 75px; width: 75px; height: auto;}
+	.more_info .col_2 {left: 75px;}
+
+	.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable.ui-resizable {width: 100% !important;}
+
+	#user.log .center,
+	#user.log .colhead
+	{display: none;}
+
+	#user.log .thin table td {
+	display: table-cell;
+	padding: 10px;
+	vertical-align: top;}
+
+	#user.log .thin table td:first-of-type {
+	width: 33%;}
+
+	.inventory h2 {display: none;}
+	.inventory #items_list {width: calc(100% - 40px);}
+	.inventory #content li.item_li {width: 100%;}
+	.inventory .bottom_linkbox {margin: 0 auto;}
+	.inventory li.item_li .flright {float: right;}
+	.inventory li.item_li input, .inventory li.item_li button, .inventory li.item_li select {
+	padding: 8px;}
+
+	#user .inventory form input[type="text"], #user .inventory form textarea {width: 150px !important; margin-left: 120px;}
+
+	/***Equipment/Crafting Panel***/
+	#equipment #items,
+	#equipment #equip_panel,
+	#crafting_panel #items,
+	#crafting_panel #results_section,
+	#crafting_panel #slots_panel,
+	#trading_panel #items,
+	#trading_panel .trade_table,
+	#trading_panel .message_section,
+	#trading_panel button {display: none;}
+	#equipment:after {
+	content: "Equipment Manager disabled on mobile";
+	padding: 50px 0px;
+	display: block;
+	text-align:center;}
+	#crafting_panel:after {
+	content: "Crafting Manager disabled on mobile";
+	padding: 50px 0px;
+	display: block;
+	text-align:center;}
+	#trading_panel:after {
+	content: "Trading disabled on mobile";
+	padding: 50px 0px;
+	display: block;
+	text-align: center;}
+
+	/***Freeleech Shop***/
+	.freeleech_shop_main {width: calc(100% - 55px);}
+	#shop.fl_shop #alerts {top: 143px;}
+
+	.freeleech_shop .box_add_freeleech {height: auto;}
+	.box_add_freeleech .body {margin-top: 10px;}
+
+	#existing_freeleech_pots tr.colhead,
+
+	#existing_freeleech_pots td:nth-of-type(2),
+	#existing_freeleech_pots td:nth-of-type(6),
+	#existing_freeleech_pots td:nth-of-type(7) {display: none;}
+
+	#existing_freeleech_pots td {display: block;}
+	#existing_freeleech_pots td:nth-of-type(1) {font-size: 1.5em; padding-left: 0;}
+	#existing_freeleech_pots td:nth-of-type(3):before {content: "Gold Cost: "}
+	#existing_freeleech_pots td:nth-of-type(4):before {content: "Gold Remaining: "}
+	#existing_freeleech_pots td:nth-of-type(5):before {content: "Current Pot: "}
+
+	#existing_freeleech_pots tr {display: block; padding: 10px 5px;}
+	#existing_freeleech_pots tr:nth-of-type(odd) {background-color: rgba(24, 59, 88, 0.85);}
+	#existing_freeleech_pots tr:nth-of-type(even) {background-color: rgba(27, 47, 63, 0.85);}
+    
+    
+    
+    
 
 	/*
 	#searchbars ul {

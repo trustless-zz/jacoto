@@ -2564,10 +2564,12 @@ table.bbcode_table td,
 #header #userinfo_username  .active a,
 #header #userinfo_minor     .active a,
 #header #menu               .active a {
+    -webkit-box-shadow: inset var(--p-selected);
     box-shadow: inset var(--p-selected);}
 
 #header .highlight {
     color: var(--c-em-hvr);
+    -webkit-box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr);
     box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr);}
 /* notifications don't get a .highlight */
 #header li[id="notilia nav_notifications"] strong {
@@ -2581,6 +2583,7 @@ table.bbcode_table td,
     height: 100%;
     top: 0;
     left: 0;
+    -webkit-box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr);
     box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr);}
 #header li[id="notilia nav_notifications"].active strong:before {
     content: none;}
