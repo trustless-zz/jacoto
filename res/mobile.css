@@ -1,4 +1,4 @@
-﻿@media screen and (max-width: 700px) {
+﻿@media screen and (max-width: 699px) {
     .newsdate {
         display: none;}
     .box.news_post .head strong:before {
@@ -28,6 +28,17 @@
     
     #wrapper #header #userinfo {
         z-index: 99;}
+    #wrapper #header .sub span,
+    #header ul#userinfo_minor li {
+        right: -5px;}
+    
+    #wrapper #recommended #vanityhouse td {
+        width: calc(50% - 5px);}
+}
+
+@media screen and (max-width: 420px) {
+    #wrapper .global_buffs .individual_buff {
+        margin-left: -5px;}
 }
 
 @media (min-width: 700px) and (max-width: 800px) {
@@ -566,7 +577,7 @@
         position: relative;}
     #header .sub span {
         top: 42px;
-        right: 124px;
+        right: 132px;
         left: unset;}
     
     #header #alerts .blend {
