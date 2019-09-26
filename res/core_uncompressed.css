@@ -2517,8 +2517,6 @@ table.bbcode_table td,
 #nav_logout {
     order: -3;}
 #nav_donate {
-    width: 34px;
-    height: 34px;
     position: relative;
     order: -2;}
 #nav_useredit {
