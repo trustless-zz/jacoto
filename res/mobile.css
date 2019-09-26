@@ -2883,6 +2883,11 @@ a[title="Remove"]:before {
         text-align: left;}
     #share_score tr.colhead td:first-child:empty {
         display: none;}
+    #share_score_breakdown tr:not(.colhead) td:not(.label) {
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;}
+    
 
 	#share_score_breakdown .label {}
 
