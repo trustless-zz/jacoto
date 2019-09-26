@@ -17,8 +17,6 @@
         width: 100%;}
     #header #userinfo #userinfo_username {
         direction: rtl;}
-    #header #userinfo #userinfo_username .sub {
-        direction: ltr;}
     #header #userinfo_username #nav_userinfo a.username {
         line-height: 40px;}
     #header #userinfo #userinfo_username,
@@ -31,9 +29,9 @@
     
     #wrapper #header #userinfo {
         z-index: 99;}
-    #wrapper #header .sub span,
+    /* #wrapper #header .sub span,
     #header ul#userinfo_minor li {
-        right: -5px;}
+        right: 97px;} */
     
     #wrapper .similar li {
         width: calc(50% - 10px);}
@@ -71,6 +69,8 @@
 	/* #header {display:none;} */
     .clan_trophy {display: none;}
     
+        #header #userinfo #userinfo_username .sub {
+        direction: ltr;}
 /*
     #header #announcement {
         text-align: center;
@@ -286,6 +286,7 @@
     #content .sub:after {
         width: 28px;
         left: 0;}
+    #wrapper #content .linkbox.groupoptions:hover:after,
     #wrapper #header .global_buffs:hover:after,
     #header #alerts:hover:after,
     .sub:hover:after,
@@ -1335,6 +1336,7 @@
         right: 0;
         top: 0;}
     #wrapper #content .linkbox.groupoptions:before {
+        z-index: 2;
         content: '';
         position: absolute;
         width: 25px;
@@ -1349,10 +1351,18 @@
         mask-repeat: no-repeat;
         mask-size: contain;
         mask-image: url(icons/mobile/groupoptions.svg);
-        background-color: var(--c-text-s);}
+        background-color: var(--c-txt);}
     #wrapper #content .linkbox.groupoptions:hover:before {
         -webkit-mask-image: url(icons/mobile/groupoptions_hover.svg);
         mask-image: url(icons/mobile/groupoptions_hover.svg);}
+    #wrapper #content .linkbox.groupoptions:after {
+        z-index: 1;
+        content: '';
+        position: absolute;
+        top: -5px;
+        right: -5px;
+        width: 35px;
+        height: 35px;}
     
     #wrapper #content .linkbox.groupoptions:hover {
         padding-top: 25px;
@@ -1856,6 +1866,7 @@ a[title="Remove"]:before {
 		/* padding: 10px;
         margin-left: 100px;
         display: block;*/}
+    #user .thin >h2:first-child +.center ~table.border td,
     #user .box.box_gold #box_gold_scrollbar td,
     #torrents .torrent_edit td,
     #torrents #content>script:first-child+h2+form #torrent_link .label:first-child,
