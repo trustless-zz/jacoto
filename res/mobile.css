@@ -569,6 +569,7 @@
         padding: 5px;
         max-width: 80px;
         margin: 0;
+        margin-left: -5px;
         max-height: 80px;
         height: auto;}
     .global_buffs>div {
@@ -655,7 +656,7 @@
         margin: -28px 0 0 0;
         left: calc(100% - 61px);
         top: 38px;
-        z-index: 1;}
+        z-index: 999;}
     #content .sub {
         visibility: visible !important;
         width: 28px;
@@ -896,8 +897,15 @@
 **************FRONT PAGE******************
 *****************************************/
 	#content,
-    #footer  {
+    #footer {
+        min-width: calc(349px - 30px);
         width: calc(100% - 30px);}
+    #header,
+    #extra1,
+    #extra2,
+    #extra3,
+    #extra4 {
+        min-width: 349px;}
 
 	.thin {
 		display: flex;
@@ -1168,6 +1176,8 @@
         position: absolute;
         right: 53px;
         top: 15px;}
+    #artist .torrent_table .addbookmark,
+    #artist .torrent_table .removebookmark,
     #bookmarks .torrent_table .removebookmark {
         position: static;
         right: unset;
@@ -2173,12 +2183,24 @@ a[title="Remove"]:before {
         margin-left: auto;
         margin-right: auto;}
 	#forums .linkbox_top {display: none;}
+    
+    #wrapper .linkbox >strong,
+    #wrapper .linkbox a {
+        white-space: normal;}
 
 	.avatar .forumstat {
         /* display: none; */
         left: 110px;}
     .avatar:hover .forumstat {
         transition-delay: unset;}
+    
+    #wrapper #blog .pad img,
+    #wrapper #profilediv img,
+    #wiki #wrapper .wiki_article a img,
+    #wrapper #wrapper .box.news_post>.pad img,
+    #wrapper .forum_post td.body img,
+    #wrapper blockquote#description img {
+        max-width: 100% !important;}
     
     #wrapper #quickreplypreview .colhead_dark #barpreview,
     #wrapper .forum_post .colhead_dark div[style="float: right;"],
@@ -3287,6 +3309,13 @@ a[title="Remove"]:before {
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(5) {
         font-size: 10.5px;}
 }
+@media (max-width: 399px) {
+    #torrents #torrentbrowse .torrent_table td:nth-of-type(10),
+    #torrents #torrentbrowse .torrent_table td:nth-of-type(9),
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(8),
+	#torrents #torrentbrowse .torrent_table td:nth-of-type(5) {
+        font-size: 9px;}
+}
 
 @media (min-width: 500px) and (max-width: 800px) {
 	#equipment:after,
@@ -3307,7 +3336,7 @@ a[title="Remove"]:before {
         z-index: 98;
         left: 0;
         width: 100%;
-        height: 40px;
+        height: 38px;
         top: 44px;
         background: var(--p-extra-menu);}
     #header #userinfo {
@@ -3315,14 +3344,14 @@ a[title="Remove"]:before {
     #header #userinfo #userinfo_username {
         direction: rtl;}
     #header #userinfo_username #nav_userinfo a.username {
-        line-height: 40px;}
+        line-height: 38px;}
     #header #userinfo #userinfo_username,
     #header #nav_donate {
-        height: 40px;}
+        height: 38px;}
     #header #nav_donate a,
     #header #nav_logout a,
     #header #nav_useredit a {
-        padding: 10px 8px;}
+        padding: 9px 8px;}
     #wrapper #header #userinfo {
         z-index: 99;}
     /* #wrapper #header .sub span,
@@ -3378,6 +3407,10 @@ a[title="Remove"]:before {
         width: calc(100% / 3 - 10px);}
 }
 
+@media (max-width: 569px) {
+    .profile .box_community #community_stats ul {
+        width: calc(100% - 18px);}
+}
 @media (max-width: 499px) {
     #wrapper #equipment:after,
     #wrapper #crafting_panel:after,
@@ -3398,8 +3431,15 @@ a[title="Remove"]:before {
 }
 
 @media (max-width: 420px) {
-    #wrapper .global_buffs .individual_buff {
-        margin-left: -5px;}
+    #wrapper #header .global_buffs {
+        direction: rtl;}
     #torrents #wrapper .sidebar .box {
         width: 100%;}
+}
+@media (max-width: 399px) {
+    .similar_div .head .flright {
+        float: unset;}
+    #wrapper .similar_div .head .flright form input[type="text"] {
+        margin-top: 5px;
+        width: calc(100% - 53px);}
 }

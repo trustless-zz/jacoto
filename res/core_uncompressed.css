@@ -2187,8 +2187,11 @@ input[disabled] {
 #newthreadpreview #pollpreview .head.colhead_dark,
 .head[title="Click to expand/collapse"],
 .head[onclick] {
-    height: var(--p-head);}
+    text-indent: -10px;
+    overflow: hidden;
+    min-height: var(--p-head);}
 #forums .thin >.box.thin.clear .head.colhead_dark {
+    text-indent: -10px;
     height: var(--p-head) !important;
     padding: 9px 10px!important;}
 #forums .thin >.box.thin.clear .head.colhead_dark strong,
@@ -2197,9 +2200,9 @@ input[disabled] {
 .head[onclick] strong {
     cursor: default;
     z-index: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
+    position: relative;
+/*    left: 0;
+    top: 0;*/
     padding: 9px 10px;
     width: calc(100% - 20px);
     height: var(--p-head);}
