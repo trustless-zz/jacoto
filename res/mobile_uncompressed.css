@@ -3333,6 +3333,8 @@ a[title="Remove"]:before {
 }
 
 @media (max-width: 699px) {
+    .permission_container {
+        width: calc(50% - 5px);}
     .newsdate {
         display: none;}
     .box.news_post .head strong:before {
@@ -3377,22 +3379,6 @@ a[title="Remove"]:before {
         width: unset;
         min-width: unset;
         max-width: unset;}
-    #quickreplypreview .colhead_dark #barpreview,
-    .forum_post .colhead_dark div[style="float: right;"],
-    #newthreadpreview .forum_post .colhead_dark #barpreview {
-        display: none;}
-    body #wrapper #content .sub {
-        left: calc(100% - 34px);}
-    #wrapper #content #quickreplypreview .colhead_dark span[style="float:left;"],
-    #wrapper #content .forum_post .colhead_dark div[style="float: left;"],
-    #wrapper #content .forum_post .colhead_dark div[style="float:left;"],
-    #wrapper #content #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
-        width: calc(100% - 33px);}
-    #wrapper #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"],
-    #wrapper #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"],
-    #wrapper .forum_post .colhead_dark a.post_id {
-        line-height: 19px;
-        font-size: 12px;}
 /*
     #wrapper #shop_search #search_query {
         width: 100%;}
@@ -3414,11 +3400,32 @@ a[title="Remove"]:before {
         width: calc(100% / 3 - 10px);}
 }
 
+@media (max-width: 599px) {
+    #quickreplypreview .colhead_dark #barpreview,
+    .forum_post .colhead_dark div[style="float: right;"],
+    #newthreadpreview .forum_post .colhead_dark #barpreview {
+        display: none;}
+    body #wrapper #content .sub {
+        left: calc(100% - 34px);}
+    #wrapper #content #quickreplypreview .colhead_dark span[style="float:left;"],
+    #wrapper #content .forum_post .colhead_dark div[style="float: left;"],
+    #wrapper #content .forum_post .colhead_dark div[style="float:left;"],
+    #wrapper #content #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] {
+        width: calc(100% - 33px);}
+    #wrapper #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"],
+    #wrapper #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"],
+    #wrapper .forum_post .colhead_dark a.post_id {
+        line-height: 19px;
+        font-size: 12px;}
+}
+
 @media (max-width: 569px) {
     .profile .box_community #community_stats ul {
         width: calc(100% - 18px);}
 }
 @media (max-width: 499px) {
+    .permission_container {
+        width: 100%;}
     #wrapper #equipment:after,
     #wrapper #crafting_panel:after,
     #wrapper #trading_panel:after,

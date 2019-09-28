@@ -8219,9 +8219,82 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	position: absolute;
 	top: 2px;
 	left: 2px;} */
+
+/* ONLY needed to make item levels visible again */
+#crafting_panel         .item,
+#backpack               .item,
+#equipment              .item,
+#wrapper #trading_panel .item {
+    display: grid;}
+#backpack               .item img,
+#crafting_panel         .item img,
+#equipment              .item img,
+#wrapper #trading_panel .item img {
+    margin: 0 auto;}
+#backpack               .item h3,
+#crafting_panel         .item h3,
+#equipment              .item h3,
+#wrapper #trading_panel .item h3 {
+    word-break: break-word;
+    z-index: 9;
+    margin-left: 4px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 85px;}
+.item img.equipment_level ~h3:before {
+    position: absolute;
+    left: -2px;
+    top: -4px;
+    line-height: 18px;
+    font-size: 16px;
+    font-weight: 700;
+    background-color: var(--c-tgroup);
+    width: 20px;
+    height: 18px;
+    border: var(--p-border);
+    border-color: var(--c-table-brdr);}
+.item img.equipment_level[src$="level0.png"] ~h3:before {
+    content: '0';
+    color: var(--c-text-s);}
+.item img.equipment_level[src$="level1.png"] ~h3:before {
+    content: '1';
+    color: var(--c-r01);}
+.item img.equipment_level[src$="level2.png"] ~h3:before {
+    content: '2';
+    color: var(--c-r02);}
+.item img.equipment_level[src$="level3.png"] ~h3:before {
+    content: '3';
+    color: var(--c-r03);}
+.item img.equipment_level[src$="level4.png"] ~h3:before {
+    content: '4';
+    color: var(--c-r04);}
+.item img.equipment_level[src$="level5.png"] ~h3:before {
+    content: '5';
+    color: var(--c-r05);}
+.item img.equipment_level[src$="level6.png"] ~h3:before {
+    content: '6';
+    color: var(--c-r06);}
+.item img.equipment_level[src$="level7.png"] ~h3:before {
+    content: '7';
+    color: var(--c-r07);}
+.item img.equipment_level[src$="level8.png"] ~h3:before {
+    content: '8';
+    color: var(--c-r08);}
+.item img.equipment_level[src$="level9.png"] ~h3:before {
+    content: '9';
+    color: var(--c-r09);}
+.item img.equipment_level[src$="level10.png"] ~h3:before {
+    content: '10';
+    color: var(--c-r10);}
+/* /ONLY needed to make item levels visible again */
+
+
+
 #wrapper #content .item img.equipment_level {
     display: none;}
 
+/*
 #wrapper #content li.item[title^="Level:"]:before {
     position: absolute;
     left: 2px;
@@ -8267,6 +8340,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #wrapper #content li.item[title="Level: 10"]:before {
     content: '10';
     color: var(--c-r10);}
+*/
 
 
 
