@@ -1965,6 +1965,7 @@ a:active:after, */
 #index #recommended .head:active:before,
 .autocomplete_list li:active,
 .torrent_table td.center:active:first-child,
+th[aria-disabled="false"]:active,
 .colhead_dark a:active,
 .colhead a:active,
 #index #clans .large_progress_bar:active,
