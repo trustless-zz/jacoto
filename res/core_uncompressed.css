@@ -158,7 +158,8 @@ img[title="Seeders"],
 td img[alt="Ratio"],
 #top10 img[alt="Up Votes"],
 #top10 img[alt="Down Votes"],
-tr.participated >td:nth-child(2):before {
+tr.participated >td:nth-child(2):before,
+.headerSort span:before {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
@@ -1791,6 +1792,8 @@ a:after, */
 
 .collections_art_display .remove_bookmark_div,
 
+th[aria-disabled="false"],
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -3053,9 +3056,11 @@ table.adventure_table .colhead td {
 #top10 .group_torrent td:first-child {
     border-right: var(--p-border);
     border-right-color: var(--c-edition);}
+th[aria-disabled="false"]:hover,
 #collections .group.discog td.collicon:hover:nth-child(1),
 .torrent_table td.center:hover:first-child {
     background-color: var(--c-colhead-click);}
+th[aria-disabled="false"]:active,
 #collections .group.discog td.collicon:active:nth-child(1),
 .torrent_table td.center:active:first-child {
     background-color: var(--c-colhead-act);}
@@ -5414,6 +5419,7 @@ tr.likes td[id^="likers_"]:hover {
     background-position: right center;
     background-size: 0 0;
     opacity: .65;}
+.headerSort[data-sorter="false"] span:before,
 .linkbox .brackets:before,
 .linkbox .brackets:after,
 #user script +.thin h2 +#userform:before,
@@ -5487,6 +5493,7 @@ h2 marquee {
     overflow-x: hidden;}
 #forums .forum_signature td > div:hover {
     opacity: 1;}
+form#drag_drop_collage_form .drag_drop_save:last-child,
 #collections table#manage_collage_table tbody tr:last-child,
 #userhistory .forum_post.vertical_margin>tbody>tr:last-child,
 #wrapper .clan_stat_totals table.border tr:last-child,
@@ -5497,10 +5504,21 @@ h2 marquee {
     border-top-color: var(--c-table-brdr);
     background-color: var(--c-tgroup);}
 
+form#drag_drop_collage_form .drag_drop_save:first-child {
+	border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);
+    background-color: var(--c-tgroup);}
+
 #torrents #wrapper .torrent_details .pad.hidden div[id^=history] tr:not(.colhead):last-child {
 	border-top: var(--p-border);
     border-top-color: var(--c-table-brdr);
     background-color: var(--c-tgroup)!important;}
+
+#inbox #searchbox +form#messageform >table {
+    border-top: var(--p-border);
+    border-bottom: var(--p-border);
+    border-top-color: var(--c-table-brdr);
+    border-bottom-color: var(--c-table-brdr);}
 
 #reports .thin>table >tbody >.colhead +tr:last-child >td:first-child {
     text-align: center;
@@ -6906,6 +6924,7 @@ input[class="date_picker"] {
     background-color: var(--c-box);}
 .xdsoft_scrollbar > .xdsoft_scroller {
     background-color: var(--c-sticky-id-brdr) !important;}
+#inbox #searchbox +form#messageform,
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:nth-child(even) {
     background-color: var(--c-tgroup);}
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select {
@@ -7077,12 +7096,35 @@ ul.poll,
 table.adventure_table .colhead td:not(:first-child) {
     font-size: 15px;}
 
-table#manage_collage_table .headerSort span {/* remove later */
-    background-position: center right;
+.headerSort span {
+    background: none;
+    position: relative;
     height: var(--p-head);
     display: block;
     width: -moz-fit-content;
-    width: fit-content;}
+    width: fit-content;
+    padding: 0px 20px 0 0;}
+.headerSort span:before {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    content: '';
+    width: 10px;
+    height: 14px;
+    -webkit-mask-size: 10px 14px;
+    mask-size: 10px 14px;
+    -webkit-mask-image: url('icons/sort.svg');
+    mask-image: url('icons/sort.svg');}
+.headerSortUp span:before,
+.headerSortDown span:before {
+    top: 6px;
+    height: 6px;}
+.headerSortDown span:before {
+    -webkit-mask-position: top center;
+    mask-position: top center;}
+.headerSortUp span:before {
+    -webkit-mask-position: bottom center;
+    mask-position: bottom center;}
 
 .last_read {
     margin: 2px 0 0 5px;
@@ -7184,6 +7226,7 @@ table#manage_collage_table .headerSort span {/* remove later */
     font-size: 14px;
     line-height: 26px;}
 
+th#check_all span,
 #user #sessions_table .colhead td:last-child,
 #user .thin >h2:first-child +.box.pad:last-child .colhead td:last-child {
     padding: 0 5px;}
