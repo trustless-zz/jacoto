@@ -3123,7 +3123,7 @@ a[title="Remove"]:before {
         margin: 0 5px 10px 5px;
         width: calc(100% / 3 - 10px);}
     #shop #wrapper li.featured {
-        width: calc(100% - 10px);}
+        width: calc(100% - 10px) !important;}
     
     .inventory #wrapper #content li.item_li {
         margin: 0 5px 10px 5px;}
