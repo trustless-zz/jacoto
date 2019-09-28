@@ -4587,7 +4587,10 @@ h3 {
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(even) td:nth-child(-n+2),
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(odd) td:nth-last-child(-n+2) {
     background-color: var(--c-trowb);}
-/* .unreadpm:hover, = */#inbox .thin>.box.pad #messageform tr:not(.colhead):hover,
+
+/* hovers are located in desktop.css now */
+/*
+#inbox .thin>.box.pad #messageform tr:not(.colhead):hover,
 .rowa:hover,
 .row_a:hover,
 .rowb:hover,
@@ -4614,6 +4617,7 @@ h3 {
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):hover,
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child):hover td {
     background-color: var(--c-row-hvr) !important;}
+*/
 
 #reports .thin>table >tbody >.colhead +tr:last-child,
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td:empty {
