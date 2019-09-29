@@ -1250,6 +1250,8 @@ img[title="Gold"],
 
 h2#username span#tip_user img,
 
+img[alt="RSS feed"],
+
 #wrapper img[src="https://gazellegames.net/static/common/symbols/disabled.png"], /* disabled (Just fine!) */
 img[alt="Banned"],
 img[alt="Warned"] {
@@ -8683,12 +8685,19 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	font-weight: bold;
 	margin: 0 auto;}
 
+img[alt="RSS feed"],
 .more_info .info_cost #cost img,
 #cost_info img.gold_icon {
     width: 18px;
     height: 18px;
     padding-left: 18px;
     opacity: 1;}
+
+h2 a[href^="feeds.php?"] {
+    display: inline-block;
+    padding: 2px;
+    margin-top: -4px;
+    vertical-align: middle;}
 
 #shop li.item_li.nostock #cost_info,
 #shop li.item_li.no_access #cost_info {
@@ -8743,9 +8752,9 @@ table#downloaded_table td.center.cats_col +td >span:before {
     position: absolute;
     top: 7px;
     left: 5px;
-    background-size: cover;
+/*    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;}
+    background-position: center;*/}
 #shop li.item_li.owned:after {
     content: '✔';
     font-size: 13px;
