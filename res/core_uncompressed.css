@@ -5494,7 +5494,7 @@ h2 marquee {
     overflow-x: hidden;}
 #forums .forum_signature td > div:hover {
     opacity: 1;}
-form#drag_drop_collage_form .drag_drop_save:last-child,
+form#drag_drop_collage_form .drag_drop_save ~.drag_drop_save,
 #collections table#manage_collage_table tbody tr:last-child,
 #userhistory .forum_post.vertical_margin>tbody>tr:last-child,
 #wrapper .clan_stat_totals table.border tr:last-child,
