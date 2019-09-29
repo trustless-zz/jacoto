@@ -3395,8 +3395,8 @@ a[title="Remove"]:before {
     .collections_art_display tr:first-child td:nth-child(n+3) {
         margin-top: 10px;}
     
-    #bookmarks #coverart .collage_images li,
-    #collections #coverart.box li {
+    /*#bookmarks #coverart */.collage_images li/*,
+    #collections #coverart.box li*/ {
         width: calc(100% / 3 - 10px);}
 }
 
