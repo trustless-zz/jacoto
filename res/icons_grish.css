@@ -333,3 +333,5 @@ img[alt="Warned"] {
 #forums .forum_post .avatar >div:first-child:after {
     background-image: url('icons/grish/show-hor.svg');}
 
+img[alt="RSS feed"] {
+    background-image: url('icons/grish/rss.svg');}
