@@ -7000,7 +7000,7 @@ input[class="date_picker"] {
     position: relative;
     left: 1px;
     margin-top: -36px;
-    bottom: -49px;}
+    bottom: -37px;}
 #user .thin >h2:first-child +form[method="post"]:before {
     line-height: var(--p-head);
     content: 'Create a new notification filter';
@@ -8693,6 +8693,7 @@ img[alt="RSS feed"],
     padding-left: 18px;
     opacity: 1;}
 
+h3 a[href^="feeds.php?"],
 h2 a[href^="feeds.php?"] {
     display: inline-block;
     padding: 2px;
