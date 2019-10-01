@@ -581,14 +581,12 @@ GGn Buffer Calculator
 https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=5823#post5823
 http://www.mediafire.com/?97dqca3w9ekaweo
 ***/
-@media (min-width: /*80*/1px) {
-    #userinfo_stats li.my_buffer {
-        order: -1;
-        background-color: var(--c-input-obj) !important;}
-    #userinfo_stats li.my_buffer >span {
-        color: var(--c-txt) !important;
-        margin: 0 !important;}
-}
+#userinfo_stats li.my_buffer {
+    order: -1;
+    background-color: var(--c-input-obj) !important;}
+#userinfo_stats li.my_buffer >span {
+    color: var(--c-txt) !important;
+    margin: 0 !important;}
 /***
 /GGn Buffer Calculator
 ***/
@@ -715,7 +713,28 @@ https://greasyfork.org/en/scripts/372437-ggn-ez-collection-management
     right: -1px;
     bottom: -1px;
     position: absolute;
-    border-color: var(--c-main-brdr);
+    border-color: var(--c-main-brdr);}
 /***
 /GGn EZ Collection Management
 ***/
+
+
+/**
+GazelleGames image preview
+https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=1412773#post1412773
+https://greasyfork.org/en/scripts/390270-gazellegames-image-preview
+**/
+body >#preview-popup {
+    background: none;
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    padding: 0;}
+body >#preview-popup >img {
+    background-size: 16px 16px;
+    background-repeat: repeat;
+    background-position: top left;}
+/**
+/GazelleGames image preview
+**/

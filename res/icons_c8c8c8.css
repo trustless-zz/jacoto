@@ -9,6 +9,7 @@
 ::-webkit-resizer {
     background-image: url('icons/c8c8c8/scrollbar/resizer.svg');}
 
+body >#preview-popup >img,
 .fancybox-image,
 .lightbox img {
     background-image: url('icons/c8c8c8/transparent.svg');}

@@ -1025,6 +1025,14 @@ pre {
 pre {
     overflow: auto;
     white-space: pre-wrap;}
+code {
+    padding: 1px 5px;
+    background-color: var(--c-quote);}
+
+/* quote indication, not sure if it's a good idea
+a[onclick^="QuoteJump(event"] +blockquote {
+    border-left-width: 2px;
+    border-left-color: var(--c-unread-s);} */
 
 .lightbox img[src^="https://gazellegames.net/nfoimg"],
 .torrent_table blockquote#description img {
@@ -3136,6 +3144,7 @@ img,
 .spoilerbox,
 blockquote,
 pre,
+code,
 #torrents .torrent_details tr table,
 input,
 select,
