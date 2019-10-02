@@ -1083,6 +1083,7 @@ body {
 }
 
 /* twitch iframe */
+/*
 @media (max-width: 1177px) {
     #wrapper .forum_post div[id^="twitch-embed-"] >iframe {
         width: 100%;}
@@ -1090,4 +1091,4 @@ body {
         width: 100%;
         float: unset !important;
         margin: 0 5px !important;}
-}
+}*/

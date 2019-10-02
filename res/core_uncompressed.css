@@ -1515,6 +1515,8 @@ a {
     border: 0;
     background-color: transparent;}
 a:hover,
+.box.vertical_space#preview a:hover img, /*inbox*/
+.box.vertical_space .body a:hover img, /*inbox*/
 #wrapper .redacted_bbcode_show a:hover,
 #wiki .wiki_article a:hover img,
 .forum_post td.body a:hover img,
@@ -3153,12 +3155,12 @@ textarea,
 #requests .main_column >table:first-child,
 #upload #content >div[style="margin:0px auto;width:700px"],
 #forums .linkbox.linkbox_bottom +br +h3,
-.box.box_info iframe,
+/*.box.box_info iframe,
 .forum_post td.body iframe,
 #blog .pad iframe,
-.box.news_post >.pad iframe,
+.box.news_post >.pad */iframe,
 
-div[id^="twitch-embed-"],
+/*div[id^="twitch-embed-"],*/
 
 #reports .thin >h3,
 #reportsv2 #report_table >h3,
@@ -5721,31 +5723,38 @@ span.size10 {
     margin: 0 5px;
     padding: 5px;}
 
+.box.vertical_space iframe, /*inbox*/
 #blog .pad iframe,
 .box.box_info iframe,
-.box.news_post>.pad iframe,
-.forum_post td.body iframe {
-    width: 650px;
-    height: 370px;}
+.box.news_post iframe,
+.forum_post iframe {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+/*    width: 650px;
+    height: 370px;*/}
+.box.vertical_space iframe, /*inbox*/
 #blog .pad iframe,
 .box.box_info iframe,
-.box.news_post>.pad iframe,
-.forum_post td.body iframe,
-div[id^="twitch-embed-"] {
+.box.news_post iframe,
+.forum_post iframe/*,
+div[id^="twitch-embed-"]*/ {
     max-width: calc(100% - 10px)!important;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
     margin: 0 5px;
     padding: 5px;}
+/*.box.vertical_space video,
 #blog .pad video,
-.box.news_post>.pad video,
-.forum_post td.body video {
+.box.news_post >.pad video,
+.forum_post td.body*/ video {
     max-width: 80%;
     height: auto;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
     margin: 0 5px;
     padding: 5px;}
+.box.vertical_space#preview img, /*inbox*/
+.box.vertical_space .body img, /*inbox*/
 #blog .pad img,
 #profilediv img,
 #wiki .wiki_article a img,
@@ -5759,6 +5768,8 @@ blockquote#description img {
     filter: var(--p-post-img);
     margin: -4px 0;
     padding: 7px;}
+.box.vertical_space#preview a:hover img, /*inbox*/
+.box.vertical_space .body a:hover img, /*inbox*/
 #wiki .wiki_article a:hover img,
 .forum_post td.body a:hover img,
 .forum_signature a:hover img,
@@ -5768,18 +5779,18 @@ blockquote#description img {
     -webkit-filter: none;
     filter: none;}
 
-#wrapper div[id^="twitch-embed-"] >iframe {
+/*#wrapper div[id^="twitch-embed-"] >iframe {
     max-width: unset !important;
     -webkit-filter: unset;
     filter: unset;
     margin: 0;
     padding: 0;
     width: 854px;
-    height: 480px;}
+    height: 480px;}*/
 
 .twitter_post h4 {
     display: none;}
-div[id^="twitch-embed-"],
+/*div[id^="twitch-embed-"],*/
 .twitter_post {
     margin: 0 5px;
     width: -moz-fit-content;
@@ -5789,13 +5800,13 @@ div[id^="twitch-embed-"],
 .twitter-tweet {
     margin: 0 !important;}
 /* twitter align test */
-div[style="text-align:center;"] >div[id^="twitch-embed-"],
+/*div[style="text-align:center;"] >div[id^="twitch-embed-"],*/
 div[style="text-align:center;"] >.twitter_post {
     margin: 0 auto !important;}
-div[style="text-align:left;"] >div[id^="twitch-embed-"],
+/*div[style="text-align:left;"] >div[id^="twitch-embed-"],*/
 div[style="text-align:left;"] >.twitter_post {
     margin: 0 auto 0 5px !important;}
-div[style="text-align:right;"] >div[id^="twitch-embed-"],
+/*div[style="text-align:right;"] >div[id^="twitch-embed-"],*/
 div[style="text-align:right;"] >.twitter_post {
     margin: 0 5px 0 auto !important;}
 
@@ -7496,22 +7507,24 @@ h2 .user_title span.size10 {
     vertical-align: middle;} /*bottom*/
 /* ---gameroom--- ../images with size=4 code will float left, size=5 will float right */
 span.size4 iframe,
-span.size4 div[id^="twitch-embed-"],
+/*span.size4 div[id^="twitch-embed-"],*/
 span.size4 .twitter_post,
 span.size4 img {
     float: left;
     margin-right: 10px !important;}
 span.size5 iframe,
-span.size5 div[id^="twitch-embed-"],
+/*span.size5 div[id^="twitch-embed-"],*/
 span.size5 .twitter_post,
 span.size5 img {
     float: right;
     margin-left: 10px !important;}
 
+/*
 #wrapper span.size4 div[id^="twitch-embed-"] >iframe,
 #wrapper span.size5 div[id^="twitch-embed-"] >iframe {
     float: unset;
     margin: 0;}
+*/
 
 /*****************************************************************************************************/
 
