@@ -5320,9 +5320,10 @@ div.breadcrumbs,
 #forums .forum_mythreads tr:not(.colhead) td:first-child,
 #forums .forum_editsubs tr:not(.colhead) td:first-child,
 #forums .forum_subscriptions tr:not(.colhead) td:first-child {
-    background-size: 19px 18px;
-    width: 19px;
-    height: 18px;}
+    /*background-size: 19px 18px;*/
+    width: 20px;
+    height: 100%; /* trying to fix a weird height bug(?) */
+    max-height: calc(15px * var(--p-lh));} /* =line-height */
 #forums .forum_index .colhead td:nth-child(1),
 #forums .forum_mythreads .colhead td:nth-child(1),
 #forums .forum_editsubs .colhead td:nth-child(1),
@@ -6350,7 +6351,7 @@ input[type="radio"]:active {
     font-weight: normal;
     position: relative;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 1em;
     padding: 8px 5px;}
 
 #tools #content >.header h2, /* OS and Browser Usage */
