@@ -1440,6 +1440,7 @@ div#fight_skill_points_assign >table,
 #bookmarks .header +table.layout,
 #bookmarks form#drag_drop_collage_form,
 #bookmarks .thin >.center.box.pad:nth-child(3),
+#userhistory #content >table,
 #collections .thin >h2:first-child +form:last-child /* edit description page */ {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
@@ -5435,6 +5436,8 @@ tr.likes td[id^="likers_"]:hover {
     background-size: 0 0;
     opacity: .65;}
 .headerSort[data-sorter="false"] span:before,
+#user .box.box_personal .brackets:before,
+#user .box.box_personal .brackets:after,
 .linkbox .brackets:before,
 .linkbox .brackets:after,
 #user script +.thin h2 +#userform:before,
@@ -5724,6 +5727,7 @@ span.size10 {
     margin: 0 5px;
     padding: 5px;}
 
+#wiki iframe,
 .box.vertical_space iframe, /*inbox*/
 #blog .pad iframe,
 .box.box_info iframe,
@@ -5733,6 +5737,7 @@ span.size10 {
     box-sizing: content-box;
 /*    width: 650px;
     height: 370px;*/}
+#wiki iframe,
 .box.vertical_space iframe, /*inbox*/
 #blog .pad iframe,
 .box.box_info iframe,
