@@ -8475,8 +8475,25 @@ table#downloaded_table td.center.cats_col +td >span:before {
 
 
 
-
-
+/* user settings save button */
+#user form#userform td.right[colspan="2"] {
+    position: sticky;
+    bottom: 0;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: 
+        linear-gradient(
+            0deg,
+            var(--c-tgroup) 0%,
+            transparent 100%),
+        linear-gradient(
+            0deg,
+            var(--c-tgroup) 0%,
+            transparent 100%);
+    text-align: center;}
 
 
 
@@ -8491,9 +8508,9 @@ table#downloaded_table td.center.cats_col +td >span:before {
     text-align: left;}
 
 #shop_search #search_query {
-    width: calc(100% - 405px);}
+    width: calc(100% - 419px);}
 .inventory #shop_search #search_query {
-    width: calc(100% - 425px);}
+    width: calc(100% - 438px);}
 
 #shop_search td.label strong {
     font-weight: normal;}
