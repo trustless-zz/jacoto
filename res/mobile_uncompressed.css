@@ -1922,6 +1922,7 @@ a[title="Remove"]:before {
 		/* padding: 10px;
         margin-left: 100px;
         display: block;*/}
+    #clans td,
     #user .thin >h2:first-child +.center ~table.border td,
     #user .box.box_gold #box_gold_scrollbar td,
     #torrents .torrent_edit td,
@@ -2019,8 +2020,16 @@ a[title="Remove"]:before {
 	#reviewdate {
         margin-top: 2px;}
     
+    #clans td.label,
     #user #wrapper .box.box_gold #box_gold_scrollbar tr:first-child td.label {
         background-color: unset;}
+    
+    #clans #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(odd) td:nth-child(-n+2),
+    #clans .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(even) td:nth-last-child(-n+2) {
+        background-color: var(--c-box);}
+    #clans #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(even) td:nth-child(-n+2),
+    #clans .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(odd) td:nth-last-child(-n+2) {
+        background-color: var(--c-trowb);}
 
 /*****************************************
 ****************UPLOADS*******************
@@ -2723,6 +2732,7 @@ a[title="Remove"]:before {
     #top10 .thin.top10_uploaders,
     #top10 .thin.top10_users {
         justify-content: space-between;}
+    #clans td,
     #top10 .thin.top10_tags #ut,
     #top10 .thin.top10_tags #ur,
     #top10 .thin.top10_tags #v {

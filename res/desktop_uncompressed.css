@@ -1092,3 +1092,83 @@ body {
         float: unset !important;
         margin: 0 5px !important;}
 }*/
+
+@media (max-width: 900px) {
+    .clan_stat_totals h3 {
+        margin: 15px 10px 8px 10px;
+        line-height: 32px;}
+    .clan_stat_totals .center img {
+        float: left;
+        margin: 15px 10px 8px 10px;}
+}
+@media (min-width: 901px) {
+/** going with position:absolute because display:flex needs containers **/
+.clan_stat_totals:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 594px;}
+
+.clan_stat_totals h3 {
+    margin-left: 52px;
+    width: calc(50% - 69.5px);}
+.clan_stat_totals table.border {
+    width: calc(50% - 17.5px);}
+.clan_stat_totals .center {
+    text-align: left;
+    width: calc(50% - 27.5px);
+    margin-left: 10px;}
+
+.clan_stat_totals h2:first-child +.large_progress_bar +.center {
+    position: absolute;
+    top: 81px;
+    left: 10px;}
+.clan_stat_totals h3:nth-of-type(1) {
+    position: absolute;
+    top: 86px;
+    left: 10px;}
+.clan_stat_totals table.border:nth-of-type(1) {
+    position: absolute;
+    top: 118px;
+    left: 10px;}
+
+.clan_stat_totals table.border:nth-of-type(1) +.center {
+    position: absolute;
+    top: 81px;
+    right: 10px;}
+.clan_stat_totals h3:nth-of-type(2) {
+    position: absolute;
+    top: 86px;
+    right: 10px;}
+.clan_stat_totals table.border:nth-of-type(2) {
+    position: absolute;
+    top: 118px;
+    right: 10px;}
+
+.clan_stat_totals table.border:nth-of-type(2) +.center {
+    position: absolute;
+    top: 378px;
+    left: 10px;}
+.clan_stat_totals h3:nth-of-type(3) {
+    position: absolute;
+    top: 383px;
+    left: 10px;}
+.clan_stat_totals table.border:nth-of-type(3) {
+    position: absolute;
+    top: 415px;
+    left: 10px;}
+
+.clan_stat_totals table.border:nth-of-type(3) +.center {
+    position: absolute;
+    top: 378px;
+    right: 10px;}
+.clan_stat_totals h3:nth-of-type(4) {
+    position: absolute;
+    top: 383px;
+    right: 10px;}
+.clan_stat_totals table.border:nth-of-type(4) {
+    position: absolute;
+    top: 415px;
+    right: 10px;}
+}
+/** /going with position:absolute because display:flex needs containers **/

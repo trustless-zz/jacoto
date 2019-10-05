@@ -3379,6 +3379,7 @@ td img[alt="Ratio"],
 .rating_container:hover {
     opacity: 1;
     background-color: var(--c-box);}
+pre,
 #reportsv2 h2,
 form[name="filter"] {
     text-align: left;}
@@ -7391,8 +7392,14 @@ td >img[title="Gold"] {
     outline-color: var(--c-unread-br);}
 
 
-/** going with position:absolute because display:flex needs containers **/
-.clan_stat_totals:after {
+.clan_stat_totals .center img {
+    width: 32px;
+    height: 32px;}
+.clan_stat_totals h3 {
+    font-weight: 600;}
+
+/** going with position:absolute because display:flex needs containers (desktop.css now) **/
+/*.clan_stat_totals:after {
     content: '';
     display: block;
     width: 100%;
@@ -7462,7 +7469,7 @@ td >img[title="Gold"] {
 .clan_stat_totals table.border:nth-of-type(4) {
     position: absolute;
     top: 415px;
-    right: 10px;}
+    right: 10px;}*/
 /** /going with position:absolute because display:flex needs containers **/
 
 #artist .sidebar >.box:first-child >div:last-child {
