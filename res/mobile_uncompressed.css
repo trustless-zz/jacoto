@@ -1081,7 +1081,8 @@
         top: calc(50% - 17px);
         left: -36px;
         right: unset;}
-    .torrent_notifications .torrent_table #groupplatform {
+    .torrent_notifications #groupplatform/*,
+    .torrent_notifications .torrent_table #groupplatform*/ {
         left: 2px;}
     
     #userinfo_stats >li a {
