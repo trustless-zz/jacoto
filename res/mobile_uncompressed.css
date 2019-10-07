@@ -398,7 +398,7 @@
         padding: 8px 9px;
         text-align: center;}
     #userinfo_minor li a {
-        width: 110px;}
+        width: 118px;}
     #menu ul li a {
         width: 84px;}
     ul#userinfo_stats li#online_irc:nth-last-child(2) {
@@ -440,8 +440,10 @@
         z-index: -1;}
     .sub span:before {
         width: 100%;}
+/*
     #header #userinfo_minor li:before {
         width: 128px;}
+*/
     ul#userinfo_stats #stats_gold a,
     ul#userinfo_stats li a:before {
         margin: 8px 0;}
