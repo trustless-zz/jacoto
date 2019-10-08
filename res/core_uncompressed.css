@@ -8517,9 +8517,9 @@ table#downloaded_table td.center.cats_col +td >span:before {
     text-align: left;}
 
 #shop_search #search_query {
-    width: calc(100% - 419px);}
+    width: calc(100% - 405px);}
 .inventory #shop_search #search_query {
-    width: calc(100% - 438px);}
+    width: calc(100% - 425px);}
 
 #shop_search td.label strong {
     font-weight: normal;}
@@ -11489,5 +11489,8 @@ textarea {/* prevent resizer from disappearing */
     
     td { /* table border fix, .edition_info - example */
         background-clip: padding-box;}
+    
+    select { /* compared to chrome, select is wider on ff */
+        padding: 0 17px 0 0;}
 }
 /** /firefox only **/
