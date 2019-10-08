@@ -11360,10 +11360,10 @@ div#fight_skill_points_assign >table {
     background-color: var(--c-main-brdr) !important;}
 
 
-::-webkit-input-placeholder {   color: var(--c-text-s) !important;}
-::-moz-placeholder {            color: var(--c-text-s) !important;}
-:-ms-input-placeholder {        color: var(--c-text-s) !important;}
-:-moz-placeholder {             color: var(--c-text-s) !important;}
+::-webkit-input-placeholder     {color: var(--c-text-s) !important;}
+::-moz-placeholder              {color: var(--c-text-s) !important;}
+:-ms-input-placeholder          {color: var(--c-text-s) !important;}
+:-moz-placeholder               {color: var(--c-text-s) !important;}
 
 ::-moz-selection {
     text-shadow: none;
@@ -11482,9 +11482,9 @@ textarea {/* prevent resizer from disappearing */
     
     :root {
         scrollbar-color: var(--c-b3) var(--c-input-obj);
-        scrollbar-height: 15px; /* a man can dream */
+        scrollbar-height: 15px;
         scrollbar-width: 15px;}
-    html * { /* dreaming won't get you anywhere */
+    html * {
         scrollbar-width: thin;}
     
     td { /* table border fix, .edition_info - example */
