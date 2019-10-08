@@ -3324,9 +3324,10 @@ td img[alt="Ratio"],
 .box.userreviews_div .userreviews >table,
 #wrapper .torrent_table .group.sticky .empty_group {
     background-color: unset;}
+/*          *moved to desktop.css*
 .torrent_table .group:hover .empty_group,
 .torrent_table .group:hover {
-    background-color: var(--c-tor-row-hvr) !important;}
+    background-color: var(--c-tor-row-hvr) !important;} */
 .sticky td {
     border-top: var(--p-border) !important;
     border-top-color: var(--c-b1) !important;
@@ -7280,6 +7281,7 @@ table#likesrow td {
     display: block;
     width: 100%;
     height: auto;
+    text-align: center;
     align-self: center;}
 table#uploadsrow a,
 table#snatchesrow a,

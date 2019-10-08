@@ -44,6 +44,9 @@ body {
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):hover,
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child):hover td {
     background-color: var(--c-row-hvr) !important;}
+.torrent_table .group:hover .empty_group,
+.torrent_table .group:hover {
+    background-color: var(--c-tor-row-hvr) !important;}
     
 /* #groupplatform {
     width: 34px;
