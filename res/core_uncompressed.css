@@ -1289,6 +1289,10 @@ a[onclick="BBCode.spoiler(this);"],
 
 #requests_list.request_table.border .colhead_dark td:first-child >a, /* Request Name / Year */
 
+table#uploadsrow a,
+table#snatchesrow a,
+table#likesrow a,
+
 .colhead_dark .username_badges a,
 h2 .username_badges a {
     display: inline-block;}
@@ -7283,11 +7287,10 @@ table#likesrow td {
     height: auto;
     text-align: center;
     align-self: center;}
-table#uploadsrow a,
+/*table#uploadsrow a,
 table#snatchesrow a,
 table#likesrow a {
-    display: inline;
-    /* display: block; */}
+    display: inline;}*/
 
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2):before {
     content: 'Info';
