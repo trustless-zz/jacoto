@@ -9113,6 +9113,11 @@ li.item_li #clickable .item_description img {
     font-size: 15px;
     line-height: var(--p-lh);}
 
+#running_freeleech .time {
+    min-width: -moz-max-content;
+    min-width: max-content;
+    display: block;}
+
 
 
 

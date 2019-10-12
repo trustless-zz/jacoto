@@ -1096,6 +1096,15 @@ body {
         margin: 0 5px !important;}
 }*/
 
+@media (min-width: 801px) and (max-width: 1200px) {
+table#existing_freeleech_pots td {
+    white-space: normal;}
+}
+@media (min-width: 801px) and (max-width: 920px) {
+table#existing_freeleech_pots td {
+    word-break: break-word;}
+}
+
 @media (max-width: 900px) {
     .clan_stat_totals h3 {
         margin: 15px 10px 8px 10px;

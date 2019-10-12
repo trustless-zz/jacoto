@@ -3320,6 +3320,9 @@ a[title="Remove"]:before {
         font-size: 12px;}
 }
 @media (max-width: 599px) {
+    #wrapper #running_freeleech .time {
+        min-width: 85px;}
+    
     #bookmarks table#torrent_table td,
     #artist table#torrent_table td {
         white-space: normal;}
