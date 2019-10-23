@@ -2637,6 +2637,7 @@ table.bbcode_table td,
 /* / desktop/mobile duplicate merge */
 
 .large_progress_bar .main_bar {
+    z-index: 2;
     animation: expandWidth 2s;
     transform-origin: left;}
 
@@ -8762,7 +8763,7 @@ h2 a[href^="feeds.php?"] {
 #shop li.item_li.no_access #cost_info {
     color: var(--c-yellow);}
 
-#shop #cost_info strong[title^="If you buy this you will have -"] {
+#shop #cost_info strong[title*="If you buy this you will have -"] {
     color: var(--c-red);}
 
 .ui-widget #quickreplypreview .colhead_dark a,
@@ -9317,10 +9318,26 @@ body#user.inventory {}
     border-color: var(--c-main-brdr);
     color: var(--c-txt);
     background-color: var(--c-box);
-    border-radius: 0;}
+    border-radius: 0;
+    padding: 10px;
+    left: calc(50% - 161px);}
 .alertable button {
     border-radius: 0;
     margin-left: 5px;}
+/*
+.alertable:before {
+    content: 'Alert';
+    font-weight: 600;
+    margin: -10px -10px 10px -10px;
+    display: block;
+    background: var(--p-head-grdnt);
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    padding: 9px 10px;}
+*/
+.alertable-message {
+    margin: 5px 5px 20px 5px;
+    font-size: 15px;}
 
 
 
@@ -9906,25 +9923,6 @@ td .log_green {
 #userhistory #content .search .submit {
 	text-align: right;}
 
-/************************************************************************
-Makes the cover image on hover larger + drop shadow
-for NeutronNoir's script.  See
-https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=334463#post334463
-and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
-*************************************************************************/
-
-#cover_container>img {
-    -webkit-box-shadow: var(--p-header-shdw) !important;
-    box-shadow: var(--p-header-shdw) !important;
-    filter: none !important;
-    border: var(--p-img-border) !important;
-    border-color: var(--c-main-brdr) !important;
-	height: auto !important;
-	width: 400px !important;
-	max-width: 400px !important;
-	max-height: 600px !important;}
-
-
 /*****************************************
 *************ACHIEVEMENTS*****************
 *****************************************/
@@ -10164,7 +10162,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
     font-weight: bold;
     margin-left: 48.5%;
     text-align: center;
-    z-index: 2;}
+    z-index: 3;}
 #seedtime_tokens .large_progress_bar .last_drop,
 #seedtime_tokens .large_progress_bar .next_drop,
 #share_score .large_progress_bar .five_marker,
@@ -10199,6 +10197,7 @@ and https://greasyfork.org/en/scripts/23482-ggn-cover-on-hover
 
 
 #share_score .large_progress_bar .main_section {
+    z-index: 3;
 	border-right: 2px solid var(--c-on);}
 
 #share_score .large_progress_bar .bonus_section {

@@ -134,8 +134,12 @@ a[href^="javascript:IndexVote("] strong,
 a[href^="javascript:Vote("] strong,
 #requests table.border td.nobr:nth-child(2) strong,
 #torrents #requests.request_table #requests_list .requestrows a.brackets,
-#upload td#image_block a,
-#newthreadform #newthreadtext #answer_block a {
+#image_block a,
+#newthreadform #newthreadtext #answer_block a,
+.box.box_coltags .pad li a:nth-child(n+2),
+.box.box_coltags .head span[title="Add Tags"] a {
     text-decoration: none;}
 blockquote, pre {
     filter: drop-shadow(2px 2px 3px var(--c-main-shdw));}
+blockquote code {
+    outline: 1px solid var(--c-main-shdw);}

@@ -14,7 +14,16 @@ color: #817883; 0.4%
 color: #c5494c; 0.3%
 /crysis */
 
-
+body.series_196,
+.sidebar >div:not(.box_main_info):not(.box_personal_history),
+.box_personal_history >div,
+.box_main_info >div,
+.main_column_sortable >div {
+    background: linear-gradient(0deg, rgba(245, 245, 245, .75), rgba(245, 245, 245, .75)), url(https://gazellegames.net/static/styles/game_room/images/gameseries/crysisbkg.jpg);
+    background-size: cover;
+    background-attachment: fixed;}
+table {
+    background-color: unset;}
 
 /* Profile and game themes for Game Room
    by chris10000 */
@@ -27,9 +36,9 @@ color: #c5494c; 0.3%
 *****************************************/
 	@font-face {
 		font-family: "Crysis";
-		src: url(fonts/crysis.ttf);}
+		src: url(https://gazellegames.net/static/styles/game_room/fonts/crysis.ttf);}
 
-	body.series_196 {background-image:url(images/gameseries/crysisbkg.jpg);}
+	body.series_196 {}
 	.series_196 #logo {background-image:url(images/gameseries/crysislogo.png);}
 
 	.series_196 #menu {
