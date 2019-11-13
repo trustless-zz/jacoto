@@ -9243,7 +9243,7 @@ body#user.inventory {}
     border: var(--p-border);
     border-color: var(--c-main-brdr);
     display: block;
-    width: calc(100% - 257px);
+    width: calc(100% - 237px);
     float: right;
     padding: 10px;
     top: 0;

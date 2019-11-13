@@ -714,6 +714,7 @@
         height: -moz-fit-content;
         height: fit-content;}
     
+    .inventory #wrapper .save_message,
     #reportsv2 form#report_table div#dynamic_form table.border tr,
     #reportsv2 form#report_table div#dynamic_form table.border td,
     #collections #easysort,
