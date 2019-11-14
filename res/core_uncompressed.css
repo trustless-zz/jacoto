@@ -1034,13 +1034,13 @@ a[onclick^="QuoteJump(event"] +blockquote {
     border-left-width: 2px;
     border-left-color: var(--c-unread-s);} */
 
-.lightbox img[src^="https://gazellegames.net/nfoimg"],
-.torrent_table blockquote#description img {
+.lightbox img[src*="/nfoimg/"],
+.torrent_table blockquote#description img[src*="/nfoimg/"] {
     background-image: none !important;
-    -webkit-filter: var(--p-description);
-    filter:         var(--p-description);
-    background-color: var(--c-description);}
-.torrent_table blockquote#description img {
+    -webkit-filter:     var(--p-description);
+    filter:             var(--p-description);
+    background-color:   var(--c-description);}
+.torrent_table blockquote#description img[src*="/nfoimg/"] {
     max-width: 100% !important;
     margin: 0;}
 
