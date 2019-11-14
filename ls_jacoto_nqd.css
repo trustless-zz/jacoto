@@ -14,8 +14,8 @@
     --c-blackout-a:                     rgb(18, 201, 194);
     --c-blackout-show:                  rgb(175, 175, 175);
     --c-post-img:                       rgb(10, 10, 10);
-    --p-description:                    invert(1);
-    --c-description:                    rgb(210, 210, 210);
+    --p-description:                    invert(1) brightness(0.784);
+    --c-description:                    rgb(198, 198, 198);
     --c-low:                            rgb(235, 235, 235);
     --c-quote-brdr:                     rgba(240, 240, 240, .1);
     --c-quote:                          rgba(240, 240, 240, .05);
