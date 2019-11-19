@@ -1811,6 +1811,8 @@ a:after, */
 
 th[aria-disabled="false"],
 
+#header li[id="notilia nav_notifications"] strong,
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
