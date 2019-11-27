@@ -3267,6 +3267,10 @@ textarea,
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 
+/* forcing 16:9 aspect ratio */
+iframe[width="640"][height="385"] {
+    height: 360px;}
+
 img[title="Downloaded"],
 img[title="Uploaded"],
 img[title="Leechers"],
@@ -3911,7 +3915,7 @@ body:not(#upload) #artist_tr + tr td.label,
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;}
+    height: 100% !important; /* !important to counter 16:9 fix */}
 
 .bbbutt {
     background-color: var(--c-input-obj);
