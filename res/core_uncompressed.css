@@ -8721,6 +8721,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	width: calc(100% - 20px);
 	height: 60px;}
 
+.inventory .submit_section input, .inventory .submit_section button,
 #shop .submit_section input, #shop .submit_section button  {
 	margin: 2px;}
 

@@ -295,6 +295,12 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     margin-top: 0;}
 #quick-crafter #crafting-submenu >p:first-child +p {
     margin-bottom: 8px;}
+
+#quick-crafter >p:first-of-type { /* creates a border on top of the first row of buttons */
+    padding-bottom: 10px;
+    margin-bottom: 3px;
+    border-bottom: var(--p-border);
+    border-bottom-color: var(--c-table-brdr);}
 /***
 /Quick Crafter
 ***/
