@@ -729,18 +729,50 @@ https://greasyfork.org/en/scripts/372437-ggn-ez-collection-management
 GazelleGames image preview
 https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=1412773#post1412773
 https://greasyfork.org/en/scripts/390270-gazellegames-image-preview
+&
+GGn Cover on Hover
+https://gazellegames.net/forums.php?action=viewthread&threadid=10942
+https://github.com/FlatBartender/ggn_scripts/raw/master/GGn%20Cover%20on%20Hover.user.js
 **/
+body >#cover_container,
 body >#preview-popup {
     background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    max-width: unset;
+    max-height: unset;
+    transform: unset;
+    position: fixed;
+    left: unset !important;
+    bottom: 10px !important;
+    right: 10px !important;
+    top: 10px !important;
+    height: calc(100vh - 20px);
+    width: auto;
+    z-index: 999999;}
+body >#cover_container  img,
+body >#preview-popup    img {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
     border: var(--p-img-border);
     border-color: var(--c-main-brdr);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    padding: 0;}
-body >#preview-popup >img {
+    object-fit: unset;
+    max-width: calc(40vw - 26px);
+    max-height: calc(100vh - 26px);
+    width: auto;
+    height: auto;
     background-size: 16px 16px;
     background-repeat: repeat;
-    background-position: top left;}
+    background-position: top left;
+    align-self: center;}
+body >#cover_container  [style*="display: inline-block;"],
+body >#preview-popup    [style*="display: block;"] {
+    display: flex !important;}
 /**
 /GazelleGames image preview
+&
+/GGn Cover on Hover
 **/
