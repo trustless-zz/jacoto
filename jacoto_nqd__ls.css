@@ -1,5 +1,6 @@
 ﻿@import url('res/c_nqd__core.css');
-@import url('res/c_nqd_brandy.css');
+@import url('res/c_nqd_jacoto.css');
+@import url('res/large_sidebar.css') screen and (min-width: 1387px);
 
 @import url('res/core.css');
 @import url('res/icons_c8c8c8.css');

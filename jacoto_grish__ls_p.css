@@ -1,0 +1,146 @@
+﻿@import url('res/core.css');
+@import url('res/icons_grish.css');
+@import url('res/userscripts.css');
+@import url('res/desktop.css');
+@import url('res/mobile.css');
+@import url('res/large_sidebar.css') screen and (min-width: 1387px);
+
+/** COLORS **/
+:root {
+    --c-selection:                      rgba(69, 120, 168, .996);
+    --c-selection-i:                    rgba(69, 120, 168, .75);
+    --c-blackout:                       rgb(0, 0, 0);
+    --c-blackout-a:                     #C6E6F6;
+    --c-blackout-show:                  rgb(255, 255, 255);
+    --c-post-img:                       rgb(0, 0, 0);
+    --p-description:                    unset;
+    --c-description:                    #fff;
+    --c-low:                            rgb(255, 255, 255);
+    --c-quote-brdr:                     #2B4E66;
+    --c-quote:                          #2B4E66;
+    --c-unread-s:                       #488271;
+    --c-unread-i:                       #FFF;
+    --c-unread-br:                      #50916f;
+    --c-txt: 							#FFF;
+    --c-text-s: 						#b5b4c2;
+    --c-fbb-bcg:                        rgb(15, 15, 15);
+    --c-fbb-c:                          #6BB8FF;
+    --c-curtain:						rgb(45, 45, 45);
+    --c-sticky-id-brdr:                 #375778;
+    --c-input-brdr:						#355473;
+    --c-main-brdr:						#32506E;
+    --c-sticky-2:                       #304C69;
+    --c-table-brdr: 					#2E4963;
+    --c-tor-rowb: 						#2B455E;
+    --c-body: 							#294159;
+    --c-tor-row-hvr: 					#273D54;
+    --c-input-focus: 					#243A4F;
+    --c-edition: 						#243A4F;
+    --c-input:							#22364A;
+    --c-input-obj:						#22364A;
+    --c-trowb:							#213447;
+    --c-tgroup:							#203245;                     
+    --c-box: 							#1d2e3f;
+    --c-item-desc:                      rgba(29, 46, 63, .8);
+    --c-row-hvr:						#1B2B3B;
+    --c-high:							#192736;
+    --c-high-t:							#000;
+    --c-b1: 							#41719E;
+    --c-b2: 							#437BA1;    
+    --c-b3: 							#315678;
+    --c-b4: 							#335E7A;    
+    --c-sb1:                            #2B4B69;
+    --c-sb2:                            #2D526B;
+    --c-bg:                             #D9E473;    
+    --c-hovereffect: 					rgba(0, 0, 0, .8);
+    --c-b00: 							rgba(0, 0, 0, 0);
+    --c-anchor: 						#C6E6F6;
+    --c-anchor-hvr: 					#FFF;
+    --c-anchor-hvr-bcg: 				unset;
+    --c-anchor-hvr-bcg-obj:             #243A50;
+	--c-header-shdw: 					rgba(0,0,0,.3);
+    --c-main-shdw:						rgba(0,0,0,.5);
+    --c-img-bcg-anchor: 				#203448;
+    --c-on: 							#69C077;
+    --c-bonus:                          rgba(177, 232, 0, .2);
+    --c-donate:                         rgb(255, 77, 77);
+    --c-yellow: 						rgb(209, 209, 0);
+    --c-off: 							#BF6A6A;
+    --c-colhead-click:					rgba(0, 0, 0, .15);
+    --c-colhead-act: 					rgba(0, 0, 0, .3);
+    --c-em-bcg: 						rgb(140, 25, 13);
+    --c-em-hvr: 						rgb(230, 42, 21);
+    --c-em-act: 						rgb(115, 36, 28);
+    --c-fl: 							#69C077;
+    --c-btn-b1: 						#39648B;
+    --c-btn-b2: 						#3B6D8E;
+    --c-red:                            #DD3434;
+    --c-green:                          rgb(0, 214, 0);
+    --c-blue:                           rgb(99, 99, 255);
+    --c-o-gold:                         rgb(245, 208, 0);
+    --c-gold:                           rgb(255, 215, 0);
+    --c-orange:                         rgb(255, 165, 0);
+    --p-orange:                         unset;
+    --p-gold:                           unset;
+    --c-leech:                          #69c077;
+    --c-seed:                           #d9e473;
+    --c-upload:                         #ae83cc;
+    --c-snatch:                         #bf6a6a;
+    --c-download:                       #bf6a6a;
+    
+    --c-r01:                            #BF6A6A;
+    --c-r02:                            #BF6A6A;
+    --c-r03:                            #BF6A6A;
+    --c-r04:                            #D9E473;
+    --c-r05:                            #D9E473;
+    --c-r06:                            #D9E473;
+    --c-r07:                            #D9E473;
+    --c-r08:                            #D9E473;
+    --c-r09:                            #69C077;
+    --c-r10:                            #69C077;
+    --c-r99:                            #69C077;
+/*shop*/
+    --c-type-0:                         rgba(116,   56,     66,     .23);
+    --c-type-1:                         rgba(58,    77,     115,    .23);
+    --c-type-2:                         rgba(70,    114,    59,     .23);
+    --c-type-3:                         rgba(115,   118,    0,      .23);
+    --c-type-4:                         rgba(84,    84,     84,     .23);
+    --c-type-5:                         rgba(0,     92,     119,    .23);
+}
+/** /COLORS **/
+
+body {
+    background-image: url('res/icons/grish/background.svg');}
+/* disabling custom user backgrounds for now */
+#user[style^="background: url("] {
+    background-image: url('res/icons/grish/background.svg') !important;
+    background-size: 50px 50px !important;}
+#logo a {
+    background-image: url('res/icons/grish/logo.svg');}
+
+a:hover {
+    text-decoration: underline;}
+#menu ul li a:hover {
+    color: var(--c-on);
+    text-decoration: none;}
+#userinfo_minor li a,
+button,
+#wrapper #trading_panel button,
+.alertable button,
+input[type=button],
+input[type=submit],
+.similar_votes a,
+.box_tags .stats.nobullet div a,
+a[href^="javascript:IndexVote("] strong,
+a[href^="javascript:Vote("] strong,
+#requests table.border td.nobr:nth-child(2) strong,
+#torrents #requests.request_table #requests_list .requestrows a.brackets,
+#image_block a,
+#newthreadform #newthreadtext #answer_block a,
+.box.box_coltags .pad li a:nth-child(n+2),
+.box.box_coltags .head span[title="Add Tags"] a {
+    text-decoration: none;}
+blockquote, pre {
+    filter: drop-shadow(2px 2px 3px var(--c-main-shdw));}
+blockquote code {
+    outline: 1px solid var(--c-main-shdw);}

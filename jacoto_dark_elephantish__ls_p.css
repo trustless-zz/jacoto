@@ -1,0 +1,119 @@
+﻿@import url('res/core.css');
+@import url('res/icons_a5a5a5.css');
+@import url('res/userscripts.css');
+@import url('res/desktop.css');
+@import url('res/mobile.css');
+@import url('res/large_sidebar.css') screen and (min-width: 1387px);
+
+/** COLORS **/
+:root {
+    --c-selection:                      rgba(133, 113, 102, .996);
+    --c-selection-i:                    rgba(133, 113, 102, .75);
+    --c-blackout:                       rgb(85, 85, 85);
+    --c-blackout-a:                     #FFCCCC;
+    --c-blackout-show:                  rgb(255, 255, 255);
+    --c-post-img:                       rgb(55, 55, 55);
+    --p-description:                    invert(1);
+    --c-description:                    rgb(255, 255, 255);
+    --c-low:                            rgb(200, 200, 200);
+    --c-quote-brdr:                     rgba(85, 85, 85, .8);
+    --c-quote:                          #0a0a0a;
+    --c-unread-s:                       #968074;
+    --c-unread-i: 						rgb(180, 180, 180);
+    --c-unread-br:                      #7a685e;   
+    --c-txt: 							rgb(180, 180, 180);
+    --c-text-s: 						rgb(145, 145, 145);
+    --c-fbb-bcg:                        rgb(15, 15, 15);
+    --c-fbb-c:                          #947E72;
+    --c-curtain:						rgb(45, 45, 45);
+    --c-sticky-id-brdr:                 #52545C;
+    --c-input-brdr:						#4D5057;
+    --c-main-brdr:						#494B52;
+    --c-sticky-2:                       #44464D;
+    --c-table-brdr: 					#404247;
+    --c-tor-rowb: 						#3B3D42;
+    --c-body: 							#36383D;
+    --c-tor-row-hvr: 					#323338;
+    --c-input-focus: 					#2D2F33;
+    --c-edition: 						#2D2F33;
+    --c-input:							#292A2E;
+    --c-input-obj:						#292A2E;
+    --c-trowb:							#27282B;
+    --c-tgroup:							#242529;                     
+    --c-box: 							#1f2023;
+    --c-item-desc:                      rgba(31, 32, 35, 0.8);
+    --c-row-hvr:						rgb(5, 5, 5);
+    --c-high:							rgb(0, 0, 0);
+    --c-high-t:							rgb(0, 0, 0);
+    --c-b1: 							#968074;
+    --c-b2: 							#99776D;    
+    --c-b3: 							#7a685e;
+    --c-b4: 							#7D6159;    
+    --c-sb1:                            #736258;
+    --c-sb2:                            #755B53;
+    --c-bg:                             #e85066;    
+    --c-hovereffect: 					rgba(0, 0, 0, .8);
+    --c-b00: 							rgba(0, 0, 0, 0);
+    --c-anchor: 						#c09a9a;
+    --c-anchor-hvr: 					#e85066;
+    --c-anchor-hvr-bcg: 				unset;
+    --c-anchor-hvr-bcg-obj:             #3C3639;
+	--c-header-shdw: 					rgba(0,0,0,.3);
+    --c-main-shdw:						rgba(0,0,0,.5);
+    --c-img-bcg-anchor: 				#312429;
+    --c-on: 							rgb(36, 181, 0);
+    --c-bonus:                          rgba(177, 232, 0, .2);
+    --c-donate:                         rgb(255, 77, 77);
+    --c-yellow: 						rgb(209, 209, 0);
+    --c-off: 							rgb(255, 20, 20);
+    --c-colhead-click:					rgba(0, 0, 0, .15);
+    --c-colhead-act: 					rgba(0, 0, 0, .3);
+    --c-em-bcg: 						rgb(140, 25, 13);
+    --c-em-hvr: 						rgb(230, 42, 21);
+    --c-em-act: 						rgb(115, 36, 28);
+    --c-fl: 							rgb(154, 99, 255);
+    --c-btn-b1: 						#524141;
+    --c-btn-b2: 						#523F3A;
+    --c-red:                            rgb(255, 10, 10);
+    --c-green:                          rgb(0, 180, 0);
+    --c-blue:                           rgb(99, 99, 255);
+    --c-o-gold:                         rgb(245, 208, 0);
+    --c-gold:                           rgb(255, 215, 0);
+    --c-orange:                         rgb(255, 165, 0);
+    --p-orange:                         unset;
+    --p-gold:                           unset;
+    --c-leech:                          rgb(194, 162, 0);
+    --c-seed:                           rgb(38, 191, 0);
+    --c-upload:                         rgb(105, 181, 133);
+    --c-snatch:                         rgb(255, 40, 0);
+    --c-download:                       rgb(255, 100, 0);
+    
+    --c-r01:                            rgb(255,    0,      0);
+    --c-r02:                            rgb(255,    30,     0);
+    --c-r03:                            rgb(255,    60,     0);
+    --c-r04:                            rgb(235,    94,     0);
+    --c-r05:                            rgb(212,    120,    0);
+    --c-r06:                            rgb(181,    139,    0);
+    --c-r07:                            rgb(156,    156,    0);
+    --c-r08:                            rgb(149,    166,    0);
+    --c-r09:                            rgb(141,    176,    0);
+    --c-r10:                            rgb(38,     191,    0);
+    --c-r99:                            rgba(38,    191,    0,      .5);
+/*shop*/
+    --c-type-0:                         rgba(116,   56,     66,     .23);
+    --c-type-1:                         rgba(58,    77,     115,    .23);
+    --c-type-2:                         rgba(70,    114,    59,     .23);
+    --c-type-3:                         rgba(115,   118,    0,      .23);
+    --c-type-4:                         rgba(84,    84,     84,     .23);
+    --c-type-5:                         rgba(0,     92,     119,    .23);
+}
+/** /COLORS **/
+
+body {
+    background-image: url('res/icons/a5a5a5_elephantish/background.svg');}
+/* disabling custom user backgrounds for now */
+#user[style^="background: url("] {
+    background-image: url('res/icons/a5a5a5_elephantish/background.svg') !important;
+    background-size: 50px 50px !important;}
+#logo a {
+    background-image: url('res/icons/a5a5a5_elephantish/logo.svg');}
