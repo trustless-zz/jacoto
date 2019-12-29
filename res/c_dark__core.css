@@ -43,8 +43,8 @@
 /** /COLORS **/
 
 body {
-    background-image: url('res/icons/a5a5a5/background.svg');}
+    background-image: url('icons/a5a5a5/background.svg');}
 /* disabling custom user backgrounds for now */
 #user[style^="background: url("] {
-    background-image: url('res/icons/a5a5a5/background.svg') !important;
+    background-image: url('icons/a5a5a5/background.svg') !important;
     background-size: 50px 50px !important;}
