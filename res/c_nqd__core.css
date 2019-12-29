@@ -1,0 +1,50 @@
+﻿/** COLORS **/
+:root {
+    --c-blackout:                       rgb(0, 0, 0);
+    --c-blackout-show:                  rgb(175, 175, 175);
+    --c-post-img:                       rgb(10, 10, 10);
+    --p-description:                    invert(1) brightness(0.784);
+    --c-description:                    rgb(198, 198, 198);
+    --c-low:                            rgb(235, 235, 235);
+    --c-quote-brdr:                     rgba(240, 240, 240, .1);
+    --c-quote:                          rgba(240, 240, 240, .05);
+    --c-unread-i:                       rgb(200, 200, 200);
+    --c-txt: 							rgb(200, 200, 200);
+    --c-text-s: 						rgb(175, 175, 175);
+    --c-fbb-bcg:                        rgb(50, 50, 50);
+    --c-curtain:						rgb(80, 80, 80);
+    --c-sticky-id-brdr:                 rgb(100, 100, 100);
+    --c-input-brdr:						rgb(95, 95, 95);
+    --c-main-brdr:						rgb(90, 90, 90);
+    --c-sticky-2:                       rgb(85, 85, 85);
+    --c-table-brdr: 					rgb(80, 80, 80);
+    --c-tor-rowb: 						rgb(75, 75, 75);
+    --c-body: 							rgb(70, 70, 70);
+    --c-tor-row-hvr: 					rgb(65, 65, 65);
+    --c-input-focus: 					rgb(60, 60, 60);
+    --c-edition: 						rgb(60, 60, 60); 
+    --c-input:							rgb(55, 55, 55);
+    --c-input-obj:						rgb(55, 55, 55);
+    --c-trowb:							rgb(53, 53, 53);
+    --c-tgroup:							rgb(50, 50, 50);
+    --c-box: 							rgb(45, 45, 45);
+    --c-item-desc:                      rgba(45, 45, 45, .8);
+    --c-row-hvr:						rgb(40, 40, 40);
+    --c-high:							rgb(35, 35, 35);
+    --c-high-t:							rgb(0, 0, 0);
+    --c-hovereffect: 					rgba(0, 0, 0, .8);
+    --c-b00: 							rgba(0, 0, 0, 0);
+    --c-anchor-hvr: 					rgb(255, 255, 255);
+	--c-header-shdw: 					rgba(0,0,0,.3);
+    --c-main-shdw:						rgba(0,0,0,.5);
+    --c-colhead-click:					rgba(0, 0, 0, .15);
+    --c-colhead-act: 					rgba(0, 0, 0, .3);
+}
+/** /COLORS **/
+
+body {
+    background-image: url('res/icons/c8c8c8/background.svg');}
+/* disabling custom user backgrounds for now */
+#user[style^="background: url("] {
+    background-image: url('res/icons/c8c8c8/background.svg') !important;
+    background-size: 50px 50px !important;}

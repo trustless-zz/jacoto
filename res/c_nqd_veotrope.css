@@ -1,0 +1,67 @@
+﻿/** COLORS **/
+:root {
+    --c-selection:                      rgba(140, 101, 168, .996);
+    --c-selection-i:                    rgba(140, 101, 168, .75);
+    --c-blackout-a:                     #D096FA;
+    --c-unread-s:                       #825D9C;
+    --c-unread-br:                      #634C74;
+    --c-fbb-c:                          #C18BE8;
+    --c-b1: 							#825D9C;
+    --c-b2: 							#925A9E;
+    --c-b3: 							#634C74;
+    --c-b4: 							#6D4A75;
+    --c-sb1:                            #584565;
+    --c-sb2:                            #604466;
+    --c-bg:                             #B08ACB;  
+    --c-anchor: 						#DEB6FA;
+    --c-anchor-hvr-bcg: 				#4B4052;
+    --c-anchor-hvr-bcg-obj:             #4B4052;
+    --c-img-bcg-anchor: 				#353137;
+    --c-on: 							rgb(43, 214, 0);
+    --c-bonus:                          rgba(177, 232, 0, .2);
+    --c-donate:                         rgb(255, 140, 140);
+    --c-yellow: 						rgb(248, 248, 0);
+    --c-off: 							rgb(255, 110, 110);
+    --c-em-bcg: 						rgb(140, 25, 13);
+    --c-em-hvr: 						rgb(255, 92, 74);
+    --c-em-act: 						rgb(115, 36, 28);
+    --c-fl: 							#3CBA42;
+    --c-btn-b1: 						#735488;
+    --c-btn-b2: 						#805289;
+    --c-red:                            rgb(255, 90, 90);
+    --c-green:                          rgb(0, 217, 0);
+    --c-blue:                           rgb(134, 134, 255);
+    --c-o-gold:                         rgb(245, 208, 0);
+    --c-gold:                           rgb(255, 215, 0);
+    --c-orange:                         rgb(255, 165, 0);
+    --p-orange:                         unset;
+    --p-gold:                           unset;
+    --c-leech:                          rgb(232, 193, 0);
+    --c-seed:                           rgb(45, 227, 0);
+    --c-upload:                         rgb(126, 217, 159);
+    --c-snatch:                         rgb(255, 118, 94);
+    --c-download:                       rgb(255, 156, 89);
+    
+    --c-r01:                            rgb(255,    107,    107);
+    --c-r02:                            rgb(255,    115,    97);
+    --c-r03:                            rgb(255,    128,    89);
+    --c-r04:                            rgb(255,    136,    53);
+    --c-r05:                            rgb(249,    150,    46);
+    --c-r06:                            rgb(214,    167,    44);
+    --c-r07:                            rgb(189,    187,    50);
+    --c-r08:                            rgb(182,    197,    49);
+    --c-r09:                            rgb(176,    209,    54);
+    --c-r10:                            rgb(85,     226,    56);
+    --c-r99:                            rgba(85,     226,    56,      .5);
+/*shop*/
+    --c-type-0:                         rgba(116,   56,     66,     .21);
+    --c-type-1:                         rgba(58,    77,     115,    .21);
+    --c-type-2:                         rgba(70,    114,    59,     .21);
+    --c-type-3:                         rgba(115,   118,    0,      .21);
+    --c-type-4:                         rgba(84,    84,     84,     .21);
+    --c-type-5:                         rgba(0,     92,     119,    .21);
+}
+/** /COLORS **/
+
+#logo a {
+    background-image: url('res/icons/c8c8c8_veotrope/logo.svg');}

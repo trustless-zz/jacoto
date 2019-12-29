@@ -1,0 +1,67 @@
+﻿/** COLORS **/
+:root {
+    --c-selection:                      rgba(12, 130, 128, .996);
+    --c-selection-i:                    rgba(12, 130, 128, .75);
+    --c-blackout-a:                     rgb(22, 245, 237);
+    --c-unread-s:                       rgb(8, 94, 93);
+    --c-unread-br:                      rgb(9,67,66);
+    --c-fbb-c:                          #0D918D;
+    --c-b1: 							rgb(8, 94, 93);
+    --c-b2: 							rgb(39, 97, 78);    
+    --c-b3: 							rgb(9,67,66);
+    --c-b4: 							rgb(30,70,57);    
+    --c-sb1:                            rgb(9,56,55);
+    --c-sb2:                            rgb(26,57,47);
+    --c-bg:                             rgb(13,139,136);    
+    --c-anchor: 						rgb(17, 184, 178);
+    --c-anchor-hvr-bcg: 				rgb(11,45,43);
+    --c-anchor-hvr-bcg-obj:             rgb(11,45,43);
+    --c-img-bcg-anchor: 				rgb(11,26,25);
+    --c-on: 							rgb(36, 181, 0);
+    --c-bonus:                          rgba(177, 232, 0, .2);
+    --c-donate:                         rgb(255, 77, 77);
+    --c-yellow: 						rgb(209, 209, 0);
+    --c-off: 							rgb(255, 20, 20);
+    --c-em-bcg: 						rgb(140, 25, 13);
+    --c-em-hvr: 						rgb(230, 42, 21);
+    --c-em-act: 						rgb(115, 36, 28);
+    --c-fl: 							rgb(154, 99, 255);
+    --c-btn-b1: 						rgb(9,81,80);
+    --c-btn-b2: 						rgb(35,84,68);
+    --c-red:                            rgb(255, 10, 10);
+    --c-green:                          rgb(0, 180, 0);
+    --c-blue:                           rgb(99, 99, 255);
+    --c-o-gold:                         rgb(245, 208, 0);
+    --c-gold:                           rgb(255, 215, 0);
+    --c-orange:                         rgb(255, 165, 0);
+    --p-orange:                         unset;
+    --p-gold:                           unset;
+    --c-leech:                          rgb(194, 162, 0);
+    --c-seed:                           rgb(38, 191, 0);
+    --c-upload:                         rgb(105, 181, 133);
+    --c-snatch:                         rgb(255, 40, 0);
+    --c-download:                       rgb(255, 100, 0);
+    
+    --c-r01:                            rgb(255,    0,      0);
+    --c-r02:                            rgb(255,    30,     0);
+    --c-r03:                            rgb(255,    60,     0);
+    --c-r04:                            rgb(235,    94,     0);
+    --c-r05:                            rgb(212,    120,    0);
+    --c-r06:                            rgb(181,    139,    0);
+    --c-r07:                            rgb(156,    156,    0);
+    --c-r08:                            rgb(149,    166,    0);
+    --c-r09:                            rgb(141,    176,    0);
+    --c-r10:                            rgb(38,     191,    0);
+    --c-r99:                            rgba(38,    191,    0,      .5);
+/*shop*/
+    --c-type-0:                         rgba(116,   56,     66,     .23);
+    --c-type-1:                         rgba(58,    77,     115,    .23);
+    --c-type-2:                         rgba(70,    114,    59,     .23);
+    --c-type-3:                         rgba(115,   118,    0,      .23);
+    --c-type-4:                         rgba(84,    84,     84,     .23);
+    --c-type-5:                         rgba(0,     92,     119,    .23);
+}
+/** /COLORS **/
+
+#logo a {
+    background-image: url('res/icons/a5a5a5/logo.svg');}
