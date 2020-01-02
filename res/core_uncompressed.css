@@ -6808,6 +6808,7 @@ input[type="radio"]:active {
 #collections #torrent_table .colhead td[width="70%"],
 #bookmarks #torrent_table .colhead_dark td[width="70%"] {
     width: auto !important;}
+#content >.torrent_notifications td.noticon,
 #collections .group.discog td.collicon:nth-child(2),
 td.center.cats_col {
     width: 28px;}
