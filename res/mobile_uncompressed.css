@@ -1861,6 +1861,17 @@ a[title="Remove"]:before {
     #torrents .thin >h2:first-child +.center td.label {
         padding: 5px;}
     
+    .sidebar .box .hovereffect {
+        width: -moz-fit-content !important;
+        width: fit-content !important;
+        margin: 0 auto;
+        float: unset;
+        max-width: 100%;}
+    .sidebar .box .img_responsive {
+        height: 120px;
+        width: calc(120px * 2.13953488372093);
+        background-size: contain;}
+    
     #requests form#request_form .colhead {
         margin: 0;
         padding: 9px 10px;}

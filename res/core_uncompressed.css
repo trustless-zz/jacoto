@@ -7665,6 +7665,14 @@ span.size5 img {
     padding: 0px;
     width: calc(25% - 7.5px);}
 
+/*
+.sidebar .box .hovereffect {
+    width: -moz-fit-content !important;
+    width: fit-content !important;
+    margin: 0 auto;
+    float: unset;}
+*/
+
 .collections_art_display tr {
     display: flex;
     flex-flow: row wrap;
