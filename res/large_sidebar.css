@@ -1,7 +1,6 @@
 ﻿#index .main_column {
     width: calc(100% - 630px);}
 #index .sidebar {
-    display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     width: 615px;}

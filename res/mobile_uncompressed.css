@@ -375,7 +375,7 @@
     #userinfo_stats:hover li,
     ul#userinfo_minor:hover li,
 	#menu:hover ul {
-		display:flex;}
+		display: flex;}
     
     #menu ul li {
         margin: 0;
@@ -1866,7 +1866,6 @@ a[title="Remove"]:before {
         padding: 9px 10px;}
 
 	#torrents .sidebar {
-        display: flex;
         flex-direction:row;
         justify-content: space-between;}
 	#torrents .sidebar .box_albumart {order: 1;}
@@ -2327,7 +2326,6 @@ a[title="Remove"]:before {
 
 	/* #collections .thin {flex-flow: row wrap;} */
     #collections .thin .sidebar {
-        display: flex;
         flex-flow: row wrap;
         justify-content: space-between;}
     #collections .thin >.header:first-child {
@@ -2600,7 +2598,6 @@ a[title="Remove"]:before {
 		padding: 10px 5px;}
 
 	#requests .sidebar {
-        display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         width: 100%;}

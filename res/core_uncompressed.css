@@ -1318,6 +1318,7 @@ h2 .username_badges a {
     position: relative;
     z-index: 0;}
 .sidebar {
+    display: flex;
     float: right;
     height: 100%;
     width: 300px;}
@@ -7655,7 +7656,7 @@ span.size5 img {
     width: 100%;
     background-size: 100% calc(100% / 2.13953488372093);
     padding-top: calc(100% / 2.13953488372093);}
-.sidebar .box.box_pack .img_responsive {
+.sidebar .box .img_responsive {
     height: calc(272px / 2.13953488372093);
     width: 272px;
     background-size: 272px calc(272px / 2.13953488372093);}
