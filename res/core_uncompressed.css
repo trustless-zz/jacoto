@@ -2141,9 +2141,9 @@ img#authcode,
     -webkit-transition: none !important;
     -o-transition: none !important;
     transition: none !important;}
-.fancybox-button.disabled:hover,
-.fancybox-button.disabled {
-    opacity: .45 !important;
+.fancybox-button.disabled,
+.fancybox-button:disabled {
+    opacity: .5 !important;
     filter: grayscale(1);}
 
 
