@@ -1040,10 +1040,12 @@
         border-top: var(--p-border) !important;
         border-top-color: var(--c-b1) !important;}
     
+    #torrent_table tr.ignored,
     #requests .sticky,
     #torrents .sticky {
         display: block;
         position: relative;}
+    #torrent_table tr.ignored:before,
     #requests .sticky:before,
     #torrents .sticky:before {
         content: '';
@@ -1053,6 +1055,12 @@
         width: 2px;
         height: 100%;
         background-color: var(--c-unread-s);}
+    #requests .sticky:before,
+    #torrents .sticky:before {
+        background-color: var(--c-unread-s);}
+    #torrent_table tr.ignored:before {
+        opacity: .5;
+        background-color: var(--c-red);}
     
     
 	/*Category Icon*/

@@ -1814,6 +1814,9 @@ th[aria-disabled="false"],
 
 #header li[id="notilia nav_notifications"] strong,
 
+.torrent_table .ignored td.center:first-child:after,
+.torrent_table .ignored >td:not(:first-child):not(:nth-child(11)),
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -8153,6 +8156,8 @@ td.unread_locked:after,
 td.unread_locked_sticky:after,
 tr.unreadpm td:first-child:after,
 
+.torrent_table .ignored td.center:first-child:after,
+
 #color_leeching:before,
 #color_seeding:before,
 #color_uploaded:before,
@@ -11275,6 +11280,49 @@ table.adventure_table h3 {
     position: relative;}
 
 
+
+
+
+
+
+
+/* Ignore Group */
+
+/*#displayname    s,*/
+#display_name   s {
+    text-decoration: var(--c-red)  line-through;
+    display: inline-block;
+    position: relative;}
+/*#displayname    s:before,*/
+#display_name   s:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: var(--c-red);}
+/*#displayname s:before {
+    bottom: calc(50% - 2px);
+    height: 2px;}*/
+#display_name s:before {
+    bottom: calc(50% - 3px);
+    height: 4px;}
+
+.torrent_table .ignored td.center:first-child:after,
+.torrent_table .ignored >td:not(:first-child):not(:nth-child(11)) {
+    opacity: .5;}
+.torrent_table .ignored >td:not(:first-child):not(:nth-child(11)) {
+    filter: grayscale(.25);}
+.torrent_table .ignored:hover td.center:first-child:after,
+.torrent_table .ignored:hover >td:not(:first-child):not(:nth-child(11)) {
+    opacity: 1;}
+.torrent_table .ignored:hover >td:not(:first-child):not(:nth-child(11)) {
+    filter: grayscale(0);}
+#displayname s {
+    text-decoration: unset;}
+.torrent_table .ignored td.center:first-child:after {
+    background-color: var(--c-red);}
+
+/* /Ignore Group */
 
 
 
