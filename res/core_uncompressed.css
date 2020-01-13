@@ -11299,7 +11299,8 @@ table.adventure_table h3 {
     position: absolute;
     left: 0;
     right: 0;
-    background: var(--c-red);}
+    background: var(--c-red);
+    z-index: 9;}
 /*#displayname s:before {
     bottom: calc(50% - 2px);
     height: 2px;}*/
@@ -11321,6 +11322,9 @@ table.adventure_table h3 {
     text-decoration: unset;}
 .torrent_table .ignored td.center:first-child:after {
     background-color: var(--c-red);}
+
+h2 >s >#groupplatform {
+    left: unset;}
 
 /* /Ignore Group */
 
