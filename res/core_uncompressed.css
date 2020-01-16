@@ -670,7 +670,7 @@ tr.unreadpm td:first-child {
 
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright {
-    margin-top: -1px;}
+    margin: -1px 0;}
 
 #stats_share_score  a:before,
 #stats_seeding      a:before,
@@ -1580,6 +1580,8 @@ span.user_title a:hover,
 /* #bookmarks #collage_table td a, */
 
 .collections_art_display .remove_bookmark_div a,
+
+.box.box_info span[style="float:right;"] a,
 
 .username_badges a,
 table#likesrow a,
