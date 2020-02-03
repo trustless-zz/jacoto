@@ -3686,7 +3686,7 @@ a[href^="javascript:Vote("] strong:active,
 
 .filter_torrents input.inputtext[name="filelist"],
 .filter_torrents input.inputtext.smaller {
-    width: 600px;}
+    width: 565px;} /*600*/
 
 .flright {
     float: right;}
@@ -11577,6 +11577,19 @@ textarea {/* prevent resizer from disappearing */
     background-position: center;}
 /** /webkit scrollbar **/
 
+/**
+Username glow pulse suggestion:
+https://gazellegames.net/forums.php?action=viewthread&threadid=21141
+**/
+/*
+.glow_pulse {
+    animation: glow_pulse 1.35s infinite alternate;}
+
+@keyframes glow_pulse {
+	0% {text-shadow: unset;}
+	100% {text-shadow: none !important;}
+}
+*/
 
 /** firefox only **/
 @-moz-document url-prefix() {

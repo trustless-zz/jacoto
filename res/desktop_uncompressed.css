@@ -798,6 +798,9 @@ body {
 #logo a:hover:after {
     opacity: 1;} */
 /* /logo */
+    
+    .filter_torrents.advanced td >label[for="tags_type1"] {
+        margin-right: 20px;}
 
 }
 
@@ -1051,30 +1054,37 @@ body {
 }
 
 /* games >filter */ /* 53% */ /* revisit */
-@media (min-width: 801px) and (max-width: 1405px) {
+@media (min-width: 801px) and (max-width: 1420px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
-        width: 553px;}
+        width: 487px;}
 }
-@media (min-width: 801px) and (max-width: 1305px) {
+@media (min-width: 801px) and (max-width: 1320px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
-        width: 506px;}
+        width: 413px;}
+    .filter_torrents.advanced .flright:before {
+        bottom: 1191px;}
 }
-@media (min-width: 801px) and (max-width: 1205px) {
+@media (min-width: 801px) and (max-width: 1220px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
-        width: 459px;}
+        width: 345px;}
+    .filter_torrents.advanced .flright:before {
+        content: none;
+        /*bottom: 1191px;*/}
 }
-@media (min-width: 801px) and (max-width: 1105px) {
+@media (min-width: 801px) and (max-width: 1120px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
-        width: 412px;}
+        width: 309px;}
+    .filter_torrents.advanced .flright:before {
+        /*bottom: 1229px;*/}
 }
-@media (min-width: 801px) and (max-width: 1005px) {
+/*@media (min-width: 801px) and (max-width: 1020px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
-        width: 365px;}
+        width: 309px;}
 }
 @media (min-width: 801px) and (max-width: 905px) {
     .filter_torrents input.inputtext[name="filelist"],
@@ -1085,6 +1095,21 @@ body {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 271px;}
+}*/
+@media (min-width: 801px) and (max-width: 966px) {
+    .filter_torrents input.inputtext[name="filelist"],
+    .filter_torrents input.inputtext.smaller {
+        width: 213px;}
+    
+    .filter_torrents.advanced .cat_list:not(#taglist),
+    .filter_torrents.advanced >.box.pad td {
+        width: auto;}
+    .torrent_table td#displayname ~td,
+    .torrent_table tr.group_torrent td {
+        white-space: normal !important;}
+    .torrent_table tr.group_torrent td a,
+    .torrent_table tr.group_torrent td em {
+        word-break: break-word;}
 }
 
 /* twitch iframe */
