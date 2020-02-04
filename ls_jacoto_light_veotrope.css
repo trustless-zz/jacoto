@@ -46,6 +46,8 @@
     --c-row-hvr:						rgb(250, 250, 250);
     --c-high:							rgb(255, 255, 255);
     --c-high-t:							rgb(255, 255, 255);
+    --c-tag:							rgba(255, 255, 255, .25);
+    --c-tag-hvr:						rgba(255, 255, 255, .40);
     --c-b1: 							#D096FA;/*muaVE*/
     --c-b2: 							#E88FFC;/*heliOTROPE*/
     --c-b3: 							#E4CAF7;

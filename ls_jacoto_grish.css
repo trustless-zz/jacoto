@@ -3,6 +3,7 @@
 @import url('res/userscripts.css');
 @import url('res/desktop.css');
 @import url('res/mobile.css');
+@import url('res/large_sidebar.css') screen and (min-width: 1387px);
 
 @import url('https://gazellegames.net/static/styles/game_room/cssFiles/holidayeffects.css');
 
@@ -46,6 +47,8 @@
     --c-row-hvr:						#1B2B3B;
     --c-high:							#192736;
     --c-high-t:							#000;
+    --c-tag:							rgba(0, 0, 0, .10);
+    --c-tag-hvr:						rgba(0, 0, 0, .16);
     --c-b1: 							#41719E;
     --c-b2: 							#437BA1;    
     --c-b3: 							#315678;
@@ -145,34 +148,3 @@ blockquote, pre {
     filter: drop-shadow(2px 2px 3px var(--c-main-shdw));}
 blockquote code {
     outline: 1px solid var(--c-main-shdw);}
-
-/* large sidebar */
-@media (min-width: 1387px) {
-#index .main_column {
-    width: calc(100% - 630px);}
-#index .sidebar {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    width: 615px;}
-#index .sidebar #stats,
-#index .sidebar #freeleech {
-    width: 100%;}
-#index .sidebar >div.box {
-    width: 300px;}
-#index .sidebar #stats .stats li {
-    float: left;
-    width: 50%;}
-#index #blogposts      {order: 1}
-#index #dailygazelle   {order: 2}
-#index #slides         {order: 3}
-#index #polcont        {order: 4}
-#index #stats          {order: 5}
-#index .box.news_post>.pad img {
-    max-width: 614px !important;}
-#index .sidebar #freeleech_time_left .points {
-    font-size: var(--p-head);}
-#index .sidebar #freeleech_time_left #progress_bar .main_bar {
-    animation: lsfl-pulse-b linear 2.7s infinite;
-    background-size: 1215px 100%;}
-}

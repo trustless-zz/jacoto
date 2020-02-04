@@ -1204,9 +1204,12 @@
         font-size: 0;}
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) .tags a {
-		font-size: 1em;
+		font-size: 12px;
 		margin-left: 0px;
+        padding: 0 2px;
 		line-height: 19px;}
+    .tags a {
+        background-color: var(--c-tag);}
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) .rating_container {}
 

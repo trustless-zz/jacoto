@@ -9,11 +9,43 @@ body {
 
 #torrent_table #hyphen {
     display: none;}
+
+.tags a {
+    /*margin-top: calc(12px * var(--p-lh) - 16px);*/
+    margin-top: 2px;
+    padding: 2px;}
+.rating_container {
+    margin-top: 1px;}
     
-.filter_torrents.advanced .flright:before {
-    content: '(View Less)';
+.filter_torrents.advanced #platcheckbox .flright:before {
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);
+    font-size: 14px;
+    line-height: 1em;
+    content: 'View Less';
+    white-space: nowrap;
     position: absolute;
-    bottom: 1077px;}
+    right: 0;
+    bottom: 1077px;
+    font-family: OpenSans, Helvetica, Arial, sans-serif !important;
+    font-weight: 400;
+    cursor: pointer;
+    outline: 0;
+    padding: 5px 10px;
+    /*color: var(--c-txt);
+    text-shadow: 1px 1px 1px var(--c-body);*/
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
+    background-size: 200% auto !important;
+    display: inline-block;}
+.filter_torrents.advanced #platcheckbox .flright:hover:before {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: var(--c-low);
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+.filter_torrents.advanced #platcheckbox .flright:active:before {
+    background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
     
 .sidebar {
     flex-direction: column;}

@@ -1536,7 +1536,7 @@ a:hover,
 a:hover .ratings,
 #user .thin >h2 a.flright:hover,
 span.user_title a:hover,
-.filter_torrents.advanced .flright:hover:before,
+/*.filter_torrents.advanced .flright:hover:before,*/
 .ui-widget-content a:hover {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
@@ -1757,7 +1757,7 @@ fancybox-button,
 tr.group_torrent >td a:before,
 #userinfo_stats a:before,
 #nav_userinfo a:before,
-.filter_torrents.advanced .flright:before,
+/*.filter_torrents.advanced .flright:before,*/
 
 #forums .forum_post .avatar >div:first-child:after,
 #shop li.item_li .item_description:after,
@@ -1819,6 +1819,13 @@ th[aria-disabled="false"],
 .torrent_table .ignored td.center:first-child:after,
 .torrent_table .ignored >td:not(:first-child):not(:nth-child(11)),
 .torrent_table .ignored:after,
+
+.torrent_table .pad.hidden .linkbox a,
+table#otherop.hidden ~table.otheroptoggle a,
+#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
+a.toggle_tags,
+.filter_torrents.advanced .flright,
+.filter_torrents.advanced #platcheckbox .flright:before,
 
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
@@ -2019,7 +2026,13 @@ table#uploadsrow a,
 .group_torrent td:first-child >a span,
 .box_game_ratings a[target="_blank"],
 input[type="checkbox"]:active,
-input[type="radio"]:active {
+input[type="radio"]:active,
+.torrent_table .pad.hidden .linkbox a:active,
+table#otherop.hidden ~table.otheroptoggle a:active,
+#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
+a.toggle_tags:active,
+.filter_torrents.advanced .flright:active,
+.filter_torrents.advanced #platcheckbox .flright:active:before {
     -webkit-transition: none;
     -o-transition: none;
     transition: none;}
@@ -3387,7 +3400,24 @@ td img[alt="Ratio"],
     white-space: normal;
     width: 100%;
     font-size: 12px;
-    line-height: var(--p-lh);}
+    line-height: 0;
+    visibility: hidden;
+    /*line-height: var(--p-lh);*/}
+.tags a {
+    font-size: 12px;
+    line-height: 1em;
+    /*margin-top: calc(12px * var(--p-lh) - 16px);*/
+    display: inline-block;
+    /*padding: 2px;*/
+    background-color: var(--c-tag);
+    color: var(--c-text-s);
+    visibility: visible;}
+tr:hover .tags a {
+    background-color: var(--c-tag-hvr);}
+#wrapper .tags a:hover {
+    background-color: var(--c-anchor-hvr-bcg);
+    color: var(--c-anchor-hvr);}
+
 .rating_container:not(:last-of-type) {
     margin-right: 4px;}
 .rating_container:last-of-type {
@@ -3564,7 +3594,12 @@ a[href^="javascript:Vote("] strong,
 #image_block a,
 #newthreadform #newthreadtext #answer_block a,
 .box.box_coltags .pad li a:nth-child(n+2),
-.box.box_coltags .head span[title="Add Tags"] a {
+.box.box_coltags .head span[title="Add Tags"] a,
+.filter_torrents.advanced .flright,
+a.toggle_tags,
+#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
+table#otherop.hidden ~table.otheroptoggle a,
+.torrent_table .pad.hidden .linkbox a {
     font-size: 14px;
     line-height: 14px;
     font-family: OpenSans, Helvetica, Arial, sans-serif !important;
@@ -3692,11 +3727,70 @@ a[href^="javascript:Vote("] strong:active,
     float: right;}
 .flleft {
 	float: left;}
-.filter_torrents.advanced .flright {
+a.toggle_tags,
+.filter_torrents.advanced .flright,
+#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
+table#otherop.hidden ~table.otheroptoggle a,
+.torrent_table .pad.hidden .linkbox a {
     position: relative;
-    margin-right: 5px;
+    font-size: 0;
+    line-height: 0;
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);
+    /*margin-right: 5px;
     line-height: 19px;
-    margin-top: 3px;}
+    margin-top: 3px;*/}
+
+.torrent_table .pad.hidden .linkbox a:before {
+    background: none;}
+.torrent_table .pad.hidden .linkbox a[onclick^="show_peers"]:before {
+    content: 'View Peerlist';}
+.torrent_table .pad.hidden .linkbox a[onclick^="show_downloads"]:before {
+    content: 'View Downloadlist';}
+.torrent_table .pad.hidden .linkbox a[onclick^="show_snatches"]:before {
+    content: 'View Snatchlist';}
+.torrent_table .pad.hidden .linkbox a[onclick^="show_files"]:before {
+    content: 'View Filelist';}
+.torrent_table .pad.hidden .linkbox a[onclick^="show_history"]:before {
+    content: 'View History';}
+/*.torrent_table .pad.hidden .linkbox a[onclick^="show_downloads"]:before {
+    content: 'View Downloadlist';}*/
+
+table#otherop.hidden ~table.otheroptoggle a:before  {
+    content: 'Hide Other Options';}
+table#otherop.hidden:not([style="display: table;"]) ~table.otheroptoggle a:before  {
+    content: 'View Other Options';}
+#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:before {
+    content: 'Gold History';}
+.filter_torrents.advanced #platdropdown .flright:after {
+    content: 'View More';}
+#taglist:not(.hidden) ~table a.toggle_tags:before {
+    content: 'Hide Tags';}
+#taglist.hidden ~table a.toggle_tags:before {
+    content: 'View Tags';}
+.filter_torrents.advanced #platcheckbox .flright:after {
+    content: 'View Less';}
+#wrapper #content .torrent_table .pad.hidden .linkbox a:before,
+table#otherop.hidden ~table.otheroptoggle a:before,
+#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:before,
+#taglist:not(.hidden) ~table a.toggle_tags:before,
+#taglist.hidden ~table a.toggle_tags:before,
+.filter_torrents.advanced #platcheckbox .flright:after,
+.filter_torrents.advanced .flright:after {
+    font-size: 14px;
+    line-height: 1em;}
+.torrent_table .pad.hidden .linkbox a:hover,
+table#otherop.hidden ~table.otheroptoggle a:hover,
+a.toggle_tags:hover,
+#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
+.filter_torrents.advanced .flright:hover {
+    color: var(--c-low);
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+.torrent_table .pad.hidden .linkbox a:active,
+table#otherop.hidden ~table.otheroptoggle a:active,
+#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
+a.toggle_tags:active,
+.filter_torrents.advanced .flright:active {
+    background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
 #user #content >span[style="float: right;"]:first-child { /*sharescore*/
     margin-top: 3px;}
 .torrent_notifications table.border .colhead strong,
@@ -4518,8 +4612,13 @@ button:hover,
 .alertable button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
+table#otherop.hidden ~table.otheroptoggle a:hover,
+#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
+.filter_torrents.advanced .flright:hover,
+a.toggle_tags:hover,
+.torrent_table .pad.hidden .linkbox a:hover,
 a[href^="javascript:IndexVote("] strong:hover,
 a[href^="javascript:Vote("] strong:hover,
 .box.box_coltags .pad li a:nth-child(n+2):hover,
