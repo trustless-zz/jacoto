@@ -3600,7 +3600,8 @@ a[href^="javascript:Vote("] strong,
 a.toggle_tags,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
-.torrent_table .pad.hidden .linkbox a {
+.torrent_table .pad.hidden .linkbox a,
+.filelist_title a.brackets {
     font-size: 14px;
     line-height: 14px;
     font-family: OpenSans, Helvetica, Arial, sans-serif !important;
@@ -3697,7 +3698,8 @@ a[href^="javascript:Vote("] strong:hover,
 #image_block a:hover,
 #newthreadform #newthreadtext #answer_block a:hover,
 .box.box_coltags .pad li a:nth-child(n+2):hover,
-.box.box_coltags .head span[title="Add Tags"] a:hover {
+.box.box_coltags .head span[title="Add Tags"] a:hover,
+.filelist_title a.brackets:hover {
     color: var(--c-low);
     background: var(--p-btn-hvr);}
 button:active,
@@ -3714,7 +3716,8 @@ a[href^="javascript:Vote("] strong:active,
 #image_block a:active,
 #newthreadform #newthreadtext #answer_block a:active,
 .box.box_coltags .pad li a:nth-child(n+2):active,
-.box.box_coltags .head span[title="Add Tags"] a:active {
+.box.box_coltags .head span[title="Add Tags"] a:active,
+.filelist_title a.brackets:active {
     background: var(--p-btn-act);}
 
 .filter_torrents .submit {
@@ -4631,7 +4634,8 @@ a[href^="javascript:Vote("] strong:hover,
 .box_albumart img:hover,
 .sidebar img:hover,
 .userratingdiv img,
-.hovereffect:hover {
+.hovereffect:hover,
+.filelist_title a.brackets:hover {
     -webkit-box-shadow: none;
     box-shadow: none;}
 
@@ -5562,6 +5566,8 @@ tr.likes td[id^="likers_"]:hover {
     background-position: right center;
     background-size: 0 0;
     opacity: .65;}
+.filelist_title a.brackets:before,
+.filelist_title a.brackets:after,
 .headerSort[data-sorter="false"] span:before,
 #user .box.box_personal .brackets:before,
 #user .box.box_personal .brackets:after,
@@ -9470,6 +9476,9 @@ body#user.inventory {}
 .alertable-message {
     margin: 5px 5px 20px 5px;
     font-size: 15px;}
+.filelist_title a.brackets {
+    margin: -5px 0 -5px 5px;
+    float: right;}
 
 
 
