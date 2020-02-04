@@ -3409,11 +3409,12 @@ td img[alt="Ratio"],
     /*margin-top: calc(12px * var(--p-lh) - 16px);*/
     display: inline-block;
     /*padding: 2px;*/
-    background-color: var(--c-tag);
+    /*background-color: var(--c-tag);*/
     color: var(--c-text-s);
     visibility: visible;}
 tr:hover .tags a {
-    background-color: var(--c-tag-hvr);}
+    /*background-color: var(--c-tag-hvr);*/
+    background-color: var(--c-tag);}
 #wrapper .tags a:hover {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
