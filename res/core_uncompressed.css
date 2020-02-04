@@ -3399,9 +3399,9 @@ td img[alt="Ratio"],
 .tags {
     white-space: normal;
     width: 100%;
-    font-size: 12px;
+    font-size: 0;
     line-height: 0;
-    visibility: hidden;
+    /*visibility: hidden;*/
     /*line-height: var(--p-lh);*/}
 .tags a {
     font-size: 12px;
@@ -3411,7 +3411,9 @@ td img[alt="Ratio"],
     /*padding: 2px;*/
     /*background-color: var(--c-tag);*/
     color: var(--c-text-s);
-    visibility: visible;}
+    /*visibility: visible;*/}
+.tags a:not(:last-child) {
+    margin-right: 6px;}
 tr:hover .tags a {
     /*background-color: var(--c-tag-hvr);*/
     background-color: var(--c-tag);}
