@@ -625,6 +625,10 @@ td.center.cats_col+td,
 
 .torrent_table #displayname #groupname a[title="View Torrent"], /* occasional &rlm; bug(?) fix */
 
+.post_id ~strong, /* for z-index on :hover */
+.post_id ~span,
+.post_id ~a,
+
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
 #forums .forum_index            tr:not(.colhead) td:first-child,
@@ -6600,6 +6604,9 @@ input[type="radio"]:active {
     content: none;}
 
 /** manually removing embedded brackets **/
+.linkbox a[href^="comments.php?action=collages&id"],
+.linkbox a[href^="comments.php?action=requests&id"],
+.linkbox a[href^="comments.php?action=torrents&id"],
 #more_news >a,
 .linkbox a[href^="upload.php?linkgroup="],
 .linkbox a[href^="torrents.php?action=redownload&type=hitnruns"],
@@ -6690,6 +6697,11 @@ input[type="radio"]:active {
     margin-top: 2px;
     display: inline-block;}
 
+.linkbox a[href^="comments.php?action=torrents&id"][href$="&type=uploaded"]:before      {content: 'Display comments left on torrents user has uploaded';}
+.linkbox a[href^="comments.php?action=collages&id"][href$="&type=created"]:before       {content: 'Display comments left on collections created by user';}
+.linkbox a[href^="comments.php?action=collages&id"][href$="&type=contributed"]:before   {content: 'Display comments left on collections user has contributed to';}
+.linkbox a[href^="comments.php?action=requests&id"][href$="&type=created"]:before       {content: 'Display comments left on requests created by user';}
+.linkbox a[href^="comments.php?action=requests&id"][href$="&type=voted"]:before         {content: "Display comments left on requests user voted on";}
 #more_news >a:before                                                            {content: 'Get More News';}
 .linkbox a[href^="torrents.php?action=redownload&type=hitnruns"]:before         {content: 'Download All HnRs';}
 .linkbox a[href^="user.php?action=notify_handle&label"]:before                  {content: 'Add to notifications';}
@@ -6700,9 +6712,12 @@ input[type="radio"]:active {
 #comments .linkbox a[href="comments.php?action=requests&type=created"]:before   {content: 'Display comments left on your requests';}
 #comments .linkbox a[href="comments.php?action=collages&type=contributed"]:before{content: "Display comments left on collections you've contributed to";}
 #comments .linkbox a[href="comments.php?action=collages&type=created"]:before   {content: 'Display comments left on your collections';}
+.linkbox a[href^="comments.php?action=torrents&id"]:before,
 #comments .linkbox a[href="comments.php?action=torrents"]:before                {content: 'Torrent comments';}
 #comments .linkbox a[href="comments.php?action=torrents&type=uploaded"]:before  {content: 'Display comments left on your uploads';}
+.linkbox a[href^="comments.php?action=requests&id"]:before,
 #comments .linkbox a[href="comments.php?action=requests"]:before                {content: 'Request comments';}
+.linkbox a[href^="comments.php?action=collages&id"]:before,
 #comments .linkbox a[href="comments.php?action=collages"]:before                {content: 'Collection comments';}
 #collections .linkbox a[href^="torrents.php?taglist="]:before                   {content: 'Search collection';}
 .linkbox a[href^="torrents.php?action=editimages&groupid"]:before               {content: 'Edit Images';}
@@ -7658,8 +7673,8 @@ h2 .user_title span.size8,
 h2 .user_title span.size9,
 h2 .user_title span.size10 {
     line-height: 19px;} */
-.forum_post .user_title img {
-    vertical-align: sub;
+#wrapper .forum_post .user_title img {
+    vertical-align: text-bottom;
     max-height: 19px;}
 #wrapper .user_title img {
     display: inline-block;
