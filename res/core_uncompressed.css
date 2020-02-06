@@ -623,6 +623,8 @@ td.center.cats_col+td,
 .collections_art_display td,
 #bookmarks td#sorting_head,
 
+.torrent_table #displayname #groupname a[title="View Torrent"], /* occasional &rlm; bug(?) fix */
+
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
 #forums .forum_index            tr:not(.colhead) td:first-child,
