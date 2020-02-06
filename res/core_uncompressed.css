@@ -1569,7 +1569,7 @@ span.user_title a:hover,
 #extlink_table              td.center.cats_col +td span:first-child a,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a, */
 /* .search.box.pad #cat_list a, */
-/* tr.pad.hidden .linkbox a, */
+/* tr.pad .linkbox a, */
 /*#collections #coverart.box li a,
 #bookmarks #coverart */.collage_images li a,
 /* #top10 td.center.cats_col +td >span a, */
@@ -1826,7 +1826,7 @@ th[aria-disabled="false"],
 .torrent_table .ignored >td:not(:first-child):not(:nth-child(11)),
 .torrent_table .ignored:after,
 
-.torrent_table .pad.hidden td >.linkbox a,
+.torrent_table tr.pad td >.linkbox a,
 table#otherop.hidden ~table.otheroptoggle a,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 a.toggle_tags,
@@ -2033,7 +2033,7 @@ table#uploadsrow a,
 .box_game_ratings a[target="_blank"],
 input[type="checkbox"]:active,
 input[type="radio"]:active,
-.torrent_table .pad.hidden td >.linkbox a:active,
+.torrent_table tr.pad td >.linkbox a:active,
 table#otherop.hidden ~table.otheroptoggle a:active,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
 a.toggle_tags:active,
@@ -2966,7 +2966,7 @@ li.graph {
     border-top-color: var(--c-table-brdr);
     color: var(--c-text-s);
     vertical-align: middle;}
-.torrent_table tr.pad.hidden td {
+.torrent_table tr.pad td {
     color: unset;}
 #artist table#requests tr:not(.colhead):not(.colhead_dark) td,
 #user .box_requests div#requests tr:not(.colhead):not(.colhead_dark) td,
@@ -3009,7 +3009,7 @@ table.adventure_table .colhead td {
 #collections #torrent_table .group.discog td[colspan="5"] >strong,
 #collections .group_torrent td span,
 #bookmarks #torrent_table td[colspan="3"],
-#torrents .torrent_details .torrent_table .pad.hidden td,
+#torrents .torrent_details .torrent_table tr.pad td,
 #torrents .group_torrent td:first-child,
 #artist #torrent_table .group_torrent td[colspan="2"],
 #torrents .torrent_details tr table tr:not(.colhead_dark):not(.colhead) td,
@@ -3608,7 +3608,7 @@ a[href^="javascript:Vote("] strong,
 a.toggle_tags,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
-.torrent_table .pad.hidden td >.linkbox a,
+.torrent_table tr.pad td >.linkbox a,
 .filelist_title a.brackets {
     font-size: 14px;
     line-height: 14px;
@@ -3743,7 +3743,7 @@ a.toggle_tags,
 .filter_torrents.advanced .flright,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
-.torrent_table .pad.hidden td >.linkbox a {
+.torrent_table tr.pad td >.linkbox a {
     position: relative;
     font-size: 0;
     line-height: 0;
@@ -3752,22 +3752,22 @@ table#otherop.hidden ~table.otheroptoggle a,
     line-height: 19px;
     margin-top: 3px;*/}
 
-.torrent_table .pad.hidden td >.linkbox a:before {
+.torrent_table tr.pad td >.linkbox a:before {
     background: none;}
-.torrent_table .pad.hidden td >.linkbox a[onclick^="show_peers"]:before {
+.torrent_table tr.pad td >.linkbox a[onclick^="show_peers"]:before {
     content: 'View Peerlist';}
-.torrent_table .pad.hidden td >.linkbox a[onclick^="show_downloads"]:before {
+.torrent_table tr.pad td >.linkbox a[onclick^="show_downloads"]:before {
     content: 'View Downloadlist';}
-.torrent_table .pad.hidden td >.linkbox a[onclick^="show_snatches"]:before {
+.torrent_table tr.pad td >.linkbox a[onclick^="show_snatches"]:before {
     content: 'View Snatchlist';}
-.torrent_table .pad.hidden td >.linkbox a[onclick^="show_files"]:before {
+.torrent_table tr.pad td >.linkbox a[onclick^="show_files"]:before {
     content: 'View Filelist';}
-.torrent_table .pad.hidden td >.linkbox a[onclick^="show_history"]:before {
+.torrent_table tr.pad td >.linkbox a[onclick^="show_history"]:before {
     content: 'View History';}
-.torrent_table .pad.hidden td >.linkbox a[onclick^="show_reported"]:before {
+.torrent_table tr.pad td >.linkbox a[onclick^="show_reported"]:before {
     color: var(--c-red);
     content: 'View Report Information';}
-/*.torrent_table .pad.hidden td >.linkbox a[onclick^="show_downloads"]:before {
+/*.torrent_table tr.pad td >.linkbox a[onclick^="show_downloads"]:before {
     content: 'View Downloadlist';}*/
 
 table#otherop.hidden ~table.otheroptoggle a:before  {
@@ -3784,7 +3784,7 @@ table#otherop.hidden:not([style="display: table;"]) ~table.otheroptoggle a:befor
     content: 'View Tags';}
 .filter_torrents.advanced #platcheckbox .flright:after {
     content: 'View Less';}
-#wrapper #content .torrent_table .pad.hidden td >.linkbox a:before,
+#wrapper #content .torrent_table tr.pad td >.linkbox a:before,
 table#otherop.hidden ~table.otheroptoggle a:before,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:before,
 #taglist:not(.hidden) ~table a.toggle_tags:before,
@@ -3793,14 +3793,14 @@ table#otherop.hidden ~table.otheroptoggle a:before,
 .filter_torrents.advanced .flright:after {
     font-size: 14px;
     line-height: 1em;}
-.torrent_table .pad.hidden td >.linkbox a:hover,
+.torrent_table tr.pad td >.linkbox a:hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
 a.toggle_tags:hover,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
 .filter_torrents.advanced .flright:hover {
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
-.torrent_table .pad.hidden td >.linkbox a:active,
+.torrent_table tr.pad td >.linkbox a:active,
 table#otherop.hidden ~table.otheroptoggle a:active,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
 a.toggle_tags:active,
@@ -3907,7 +3907,7 @@ body:not(#upload) #artist_tr + tr td.label,
 #torrents .torrent_notifications table.border tr:not(.colhead) td, */
 .filter_torrents.advanced td[colspan="7"] {
     color: var(--c-text-s);}
-.torrent_details .torrent_table tr.pad.hidden tr td,
+.torrent_details .torrent_table tr.pad tr td,
 .filter_torrents.advanced label {
     color: var(--c-txt);}
 
@@ -4321,8 +4321,8 @@ li:not(.suggested_similar) .similar_votes >span {
 #clans #clan_stats >div .colhead,
 #staff .thin >.box.pad .colhead,
 #rules table.required_ratio .colhead,
-.torrent_details .torrent_table tr.pad.hidden .colhead,
-.torrent_details .torrent_table tr.pad.hidden .colhead_dark,
+.torrent_details .torrent_table tr.pad .colhead,
+.torrent_details .torrent_table tr.pad .colhead_dark,
 #achievements .colhead,
 .thin#user_fight_attacks table.border .colhead,
 #seedtime_tokens #tokens_breakdown .colhead,
@@ -4345,8 +4345,8 @@ li:not(.suggested_similar) .similar_votes >span {
 #user .thin >.header:first-child ~h3 +.box.pad:last-child .colhead td,
 #upload #content >div[style="margin:0px auto;width:700px"] .colhead td,
 #seedtime_tokens #tokens_breakdown .colhead td,
-.torrent_details .torrent_table tr.pad.hidden .colhead td,
-.torrent_details .torrent_table tr.pad.hidden .colhead_dark td,
+.torrent_details .torrent_table tr.pad .colhead td,
+.torrent_details .torrent_table tr.pad .colhead_dark td,
 #top10 .thin >.linkbox ~div:not(.center) >table.border .colhead td,
 #artist .main_column table .colhead td,
 #artist .main_column table .colhead_dark td,
@@ -4633,7 +4633,7 @@ table#otherop.hidden ~table.otheroptoggle a:hover,
 .box_tags .stats.nobullet div a:hover,
 .filter_torrents.advanced .flright:hover,
 a.toggle_tags:hover,
-.torrent_table .pad.hidden td >.linkbox a:hover,
+.torrent_table tr.pad td >.linkbox a:hover,
 a[href^="javascript:IndexVote("] strong:hover,
 a[href^="javascript:Vote("] strong:hover,
 .box.box_coltags .pad li a:nth-child(n+2):hover,
@@ -4793,13 +4793,13 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     background-color: var(--c-row-hvr) !important;}
 */
 
-#wrapper .torrent_table .pad.hidden table.reportinfo_table tr:not(.colhead_dark),
+#wrapper .torrent_table tr.pad table.reportinfo_table tr:not(.colhead_dark),
 #reports .thin>table >tbody >.colhead +tr:last-child,
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td:empty {
     background-color: transparent !important;}
 
-.torrent_table .pad.hidden div[id^="snatches_"] td:nth-child(2),
-.torrent_table .pad.hidden div[id^="downloads_"] td:nth-child(2),
+.torrent_table tr.pad div[id^="snatches_"] td:nth-child(2),
+.torrent_table tr.pad div[id^="downloads_"] td:nth-child(2),
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td:nth-child(2) {
 	border-right: var(--p-border);
     border-right-color: var(--c-table-brdr);}
@@ -5664,7 +5664,7 @@ form#drag_drop_collage_form .drag_drop_save ~.drag_drop_save,
 #wrapper .clan_stat_totals table.border tr:last-child,
 .forum_post tr.likes,
 .thin.torrent_history table.border:not(#th_search) tr:not(.colhead):last-child,
-.torrent_details .pad.hidden div[id^=history] tr:not(.colhead):last-child {
+.torrent_details tr.pad div[id^=history] tr:not(.colhead):last-child {
 	border-top: var(--p-border);
     border-top-color: var(--c-table-brdr);
     background-color: var(--c-tgroup);}
@@ -5674,7 +5674,7 @@ form#drag_drop_collage_form .drag_drop_save:first-child {
     border-bottom-color: var(--c-table-brdr);
     background-color: var(--c-tgroup);}
 
-#torrents #wrapper .torrent_details .pad.hidden div[id^=history] tr:not(.colhead):last-child {
+#torrents #wrapper .torrent_details tr.pad div[id^=history] tr:not(.colhead):last-child {
 	border-top: var(--p-border);
     border-top-color: var(--c-table-brdr);
     background-color: var(--c-tgroup)!important;}
@@ -6158,7 +6158,7 @@ input[type="radio"]:active {
     vertical-align: text-bottom;
     margin-top: -1px; /* bring line-height back to 19px */}
 .item_li #item_type img,
-.torrent_details .pad.hidden img[title="Gold"],
+.torrent_details tr.pad img[title="Gold"],
 #clans td.label img {
     vertical-align: text-bottom;}
 
@@ -6586,7 +6586,7 @@ input[type="radio"]:active {
 /* #torrents #content >#currentlinks td ul.thin strong, //link groups -revisit
 #torrents #content >#currentlinks td ul.thin a, */
 #collections .linkbox a,
-.torrent_details .pad.hidden div[id^=peers] .linkbox {
+.torrent_details tr.pad div[id^=peers] .linkbox {
     font-size: 14px;
     line-height: var(--p-lh);}
 
@@ -6678,7 +6678,7 @@ input[type="radio"]:active {
     font-size: 0;
     line-height: 0;}
 
-.torrent_table .pad.hidden div >.linkbox,
+.torrent_table tr.pad div >.linkbox,
 .linkbox >strong,
 .linkbox a,
 #wrapper #content .linkbox a:before,
@@ -6820,7 +6820,7 @@ input[type="radio"]:active {
     font-size: var(--p-head);
     font-weight: 600;}
 
-.torrent_details .pad.hidden div[id^=files_] {
+.torrent_details tr.pad div[id^=files_] {
     max-height: 2000px;
     overflow-x: auto;}
 
@@ -7954,8 +7954,8 @@ span.size5 img {
 	float: left;
 	width: 100%;
 	padding: 10px 5px;}
-.torrent_table .pad.hidden div[id^="snatches_"] td,
-.torrent_table .pad.hidden div[id^="downloads_"] td,
+.torrent_table tr.pad div[id^="snatches_"] td,
+.torrent_table tr.pad div[id^="downloads_"] td,
 .wiki_index span.size7 strong,
 .wiki_index span.size6 strong,
 .wiki_index span.size5 strong,
