@@ -8499,12 +8499,18 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #crafting_panel .item.used,
 #equipment .item.used,
 #wrapper #trading_panel .item.used {
-	background: url('https://gazellegames.net/static/styles/game_room/images/shop/itempattern.png') repeat, url('https://gazellegames.net/static/styles/game_room/images/icons/equipment_used.png') 95% 5% no-repeat;}
+	background:
+        /*url('https://gazellegames.net/static/styles/game_room/images/shop/itempattern.png') repeat,*/
+        var(--c-edition)
+        url('https://gazellegames.net/static/styles/game_room/images/icons/equipment_used.png') 95% 5% no-repeat;}
 
 #crafting_panel .item.broken,
 #equipment .item.broken,
 #wrapper #trading_panel .item.broken {
-	background: url('https://gazellegames.net/static/styles/game_room/images/shop/itempattern.png') repeat, url('https://gazellegames.net/static/styles/game_room/images/icons/equipment_broken.png') 95% 5% no-repeat;}
+	background:
+        /*url('https://gazellegames.net/static/styles/game_room/images/shop/itempattern.png') repeat,*/
+        var(--c-edition)
+        url('https://gazellegames.net/static/styles/game_room/images/icons/equipment_broken.png') 95% 5% no-repeat;}
 
 #crafting_panel .item img,
 #equipment .item img,
