@@ -14,6 +14,7 @@ body >#preview-popup img,
 .fancybox-image,
 .lightbox img {
     background-image: url('icons/323232/transparent.svg');}
+#css_gallery .preview_image,
 #wrapper .userscript-gallery-image,
 #artist .sidebar img,
 .sidebar .box.box_albumart img,

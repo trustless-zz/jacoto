@@ -1588,6 +1588,7 @@ span.user_title a:hover,
 .collections_art_display .remove_bookmark_div a,
 
 .box.box_info span[style="float:right;"] a,
+#css_gallery .preview_image a,
 
 .username_badges a,
 table#likesrow a,
@@ -1621,6 +1622,8 @@ a,
 .show_torrents,
 .hide_torrents,
 .last_read,
+
+#css_gallery .preview_image,
 
 #dailygazelle img,
 #slides img,
@@ -1828,6 +1831,7 @@ th[aria-disabled="false"],
 
 .torrent_table tr.pad td >.linkbox a,
 table#otherop.hidden ~table.otheroptoggle a,
+a#toggle_css_gallery,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 a.toggle_tags,
 .filter_torrents.advanced .flright,
@@ -2035,6 +2039,7 @@ input[type="checkbox"]:active,
 input[type="radio"]:active,
 .torrent_table tr.pad td >.linkbox a:active,
 table#otherop.hidden ~table.otheroptoggle a:active,
+a#toggle_css_gallery:active,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
 a.toggle_tags:active,
 .filter_torrents.advanced .flright:active,
@@ -2128,6 +2133,7 @@ img#authcode,
 .lightbox img,
 .profile .box_art_gallery .gallery_row img,
 .screenshots img,
+#css_gallery .preview_image,
 .sidebar .box.box_albumart img,
 .sidebar .box.box_image_coverart a img,
 /* #bookmarks #collage_table td img, - outdated bookmarks */
@@ -2368,6 +2374,7 @@ input[disabled] {
 .profile .box_art_gallery .small_row .gallery_small_slot:hover a,
 .fancybox-is-zoomable .fancybox-image:hover,
 .screenshots img:hover,
+#css_gallery .preview_image:hover,
 .sidebar img:hover {
     border-color: var(--c-b3);}
 .sidebar #slides a.prev {
@@ -3290,6 +3297,8 @@ textarea,
 #user .box.box_items #itemsdiv td >div,
 #crafting_recipes,
 
+#css_gallery .preview_image,
+
 .permissions {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
@@ -3609,6 +3618,7 @@ a[href^="javascript:Vote("] strong,
 .box.box_coltags .head span[title="Add Tags"] a,
 .filter_torrents.advanced .flright,
 a.toggle_tags,
+a#toggle_css_gallery,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
 .torrent_table tr.pad td >.linkbox a,
@@ -3744,6 +3754,7 @@ a[href^="javascript:Vote("] strong:active,
 	float: left;}
 a.toggle_tags,
 .filter_torrents.advanced .flright,
+a#toggle_css_gallery,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
 .torrent_table tr.pad td >.linkbox a {
@@ -3773,9 +3784,11 @@ table#otherop.hidden ~table.otheroptoggle a,
 /*.torrent_table tr.pad td >.linkbox a[onclick^="show_downloads"]:before {
     content: 'View Downloadlist';}*/
 
-table#otherop.hidden ~table.otheroptoggle a:before  {
+a#toggle_css_gallery:before {
+    content: 'Show gallery';}
+table#otherop.hidden ~table.otheroptoggle a:before {
     content: 'Hide Other Options';}
-table#otherop.hidden:not([style="display: table;"]) ~table.otheroptoggle a:before  {
+table#otherop.hidden:not([style="display: table;"]) ~table.otheroptoggle a:before {
     content: 'View Other Options';}
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:before {
     content: 'Gold History';}
@@ -3789,6 +3802,7 @@ table#otherop.hidden:not([style="display: table;"]) ~table.otheroptoggle a:befor
     content: 'View Less';}
 #wrapper #content .torrent_table tr.pad td >.linkbox a:before,
 table#otherop.hidden ~table.otheroptoggle a:before,
+a#toggle_css_gallery:before,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:before,
 #taglist:not(.hidden) ~table a.toggle_tags:before,
 #taglist.hidden ~table a.toggle_tags:before,
@@ -3799,12 +3813,14 @@ table#otherop.hidden ~table.otheroptoggle a:before,
 .torrent_table tr.pad td >.linkbox a:hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
 a.toggle_tags:hover,
+a#toggle_css_gallery:hover,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
 .filter_torrents.advanced .flright:hover {
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
 .torrent_table tr.pad td >.linkbox a:active,
 table#otherop.hidden ~table.otheroptoggle a:active,
+a#toggle_css_gallery:active,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
 a.toggle_tags:active,
 .filter_torrents.advanced .flright:active {
@@ -4017,8 +4033,10 @@ body:not(#upload) #artist_tr + tr td.label,
     margin: 0 10px 10px 0;
     align-self: center;
     cursor: default;}
+#css_gallery .preview_wrapper:nth-child(4n),
 .screenshots a:nth-child(4n) {
     margin-right: 0;}
+#css_gallery .preview_image,
 .screenshots img {
     max-width: 100% !important;
     border: var(--p-img-border);
@@ -4135,7 +4153,7 @@ strong.mature +strong +br,
 
 .similar {
     position: relative;
-    padding: 0 0 0 10px;}
+    padding: 0 0 0 5px;}
 .similar ul {
     min-height: 5px;
     padding: 5px 0 0 0;
@@ -4148,7 +4166,7 @@ strong.mature +strong +br,
 .similar li {
     padding: 5px 0;
     width: calc(20% - 10px);
-    margin: 0 10px 10px 0;
+    margin: 0 5px 10px 5px;
     align-self: center;}
 .sidebar .box.box_image_coverart a {
     display: inline;}
@@ -4620,6 +4638,7 @@ textarea {
 textarea:focus {
     outline-width: 1px !important;}
 
+#css_gallery .preview_image,
 img#authcode,
 .similar img,
 .screenshots img,
@@ -4633,6 +4652,7 @@ button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
+a#toggle_css_gallery:hover,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
@@ -4646,6 +4666,7 @@ a[href^="javascript:Vote("] strong:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:hover,
 .similar img:hover,
+#css_gallery .preview_image:hover,
 .screenshots img:hover,
 .box_albumart img:hover,
 .sidebar img:hover,
@@ -7868,7 +7889,8 @@ span.size5 img {
     padding: 5px 0 5px 10px;
     list-style: none;}
 /*#collections #coverart.box img,
-#bookmarks #coverart */.collage_images img {
+#bookmarks #coverart */.collage_images img,
+#css_gallery .preview_image {
     width: 100%;
     height: auto;}
 #collections .sidebar .pad {
@@ -8116,6 +8138,7 @@ span.size5 img {
 .profile .box_stats .stat {
 	padding-left: 25px;}
 
+#css_gallery .preview_image a,
 #user .box.box_items #itemsdiv tbody {
     display: block;}
 #user .box.box_items #itemsdiv tr {
@@ -9580,9 +9603,22 @@ body#user.inventory {}
 
 
 /*** The CSS Gallery ***/
-#css_gallery {
-	overflow-y: scroll;}
+/*#css_gallery {
+	overflow-y: scroll;}*/
 
+#css_gallery .preview_wrapper {
+    width: calc(25% - (30px / 4));
+    height: auto;
+    margin: 5px 10px 5px 0;}
+#css_gallery {
+    overflow: visible;
+    margin: 5px 0;
+    font-size: 0;
+    line-height: 0;}
+#css_gallery .preview_name {
+    font-size: 14px;
+    line-height: var(--p-lh);
+    margin: 5px 0 10px 0;}
 
 /* Staff Sections */
 #user_badge_edit_tr input {

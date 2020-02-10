@@ -1156,8 +1156,14 @@ body {
 }*/
 
 @media (min-width: 801px) and (max-width: 1200px) {
-table#existing_freeleech_pots td {
-    white-space: normal;}
+    #css_gallery .preview_wrapper {
+        width: calc((100% / 3) - (20px / 3));}
+    #css_gallery .preview_wrapper:nth-child(3n) {
+        margin-right: 0;}
+    #css_gallery .preview_wrapper:nth-child(4n) {
+        margin-right: 10px;}
+    table#existing_freeleech_pots td {
+        white-space: normal;}
 }
 @media (min-width: 801px) and (max-width: 920px) {
 table#existing_freeleech_pots td {
