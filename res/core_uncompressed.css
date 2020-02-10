@@ -7679,7 +7679,8 @@ h2 .user_title span.size9,
 h2 .user_title span.size10 {
     line-height: 19px;} */
 #wrapper .forum_post .user_title img {
-    vertical-align: text-bottom;
+    /*vertical-align: text-bottom;*/
+    margin: -2px 0; /* an oversized image, while being limited to 19px, will make the parent grow by 1.75px for some reason */
     max-height: 19px;}
 #wrapper .user_title img {
     display: inline-block;
