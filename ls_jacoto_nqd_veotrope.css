@@ -46,8 +46,8 @@
     --c-row-hvr:						rgb(40, 40, 40);
     --c-high:							rgb(35, 35, 35);
     --c-high-t:							rgb(0, 0, 0);
-    --c-tag:							rgba(0, 0, 0, .09);
-    --c-tag-hvr:						rgba(0, 0, 0, .15);
+    --c-tag:							rgb(58, 58, 58);
+    --c-tag-2:						rgb(33, 33, 33);
     --c-b1: 							#825D9C;
     --c-b2: 							#925A9E;
     --c-b3: 							#634C74;

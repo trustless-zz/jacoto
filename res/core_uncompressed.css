@@ -3421,9 +3421,12 @@ td img[alt="Ratio"],
 .tags a:not(:last-child) {
     margin-right: 6px;}
 tr:hover .tags a {
-    /*background-color: var(--c-tag-hvr);*/
     background-color: var(--c-tag);}
-#wrapper .tags a:hover {
+/*#requests tr:hover .tags a,*/
+#top10 tr:hover .tags a,
+table#requests_list tr:hover .tags a {
+    background-color: var(--c-tag-2);}
+#wrapper #content .tags a:hover {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
 
@@ -4112,6 +4115,8 @@ strong.mature +strong +br,
 
 #footer >br,
 #clans #clan_stats >br,
+
+.tags a[href="?tags="],
 
 #artist td.edition_info ~td, /* torrent checked/unchecked leftover */
 

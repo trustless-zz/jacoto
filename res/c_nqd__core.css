@@ -32,8 +32,8 @@
     --c-row-hvr:						rgb(40, 40, 40);
     --c-high:							rgb(35, 35, 35);
     --c-high-t:							rgb(0, 0, 0);
-    --c-tag:							rgba(0, 0, 0, .09);
-    --c-tag-hvr:						rgba(0, 0, 0, .15);
+    --c-tag:							rgb(58, 58, 58);
+    --c-tag-2:						rgb(33, 33, 33);
     --c-hovereffect: 					rgba(0, 0, 0, .8);
     --c-b00: 							rgba(0, 0, 0, 0);
     --c-anchor-hvr: 					rgb(255, 255, 255);

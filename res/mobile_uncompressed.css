@@ -1210,6 +1210,9 @@
 		line-height: 19px;}
     .tags a {
         background-color: var(--c-tag);}
+    #top10 .tags a,
+    table#requests_list .tags a {
+        background-color: var(--c-tag-2);}
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) .rating_container {}
 

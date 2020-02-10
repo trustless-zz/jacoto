@@ -46,8 +46,8 @@
     --c-row-hvr:						rgb(250, 250, 250);
     --c-high:							rgb(255, 255, 255);
     --c-high-t:							rgb(255, 255, 255);
-    --c-tag:							rgba(255, 255, 255, .25);
-    --c-tag-hvr:						rgba(255, 255, 255, .40);
+    --c-tag:							rgb(233, 233, 233);
+    --c-tag-2:						rgb(255, 255, 255);
     --c-b1: 							#F29461;/*saNDY BRown*/
     --c-b2: 							#F5977A;/*Apricot*/
     --c-b3: 							#F4C9B2;
