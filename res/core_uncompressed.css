@@ -1834,6 +1834,7 @@ table#otherop.hidden ~table.otheroptoggle a,
 a#toggle_css_gallery,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 a.toggle_tags,
+#user #userform #platcheckbox +a,
 .filter_torrents.advanced .flright,
 .filter_torrents.advanced #platcheckbox .flright:before,
 
@@ -2042,6 +2043,7 @@ table#otherop.hidden ~table.otheroptoggle a:active,
 a#toggle_css_gallery:active,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
 a.toggle_tags:active,
+#user #userform #platcheckbox +a:active,
 .filter_torrents.advanced .flright:active,
 .filter_torrents.advanced #platcheckbox .flright:active:before {
     -webkit-transition: none;
@@ -3439,6 +3441,11 @@ table#requests_list tr:hover .tags a {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
 
+.thin.torrent_history .tags {
+    color: var(--c-text-s);
+    font-size: 12px;
+    line-height: var(--p-lh);}
+
 .rating_container:not(:last-of-type) {
     margin-right: 4px;}
 .rating_container:last-of-type {
@@ -3616,6 +3623,7 @@ a[href^="javascript:Vote("] strong,
 #newthreadform #newthreadtext #answer_block a,
 .box.box_coltags .pad li a:nth-child(n+2),
 .box.box_coltags .head span[title="Add Tags"] a,
+#user #userform #platcheckbox +a,
 .filter_torrents.advanced .flright,
 a.toggle_tags,
 a#toggle_css_gallery,
@@ -3753,6 +3761,7 @@ a[href^="javascript:Vote("] strong:active,
 .flleft {
 	float: left;}
 a.toggle_tags,
+#user #userform #platcheckbox +a,
 .filter_torrents.advanced .flright,
 a#toggle_css_gallery,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
@@ -3784,6 +3793,10 @@ table#otherop.hidden ~table.otheroptoggle a,
 /*.torrent_table tr.pad td >.linkbox a[onclick^="show_downloads"]:before {
     content: 'View Downloadlist';}*/
 
+#user #userform #platcheckbox +a:before {
+    content: 'Hide';}
+#user #userform #platcheckbox[style="display: none;"] +a:before {
+    content: 'View';}
 a#toggle_css_gallery:before {
     content: 'Show gallery';}
 table#otherop.hidden ~table.otheroptoggle a:before {
@@ -3807,7 +3820,8 @@ a#toggle_css_gallery:before,
 #taglist:not(.hidden) ~table a.toggle_tags:before,
 #taglist.hidden ~table a.toggle_tags:before,
 .filter_torrents.advanced #platcheckbox .flright:after,
-.filter_torrents.advanced .flright:after {
+#user #userform #platcheckbox +a:before,
+.filter_torrents.advanced .flright:before {
     font-size: 14px;
     line-height: 1em;}
 .torrent_table tr.pad td >.linkbox a:hover,
@@ -3815,6 +3829,7 @@ table#otherop.hidden ~table.otheroptoggle a:hover,
 a.toggle_tags:hover,
 a#toggle_css_gallery:hover,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
+#user #userform #platcheckbox +a:hover,
 .filter_torrents.advanced .flright:hover {
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
@@ -3823,6 +3838,7 @@ table#otherop.hidden ~table.otheroptoggle a:active,
 a#toggle_css_gallery:active,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
 a.toggle_tags:active,
+#user #userform #platcheckbox +a:active,
 .filter_torrents.advanced .flright:active {
     background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
 #user #content >span[style="float: right;"]:first-child { /*sharescore*/
@@ -4656,6 +4672,7 @@ a#toggle_css_gallery:hover,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
+#user #userform #platcheckbox +a:hover,
 .filter_torrents.advanced .flright:hover,
 a.toggle_tags:hover,
 .torrent_table tr.pad td >.linkbox a:hover,
