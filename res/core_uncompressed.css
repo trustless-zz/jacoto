@@ -3434,8 +3434,17 @@ td img[alt="Ratio"],
 tr:hover .tags a {
     background-color: var(--c-tag);}
 /*#requests tr:hover .tags a,*/
-#top10 tr:hover .tags a,
-table#requests_list tr:hover .tags a {
+.torrent_notifications      tr:hover .tags a,
+#uploaded_table             tr:hover .tags a,
+#seeding_table              tr:hover .tags a,
+#leeching_table             tr:hover .tags a,
+#snatched_table             tr:hover .tags a,
+#snatched_not_seeding_table tr:hover .tags a,
+#seeding_not_snatched_table tr:hover .tags a,
+#downloaded_table           tr:hover .tags a,
+#extlink_table              tr:hover .tags a,
+#top10                      tr:hover .tags a,
+table#requests_list         tr:hover .tags a {
     background-color: var(--c-tag-2);}
 #wrapper #content .tags a:hover {
     background-color: var(--c-anchor-hvr-bcg);
