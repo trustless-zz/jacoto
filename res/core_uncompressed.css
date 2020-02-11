@@ -3830,7 +3830,7 @@ a#toggle_css_gallery:before,
 #taglist.hidden ~table a.toggle_tags:before,
 .filter_torrents.advanced #platcheckbox .flright:after,
 #user #userform #platcheckbox +a:before,
-.filter_torrents.advanced .flright:before {
+.filter_torrents.advanced .flright:after {
     font-size: 14px;
     line-height: 1em;}
 .torrent_table tr.pad td >.linkbox a:hover,
