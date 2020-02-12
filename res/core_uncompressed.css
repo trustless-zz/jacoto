@@ -115,6 +115,9 @@ td.read_locked_sticky:before,
     mask-repeat: no-repeat;
     mask-size: contain;
     background-color: var(--c-text-s);}
+/*#wrapper .torrent_table .show_torrents_link:after {
+    -webkit-mask-size: 20px 20px;
+    mask-size: 20px 20px;}*/
 .torrent_table .addbookmark:hover {
     background-color: var(--c-on);}
 .collections_art_display .remove_bookmark_div:hover,
@@ -3047,11 +3050,11 @@ table.adventure_table .colhead td {
 .torrent_table .show_torrents,
 .torrent_table .hide_torrents {
     display: block;
-    height: 20px;
-    width: 20px;}
+    height: 100%;
+    width: 100%;}
 .torrent_table .show_torrents_link {
-    height: 20px;
-    width: 20px;
+    height: 100%;
+    width: 30px;
     cursor: default;
     z-index: 2;
     position: relative;}
@@ -3104,13 +3107,15 @@ table.adventure_table .colhead td {
 #torrents .torrent_notifications .noticon +td >span:first-child >a {
     margin-right: 3px;
     display: inline-block;}
-.torrent_table .show_torrents .show_torrents_link {
+.torrent_table .show_torrents .show_torrents_link:after {
     transform: rotate(-90deg);}
-.torrent_table .hide_torrents .show_torrents_link {
+.torrent_table .hide_torrents .show_torrents_link:after {
     transform: rotate(0deg);}
 #collections .group.discog td.collicon:nth-child(1),
 .torrent_table td.center:first-child {
-    width: 20px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
     overflow: hidden;
     position: relative;
 	border-right: var(--p-border);
@@ -3127,13 +3132,18 @@ th[aria-disabled="false"]:active,
 #collections .group.discog td.collicon:active:nth-child(1),
 .torrent_table td.center:active:first-child {
     background-color: var(--c-colhead-act);}
-.torrent_table .show_torrents_link:before {
+/*.torrent_table .show_torrents_link:before {
     content: '';
     position: absolute;
     left: -100px;
     top: -150px;
     width: 300px;
-    height: 300px;}
+    height: 300px;}*/
+.torrent_table .show_torrents_link:after {
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+    width: 20px;
+    height: 20px;}
 .edition_info {
     height: 15px;
     position: relative;
