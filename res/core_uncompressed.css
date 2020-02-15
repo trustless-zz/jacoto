@@ -1839,6 +1839,7 @@ a#toggle_css_gallery,
 a.toggle_tags,
 #user #userform #platcheckbox +a,
 .filter_torrents.advanced .flright,
+#adventure_search .flright a[onclick],
 #shop_search .flright a[onclick],
 .filter_torrents.advanced #platcheckbox .flright:before,
 a#tag_show\/hide,
@@ -2051,6 +2052,7 @@ a.toggle_tags:active,
 a#tag_show\/hide:active,
 #user #userform #platcheckbox +a:active,
 .filter_torrents.advanced .flright:active,
+#adventure_search .flright a[onclick]:active,
 #shop_search .flright a[onclick]:active,
 .filter_torrents.advanced #platcheckbox .flright:active:before {
     -webkit-transition: none;
@@ -3654,6 +3656,7 @@ a[href^="javascript:Vote("] strong,
 a#tag_show\/hide,
 .filter_torrents.advanced .flright,
 #shop_search .flright a[onclick],
+#adventure_search .flright a[onclick],
 a.toggle_tags,
 a#toggle_css_gallery,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
@@ -3804,6 +3807,7 @@ table#otherop.hidden ~table.otheroptoggle a,
     /*margin-right: 5px;
     line-height: 19px;
     margin-top: 3px;*/}
+#adventure_search .flright a[onclick],
 #shop_search .flright a[onclick] {
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);}
 
@@ -3859,6 +3863,7 @@ a#tag_show\/hide:before,
 .filter_torrents.advanced .flright:after {
     font-size: 14px;
     line-height: 1em;}
+#adventure_search .flright a[onclick]:hover,
 #shop_search .flright a[onclick]:hover,
 .torrent_table tr.pad td >.linkbox a:hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
@@ -3870,6 +3875,7 @@ a#tag_show\/hide:hover,
 .filter_torrents.advanced .flright:hover {
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+#adventure_search .flright a[onclick]:active,
 #shop_search .flright a[onclick]:active,
 .torrent_table tr.pad td >.linkbox a:active,
 table#otherop.hidden ~table.otheroptoggle a:active,
@@ -4714,6 +4720,7 @@ a#toggle_css_gallery:hover,
 #user #userform #platcheckbox +a:hover,
 a#tag_show\/hide:hover,
 .filter_torrents.advanced .flright:hover,
+#adventure_search .flright a[onclick]:hover,
 #shop_search .flright a[onclick]:hover,
 a.toggle_tags:hover,
 .torrent_table tr.pad td >.linkbox a:hover,
