@@ -1839,6 +1839,7 @@ a#toggle_css_gallery,
 a.toggle_tags,
 #user #userform #platcheckbox +a,
 .filter_torrents.advanced .flright,
+#shop_search .flright a[onclick],
 .filter_torrents.advanced #platcheckbox .flright:before,
 a#tag_show\/hide,
 
@@ -2050,6 +2051,7 @@ a.toggle_tags:active,
 a#tag_show\/hide:active,
 #user #userform #platcheckbox +a:active,
 .filter_torrents.advanced .flright:active,
+#shop_search .flright a[onclick]:active,
 .filter_torrents.advanced #platcheckbox .flright:active:before {
     -webkit-transition: none;
     -o-transition: none;
@@ -2165,6 +2167,7 @@ img#authcode,
 .curtain {
     opacity: .75;}
 
+img[style^="max-height: 64px; transition: all 0.5s ease-in-out"],
 .fancybox-thumbs>ul>li:before,
 .fancybox-button {
     -webkit-transition: all .1s linear !important;
@@ -2351,6 +2354,8 @@ input[disabled] {
 
 #tools table[style="width: 960px; text-align: center;"] .colhead td,
 
+#wrapper .pad img[style^="max-height: 64px; transition: all 0.5s ease-in-out"], /* hidden item */
+
 #torrents #wrapper .torrent_notifications .noticon +td,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a {
     margin: 0;}
@@ -2386,6 +2391,7 @@ input[disabled] {
     border-color: var(--c-b3);}
 .sidebar #slides a.prev {
     margin-left: 10px;}
+table#grouplinks #curlinkedgroup,
 .sidebar #slides a.next {
     margin-right: 10px;}
 #slides .slides_control .center {
@@ -3647,6 +3653,7 @@ a[href^="javascript:Vote("] strong,
 #user #userform #platcheckbox +a,
 a#tag_show\/hide,
 .filter_torrents.advanced .flright,
+#shop_search .flright a[onclick],
 a.toggle_tags,
 a#toggle_css_gallery,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
@@ -3797,6 +3804,8 @@ table#otherop.hidden ~table.otheroptoggle a,
     /*margin-right: 5px;
     line-height: 19px;
     margin-top: 3px;*/}
+#shop_search .flright a[onclick] {
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);}
 
 .torrent_table tr.pad td >.linkbox a:before {
     background: none;}
@@ -3850,6 +3859,7 @@ a#tag_show\/hide:before,
 .filter_torrents.advanced .flright:after {
     font-size: 14px;
     line-height: 1em;}
+#shop_search .flright a[onclick]:hover,
 .torrent_table tr.pad td >.linkbox a:hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
 a.toggle_tags:hover,
@@ -3860,6 +3870,7 @@ a#tag_show\/hide:hover,
 .filter_torrents.advanced .flright:hover {
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+#shop_search .flright a[onclick]:active,
 .torrent_table tr.pad td >.linkbox a:active,
 table#otherop.hidden ~table.otheroptoggle a:active,
 a#toggle_css_gallery:active,
@@ -4703,6 +4714,7 @@ a#toggle_css_gallery:hover,
 #user #userform #platcheckbox +a:hover,
 a#tag_show\/hide:hover,
 .filter_torrents.advanced .flright:hover,
+#shop_search .flright a[onclick]:hover,
 a.toggle_tags:hover,
 .torrent_table tr.pad td >.linkbox a:hover,
 a[href^="javascript:IndexVote("] strong:hover,
@@ -5946,6 +5958,7 @@ span.size10 {
     margin: 0 5px;
     padding: 5px;}
 
+img[style^="max-height: 64px; transition: all 0.5s ease-in-out"],
 #wiki iframe,
 .box.vertical_space iframe, /*inbox*/
 #blog .pad iframe,
