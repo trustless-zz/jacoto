@@ -2531,7 +2531,7 @@ i.fa.fa-fl-pots {
     padding: 0 !important;
     height: auto;}
 #wrapper .global_buffs .fa {
-    font-size: 40px;
+    font-size: 33px;
     filter: none !important;}
 table.bbcode_table td,
 #upload #weblinks td,
@@ -3455,7 +3455,8 @@ td img[alt="Ratio"],
     margin-right: 6px;}
 tr:hover .tags a {
     background-color: var(--c-tag);}
-#requests tr:hover .tags a,
+#running_freeleech          tr:hover .tags a,
+#requests                   tr:hover .tags a,
 .torrent_notifications      tr:hover .tags a,
 #uploaded_table             tr:hover .tags a,
 #seeding_table              tr:hover .tags a,

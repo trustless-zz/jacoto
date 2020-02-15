@@ -571,9 +571,11 @@
         padding: 5px;
         max-width: 80px;
         margin: 0;
-        margin-left: -5px;
+        /*margin-left: -5px;*/
         max-height: 80px;
         height: auto;}
+    .global_buffs .individual_buff:first-child {
+        margin-left: -5px;}
     .global_buffs>div {
         min-width: 80px;}
     

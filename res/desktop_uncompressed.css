@@ -748,13 +748,13 @@ body {
     left: unset !important;
     right: 0 !important;
     bottom: unset !important;
-    width: 64px;}
+    width: 60px;}
 #wrapper #header .clan_trophy img {
     margin: 0 auto;
     display: block;
-    height: 64px;
+    height: 60px;
     filter: none !important;
-    padding: 10px 0;}
+    padding: 8px 0;}
     
 /* logo */
 #logo {
@@ -922,7 +922,7 @@ body {
     #torrents .group_torrent td:first-child >a {
         word-break: break-all;}
 }
-@media (min-width: 801px) and (max-width: 1750px) {
+@media (min-width: 1601px) and (max-width: 1750px) {
     #wrapper .global_buffs {
         width: calc(200px - 200px / 3);}
 }
@@ -934,7 +934,11 @@ body {
     #wrapper .global_buffs {
         width: calc(170px - 170px / 3);}
 }
-@media (min-width: 801px) and (max-width: 1550px) {
+@media (min-width: 1451px) and (max-width: 1600px) {
+    #wrapper .global_buffs .fa {    
+        font-size: 27px;}
+}
+@media (min-width: 1451px) and (max-width: 1550px) {
     #wrapper .global_buffs {
         width: calc(170px / 3);}
 }
@@ -947,7 +951,7 @@ body {
     #wrapper #header .clan_trophy {
         width: 48px;}
     #wrapper .global_buffs .fa {
-        font-size: 35.461px;}
+        font-size: 22px;}
     #wrapper .global_buffs .buff_text {
         line-height: var(--p-lh);
         font-size: 11px;}
