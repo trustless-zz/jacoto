@@ -3321,7 +3321,7 @@ textarea,
 
 #css_gallery .preview_image,
 
-#top10 .thin>.center,
+#top10 .thin >div,
 
 .permissions {
     -webkit-box-sizing: border-box;
@@ -7577,7 +7577,7 @@ table#likesrow a {
 .thin.top10_tags #ut,
 .thin.top10_tags #ur,
 .thin.top10_tags #v {
-    width: calc(100% / 3 - 12px);}
+    width: calc(100% / 3 - 10px);}
 
 td >img[title="Gold"] {
     padding-left: 18px;
