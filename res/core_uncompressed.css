@@ -1844,6 +1844,8 @@ a.toggle_tags,
 .filter_torrents.advanced #platcheckbox .flright:before,
 a#tag_show\/hide,
 
+.tooltipster-default #tooltip_steam img,
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -2129,6 +2131,7 @@ img#authcode,
     border: var(--p-img-border);
     border-color: var(--c-main-brdr);}
 
+.tooltipster-default #tooltip_steam img,
 #wrapper .userscript-gallery-image,
 #artist .sidebar img,
 /*#collections #coverart.box img,

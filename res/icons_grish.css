@@ -14,6 +14,7 @@ body >#preview-popup img,
 .fancybox-image,
 .lightbox img {
     background-image: url('icons/a5a5a5/transparent.svg');}
+.tooltipster-default #tooltip_steam img,
 #css_gallery .preview_image,
 #wrapper .userscript-gallery-image,
 #artist .sidebar img,

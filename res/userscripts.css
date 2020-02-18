@@ -802,3 +802,35 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 /**
 /GGn trade item count editor
 **/
+
+
+/**
+GGn Steam Portrait Cover Tooltip
+https://gazellegames.net/forums.php?action=viewthread&threadid=20638#_2261144508
+https://greasyfork.org/en/scripts/396545-ggn-steam-portrait-cover-tooltip
+**/
+.tooltipster-default #tooltip_steam {
+    margin: -4px -5px;}
+.tooltipster-default #tooltip_steam img {
+    margin: 10px;
+    max-width: 278px !important;
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);}
+.tooltipster-default #tooltip_steam h3 {
+    text-align: left;
+    font-weight: 600;
+    background: var(--p-head-grdnt);
+    font-size: var(--p-head) !important;
+    line-height: var(--p-head);
+    padding: 9px 10px;
+    margin: 0;
+    width: calc(100% - 20px);}
+.tooltipster-default #tooltip_steam button {
+    margin-bottom: 10px;}
+.tooltipster-default #tooltip_steam img:hover {
+    border-color: var(--c-b3);
+    -webkit-box-shadow: none;
+    box-shadow: none;}
+/**
+/GGn Steam Portrait Cover Tooltip
+**/
