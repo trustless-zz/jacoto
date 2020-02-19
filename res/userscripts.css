@@ -834,3 +834,19 @@ https://greasyfork.org/en/scripts/396545-ggn-steam-portrait-cover-tooltip
 /**
 /GGn Steam Portrait Cover Tooltip
 **/
+
+/**
+GGn Steam Portrait Cover Preview
+https://gazellegames.net/forums.php?action=viewthread&threadid=21271&postid=1549794#post1549794
+**/
+.box_albumart a.steampreview {
+    position: relative !important;
+    float: right;
+    top: 1px !important;
+    right: unset !important;
+    filter: drop-shadow(0 0 2px var(--c-low));
+    transition: none;
+    background-color: transparent !important;}
+/**
+/GGn Steam Portrait Cover Preview
+**/
