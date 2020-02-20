@@ -3667,7 +3667,7 @@ a.toggle_tags,
 a#toggle_css_gallery,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
-.torrent_table tr.pad td >.linkbox a,
+.torrent_table tr.pad td >.linkbox a:not([href*="?action="]),
 .filelist_title a.brackets {
     font-size: 14px;
     line-height: 14px;
@@ -3805,7 +3805,7 @@ a#tag_show\/hide,
 a#toggle_css_gallery,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
-.torrent_table tr.pad td >.linkbox a {
+.torrent_table tr.pad td >.linkbox a:not([href*="?action="]) {
     position: relative;
     font-size: 0;
     line-height: 0;
@@ -3827,8 +3827,8 @@ table#otherop.hidden ~table.otheroptoggle a,
     content: 'View Snatchlist';}
 .torrent_table tr.pad td >.linkbox a[onclick^="show_files"]:before {
     content: 'View Filelist';}
-.torrent_table tr.pad td >.linkbox a[onclick^="show_history"]:before {
-    content: 'View History';}
+/*.torrent_table tr.pad td >.linkbox a[onclick^="show_history"]:before {
+    content: 'View History';}*/
 .torrent_table tr.pad td >.linkbox a[onclick^="show_reported"]:before {
     color: var(--c-red);
     content: 'View Report Information';}
@@ -3871,7 +3871,7 @@ a#tag_show\/hide:before,
     line-height: 1em;}
 #adventure_search .flright a[onclick]:hover,
 #shop_search .flright a[onclick]:hover,
-.torrent_table tr.pad td >.linkbox a:hover,
+.torrent_table tr.pad td >.linkbox a:not([href*="?action="]):hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
 a.toggle_tags:hover,
 a#toggle_css_gallery:hover,
@@ -3936,6 +3936,9 @@ body:not(#upload) #artist_tr + tr td.label,
 #user .thin >h2 +form#userform tr:not(.colhead_dark) td,
 #upload input#getYT {
     vertical-align: top;}
+
+.torrent_table input[type="submit"][value="Compare"] {
+    margin: 5px;}
 
 #request_form >strong ~#new_uploaded,
 #request_form >strong ~#new_ratio,
@@ -5112,7 +5115,8 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 
 
 #torrents .torrent_notifications .noticon +td >strong +strong {
-    font-weight: bold;
+    font-weight: bold;}
+#torrents .torrent_notifications .noticon +td >strong +strong:not([class]) {    
     color: var(--c-low);}
 
 #requests .main_column >table:first-child {
@@ -6863,6 +6867,7 @@ input[type="radio"]:active {
 #torrents .linkbox .removebookmark:before                                       {content: 'Unbookmark';}
 #torrents .linkbox a[href^="torrents.php?action=grouplog&"]:before              {content: 'View log';}
 .linkbox a[href^="artist.php?action=history&artistid"]:before,
+.torrent_table tr.pad td >.linkbox a[onclick^="show_history"]:before,
 #torrents .linkbox a[href^="torrents.php?action=history&"]:before               {content: 'View history';}
 .linkbox a[href="inbox.php?action=compose"]:before                              {content: 'Compose';}
 .linkbox a[href="inbox.php?action=sentbox"]:before                              {content: 'Sentbox';}
@@ -11849,6 +11854,35 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=21141
 	100% {text-shadow: none !important;}
 }
 */
+
+
+/** split view **/
+table.diff.split_view tbody tr:nth-child(1) td:nth-child(3)::before,
+table.diff.split_view tbody tr:nth-child(1) td:nth-child(1)::before {
+    text-decoration: unset;
+    background-color: var(--c-body);
+    margin-right: 5px;
+    padding-left: 2px;}
+table.diff.split_view tbody tr:nth-child(1) td:nth-child(1)::before {
+    content: "Before:";}
+table.diff.split_view tbody tr:nth-child(1) td:nth-child(3)::before {
+    content: "After:";}
+table.diff.split_view tr:first-child td {
+    border-top: none;}
+#wrapper table.diff .diff-deletedline,
+#wrapper table.diff .diff-deletedline del {
+    background-color: rgba(255, 0, 0, 0.2);}
+#wrapper table.diff .diff-addedline,
+#wrapper table.diff .diff-addedline ins {
+    background-color: rgba(0, 255, 0, .2);}
+#wrapper table.diff .diff-addedline,
+#wrapper table.diff .diff-deletedline {
+    color: var(--c-txt);}
+#wrapper table.diff .diff-deletedline del,
+#wrapper table.diff .diff-addedline ins {
+    padding: 0 2px;
+    color: var(--c-low);}
+/** /split view **/
 
 /** firefox only **/
 @-moz-document url-prefix() {
