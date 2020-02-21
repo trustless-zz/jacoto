@@ -868,6 +868,10 @@ https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-description-prettify.
 #mh_good_screenshots,
 #mh_bad_shots {
     margin: 0;}
+#mh_bad_shots {
+    padding: 10px;}
+#mh_bad_shots:empty {
+    display: none;}
 a#steamScreenshotsDo,
 a#mh_sort_screenshots_button,
 #mh_screenshots_post {
