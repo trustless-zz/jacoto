@@ -4099,7 +4099,7 @@ body:not(#upload) #artist_tr + tr td.label,
     flex-flow: wrap;
     margin-bottom: -10px;}
 .screenshots a {
-    width: calc(25% - 8px);
+    width: calc(25% - (30px / 4));
     margin: 0 10px 10px 0;
     align-self: center;
     cursor: default;}

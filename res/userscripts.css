@@ -869,9 +869,13 @@ https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-description-prettify.
 #mh_bad_shots {
     margin: 0;}
 #mh_bad_shots {
-    padding: 10px;}
+    -webkit-box-shadow: 0 0 4px var(--c-em-bcg);
+    box-shadow: 0 0 4px var(--c-em-bcg);
+    padding: calc(30px + var(--p-head)) 11px 1px 11px;
+    margin: calc(-19px - var(--p-head)) 0 -1px -1px;
+    width: calc(100% - 20px);}
 #mh_bad_shots:empty {
-    display: none;}
+    padding: calc(19px + var(--p-head)) 11px 1px 11px;}
 a#steamScreenshotsDo,
 a#mh_sort_screenshots_button,
 #mh_screenshots_post {
@@ -979,6 +983,16 @@ h2#display_name form[method="post"] input[type="text"] {
     content: 'SRRDB';}
 textarea ~input[id^="prettify_"] {
     margin-right: 5px;}
+div#modhelperLeftBox >ul:only-child:before {
+    content: 'Data';
+    padding: 9px 10px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    font-weight: 600!important;
+    background: var(--p-head-grdnt);
+    width: 100%;
+    display: block;
+    margin: -20px -10px 10px -10px;}
 /**
 /GGn editor helper
 /GGn Description Prettify
