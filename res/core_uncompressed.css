@@ -3883,7 +3883,7 @@ a#tag_show\/hide:hover,
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
 #adventure_search .flright a[onclick]:active,
 #shop_search .flright a[onclick]:active,
-.torrent_table tr.pad td >.linkbox a:active,
+.torrent_table tr.pad td >.linkbox a:not([href*="?action="]):active,
 table#otherop.hidden ~table.otheroptoggle a:active,
 a#toggle_css_gallery:active,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,

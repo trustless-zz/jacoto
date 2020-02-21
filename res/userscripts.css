@@ -836,6 +836,7 @@ https://greasyfork.org/en/scripts/396545-ggn-steam-portrait-cover-tooltip
 /GGn Steam Portrait Cover Tooltip
 **/
 
+
 /**
 GGn Steam Portrait Cover Preview
 https://gazellegames.net/forums.php?action=viewthread&threadid=21271&postid=1549794#post1549794
@@ -850,4 +851,255 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=21271&postid=1549
     background-color: transparent !important;}
 /**
 /GGn Steam Portrait Cover Preview
+**/
+
+
+/**
+GGn editor helper
+https://gazellegames.net/forums.php?action=viewthread&threadid=21302#_1220582768
+https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-editor-helper.user.js
++
+GGn Description Prettify
+https://gazellegames.net/forums.php?action=viewthread&threadid=21302#_127061717
+https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-description-prettify.user.js?inline=false
+**/
+#mh_screenButtons {
+    margin: -4px 0 0 0 !important;}
+#mh_good_screenshots,
+#mh_bad_shots {
+    margin: 0;}
+a#steamScreenshotsDo,
+a#mh_sort_screenshots_button,
+#mh_screenshots_post {
+    font-size: 14px;
+    line-height: 14px;
+    font-family: OpenSans, Helvetica, Arial, sans-serif !important;
+    font-weight: 400;
+    cursor: pointer;
+    outline: 0;
+    padding: 5px 10px;
+    color: var(--c-txt);
+    text-shadow: 1px 1px 1px var(--c-body);
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
+    background: var(--p-btn);
+    background-size: 200% auto !important;
+    display: inline-block;
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;}
+a#steamScreenshotsDo:hover,
+a#mh_sort_screenshots_button:hover,
+#mh_screenshots_post:hover {
+    color: var(--c-low);
+    background: var(--p-btn-hvr);
+    -webkit-box-shadow: none;
+    box-shadow: none;}
+a#steamScreenshotsDo:active,
+a#mh_sort_screenshots_button:active,
+#mh_screenshots_post:active {
+    background: var(--p-btn-act);
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;}
+a#steamScreenshotsDo,
+a#mh_sort_screenshots_button {
+    position: relative;
+    font-size: 0;
+    line-height: 0;}
+textarea ~input[id^="prettify_"],
+a#steamScreenshotsDo,
+a#mh_sort_screenshots_button {
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);}
+textarea ~input[id^="prettify_"]:hover,
+a#steamScreenshotsDo:hover,
+a#mh_sort_screenshots_button:hover {
+    color: var(--c-low);
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+textarea ~input[id^="prettify_"]:active,
+a#steamScreenshotsDo:active,
+a#mh_sort_screenshots_button:active {
+    background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
+a#steamScreenshotsDo:before {
+    content: 'Steam';}
+a#mh_sort_screenshots_button:before {
+    content: 'sort';}
+a#steamScreenshotsDo:before,
+a#mh_sort_screenshots_button:before{
+    font-size: 14px;
+    line-height: 1em;}
+.box.screenshots_div >.head { /*trash*/
+    font-weight: 600;}
+h2#display_name >sup {
+    vertical-align: unset;}
+h2#display_name >sup,
+h2 a#titleEdit {
+    display: inline-block;
+    font-size: 0 !important;
+    line-height: 21px;}
+h2 a#titleEdit {
+    margin: 1px 0 -1px 0;
+    vertical-align: text-bottom;
+    width: 18px;
+    height: 18px;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: var(--c-anchor);
+    -webkit-mask-image: url('icons/tor/ed.svg');
+    mask-image: url('icons/tor/ed.svg');}
+h2 a#titleEdit:hover {
+    background-color: var(--c-anchor-hvr);}
+h2#display_name input[type="submit"] {
+    margin-left: 5px;
+    vertical-align: top;}
+h2#display_name form[method="post"] {
+    background-color: var(--c-box);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
+    width: calc(100% - 10px);
+    padding: 10px;
+    background-color: var(--c-box);
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;}
+h2#display_name form[method="post"] input[type="text"] {
+    width: calc(100% - 87px);}
+.linkbox a[id^="add_nfo_fix_"]:before {
+    content: 'SRRDB';}
+textarea ~input[id^="prettify_"] {
+    margin-right: 5px;}
+/**
+/GGn editor helper
+/GGn Description Prettify
+**/
+
+
+/**
+GGn easy add to common collections
+https://gazellegames.net/forums.php?action=viewthread&threadid=21302#_59975879
+https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-easy-add-to-common-collection.user.js?inline=false
+**/
+table#coltable td:nth-child(n+2),
+table#coltable {
+    font-size: 0;
+    line-height: 0;}
+table#coltable {
+    background-color: var(--c-box);
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);
+    border: var(--p-border);
+    border-color: var(--c-main-brdr);
+    margin: 0 0 15px 0;}
+table#coltable >a#addcolls {
+    cursor: default;
+    z-index: 1;
+    display: block;
+    position: relative;
+    text-align: left;
+    width: calc(100% - 20px);
+    font-weight: 600;
+    color: var(--c-txt);
+    background-color: transparent;
+    font-size: var(--p-head) !important;
+    line-height: var(--p-head);
+    padding: 9px 10px;}
+table#coltable >a#addcolls:before,
+table#coltable >a#addcolls:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;}
+table#coltable >a#addcolls:before {
+    z-index: -1;
+    opacity: 0;
+    background: var(--p-expand-hvr);}
+table#coltable a,
+table#coltable tr,
+table#coltable >a#addcolls:before {
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;}
+table#coltable >a#addcolls:hover:before {
+    opacity: 1;}
+table#coltable >a#addcolls:active:before {
+    background: var(--p-expand-act);}
+table#coltable tr:first-child,
+table#coltable >a#addcolls:after {
+    z-index: -2;
+    background: var(--p-head-grdnt);}
+table#coltable tr:first-child td {
+    padding: 9px 10px;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    font-weight: 600!important;}
+table#coltable td a,
+table#coltable >tbody {
+    font-size: 14px;
+    line-height: var(--p-lh);}
+table#coltable td a {
+    padding: 1px 3px;}
+table#coltable td a:not(:last-child) {
+    margin-right: 6px;}
+table#coltable tr:hover a {
+    background-color: var(--c-tgroup);}
+table#coltable td a:hover {
+    background-color: var(--c-anchor-hvr-bcg);}
+table#coltable tr:nth-child(n+2):nth-child(odd) {
+    background-color: var(--c-box);}
+table#coltable tr:nth-child(n+2):nth-child(even) {
+    background-color: var(--c-trowb);}
+table#coltable tr:nth-child(n+2):hover {
+    background-color: var(--c-row-hvr) !important;}
+/**
+/GGn easy add to common collections
+**/
+
+
+/**
+GGn Copy Desc
+https://gazellegames.net/forums.php?action=viewthread&threadid=21302#_3469579052
+https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-copy-desc.user.js?inline=false
++
+GGn Trump Helper
+https://gazellegames.net/forums.php?action=viewthread&threadid=21302#_3310970043
+https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-trump-helper.user.js?inline=false
+**/
+a[href="javascript:;"][id^="rp_"],
+.group_torrent td:first-child span a:not([href]) {
+    cursor: pointer;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-image: url(icons/tor/cp.svg);
+    mask-image: url(icons/tor/cp.svg);
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: var(--c-anchor);
+    width: 18px;
+    height: 18px;}
+.group_torrent td:first-child span a:not([href]) {
+    -webkit-mask-image: url(icons/tor/cp.svg);
+    mask-image: url(icons/tor/cp.svg);}
+a[href="javascript:;"][id^="rp_"] {
+    transform: rotate(-90deg);
+    -webkit-mask-image: url('icons/tor/tr.svg');
+    mask-image: url('icons/tor/tr.svg');}
+a[href="javascript:;"][id^="rp_"]:hover,
+.group_torrent td:first-child span a:not([href]):hover {
+    background-color: var(--c-anchor-hvr);}
+tr#rp_helper >td:empty {
+    display: none;}
+/**
+/GGn Copy Desc
+/GGn Trump Helper
 **/
