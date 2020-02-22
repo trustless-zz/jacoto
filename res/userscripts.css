@@ -1091,8 +1091,8 @@ GGn Trump Helper
 https://gazellegames.net/forums.php?action=viewthread&threadid=21302#_3310970043
 https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-trump-helper.user.js?inline=false
 **/
-a[title="trumpHelper"],
-a[title="copyDescriptionContent"] {
+a[title="Trump"],
+a[title="Copy Description"] {
     cursor: pointer;
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -1105,15 +1105,15 @@ a[title="copyDescriptionContent"] {
     background-color: var(--c-anchor);
     width: 18px;
     height: 18px;}
-a[title="copyDescriptionContent"] {
+a[title="Copy Description"] {
     -webkit-mask-image: url(icons/tor/cp.svg);
     mask-image: url(icons/tor/cp.svg);}
-a[title="trumpHelper"] {
+a[title="Trump"] {
     transform: scaleX(-1);
     -webkit-mask-image: url('icons/tor/tr.svg');
     mask-image: url('icons/tor/tr.svg');}
-a[title="trumpHelper"]:hover,
-a[title="copyDescriptionContent"]:hover {
+a[title="Trump"]:hover,
+a[title="Copy Description"]:hover {
     background-color: var(--c-anchor-hvr);}
 tr#rp_helper >td:empty {
     display: none;}
