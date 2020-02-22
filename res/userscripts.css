@@ -1109,7 +1109,7 @@ a[href="javascript:;"][id^="rp_"],
     -webkit-mask-image: url(icons/tor/cp.svg);
     mask-image: url(icons/tor/cp.svg);}
 a[href="javascript:;"][id^="rp_"] {
-    transform: rotate(-90deg);
+    transform: scaleX(-1);
     -webkit-mask-image: url('icons/tor/tr.svg');
     mask-image: url('icons/tor/tr.svg');}
 a[href="javascript:;"][id^="rp_"]:hover,
