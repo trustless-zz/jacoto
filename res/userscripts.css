@@ -599,9 +599,9 @@ http://www.mediafire.com/?97dqca3w9ekaweo
 
 
 /***
-Steam uploady
-https://gazellegames.net/forums.php?action=viewthread&threadid=10942#steam
-https://git.alice.gensokyo.eu/FlatBartender/ggn_scripts/raw/master/GGn%20New%20Uploady.user.js
+GGn New Uploady/Steam uploady
+https://gazellegames.net/forums.php?action=viewthread&threadid=21302#_47632668
+https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-new-uploady.user.js?inline=false
 ***/
 a#fill_win,
 a#fill_lin,
@@ -647,8 +647,27 @@ a#fill_win ~a[href="forums.php?action=viewthread&threadid=10942#steam"],
 a#fill_lin ~a[href="forums.php?action=viewthread&threadid=10942#steam"],
 a#fill_mac ~a[href="forums.php?action=viewthread&threadid=10942#steam"] {
     text-decoration: line-through;}
+
+h2#non_wiki_editing ~.box.pad input#steamid {
+    padding: 0 4px;
+    border: var(--p-border);
+    border-color: var(--c-input-brdr);
+    background-color: var(--c-input);
+    height: 26px;
+    -webkit-box-shadow: var(--p-input-shdw);
+    box-shadow: var(--p-input-shdw);
+    color: unset;
+    font-size: 14px;
+    font-family: OpenSans,Helvetica,Arial,sans-serif;}
+h2#non_wiki_editing ~.box.pad input#steamid:hover {
+    background-color: var(--c-input-focus);}
+h2#non_wiki_editing ~.box.pad input#steamid:focus {
+    color: var(--c-low);
+    border-color: var(--c-b1);
+    outline: 0;}
+
 /***
-/Steam uploady
+/GGn New Uploady/Steam uploady
 ***/
 
 
@@ -1120,4 +1139,20 @@ tr#rp_helper >td:empty {
 /**
 /GGn Copy Desc
 /GGn Trump Helper
+**/
+
+
+/**
+GGn VGMDB Uploady
+https://gazellegames.net/forums.php?action=viewthread&threadid=21302#_723579097
+https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-vgmdb-uploady-new.user.js?inline=false
+**/
+input[name="aliases"] +input#catalog_number {
+    margin-top: 15px;
+    width: 100%;}
+select#categories +input#catalog_number {
+    width: calc(100% - 120px);
+    float: right;}
+/**
+/GGn VGMDB Uploady
 **/
