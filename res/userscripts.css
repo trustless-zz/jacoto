@@ -1156,3 +1156,15 @@ select#categories +input#catalog_number {
 /**
 /GGn VGMDB Uploady
 **/
+
+
+/**
+GGn inventory batch deleting
+https://gazellegames.net/forums.php?action=viewthread&threadid=20638#_3894235358
+https://greasyfork.org/en/scripts/396796-ggn-inventory-batch-deleting
+**/
+.alertable-prompt .alertable-input {
+    border-radius: 0;}
+/**
+/GGn inventory batch deleting
+**/

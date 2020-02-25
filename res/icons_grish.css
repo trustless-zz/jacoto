@@ -252,7 +252,7 @@ body >#preview-popup img,
 #groupplatform a[href$="=Ouya"] {background-image: url(caticons/ouya.svg);}
 #groupplatform a[href$="=Pen+and+Paper+RPG"] {background-image: url(caticons/grish/penandpaperrpg.svg);}
 #groupplatform a[href$="=Philips+CD-i"] {background-image: url(caticons/grish/philipscd-i.svg);}
-#groupplatform a[href$="=Philips+Videopac+"] {background-image: url(caticons/philipsvideopac+.svg);}
+#groupplatform a[href$="=Philips+Videopac%2B"] {background-image: url(caticons/philipsvideopac+.svg);}
 #groupplatform a[href$="=Phone%2FPDA"] {background-image: url(caticons/grish/phonepda.svg);}
 #groupplatform a[href$="=Pico"] {background-image: url(caticons/pico.svg);}
 #groupplatform a[href$="=PlayStation+1"] {background-image: url(caticons/playstation.svg);}
