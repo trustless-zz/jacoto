@@ -1869,6 +1869,7 @@ body >div, /* more info window at #shop */
 #userinfo_minor a:hover,
 #userinfo_username li:not(.sub) a:hover {
     color: var(--c-anchor-hvr);}
+
 #menu li.active a,
 #userinfo_minor li.active a,
 #userinfo_username .donateico.active a,
@@ -2156,6 +2157,10 @@ img#authcode,
     background-repeat: repeat;
     background-position: top left;}
 
+#wrapper >#overlay {
+    background: none;}
+
+#wrapper >#overlay:before,
 .alertable-overlay,
 .fancybox-bg,
 .curtain {
@@ -2167,10 +2172,27 @@ img#authcode,
     width: 100%;
     height: 100%;
     z-index: 1001;}
+#wrapper >#overlay[style="display: block;"]:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;}
+#wrapper >#overlay:before,
 .alertable-overlay,
 .fancybox-is-open .fancybox-bg,
 .curtain {
     opacity: .75;}
+#gameDiv {
+    border: var(--p-img-border);
+    border-color: var(--c-main-brdr);
+    background-color: rgba(0,0,0,.7);}
+#gameDiv #gameInfo {
+    color: var(--c-low);
+    text-shadow: 0 0 5px var(--c-curtain);}
+
 
 img[style^="max-height: 64px; transition: all 0.5s ease-in-out"],
 .fancybox-thumbs>ul>li:before,
