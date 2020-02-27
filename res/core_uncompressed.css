@@ -3836,8 +3836,9 @@ table#otherop.hidden ~table.otheroptoggle a,
     /*margin-right: 5px;
     line-height: 19px;
     margin-top: 3px;*/}
-#wrapper input[type="button"][value="Editor"],
-#wrapper input[type="button"][value="Preview"],
+#wrapper button#AvatarPreview,
+#wrapper [type="button"][value="Editor"],
+#wrapper [type="button"][value="Preview"],
 #adventure_search .flright a[onclick],
 #shop_search .flright a[onclick] {
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);}
@@ -3894,8 +3895,9 @@ a#tag_show\/hide:before,
 .filter_torrents.advanced .flright:after {
     font-size: 14px;
     line-height: 1em;}
-#wrapper input[type="button"][value="Editor"]:hover,
-#wrapper input[type="button"][value="Preview"]:hover,
+#wrapper button#AvatarPreview:hover,
+#wrapper [type="button"][value="Editor"]:hover,
+#wrapper [type="button"][value="Preview"]:hover,
 #wrapper #image_block >a[onclick]:hover,
 #adventure_search .flright a[onclick]:hover,
 #shop_search .flright a[onclick]:hover,
@@ -3909,8 +3911,9 @@ a#tag_show\/hide:hover,
 .filter_torrents.advanced .flright:hover {
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
-#wrapper input[type="button"][value="Editor"]:active,
-#wrapper input[type="button"][value="Preview"]:active,
+#wrapper button#AvatarPreview:active,
+#wrapper [type="button"][value="Editor"]:active,
+#wrapper [type="button"][value="Preview"]:active,
 #wrapper #image_block >a[onclick]:active,
 #adventure_search .flright a[onclick]:active,
 #shop_search .flright a[onclick]:active,
@@ -3930,8 +3933,8 @@ a#tag_show\/hide:active,
 #platcheckbox td[colspan="5"] strong {
     color: var(--c-txt);
     font-weight: 600;}
-input[type="button"][value="Preview"],
-input[type="button"][value="Editor"],
+[type="button"][value="Preview"],
+[type="button"][value="Editor"],
 a[href="#"],
 a[onclick] {
     /*cursor: default;*/}
