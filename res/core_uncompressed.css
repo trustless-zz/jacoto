@@ -3733,8 +3733,8 @@ tr.likes td[id^="likers_"] >strong,
 #extlink_table              tr:not(.colhead) td:nth-child(2),
 #deletereview,
 .box.box_coltags .pad li,
-.box.box_coltags .head span[title="Add Tags"] a,
-#image_block >a[onclick] {
+.box.box_coltags .head span[title="Add Tags"] a/*,
+#image_block >a[onclick]*/ {
     font-size: 0;
     line-height: 0;}
 .box_tags .stats.nobullet div a:nth-child(1) {
@@ -3824,6 +3824,7 @@ a.toggle_tags,
 #user #userform #platcheckbox +a,
 a#tag_show\/hide,
 .filter_torrents.advanced .flright,
+#wrapper #image_block >a[onclick],
 a#toggle_css_gallery,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
@@ -3835,6 +3836,8 @@ table#otherop.hidden ~table.otheroptoggle a,
     /*margin-right: 5px;
     line-height: 19px;
     margin-top: 3px;*/}
+#wrapper input[type="button"][value="Editor"],
+#wrapper input[type="button"][value="Preview"],
 #adventure_search .flright a[onclick],
 #shop_search .flright a[onclick] {
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);}
@@ -3891,6 +3894,9 @@ a#tag_show\/hide:before,
 .filter_torrents.advanced .flright:after {
     font-size: 14px;
     line-height: 1em;}
+#wrapper input[type="button"][value="Editor"]:hover,
+#wrapper input[type="button"][value="Preview"]:hover,
+#wrapper #image_block >a[onclick]:hover,
 #adventure_search .flright a[onclick]:hover,
 #shop_search .flright a[onclick]:hover,
 .torrent_table tr.pad td >.linkbox a:not([href*="?action="]):hover,
@@ -3903,6 +3909,9 @@ a#tag_show\/hide:hover,
 .filter_torrents.advanced .flright:hover {
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+#wrapper input[type="button"][value="Editor"]:active,
+#wrapper input[type="button"][value="Preview"]:active,
+#wrapper #image_block >a[onclick]:active,
 #adventure_search .flright a[onclick]:active,
 #shop_search .flright a[onclick]:active,
 .torrent_table tr.pad td >.linkbox a:not([href*="?action="]):active,
