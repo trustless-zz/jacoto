@@ -3515,8 +3515,7 @@ table#requests_list         tr:hover .tags a {
     height: 100%;
     padding: 0 2px;
     font-size: 13px;
-    line-height: var(--p-lh);
-    margin-bottom: -1px;}
+    line-height: var(--p-lh);}
 .rating_container:hover {
     opacity: 1;
     background-color: var(--c-box);}

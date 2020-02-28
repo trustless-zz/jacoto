@@ -15,7 +15,7 @@ body {
     margin-top: 2px;
     padding: 2px;}
 .rating_container {
-    margin-top: 1px;}
+    margin-top: auto;}
     
 .filter_torrents.advanced #platcheckbox .flright:before {
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);
