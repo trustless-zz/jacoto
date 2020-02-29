@@ -188,7 +188,7 @@ td.unread_locked_sticky:before {
 #stats_leeching a:before,
 a[title="Download"],
 #better .thin >table a[href^="torrents.php?action=download&id="],
-#better table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"],
+table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"],
 #index #freeleech .group_torrent >span:first-child a,
 #requests table.border a[href^="upload.php"],
 #bookmarks table#requests_list a[href^="upload.php"],
@@ -237,7 +237,7 @@ td a img[alt="Ratio"],
 #stats_leeching:hover a:before,
 a[title="Download"]:hover,
 #better .thin >table a[href^="torrents.php?action=download&id="]:hover,
-#better table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]:hover,
+table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]:hover,
 #index #freeleech .group_torrent >span:first-child a:hover,
 #stats_seeding:hover a:before,
 #stats_share_score:hover a:before,
@@ -463,7 +463,7 @@ a[title="Original Group"] {
 a[title="Trumpable"] {
     -webkit-mask-image: url('icons/tor/tr.svg');
     mask-image: url('icons/tor/tr.svg');}
-#better table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"],
+table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"],
 #bookmarks tr.group_torrent a.tooltip[href^="torrents.php?action=edit"],
 a[onclick^="Edit"],
 a[title="Edit"] {
@@ -1956,7 +1956,7 @@ a[title="Trumpable"],
 a[title="Permalink"],
 a[title="Download"],
 #better .thin >table a[href^="torrents.php?action=download&id="],
-#better table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"],
+table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"],
 a[title="Use a FL Token"],
 a[title="Report"],
 a[title="External Link"],
@@ -3756,8 +3756,9 @@ tr.likes td[id^="likers_"] >strong,
 #tools #content >span +form[action="tools.php"]:nth-child(2),
 #better .thin >.center:first-child td,
 #better .thin >table a[href^="torrents.php?action=download&id="],
-#better table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"],
+#wrapper table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"],
 #better table[style="width: 600px;"] tr:not(.colhead) td:nth-child(2),
+#tools #content >table[style="width: 600px;"] tr:not(.colhead) td:nth-child(2),
 .box.box_coltags .head span[title="Add Tags"] a/*,
 #image_block >a[onclick]*/ {
     font-size: 0;
@@ -3765,7 +3766,7 @@ tr.likes td[id^="likers_"] >strong,
 #better .thin >table a[href^="torrents.php?action=download&id="] {
     display: inline-block;
     vertical-align: text-bottom;}
-#better table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"] {
+table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"] {
     display: inline-block;
     vertical-align: bottom;}
 .box_tags .stats.nobullet div a:nth-child(1) {
@@ -7351,6 +7352,7 @@ input[class="date_picker"] {
     position: absolute;
     top: 33px;
     right: 0;}
+#tools #content >table[style="width: 600px;"],
 #better table[style="width: 600px;"]/*,
 #tools #content >table[style="width: 600px;"]:nth-child(3)*/ {
     margin-left: auto;
@@ -7369,7 +7371,7 @@ input[class="date_picker"] {
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="text"]:not(:first-child),
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="button"]:not(:first-child),
 #collections table#new_collage input#art +input[type="button"],
-#better table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"],
+table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"],
 .box.box_coltags .pad li a:nth-child(n+2) {
     margin-left: 5px;}
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[name="toyear"] {
@@ -8112,6 +8114,7 @@ span.size5 img {
     font-size: 0;
     text-align: center;}
 #better table[style="width: 600px;"] td a,
+#tools #content >table[style="width: 600px;"] td a,
 #collections .sidebar .box_addtorrent .subhead a {
     line-height: var(--p-lh);
     font-size: 14px;
