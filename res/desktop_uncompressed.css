@@ -51,11 +51,13 @@ body {
     flex-direction: column;}
     
 /* row hovers */
-#inbox .thin>.box.pad #messageform tr:not(.colhead):hover,
+#inbox .thin >.box.pad #messageform tr:not(.colhead):hover,
 .rowa:hover,
 .row_a:hover,
 .rowb:hover,
 .row_b:hover,
+#better table#collection_files tr:not(.colhead):hover,
+#better .thin >.center +table[width="100%"]:nth-child(2) tr:not(.colhead):hover,
 #user .thin >h3:first-child +.linkbox +form ~.box.pad.center tr:not(.colhead):hover,
 #clan_stats >div:not(.clan_stat_totals) tr:not(.colhead):hover,
 #torrents .torrent_details tr table tr:not(.colhead):not(.colhead_dark):hover,
