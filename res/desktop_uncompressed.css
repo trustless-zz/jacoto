@@ -56,6 +56,7 @@ body {
 .row_a:hover,
 .rowb:hover,
 .row_b:hover,
+#better .torrent_table tr.torrent.torrent_row:hover,
 #better table#collection_files tr:not(.colhead):hover,
 #better .thin >.center +table[width="100%"]:nth-child(2) tr:not(.colhead):hover,
 #user .thin >h3:first-child +.linkbox +form ~.box.pad.center tr:not(.colhead):hover,

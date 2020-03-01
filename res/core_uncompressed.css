@@ -639,6 +639,7 @@ td.center.cats_col+td,
 .post_id ~a,
 
 #better #content,
+#better .torrent_table tr.torrent.torrent_row td:nth-child(2),
 
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
@@ -1869,6 +1870,8 @@ a#tag_show\/hide,
 
 .tooltipster-default #tooltip_steam img,
 
+#better .torrent_table tr.torrent.torrent_row,
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -3044,6 +3047,7 @@ li.graph {
 #user .box_requests div#requests tr:not(.colhead):not(.colhead_dark) td,
 .top10_games div:not(.center)>table.border tr:not(.colhead):not(.colhead_dark) td,
 .top10_torrents div:not(.center)>table.border tr:not(.colhead):not(.colhead_dark) td,
+#better .torrent_table tr.torrent.torrent_row td,
 body#requests table#requests_list tr:not(.colhead):not(.colhead_dark) td {
 	border-top: var(--p-border);
     /* border-top-color: var(--c-table-brdr); */
@@ -3501,6 +3505,7 @@ td img[alt="Ratio"],
     margin-right: 6px;}
 tr:hover .tags a {
     background-color: var(--c-tag);}
+#better tr.torrent.torrent_row:hover .tags a,
 #running_freeleech          tr:hover .tags a,
 #requests                   tr:hover .tags a,
 .torrent_notifications      tr:hover .tags a,
@@ -4878,6 +4883,7 @@ h3 {
 
 .rowa,
 .row_a,
+#better .torrent_table tr.torrent.torrent_row:nth-child(odd),
 #better table#collection_files tr:not(.colhead):nth-child(odd),
 #better .thin >.center +table[width="100%"]:nth-child(2) tr:not(.colhead):nth-child(odd),
 #better .rowb +.rowb:nth-child(odd),
@@ -4912,6 +4918,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowa,
     background-color: var(--c-box);}
 .rowb,
 .row_b,
+#better .torrent_table tr.torrent.torrent_row:nth-child(even),
 #better table#collection_files tr:not(.colhead):nth-child(even),
 #better .thin >.center +table[width="100%"]:nth-child(2) tr:not(.colhead):nth-child(even),
 form#drag_drop_collage_form table#manage_collage_table .rowb,
@@ -5128,6 +5135,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     position: absolute;
     left: -36px;
     top: calc(50% - 17px);}
+#better .torrent_table td.center.collicon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #bookmarks td.center.collicon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #uploaded_table             td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #seeding_table              td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
@@ -7146,6 +7154,7 @@ input[type="radio"]:active {
 #collections #torrent_table .colhead td[width="70%"],
 #bookmarks #torrent_table .colhead_dark td[width="70%"] {
     width: auto !important;}
+#better .torrent_table tr.torrent.torrent_row td.center.collicon,
 #content >.torrent_notifications td.noticon,
 #collections .group.discog td.collicon:nth-child(2),
 td.center.cats_col {
@@ -7638,6 +7647,7 @@ table.adventure_table .colhead td:not(:first-child) {
 
 th#check_all span,
 #user #sessions_table .colhead td:last-child,
+#better .torrent_table tr.torrent.torrent_row td.center.collicon,
 #user .thin >h2:first-child +.box.pad:last-child .colhead td:last-child {
     padding: 0 5px;}
 
@@ -8236,6 +8246,7 @@ span.size5 img {
     border-bottom: none;}
 #user #wrapper .box.box_gold #box_gold_scrollbar td:nth-child(2) {
     border-left: none;}
+#better .torrent_table tr.torrent.torrent_row td.center.collicon,
 #user #wrapper .box.box_gold #box_gold_scrollbar td:last-child {
     border-right: none;}
 #user #wrapper .box.box_gold #box_gold_scrollbar td.label {
