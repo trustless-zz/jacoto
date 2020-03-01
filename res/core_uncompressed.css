@@ -1471,6 +1471,7 @@ div#fight_skill_points_assign >table,
 #better #content >h2 +.box.pad:nth-child(2),
 /*#better .thin >.center:first-child,
 #better .thin >.center +table:nth-child(2),*/
+#tools #content >p,
 #better .thin >div,
 #better .thin >table,
 #collections .thin >h2:first-child +form:last-child /* edit description page */ {
@@ -1505,6 +1506,7 @@ div#fight_skill_points_assign >table,
 
 #tools #content >span +form[action="tools.php"]:nth-child(2),
 #better .thin >.center:first-child,
+#tools #content >p,
 
 #user .thin >h2:first-child +.center,
 .thin.torrent_history >form#torrent_history_search,
@@ -2105,6 +2107,7 @@ a#tag_show\/hide:active,
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
 
+tr#reviewrow div[style="color:red;font-weight:bold;text-align:center"],
 .trade_value .trade_value_percent [style="color: rgb(177, 0, 0);"],
 .book [style*="red;"],
 #torrents .torrent_details .torrent_table [style*="red;"],
@@ -6425,6 +6428,7 @@ input[type="radio"]:active {
 #better #content >h2 +p:nth-child(2):before,
 #better #content >h2 +.box.pad:nth-child(2):before,
 #better .thin >.center:first-child:before,
+#tools #content >p:before,
 #torrents #content >#newlink:before {
     display: block;
     text-align: left;
@@ -6450,6 +6454,7 @@ input[type="radio"]:active {
     content: 'Create a new thread';}
 #user #wrapper .invitetree.pad:before {
     content: 'Invite Tree';}
+#tools #content >p:before,
 #better #wrapper #content >h2 +p:nth-child(2):before,
 #user #wrapper .thin >.header:first-child +.box.pad:before {
     content: 'Info';}
