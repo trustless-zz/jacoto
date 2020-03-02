@@ -2107,6 +2107,7 @@ a#tag_show\/hide:active,
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
 
+#better td span[style="color: red;"],
 tr#reviewrow div[style="color:red;font-weight:bold;text-align:center"],
 .trade_value .trade_value_percent [style="color: rgb(177, 0, 0);"],
 .book [style*="red;"],
@@ -2128,6 +2129,7 @@ strong.important_text,
 .torrent_details blockquote#description [style="color: #ff0000;"] {
     color: var(--c-red) !important;}
 
+#better td span[style="color: green;"],
 #user .thin >h2:first-child +.center ~table.border span[style*="green;"] {
     color: var(--c-green) !important;}
 
@@ -3116,13 +3118,13 @@ table.adventure_table .colhead td {
     line-height: var(--p-lh);}
 .torrent_table .show_torrents,
 .torrent_table .hide_torrents {
-    min-width: 30px;
+    /*min-width: 30px;*/
     display: block;
-    height: 100%;
-    width: 100%;}
+    height: 20px;
+    width: 20px;}
 .torrent_table .show_torrents_link {
-    height: 100%;
-    width: 30px;
+    height: 20px;
+    width: 20px;
     cursor: default;
     z-index: 2;
     position: relative;}
@@ -3181,12 +3183,11 @@ table.adventure_table .colhead td {
     transform: rotate(0deg);}
 #collections .group.discog td.collicon:nth-child(1),
 .torrent_table td.center:first-child {
-    width: 1px;
-    height: 1px;
-    padding: 0;
+    width: 20px;
+    height: 100%;
     overflow: hidden;
     position: relative;
-	border-right: var(--p-border);
+    border-right: var(--p-border);
     border-right-color: var(--c-table-brdr);
     /* box-shadow: var(--p-show-hide-brdr-shdw); */}
 #top10 .group_torrent td:first-child {
@@ -3200,13 +3201,13 @@ th[aria-disabled="false"]:active,
 #collections .group.discog td.collicon:active:nth-child(1),
 .torrent_table td.center:active:first-child {
     background-color: var(--c-colhead-act);}
-/*.torrent_table .show_torrents_link:before {
+.torrent_table .show_torrents_link:before { /* psuedo element because of firefox */
     content: '';
     position: absolute;
-    left: -100px;
-    top: -150px;
-    width: 300px;
-    height: 300px;}*/
+    left: -10px;
+    top: -315px;
+    width: 50px;
+    height: 600px;}
 .torrent_table .show_torrents_link:after {
     top: calc(50% - 10px);
     left: calc(50% - 10px);
