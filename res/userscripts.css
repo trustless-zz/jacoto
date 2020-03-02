@@ -895,7 +895,7 @@ https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-description-prettify.
     border-bottom: var(--p-img-border) !important;
     border-bottom-color: var(--c-main-brdr) !important;
     outline-offset: -3px;
-    outline: 3px dotted var(--c-em-hvr);}
+    outline: 3px dashed var(--c-em-hvr);}
 .box img[style*="border-bottom: 6px dashed red;"]:hover {
     border-bottom-color: var(--c-b3) !important;}
 
