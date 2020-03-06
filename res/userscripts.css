@@ -387,7 +387,7 @@ really the whole thing is a mess as a result */
     height: -moz-fit-content;
     height: fit-content;
     margin: 0 10px 10px 0;
-    padding-bottom: 16px;
+    padding-bottom: 18px;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     -webkit-box-sizing: border-box;
@@ -477,9 +477,9 @@ really the whole thing is a mess as a result */
     background-image: unset;
     -webkit-box-shadow: none;
     box-shadow: none;
-    font-size: 12px;
-    line-height: 16px;
-    max-height: 16px;
+    font-size: 0;
+    line-height: 0;
+    max-height: 18px;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -488,6 +488,18 @@ really the whole thing is a mess as a result */
     transition: max-height .45s ease;}
 #wrapper .userscript-gallery-details:hover {
     max-height: 1000%;}
+#wrapper .userscript-gallery-details a {
+    margin: 1px 0;
+    padding: 2px;
+    font-size: 12px;
+    line-height: 1em;
+    display: inline-block;}
+#wrapper .userscript-gallery-details:hover a {
+    background-color: var(--c-tag);}
+#wrapper .userscript-gallery-details a:hover {
+    background-color: var(--c-anchor-hvr-bcg);}
+#wrapper .userscript-gallery-details a:not(:last-child) {
+    margin-right: 6px;}
 #wrapper .userscript-gallery-title {
     position: relative;
     font-size: 0;

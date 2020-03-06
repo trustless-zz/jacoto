@@ -3201,7 +3201,7 @@ th[aria-disabled="false"]:active,
 #collections .group.discog td.collicon:active:nth-child(1),
 .torrent_table td.center:active:first-child {
     background-color: var(--c-colhead-act);}
-.torrent_table .show_torrents_link:before { /* psuedo element because of firefox */
+.torrent_table .show_torrents_link:before { /* psuedo element because table-cell hack doesn't work on firefox */
     content: '';
     position: absolute;
     left: -10px;
