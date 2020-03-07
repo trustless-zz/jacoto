@@ -10519,24 +10519,28 @@ td .log_green {
 /****************************************************
 **************** SHARE SCORE PAGE *******************
 ****************************************************/
-/* presudo element galore */
+/* fake head and container */
 #share_score >.large_progress_bar {
-    margin: 59px 11px 26px 11px;
+    margin: 62px 14px 29px 14px; /* + 6px from 100% gap fix */
+    padding: 0;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    background-color: unset;
     position: relative;}
-#share_score >.large_progress_bar:before {
+#share_score >.large_progress_bar:after {
     content: '';
     position: absolute;
-    width: calc(100% + 20px);
-    height: calc(100% + 56px);
-    bottom: -11px;
-    left: -11px;
+    width: calc(100% + 26px); /* + 6px from 100% gap fix */
+    height: calc(100% + 62px); /* + 6px from 100% gap fix */
+    bottom: -14px; /* - 3px from 100% gap fix */
+    left: -14px; /* - 3px from 100% gap fix */
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: var(--p-border);
     border-color: var(--c-main-brdr);
     z-index: -1;}
-#share_score >.large_progress_bar:after {
+/*#share_score >.large_progress_bar:after {
     content: '';
     position: absolute;
     text-align: left;
@@ -10549,17 +10553,19 @@ td .log_green {
     font-weight: 600;
     z-index: 1;
     width: 100%;
-    background: var(--p-head-grdnt);}
+    background: var(--p-head-grdnt);}*/
 #share_score .large_progress_bar +.linkbox {
     text-align: left;
     position: absolute;
-    top: -37px;
-    left: 11px;
+    top: -49px;
+    left: 1px;
+    padding: 9px 10px;
     font-weight: 600;
     margin: 0;
-    padding: 0;
     font-size: var(--p-head);
     line-height: var(--p-head);
+    width: calc(100% - 2px);
+    background: var(--p-head-grdnt);
     z-index: 1;}
 
 
@@ -10635,7 +10641,7 @@ td .log_green {
 
 #share_score .large_progress_bar .bonus_section {
     background-color: var(--c-bonus);
-    right: 0;}
+    right: -3px;}
 
 #seed_snatch_breakdown .large_progress_bar .main_bar {}
 
@@ -10644,25 +10650,35 @@ td .log_green {
 #seed_size_breakdown .large_progress_bar .main_bar {}
 
 
-/** 100% gap fix **/
-#share_score .main_section[style="width: 75%;"] {
-    width: 74.5% !important;}
-#share_score .main_section[style="width: 71%;"] {
-    width: 70.5% !important;}
-#share_score .main_section[style="width: 83%;"] {
-    width: 82.5% !important;}
-
-#share_score .bonus_section[style="width: 16.5%;"],
-#share_score .five_marker[style="width: 16.5%;"] {
-    width: 17% !important;}
-#share_score .bonus_section[style="width: 24.5%;"],
-#share_score .fifteen_marker[style="width: 24.5%;"] {
-    width: 25% !important;}
-#share_score .bonus_section[style="width: 28.5%;"],
-#share_score .five_marker[style="width: 28.5%;"] {
-    width: 29% !important;}
-
-
+/** 100% gap (dirty) fix **/
+#share_score_breakdown .large_progress_bar {
+    padding: 0;
+    margin: 3px;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    background-color: unset;}
+#share_score .large_progress_bar >span:not(.main_bar) {
+    padding: 3px;
+    top: -3px;}
+#wrapper #share_score .large_progress_bar .points {
+    padding: 0;}
+#wrapper #share_score .large_progress_bar .main_section {
+    padding: 3px 0;}
+#wrapper #share_score .large_progress_bar .fifteen_marker,
+#wrapper #share_score .large_progress_bar .five_marker {
+    padding: 0 3px;}
+#wrapper #share_score .large_progress_bar .bonus_section {
+    padding: 3px 4px 3px 3px;}
+#share_score .large_progress_bar:before {
+    content: '';
+    position: absolute;
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+    background-color: var(--c-edition);
+    -webkit-box-shadow: inset var(--p-graph-sh);
+    box-shadow: inset var(--p-graph-sh);
+    top: -3px;
+    left: -3px;}
 
 
 /****************************************************
