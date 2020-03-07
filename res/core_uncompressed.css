@@ -10644,6 +10644,27 @@ td .log_green {
 #seed_size_breakdown .large_progress_bar .main_bar {}
 
 
+/** 100% gap fix **/
+#share_score .main_section[style="width: 75%;"] {
+    width: 74.5% !important;}
+#share_score .main_section[style="width: 71%;"] {
+    width: 70.5% !important;}
+#share_score .main_section[style="width: 83%;"] {
+    width: 82.5% !important;}
+
+#share_score .bonus_section[style="width: 16.5%;"],
+#share_score .five_marker[style="width: 16.5%;"] {
+    width: 17% !important;}
+#share_score .bonus_section[style="width: 24.5%;"],
+#share_score .fifteen_marker[style="width: 24.5%;"] {
+    width: 25% !important;}
+#share_score .bonus_section[style="width: 28.5%;"],
+#share_score .five_marker[style="width: 28.5%;"] {
+    width: 29% !important;}
+
+
+
+
 /****************************************************
 ************** ADVENTURE CLUB TOOLS *****************
 ****************************************************/
