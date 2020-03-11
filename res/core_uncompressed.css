@@ -10521,19 +10521,15 @@ td .log_green {
 ****************************************************/
 /* fake head and container */
 #share_score >.large_progress_bar {
-    margin: 62px 14px 29px 14px; /* + 6px from 100% gap fix */
-    padding: 0;
-    -webkit-box-shadow: unset;
-    box-shadow: unset;
-    background-color: unset;
+    margin: 59px 11px 26px 11px;
     position: relative;}
 #share_score >.large_progress_bar:after {
     content: '';
     position: absolute;
-    width: calc(100% + 26px); /* + 6px from 100% gap fix */
-    height: calc(100% + 62px); /* + 6px from 100% gap fix */
-    bottom: -14px; /* - 3px from 100% gap fix */
-    left: -14px; /* - 3px from 100% gap fix */
+    width: calc(100% + 20px);
+    height: calc(100% + 56px);
+    bottom: -11px;
+    left: -11px;
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -10557,7 +10553,7 @@ td .log_green {
 #share_score .large_progress_bar +.linkbox {
     text-align: left;
     position: absolute;
-    top: -49px;
+    top: -46px;
     left: 1px;
     padding: 9px 10px;
     font-weight: 600;
@@ -10611,7 +10607,7 @@ td .log_green {
     z-index: 9;
     color: var(--c-low);
     top: 0;
-    right: 0;}
+    right: -2px;}
 #crafting_recipes h3,
 #crafting_panel .item h3,
 #equipment .item h3,
@@ -10637,11 +10633,12 @@ td .log_green {
 
 #share_score .large_progress_bar .main_section {
     z-index: 3;
+    left: 0;
 	border-right: 2px solid var(--c-on);}
 
 #share_score .large_progress_bar .bonus_section {
     background-color: var(--c-bonus);
-    right: -3px;}
+    right: 0;}
 
 #seed_snatch_breakdown .large_progress_bar .main_bar {}
 
@@ -10651,7 +10648,7 @@ td .log_green {
 
 
 /** 100% gap (dirty) fix **/
-#share_score_breakdown .large_progress_bar {
+/*#share_score_breakdown .large_progress_bar {
     padding: 0;
     margin: 3px;
     -webkit-box-shadow: unset;
@@ -10678,7 +10675,7 @@ td .log_green {
     -webkit-box-shadow: inset var(--p-graph-sh);
     box-shadow: inset var(--p-graph-sh);
     top: -3px;
-    left: -3px;}
+    left: -3px;}*/
 
 
 /****************************************************
