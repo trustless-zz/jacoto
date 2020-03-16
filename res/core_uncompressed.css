@@ -2577,11 +2577,16 @@ i.fa.fa-fl-pots {
     color: var(--c-fl) !important;
 	font-family: OpenSans, Helvetica, Arial, sans-serif;}
 .global_buffs .buff_text {
+    display: flex;
+    flex-flow: column;
     letter-spacing: var(--p-dot3);
     font-size: 12px;
-    line-height: 15px;
+    line-height: 1em;
     text-shadow: none !important;}
+.global_buffs .buff_text .buff_label {
+    padding-top: 1px;}
 #wrapper .global_buffs .buff_text .buff_multiplier {
+    padding-top: 4px;
     font-size: 17px;}
 .global_buffs>div {
     width: calc(200px / 3);
@@ -4291,6 +4296,8 @@ strong.mature +strong +br,
 #clans #clan_stats >br,
 
 .tags a[href="?tags="],
+
+.global_buffs .buff_text >br,
 
 #artist td.edition_info ~td, /* torrent checked/unchecked leftover */
 

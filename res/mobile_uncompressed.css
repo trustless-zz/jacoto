@@ -557,6 +557,8 @@
     .global_buffs .individual_buff i {
         display: none;}
     #wrapper #header .global_buffs .buff_text {
+        height: 100%;
+        justify-content: center;
         font-size: 13px;}
     #wrapper #header .global_buffs .buff_text .buff_multiplier {
         font-size: 14px;}
@@ -573,11 +575,13 @@
         margin: 0;
         /*margin-left: -5px;*/
         max-height: 80px;
-        height: auto;}
-    .global_buffs .individual_buff:first-child {
-        margin-left: -5px;}
+        height: auto;/*}
+    .global_buffs .individual_buff:first-child {*/
+        margin: 0 5px 0 -5px;}
     .global_buffs>div {
         min-width: 80px;}
+    #wrapper .global_buffs .buff_text .buff_label {
+        margin-top: 0;}
     
     
     .box.thin.clear,

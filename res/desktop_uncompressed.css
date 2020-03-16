@@ -932,6 +932,8 @@ body {
 @media (min-width: 801px) and (max-width: 1600px) {
     #wrapper .global_buffs .buff_text .buff_multiplier {
         font-size: 15px;}
+    #wrapper .global_buffs .buff_text .buff_label {
+        font-size: 11px;}
     #wrapper .global_buffs>div {
         width: calc(170px / 3);}
     #wrapper .global_buffs {
@@ -956,8 +958,8 @@ body {
     #wrapper .global_buffs .fa {
         font-size: 22px;}
     #wrapper .global_buffs .buff_text {
-        line-height: var(--p-lh);
-        font-size: 11px;}
+        /*line-height: var(--p-lh);*/
+        /*font-size: 11px;*/}
     #wrapper .global_buffs .buff_text .buff_multiplier {
         font-size: 12px;}
     #wrapper #toplink {
