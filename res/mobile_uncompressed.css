@@ -953,6 +953,9 @@
 	#dailygazelle {width: 100%;}
 	#dailygazelle a {margin: 3px 0px;}
     #dailygazelle img {max-height: 100% !important;}
+    #wrapper #dailygazelle img,
+    #wrapper #slides img {
+        max-width: calc(100% - 20px) !important;}
 	.slides_container {}
 	.slides_control {}
 	.sidebar #slides ul {width: 100%; margin: 0 auto;}
