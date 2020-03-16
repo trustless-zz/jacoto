@@ -6130,8 +6130,9 @@ blockquote#description img {
     height: auto;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
-    margin: -4px 0;
-    padding: 7px;}
+    /*margin: -4px 0;
+    padding: 7px;*/
+    padding: 5px;}
 .box.vertical_space#preview a:hover img, /*inbox*/
 .box.vertical_space .body a:hover img, /*inbox*/
 #wiki .wiki_article a:hover img,
@@ -10659,7 +10660,16 @@ td .log_green {
     background-color: var(--c-bonus);
     /*right: 0;*/
     right: 2px; /* fix #2 */
-    clip-path: polygon(2px 0, 100% 0, 100% 100%, 2px 100%); /* fix #2 */}
+    -webkit-clip-path: polygon(
+        2px     0,
+        100%    0,
+        100%    100%,
+        2px     100%);
+    clip-path: polygon(
+        2px     0,
+        100%    0,
+        100%    100%,
+        2px     100%); /* fix #2 */}
 
 #seed_snatch_breakdown .large_progress_bar .main_bar {}
 
