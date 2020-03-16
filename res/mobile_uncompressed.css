@@ -706,6 +706,7 @@
 		height: auto;
 		width: 100%;} */
 
+    #wrapper img,
 	img {
 		max-width: 100% !important;}
 
