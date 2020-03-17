@@ -734,7 +734,7 @@ body {
 #nav_donate a:hover {
     background-color: var(--c-donate);}
     
-.global_buffs {
+#wrapper .global_buffs {
     position: absolute !important;
     top: calc(100% + 1px);
     left: 0 !important;

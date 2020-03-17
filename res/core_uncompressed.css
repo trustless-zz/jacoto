@@ -2638,6 +2638,8 @@ table.bbcode_table td,
     overflow: hidden;}
 
     #header #announcement {
+        top: unset;         /* holidayeffects garbage */
+        font-size: 14px;    /* holidayeffects garbage */
         text-align: center;
         padding: 5px;
         background: var(--p-head-grdnt);
