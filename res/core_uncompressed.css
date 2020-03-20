@@ -213,6 +213,7 @@ a[title="Original Group"],
 a[title="Trumpable"],
 a[onclick^="Edit"],
 a[title="Edit"],
+h3 a[href^="user.php?action=notify_delete&"],
 .inventory .trash_icon,
 a[title="Remove"],
 .colhead_dark a[onclick^="Quote"],
@@ -264,6 +265,7 @@ a[title="Original Group"]:hover,
 a[title="Trumpable"]:hover,
 a[onclick^="Edit"]:hover,
 a[title="Edit"]:hover,
+h3 a[href^="user.php?action=notify_delete&"]:hover,
 .inventory .trash_icon:hover,
 a[title="Remove"]:hover,
 .colhead_dark a[onclick^="Quote"]:hover,
@@ -469,6 +471,7 @@ a[onclick^="Edit"],
 a[title="Edit"] {
     -webkit-mask-image: url('icons/tor/ed.svg');
     mask-image: url('icons/tor/ed.svg');}
+h3 a[href^="user.php?action=notify_delete&"],
 .inventory .trash_icon,
 a[title="Remove"],
 #deletereview a {
@@ -1692,6 +1695,7 @@ a,
 
 #wrapper #items_list li.item_li,
 .inventory .trash_icon,
+h3 a[href^="user.php?action=notify_delete&"],
 
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
@@ -1977,6 +1981,7 @@ a[title="Remove"],
 #requests table.border a[href^="upload.php"],
 #bookmarks table#requests_list a[href^="upload.php"],
 #requests_donate img,
+h3 a[href^="user.php?action=notify_delete&"],
 img[title="Gold"],
 td img[alt="Ratio"],
 #top10 img[alt="Up Votes"],
@@ -3320,6 +3325,7 @@ textarea,
 .collage_images,
 #wiki .center.thin >.box.pad,
 .inventory .trash_icon,
+h3 a[href^="user.php?action=notify_delete&"],
 .gazelles_art_display,
 #adventureclub .thin >table,
 
@@ -3781,6 +3787,7 @@ tr.likes td[id^="likers_"] >strong,
 #better .thin >.center:first-child td,
 #better .thin >table a[href^="torrents.php?action=download&id="],
 #wrapper table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"],
+h3 a[href^="user.php?action=notify_delete&"],
 #better table[style="width: 600px;"] tr:not(.colhead) td:nth-child(2),
 #tools #content >table[style="width: 600px;"] tr:not(.colhead) td:nth-child(2),
 .box.box_coltags .head span[title="Add Tags"] a/*,
@@ -3892,6 +3899,7 @@ table#otherop.hidden ~table.otheroptoggle a,
     /*margin-right: 5px;
     line-height: 19px;
     margin-top: 3px;*/}
+button.alertable-cancel,
 #wrapper button#AvatarPreview,
 #wrapper [type="button"][value="Editor"],
 #wrapper [type="button"][value="Preview"],
@@ -3951,6 +3959,7 @@ a#tag_show\/hide:before,
 .filter_torrents.advanced .flright:after {
     font-size: 14px;
     line-height: 1em;}
+button.alertable-cancel:hover,
 #wrapper button#AvatarPreview:hover,
 #wrapper [type="button"][value="Editor"]:hover,
 #wrapper [type="button"][value="Preview"]:hover,
@@ -3967,6 +3976,7 @@ a#tag_show\/hide:hover,
 .filter_torrents.advanced .flright:hover {
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+button.alertable-cancel:active,
 #wrapper button#AvatarPreview:active,
 #wrapper [type="button"][value="Editor"]:active,
 #wrapper [type="button"][value="Preview"]:active,
@@ -7430,14 +7440,18 @@ table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]
     margin: 0;
     font-size: var(--p-head);
     line-height: var(--p-head);
-    height: var(--p-head);
+    min-height: var(--p-head);
     width: calc(100% - 22px);
     padding: 9px 10px;
     background: var(--p-head-grdnt);
     position: relative;
     left: 1px;
-    margin-top: -36px;
-    bottom: -37px;}
+    /*margin-top: -36px;
+    bottom: -37px;*/
+    display: flex;
+    flex-flow: row;
+    top: 1px;
+    margin-bottom: -36px;}
 #user .thin >h2:first-child +form[method="post"]:before {
     line-height: var(--p-head);
     content: 'Create a new notification filter';
@@ -9189,10 +9203,17 @@ img[alt="RSS feed"],
 
 h3 a[href^="feeds.php?"],
 h2 a[href^="feeds.php?"] {
-    display: inline-block;
+    /*display: inline-block;*/
+    margin: -2px 5px -2px 0;
     padding: 2px;
-    margin-top: -4px;
-    vertical-align: middle;}
+    /*margin-top: -4px;
+    vertical-align: middle;*/}
+
+h3 a[href^="user.php?action=notify_delete&"] {
+    /*position: absolute;
+    right: 9px;
+    top: 9px;*/
+    margin-left: auto;}
 
 #shop li.item_li.nostock #cost_info,
 #shop li.item_li.no_access #cost_info {
