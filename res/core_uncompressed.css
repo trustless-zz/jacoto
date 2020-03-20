@@ -7420,23 +7420,33 @@ table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[name="toyear"] {
     margin-left: 0 !important;}
 
-#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input#platform_2,
-#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input#platform_1 {
+#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#platform_2,
+#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#platform_1 {
     width: calc(100% - 295px);}
-#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input#releasetype_1 {
+#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#releasetype_1 {
     width: calc(100% - 185px);}
-#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input#tags_1 {
+#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#tags_1 {
     width: calc(100% - 235px);}
-#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input#not_tags_1 {
+#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#not_tags_1 {
     width: calc(100% - 375px);}
-#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input#releasetype_2 {
+#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#releasetype_2 {
     width: calc(100% - 190px);}
-#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input#tags_2 {
+#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#tags_2 {
     width: calc(100% - 240px);}
-#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input#not_tags_2 {
+#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#not_tags_2 {
     width: calc(100% - 380px);}
+
+#user .thin >h2 ~form[method="post"] input#platform_3 {
+    width: calc(100% - 291px);}
+#user .thin >h2 ~form[method="post"] input#releasetype_3 {
+    width: calc(100% - 183px);}
+#user .thin >h2 ~form[method="post"] input#tags_3 {
+    width: calc(100% - 235px);}
+#user .thin >h2 ~form[method="post"] input#not_tags_3 {
+    width: calc(100% - 375px);}
+
 #user .thin >h2 ~br +br +h3,
-#user .thin >h2 +h3 {
+#user .thin >h2 +h3 { /* can not handle mroe than 1 line */
     margin: 0;
     font-size: var(--p-head);
     line-height: var(--p-head);
