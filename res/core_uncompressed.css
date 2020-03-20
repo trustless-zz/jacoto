@@ -9219,6 +9219,11 @@ h2 a[href^="feeds.php?"] {
     /*margin-top: -4px;
     vertical-align: middle;*/}
 
+#bookmarks h2 a[href^="feeds.php?"] {
+    display: inline-block;
+    margin: -4px 0 0 0;
+    vertical-align: middle;}
+
 h3 a[href^="user.php?action=notify_delete&"] {
     /*position: absolute;
     right: 9px;
