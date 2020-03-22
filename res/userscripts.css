@@ -17,7 +17,7 @@ https://github.com/hateradio/wbb
 
 #wrapper .wbbcode .wbbbuttons {
     background-color: var(--c-input-obj);
-    border: var(--p-img-border) var(--c-main-brdr);
+    border: 3px solid var(--c-main-brdr);
     padding: 3px;
     margin: 5px auto;
     list-style: none;
@@ -35,7 +35,7 @@ https://github.com/hateradio/wbb
 #wrapper .wbbemot {
     -webkit-box-shadow: none;
     box-shadow: none;
-    border: var(--p-img-border) var(--c-main-brdr);
+    border: 3px solid var(--c-main-brdr);
     background-color: var(--c-input-obj);
     padding: 3px 6px;
     max-height: unset;
@@ -48,7 +48,7 @@ https://github.com/hateradio/wbb
     border-radius: unset;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     line-height: 1em;
     font-weight: 400;
     cursor: pointer;
@@ -89,11 +89,11 @@ https://github.com/hateradio/wbb
     margin: 3px auto;}
 .wbbcode .wbbshortcut li {
     border-radius: unset;
-    border: var(--p-border) var(--c-table-brdr);
+    border: 1px solid var(--c-table-brdr);
     background-color: var(--c-input-obj);}
 .wbbcode .wbbshortcut li strong {
     border-radius: unset;
-    border: var(--p-border) var(--c-table-brdr);
+    border: 1px solid var(--c-table-brdr);
     background-color: var(--c-box);}
 .wbbcode .wbbcon {
     color: var(--c-red);}
@@ -234,7 +234,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     background-color: var(--c-box) !important;
     -webkit-box-shadow: var(--p-main-shdw) !important;
     box-shadow: var(--p-main-shdw) !important;
-    border: var(--p-border) var(--c-main-brdr) !important;
+    border: 1px solid var(--c-main-brdr) !important;
     margin: 0 0 15px 0 !important;}
 #quick-crafter:before {
     content: 'Quick Crafter';
@@ -255,7 +255,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     line-height: 1em;
     float: unset !important;
     text-align: right !important;
-    border-top: var(--p-border) var(--c-table-brdr);
+    border-top: 1px solid var(--c-table-brdr);
     background-color: var(--c-tgroup);}
 
 #quick-crafter button {
@@ -275,7 +275,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     content: '';
     width: 100%;
     height: 0;
-    border-bottom: var(--p-border) var(--c-table-brdr);
+    border-bottom: 1px solid var(--c-table-brdr);
     margin-top: 8px;}
 
 #quick-crafter #clear_button {
@@ -289,7 +289,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     width: fit-content;
     margin: 0 auto;
     padding: 5px;
-    border: var(--p-img-border) var(--c-main-brdr);}
+    border: 3px solid var(--c-main-brdr);}
 #quick-crafter #crafting-submenu >p:first-child {
     font-size: 17px;
     line-height: 1em;
@@ -303,7 +303,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
 #quick-crafter >p:first-of-type { /* creates a border on top of the first row of buttons */
     padding-bottom: 10px;
     margin-bottom: 3px;
-    border-bottom: var(--p-border) var(--c-table-brdr);}
+    border-bottom: 1px solid var(--c-table-brdr);}
 /***
 /Quick Crafter
 ***/
@@ -320,7 +320,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=16978&postid=1021
     box-sizing: border-box;
     background-color: var(--c-box);
     margin: 0;
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     -webkit-box-shadow: none;
     box-shadow: none;
     position: relative;}
@@ -348,7 +348,7 @@ really the whole thing is a mess as a result */
     height: 0;
     left: -1px;
     bottom: -1px;
-    border-bottom: var(--p-border) var(--c-main-brdr);
+    border-bottom: 1px solid var(--c-main-brdr);
     position: absolute;
     content: '';}
 #wrapper #userscript-gallery-container {
@@ -380,17 +380,17 @@ really the whole thing is a mess as a result */
     box-shadow: var(--p-header-shdw);
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-top: var(--p-border) var(--c-table-brdr);
-    border-bottom: var(--p-border) var(--c-table-brdr);}
+    border-top: 1px solid var(--c-table-brdr);
+    border-bottom: 1px solid var(--c-table-brdr);}
 #wrapper .userscript-gallery-title,
 #wrapper .userscript-gallery-details {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    border-left: var(--p-border) var(--c-table-brdr);
-    border-right: var(--p-border) var(--c-table-brdr);}
+    border-left: 1px solid var(--c-table-brdr);
+    border-right: 1px solid var(--c-table-brdr);}
 
 #wrapper a.userscript-gallery-link {
-    border: var(--p-img-border) var(--c-b4);
+    border: 3px solid var(--c-b4);
     background-color: transparent;}
 #wrapper a.userscript-gallery-link:hover {
     border-color: var(--c-b1);}
@@ -630,7 +630,7 @@ a#fill_mac {
     text-shadow: 1px 1px 1px var(--c-body);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     background: var(--p-btn);
     background-size: 200% auto!important;
     display: inline-block;}
@@ -657,7 +657,7 @@ a#fill_mac ~a[href="forums.php?action=viewthread&threadid=10942#steam"] {
 
 h2#non_wiki_editing ~.box.pad input#steamid {
     padding: 0 4px;
-    border: var(--p-border) var(--c-input-brdr);
+    border: 1px solid var(--c-input-brdr);
     background-color: var(--c-input);
     height: 26px;
     -webkit-box-shadow: var(--p-input-shdw);
@@ -731,11 +731,11 @@ https://greasyfork.org/en/scripts/372437-ggn-ez-collection-management
 #collections table#manage_collage_table {
     position: relative;}
 #collections table#manage_collage_table tr:nth-last-child(2) td:nth-child(7):before {
-    border-right: var(--p-border);
+    border-right: 1px solid;
     width: 0;
     height: 100%;}
 #collections table#manage_collage_table tr:nth-last-child(2) td:nth-child(7):after {
-    border-bottom: var(--p-border);
+    border-bottom: 1px solid;
     width: 100%;
     height: 0;}
 #collections table#manage_collage_table tr:nth-last-child(2) td:nth-child(7):before,
@@ -780,7 +780,7 @@ body >#cover_container  img,
 body >#preview-popup    img {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
-    border: var(--p-img-border) var(--c-main-brdr);
+    border: 3px solid var(--c-main-brdr);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     object-fit: unset;
@@ -808,7 +808,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=20638&postid=1478
 https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 **/
 .trading input.item_count {
-    border: var(--p-border) var(--c-input-brdr) !important;
+    border: 1px solid var(--c-input-brdr) !important;
     background-color: var(--c-input) !important;
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
@@ -837,7 +837,7 @@ https://greasyfork.org/en/scripts/396545-ggn-steam-portrait-cover-tooltip
 .tooltipster-default #tooltip_steam img {
     margin: 10px;
     max-width: 278px !important;
-    border: var(--p-img-border) var(--c-main-brdr);
+    border: 3px solid var(--c-main-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 .tooltipster-default #tooltip_steam h3 {
@@ -888,7 +888,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=21302#_127061717
 https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-description-prettify.user.js?inline=false
 **/
 .box img[style*="border-bottom: 6px dashed red;"] {
-    border-bottom: var(--p-img-border) var(--c-main-brdr) !important;
+    border-bottom: 3px solid var(--c-main-brdr) !important;
     outline-offset: -3px;
     outline: 3px dashed var(--c-em-hvr);}
 .box img[style*="border-bottom: 6px dashed red;"]:hover {
@@ -921,7 +921,7 @@ a#mh_sort_screenshots_button,
     text-shadow: 1px 1px 1px var(--c-body);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     background: var(--p-btn);
     background-size: 200% auto !important;
     display: inline-block;
@@ -1000,7 +1000,7 @@ h2#display_name form[method="post"] {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     width: calc(100% - 10px);
     padding: 10px;
     background-color: var(--c-box);
@@ -1041,7 +1041,7 @@ table#coltable {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     margin: 0 0 15px 0;}
 table#coltable >a#addcolls {
     cursor: default;

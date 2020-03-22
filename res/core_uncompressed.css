@@ -5,8 +5,8 @@
     --p-scroll-grdnt:                   var(--c-b3) linear-gradient(110deg, var(--c-b3), var(--c-b4));
     --p-header-shdw: 					0 0 4px var(--c-header-shdw);
     --p-main-shdw:						0 0 4px var(--c-main-shdw);
-    --p-border:                         1px solid;
-    --p-img-border:                     3px solid;
+    /*--p-border:                         1px solid;
+    --p-img-border:                     3px solid;*/
     --p-graph-sh:                       0 1px 2px var(--c-header-shdw);
     
     /** --p-top-brdr:                       1px solid var(--c-edition); */
@@ -1032,7 +1032,7 @@ pre {
 	border-radius: 0px !important;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-border) var(--c-quote-brdr);
+    border: 1px solid var(--c-quote-brdr);
     background-color: var(--c-quote);}
 blockquote,
 pre {
@@ -1072,7 +1072,7 @@ strong.mature +strong +br +a[onclick] {
 
 .tooltipster-default {
 	border-radius: 0px !important;
-	border: var(--p-border) var(--c-table-brdr) !important;
+	border: 1px solid var(--c-table-brdr) !important;
 	background: var(--c-box) !important;
 	color: var(--c-low) !important;
     -webkit-box-shadow: var(--p-header-shdw);
@@ -1118,7 +1118,7 @@ tr.unreadpm td:first-child:after {
 #searchbars input {
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
-    border: var(--p-border) var(--c-input-brdr);
+    border: 1px solid var(--c-input-brdr);
     background-color: var(--c-input);
     font-size: 1em;
     height: 26px;
@@ -1130,7 +1130,7 @@ tr.unreadpm td:first-child:after {
 
 .autocomplete_list {
     background: var(--c-box);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     position: absolute;
@@ -1172,7 +1172,7 @@ tr.unreadpm td:first-child:after {
     height: auto;
     padding: 0;
     background: var(--c-box);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);}
 #torrents #torrentsbrowsecomplete li {
@@ -1476,7 +1476,7 @@ div#fight_skill_points_assign >table,
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     margin: 0 0 15px 0;}
 #inbox .box.vertical_space:not(:last-of-type),
 .forum_post {
@@ -1905,7 +1905,7 @@ body >div, /* more info window at #shop */
     color: var(--c-low);}
 
 .sidebar img {
-    border: var(--p-img-border) var(--c-main-brdr);
+    border: 3px solid var(--c-main-brdr);
     height: unset;
     max-width: 100% !important;}
 img {
@@ -2160,7 +2160,7 @@ strong.important_text,
 img#authcode,
 .fancybox-image,
 .lightbox img {
-    border: var(--p-img-border) var(--c-main-brdr);}
+    border: 3px solid var(--c-main-brdr);}
 
 .tooltipster-default #tooltip_steam img,
 #wrapper .userscript-gallery-image,
@@ -2216,7 +2216,7 @@ img#authcode,
 .curtain {
     opacity: .75;}
 #gameDiv {
-    border: var(--p-img-border) var(--c-main-brdr);
+    border: 3px solid var(--c-main-brdr);
     background-color: rgba(0,0,0,.7);}
 #gameDiv #gameInfo {
     color: var(--c-low);
@@ -2258,7 +2258,7 @@ input[disabled] {
     background-color: var(--c-box);}
 .fancybox-thumbs>ul>li:before {
     opacity: 1;
-    border: var(--p-img-border) var(--c-main-brdr);}
+    border: 3px solid var(--c-main-brdr);}
 .fancybox-thumbs>ul>li.fancybox-thumbs-active:before {
     border-color: var(--c-b1);}
 .fancybox-thumbs>ul>li:not(.fancybox-thumbs-active):hover:before {
@@ -2478,7 +2478,7 @@ table#grouplinks #curlinkedgroup,
     height: 38px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     background: var(--p-head-grdnt);
     margin: 0 0 15px 0;}
 
@@ -2528,7 +2528,7 @@ table#snatchesrow img,
 #recommended #vanityhouse img {
     width: 100%;
     height: auto;
-    border: var(--p-img-border) var(--c-b4);
+    border: 3px solid var(--c-b4);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 #recommended #vanityhouse a:first-child {
@@ -2545,7 +2545,7 @@ table#snatchesrow img,
 .sidebar .box.box_image_coverart img {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-img-border) var(--c-b4);}
+    border: 3px solid var(--c-b4);}
 
 #user .box.box_items #itemsdiv td >div:hover,
 .sidebar .box.box_image_coverart img:hover,
@@ -2686,7 +2686,7 @@ table.bbcode_table td,
 #header {
     z-index: 99 !important; /* !important to override holidayeffects.css */
     position: relative;
-    border-bottom: var(--p-border) var(--c-table-brdr);
+    border-bottom: 1px solid var(--c-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     margin-bottom: 20px;
@@ -2762,7 +2762,7 @@ table.bbcode_table td,
     top: -20px;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     border-top: 0;
     -webkit-clip-path: polygon(
         -10px 0,
@@ -2790,7 +2790,7 @@ a .error_message:hover {
     margin: 0 0 15px 0;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     background-color: var(--c-img-bcg-anchor);}
 #index #clans a {
     display: block;
@@ -3046,7 +3046,7 @@ li.graph {
 .torrent_table .group.rowb {
     background-color: var(--c-tor-rowb);}
 .torrent_table tr:not(.colhead):not(.colhead_dark) td {
-	border-top: var(--p-border) var(--c-table-brdr);
+	border-top: 1px solid var(--c-table-brdr);
     color: var(--c-text-s);
     vertical-align: middle;}
 .torrent_table tr.pad td {
@@ -3057,7 +3057,7 @@ li.graph {
 .top10_torrents div:not(.center)>table.border tr:not(.colhead):not(.colhead_dark) td,
 #better .torrent_table tr.torrent.torrent_row td,
 body#requests table#requests_list tr:not(.colhead):not(.colhead_dark) td {
-	border-top: var(--p-border) var(--c-edition);}
+	border-top: 1px solid var(--c-edition);}
 
 .rating_container,
 #userinfo_username .sub,
@@ -3188,10 +3188,10 @@ table.adventure_table .colhead td {
     height: 100%;
     overflow: hidden;
     position: relative;
-    border-right: var(--p-border) var(--c-table-brdr);
+    border-right: 1px solid var(--c-table-brdr);
     /* box-shadow: var(--p-show-hide-brdr-shdw); */}
 #top10 .group_torrent td:first-child {
-    border-right: var(--p-border) var(--c-edition);}
+    border-right: 1px solid var(--c-edition);}
 th[aria-disabled="false"]:hover,
 #collections .group.discog td.collicon:hover:nth-child(1),
 .torrent_table td.center:hover:first-child {
@@ -3460,8 +3460,8 @@ td img[alt="Ratio"],
 .torrent_table .group:hover {
     background-color: var(--c-tor-row-hvr) !important;} */
 .sticky td {
-    border-top: var(--p-border) var(--c-b1) !important;
-    border-bottom: var(--p-border) var(--c-b1) !important;}
+    border-top: 1px solid var(--c-b1) !important;
+    border-bottom: 1px solid var(--c-b1) !important;}
 .collections_art_display .remove_bookmark_div,
 .torrent_table .addbookmark,
 .torrent_table .removebookmark {
@@ -3588,7 +3588,7 @@ input[type="text"],
 #wrapper .select2-container--default .select2-selection--multiple,
 input[type="url"],
 select {
-    border: var(--p-border) var(--c-input-brdr);
+    border: 1px solid var(--c-input-brdr);
     background-color: var(--c-input);
     height: 26px;
     -webkit-box-shadow: var(--p-input-shdw);
@@ -3728,7 +3728,7 @@ table#otherop.hidden ~table.otheroptoggle a,
     text-shadow: 1px 1px 1px var(--c-body);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     background: var(--p-btn);
     background-size: 200% auto !important;
     display: inline-block;}
@@ -4187,7 +4187,7 @@ body:not(#upload) #artist_tr + tr td.label,
 #css_gallery .preview_image,
 .screenshots img {
     max-width: 100% !important;
-    border: var(--p-img-border) var(--c-main-brdr);}
+    border: 3px solid var(--c-main-brdr);}
 
 .trailer_div .head {
     margin: -10px -10px 10px -10px;}
@@ -4204,7 +4204,7 @@ body:not(#upload) #artist_tr + tr td.label,
 
 .bbbutt {
     background-color: var(--c-input-obj);
-    border: var(--p-img-border) var(--c-main-brdr);
+    border: 3px solid var(--c-main-brdr);
     padding: 0 3px;
     margin: 5px auto;
     list-style: none;
@@ -4324,14 +4324,14 @@ strong.mature +strong +br,
 .similar img {
     width: 100%;
     height: auto;
-    border: var(--p-img-border) var(--c-b4);}
+    border: 3px solid var(--c-b4);}
 #wrapper .similar #suggested_header {
     width: calc(100% - 15px);
     margin: 10px 0;
     font-weight: 600;
     font-size: 19px;
     line-height: 1em;
-	border-bottom: var(--p-border) var(--c-table-brdr);
+	border-bottom: 1px solid var(--c-table-brdr);
     text-align: left;
     padding-left: 10px;}
 .similar_div .similar li {
@@ -4431,16 +4431,16 @@ li:not(.suggested_similar) .similar_votes >span {
     display: block;
     padding: 0 5px;
     background-color: var(--c-input-obj);
-	border-right: var(--p-border) var(--c-table-brdr);
-	border-left: var(--p-border) var(--c-table-brdr);
+	border-right: 1px solid var(--c-table-brdr);
+	border-left: 1px solid var(--c-table-brdr);
     position: relative;}
 #header .sub span:nth-child(odd) a,
 .sub span:nth-child(odd) a {
     background-color: var(--c-tgroup);}
 .sub span:first-child a {
-	border-top: var(--p-border) var(--c-table-brdr);}
+	border-top: 1px solid var(--c-table-brdr);}
 .sub span:last-child a {
-	border-bottom: var(--p-border) var(--c-table-brdr);}
+	border-bottom: 1px solid var(--c-table-brdr);}
 .sub span a:before {
     width: 100%;
     height: 100%;
@@ -4726,7 +4726,7 @@ h2 .username_badges {
     border-radius: 36px 0 0 36px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     clip: rect(-10px, 20px, 50px, -10px);
     content: '✔';
     text-indent: 3.5px;
@@ -4756,7 +4756,7 @@ h2 .username_badges {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     margin-bottom: 10px;}
 #reply_box .head {
     margin: -10px -10px 10px -10px;}
@@ -4764,7 +4764,7 @@ h2 .username_badges {
 #wrapper #trading_panel .message_box textarea,
 textarea {
     min-height: 47px; /*28px without webkit stuff*/
-    border: var(--p-border) var(--c-input-brdr);
+    border: 1px solid var(--c-input-brdr);
     background-color: var(--c-input);
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
@@ -4983,7 +4983,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 .torrent_table tr.pad div[id^="snatches_"] td:nth-child(2),
 .torrent_table tr.pad div[id^="downloads_"] td:nth-child(2),
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td:nth-child(2) {
-	border-right: var(--p-border) var(--c-table-brdr);}
+	border-right: 1px solid var(--c-table-brdr);}
 
 .box_series li {
     list-style: disc;
@@ -4993,7 +4993,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 #torrents .torrent_details tr table {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-	border: var(--p-border) var(--c-table-brdr);
+	border: 1px solid var(--c-table-brdr);
     margin: 5px 10px 15px 10px;
     width: calc(100% - 20px);}
 
@@ -5072,7 +5072,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     width: 70% !important;}
 #requests_donate {
     vertical-align: top;
-	border-left: var(--p-border) var(--c-table-brdr);}
+	border-left: 1px solid var(--c-table-brdr);}
 #torrents .thin >h2:first-child +.center td.label,
 #upload td.label,
 .filter_torrents td.label,
@@ -5091,7 +5091,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     padding: 5px 5px 3px 3px;
     overflow-y: auto;
     overflow-x: hidden;
-	border-top: var(--p-border) var(--c-table-brdr);
+	border-top: 1px solid var(--c-table-brdr);
     opacity: 0.65;}
 .forum_post .comment_rating:hover {
     opacity: 1;}
@@ -5485,13 +5485,13 @@ input[name="year"],
 #staff .thin >.box.pad table {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-	border: var(--p-border) var(--c-table-brdr);}
+	border: 1px solid var(--c-table-brdr);}
 #torrents #content>script:first-child+h2+form #freerow td:last-child,
 .profile .box.box_requests td:first-child,
 #upload #content >div >table[style] td {
     width: auto !important;}
 #upload .thin form table .colhead:not(:first-child) {
-	border-top: var(--p-border) var(--c-table-brdr);}
+	border-top: 1px solid var(--c-table-brdr);}
 .thin >#request_form input[name="title"],
 /* #upload */input#release_title,
 /* #upload */input#aliases,
@@ -5593,7 +5593,7 @@ input#file {
     margin: 0 0 5px 10px;}
 .forum_post h3 {
     margin: 0 !important;
-	border-bottom: var(--p-border) var(--c-table-brdr);}
+	border-bottom: 1px solid var(--c-table-brdr);}
 #forums td.body {
     padding: 10px 10px 15px 10px;}
 .forumstat,
@@ -5684,7 +5684,7 @@ div.breadcrumbs,
     width: max-content;
     position: absolute;
     background-color: var(--c-input-obj);
-	border: var(--p-border) var(--c-table-brdr);
+	border: 1px solid var(--c-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     top: 5px;
@@ -5834,7 +5834,7 @@ h2 marquee {
     vertical-align: bottom;}
 #forums .forum_signature td > div {
     opacity: .65;
-	border-top: var(--p-border) var(--c-table-brdr);
+	border-top: 1px solid var(--c-table-brdr);
     margin: 0 10px;
     padding: 6px 3px;
     max-height: 75px;
@@ -5849,20 +5849,20 @@ form#drag_drop_collage_form .drag_drop_save ~.drag_drop_save,
 .forum_post tr.likes,
 .thin.torrent_history table.border:not(#th_search) tr:not(.colhead):last-child,
 .torrent_details tr.pad div[id^=history] tr:not(.colhead):last-child {
-	border-top: var(--p-border) var(--c-table-brdr);
+	border-top: 1px solid var(--c-table-brdr);
     background-color: var(--c-tgroup);}
 
 form#drag_drop_collage_form .drag_drop_save:first-child {
-	border-bottom: var(--p-border) var(--c-table-brdr);
+	border-bottom: 1px solid var(--c-table-brdr);
     background-color: var(--c-tgroup);}
 
 #torrents #wrapper .torrent_details tr.pad div[id^=history] tr:not(.colhead):last-child {
-	border-top: var(--p-border) var(--c-table-brdr);
+	border-top: 1px solid var(--c-table-brdr);
     background-color: var(--c-tgroup)!important;}
 
 #inbox #searchbox +form#messageform >table {
-    border-top: var(--p-border) var(--c-table-brdr);
-    border-bottom: var(--p-border) var(--c-table-brdr);}
+    border-top: 1px solid var(--c-table-brdr);
+    border-bottom: 1px solid var(--c-table-brdr);}
 
 #reports .thin>table >tbody >.colhead +tr:last-child >td:first-child {
     text-align: center;
@@ -5964,12 +5964,12 @@ tr.likes td[id^="likers_"]:hover {
     margin-left: auto !important;}
 
 #forums .forum_post.forum_unread .avatar >div:before {
-    border-left: var(--p-border) var(--c-unread-br);}
+    border-left: 1px solid var(--c-unread-br);}
 #content .forum_post.forum_unread {
     border-color: var(--c-unread-br);}
 
 #forums .forum_post.sticky_post .avatar >div:before {
-    border-left: var(--p-border) var(--c-input-brdr);}
+    border-left: 1px solid var(--c-input-brdr);}
 #content .forum_post.sticky_post {
     border-color: var(--c-input-brdr);}
 
@@ -5984,7 +5984,7 @@ tr.likes td[id^="likers_"]:hover {
     box-shadow: var(--p-header-shdw);
     background-color: var(--c-box);}
 #wrapper #content table.bbcode_table td {
-	border: var(--p-border) var(--c-table-brdr);}
+	border: 1px solid var(--c-table-brdr);}
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td,
 #running_freeleech td.center.cats_col,
 #inbox .colhead >td:first-child,
@@ -6146,7 +6146,7 @@ ul#noty_bottomRight_layout_container li {
     border-radius: 0 !important;
     -webkit-box-shadow: var(--p-main-shdw) !important;
     box-shadow: var(--p-main-shdw) !important;
-    border: var(--p-border) var(--c-unread-br) !important;
+    border: 1px solid var(--c-unread-br) !important;
     background-color: var(--c-sb1) !important;
     color: var(--c-low) !important;}
 ul#noty_bottomRight_layout_container li[style*="darkred"] {
@@ -6186,7 +6186,7 @@ input[type="radio"] {
     position: relative;
     display: inline-block;
     padding: 6px 6px 5px 5px;
-    border: var(--p-border);
+    border: 1px solid;
     background-color: var(--c-input);
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
@@ -6468,7 +6468,7 @@ input[type="radio"]:active {
 #inbox #messageform #preview {
     padding: 10px;
     margin: 0 0 15px 0;
-	border: var(--p-border) var(--c-table-brdr);
+	border: 1px solid var(--c-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 #inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child),
@@ -6502,7 +6502,7 @@ input[type="radio"]:active {
 
 #reportsv2 #dynamic_form >table.border {
     position: relative;
-	border: var(--p-border) var(--c-table-brdr);
+	border: 1px solid var(--c-table-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     margin-bottom: 36px;}
@@ -6586,7 +6586,7 @@ input[type="radio"]:active {
     font-size: 13px;
     line-height: var(--p-lh);}
 .profile #community_stats li.comm_stats_head {
-    border-bottom: var(--p-border) var(--c-table-brdr);
+    border-bottom: 1px solid var(--c-table-brdr);
     font-size: 15px;
     line-height: 1em;
     padding-bottom: 3px;
@@ -6602,8 +6602,8 @@ input[type="radio"]:active {
     z-index: 0;
     width: 100%;
     height: 100%;
-    border-left: var(--p-border) var(--c-main-brdr);
-    border-bottom: var(--p-border) var(--c-table-brdr);
+    border-left: 1px solid var(--c-main-brdr);
+    border-bottom: 1px solid var(--c-table-brdr);
     top: 0;
     left: -1px;}
 
@@ -6632,9 +6632,9 @@ input[type="radio"]:active {
     font-weight: 600;
     padding: 9px 10px;
     background: var(--p-head-grdnt);
-    border-top: var(--p-border) var(--c-main-brdr);
-    border-right: var(--p-border) var(--c-main-brdr);
-    border-left: var(--p-border) var(--c-main-brdr);}
+    border-top: 1px solid var(--c-main-brdr);
+    border-right: 1px solid var(--c-main-brdr);
+    border-left: 1px solid var(--c-main-brdr);}
 
 #requests .main_column >table:first-child:before { /* also pseudo head */
     content: 'Details';}
@@ -6657,7 +6657,7 @@ input[type="radio"]:active {
     bottom: -1px;
     left: -1px;
     height: 0;
-    border-bottom: var(--p-border) var(--c-main-brdr);}
+    border-bottom: 1px solid var(--c-main-brdr);}
 #gazelleview table.gazelleinfo >tbody:after,
 .collections_art_display >tbody:after,
 #requests .main_column >table:first-child >tbody:after {
@@ -6666,7 +6666,7 @@ input[type="radio"]:active {
     top: 0;
     right: -1px;
     width: 0;
-    border-right: var(--p-border) var(--c-main-brdr);
+    border-right: 1px solid var(--c-main-brdr);
     height: 100%;}
 
 /** /Chromium table border rendering bug workaround **/
@@ -6727,7 +6727,7 @@ input[type="radio"]:active {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     z-index: -1;}
 #donate #wrapper .box.pad.donation_info:before {
     -webkit-box-sizing: unset;
@@ -6975,9 +6975,9 @@ input[type="radio"]:active {
     border-radius: 0;
     color: var(--c-txt);
     background-color: var(--c-box);
-    border: var(--p-border) var(--c-main-brdr);}
+    border: 1px solid var(--c-main-brdr);}
 .ui-dialog {
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     padding: 0px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
@@ -7247,7 +7247,7 @@ input[class="date_picker"] {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     color: var(--c-txt);
 	font-family: OpenSans, Helvetica, Arial, sans-serif;}
 .fancybox-error,
@@ -7274,14 +7274,14 @@ input[class="date_picker"] {
     transform: scaleX(-1);}
 .xdsoft_datetimepicker .xdsoft_calendar td,
 .xdsoft_datetimepicker .xdsoft_calendar th {
-	border: var(--p-border) var(--c-table-brdr);
+	border: 1px solid var(--c-table-brdr);
     background: var(--c-input);
     color: var(--c-txt);}
 .xdsoft_datetimepicker .xdsoft_calendar th {
     color: var(--c-text-s);
     background-color: var(--c-tor-row-hvr);}
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select {
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     background-color: var(--c-box);}
 .xdsoft_scrollbar > .xdsoft_scroller {
     background-color: var(--c-sticky-id-brdr) !important;}
@@ -7289,7 +7289,7 @@ input[class="date_picker"] {
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select > div > .xdsoft_option:nth-child(even) {
     background-color: var(--c-tgroup);}
 .xdsoft_datetimepicker .xdsoft_label > .xdsoft_select {
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     background-color: var(--c-box);}
 .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_default,
 .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current,
@@ -7706,7 +7706,7 @@ td >img[title="Gold"] {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     margin: 10px 0;}
 #searchforum table,
 #searchthread table {
@@ -7757,7 +7757,7 @@ td >img[title="Gold"] {
     line-height: 1em;
     padding: 1px 3px 1px 2px;
     background: var(--p-subcolhead);
-    border: var(--p-border) var(--c-unread-br);}
+    border: 1px solid var(--c-unread-br);}
 
 
 .clan_stat_totals .center img {
@@ -8172,7 +8172,7 @@ span.size5 img {
 .wiki_index span.size6 strong,
 .wiki_index span.size5 strong,
 .wiki_index span.size4 strong {
-	border-bottom: var(--p-border) var(--c-table-brdr);}
+	border-bottom: 1px solid var(--c-table-brdr);}
 /* #wiki .postlist {
 	margin: 0;} */
 #wiki.wiki_index .wiki_article .postlist {
@@ -8214,7 +8214,7 @@ span.size5 img {
 #user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td {
     padding: 5px;}
 #user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td:not(.label) {
-	border: var(--p-border) var(--c-table-brdr);}
+	border: 1px solid var(--c-table-brdr);}
 #user #wrapper .box.box_gold #box_gold_scrollbar .colhead +tr td {
     border-top: none;}
 #user #wrapper .box.box_gold #box_gold_scrollbar tr:last-child td {
@@ -8340,7 +8340,7 @@ span.size5 img {
     width: 100%;
     height: 100%;
     background-color: var(--c-edition);
-    border: var(--p-img-border) var(--c-b4);
+    border: 3px solid var(--c-b4);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 #user .box.box_items #itemsdiv p:first-child {
@@ -8683,7 +8683,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     position: relative;
     font-weight: 600;
     color: var(--c-txt);
-    border: var(--p-img-border) var(--c-main-brdr);
+    border: 3px solid var(--c-main-brdr);
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 #wrapper #trading_panel .item:hover,
@@ -8769,7 +8769,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     background-color: var(--c-tgroup);
     width: 20px;
     height: 18px;
-    border: var(--p-border) var(--c-table-brdr);}
+    border: 1px solid var(--c-table-brdr);}
 .item img.equipment_level[src$="level0.png"] ~h3:before {
     content: '0';
     color: var(--c-text-s);}
@@ -8821,7 +8821,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     background-color: var(--c-tgroup);
     width: 20px;
     height: 18px;
-    border: var(--p-border);
+    border: 1px solid;
     border-color: var(--c-table-brdr);}
 #wrapper #content li.item[title="Level: 0"]:before {
     content: '0';
@@ -8962,7 +8962,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	height: 370px;
 	-webkit-box-shadow: var(--p-main-shdw);
 	box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);}
+    border: 1px solid var(--c-main-brdr);}
 #shop li.item_li.no_access {
     background-color: var(--c-edition);}
 
@@ -9409,7 +9409,7 @@ li.item_li #clickable .item_description img {
     font-weight: 600;
 	width: 100%;
     padding-left: 5px;
-	border-bottom: var(--p-border) var(--c-table-brdr);}
+	border-bottom: 1px solid var(--c-table-brdr);}
 
 .more_info p:last-of-type {
     margin-bottom: 0;}
@@ -9452,7 +9452,7 @@ li.item_li #clickable .item_description img {
 .ui-widget-header .ui-state-default,
 .ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-icon-only.ui-dialog-titlebar-close {
     background: var(--c-box);
-	border: var(--p-border) var(--c-table-brdr);
+	border: 1px solid var(--c-table-brdr);
 	color: var(--c-anchor);}
 
 .ui-widget-header >.ui-dialog-title {
@@ -9556,7 +9556,7 @@ body#user.inventory {}
     background-color: var(--c-box);
 	-webkit-box-shadow: var(--p-main-shdw);
 	box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);}
+    border: 1px solid var(--c-main-brdr);}
 
 .inventory .item_image_div {
     margin-top: 50px;
@@ -9624,7 +9624,7 @@ body#user.inventory {}
     background: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     display: block;
     width: calc(100% - 237px);
     float: right;
@@ -9679,7 +9679,7 @@ body#user.inventory {}
 
 .page_break {
 	margin-bottom: 20px;
-	border-top: var(--p-border) var(--c-table-brdr);
+	border-top: 1px solid var(--c-table-brdr);
 	display: block;
 	width: 100%;}
 
@@ -9703,7 +9703,7 @@ body#user.inventory {}
     padding-bottom: 53px;}
 
 .alertable {
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     color: var(--c-txt);
     background-color: var(--c-box);
     border-radius: 0;
@@ -9766,11 +9766,11 @@ body#user.inventory {}
 	margin: 1px;
 	overflow: hidden;}
 .profile .box_art_gallery .large_row .gallery_small_slot a {
-    border: var(--p-img-border) var(--c-main-brdr);
+    border: 3px solid var(--c-main-brdr);
     width: auto;
     height: 80px;}
 .profile .box_art_gallery .small_row .gallery_small_slot a {
-    border: var(--p-img-border) var(--c-main-brdr);
+    border: 3px solid var(--c-main-brdr);
     width: auto;
 	margin: 2px;}
 .profile .gallery_small_slot img {
@@ -9864,7 +9864,7 @@ body#user.inventory {}
     font-size: 16px;
     line-height: 1em;
     font-weight: 600;
-    border-bottom: var(--p-border) var(--c-table-brdr);
+    border-bottom: 1px solid var(--c-table-brdr);
     width: 100%;
     padding: 0 0 3px 8px;
     margin: 0;}
@@ -10397,15 +10397,15 @@ td .log_green {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);}
+    border: 1px solid var(--c-main-brdr);}
 
 #achievements tr:not(.colhead) td {
-	border-bottom: var(--p-border) var(--c-table-brdr);}
+	border-bottom: 1px solid var(--c-table-brdr);}
 #wrapper #achievements tr:last-child td {
     font-size: 11px !important;
     padding-left: 10px;
     border: none;
-	border-top: var(--p-border) var(--c-table-brdr);}
+	border-top: 1px solid var(--c-table-brdr);}
 
 #user #content >#progress_bar ~.flleft.linkbox {
     text-align: left;}
@@ -10428,7 +10428,7 @@ td .log_green {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     z-index: -1;}
 #user #content >#progress_bar:after {
     content: 'User class progress';
@@ -10503,7 +10503,7 @@ td .log_green {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     z-index: -1;}
 /*#share_score >.large_progress_bar:after {
     content: '';
@@ -10545,7 +10545,7 @@ td .log_green {
     font-weight: 600;}
 
 #share_score_breakdown tr:not(:first-child):not(:last-child) {
-	border-bottom: var(--p-border) var(--c-table-brdr);}
+	border-bottom: 1px solid var(--c-table-brdr);}
 
 
 .large_progress_bar > span {
@@ -10701,7 +10701,7 @@ td .log_green {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border) var(--c-main-brdr);}
+    border: 1px solid var(--c-main-brdr);}
 #wrapper .thin#user_fight_attacks >.box.pad >h3 {
     width: calc(100% - 22px);
     margin: 0 auto;
@@ -10801,7 +10801,7 @@ td .log_green {
 #wrapper #content .select2-container--default .select2-selection--multiple .select2-selection__choice {
     margin: 1px 4px 1px 0;
     background-color: var(--c-edition);
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     padding: 1px 3px 2px 3px;}
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
     color: var(--c-text-s);}
@@ -10880,7 +10880,7 @@ table.adventure_table h3 {
 #wrapper #seedtime_tokens >.linkbox {
     margin: 0 0 27px 0;}
 #seedtime_tokens #tokens_breakdown td:last-child {
-	border-left: var(--p-border) var(--c-table-brdr);}
+	border-left: 1px solid var(--c-table-brdr);}
 
 
 #wrapper .large_progress_bar .last_drop {
@@ -11011,7 +11011,7 @@ table.adventure_table h3 {
     background-color: var(--c-input-obj);}
 
 #wrapper .item .item_count {
-    border: var(--p-border) var(--c-table-brdr);
+    border: 1px solid var(--c-table-brdr);
     background-color: var(--c-tgroup);
     padding: 0 2px;
     color: var(--c-txt);
@@ -11375,7 +11375,7 @@ table.adventure_table h3 {
 	word-break: break-word;
 	line-height: 80px;
 	background-color: var(--c-edition);
-	border: var(--p-border) var(--c-table-brdr);
+	border: 1px solid var(--c-table-brdr);
 	border-radius: 0;
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
@@ -11533,7 +11533,7 @@ table.adventure_table h3 {
     font-size: 24px;
     line-height: 26px;
     font-weight: bold;
-	border-top: var(--p-border) var(--c-table-brdr);
+	border-top: 1px solid var(--c-table-brdr);
     background-color: var(--c-tgroup);}
 
 #wrapper .trade_value .trade_value_gold img {
@@ -11570,7 +11570,7 @@ table.adventure_table h3 {
     padding: 8px 0;
     display: block;
     width: 100%;
-    border-top: var(--p-border) var(--c-table-brdr);
+    border-top: 1px solid var(--c-table-brdr);
     font-weight: 600;
     font-size: var(--p-head);
     line-height: var(--p-head);
@@ -11582,7 +11582,7 @@ table.adventure_table h3 {
     width: 100% !important;}
 
 #wrapper #trading_panel .message_box ul.bbbutt {
-    border: var(--p-img-border) var(--c-main-brdr);}
+    border: 3px solid var(--c-main-brdr);}
 
 #wrapper #trading_panel .message_box #buttons input {
 	background-color: unset;
@@ -11635,11 +11635,11 @@ table.adventure_table h3 {
 
 #wrapper #trading_panel .message_replies .message_reply_self {
     float: left;
-    border: var(--p-border) var(--c-body);
+    border: 1px solid var(--c-body);
 	background-color: var(--c-input-obj);
     margin-left: 12px;}
 #wrapper #trading_panel .message_replies .message_reply_other {
-    border: var(--p-border) var(--c-table-brdr);
+    border: 1px solid var(--c-table-brdr);
 	float: right;
 	background-color: var(--c-tor-row-hvr);
     margin-right: 12px;}
@@ -11843,9 +11843,9 @@ div#fight_skill_points_assign >table {
 	color: var(--c-txt);}
 
 #fight_skill_points_assign tr.skill_tr:not(:nth-last-child(2)){
-	border-bottom: var(--p-border) var(--c-table-brdr);}
+	border-bottom: 1px solid var(--c-table-brdr);}
 #fight_skill_points_assign tr.submit_section {
-	border-top: var(--p-border) var(--c-table-brdr);
+	border-top: 1px solid var(--c-table-brdr);
     background-color: var(--c-tgroup);}
 #fight_skill_points_assign tr.submit_section span {
     font-size: 16px;
@@ -11873,7 +11873,7 @@ div#fight_skill_points_assign >table {
 
 /** user review pop-up on #user page **/
 .qtip-default {
-    border: var(--p-border) var(--c-main-brdr);
+    border: 1px solid var(--c-main-brdr);
     background-color: var(--c-box);
     color: var(--c-txt);}
 .qtip-shadow {
@@ -11931,17 +11931,17 @@ img::selection {
 
 ::-webkit-scrollbar,
 ::-webkit-scrollbar-button {
-	border: var(--p-border) var(--c-tor-row-hvr);}
+	border: 1px solid var(--c-tor-row-hvr);}
 
 ::-webkit-scrollbar-thumb:vertical {
-    border-right: var(--p-border);
-    border-left: var(--p-border);
+    border-right: 1px solid;
+    border-left: 1px solid;
     border-color: var(--c-tor-row-hvr);
     background: var(--p-scroll-grdnt);}
 
 ::-webkit-scrollbar-thumb:horizontal {
-    border-top: var(--p-border);
-    border-bottom: var(--p-border);
+    border-top: 1px solid;
+    border-bottom: 1px solid;
     border-color: var(--c-tor-row-hvr);
     background: var(--p-head-grdnt);}
 
