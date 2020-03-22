@@ -388,8 +388,7 @@
     #userinfo_minor li a,
     #menu ul li a,
     #header #alerts .blend a {
-        border: var(--p-border);
-        border-color: var(--c-table-brdr);
+        border: var(--p-border) var(--c-table-brdr);
         font-size: 18px;
         display: block;
         line-height: 1em;
@@ -402,8 +401,7 @@
     #menu ul li a {
         width: 84px;}
     ul#userinfo_stats li#online_irc:nth-last-child(2) {
-        border-bottom: var(--p-border);
-        border-bottom-color: var(--c-table-brdr);}
+        border-bottom: var(--p-border) var(--c-table-brdr);}
     
     #header #alerts .blend a:not(:last-child),
     .sub span:not(:last-child) a,
@@ -512,8 +510,7 @@
     
     #userinfo_stats .my_buffer,
     ul#userinfo_stats li {
-        border: var(--p-border);
-        border-color: var(--c-table-brdr);
+        border: var(--p-border) var(--c-table-brdr);
         margin: 42px 0 -42px 0;
         min-width: 190px;
         width: 190px;
@@ -565,8 +562,7 @@
     
     .global_buffs .individual_buff {
         position: relative;
-        border: var(--p-border);
-        border-color: var(--c-table-brdr);
+        border: var(--p-border): var(--c-table-brdr);
         background-color: var(--c-box);
         display: none;
         width: auto;
@@ -1043,12 +1039,10 @@
         border: none !important;}
     #requests .sticky td:nth-of-type(3),
     #torrents .sticky td:nth-of-type(11) {
-        border-bottom: var(--p-border) !important;
-        border-bottom-color: var(--c-b1) !important;}
+        border-bottom: var(--p-border) var(--c-b1) !important;}
     #requests .sticky td:nth-of-type(1),
     #torrents .sticky td:nth-of-type(3) {
-        border-top: var(--p-border) !important;
-        border-top-color: var(--c-b1) !important;}
+        border-top: var(--p-border) var(--c-b1) !important;}
     
     #torrent_table tr.ignored,
     #requests .sticky,
@@ -1449,8 +1443,7 @@
     
     #wrapper #content .linkbox.groupoptions >a {
         position: relative;
-        border: var(--p-border);
-        border-color: var(--c-table-brdr);
+        border: var(--p-border) var(--c-table-brdr);
         background-color: var(--c-box);
         margin: 0;
         z-index: 9;
@@ -1595,12 +1588,10 @@
 		/* border-bottom: var(--p-border);
         border-bottom-color: var(--c-table-brdr); */}
     #torrents .main_column tbody[id^="edition"] tr.group_torrent {
-        border-top: var(--p-border);
-        border-top-color: var(--c-table-brdr);
+        border-top: var(--p-border) var(--c-table-brdr);
         padding: 10px 4px;}
     #torrents .main_column tbody tr.group_torrent{
-        border-bottom: var(--p-border);
-        border-bottom-color: var(--c-table-brdr);}
+        border-bottom: var(--p-border) var(--c-table-brdr);}
     #collections tr.group_torrent >td,
     .edition_info strong {
         position: relative;}
@@ -1708,8 +1699,7 @@
         -webkit-mask-image: unset;
         mask-image: unset;
         background-color: var(--c-box) !important;
-        border: var(--p-border);
-        border-color: var(--c-table-brdr);
+        border: var(--p-border) var(--c-table-brdr);
 		/* border-bottom: 1px var(--darkBlue2) solid !important;
 		color: var(--white); */}
     
@@ -2458,8 +2448,7 @@ a[title="Remove"]:before {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-    border: var(--p-border);
-    border-color: var(--c-main-brdr);
+    border: var(--p-border) var(--c-main-brdr);
     z-index: -1;}
     
     #staffpm table.message_table.checkboxes td:last-child {
@@ -2935,8 +2924,7 @@ a[title="Remove"]:before {
         padding-top: 8px;}
 	#inbox #messageform td:nth-of-type(2) {
         display: block;
-        border-top: var(--p-border);
-        border-top-color: var(--c-edition);
+        border-top: var(--p-border) var(--c-edition);
         padding-top: 8px !important;
         padding-bottom: 5px !important;
         border-bottom: none !important;}
@@ -3139,8 +3127,7 @@ a[title="Remove"]:before {
         background-color: var(--c-box);
         -webkit-box-shadow: var(--p-main-shdw);
         box-shadow: var(--p-main-shdw);
-        border: var(--p-border);
-        border-color: var(--c-main-brdr);
+        border: var(--p-border) var(--c-main-brdr);
         margin: 0 0 15px 0;}
     
     #wrapper #content #items_navigation:before {
