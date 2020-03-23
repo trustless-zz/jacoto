@@ -1,0 +1,11 @@
+﻿@import url('res/c_light__core.css');
+@import url('res/c_light_jacoto.css');
+@import url('res/large_sidebar.css') screen and (min-width: 1387px);
+
+@import url('res/temp_core_uncompressed.css');
+@import url('res/icons_323232.css');
+@import url('res/userscripts.css');
+@import url('res/temp_desktop_uncompressed.css');
+@import url('res/temp_mobile_uncompressed.css');
+
+@import url('https://gazellegames.net/static/styles/game_room/cssFiles/holidayeffects.css');
