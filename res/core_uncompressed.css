@@ -107,6 +107,7 @@ td.read_locked_sticky:before,
 .xdsoft_datetimepicker .xdsoft_prev,
 #wrapper .prev,
 #wrapper .next,
+.month-picker-header .ui-icon,
 #nav_userinfo a:before {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -181,6 +182,7 @@ td.unread_locked_sticky:before {
     mask-repeat: no-repeat;
     mask-size: contain;
     background-color: var(--c-unread-i);}
+#calendar .change_month_links a,
 #bookmarks tr.group_torrent a.tooltip,
 .forum_post tr.likes >td:first-child a:nth-child(1),
 .forum_post tr.likes >td:first-child a:nth-child(2),
@@ -277,8 +279,10 @@ td a:hover img[alt="Ratio"],
 #deletereview a:hover {
     background-color: var(--c-anchor-hvr);}
 
+.month-picker-header .ui-icon:hover,
 #wrapper .prev:hover,
 #wrapper .next:hover,
+#calendar .change_month_links a:hover,
 .torrent_table .show_torrents_link:hover:after,
 #userinfo_stats:hover #stats_ratio .stat:after,
 #userinfo_username .sub[style="visibility: visible;"] ~#nav_userinfo a:after {
@@ -489,10 +493,15 @@ a[title="Remove"],
 .xdsoft_datetimepicker .xdsoft_prev:active,
 .xdsoft_datetimepicker .xdsoft_next,
 .xdsoft_datetimepicker .xdsoft_prev,
+#calendar .change_month_links a,
+.ui-icon-circle-triangle-e,
+.ui-icon-circle-triangle-w,
 .prev,
 .next {
     -webkit-mask-image: url('icons/prev.svg');
     mask-image: url('icons/prev.svg');}
+.ui-icon-circle-triangle-e,
+#calendar .change_month_links #next_month a,
 .xdsoft_datetimepicker .xdsoft_next,
 .next {
     transform: scaleX(-1);}
@@ -643,6 +652,8 @@ td.center.cats_col+td,
 
 #better #content,
 #better .torrent_table tr.torrent.torrent_row td:nth-child(2),
+
+#calendar #content,
 
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
@@ -1078,8 +1089,10 @@ strong.mature +strong +br +a[onclick] {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 .tooltipster-default .tooltipster-content {
-	font-family: OpenSans, Helvetica, Arial, sans-serif !important;
 	font-size: 12px !important;}
+.ui-widget,
+.tooltipster-default .tooltipster-content {
+	font-family: OpenSans, Helvetica, Arial, sans-serif !important;}
 
 .head strong,
 li.active,
@@ -1319,6 +1332,7 @@ h2 .username_badges a {
     display: inline-block;
     width: 100%;}
 
+#calendar .change_month_links a,
 .prev,
 .next {
     width: 24px;
@@ -1472,6 +1486,7 @@ div#fight_skill_points_assign >table,
 #tools #content >p,
 #better .thin >div,
 #better .thin >table,
+#calendar .calendar,
 #collections .thin >h2:first-child +form:last-child /* edit description page */ {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
@@ -1613,6 +1628,8 @@ span.user_title a:hover,
 
 .box.box_info span[style="float:right;"] a,
 #css_gallery .preview_image a,
+
+.month-picker-header table,
 
 .username_badges a,
 table#likesrow a,
@@ -1872,6 +1889,11 @@ a#tag_show\/hide,
 
 #better .torrent_table tr.torrent.torrent_row,
 
+td.calendar-day,
+.calendar .day-events p.tooltip:before,
+#calendar .day-number:before,
+.xdsoft_time,
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -2105,6 +2127,7 @@ a#tag_show\/hide:active,
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
 
+.calendar a[style="color: red;"],
 #better td span[style="color: red;"],
 tr#reviewrow div[style="color:red;font-weight:bold;text-align:center"],
 .trade_value .trade_value_percent [style="color: rgb(177, 0, 0);"],
@@ -2127,6 +2150,7 @@ strong.important_text,
 .torrent_details blockquote#description [style="color: #ff0000;"] {
     color: var(--c-red) !important;}
 
+.calendar a[style="color: green;"],
 #better td span[style="color: green;"],
 #user .thin >h2:first-child +.center ~table.border span[style*="green;"] {
     color: var(--c-green) !important;}
@@ -2190,6 +2214,7 @@ img#authcode,
 #wrapper >#overlay {
     background: none;}
 
+.ui-widget-overlay,
 #wrapper >#overlay:before,
 .alertable-overlay,
 .fancybox-bg,
@@ -2210,6 +2235,7 @@ img#authcode,
     width: 100%;
     height: 100%;
     z-index: -1;}
+.ui-widget-overlay,
 #wrapper >#overlay:before,
 .alertable-overlay,
 .fancybox-is-open .fancybox-bg,
@@ -2600,6 +2626,7 @@ table.bbcode_table td,
 .global_buffs .color_purple .buff_text,
 .global_buffs .color_yellow .buff_text {
     color: var(--c-text-s);}
+.calendar a[style^="color:"]:hover,
 #header .global_buffs a:hover span,
 #header .global_buffs a:hover i {
     color: var(--c-anchor-hvr) !important;}
@@ -3379,6 +3406,11 @@ h3 a[href^="user.php?action=notify_delete&"],
 #crafting_recipes,
 
 #css_gallery .preview_image,
+
+td.calendar-day,
+td.calendar-day-np,
+td.calendar-row.calendar-heading,
+#calendar table.calendar,
 
 #top10 .thin >div,
 
@@ -4290,6 +4322,8 @@ strong.mature +strong +br,
 #user .box.box_suggested_tags .head.tooltip >span:last-child,
 #torrents #content >script ~form #torrent_link .colhead:first-child,
 
+.xdsoft_scrollbar,
+
 /* forum post 'back to top' button */
 #artist #requests .colhead_dark a,
 #userhistory .colhead_dark span[id*="bar"],
@@ -4475,6 +4509,7 @@ li:not(.suggested_similar) .similar_votes >span {
 #inbox .box.vertical_space .head,
 .forum_post .colhead_dark {
     background: var(--p-post-colhead-bcg);}
+#calendar td.calendar-row.calendar-heading,
 #top10 .thin >.linkbox ~div:not(.center) >table.border .colhead,
 #artist .main_column table .colhead,
 #artist .main_column table .colhead_dark,
@@ -4509,6 +4544,7 @@ li:not(.suggested_similar) .similar_votes >span {
     font-size: 14px;
     line-height: 19px;
     padding: 6px 5px 7px 5px;}
+#calendar td.calendar-row.calendar-heading,
 #user .thin >.header:first-child ~h3 +.box.pad:last-child .colhead td,
 #upload #content >div[style="margin:0px auto;width:700px"] .colhead td,
 #seedtime_tokens #tokens_breakdown .colhead td,
@@ -4816,6 +4852,7 @@ a[href^="javascript:Vote("] strong:hover,
 .similar img:hover,
 #css_gallery .preview_image:hover,
 .screenshots img:hover,
+#calendar td.calendar-day:hover,
 .box_albumart img:hover,
 .sidebar img:hover,
 .userratingdiv img,
@@ -5303,6 +5340,8 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     padding-bottom: 0;}
 
 /** convert ... to head **/
+#calendar #content >h2,
+.tooltipster-content h2,
 #better .thin >h3,
 #artist .center.thin >h2,
 #torrents .torrent_edit >.thin >h2,
@@ -5370,6 +5409,7 @@ form[name="filter"] h3,
     margin: 10px 0 8px 5px;}
 #wrapper #gazelleview #titlerow p:empty {
     height: 18px;}
+#calendar #content >h2,
 #torrents .torrent_edit >.thin >h2,
 #user .thin >.header:first-child ~h3 {
     margin: 0;
@@ -5492,6 +5532,7 @@ input[name="year"],
     width: auto !important;}
 #upload .thin form table .colhead:not(:first-child) {
 	border-top: 1px solid var(--c-table-brdr);}
+.event_form_table #body, /* calendar new */
 .thin >#request_form input[name="title"],
 /* #upload */input#release_title,
 /* #upload */input#aliases,
@@ -6174,6 +6215,11 @@ a[onclick="BBCode.spoiler(this);"] {
     padding: 0 !important;
     margin: 5px 10px 0 0 !important;
     /* cursor: default !important; */}
+.calendar a[style="color: white;"] {
+    color: var(--c-anchor) !important;}
+.calendar a[style="color: white;"]:hover {
+    color: var(--c-anchor-hvr) !important;
+    background-color: var(--c-anchor-hvr-bcg) !important;}
 .ui-widget-content button:hover,
 input[type="button"][value="Show"]:hover,
 input[type="button"][value="Hide"]:hover,
@@ -6533,6 +6579,7 @@ input[type="radio"]:active {
     height: 0;
     z-index: 99;
     position: relative;}
+#calendar h2 input#monthPicker,
 #reportsv2 #report_table >table td {
     padding: 0;
     font-size: 0;
@@ -7253,6 +7300,7 @@ input[class="date_picker"] {
 .fancybox-error,
 .xdsoft_datetimepicker .xdsoft_label {
     background-color: var(--c-box);}
+.month-picker-header .ui-icon,
 .xdsoft_datetimepicker .xdsoft_next:active,
 .xdsoft_datetimepicker .xdsoft_prev:active,
 .xdsoft_datetimepicker .xdsoft_next,
@@ -7306,6 +7354,17 @@ input[class="date_picker"] {
     box-shadow: none !important;}
 .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_today {
     color: var(--c-on);}
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_next,
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_prev {
+    height: 30px;
+    width: 20px;
+    margin: 0 auto;}
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_prev {
+    transform: rotate(90deg);}
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_next {
+    transform: rotate(-90deg);}
+.xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box {
+    overflow: auto !important;}
 
 #bookmarks .sidebar .pad {
     padding: 10px 0 0 0 !important;}
@@ -7463,6 +7522,7 @@ ul.poll,
 
 #index .sidebar abbr {
     cursor: help;}
+.month-picker-year-table .month-picker-title .ui-button,
 #tools .thin >.box .head,
 #stylesheet_stats .head,
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad .colhead strong,
@@ -7471,6 +7531,7 @@ ul.poll,
 #todo .thin >form .colhead td,
 #rules .thin >.before_rules li ul li strong {
     font-weight: 600;}
+#calendar td.calendar-row.calendar-heading strong,
 #collections #torrent_table .colhead strong,
 #rules .thin >.before_rules li ul ul li strong,
 #user .thin >h2:first-child +.box.pad:last-child td strong,
@@ -11713,6 +11774,231 @@ table.adventure_table h3 {
 
 
 
+.ui-widget .month-picker-header {
+    padding: 9px 0;
+    height: auto;
+    margin: 0 0 8px 0;}
+.month-picker-header table,
+.month-picker-header tbody {
+    display: block;
+    width: 100%;}
+
+.month-picker-header tr {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;}
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+    border-top-left-radius: 0;}
+
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+    border-top-right-radius: 0;}
+
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+    border-bottom-left-radius: 0;}
+
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+    border-bottom-right-radius: 0;}
+
+.month-picker-header .ui-state-hover,
+.month-picker-header .ui-state-focus {
+    border: unset;
+    background: unset !important;
+    font-weight: normal;
+    color: var(--c-anchor-hvr);}
+.month-picker-year-table .month-picker-title a,
+.month-picker-year-table .month-picker-title span {
+    line-height: 1em;
+    height: auto;
+    padding: 0 !important;}
+.month-picker-year-table .ui-button {
+    font-size: var(--p-head);
+    width: var(--p-head);
+    height: var(--p-head);
+    cursor: default;
+    margin: 0;}
+.month-picker-header td,
+.month-picker-header span,
+.month-picker-header a {
+    border: unset !important;}
+.ui-widget-header a.ui-state-active {
+    background-color: unset !important;
+    border: unset !important;}
+
+
+/* Upcomming Events */
+#wrapper table.calendar {
+    display: block;}
+#index table.calendar {
+    border: 0;
+    margin: 0;}
+#calendar .calendar {
+    margin-top: -36px;
+    padding: 46px 10px 10px 10px;}
+#wrapper td.calendar-day {
+    background-color: var(--c-trowb);
+    display: flex;
+    flex-flow: column;
+    width: calc(50% - 5px);
+    padding: 3px;
+    justify-content: center;
+    position: relative;}
+.calendar tr.calendar-row {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;}
+table.calendar tbody {
+    display: block;}
+.calendar  span.event_end_time {
+    white-space: normal;
+    font-size: 10px;}
+.calendar .day-events p.tooltip {
+    position: relative;
+    text-align: center;
+    padding: 5px 0;
+    margin: 0;}
+.calendar .day-events p.tooltip:before {
+    background-color: var(--c-row-hvr);
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;}
+.calendar .day-events p.tooltip:hover:before {
+    opacity: .65;}
+.calendar .day-events p.tooltip span {
+    position: relative;}
+#wrapper td.calendar-day {
+    font-size: 14px;}
+.calendar .day-number {
+    font-weight: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 8em;
+    line-height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    user-select: none;
+    color: var(--c-tor-rowb);}
+.calendar .day-events {
+    width: 100%;
+    margin: auto;
+    z-index: 2;}
+#calendar .calendar .day-events {
+    margin: 17px auto;
+    width: auto;
+    /*margin-left: 0;*/}
+#calendar .calendar .day-events p:first-child {
+    margin-top: 0;}
+#calendar .calendar .day-events p:last-child {
+    margin-bottom: 0;}
+td.calendar-day span[style="color: white;"] {
+    color: var(--c-txt) !important;}
+#wrapper td.calendar-day:hover {
+    background-color: var(--c-row-hvr);}
+.tooltipster-content h2 {
+    width: calc(100% - 10px);
+    margin: -4px -5px;}
+td.calendar-day.today {
+    outline: 1px solid var(--c-table-brdr);
+    outline-offset: -1px;}
+.day-events .event_day {
+    font-weight: 600;}
+#calendar h2 input#monthPicker {
+    height: 0;}
+#calendar span#MonthPicker_Button_monthPicker {
+    float: left;
+    margin: -2px 6px 0 0;}
+
+table.event_form_table td.label.small_label[colspan="4"] {
+    text-align: left;}
+.event_form_table input#end_date,
+.event_form_table input#start_date,
+#calendar .main_column {
+    width: 100%;}
+#calendar td.calendar-row.calendar-heading,
+#calendar td.calendar-day-np,
+#calendar td.calendar-day {
+    width: calc((100% / 7) - (60px / 7));}
+#calendar .calendar tr:first-child {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;}
+#calendar td.calendar-day,
+#calendar td.calendar-day-np {
+    margin-top: 10px;
+    min-height: 110px;
+    height: auto;
+    border: unset;}
+#calendar .calendar-day-np,
+#calendar .day-number {
+    margin: unset;
+    padding: unset;}
+#calendar .day-number {
+    background: unset;}
+#calendar .calendar-day-np {
+    background-color: var(--c-tgroup);}
+#calendar .day-number:before {
+    content: '+';
+    position: absolute;
+    right: 2px;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    display: table;
+    font-size: 30px;
+    line-height: 0;
+    font-weight: 600;
+    color: var(--c-sticky-id-brdr);}
+#calendar .day-number:hover:before {
+    color: var(--c-txt);}
+
+#calendar .change_month_links a {
+    display: inline-block;}
+#calendar .change_month_links {
+    position: absolute;
+    top: 7px;
+    right: 6px;
+    line-height: 0;
+    font-size: 0;}
+#calendar .change_month_links #last_month {
+    margin-right: 2px;}
+
+.month-picker-header .ui-icon {
+    background-image: none;}
+
+.month-picker-header .ui-icon {
+    width: 20px;
+    height: 30px;
+    margin-top: -15px;}
+.month-picker-header .ui-icon-circle-triangle-e {
+    margin-left: -11px;}
+.month-picker-header .ui-icon-circle-triangle-w {
+    margin-left: -9px;}
+/* /Upcomming Events */
+
+
+
 
 
 
@@ -11922,6 +12208,12 @@ img::selection {
 
 
 /** webkit scrollbar **/
+.xdsoft_time_box::-webkit-scrollbar-button {
+    display: none !important;}
+.xdsoft_time_box::-webkit-scrollbar {
+    height: 10px !important;
+    width: 10px !important;}
+
 ::-webkit-scrollbar-button {
     display: none;}
 

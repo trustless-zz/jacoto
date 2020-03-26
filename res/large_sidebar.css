@@ -5,18 +5,20 @@
     justify-content: space-between;
     width: 615px;}
 #index .sidebar #stats,
-#index .sidebar #freeleech {
+#index .sidebar #freeleech,
+#index .sidebar #upcoming_calendar {
     width: 100%;}
 #index .sidebar >div.box {
     width: 300px;}
 #index .sidebar #stats .stats li {
     float: left;
     width: 50%;}
-#index #blogposts      {order: 1}
-#index #dailygazelle   {order: 2}
-#index #slides         {order: 3}
-#index #polcont        {order: 4}
-#index #stats          {order: 5}
+#index #upcoming_calendar   {order: 1;}
+#index #blogposts           {order: 2;}
+#index #dailygazelle        {order: 3;}
+#index #slides              {order: 4;}
+#index #polcont             {order: 5;}
+#index #stats               {order: 6;}
 #index .box.news_post>.pad img {
     max-width: 614px !important;}
 #index .sidebar #freeleech_time_left .points {
@@ -24,3 +26,6 @@
 #index .sidebar #freeleech_time_left #progress_bar .main_bar {
     animation: lsfl-pulse-b linear 2.7s infinite;
     background-size: 1215px 100%;}
+#wrapper #upcoming_calendar td.calendar-day {
+    padding: 5px;
+    width: calc(25% - 7.5px);}
