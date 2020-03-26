@@ -11944,8 +11944,8 @@ table.event_form_table td.label.small_label[colspan="4"] {
     display: flex;
     flex-flow: row;
     justify-content: space-between;}
-#calendar td.calendar-day,
-#calendar td.calendar-day-np {
+.calendar td.calendar-day,
+.calendar td.calendar-day-np {
     margin-top: 10px;
     min-height: 110px;
     height: auto;
