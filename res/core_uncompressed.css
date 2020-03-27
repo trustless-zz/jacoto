@@ -11842,6 +11842,7 @@ table.adventure_table h3 {
 #wrapper table.calendar {
     display: block;}
 #index table.calendar {
+    width: calc(100% + 10px);
     border: 0;
     margin: 0;}
 #calendar .calendar {
@@ -11851,14 +11852,17 @@ table.adventure_table h3 {
     background-color: var(--c-trowb);
     display: flex;
     flex-flow: column;
-    width: calc(50% - 5px);
+    width: calc(50% - 10px);
     padding: 3px;
     justify-content: center;
     position: relative;}
+#index .calendar-day {
+    margin-right: 10px;}
 .calendar tr.calendar-row {
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap;}
+#calendar .calendar tr.calendar-row {
     justify-content: space-between;}
 table.calendar tbody {
     display: block;}
@@ -11949,19 +11953,20 @@ table.event_form_table td.label.small_label[colspan="4"] {
     margin-top: 10px;
     min-height: 110px;
     height: auto;
+    padding: unset;
     border: unset;}
-#calendar .calendar-day-np,
+/*#calendar .calendar-day-np,
 #calendar .day-number {
     margin: unset;
-    padding: unset;}
-#calendar .day-number {
+    padding: unset;}*/
+#wrapper .day-number {
     background: unset;}
-#calendar .calendar-day-np {
+#wrapper .calendar-day-np {
     background-color: var(--c-tgroup);}
 #calendar .day-number:before {
     content: '+';
     position: absolute;
-    right: 2px;
+    right: 7px;
     bottom: 0;
     width: auto;
     height: auto;
