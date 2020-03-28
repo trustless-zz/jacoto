@@ -4857,6 +4857,7 @@ a[href^="javascript:Vote("] strong:hover,
 .sidebar img:hover,
 .userratingdiv img,
 .hovereffect:hover,
+#wrapper td.calendar-day.today:hover,
 .filelist_title a.brackets:hover {
     -webkit-box-shadow: none;
     box-shadow: none;}
@@ -5518,6 +5519,7 @@ input[name="year"],
     width: 100% !important;
     margin: 0 0 15px 0 !important;
     padding: 10px;}
+#wrapper td.calendar-day.today,
 #clans #clan_stats >div table,
 #rules .thin >.box.pad >table,
 #upload #content >div >table[style],
@@ -11839,6 +11841,10 @@ table.adventure_table h3 {
 
 
 /* Upcomming Events */
+#upcoming_calendar td.calendar-day.today:last-child,
+#upcoming_calendar td.calendar-day.today:nth-last-child(3) {
+    width: calc(100% - 10px);}
+
 #wrapper table.calendar {
     display: block;}
 #index table.calendar {
@@ -11849,6 +11855,7 @@ table.adventure_table h3 {
     margin-top: -36px;
     padding: 46px 10px 10px 10px;}
 #wrapper td.calendar-day {
+    font-size: 14px;
     background-color: var(--c-trowb);
     display: flex;
     flex-flow: column;
@@ -11887,9 +11894,11 @@ table.calendar tbody {
     opacity: .65;}
 .calendar .day-events p.tooltip span {
     position: relative;}
-#wrapper td.calendar-day {
-    font-size: 14px;}
 .calendar .day-number {
+    float: unset;
+    margin: unset;
+    padding: unset;
+    
     font-weight: normal;
     position: absolute;
     top: 0;
@@ -11923,9 +11932,9 @@ td.calendar-day span[style="color: white;"] {
 .tooltipster-content h2 {
     width: calc(100% - 10px);
     margin: -4px -5px;}
-td.calendar-day.today {
+/*td.calendar-day.today {
     outline: 1px solid var(--c-table-brdr);
-    outline-offset: -1px;}
+    outline-offset: -1px;}*/
 .day-events .event_day {
     font-weight: 600;}
 #calendar h2 input#monthPicker {
