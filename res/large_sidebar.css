@@ -30,6 +30,9 @@
     padding: 5px;
     width: calc(25% - 10px);}
 #wrapper #upcoming_calendar td.calendar-day:nth-child(2):last-child,
-#wrapper #upcoming_calendar td.calendar-day.today:nth-last-child(2),
-#wrapper #upcoming_calendar td.calendar-day.today:nth-last-child(3) {
+#wrapper #upcoming_calendar td.calendar-day.today:nth-last-child(2) {
     width: calc(50% - 10px);}
+#wrapper #upcoming_calendar td.calendar-day.today:nth-last-child(3),
+#wrapper #upcoming_calendar td.calendar-day:nth-child(2):nth-last-child(2),
+#wrapper #upcoming_calendar td.calendar-day:nth-child(3):last-child {
+    width: calc(100% / 3 - 10px);}
