@@ -19,20 +19,22 @@
 #index #slides              {order: 4;}
 #index #polcont             {order: 5;}
 #index #stats               {order: 6;}
-#index .box.news_post>.pad img {
+#index .box.news_post >.pad img {
     max-width: 614px !important;}
 #index .sidebar #freeleech_time_left .points {
     font-size: var(--p-head);}
 #index .sidebar #freeleech_time_left #progress_bar .main_bar {
     animation: lsfl-pulse-b linear 2.7s infinite;
     background-size: 1215px 100%;}
-#wrapper #upcoming_calendar td.calendar-day {
+#wrapper #upcoming_calendar .calendar-day {
     padding: 5px;
     width: calc(25% - 10px);}
-#wrapper #upcoming_calendar td.calendar-day:nth-child(2):last-child,
-#wrapper #upcoming_calendar td.calendar-day.today:nth-last-child(2) {
+#wrapper #upcoming_calendar .calendar-day:nth-child(2):last-child,
+#wrapper #upcoming_calendar .calendar-day.today:nth-last-child(2) {
     width: calc(50% - 10px);}
-#wrapper #upcoming_calendar td.calendar-day.today:nth-last-child(3),
-#wrapper #upcoming_calendar td.calendar-day:nth-child(2):nth-last-child(2),
-#wrapper #upcoming_calendar td.calendar-day:nth-child(3):last-child {
+#wrapper #upcoming_calendar .calendar-day.today:nth-last-child(3),
+#wrapper #upcoming_calendar .calendar-day:nth-child(2):nth-last-child(2),
+#wrapper #upcoming_calendar .calendar-day:nth-child(3):last-child {
     width: calc(100% / 3 - 10px);}
+#wrapper .calendar-day.today:only-child .day-label {
+    font-size: 5em;}
