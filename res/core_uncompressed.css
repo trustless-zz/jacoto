@@ -659,7 +659,7 @@ td.center.cats_col+td,
 #better #content,
 #better .torrent_table tr.torrent.torrent_row td:nth-child(2),
 
-#calendar #content,
+/*#calendar #content,*/
 
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
@@ -12047,6 +12047,7 @@ table.event_form_table td.label.small_label[colspan="4"] {
 #calendar .calendar-day {
     width: calc((100% / 7) - (60px / 7));}
 #calendar .calendar tr:first-child {
+    width: 100%;
     display: flex;
     flex-flow: row;
     justify-content: space-between;}
@@ -12087,16 +12088,17 @@ table.event_form_table td.label.small_label[colspan="4"] {
 #calendar .change_month_links a {
     display: inline-block;}
 #calendar .change_month_links {
-    position: absolute;
-    top: 7px;
-    right: 6px;
+    position: relative;
+    float: right;
     line-height: 0;
-    font-size: 0;}
+    font-size: 0;
+    margin-top: -29px;
+    right: 3px;}
 #calendar .change_month_links #last_month {
     margin-right: 2px;}
 
-.month-picker-header .ui-icon {
-    background-image: none;}
+.event_day.selected {
+    text-decoration-color: var(--c-red);}
 
 .month-picker-header .ui-icon {
     width: 20px;
@@ -12168,7 +12170,7 @@ table.event_form_table td.label.small_label[colspan="4"] {
     margin-right: auto;}
 #calendar .day-events a {
     width: 100%;
-    padding: 5px 0;
+    padding: 5px 2px;
     margin: 0 auto;
     display: inline-block;}
 /* /Upcomming Events */
