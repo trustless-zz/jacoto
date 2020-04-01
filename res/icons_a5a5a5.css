@@ -283,6 +283,7 @@ body >#preview-popup img,
 #groupplatform a[href$="=ZX+Spectrum"] {background-image: url(caticons/zxspectrum.svg);}
 /* } */
 
+.select2-container--default .select2-selection--single .select2-selection__arrow b,
 select {
     background-image: url('icons/a5a5a5/select.svg');}
 /** number **/
