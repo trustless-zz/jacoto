@@ -977,6 +977,11 @@ body {
 @media (min-width: 801px) and (max-width: 1302px) {
     #wrapper #backpack  #items {
         width: 275px;}
+    #wrapper .calendar .day-number {
+        font-size: 6em;}
+    #calendar .calendar .calendar-day,
+    #calendar .calendar .calendar-day-np {
+        min-height: 100px;}
 }
 @media (min-width: 801px) and (max-width: 1178px) {
     #wrapper #backpack  #items {
@@ -1042,6 +1047,11 @@ body {
 @media (min-width: 801px) and (max-width: 1099px) {
     #wrapper #content #trading_panel #other_trade_table {
         width: 275px;}
+    #wrapper .calendar .day-number {
+        font-size: 4em;}
+    #calendar .calendar .calendar-day,
+    #calendar .calendar .calendar-day-np {
+        min-height: 80px;}
 }
 @media (min-width: 801px) and (max-width: 975px) {
     #wrapper #trading_panel #items {

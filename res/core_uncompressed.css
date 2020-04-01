@@ -1905,11 +1905,14 @@ a#tag_show\/hide,
 
 .calendar-day,
 #calendar .day-events >p:before,
-.calendar .day-events >.tooltip:before,
+/*.calendar .day-events >.tooltip:before,*/
 #calendar .day-number:before,
 .xdsoft_time,
 
 .select2-results__option,
+
+.day-label,
+.event_li.tooltip,
 
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
@@ -4942,7 +4945,7 @@ a[href^="javascript:Vote("] strong:hover,
 .sidebar img:hover,
 .userratingdiv img,
 .hovereffect:hover,
-#wrapper .calendar-day.today:hover,
+#wrapper .calendar .calendar-day:hover,
 .filelist_title a.brackets:hover {
     -webkit-box-shadow: none;
     box-shadow: none;}
@@ -5607,7 +5610,7 @@ input[name="year"],
     width: 100% !important;
     margin: 0 0 15px 0 !important;
     padding: 10px;}
-#wrapper .calendar-day.today,
+#wrapper .calendar-day,
 #clans #clan_stats >div table,
 #rules .thin >.box.pad >table,
 #upload #content >div >table[style],
@@ -9936,6 +9939,7 @@ body#user.inventory {}
 	margin: 2px;}
 .profile .gallery_small_slot img {
 	display: block;}
+#wrapper .calendar-day.today,
 .profile .box_art_gallery .gallery_small_slot.selected a {
 	border-color: var(--c-sticky-id-brdr);}
 
@@ -11943,14 +11947,17 @@ table.adventure_table h3 {
 
 
 /* Upcomming Events */
-#wrapper #upcoming_calendar .calendar-day.today:only-child,
+/*#wrapper #upcoming_calendar .calendar-day.today:only-child,
 #upcoming_calendar .calendar-day.today:nth-last-child(3) {
-    width: calc(100% - 10px);}
+    width: calc(100% - 10px);}*/
+
+#upcoming_calendar {
+    padding-bottom: 0;}
 
 #wrapper .calendar {
     display: block;}
-#index .calendar {
-    width: calc(100% + 10px);
+#upcoming_calendar .calendar {
+    width: 100%;
     border: 0;
     margin: 0;}
 #calendar .calendar {
@@ -11961,12 +11968,11 @@ table.adventure_table h3 {
     background-color: var(--c-trowb);
     display: flex;
     flex-flow: column;
-    width: calc(50% - 10px);
-    padding: 3px;
+    padding: 5px;
     justify-content: center;
     position: relative;}
-#index .calendar-day {
-    margin-right: 10px;}
+#upcoming_calendar .calendar-day {
+    margin-bottom: 10px;}
 .calendar .calendar-row {
     width: 100%;
     display: flex;
@@ -11976,7 +11982,8 @@ table.adventure_table h3 {
 .calendar tbody {
     display: block;}
 .calendar .event_end_time {
-    white-space: normal;
+    white-space: normal;}
+#calendar .event_end_time {
     font-size: 10px;}
 #calendar .day-events >p,
 .calendar .day-events >.tooltip {
@@ -11985,9 +11992,9 @@ table.adventure_table h3 {
     margin: 0;}
 .calendar .day-events >.tooltip {
     padding: 5px 0;}
-#calendar .day-events >p:before,
-.calendar .day-events >.tooltip:before {
-    background-color: var(--c-row-hvr);
+#calendar .day-events >p:before/*,
+.calendar .day-events >.tooltip:before*/ {
+    background-color: var(--c-tgroup);
     content: '';
     position: absolute;
     left: 0;
@@ -12030,7 +12037,7 @@ table.adventure_table h3 {
 
 table.event_form_table td.label.small_label[colspan="4"] {
     text-align: left;}
-.calendar-day.today:only-child,
+#upcoming_calendar .calendar-day,
 .event_form_table input#end_date,
 .event_form_table input#start_date,
 #calendar .main_column {
@@ -12043,12 +12050,16 @@ table.event_form_table td.label.small_label[colspan="4"] {
     display: flex;
     flex-flow: row;
     justify-content: space-between;}
+
 .calendar .calendar-day,
 .calendar .calendar-day-np {
-    margin-top: 10px;
-    min-height: 110px;
+    margin-top: 10px;}
+#calendar .calendar .calendar-day,
+#calendar .calendar .calendar-day-np {
+    min-height: 120px;
     height: auto;
-    padding: unset;
+    padding: unset;}
+#calendar .calendar .calendar-day-np {
     border: unset;}
 /*#calendar .calendar-day-np,
 #calendar .day-number {
@@ -12096,25 +12107,25 @@ table.event_form_table td.label.small_label[colspan="4"] {
 .month-picker-header .ui-icon-circle-triangle-w {
     margin-left: -9px;}
 
-.calendar-day.today:only-child,
+#upcoming_calendar .calendar-day.today,
 #calendar .day-events >p a,
 .calendar .day-events >.tooltip span {
     position: relative;}
 
-.calendar li.event_li.tooltip {
+.calendar .event_li.tooltip {
     display: flex;
     flex-flow: column;
     text-align: center;}
 
-.calendar-day.today:only-child .day-events {
-    padding: 10px 0;
+#upcoming_calendar .day-events {
+    padding: 5px 0;
     position: relative;
-    z-index: 2;}
-.calendar-day.today:only-child .event_end_time {
+    /*z-index: 2;*/}
+#upcoming_calendar .event_end_time {
     font-size: 11px;}
 
-.calendar-day.today:only-child .day-label,
-.calendar .day-number {
+/*.calendar-day.today:only-child .day-label,*/
+#calendar .calendar .day-number {
     font-weight: normal;
     position: absolute;
     top: 0;
@@ -12133,8 +12144,22 @@ table.event_form_table td.label.small_label[colspan="4"] {
     margin: unset;
     padding: unset;
     font-size: 8em;}
-.calendar-day.today:only-child .day-label {
-    font-size: 3em;}
+/*.calendar-day.today:only-child .day-label {
+    font-size: 3em;}*/
+
+#upcoming_calendar .day-label {
+    font-weight: 600;
+    padding: 5px;
+    margin: -5px -5px 0 -5px;
+    font-size: 16px;
+    line-height: 1em;
+    text-align: center;
+    background-color: var(--c-tor-row-hvr);}
+#upcoming_calendar .calendar-day:hover .day-label {
+    background-color: var(--c-edition);}
+
+#upcoming_calendar .event_li.tooltip:not(:only-child):hover {
+    background-color: var(--c-tgroup);}
 
 #calendar .day-events >p {
     display: flex;
@@ -12313,6 +12338,7 @@ div#fight_skill_points_assign >table {
     border: 1px solid var(--c-main-brdr);
     background-color: var(--c-box);
     color: var(--c-txt);}
+#wrapper .calendar-day.today,
 .qtip-shadow {
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);}
