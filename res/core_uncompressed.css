@@ -3436,6 +3436,8 @@ h3 a[href^="user.php?action=notify_delete&"],
 
 #top10 .thin >div,
 
+#calendar .day-events >p,
+
 .permissions {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
@@ -9353,6 +9355,7 @@ h3 a[href^="user.php?action=notify_delete&"] {
 	vertical-align: top;
 	position: absolute;}
 
+#wrapper .calendar-day.today,
 .inventory #wrapper #content li.item_li.new,
 #shop li.new {
     border-color: var(--c-unread-br);}
@@ -9939,7 +9942,7 @@ body#user.inventory {}
 	margin: 2px;}
 .profile .gallery_small_slot img {
 	display: block;}
-#wrapper .calendar-day.today,
+/*#wrapper .calendar-day.today,*/
 .profile .box_art_gallery .gallery_small_slot.selected a {
 	border-color: var(--c-sticky-id-brdr);}
 
@@ -11968,7 +11971,7 @@ table.adventure_table h3 {
     background-color: var(--c-trowb);
     display: flex;
     flex-flow: column;
-    padding: 5px;
+    padding: 0;
     justify-content: center;
     position: relative;}
 #upcoming_calendar .calendar-day {
@@ -11994,7 +11997,7 @@ table.adventure_table h3 {
     padding: 5px 0;}
 #calendar .day-events >p:before/*,
 .calendar .day-events >.tooltip:before*/ {
-    background-color: var(--c-tgroup);
+    background-color: var(--c-row-hvr);
     content: '';
     position: absolute;
     left: 0;
@@ -12019,7 +12022,7 @@ table.adventure_table h3 {
     margin-bottom: 0;}
 .calendar-day span[style="color: white;"] {
     color: var(--c-txt) !important;}
-#wrapper .calendar-day:hover {
+#wrapper .calendar-day .event_li.tooltip:hover {
     background-color: var(--c-row-hvr);}
 .tooltipster-content h2 {
     width: calc(100% - 10px);
@@ -12081,7 +12084,10 @@ table.event_form_table td.label.small_label[colspan="4"] {
     font-size: 30px;
     line-height: 0;
     font-weight: 600;
+    text-shadow: none;
     color: var(--c-sticky-id-brdr);}
+#calendar .calendar-day.today .day-number {
+    text-shadow: 0 0 2px var(--c-b3);}
 #calendar .day-number:hover:before {
     color: var(--c-txt);}
 
@@ -12119,8 +12125,11 @@ table.event_form_table td.label.small_label[colspan="4"] {
     flex-flow: column;
     text-align: center;}
 
+#upcoming_calendar .event_li.tooltip {
+    padding: 6px 5px;}
+
 #upcoming_calendar .day-events {
-    padding: 5px 0;
+    padding: 0;
     position: relative;
     /*z-index: 2;*/}
 #upcoming_calendar .event_end_time {
@@ -12152,22 +12161,25 @@ table.event_form_table td.label.small_label[colspan="4"] {
 #upcoming_calendar .day-label {
     font-weight: 600;
     padding: 5px;
-    margin: -5px -5px 0 -5px;
+    /*margin: -5px -5px 0 -5px;*/
     font-size: 16px;
     line-height: 1em;
     text-align: center;
-    background-color: var(--c-tor-row-hvr);}
-#upcoming_calendar .calendar-day:hover .day-label {
-    background-color: var(--c-edition);}
-
-#upcoming_calendar .event_li.tooltip:not(:only-child):hover {
-    background-color: var(--c-tgroup);}
+    background: var(--p-post-colhead-bcg);
+    /*background-color: var(--c-tor-row-hvr);*/}
+/*#upcoming_calendar .calendar-day:hover .day-label {
+    background-color: var(--c-edition);}*/
+/*#upcoming_calendar .event_li.tooltip:not(:only-child):hover {
+    background-color: var(--c-tgroup);}*/
+#upcoming_calendar .calendar-day.today .day-label {
+    background: var(--p-subcolhead);}
 
 #calendar .day-events >p {
     display: flex;
-    width: calc(100% - 14px);
-    margin-left: auto;
-    margin-right: auto;}
+    width: 100%;
+    padding: 0 7px 0 7px;
+    /*margin-left: auto;
+    margin-right: auto;*/}
 #calendar .day-events a {
     width: 100%;
     padding: 5px 2px;
@@ -12340,7 +12352,7 @@ div#fight_skill_points_assign >table {
     border: 1px solid var(--c-main-brdr);
     background-color: var(--c-box);
     color: var(--c-txt);}
-#wrapper .calendar-day.today,
+/*#wrapper .calendar-day.today,*/
 .qtip-shadow {
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);}
