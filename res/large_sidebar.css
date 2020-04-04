@@ -4,14 +4,15 @@
     flex-flow: row wrap;
     justify-content: space-between;
     width: 615px;}
-#index .sidebar #stats,
+/*#index .sidebar #stats,
+#index .sidebar #polcont,*/
 #index .sidebar #freeleech {
     width: 100%;}
 #index .sidebar >div.box {
     width: 300px;}
-#index .sidebar #stats .stats li {
+/*#index .sidebar #stats .stats li {
     float: left;
-    width: 50%;}
+    width: 50%;}*/
 #index #upcoming_calendar   {order: 1;}
 #index #blogposts           {order: 2;}
 #index #dailygazelle        {order: 3;}
