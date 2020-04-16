@@ -879,6 +879,7 @@ input[type="search"],
 #torrents #content >script ~form #torrent_link input[name="internallink"],
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad input[type="text"] {
     width: 100%;}
+#upcoming_calendar a.event_day,
 #content,
 #wrapper,
 #footer
@@ -1491,6 +1492,9 @@ div#fight_skill_points_assign >table,
 #better #content >h2 +.box.pad:nth-child(2),
 /*#better .thin >.center:first-child,
 #better .thin >.center +table:nth-child(2),*/
+
+#user #content >a +h2 +table:last-child, /* crafted items */
+
 #tools #content >p,
 #better .thin >div,
 #better .thin >table,
@@ -12087,7 +12091,7 @@ table.event_form_table td.label.small_label[colspan="4"] {
     text-shadow: none;
     color: var(--c-sticky-id-brdr);}
 #calendar .calendar-day.today .day-number {
-    text-shadow: 0 0 2px var(--c-b3);}
+    text-shadow: 0 0 3px var(--c-b3);}
 #calendar .day-number:hover:before {
     color: var(--c-txt);}
 
