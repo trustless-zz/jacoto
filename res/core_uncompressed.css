@@ -1087,7 +1087,7 @@ a[onclick^="QuoteJump(event"] +blockquote {
 strong.mature +strong +br +a[onclick] {
     /* margin-top: 0 !important; */}
 
-.sub {
+#userinfo_username .sub {
     visibility: visible !important;}
 
 .tooltipster-default {
@@ -4512,19 +4512,33 @@ li:not(.suggested_similar) .similar_votes >span {
     transform: scaleY(-1);
     bottom: 8px;} */
 
+.sub {
+    opacity: 0;}
 #content .sub {
     position: relative;
-    height: auto;
+    /*height: auto;*/
+    height: 0;
     top: 33px;
-    margin-bottom: -100%;
+    /*margin-bottom: -100%;*/
     left: 6px;
-    display: inline-block;
+    /*display: inline-block;*/
     width: -moz-fit-content;
     width: fit-content;
     z-index: 999;}
-#content .sub,
+
+/*#wrapper #content .sub {
+    -webkit-clip-path: unset;
+    clip-path: unset;}*/
+/*#wrapper #content .sub {
+    visibility: hidden !important;}*/
+.sub[style="visibility: visible;"] {
+    opacity: 1;}
+/*#wrapper #content .sub {
+    height: 0;
+    margin-bottom: unset;}*/
+
+/*#content .sub,*/
 #userinfo_username .sub {
-    opacity: 0;
     -webkit-clip-path: polygon(
         -10px -10px,
         calc(100% + 10px) -10px,
@@ -4535,9 +4549,8 @@ li:not(.suggested_similar) .similar_votes >span {
         calc(100% + 10px) -10px,
         calc(100% + 10px) -10px,
         -10px -10px);}
-#userinfo_username .sub[style="visibility: visible;"],
-#content .sub[style="visibility: visible;"] {
-    opacity: 1;
+#userinfo_username .sub[style="visibility: visible;"]/*,
+#content .sub[style="visibility: visible;"]*/ {
     -webkit-clip-path: polygon(
         -10px -10px,
         calc(100% + 10px) -10px,
@@ -12536,8 +12549,8 @@ table.diff.split_view tr:first-child td {
     #wrapper #torrent_table .group.discog td[colspan="5"] > span + br {
         line-height: 21px;}
     
-    /* firefox can't handle margin-bottom: -100%; */
-    #wrapper #content .sub {
+    /* firefox can't handle margin-bottom: -100%; -nvm chrome is the same now */
+    /*#wrapper #content .sub {
         -webkit-clip-path: unset;
         clip-path: unset;}
     #wrapper #content .sub {
@@ -12546,7 +12559,7 @@ table.diff.split_view tr:first-child td {
         visibility: visible !important;}
     #wrapper #content .sub {
         height: 0;
-        margin-bottom: unset;}
+        margin-bottom: unset;}*/
     
     :root {
         scrollbar-color: var(--c-b3) var(--c-input-obj);
