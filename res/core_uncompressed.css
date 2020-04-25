@@ -10991,10 +10991,14 @@ td .log_green {
     border: 1px solid var(--c-main-brdr);
     padding: 1px 3px 2px 3px;}
 .box_recommend_to_friend .body >.select2 {
-    margin-right: 9px;
+    margin: 8px 9px 0 0;
     max-width: 100%;
-    min-width: calc(100% - 89px);}
+    min-width: calc(100% - 98px);}
+.box_recommend_to_friend .body >input[type="button"] {
+    margin: 8px 9px 0 0;}
 .box_recommend_to_friend .body {
+    padding-top: 2px;
+    width: calc(100% + 9px);
     display: flex;
     flex-flow: row wrap;}
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
