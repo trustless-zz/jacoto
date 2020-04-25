@@ -971,6 +971,8 @@ a#mh_sort_screenshots_button:before{
 .box.screenshots_div >.head { /*trash*/
     font-weight: 600;}
 h2#display_name >sup {
+    width: 18px;
+    height: 18px;
     vertical-align: unset;}
 h2#display_name >sup,
 h2 a#titleEdit {
