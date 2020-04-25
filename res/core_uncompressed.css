@@ -10978,16 +10978,25 @@ td .log_green {
 #wrapper #content .select2-container--default .select2-selection--multiple {
     border-radius: 0;
     min-height: 26px;
-    height: unset;}
+    /*height: unset;*/}
 #wrapper .select2-container .select2-selection--multiple {
     min-height: unset;}
 #wrapper .select2-container--default .select2-search--inline .select2-search__field {
     height: 24px;}
-#wrapper #content .select2-container--default .select2-selection--multiple .select2-selection__choice {
+#wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    padding: 0 5px 1px 5px !important;
+    color: var(--c-text-s);
     margin: 1px 4px 1px 0;
     background-color: var(--c-edition);
     border: 1px solid var(--c-main-brdr);
     padding: 1px 3px 2px 3px;}
+.box_recommend_to_friend .body >.select2 {
+    margin-right: 9px;
+    max-width: 100%;
+    min-width: calc(100% - 89px);}
+.box_recommend_to_friend .body {
+    display: flex;
+    flex-flow: row wrap;}
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
     color: var(--c-text-s);}
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
