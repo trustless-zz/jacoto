@@ -2433,9 +2433,9 @@ input[disabled] {
     width: fit-content;
     line-height: var(--p-lh);}
 
-.sidebar #slides {
-    padding: 10px 0;}
-.sidebar #slides >.head {
+#slides {
+    padding: 10px 0 0 0;}
+#slides >.head {
     margin: -10px 0 0 0;}
 
 .slides_control {
@@ -4089,8 +4089,11 @@ a#tag_show\/hide:active,
 #user #userform #platcheckbox +a:active,
 .filter_torrents.advanced .flright:active {
     background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
-#user #content >span[style="float: right;"]:first-child { /*sharescore*/
+#slides >ul.nobullet,
+#user #content >span[style="float: right;"]:first-child /*sharescore*/{
     margin-top: 3px;}
+#slides >ul.nobullet {
+    padding: 7px 0 12px 0;}
 .torrent_notifications table.border .colhead strong,
 #forums #forum_search_cat_list td.forum_cat strong,
 #platcheckbox td[colspan="5"] strong {
@@ -5576,6 +5579,9 @@ form[name="filter"] h3,
     width: 110px;}
 
 
+#slides a.prev,
+#slides a.next {
+    margin-top: 12px;}
 
 /* #log .thin >.header +.box.pad,
 table.gazellepic,
@@ -5997,6 +6003,7 @@ h2 marquee {
     overflow-x: hidden;}
 #forums .forum_signature td > div:hover {
     opacity: 1;}
+#slides >ul.nobullet,
 form#drag_drop_collage_form .drag_drop_save ~.drag_drop_save,
 #collections table#manage_collage_table tbody tr:last-child,
 #userhistory .forum_post.vertical_margin>tbody>tr:last-child,

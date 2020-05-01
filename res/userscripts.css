@@ -907,6 +907,7 @@ https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-description-prettify.
     width: calc(100% - 20px);}
 #mh_bad_shots:empty {
     padding: calc(19px + var(--p-head)) 11px 1px 11px;}
+a#steamCoverDo,
 a#steamScreenshotsDo,
 a#mh_sort_screenshots_button,
 #mh_screenshots_post {
@@ -928,6 +929,7 @@ a#mh_sort_screenshots_button,
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
     transition: all .1s linear;}
+a#steamCoverDo:hover,
 a#steamScreenshotsDo:hover,
 a#mh_sort_screenshots_button:hover,
 #mh_screenshots_post:hover {
@@ -935,6 +937,7 @@ a#mh_sort_screenshots_button:hover,
     background: var(--p-btn-hvr);
     -webkit-box-shadow: none;
     box-shadow: none;}
+a#steamCoverDo:active,
 a#steamScreenshotsDo:active,
 a#mh_sort_screenshots_button:active,
 #mh_screenshots_post:active {
@@ -948,14 +951,17 @@ a#mh_sort_screenshots_button {
     font-size: 0;
     line-height: 0;}
 textarea ~input[id^="prettify_"],
+a#steamCoverDo,
 a#steamScreenshotsDo,
 a#mh_sort_screenshots_button {
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);}
+a#steamCoverDo:hover,
 textarea ~input[id^="prettify_"]:hover,
 a#steamScreenshotsDo:hover,
 a#mh_sort_screenshots_button:hover {
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+a#steamCoverDo:active,
 textarea ~input[id^="prettify_"]:active,
 a#steamScreenshotsDo:active,
 a#mh_sort_screenshots_button:active {
