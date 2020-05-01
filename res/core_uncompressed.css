@@ -4516,8 +4516,8 @@ li:not(.suggested_similar) .similar_votes >span {
     bottom: 8px;} */
 
 .sub {
-    opacity: 0;}
-.sub:not([style]) {
+    opacity: 0;/*}
+.sub:not([style]) {*/
     visibility: hidden;}
 #content .sub {
     position: relative;
