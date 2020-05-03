@@ -6953,6 +6953,9 @@ input[type="radio"]:active {
     content: none;}
 
 /** manually removing embedded brackets **/
+.linkbox a[href^="torrents.php?type=hitnrun&userid"],
+.linkbox a[href^="torrents.php?type=viewseed&userid"],
+.linkbox a[href^="torrents.php?type=potential_hnr&userid"],
 .linkbox a[href^="comments.php?action=collages&id"],
 .linkbox a[href^="comments.php?action=requests&id"],
 .linkbox a[href^="comments.php?action=torrents&id"],
@@ -7072,8 +7075,11 @@ input[type="radio"]:active {
 .linkbox a[href^="torrents.php?action=editimages&groupid"]:before               {content: 'Edit Images';}
 .linkbox a[href^="collections.php?action=edit&collageid="]:before,
 .linkbox a[href^="torrents.php?action=editgroup&groupid"]:before                {content: 'Edit description';}
+.linkbox a[href^="torrents.php?type=viewseed&userid"]:before,
 .linkbox a[href^="?type=viewseed&userid"]:before                                {content: 'Torrent History';}
+.linkbox a[href^="torrents.php?type=hitnrun&userid"]:before,
 .linkbox a[href^="?type=hitnrun&userid"]:before                                 {content: "Hit 'n' Runs";}
+.linkbox a[href^="torrents.php?type=potential_hnr&userid"]:before               {content: "Potential HnR's"}
 #slides >.nobullet a:before                                                     {content: 'See the Current Pick';}
 .linkbox a[onclick^="popup_add("]:before                                        {content: 'Add a user';}
 .linkbox a[href="collections.php"]:before                                       {content: 'List of collections';}
