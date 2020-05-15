@@ -1263,3 +1263,8 @@ table#existing_freeleech_pots td {
     right: 10px;}
 }
 /** /going with position:absolute because display:flex needs containers **/
+
+@media (max-width: 1235px) {
+#wrapper #users_reviews .review_cell {
+    width: 100%;}
+}

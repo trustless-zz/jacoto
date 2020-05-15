@@ -50,8 +50,8 @@
     --p-btn-hvr:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-btn-b2) 100%);
     --p-btn-act:						linear-gradient(to bottom, var(--c-btn-b1) 0%, var(--c-b2) 100%);
     /* --p-fade:							linear-gradient(to bottom, var(--c-box) 0%, var(--c-b00) 100%); */
-    --p-fade-2:                         linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
-    --p-fade-2-h:                       linear-gradient(to right, var(--c-box) 50%, var(--c-b00) 100%);
+    /*--p-fade-2:                         linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
+    --p-fade-2-h:                       linear-gradient(to right, var(--c-box) 50%, var(--c-b00) 100%);*/
     --p-selected:                       0 -2px 0px 0px var(--c-b1);
     --p-lh: 							1.35714286805; /* calc(19 / 14), 1.357142857142857 says 19px but actually is 18px when measured */
     --p-dot3:							-.02142857142em;
@@ -227,6 +227,7 @@ a[title="Remove"],
 #userhistory .colhead_dark a img[alt="Last read post"],
 #stats_share_score a:before,
 td a img[alt="Ratio"],
+#users_reviews .delete_review a.remove_review,
 #deletereview a {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -280,6 +281,7 @@ a[title="Remove"]:hover,
 #wrapper .last_read:hover,
 #userhistory .colhead_dark a:hover img[alt="Last read post"],
 td a:hover img[alt="Ratio"],
+#users_reviews .delete_review a.remove_review:hover,
 #deletereview a:hover {
     background-color: var(--c-anchor-hvr);}
 
@@ -484,6 +486,7 @@ h3 a[href^="user.php?action=notify_delete&"],
 .inventory .trash_icon,
 a[title="Remove"],
 #friends .colhead_dark .remove_friend,
+#users_reviews .delete_review a.remove_review,
 #deletereview a {
     -webkit-mask-image: url('icons/tor/rm.svg');
     mask-image: url('icons/tor/rm.svg');}
@@ -875,6 +878,7 @@ input[type="search"],
 #torrents .center.thin >.box.pad input#trailer,
 
 #friends #content .search_form input[type="text"],
+#users_reviews >h2 +.box.pad input[type="text"],
 
 #torrents #content >script ~form #torrent_link input[name="internallink"],
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad input[type="text"] {
@@ -1495,6 +1499,10 @@ div#fight_skill_points_assign >table,
 
 #user #content >a +h2 +table:last-child, /* crafted items */
 
+/*#users_reviews >.flextable,*/
+#users_reviews .review_cell,
+#users_reviews >h2 +.box.pad,
+
 #tools #content >p,
 #better .thin >div,
 #better .thin >table,
@@ -1680,6 +1688,8 @@ a,
 .hide_torrents,
 .last_read,
 
+.review_cell .flextable-cell:first-child img:not(.avatar),
+
 #css_gallery .preview_image,
 
 #dailygazelle img,
@@ -1808,6 +1818,7 @@ input[type=submit],
 fancybox-button,
 .box.box_coltags .pad li a:nth-child(n+2),
 .box.box_coltags .head span[title="Add Tags"] a,
+#reviewrow a#expand_review,
 
 .forum_latest .search #cat_list a[onclick],
 
@@ -1918,6 +1929,8 @@ a#tag_show\/hide,
 .day-label,
 .event_li.tooltip,
 
+.users_review +[data-readmore-toggle]:before,
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -2012,6 +2025,7 @@ a[title="Edit"],
 a[onclick^="edit"],
 a[title="Remove"],
 #friends .colhead_dark .remove_friend,
+#users_reviews .delete_review a.remove_review,
 #deletereview a,
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
@@ -2042,6 +2056,7 @@ td img[alt="Ratio"],
     position: relative;
     overflow: hidden;}
 
+#users_reviews .delete_review a.remove_review,
 #deletereview a,
 #grouplinks,
 #nav_logout,
@@ -2106,11 +2121,13 @@ th[aria-disabled="false"]:active,
 .edition_info:active:before,
 .edition_info:active +td:before,
 button:active,
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:active,
 .alertable button:active,
 input[type=button]:active,
 input[type=submit]:active,
 #markread:active:before,
 .box.box_coltags .pad li a:nth-child(n+2):active,
+#reviewrow a#expand_review:active,
 .box.box_coltags .head span[title="Add Tags"] a:active,
 .slides_control,
 a>strong,
@@ -2207,11 +2224,13 @@ strong.important_text,
     right: 0;
     margin: auto;}
 
+.review_cell .flextable-cell:first-child img:not(.avatar),
 img#authcode,
 .fancybox-image,
 .lightbox img {
     border: 3px solid var(--c-main-brdr);}
 
+.review_cell .flextable-cell:first-child img:not(.avatar),
 .tooltipster-default #tooltip_steam img,
 #wrapper .userscript-gallery-image,
 #artist .sidebar img,
@@ -2474,7 +2493,7 @@ input[disabled] {
     height: 100%;
     width: 10px;
     position: absolute;
-    background: var(--p-fade-2-h);
+    background: linear-gradient(to right, var(--c-box) 50%, var(--c-b00) 100%);
     z-index: 99;}
 #slides .slides_container:before {
     left: 0;}
@@ -2489,6 +2508,7 @@ input[disabled] {
     margin: 10px auto;}
 #dailygazelle img {
     display: block;}
+.review_cell .flextable-cell:first-child img:not(.avatar):hover,
 .profile .box_art_gallery .large_row .gallery_small_slot:hover a,
 .profile .box_art_gallery .small_row .gallery_small_slot:hover a,
 .fancybox-is-zoomable .fancybox-image:hover,
@@ -3442,6 +3462,8 @@ h3 a[href^="user.php?action=notify_delete&"],
 
 #calendar .day-events >p,
 
+#users_reviews >h2 +.box.pad,
+
 .permissions {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
@@ -3803,6 +3825,8 @@ ul#noty_bottomRight_layout_container img[title="Gold"] {
     vertical-align: text-top;}
 
 button,
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button,
+#reviewrow a#expand_review,
 #wrapper #trading_panel button,
 .alertable button,
 input[type=button],
@@ -3844,6 +3868,8 @@ table#otherop.hidden ~table.otheroptoggle a,
     background: var(--p-btn);
     background-size: 200% auto !important;
     display: inline-block;}
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button span {
+    line-height: 14px !important;}
 #artist #torrent_table .group_torrent td[colspan="2"],
 #torrents .group_torrent td:not(.edition_info):first-child,
 #torrents #requests.request_table .colhead a,
@@ -3926,6 +3952,7 @@ a[href^="javascript:Vote("] strong:before,
 .similar_votes a[onclick] {
     font-size: 18px;}
 button:hover,
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:hover,
 #wrapper #trading_panel button:hover,
 .alertable button:hover,
 input[type=button]:hover,
@@ -3944,6 +3971,7 @@ a[href^="javascript:Vote("] strong:hover,
     color: var(--c-low);
     background: var(--p-btn-hvr);}
 button:active,
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:active,
 #wrapper #trading_panel button:active,
 .alertable button:active,
 input[type=button]:active,
@@ -3989,6 +4017,7 @@ table#otherop.hidden ~table.otheroptoggle a,
     /*margin-right: 5px;
     line-height: 19px;
     margin-top: 3px;*/}
+#wrapper #reviewrow a#expand_review,
 button.alertable-cancel,
 #wrapper button#AvatarPreview,
 #wrapper [type="button"][value="Editor"],
@@ -4052,6 +4081,7 @@ a#tag_show\/hide:before,
 .filter_torrents.advanced .flright:after {
     font-size: 14px;
     line-height: 1em;}
+#wrapper #reviewrow a#expand_review:hover,
 button.alertable-cancel:hover,
 #wrapper button#AvatarPreview:hover,
 #wrapper [type="button"][value="Editor"]:hover,
@@ -4071,6 +4101,7 @@ a#tag_show\/hide:hover,
 .filter_torrents.advanced .flright:hover {
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+#wrapper #reviewrow a#expand_review:active,
 button.alertable-cancel:active,
 #wrapper button#AvatarPreview:active,
 #wrapper [type="button"][value="Editor"]:active,
@@ -4421,6 +4452,8 @@ strong.mature +strong +br,
 .xdsoft_scrollbar,
 
 /* forum post 'back to top' button */
+.username_badges:empty,
+
 #artist #requests .colhead_dark a,
 #userhistory .colhead_dark span[id*="bar"],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
@@ -4615,6 +4648,7 @@ li:not(.suggested_similar) .similar_votes >span {
 
 .box_gold #box_gold_scrollbar tr:not(.colhead) td.label {
     background-color: var(--c-sb1);}
+#users_reviews .head,
 #friends .forum_post.vertical_margin .colhead,
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
@@ -4647,6 +4681,7 @@ li:not(.suggested_similar) .similar_votes >span {
 #tools #content >.header +table .colhead,
 #tools #mastergroups table .colhead {
     background: var(--p-subcolhead);}
+#users_reviews .head,
 #friends .forum_post.vertical_margin .colhead,
 #collections .sidebar .box.box_comment .head,
 #inbox .box.vertical_space .head,
@@ -4762,6 +4797,7 @@ li:not(.suggested_similar) .similar_votes >span {
     vertical-align: text-bottom;}
 span.secondary_class {
     line-height: 18px;}
+#users_reviews .head .username_badges,
 .colhead_dark .username_badges {
     margin-left: 2px;}
 
@@ -4790,9 +4826,11 @@ h2 .username_badges {
     text-align: center;}
 .sidebar .userratingdiv strong {
     margin-left: 3px;}
+#users_reviews .overall_user_ratings .upvote strong,
 .ratings .green,
 #thumbsup {
     color: var(--c-on);}
+#users_reviews .overall_user_ratings .downvote strong,
 .ratings .red,
 #thumbsdown {
     color: var(--c-off);}
@@ -4803,6 +4841,10 @@ h2 .username_badges {
     font-size: 30px;
     line-height: 56px;
     display: flex;}
+#users_reviews .overall_user_ratings strong {
+    vertical-align: top;
+    font-size: 30px;
+    line-height: 36px;}
 
 #wrapper #grouplinks {
     background: var(--p-grouplinks);
@@ -4915,12 +4957,12 @@ textarea {
     background-color: var(--c-input);
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
-    font-size: 1em;
+    font-size: 1em !important; /* widget override */
     line-height: var(--p-lh);
     resize: vertical;
     width: 100%;
     color: var(--c-txt);
-    font-family: OpenSans, Helvetica, Arial, sans-serif;
+    font-family: OpenSans, Helvetica, Arial, sans-serif !important; /* widget override */
     padding: 3px 6px;
     outline-offset: 0;
     margin-bottom: 8px !important;
@@ -4929,6 +4971,7 @@ textarea {
 textarea:focus {
     outline-width: 1px !important;}
 
+.review_cell .flextable-cell:first-child img:not(.avatar),
 #css_gallery .preview_image,
 img#authcode,
 .similar img,
@@ -4938,6 +4981,7 @@ img#authcode,
     box-shadow: var(--p-header-shdw);}
 /* #bookmarks #collage_table td img:hover, - outdated bookmarks */
 button:hover,
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:hover,
 #wrapper #trading_panel button:hover,
 .alertable button:hover,
 input[type=button]:hover,
@@ -4958,6 +5002,7 @@ a.toggle_tags:hover,
 a[href^="javascript:IndexVote("] strong:hover,
 a[href^="javascript:Vote("] strong:hover,
 .box.box_coltags .pad li a:nth-child(n+2):hover,
+#reviewrow a#expand_review:hover,
 .box.box_coltags .head span[title="Add Tags"] a:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:hover,
@@ -4970,7 +5015,8 @@ a[href^="javascript:Vote("] strong:hover,
 .userratingdiv img,
 .hovereffect:hover,
 #wrapper .calendar .calendar-day:hover,
-.filelist_title a.brackets:hover {
+.filelist_title a.brackets:hover,
+.review_cell .flextable-cell:first-child img:not(.avatar):hover{
     -webkit-box-shadow: none;
     box-shadow: none;}
 
@@ -5171,17 +5217,19 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     color: var(--c-txt);}
 
 /* '#allreviewslink' shouldn't be inside of a review 'tr' */
-.box.userreviews_div {
-    padding-bottom: 27px;}
-#allreviewslink {
+/*.box.userreviews_div {
+    padding-bottom: 27px;}*/
+/*#allreviewslink {
     position: absolute;
     right: 0;
     bottom: -27px;
-    font-weight: bold;}
+    font-weight: bold;}*/
 
+/*
 #deletereview {
     float: right;
     margin-top: -14px;}
+*/
 
 /* revisit later */
 #allreviews h2 {
@@ -5311,6 +5359,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     position: inherit;
     font-size: 21px;
     line-height: 21px;}
+#users_reviews #groupplatform,
 #wiki #groupplatform,
 #wrapper .box.news_post #groupplatform,
 #wrapper .forum_post #groupplatform,
@@ -5330,6 +5379,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     position: inherit;
     font-size: 15px;
     line-height: var(--p-lh);}
+#wrapper #users_reviews #groupplatform a,
 #wiki #groupplatform a,
 #wrapper .box.news_post #groupplatform a,
 #wrapper .forum_post #groupplatform a,
@@ -5616,6 +5666,7 @@ table.gazellepic,
     margin-top: -12px;
     display: inline-block;}
 
+#users_reviews >h2 +.box.pad input[name="year"],
 input[name="fromyear"],
 input[name="toyear"],
 input#remaster_year,
@@ -5772,6 +5823,7 @@ input#file {
 #image_block >span input,
 /*#image_block >a[onclick],*/
 #better form#torrentid_input,
+#reviewrow div[style="color:red;font-weight:bold;text-align:center"],
 #torrents .center.thin >.box.pad input[name="summary"],
 .ongoing_clan_war .large_progress_bar {
     margin-bottom: 8px;}
@@ -5779,6 +5831,7 @@ tr.likes td,
 .forum_post tr,
 #top10 .thin >div >table.border td[style="text-align:right"] {
 	text-align: left !important;}
+tr#reviewrow form#review_form >p,
 #running_freeleech tr.group_torrent td:nth-child(3),
 #upload #weblinks td[colspan="2"],
 #upload #weblinks td[colspan="4"],
@@ -5944,6 +5997,8 @@ tr.likes td[id^="likers_"]:hover {
 #quickreplypreview .avatar >div:first-child:after,
 #forums .thin >.box.thin.clear:after,
 #artist td.edition_info:before,
+#reviewrow a#expand_review:before,
+#reviewrow a#expand_review:after,
 .ui-widget-header:before,
 .ui-widget-header:after {
     content: none !important;}
@@ -5952,6 +6007,7 @@ tr.likes td[id^="likers_"]:hover {
     opacity: 1;
     transition-delay: .2s;}
 
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button span,
 #better .thin >.center:first-child td,
 #bookmarks table.layout td#drag_drop_textnote,
 #bookmarks #wrapper td.edition_info {
@@ -6006,6 +6062,7 @@ h2 marquee {
 #forums .forum_signature td > div:hover {
     opacity: 1;}
 #slides >ul.nobullet,
+#users_reviews .review_date,
 form#drag_drop_collage_form .drag_drop_save ~.drag_drop_save,
 #collections table#manage_collage_table tbody tr:last-child,
 #userhistory .forum_post.vertical_margin>tbody>tr:last-child,
@@ -6168,10 +6225,10 @@ table.bbcode_table tbody {
 
 span.size1 {
     font-size: 0.75em;
-    line-height: 1em}
+    line-height: 1em;}
 span.size2 {
     font-size: 1em;
-    line-height: 1em}
+    line-height: 1em;}
 .forum_post .colhead_dark span.size4,
 .forum_post .colhead_dark span.size5,
 .forum_post .colhead_dark span.size6,
@@ -6181,29 +6238,29 @@ span.size2 {
 .forum_post .colhead_dark span.size10,
 span.size3 {
     font-size: 1.25em;
-    line-height: 1em}
+    line-height: 1em;}
 .forum_post .colhead_dark marquee span.size4, /* need more testing */
 span.size4 {
     font-size: 1.5em;
-    line-height: 1em}
+    line-height: 1em;}
 span.size5 {
     font-size: 1.75em;
-    line-height: 1em}
+    line-height: 1em;}
 span.size6 {
     font-size: 2em;
-    line-height: 1em}
+    line-height: 1em;}
 span.size7 {
     font-size: 2.25em;
-    line-height: 1em}
+    line-height: 1em;}
 span.size8 {
     font-size: 2.5em;
-    line-height: 1em}
+    line-height: 1em;}
 span.size9 {
     font-size: 2.75em;
-    line-height: 1em}
+    line-height: 1em;}
 span.size10 {
     font-size: 3em;
-    line-height: 1em}
+    line-height: 1em;}
 .user_title span[style="font-family: lucida console;"] {
     line-height: 1em;}
 
@@ -6552,6 +6609,8 @@ input[type="radio"]:active {
 
 #bookmarks .thin >.center.box.pad:nth-child(3):before,
 
+/*#users_reviews >.flextable:before,*/
+
 .thin.torrent_history >form#torrent_history_search:before,
 #user .thin >h2:first-child +.center:before,
 #rules .thin >form.search_form:before,
@@ -6577,7 +6636,8 @@ input[type="radio"]:active {
 #better .thin >.center:first-child:before,
 #tools #content >p:before,
 #friends #content .search_form:before,
-#torrents #content >#newlink:before {
+#torrents #content >#newlink:before,
+#users_reviews >h2 +.box.pad:before {
     display: block;
     text-align: left;
     width: 100%;
@@ -6593,6 +6653,8 @@ input[type="radio"]:active {
     content: 'Toolbox';}
 #tools .thin >.box.pad:first-child:before {
     content: 'Chart';}
+/*#wrapper #users_reviews >.flextable:before {
+    content: 'Reviews';}*/
 #better #wrapper #content >h2 +.box.pad:nth-child(2):before,
 #collections .thin >h2:first-child +form:last-child:before, /* edit description page */
 #torrents #content >#newlink:before,
@@ -7271,7 +7333,7 @@ input[type="radio"]:active {
     position: absolute;
     height: 10px;
     left: 0;
-    background: var(--p-fade-2);
+    background: linear-gradient(to bottom, var(--c-box) 50%, var(--c-b00) 100%);
     width: calc(100% - 15px);
     z-index: 9;}
 #backpack #slots_panel ul:before,
@@ -9655,6 +9717,7 @@ li.item_li #clickable .item_description img {
 	color: var(--c-anchor);}
 
 .ui-widget-header >.ui-dialog-title {
+    display: block;
     font-size: var(--p-head);
     line-height: var(--p-head);
     margin: 0;
@@ -12397,6 +12460,201 @@ div#fight_skill_points_assign >table {
     color: var(--c-blackout-show);}
 #wrapper .redacted_bbcode_show a {
     color: var(--c-blackout-a);}
+
+
+/*** New Reviews Page ***/
+/*#users_reviews .reviews_table { padding-right: 0; }*/
+
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button {
+    margin: 10px;}
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonpane {
+    background-color: unset;
+    border-top: 1px solid var(--c-table-brdr);
+    padding: 0;
+    margin: 0;}
+
+#users_reviews .review_cell {
+    display: flex;
+    flex-flow: column;
+    width: calc(50% - 7.5px);
+    position: relative;
+    padding: 0;
+    /*margin: 0 0 10px 0;*/}
+#users_reviews >.flextable {
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row wrap;}
+
+#users_reviews .flextable-cell {
+    overflow: unset;
+    -webkit-box-flex: unset;
+    flex-grow: unset;}
+
+.review_cell .flextable-cell:first-child {
+    font-size: 0;
+    line-height: 0;
+    width: auto;
+    padding: 5px;}
+.review_cell .flextable-cell .avatar {
+    max-width: 150px;}
+.review_cell .flextable-cell:first-child img:not(.avatar) {
+    margin: 5px;}
+.review_cell .flextable-cell:last-child {
+    width: 100%;
+    padding: 6px 10px 6px 5px;}
+#users_reviews .review_cell .flextable {
+    margin: 0;
+    flex-flow: row;}
+#users_reviews .users_review >h3 {
+    display: none;}
+
+#users_reviews .head {
+	display: flex;
+    justify-content: space-between;
+    flex-flow: row;
+	/*margin-bottom: 0.3em;
+	padding-bottom: 0.4em;*/}
+/*#users_reviews .display_name { flex: 0 0 95%; }
+#users_reviews .delete_review { flex: 1; }*/
+#users_reviews .display_name:not(:last-child) {
+    width: calc(100% - 26px);}
+
+#users_reviews .review_date .label {
+    display: none;}
+/*#users_reviews .display_name:before {
+    content: '';
+    display: block;
+    width: 165px;
+    height: 1px;
+    float: right;}*/
+
+#users_reviews .display_name .rating_image {
+    margin: 0 8px 0 0 !important;
+	height: 19px;
+    width: 19px;
+    padding: 0 0 0 19px !important;
+	float: left;
+	padding-right: 10px;}
+
+/*#users_reviews .delete_review a.remove_review {
+	display: inline-block;
+    height: 20px;
+	width: 20px;
+	text-indent: -9999px;
+	background: url("../images/crossn.png") no-repeat left center;}*/
+#users_reviews .delete_review {
+    margin-top: 1px;
+    width: 18px;
+    height: 18px;}
+
+/*#users_reviews .center img {
+	display: block;
+	margin: auto;
+	width: 220px;
+	max-width: 100% !important; }*/
+#users_reviews blockquote.review {
+	width: 100%;
+	margin-left: 0;
+	box-sizing: border-box;}
+
+#users_reviews .game_info {
+	/*min-height: 80%;*/
+	margin-top: 10px;
+	padding: 5px;
+	/*background-color: var(--mediumBlue50);*/}
+#users_reviews .game_info ul {
+    padding-left: 0.8em; }
+#users_reviews .game_info li {
+    list-style: none; }
+#users_reviews .overall_user_ratings li {
+    display: inline-block;
+    margin-right: 20px;
+    padding-top: 0; }
+/*#users_reviews .game_info img.rating_image { height: 18px; padding-right: 0.5em; }*/
+/*#users_reviews .overall_user_ratings .upvote strong { color: var(--upVote); }
+#users_reviews .overall_user_ratings .downvote strong { color: var(--downVote); }*/
+/*#users_reviews .overall_user_ratings strong {
+	font-size: 1.5em;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.8);}*/
+
+#users_reviews .review_date {
+    /*position: absolute;
+    top: 0;
+    right: 0;*/
+    text-align: right;
+    font-size: 13px;
+    margin-top: auto;
+    /*line-height: 19px;
+    padding: 6px 5px 7px 5px;*/
+    padding: 5px 10px;}
+
+#users_reviews >h2 +.box.pad td.label {
+    width: 86px;}
+
+#users_reviews >h2 +.box.pad input[type="submit"] {
+    margin-top: 5px;}
+
+
+.users_review +[data-readmore-toggle] {
+    padding: 2px 0;
+    text-align: center;
+    position: relative;}
+#wrapper .users_review +[data-readmore-toggle]:before {
+    content: '';
+    width: 100%;
+    height: 20px;
+    top: -20px;
+    left: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    background-size: 200% 200%;
+    background-position: 50% 100%;
+    opacity: 1;}
+#wrapper .users_review +[data-readmore-toggle]:hover:before {
+    background-position: 0 0;}
+.userreviews tr:nth-child(odd) .users_review +[data-readmore-toggle]:before {
+    background: linear-gradient(180deg, var(--c-b00), var(--c-box))}
+.userreviews tr:nth-child(even) .users_review +[data-readmore-toggle]:before {
+    background: linear-gradient(180deg, var(--c-b00), var(--c-trowb))}
+.users_review[data-readmore] {
+    padding-bottom: 0;}
+.users_review[data-readmore][aria-expanded="true"] {
+    padding-bottom: 5px;}
+#wrapper .users_review[aria-expanded="true"] +[data-readmore-toggle]:before {
+    opacity: 0;}
+
+.userreviews tr:last-child:not(:only-child),
+.users_review +[data-readmore-toggle] {
+    background-color: transparent !important;}
+.userreviews tr:last-child:not(:only-child) td {
+    text-align: right;}
+
+
+
+/*@media all and (min-width: 901px) {
+	#users_reviews .review_cell {
+		max-width: 48%;
+	}
+}
+
+@media all and (max-width: 900px) {
+	.flextable--collapse.reviews_table {
+		display: block;
+	}
+	.flextable--collapse.reviews_table > .flextable-cell {
+		width: 100% !important;
+	}
+}
+
+@media all and (max-width: 500px) {
+	#users_reviews .review_date { left: 20%; }
+}*/
+
+
+
 
 /** user review pop-up on #user page **/
 .qtip-default {
