@@ -4381,7 +4381,7 @@ body:not(#upload) #artist_tr + tr td.label,
     align-self: center;}
 .bbbutt li a {
     opacity: .8;
-    display: inline-block;
+    display: /*inline-*/block;
     margin: 0;
     height: 18px;
     width: 18px;}
@@ -12539,7 +12539,7 @@ div#fight_skill_points_assign >table {
     width: 19px;
     padding: 0 0 0 19px !important;
 	float: left;
-	padding-right: 10px;}
+	/*padding-right: 10px;*/}
 
 /*#users_reviews .delete_review a.remove_review {
 	display: inline-block;
@@ -12826,7 +12826,7 @@ table.diff.split_view tr:first-child td {
     border-top: none;}
 #wrapper table.diff .diff-deletedline,
 #wrapper table.diff .diff-deletedline del {
-    background-color: rgba(255, 0, 0, 0.2);}
+    background-color: rgba(255, 0, 0, .2);}
 #wrapper table.diff .diff-addedline,
 #wrapper table.diff .diff-addedline ins {
     background-color: rgba(0, 255, 0, .2);}

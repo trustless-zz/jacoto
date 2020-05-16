@@ -69,7 +69,7 @@ https://github.com/hateradio/wbb
     width: auto;
     height: auto;
     vertical-align: middle;
-    display: inline-block;
+    display: /*inline-*/block;
     margin: 2px 3px;
     padding: 1px;
     align-self: center;
