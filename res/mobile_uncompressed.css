@@ -3241,20 +3241,20 @@ a[title="Remove"]:before {
 	#trading_panel #items,
 	#trading_panel .trade_table,
 	#trading_panel .message_section,
-	#trading_panel button {display: none;}
+	#trading_panel button, /*{display: none;}*/
     
     #crafting_panel div,
-    #crafting_panel h2,
+    /*#crafting_panel h2,*/
     
     
     #equipment div,
-    #equipment h2,
+    /*#equipment h2,*/
     
     #upload #content div,
 	#upload #content #thin,
     #upload #content center,
     #upload #content br {
-		display:none;}
+		display: none !important;}
     
     #wrapper #crafting_recipes li.item_li {
         width: calc(100% / 4 - 10px);}

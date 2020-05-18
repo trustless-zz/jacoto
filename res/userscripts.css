@@ -803,31 +803,6 @@ body >#preview-popup    [style*="display: block;"] {
 
 
 /**
-GGn trade item count editor
-https://gazellegames.net/forums.php?action=viewthread&threadid=20638&postid=1478606#_1112383081
-https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
-**/
-.trading input.item_count {
-    border: 1px solid var(--c-input-brdr) !important;
-    background-color: var(--c-input) !important;
-    -webkit-box-shadow: var(--p-input-shdw);
-    box-shadow: var(--p-input-shdw);
-    font-weight: 600 !important;
-	font-family: OpenSans, Helvetica, Arial, sans-serif;
-    z-index: 9;}
-.trading input.item_count:hover {
-    background-color: var(--c-input-focus) !important;}
-.trading input.item_count:focus {
-    background-color: var(--c-input-focus) !important;
-    color: var(--c-low);
-    border-color: var(--c-b1) !important;
-    outline: 0;}
-/**
-/GGn trade item count editor
-**/
-
-
-/**
 GGn Steam Portrait Cover Tooltip
 https://gazellegames.net/forums.php?action=viewthread&threadid=20638#_2261144508
 https://greasyfork.org/en/scripts/396545-ggn-steam-portrait-cover-tooltip
