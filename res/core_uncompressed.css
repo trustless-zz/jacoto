@@ -3083,7 +3083,8 @@ li.graph {
 .cats_guides,
 .cats_ebooks,
 .cats_applications,
-.cats_ost {
+.cats_ost,
+.oculusquest {
     background-size: 28px 28px;
     height: 28px;
 	width: 28px;
