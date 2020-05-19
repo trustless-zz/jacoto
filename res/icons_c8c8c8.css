@@ -179,6 +179,7 @@ body >#preview-popup img,
 .cats_ebooks,
 .ebook {background-image: url(caticons/c8c8c8/ebook.svg);}
 .cats_applications {background-image: url(caticons/applications.svg);}
+.oculusquest {background-image: url(caticons/c8c8c8/oculusquest.svg);}
 
 /* @media (min-width: 801px) { */
 #groupplatform a[href$="=Amiga+CD32"] {background-image: url(caticons/c8c8c8/amigacd32.svg);}
@@ -282,6 +283,7 @@ body >#preview-popup img,
 #groupplatform a[href$="=Xbox"] {background-image: url(caticons/xbox.svg);}
 #groupplatform a[href$="=Xbox+360"] {background-image: url(caticons/xbox360.svg);}
 #groupplatform a[href$="=ZX+Spectrum"] {background-image: url(caticons/zxspectrum.svg);}
+#groupplatform a[href$="=Oculus+Quest"] {background-image: url(caticons/c8c8c8/oculusquest.svg);}
 /* } */
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b,
