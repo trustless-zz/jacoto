@@ -6266,7 +6266,7 @@ span.size10 {
     line-height: 1em;}
 
 .twitter-tweet {
-    max-width: calc(100% - 10px)!important;
+    /*max-width: calc(100% - 10px)!important;*/
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
     /*margin: 0 5px;*/
