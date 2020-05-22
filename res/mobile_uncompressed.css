@@ -717,6 +717,7 @@
         height: -moz-fit-content;
         height: fit-content;}
     
+    #newthreadpreview,
     .inventory #wrapper .save_message,
     #reportsv2 form#report_table div#dynamic_form table.border tr,
     #reportsv2 form#report_table div#dynamic_form table.border td,
@@ -2162,6 +2163,8 @@ a[title="Remove"]:before {
 		flex-flow: row wrap;
 		color: transparent;
         width: calc(100% - 60px);}
+    #wrapper #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] >strong {
+        display: flex;}
 	/* #forums .forum_post .colhead_dark div[style="float:left;"] label{
 		color: var(--white);} */
     #wrapper #quickreplypreview .colhead_dark span[style="float:left;"] input,
@@ -2243,9 +2246,9 @@ a[title="Remove"]:before {
     #wrapper blockquote#description img {
         max-width: 100% !important;}
     
-    #wrapper #quickreplypreview .colhead_dark #barpreview,
-    #wrapper .forum_post .colhead_dark div[style="float: right;"],
-    #wrapper #newthreadpreview .forum_post .colhead_dark #barpreview {
+    /*#wrapper #quickreplypreview .colhead_dark #barpreview,*/
+    #wrapper .forum_post .colhead_dark div[style="float: right;"]/*,
+    #wrapper #newthreadpreview .forum_post .colhead_dark #barpreview*/ {
         top: 13px;}
     
 	.username_badges {display: none;}
