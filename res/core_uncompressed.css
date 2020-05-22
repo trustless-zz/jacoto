@@ -6346,8 +6346,9 @@ blockquote#description img {
 /*div[id^="twitch-embed-"],*/
 .twitter_post {
     margin: 0 5px;
-    width: -moz-fit-content;
-    width: fit-content;}
+    display: table;
+    /*width: -moz-fit-content;
+    width: fit-content;*/}
 .twitter_post >br {
     display: none;}
 .twitter-tweet {
