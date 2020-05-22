@@ -6269,8 +6269,10 @@ span.size10 {
     max-width: calc(100% - 10px)!important;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
-    margin: 0 5px;
-    padding: 5px;}
+    /*margin: 0 5px;*/
+    padding: 5px;/*}
+.twitter-tweet {*/
+    margin: 0 auto !important;}
 
 img[style^="max-height: 64px; transition: all 0.5s ease-in-out"],
 #wiki iframe,
@@ -6351,8 +6353,8 @@ blockquote#description img {
     width: fit-content;*/}
 .twitter_post >br {
     display: none;}
-.twitter-tweet {
-    margin: 0 !important;}
+/*.twitter-tweet {
+    margin: 0 auto !important;}*/
 /* twitter align test */
 /*div[style="text-align:center;"] >div[id^="twitch-embed-"],*/
 div[style="text-align:center;"] >.twitter_post {
