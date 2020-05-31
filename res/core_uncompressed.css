@@ -12522,6 +12522,8 @@ div#fight_skill_points_assign >table {
     position: relative;
     padding: 0;
     /*margin: 0 0 10px 0;*/}
+#users_reviews .review_cell:only-child {
+    width: 100%;}
 #users_reviews >.flextable {
     margin: 0;
     padding: 0;

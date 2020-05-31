@@ -2226,7 +2226,28 @@ a[title="Remove"]:before {
 	.linkbox {
         margin-left: auto;
         margin-right: auto;}
-	#forums .linkbox_top {display: none;}
+	#forums .linkbox_top {
+        line-height: 14px;
+        /*display: none;*/}
+    
+    #wrapper #searchforum tbody,
+    #wrapper #searchthread tbody {
+        display: flex;
+        flex-flow: column;}
+    #wrapper #searchforum tr:not(:last-child),
+    #wrapper #searchthread tr:not(:last-child) {
+        display: flex;
+        flex-flow: column;
+        margin: 0 0 8px 0;
+        width: 100%;}
+    #wrapper #searchforum td,
+    #wrapper #searchthread td {
+        margin: 0;}
+    #wrapper #searchforum tr:last-child,
+    #wrapper #searchthread tr:last-child {
+        margin: 5px 0 0 0;}
+    #forums .thin.forums_search .last_read {
+        margin: -3px 0 !important;}
     
     #wrapper .linkbox >strong,
     #wrapper .linkbox a {
