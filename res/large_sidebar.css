@@ -13,6 +13,9 @@
 /*#index .sidebar #stats .stats li {
     float: left;
     width: 50%;}*/
+#index #stats,
+#index #polcont {
+    display: table;}
 #index #upcoming_calendar   {order: 1;}
 #index #blogposts           {order: 2;}
 #index #dailygazelle        {order: 3;}
