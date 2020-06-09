@@ -43,6 +43,7 @@ body >#preview-popup img,
 .HowLongToBeat {background-image: url("weblinks/c8c8c8/HowLongToBeat.svg");}
 .NexusMods {background-image: url("weblinks/c8c8c8/NexusMods.svg");}
 .Steam {background-image: url("weblinks/c8c8c8/Steam.svg");}
+.Oculus {background-image: url("weblinks/c8c8c8/Oculus.svg");}
 
 #torrents #torrentbrowse #torrent_table td.center.cats_col >div[title=""][class=""] {
     background-image: url(caticons/missing.svg);}
