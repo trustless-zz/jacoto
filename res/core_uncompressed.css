@@ -1507,6 +1507,8 @@ div#fight_skill_points_assign >table,
 #users_reviews .review_cell,
 #users_reviews >h2 +.box.pad,
 
+#tools #content >.header +.thin:last-child,
+
 #tools #content >p,
 #better .thin >div,
 #better .thin >table,
@@ -4463,6 +4465,8 @@ strong.mature +strong +br,
 
 .xdsoft_scrollbar,
 
+#tools .thin textarea#sandbox ~br,
+
 /* forum post 'back to top' button */
 .username_badges:empty,
 
@@ -4964,6 +4968,10 @@ h2 .username_badges {
 
 #wrapper #trading_panel .message_box textarea,
 textarea {
+    -webkit-transition: all .1s linear, height 0s;
+    -o-transition: all .1s linear, height 0s;
+    transition: all .1s linear, height 0s;
+    
     min-height: 47px; /*28px without webkit stuff*/
     border: 1px solid var(--c-input-brdr);
     background-color: var(--c-input);
@@ -12833,6 +12841,37 @@ div#fight_skill_points_assign >table {
     border-left: none;
     border-top: 10px solid transparent;}
 /* /timeline.css */
+
+
+
+
+#tools #content >.header {
+    z-index: 1;
+    position: relative;}
+#tools #content >.header +.thin:last-child {
+    line-height: 0;
+    padding: 36px 10px 10px 10px;
+    margin-top: -36px;}
+#tools .thin textarea#sandbox {
+    margin: 10px 0 0 0 !important;
+    width: 100% !important;}
+#tools textarea#sandbox ~.thin >.forum_post {
+    background-color: var(--c-tgroup);
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    border-color: var(--c-table-brdr);
+    margin: 10px 0 0 0;}
+#tools textarea#sandbox ~.thin >.forum_post:before {
+    display: block;
+    content: 'Preview';
+    background: var(--p-subcolhead);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 8px;}
+#tools textarea#sandbox ~.thin #preview {
+    line-height: var(--p-lh);
+    padding: 10px;}
 
 
 
