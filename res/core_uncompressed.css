@@ -1326,7 +1326,7 @@ a[onclick="BBCode.spoiler(this);"],
 #top10 .thin >.center tr,
 #top10 .thin >.center td,
 
-.profile .box_art_gallery .gallery_small_slot,
+/*.profile .box_art_gallery .gallery_small_slot,*/
 
 #tools table[style="width: 960px; text-align: center;"] .colhead td,
 
@@ -1343,7 +1343,7 @@ table#likesrow a,
 h2 .username_badges a {
     display: inline-block;}
 
-.profile .box_art_gallery .gallery,
+/*.profile .box_art_gallery .gallery,*/
 .wiki_index .wiki_article ul,
 .wiki_index .wiki_article strong {
     display: inline-block;
@@ -1642,7 +1642,7 @@ span.user_title a:hover,
 /*#collections #coverart.box li a,
 #bookmarks #coverart */.collage_images li a,
 /* #top10 td.center.cats_col +td >span a, */
-.profile .box_art_gallery .gallery_row a,
+/*.profile .box_art_gallery .gallery_row a,*/
 .screenshots a,
 .sidebar .box.box_image_coverart a,
 #quickreplypreview .colhead_dark #barpreview a,
@@ -1660,6 +1660,8 @@ span.user_title a:hover,
 #css_gallery .preview_image a,
 
 .month-picker-header table,
+
+.gallery_row a,
 
 .username_badges a,
 table#likesrow a,
@@ -2137,7 +2139,7 @@ input[type=submit]:active,
 .box.box_coltags .head span[title="Add Tags"] a:active,
 .slides_control,
 a>strong,
-.profile .box_art_gallery .gallery_row a>img,
+/*.profile .box_art_gallery .gallery_row a>img,*/
 span.torrent_info_tags,
 table#likesrow a,
 table#snatchesrow a,
@@ -2251,7 +2253,8 @@ img#authcode,
 .fancybox-image,
 .hovereffect,
 .lightbox img,
-.profile .box_art_gallery .gallery_row img,
+/*.profile .box_art_gallery .gallery_row img,*/
+.gallery_row img,
 .screenshots img,
 #css_gallery .preview_image,
 .sidebar .box.box_albumart img,
@@ -2518,8 +2521,8 @@ input[disabled] {
 #dailygazelle img {
     display: block;}
 .review_cell .flextable-cell:first-child img:not(.avatar):hover,
-.profile .box_art_gallery .large_row .gallery_small_slot:hover a,
-.profile .box_art_gallery .small_row .gallery_small_slot:hover a,
+/*.profile .box_art_gallery .large_row */#wrapper .gallery_row a:hover,
+/*.profile .box_art_gallery .small_row .gallery_small_slot:hover a,*/
 .fancybox-is-zoomable .fancybox-image:hover,
 .screenshots img:hover,
 #css_gallery .preview_image:hover,
@@ -3454,7 +3457,7 @@ h3 a[href^="user.php?action=notify_delete&"],
 #backpack .itemslot .item,
 #wrapper #trading_panel .message_section,
 #crafting_recipes #items_list,
-.profile .box_art_gallery .gallery,
+/*.profile .box_art_gallery .gallery,*/
 .inventory .save_message,
 .inventory #content li.item_li,
 #shop li.item_li,
@@ -3473,6 +3476,7 @@ h3 a[href^="user.php?action=notify_delete&"],
 #calendar .day-events >p,
 
 #users_reviews >h2 +.box.pad,
+.gallery,
 
 .permissions {
     -webkit-box-sizing: border-box;
@@ -4996,6 +5000,7 @@ textarea:focus {
 img#authcode,
 .similar img,
 .screenshots img,
+.gallery_row a,
 .sidebar img {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
@@ -5032,6 +5037,7 @@ a[href^="javascript:Vote("] strong:hover,
 .screenshots img:hover,
 #calendar .calendar-day:hover,
 .box_albumart img:hover,
+.gallery_row a:hover,
 .sidebar img:hover,
 .userratingdiv img,
 .hovereffect:hover,
@@ -10027,7 +10033,7 @@ body#user.inventory {}
 	font-weight: 600;}
 
 /*** Image Gallery ***/
-.profile .box_art_gallery .gallery_slot {
+/*.profile .box_art_gallery .gallery_slot {
  	overflow: hidden;}
 .profile .box_art_gallery .gallery_main_slot {
 	text-align: center;
@@ -10062,14 +10068,98 @@ body#user.inventory {}
 	margin: 2px;}
 .profile .gallery_small_slot img {
 	display: block;}
-/*#wrapper .calendar-day.today,*/
 .profile .box_art_gallery .gallery_small_slot.selected a {
 	border-color: var(--c-sticky-id-brdr);}
 
 .profile .box_art_gallery .gallery_small_slot img {
     max-height: 80px;
     width: auto;
-    height: 100%;}
+    height: 100%;}*/
+
+
+/*** Image Gallery ***/
+.gallery {
+    font-size: 0;
+    line-height: 0;
+    width: 100%;
+    display: inline-block;}
+
+.gallery_slot {
+    overflow: hidden;}
+
+.gallery_main_slot {
+    text-align: center;
+    width: 100%;
+    max-height: 1000px;}
+
+.gallery_row {
+    /*padding: 0;
+	margin: auto;
+	position: relative;
+	width: 100%;
+	max-height: 150px;
+	white-space: nowrap;
+	overflow: hidden;}*/
+	padding: 0;
+	margin: auto;
+    margin-top: 4px;
+	position: relative;
+	width: 100%;
+	max-height: 150px;
+    white-space: nowrap;
+	overflow: auto !important;}
+
+.gallery_small_slot {
+	display: inline-block;
+	/*max-height: 80px;
+	margin: 1px;
+	overflow: hidden;*/}
+
+/*.large_row .gallery_small_slot {
+	width: 23%;}
+
+.small_row .gallery_small_slot {
+	width: 24%;
+	margin: 2px;}*/
+
+.gallery_small_slot img {
+    max-height: 80px;
+    width: auto;
+    height: 100%;
+	display: block;
+	/*margin: 0 !important; 
+	padding: 0 !important;*/}
+
+/*.gallery_small_slot.selected {
+	border: 1px solid red;
+	margin: 0;}*/
+.gallery_small_slot a {
+	display: inline-block;
+	max-height: 80px;
+	margin: 4px;
+	overflow: hidden;
+    border: 3px solid var(--c-main-brdr);
+    width: auto;}
+
+.large_row .gallery_small_slot a {
+    height: 80px;}
+.small_row .gallery_small_slot a {
+	margin: 2px;}
+
+.gallery_row .selected a {
+	border-color: var(--c-sticky-id-brdr);}
+
+.forum_post .gallery_row {
+    display: flex;
+    flex-flow: wrap;
+    max-height: 200px;
+    justify-content: center;}
+#wrapper .forum_post .gallery_row img {
+    padding: 0;}
+
+
+
+
 
 /*** Platform checkboxes on edit profile ***/
 
