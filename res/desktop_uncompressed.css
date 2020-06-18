@@ -1273,48 +1273,52 @@ table#existing_freeleech_pots td {
 
 
 /* smh */
+@media (min-width: 900px) {
+#wrapper .twitter-tweet {
+    min-width: 550px !important;}
+}
 @media (min-width: 851px) and (max-width: 899px) {
 #wrapper .twitter-tweet {
-    max-width: 525px !important;}
+    width: 525px !important;}
 }
 @media (min-width: 801px) and (max-width: 850px) {
 #wrapper .twitter-tweet {
-    max-width: 475px !important;}
+    width: 475px !important;}
 }
 
 @media (min-width: 751px) and (max-width: 800px) {
 #wrapper .twitter-tweet {
-    max-width: 565px !important;}
+    width: 565px !important;}
 }
 @media (min-width: 701px) and (max-width: 750px) {
 #wrapper .twitter-tweet {
-    max-width: 515px !important;}
+    width: 515px !important;}
 }
 @media (min-width: 651px) and (max-width: 700px) {
 #wrapper .twitter-tweet {
-    max-width: 465px !important;}
+    width: 465px !important;}
 }
 @media (min-width: 601px) and (max-width: 650px) {
 #wrapper .twitter-tweet {
-    max-width: 415px !important;}
+    width: 415px !important;}
 }
 @media (min-width: 551px) and (max-width: 600px) {
 #wrapper .twitter-tweet {
-    max-width: 365px !important;}
+    width: 365px !important;}
 }
 @media (min-width: 501px) and (max-width: 550px) {
 #wrapper .twitter-tweet {
-    max-width: 315px !important;}
+    width: 315px !important;}
 }
 @media (min-width: 451px) and (max-width: 500px) {
 #wrapper .twitter-tweet {
-    max-width: 265px !important;}
+    width: 265px !important;}
 }
 @media (min-width: 401px) and (max-width: 450px) {
 #wrapper .twitter-tweet {
-    max-width: 215px !important;}
+    width: 215px !important;}
 }
 @media (min-width: 360px) and (max-width: 400px) {
 #wrapper .twitter-tweet {
-    max-width: 175px !important;}
+    width: 175px !important;}
 }
