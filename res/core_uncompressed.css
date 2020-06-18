@@ -6293,31 +6293,40 @@ span.size10 {
     line-height: 1em;}
 
 .twitter-tweet {
-    /*max-width: calc(100% - 10px)!important;*/
+    /*max-width: calc(100% - 10px)!important;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
-    /*margin: 0 5px;*/
-    padding: 5px;/*}
-.twitter-tweet {*/
-    margin: 0 auto !important;}
+    margin: 0 5px;
+    padding: 5px;*/
+    margin: 0 !important;}
+#wrapper .twitter-tweet >twitter-iframe,
+#wrapper .twitter-tweet >iframe {
+    max-width: unset !important;
+    margin: 0;
+    /*padding: 0;
+    -webkit-filter: unset;
+    filter: unset;
+    max-width: unset !important;*/}
 
 img[style^="max-height: 64px; transition: all 0.5s ease-in-out"],
-#wiki iframe,
-.box.vertical_space iframe, /*inbox*/
-#blog .pad iframe,
+/*#wiki iframe,
+.box.vertical_space iframe,*/ /*inbox*/
+/*#blog .pad iframe,
 .box.box_info iframe,
 .box.news_post iframe,
-.forum_post iframe {
+.forum_post */twitter-iframe,
+iframe {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
 /*    width: 650px;
     height: 370px;*/}
-#wiki iframe,
-.box.vertical_space iframe, /*inbox*/
-#blog .pad iframe,
+/*#wiki iframe,
+.box.vertical_space iframe,*/ /*inbox*/
+/*#blog .pad iframe,
 .box.box_info iframe,
 .box.news_post iframe,
-.forum_post iframe/*,
+.forum_post */twitter-iframe,
+iframe/*,
 div[id^="twitch-embed-"]*/ {
     max-width: calc(100% - 10px)!important;
     -webkit-filter: var(--p-post-img);
