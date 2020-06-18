@@ -3479,6 +3479,8 @@ h3 a[href^="user.php?action=notify_delete&"],
 #users_reviews >h2 +.box.pad,
 .gallery,
 
+.twitter-tweet,
+
 .permissions {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
@@ -6305,13 +6307,12 @@ span.size10 {
     filter: var(--p-post-img);
     margin: 0 5px;
     padding: 5px;*/
-    width: calc(100% - 200px) !important;   /* dynamic size workaround */
     padding: 100px;                         /* dynamic size workaround */
-    margin: 0 !important;}
+    margin: 5px !important;}
 #wrapper .twitter-tweet >twitter-iframe,
 #wrapper .twitter-tweet >iframe {
     max-width: unset !important;
-    margin: -100px;                         /* dynamic size workaround */
+    margin: -105px;                         /* dynamic size workaround */
     /*padding: 0;
     -webkit-filter: unset;
     filter: unset;
