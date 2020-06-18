@@ -6302,10 +6302,11 @@ span.size10 {
     line-height: 1em;}
 
 .twitter-tweet {
+    box-sizing: border-box;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
-    margin: -95px!important;
-    padding: 100px;}
+    margin: -5px !important;
+    padding: 10px;}
 #wrapper .twitter-tweet >iframe {
     max-width: unset !important;
     -webkit-filter: unset;
