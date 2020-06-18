@@ -2219,6 +2219,11 @@ a[title="Remove"]:before {
 	.sticky_post .likes {
 		display: none;}
 
+    #wrapper .twitter_post {
+        overflow: hidden;}
+    #wrapper .twitter-tweet {
+        padding: 15px;
+        margin: -10px !important;}
 
 	/* #forums h2 {font-size: 1.2em;} */
 	#forums .pad {width: 100%;}
