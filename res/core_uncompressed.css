@@ -6305,11 +6305,13 @@ span.size10 {
     filter: var(--p-post-img);
     margin: 0 5px;
     padding: 5px;*/
-    margin: 0 auto !important;}
+    width: calc(100% - 200px) !important;   /* dynamic size workaround */
+    padding: 100px;                         /* dynamic size workaround */
+    margin: 0 !important;}
 #wrapper .twitter-tweet >twitter-iframe,
 #wrapper .twitter-tweet >iframe {
     max-width: unset !important;
-    margin: 0;
+    margin: -100px;                         /* dynamic size workaround */
     /*padding: 0;
     -webkit-filter: unset;
     filter: unset;
