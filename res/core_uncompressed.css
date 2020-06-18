@@ -3372,7 +3372,8 @@ textarea,
 /*.box.box_info iframe,
 .forum_post td.body iframe,
 #blog .pad iframe,
-.box.news_post >.pad */iframe,
+.box.news_post >.pad iframe,*/
+.trailer iframe,
 
 /*div[id^="twitch-embed-"],*/
 
@@ -4377,7 +4378,13 @@ body:not(#upload) #artist_tr + tr td.label,
     top: 0;
     left: 0;
     width: 100%;
-    height: 100% !important; /* !important to counter 16:9 fix */}
+    height: 100% !important; /* !important to counter 16:9 fix */
+    
+    max-width: unset !important;
+    -webkit-filter: unset;
+    filter: unset;
+    margin: 0;
+    padding: 0;}
 
 .bbbutt {
     background-color: var(--c-input-obj);
