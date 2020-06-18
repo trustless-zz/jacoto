@@ -6302,11 +6302,9 @@ span.size10 {
     line-height: 1em;}
 
 .twitter-tweet {
-    box-sizing: border-box;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
-    margin: -5px !important;
-    padding: 10px;}
+    margin: 5px !important;}
 #wrapper .twitter-tweet >iframe {
     max-width: unset !important;
     -webkit-filter: unset;
@@ -6391,7 +6389,7 @@ blockquote#description img {
 .twitter_post {
     margin: 0 5px;
     display: table;
-    overflow: hidden;
+    /*overflow: hidden;*/
     /*width: -moz-fit-content;
     width: fit-content;*/}
 .twitter_post >br {
