@@ -3479,7 +3479,7 @@ h3 a[href^="user.php?action=notify_delete&"],
 #users_reviews >h2 +.box.pad,
 .gallery,
 
-.twitter-tweet,
+/*.twitter-tweet,*/
 
 .permissions {
     -webkit-box-sizing: border-box;
@@ -6395,6 +6395,7 @@ blockquote#description img {
 .twitter_post {
     margin: 0 5px;
     display: table;
+    overflow: hidden;
     /*width: -moz-fit-content;
     width: fit-content;*/}
 .twitter_post >br {
