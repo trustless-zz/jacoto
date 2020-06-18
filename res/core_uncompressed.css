@@ -6304,7 +6304,8 @@ span.size10 {
 .twitter-tweet {
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
-    margin: 5px !important;}
+    margin: -95px!important;
+    padding: 100px;}
 #wrapper .twitter-tweet >iframe {
     max-width: unset !important;
     -webkit-filter: unset;
