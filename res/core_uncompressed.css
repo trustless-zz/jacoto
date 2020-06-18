@@ -6301,7 +6301,7 @@ span.size10 {
     margin: 0 !important;}
 #wrapper .twitter-tweet >twitter-iframe,
 #wrapper .twitter-tweet >iframe {
-    max-width: unset !important;
+    /*max-width: unset !important;*/
     margin: 0;
     /*padding: 0;
     -webkit-filter: unset;
