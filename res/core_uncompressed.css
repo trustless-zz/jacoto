@@ -6302,21 +6302,15 @@ span.size10 {
     line-height: 1em;}
 
 .twitter-tweet {
-    /*max-width: calc(100% - 10px)!important;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
-    margin: 0 5px;
-    padding: 5px;*/
-    padding: 100px;                         /* dynamic size workaround */
     margin: 5px !important;}
-#wrapper .twitter-tweet >twitter-iframe,
 #wrapper .twitter-tweet >iframe {
     max-width: unset !important;
-    margin: -105px;                         /* dynamic size workaround */
-    /*padding: 0;
     -webkit-filter: unset;
     filter: unset;
-    max-width: unset !important;*/}
+    margin: 0;
+    padding: 0;}
 
 img[style^="max-height: 64px; transition: all 0.5s ease-in-out"],
 /*#wiki iframe,
@@ -6324,7 +6318,7 @@ img[style^="max-height: 64px; transition: all 0.5s ease-in-out"],
 /*#blog .pad iframe,
 .box.box_info iframe,
 .box.news_post iframe,
-.forum_post */twitter-iframe,
+.forum_post */
 iframe {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -6335,7 +6329,7 @@ iframe {
 /*#blog .pad iframe,
 .box.box_info iframe,
 .box.news_post iframe,
-.forum_post */twitter-iframe,
+.forum_post */
 iframe/*,
 div[id^="twitch-embed-"]*/ {
     max-width: calc(100% - 10px)!important;
