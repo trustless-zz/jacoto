@@ -12243,6 +12243,12 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     padding: 0;
     justify-content: center;
     position: relative;}
+#upcoming_calendar .event_li.tooltip:nth-child(odd) {
+    background-color: var(--c-input-obj);}
+#upcoming_calendar .event_li.tooltip:nth-child(even) {
+    background-color: var(--c-tgroup);}
+/*#upcoming_calendar .event_li.tooltip:nth-child(n+1) {
+    border-top: 1px solid var(--c-trowb);}*/
 #upcoming_calendar .calendar-day {
     margin-bottom: 10px;}
 .calendar .calendar-row {
