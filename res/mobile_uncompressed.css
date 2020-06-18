@@ -2219,13 +2219,13 @@ a[title="Remove"]:before {
 	.sticky_post .likes {
 		display: none;}
 
-    #wrapper .twitter_post {
+    /*#wrapper .twitter_post {
         overflow: hidden;}
     #wrapper .twitter-tweet {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
         padding: 20px;
-        margin: -15px !important;}
+        margin: -15px !important;}*/
 
 	/* #forums h2 {font-size: 1.2em;} */
 	#forums .pad {width: 100%;}
