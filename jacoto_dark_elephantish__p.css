@@ -45,7 +45,7 @@
     --c-high:							rgb(0, 0, 0);
     --c-high-t:							rgb(0, 0, 0);
     --c-tag:							rgba(22, 22, 22);
-    --c-tag-2:						rgb(0, 0, 0);
+    --c-tag-2:                          rgb(0, 0, 0);
     --c-b1: 							#968074;
     --c-b2: 							#99776D;    
     --c-b3: 							#7a685e;
@@ -107,6 +107,21 @@
     --c-type-3:                         rgba(115,   118,    0,      .23);
     --c-type-4:                         rgba(84,    84,     84,     .23);
     --c-type-5:                         rgba(0,     92,     119,    .23);
+/*hljs*/
+    --c-hljs-bcg:                       #fff;
+    --c-hljs-txt:                       #000;
+    --c-hljs-meta:                      #c0c0c0;
+    --c-hljs-comment:                   #007400;
+    --c-hljs-tag:                       #aa0d91;
+    --c-hljs-variable:                  #3F6E74;
+    --c-hljs-code:                      #c41a16;
+    --c-hljs-regexp:                    #0E0EFF;
+    --c-hljs-title:                     #1c00cf;
+    --c-hljs-section:                   #643820;
+    --c-hljs-type:                      #5c2699;
+    --c-hljs-attr:                      #836C28;
+    --c-hljs-formula:                   #eee;
+    --c-hljs-selector-id:               #9b703f;
 }
 /** /COLORS **/
 

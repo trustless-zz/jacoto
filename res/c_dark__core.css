@@ -33,7 +33,7 @@
     --c-high:							rgb(0, 0, 0);
     --c-high-t:							rgb(0, 0, 0);
     --c-tag:							rgba(22, 22, 22);
-    --c-tag-2:						rgb(0, 0, 0);
+    --c-tag-2:                          rgb(0, 0, 0);
     --c-hovereffect: 					rgba(0, 0, 0, .8);
     --c-b00: 							rgba(0, 0, 0, 0);
     --c-anchor-hvr: 					rgb(255, 255, 255);
@@ -41,6 +41,21 @@
     --c-main-shdw:						rgba(0,0,0,.5);
     --c-colhead-click:					rgba(0, 0, 0, .15);
     --c-colhead-act: 					rgba(0, 0, 0, .3);
+    
+    --c-hljs-bcg:                       rgb(15, 15, 15);
+    --c-hljs-txt:                       rgb(165, 165, 165);
+    --c-hljs-meta:                      #454545;
+    --c-hljs-comment:                   #00A800;
+    --c-hljs-tag:                       #FF26DB;
+    --c-hljs-variable:                  #589AA3;
+    --c-hljs-code:                      #FF524F;
+    --c-hljs-regexp:                    #8282FF;
+    --c-hljs-title:                     #8E7DFF;
+    --c-hljs-section:                   #D67845;
+    --c-hljs-type:                      #B16EFF;
+    --c-hljs-attr:                      #997F2F;
+    --c-hljs-formula:                   #1F1F1F;
+    --c-hljs-selector-id:               #9E7341;
 }
 /** /COLORS **/
 

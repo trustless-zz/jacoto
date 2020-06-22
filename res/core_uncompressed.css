@@ -10114,6 +10114,7 @@ body#user.inventory {}
 	max-height: 150px;
 	white-space: nowrap;
 	overflow: hidden;}*/
+    text-align: center;
 	padding: 0;
 	margin: auto;
     margin-top: 4px;
@@ -10136,7 +10137,7 @@ body#user.inventory {}
 	width: 24%;
 	margin: 2px;}*/
 
-.gallery_small_slot img {
+#wrapper #content .gallery_small_slot img {
     max-height: 80px;
     width: auto;
     height: 100%;
@@ -11306,8 +11307,94 @@ table.adventure_table h3 {
 
 
 
+/*** codeblock ***/
+code.hljs {
+    padding: 8px;
+    color: var(--c-hljs-txt);
+    background: var(--c-hljs-bcg);}
+pre >code.hljs {
+    margin: 12px -10px -10px -10px;
+    position: relative;
+    overflow: visible;}
+pre >code.hljs:after,
+pre >code.hljs:before {
+    height: 1em;
+    line-height: 1em;
+    font-size: 16px;
+    top: -22px;
+    left: 0;
+    padding: 3px 0;
+    position: absolute;}
+pre >code.hljs:before {
+    content: '';
+    width: 100%;
+    background: 
+        var(--c-tor-row-hvr) 
+        linear-gradient(155deg,var(--c-tor-row-hvr),var(--c-edition));}
+pre >code.hljs:after {
+    color: var(--c-txt);
+    content: 'code';
+    width: auto;
+    text-indent: 5px;}
+pre >code.hljs[class$=" hljs"]:after {
+    clip-path: polygon(
+        0 0,
+        calc(100% - 4.5ch) 0%,
+        calc(100% - 4.5ch) 100%,
+        0% 100%);
+    content: 'code hljs';
+    content: attr(class);}
 
-
+.xml .hljs-meta {
+  color: var(--c-hljs-meta);}
+.hljs-comment,
+.hljs-quote {
+  color: var(--c-hljs-comment);}
+.hljs-tag,
+.hljs-attribute,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-name {
+  color: var(--c-hljs-tag);}
+.hljs-variable,
+.hljs-template-variable {
+  color: var(--c-hljs-variable);}
+.hljs-code,
+.hljs-string,
+.hljs-meta-string {
+  color: var(--c-hljs-code);}
+.hljs-regexp,
+.hljs-link {
+  color: var(--c-hljs-regexp);}
+.hljs-title,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-number {
+  color: var(--c-hljs-title);}
+.hljs-section,
+.hljs-meta {
+  color: var(--c-hljs-section);}
+.hljs-class .hljs-title,
+.hljs-type,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-params {
+  color: var(--c-hljs-type);}
+.hljs-attr {
+  color: var(--c-hljs-attr);}
+.hljs-subst {
+      color: var(--c-hljs-txt);}
+.hljs-formula {
+  background-color: var(--c-hljs-formula);}
+.hljs-addition {
+  background-color: rgba(0, 255, 0, .2);}
+.hljs-deletion {
+  background-color: rgba(255, 0, 0, .2);}
+.hljs-selector-id,
+.hljs-selector-class {
+  color: var(--c-hljs-selector-id);}
+/*** /codeblock ***/
 
 
 
