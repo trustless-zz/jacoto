@@ -9253,10 +9253,11 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	padding: 0;
 	float: right;
 	display: block;
-	height: 100%;	}
+	height: 100%;}
 
 #shop li.item_li {
     opacity: 1;
+    overflow: hidden;
 	position: relative;
 	list-style: none;
 	background: var(--c-box);
@@ -9314,6 +9315,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     height: 5px;}
 
 #shop .item_image_div {
+    position: relative;
 	height: 150px;
 	width: 100%; /*200*/
 	display: flex;
@@ -9340,33 +9342,33 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	width: calc(100% - 34px);
 	margin: 50px auto 0;}
 
-#shop li.item_type_0.featured #clickable:before,
-#shop li.item_type_0 #clickable {
+/*#shop li.item_type_0.featured #clickable:before,*/
+#shop li.item_type_0 #clickable:before {
     background-color: var(--c-type-0);
     outline: 3px solid var(--c-type-0);
     outline-offset: -3px;}
-#shop li.item_type_1.featured #clickable:before,
-#shop li.item_type_1 #clickable {
+/*#shop li.item_type_1.featured #clickable:before,*/
+#shop li.item_type_1 #clickable:before {
     background-color: var(--c-type-1);
     outline: 3px solid var(--c-type-1);
     outline-offset: -3px;}
-#shop li.item_type_2.featured #clickable:before,
-#shop li.item_type_2 #clickable {
+/*#shop li.item_type_2.featured #clickable:before,*/
+#shop li.item_type_2 #clickable:before {
     background-color: var(--c-type-2);
     outline: 3px solid var(--c-type-2);
     outline-offset: -3px;}
-#shop li.item_type_3.featured #clickable:before,
-#shop li.item_type_3 #clickable {
+/*#shop li.item_type_3.featured #clickable:before,*/
+#shop li.item_type_3 #clickable:before {
     background-color: var(--c-type-3);
     outline: 3px solid var(--c-type-3);
     outline-offset: -3px;}
-#shop li.item_type_4.featured #clickable:before,
-#shop li.item_type_4 #clickable {
+/*#shop li.item_type_4.featured #clickable:before,*/
+#shop li.item_type_4 #clickable:before {
     background-color: var(--c-type-4);
     outline: 3px solid var(--c-type-4);
     outline-offset: -3px;}
-#shop li.item_type_5.featured #clickable:before,
-#shop li.item_type_5 #clickable {
+/*#shop li.item_type_5.featured #clickable:before,*/
+#shop li.item_type_5 #clickable:before {
     background-color: var(--c-type-5);
     outline: 3px solid var(--c-type-5);
     outline-offset: -3px;}
@@ -9375,13 +9377,15 @@ table#downloaded_table td.center.cats_col +td >span:before {
     background-color: unset;
     outline: unset;}
 
-#shop li.item_li.featured #clickable:before {
+#shop li.item_li #clickable:before {
     content: '';
-    width: 184px;
+    width: calc(100% - 34px);
     position: absolute;
     left: 17px;
     top: 50px;
     height: 245px;}
+#shop li.item_li.featured #clickable:before {
+    width: 184px;}
 
 
 #shop .submit_section {
