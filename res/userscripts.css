@@ -1073,9 +1073,9 @@ table#coltable tr:first-child td {
 table#coltable td a,
 table#coltable >tbody {
     font-size: 14px;
-    line-height: var(--p-lh);}
+    line-height: 20px;}
 table#coltable td a {
-    padding: 1px 3px;}
+    padding: 0 3px;}
 table#coltable td a:not(:last-child) {
     margin-right: 6px;}
 table#coltable tr:hover a {
