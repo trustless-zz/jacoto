@@ -3928,7 +3928,9 @@ tr.likes td[id^="likers_"] >strong,
 h3 a[href^="user.php?action=notify_delete&"],
 #better table[style="width: 600px;"] tr:not(.colhead) td:nth-child(2),
 #tools #content >table[style="width: 600px;"] tr:not(.colhead) td:nth-child(2),
-.box.box_coltags .head span[title="Add Tags"] a/*,
+.box.box_coltags .head span[title="Add Tags"] a,
+.month-picker-year-table .month-picker-title
+/*,
 #image_block >a[onclick]*/ {
     font-size: 0;
     line-height: 0;}
@@ -7453,6 +7455,7 @@ td.center.cats_col {
 #bookmarks #torrent_table .colhead_dark td:nth-child(n+4),
 #collections #torrent_table >tbody >tr.colhead >td:nth-child(n+4) {
     width: 18px;}
+.month-picker-year-table .month-picker-title .ui-button-text,
 #collections #torrent_table .colhead td[width="70%"] strong,
 #bookmarks #torrent_table .colhead_dark td[width="70%"] strong {
     font-size: var(--p-head);
@@ -9538,6 +9541,11 @@ h3 a[href^="user.php?action=notify_delete&"] {
 .inventory #wrapper #content li.item_li.new,
 #shop li.new {
     border-color: var(--c-unread-br);}
+#calendar .calendar .calendar-day.today {
+    outline: 1px solid var(--c-unread-br);
+    outline-offset: -2px;}
+#calendar .calendar .calendar-day.today:hover {
+    outline: 0px solid var(--c-unread-br);}
 .inventory #wrapper #content li.item_li.new h3.center,
 #shop li.new h3.center {
     background: var(--p-subcolhead);}
@@ -12324,6 +12332,12 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     line-height: 1em;
     height: auto;
     padding: 0 !important;}
+/*.month-picker-year-table .month-picker-title {
+    line-height: 0;
+    font-size: 0;}
+.month-picker-year-table .month-picker-title .ui-button-text {
+    font-size: var(--p-head);
+    line-height: 1em;}*/
 .month-picker-year-table .ui-button {
     font-size: var(--p-head);
     width: var(--p-head);
