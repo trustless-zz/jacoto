@@ -5801,6 +5801,7 @@ input[name="year"],
 #uploaad textarea#album_desc,
 #upload textarea#release_desc {
     margin-bottom: 2px !important;}
+#image_block input[type="url"],
 #image_block input[type="text"] {
     width: calc(100% - 160px) !important;}
 #image_block ~div input[type="submit"],
