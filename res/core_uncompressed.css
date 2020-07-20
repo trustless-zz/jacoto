@@ -7429,7 +7429,7 @@ input[type="radio"]:active {
 #crafting_recipes #items_list:before {
     top: 36px;}
 #trading_panel .trade_table .items-wrapper:before {
-    top: 80px;}
+    top: 78px;}
 .similar:before {
     top: 0;}
 #backpack #slots_panel ul:after,
@@ -9098,7 +9098,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #equipment              .item h3,
 #wrapper #trading_panel .item h3 {
     word-break: break-word;
-    z-index: 9;
+    z-index: 8;
     margin-left: 4px;
     display: flex;
     align-items: flex-end;
@@ -11586,7 +11586,7 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     box-shadow: var(--p-input-shdw);
     font-weight: 600 !important;
 	font-family: OpenSans, Helvetica, Arial, sans-serif;
-    z-index: 9;}
+    z-index: 8;}
 .trading input.item_count:hover {
     background-color: var(--c-input-focus) !important;}
 .trading input.item_count:focus {
