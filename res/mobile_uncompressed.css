@@ -1918,6 +1918,9 @@ a[title="Remove"]:before {
 
 	#torrents #weblinksdiv .body {/*padding: 0px;*/}
 	#torrents #weblinksdiv .body.center {/* margin: 10px 5px; */}
+    .sidebar #weblinksdiv .body.center a {
+        width: 55px;
+        height: 55px;}
 
 	#torrents select {min-width:auto;}
 
