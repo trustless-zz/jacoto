@@ -11049,7 +11049,17 @@ td .log_green {
 .large_progress_bar .main_section {
     z-index: 3;
     left: 0;
-	border-right: 2px solid var(--c-on);}
+	border-right: 2px solid var(--c-on);
+    /*-webkit-clip-path: polygon(
+            calc(100% - 2px)    0,
+            100%                0,
+            100%                100%,
+            calc(100% - 2px)    100%);
+    clip-path: polygon(
+            calc(100% - 2px)    0,
+            100%                0,
+            100%                100%,
+            calc(100% - 2px)    100%);*/}
 
 .large_progress_bar .bonus_section {
     background-color: var(--c-bonus);

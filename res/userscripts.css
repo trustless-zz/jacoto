@@ -270,12 +270,19 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
 #quick-crafter br +button {
     margin-top: 8px !important;}
+#quick-crafter br +br {
+    display: none;}
+#quick-crafter >br+br+span {
+    display: inline-block;}
+/*#quick-crafter br +br,*/
 #quick-crafter button +br {
     display: block;
     content: '';
     width: 100%;
     height: 0;
-    border-bottom: 1px solid var(--c-table-brdr);
+    border-bottom: 1px solid var(--c-table-brdr);}
+#quick-crafter >br +span,
+#quick-crafter button +br {
     margin-top: 8px;}
 
 #quick-crafter #clear_button {
