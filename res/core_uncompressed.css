@@ -3934,6 +3934,7 @@ h3 a[href^="user.php?action=notify_delete&"],
 /* image container size correction */
 .screenshots/* a*/,
 /*.similar li >a,*/
+.sidebar #weblinksdiv .body.center,
 .gold_trade_buttons,
 .more_info #img_box,
 table#uploadsrow/* td*/,
@@ -3943,20 +3944,24 @@ table#snatchesrow/* td*/,
 .box.box_albumart p,
 .box_image_coverart div[align="center"],
 .box_image_avatar div:last-child,
-.username_badges,
+/*.username_badges,*/
+.username_badges >a,
 h2 a[href^="feeds.php?"],
 h3 a[href^="feeds.php?"],
 .sidebar .box.box_badges/* >.pad*/,
 h2#username span#tip_user,
-.box.box_info span[style="float:right;"], .box.box_likes.box_torrents span.likes_icon.flright,
+.box.box_info span[style="float:right;"],
+.box.box_likes.box_torrents span.likes_icon.flright,
 .avatar >div,
 .collage_images,
 #torrent_table .group/*.discog*/ td span[style="float:right;"] /* bookmark icon */
 /* /image container size correction */ {
     font-size: 0;
     line-height: 0;}
-span.username_badges { /* correction consequences */
+/*span.username_badges {
     display: inline-block;
+    vertical-align: text-bottom;}*/
+.username_badges >a {
     vertical-align: text-bottom;}
 #friends a[onclick^="edit"],
 #better .thin >table a[href^="torrents.php?action=download&id="] {
@@ -4857,10 +4862,12 @@ li:not(.suggested_similar) .similar_votes >span {
     line-height: var(--p-lh);
     font-weight: 400;}
 
+.username_badges >a,
+.username_badges >img {
+    margin: 0 2px;}
 .username_badges img {
     max-height: 18px;
     /* max-width: 18px; */
-    margin: 0 2px;
     vertical-align: text-bottom;}
 span.secondary_class {
     line-height: 18px;}
@@ -4879,14 +4886,15 @@ img[alt="Banned"] {
     width: 16px;
     padding-left: 16px;}
 
-h2 .username_badges img {
+h2 .username_badges >a,
+h2 .username_badges >img {
     margin: 2px;}
 h2 .username_badges {
     position: relative;
     margin-left: 2px;
-    /*top: -3px;
-    margin-bottom: -3px;*/
-    vertical-align: bottom;
+    top: -3px;
+    /*margin-bottom: -3px;*/
+    vertical-align: text-bottom;
     display: inline-block;}
 
 .sidebar .userratingdiv tr:not(#reviewrow) {
@@ -4954,15 +4962,20 @@ h2 .username_badges {
 .sidebar #weblinksdiv {
     padding: 0 0 5px 0;}
 .sidebar #weblinksdiv .body.center {
-    padding: 3px 4px 0 4px;
+    padding: 5px 5px 0 5px;
     text-align: left;}
 .sidebar #weblinksdiv .body.center a {
+    width: calc(100% / 5 - 10px);
+    max-width: 60px;
     display: inline-block;
     padding: 3px;
     margin: 2px;}
 .sidebar #weblinksdiv .weblinks {
-    width: 48px;
-    height: 48px;}
+    /*width: 48px;
+    height: 48px;*/
+    width: 100%;
+    height: 100%;
+    padding-top: 100%;}
 
 .sidebar .box_freeleech form {
     display: flex;
@@ -10434,6 +10447,9 @@ body#user.inventory {}
 h2 span.secondary_class,
 #tm_time input[type="text"] {
 	vertical-align: middle;}
+h2 span.secondary_class {
+    margin-bottom: -3px;
+    display: inline-block;}
 #tms_form {
 	margin-top:-15px;}
 #tms h2, #platforms h2 {

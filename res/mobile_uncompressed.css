@@ -1912,6 +1912,7 @@ a[title="Remove"]:before {
 	#torrents .sidebar td:nth-child(1) {display: block;}
 	#torrents .sidebar td:nth-child(2) {width: auto; float: none;}
 
+    #wrapper .sidebar #weblinksdiv .body.center,
 	#torrents .userratingdiv td {text-align: center;}
 	#torrents .userratingdiv table {background:none;}
 
