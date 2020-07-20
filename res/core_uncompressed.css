@@ -3929,9 +3929,22 @@ h3 a[href^="user.php?action=notify_delete&"],
 #better table[style="width: 600px;"] tr:not(.colhead) td:nth-child(2),
 #tools #content >table[style="width: 600px;"] tr:not(.colhead) td:nth-child(2),
 .box.box_coltags .head span[title="Add Tags"] a,
-.month-picker-year-table .month-picker-title
-/*,
-#image_block >a[onclick]*/ {
+.month-picker-year-table .month-picker-title,
+/* image container size correction */
+.screenshots/* a*/,
+/*.similar li >a,*/
+table#uploadsrow/* td*/,
+table#likesrow/* td*/,
+table#snatchesrow/* td*/,
+#artist .sidebar >.box:first-child/* >div:last-child*/,
+.box.box_albumart/* p*/,
+.box_image_coverart/* div[align="center"]*/,
+.box_image_avatar/* div:last-child*/,
+.sidebar .box.box_badges/* >.pad*/,
+.avatar >div,
+.collage_images,
+#torrent_table .group/*.discog*/ td span[style="float:right;"] /* bookmark icon */
+/* /image container size correction */ {
     font-size: 0;
     line-height: 0;}
 #friends a[onclick^="edit"],
@@ -6041,7 +6054,7 @@ tr.likes td[id^="likers_"]:hover {
     font-size: 13px;
     line-height: var(--p-lh);
     padding: 0 15px;
-    margin: 0 auto;
+    margin: 4px auto 0 auto; /* 4px - image container size correction */
     display: block;
     width: -moz-fit-content;
     width: fit-content;
