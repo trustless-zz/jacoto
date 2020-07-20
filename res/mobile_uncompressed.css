@@ -2277,7 +2277,7 @@ a[title="Remove"]:before {
     /*#wrapper #quickreplypreview .colhead_dark #barpreview,*/
     #wrapper .forum_post .colhead_dark div[style="float: right;"]/*,
     #wrapper #newthreadpreview .forum_post .colhead_dark #barpreview*/ {
-        top: 13px;}
+        top: 14px;}
     
 	.username_badges {display: none;}
 	/* #forums .box {margin-top: 0px; padding: 0px;} */

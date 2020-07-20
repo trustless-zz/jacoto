@@ -2695,7 +2695,8 @@ table.bbcode_table td,
 
 .sidebar .box.box_badges >.pad {
     text-align: center;
-    padding: 10px 0;}
+    padding: 0;
+    margin: 7px 0;}
 
 #header .clan_trophy img {
     opacity: .7;}
@@ -3933,20 +3934,30 @@ h3 a[href^="user.php?action=notify_delete&"],
 /* image container size correction */
 .screenshots/* a*/,
 /*.similar li >a,*/
+.gold_trade_buttons,
+.more_info #img_box,
 table#uploadsrow/* td*/,
 table#likesrow/* td*/,
 table#snatchesrow/* td*/,
-#artist .sidebar >.box:first-child/* >div:last-child*/,
-.box.box_albumart/* p*/,
-.box_image_coverart/* div[align="center"]*/,
-.box_image_avatar/* div:last-child*/,
+#artist .sidebar >.box:first-child >div:last-child,
+.box.box_albumart p,
+.box_image_coverart div[align="center"],
+.box_image_avatar div:last-child,
+.username_badges,
+h2 a[href^="feeds.php?"],
+h3 a[href^="feeds.php?"],
 .sidebar .box.box_badges/* >.pad*/,
+h2#username span#tip_user,
+.box.box_info span[style="float:right;"], .box.box_likes.box_torrents span.likes_icon.flright,
 .avatar >div,
 .collage_images,
 #torrent_table .group/*.discog*/ td span[style="float:right;"] /* bookmark icon */
 /* /image container size correction */ {
     font-size: 0;
     line-height: 0;}
+span.username_badges { /* correction consequences */
+    display: inline-block;
+    vertical-align: text-bottom;}
 #friends a[onclick^="edit"],
 #better .thin >table a[href^="torrents.php?action=download&id="] {
     display: inline-block;
@@ -4857,9 +4868,9 @@ span.secondary_class {
 .colhead_dark .username_badges {
     margin-left: 2px;}
 
-.username_badges img[alt="Warned"],
-.username_badges img[alt="Donor"] {
-    height: 16px;
+#wrapper .username_badges img[alt="Warned"],
+#wrapper .username_badges img[alt="Donor"] {
+    height: 16px !important; /* conflict with mobile.css */
     width: 18.5px;
     padding-left: 18.5px;}
 #wrapper img[src="https://gazellegames.net/static/common/symbols/disabled.png"], /* disabled (Just fine!) */
@@ -4872,9 +4883,10 @@ h2 .username_badges img {
     margin: 2px;}
 h2 .username_badges {
     position: relative;
-    top: -3px;
     margin-left: 2px;
-    margin-bottom: -3px;
+    /*top: -3px;
+    margin-bottom: -3px;*/
+    vertical-align: bottom;
     display: inline-block;}
 
 .sidebar .userratingdiv tr:not(#reviewrow) {
@@ -6032,10 +6044,11 @@ tr.likes td[id^="likers_"]:hover {
  #newthreadpreview .forum_post .colhead_dark #barpreview {
      height: 18px;
      font-size: 0;
+     line-height: 0;
      min-width: 18px;
      position: absolute;
      right: 5px;
-     top: 6px;
+     top: 7px;
      z-index: 999;}
 #quickreplypreview .colhead_dark span[style="float:left;"],
 .forum_post .colhead_dark div[style="float: left;"],
@@ -6581,7 +6594,7 @@ input[type="radio"]:active {
     box-shadow: none;
     margin: 0;}
 .sidebar .box_badges img {
-    margin: 0 2px;}
+    margin: 3px;}
 
 #clans #wrapper #clan_stats >span[style="float: right;"]:first-child +.box.pad {
     position: relative;
@@ -8220,7 +8233,7 @@ h2#username span#tip_user {
     display: inline-block;
     vertical-align: bottom;
     margin-bottom: -4px;
-    margin-top: -11px;}
+    /*margin-top: -8px;*/}
 h2#username span#tip_user a.tooltip {
     display: block;
     padding: 2px;}
@@ -9931,12 +9944,13 @@ body#user.inventory {}
     margin-top: 50px;
 	height: 100px;
 	width: 100px;
+    margin-left: 10px;
 	float: left;}
 .inventory .item_center.item_image {
 	width: 100px;
 	height: auto;
 	max-height: 150px;
-	margin-left: 10px;
+	/*margin-left: 10px;*/
 	vertical-align: top;
 	display: block;}
 

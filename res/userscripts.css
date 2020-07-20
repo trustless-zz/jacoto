@@ -397,6 +397,8 @@ really the whole thing is a mess as a result */
     border-right: 1px solid var(--c-table-brdr);}
 
 #wrapper a.userscript-gallery-link {
+    font-size: 0;
+    line-height: 0;
     border: 3px solid var(--c-b4);
     background-color: transparent;}
 #wrapper a.userscript-gallery-link:hover {
