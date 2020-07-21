@@ -897,7 +897,7 @@ a#mh_sort_screenshots_button,
 #mh_screenshots_post {
     font-size: 14px;
     line-height: 14px;
-    font-family: OpenSans, Helvetica, Arial, sans-serif !important;
+    font-family: OpenSans, Sans-Serif !important;
     font-weight: 400;
     cursor: pointer;
     outline: 0;

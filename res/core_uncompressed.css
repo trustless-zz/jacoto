@@ -782,7 +782,7 @@ body {
     color: var(--c-txt);
     background-color: var(--c-body);
     background-size: 50px 50px;
-    font-family: OpenSans, Helvetica, Arial, sans-serif;
+    font-family: OpenSans, Sans-Serif;
     margin: 0;
     min-height: 100%;
     /* min-width: 800px; */
@@ -1105,10 +1105,11 @@ strong.mature +strong +br +a[onclick] {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 .tooltipster-default .tooltipster-content {
+    line-height: 15px !important;
 	font-size: 12px !important;}
 .ui-widget,
 .tooltipster-default .tooltipster-content {
-	font-family: OpenSans, Helvetica, Arial, sans-serif !important;}
+	font-family: OpenSans, Sans-Serif !important;}
 
 .head strong,
 li.active,
@@ -2655,7 +2656,7 @@ table#likesrow img:hover,
 
 i.fa.fa-fl-pots {
     color: var(--c-fl) !important;
-	font-family: OpenSans, Helvetica, Arial, sans-serif;}
+	font-family: OpenSans, Sans-Serif;}
 .global_buffs .buff_text {
     display: flex;
     flex-flow: column;
@@ -3702,7 +3703,7 @@ select {
     box-shadow: var(--p-input-shdw);
     color: unset; /*var(--c-low);*/
     font-size: 14px;
-    font-family: OpenSans, Helvetica, Arial, sans-serif;}
+    font-family: OpenSans, Sans-Serif;}
 
 .select2-container .select2-selection--single,
 select {
@@ -3880,7 +3881,7 @@ table#otherop.hidden ~table.otheroptoggle a,
 .filelist_title a.brackets {
     font-size: 14px;
     line-height: 14px;
-    font-family: OpenSans, Helvetica, Arial, sans-serif !important;
+    font-family: OpenSans, Sans-Serif !important;
     font-weight: 400;
     cursor: pointer;
     outline: 0;
@@ -5047,7 +5048,7 @@ textarea {
     resize: vertical;
     width: 100%;
     color: var(--c-txt);
-    font-family: OpenSans, Helvetica, Arial, sans-serif !important; /* widget override */
+    font-family: OpenSans, Sans-Serif !important; /* widget override */
     padding: 3px 6px;
     outline-offset: 0;
     margin-bottom: 8px !important;
@@ -7347,7 +7348,7 @@ input[type="radio"]:active {
     padding: 0px;
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
-	font-family: OpenSans, Helvetica, Arial, sans-serif;}
+	font-family: OpenSans, Sans-Serif;}
 .ui-dialog .ui-dialog-titlebar {
     padding: 9px 10px;}
 .ui-widget-header {
@@ -7617,7 +7618,7 @@ input[class="date_picker"] {
     box-shadow: var(--p-main-shdw);
     border: 1px solid var(--c-main-brdr);
     color: var(--c-txt);
-	font-family: OpenSans, Helvetica, Arial, sans-serif;}
+	font-family: OpenSans, Sans-Serif;}
 .fancybox-error,
 .xdsoft_datetimepicker .xdsoft_label {
     background-color: var(--c-box);}
@@ -11638,7 +11639,7 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
     font-weight: 600 !important;
-	font-family: OpenSans, Helvetica, Arial, sans-serif;
+	font-family: OpenSans, Sans-Serif;
     z-index: 8;}
 .trading input.item_count:hover {
     background-color: var(--c-input-focus) !important;}
