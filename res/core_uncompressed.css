@@ -3935,6 +3935,7 @@ h3 a[href^="user.php?action=notify_delete&"],
 /* image container size correction */
 .screenshots/* a*/,
 /*.similar li >a,*/
+.similar li,
 .sidebar #weblinksdiv .body.center,
 .gold_trade_buttons,
 .more_info #img_box,
@@ -4540,7 +4541,7 @@ strong.mature +strong +br,
     padding: 0 0 0 5px;}
 .similar ul {
     min-height: 5px;
-    padding: 5px 0 0 0;
+    padding: 10px 0 0 0;
     max-height: 350px;
     list-style: none;
     margin: 0px;
@@ -4548,7 +4549,7 @@ strong.mature +strong +br,
     display: flex;
     flex-flow: wrap;}
 .similar li {
-    padding: 5px 0;
+    padding: 0;
     width: calc(20% - 10px);
     margin: 0 5px 10px 5px;
     align-self: center;}
@@ -4575,7 +4576,7 @@ strong.mature +strong +br,
 .similar li span.similar_votes {
     display: flex;
     flex-flow: row;
-    margin-top: 5px;
+    margin-top: 8px;
     justify-content: center;}
 .similar_div .head .flright {
     width: calc(100% - 180px);
