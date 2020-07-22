@@ -3933,6 +3933,7 @@ h3 a[href^="user.php?action=notify_delete&"],
 .box.box_coltags .head span[title="Add Tags"] a,
 .month-picker-year-table .month-picker-title,
 /* image container size correction */
+#staffpm #inbox >form#messageform >table td[width="10"],
 .screenshots/* a*/,
 /*.similar li >a,*/
 .similar li,
@@ -9147,6 +9148,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     height: 85px;}
 .item img.equipment_level ~h3:before {
     position: absolute;
+    text-align: center;
     left: -2px;
     top: -4px;
     line-height: 18px;
@@ -9188,7 +9190,13 @@ table#downloaded_table td.center.cats_col +td >span:before {
     color: var(--c-r09);}
 .item img.equipment_level[src$="level10.png"] ~h3:before {
     content: '10';
+    width: 22px;
     color: var(--c-r10);}
+.item img.equipment_level[src$="level10plus.png"] ~h3:before {
+    content: '10+';
+    width: 31px;
+    color: var(--c-r10);
+    text-shadow: 0 0 1px var(--c-r99);}
 /* /ONLY needed to make item levels visible again */
 
 
