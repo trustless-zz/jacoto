@@ -258,18 +258,26 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     border-top: 1px solid var(--c-table-brdr);
     background-color: var(--c-tgroup);}
 
+#quick-crafter button#AC ~br +button,
 #quick-crafter button {
     margin-top: 5px !important;}
+#quick-crafter button#AC +br {
+    margin-bottom: 3px;}
 #quick-crafter >button {
     background: linear-gradient(to bottom,var(--c-tgroup) 0,var(--c-body) 100%);
     color: var(--c-txt) !important;}
+#quick-crafter .qcbutton_book[style$="background-color: green;"],
 #quick-crafter >button:hover {
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);
     color: var(--c-low) !important;}
-#quick-crafter >button:active {
+#wrapper #quick-crafter >button:active {
     background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
+#quick-crafter button#Hide_All,
 #quick-crafter br +button {
     margin-top: 8px !important;}
+#quick-crafter select#craft_number_select,
+#quick-crafter button#Hide_All {
+    margin-left: 5px;}
 #quick-crafter br +br {
     display: none;}
 #quick-crafter >br+br+span {
@@ -1169,3 +1177,63 @@ https://greasyfork.org/en/scripts/396796-ggn-inventory-batch-deleting
 /**
 /GGn inventory batch deleting
 **/
+
+
+/***
+Easy Equipment Remove/Replace
+https://greasyfork.org/en/scripts/407574-easy-equipment-remove-replace
+https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=1657792#post1657792
+***/
+#equip_gestion {
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--c-box) !important;
+    -webkit-box-shadow: var(--p-main-shdw) !important;
+    box-shadow: var(--p-main-shdw) !important;
+    border: 1px solid var(--c-main-brdr) !important;
+    margin: 0 0 15px 0 !important;
+    padding: 10px !important;
+    position: relative;}
+#equip_gestion:before {
+    content: 'Easy Equipment';
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: -10px -10px 10px -10px;
+    padding: 9px 10px;
+    font-size: var(--p-head);
+    height: var(--p-head);
+    line-height: var(--p-head);
+    background: var(--p-head-grdnt);
+    font-weight: 600;}
+#equip_gestion div[id^="config_box"] {
+    width: calc(100% / 7 - 10px) !important;
+    margin: 5px !important;
+    min-width: 170px;
+    border-radius: 0 !important;
+    padding: 10px !important;
+    box-sizing: border-box;
+    background-color: var(--c-edition) !important;
+    border: 3px solid var(--c-main-brdr) !important;
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    font-size: 0;
+    line-height: 0;
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;}
+#equip_gestion div[id^="config_box"]:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;}
+#equip_gestion .flex-container {
+    flex-flow: row wrap;
+    margin: -5px;}
+#equip_gestion div[id^="config_box"] button {
+    margin: 0 !important;
+    width: 100% !important;}
+#equip_gestion div[id^="config_box"] input[type="text"] {
+    margin: 10px 0;
+    width: 100%;}
+/***
+/Easy Equipment Remove/Replace
+***/
