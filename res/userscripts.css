@@ -489,6 +489,7 @@ really the whole thing is a mess as a result */
 #wrapper .userscript-gallery-details:hover {
     max-height: 1000%;}
 #wrapper .userscript-gallery-details a {
+    word-break: break-word;
     margin: 1px 0;
     padding: 2px;
     font-size: 12px;

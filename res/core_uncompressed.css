@@ -8268,7 +8268,8 @@ h2 .user_title span.size10 {
     line-height: 19px;} */
 #wrapper .forum_post .user_title img {
     /*vertical-align: text-bottom;*/
-    margin: -2px 0; /* an oversized image, while being limited to 19px, will make the parent grow by 1.75px for some reason */
+    /*margin: -2px 0;*/ /* an oversized image, while being limited to 19px, will make the parent grow by 1.75px for some reason */
+    margin: -2px 0 -1px 0; /* align test */
     max-height: 19px;}
 #wrapper .user_title img {
     display: inline-block;
@@ -10201,9 +10202,23 @@ body#user.inventory {}
     overflow: hidden;}
 
 .gallery_main_slot {
+    display: flex;
     text-align: center;
     width: 100%;
-    max-height: 1000px;}
+    height: 610px;}
+#wrapper .gallery_main_slot img {
+    /*width: auto;
+    height: auto;
+    max-height: 610px;
+    max-width: 100% !important;*/
+
+
+    margin: auto;
+    height: auto;
+    width: inherit;
+    max-height: 610px;
+    max-width: 100% !important;
+    object-fit: contain;}
 
 .gallery_row {
     /*padding: 0;
@@ -10249,6 +10264,7 @@ body#user.inventory {}
 	border: 1px solid red;
 	margin: 0;}*/
 .gallery_small_slot a {
+    outline: 0 solid var(--c-sticky-id-brdr);
 	display: inline-block;
 	max-height: 80px;
 	margin: 4px;
@@ -10262,7 +10278,10 @@ body#user.inventory {}
 	margin: 2px;}
 
 .gallery_row .selected a {
+    outline-width: 1px;
 	border-color: var(--c-sticky-id-brdr);}
+#wrapper .gallery_row a:hover {
+    outline-color: var(--c-b3);}
 
 .forum_post .gallery_row {
     display: flex;
