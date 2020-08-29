@@ -2642,6 +2642,7 @@ table#uploadsrow img:hover,
 table#snatchesrow img:hover,
 table#likesrow img:hover,
 #recommended #vanityhouse img:hover,
+/*.collections_art_display td:hover .hovereffect,*/
 .hovereffect:hover,
 /* #bookmarks #collage_table img:hover, - outdated bookmarks */
 /*#collections #coverart.box li a:hover,
@@ -5106,7 +5107,8 @@ a[href^="javascript:Vote("] strong:hover,
 .gallery_row a:hover,
 .sidebar img:hover,
 .userratingdiv img,
-.hovereffect:hover,
+/*.hovereffect:hover,*/
+.collections_art_display td:hover .hovereffect,
 #wrapper .calendar .calendar-day:hover,
 .filelist_title a.brackets:hover,
 .review_cell .flextable-cell:first-child img:not(.avatar):hover{
@@ -8358,6 +8360,7 @@ span.size5 img {
     opacity: 0;
     filter: alpha(opacity=0);
     margin: 0;}
+.collections_art_display td:hover .hovereffect h2,
 .hovereffect:hover h2 {
     opacity: 1;
     visibility:visible}
@@ -10474,11 +10477,11 @@ body#user.inventory {}
 	padding:1px 3px 1px 15px;
 	font-size:1em;
 	height: 45px;}
-h2 span.secondary_class,
+/*h2 span.secondary_class,*/
 #tm_time input[type="text"] {
 	vertical-align: middle;}
 h2 span.secondary_class {
-    margin-bottom: -3px;
+    /*margin-bottom: -3px;*/
     display: inline-block;}
 #tms_form {
 	margin-top:-15px;}
