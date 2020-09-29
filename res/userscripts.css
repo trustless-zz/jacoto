@@ -1238,3 +1238,31 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=165779
 /***
 /Easy Equipment Remove/Replace
 ***/
+
+
+/***
+Add Upload Link to Torrents Search Results
+https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=1706643#post1706643
+***/
+.torrent_table .group a[href^="upload.php?"] {
+    vertical-align: text-top;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    margin: 1px 0 0 5px;
+    width: 18px;
+    height: 18px;
+    -webkit-mask-image: url(icons/upload.svg);
+    mask-image: url(icons/upload.svg);
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: var(--c-anchor);}
+.torrent_table .group a[href^="upload.php?"]:hover {
+    background-color: var(--c-anchor-hvr);}
+/***
+/Add Upload Link to Torrents Search Results
+***/

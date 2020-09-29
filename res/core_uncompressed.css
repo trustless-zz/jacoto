@@ -9469,6 +9469,9 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #shop li.item_li.featured #clickable {
     background-color: unset;
     outline: unset;}
+#slides >.head +ul.nobullet {
+    border: unset;
+    background-color: unset;}
 
 #shop li.item_li #clickable:before {
     content: '';
