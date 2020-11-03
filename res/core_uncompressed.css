@@ -3879,6 +3879,7 @@ a#toggle_css_gallery,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
 .torrent_table tr.pad td >.linkbox a:not([href*="?action="]),
+.torrent_table tr.pad td >.linkbox a[href*="action=torrentrevert"],
 .filelist_title a.brackets {
     font-size: 14px;
     line-height: 14px;
@@ -3958,6 +3959,7 @@ h2#username span#tip_user,
 .box.box_likes.box_torrents span.likes_icon.flright,
 .avatar >div,
 .collage_images,
+.torrent_table tr.pad td >.linkbox a[href*="action=torrentrevert"],
 #torrent_table .group/*.discog*/ td span[style="float:right;"] /* bookmark icon */
 /* /image container size correction */ {
     font-size: 0;
@@ -4026,6 +4028,7 @@ a[href^="javascript:Vote("] strong:hover,
 #newthreadform #newthreadtext #answer_block a:hover,
 .box.box_coltags .pad li a:nth-child(n+2):hover,
 .box.box_coltags .head span[title="Add Tags"] a:hover,
+.torrent_table tr.pad td >.linkbox a[href*="action=torrentrevert"]:hover,
 .filelist_title a.brackets:hover {
     color: var(--c-low);
     background: var(--p-btn-hvr);}
@@ -4045,6 +4048,7 @@ a[href^="javascript:Vote("] strong:active,
 #newthreadform #newthreadtext #answer_block a:active,
 .box.box_coltags .pad li a:nth-child(n+2):active,
 .box.box_coltags .head span[title="Add Tags"] a:active,
+.torrent_table tr.pad td >.linkbox a[href*="action=torrentrevert"]:active,
 .filelist_title a.brackets:active {
     background: var(--p-btn-act);}
 
@@ -4106,7 +4110,11 @@ button.alertable-cancel,
     content: 'View Report Information';}
 /*.torrent_table tr.pad td >.linkbox a[onclick^="show_downloads"]:before {
     content: 'View Downloadlist';}*/
+.torrent_table tr.pad td >.linkbox a[href*="action=torrentrevert"]:before {
+    content: 'Revert to this revision';}
 
+.torrent_table tr.pad td >.linkbox a {
+    margin-bottom: 5px;}
 
 #user #userform #platcheckbox +a:before {
     content: 'Hide';}
@@ -5286,7 +5294,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
 	border: 1px solid var(--c-table-brdr);
-    margin: 5px 10px 15px 10px;
+    margin: 0 10px 15px 10px;
     width: calc(100% - 20px);}
 
 #wrapper #usersreviewimage img,
