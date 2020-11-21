@@ -8042,7 +8042,8 @@ table#likesrow td {
     padding: 0;
     margin: 5px;
     display: block;
-    width: 100%;
+    /*width: 100%;*/
+    width: calc(100% / 5 - 10px);
     height: auto;
     text-align: center;
     align-self: center;}
