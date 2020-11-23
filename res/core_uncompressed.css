@@ -1704,7 +1704,7 @@ a,
 #dailygazelle img,
 #slides img,
 #slides >.nobullet a:before,
-#more_news >a:before,
+/*#more_news >a:before,*/
 
 #header #alerts,
 #header #alerts:before,
@@ -1916,6 +1916,7 @@ th[aria-disabled="false"],
 .torrent_table tr.pad td >.linkbox a,
 table#otherop.hidden ~table.otheroptoggle a,
 a#toggle_css_gallery,
+a#getmorenews,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 a.toggle_tags,
 #user #userform #platcheckbox +a,
@@ -2156,6 +2157,7 @@ input[type="radio"]:active,
 .torrent_table tr.pad td >.linkbox a:active,
 table#otherop.hidden ~table.otheroptoggle a:active,
 a#toggle_css_gallery:active,
+a#getmorenews:active,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
 a.toggle_tags:active,
 a#tag_show\/hide:active,
@@ -3876,6 +3878,7 @@ a#tag_show\/hide,
 #adventure_search .flright a[onclick],
 a.toggle_tags,
 a#toggle_css_gallery,
+a#getmorenews,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
 .torrent_table tr.pad td >.linkbox a:not([href*="?action="]),
@@ -4071,6 +4074,7 @@ a#tag_show\/hide,
 .filter_torrents.advanced .flright,
 #wrapper #image_block >a[onclick],
 a#toggle_css_gallery,
+a#getmorenews,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
 .torrent_table tr.pad td >.linkbox a:not([href*="?action="]) {
@@ -4122,6 +4126,8 @@ button.alertable-cancel,
 a#tag_show\/hide:before,
 #user #userform #platcheckbox[style="display: none;"] +a:before {
     content: 'View';}
+a#getmorenews:before {
+    content: 'Get More News';}
 a#toggle_css_gallery:before {
     content: 'Show gallery';}
 table#otherop.hidden ~table.otheroptoggle a:before {
@@ -4143,6 +4149,7 @@ table#otherop.hidden:not([style="display: table;"]) ~table.otheroptoggle a:befor
 #wrapper #content .torrent_table tr.pad td >.linkbox a:before,
 table#otherop.hidden ~table.otheroptoggle a:before,
 a#toggle_css_gallery:before,
+a#getmorenews:before,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:before,
 #taglist:not(.hidden) ~table a.toggle_tags:before,
 #taglist.hidden ~table a.toggle_tags:before,
@@ -4169,6 +4176,7 @@ button.alertable-cancel:hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
 a.toggle_tags:hover,
 a#toggle_css_gallery:hover,
+a#getmorenews:hover,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
 a#tag_show\/hide:hover,
 #user #userform #platcheckbox +a:hover,
@@ -4191,6 +4199,7 @@ button.alertable-cancel:active,
 .torrent_table tr.pad td >.linkbox a:not([href*="?action="]):active,
 table#otherop.hidden ~table.otheroptoggle a:active,
 a#toggle_css_gallery:active,
+a#getmorenews:active,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
 a.toggle_tags:active,
 a#tag_show\/hide:active,
@@ -5089,6 +5098,7 @@ input[type=submit]:hover,
 .forum_latest .search #cat_list a[onclick]:hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
 a#toggle_css_gallery:hover,
+a#getmorenews:hover,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
@@ -7158,7 +7168,7 @@ input[type="radio"]:active {
 .linkbox a[href^="comments.php?action=collages&id"],
 .linkbox a[href^="comments.php?action=requests&id"],
 .linkbox a[href^="comments.php?action=torrents&id"],
-#more_news >a,
+/*#more_news >a,*/
 .linkbox a[href^="upload.php?linkgroup="],
 .linkbox a[href^="torrents.php?action=redownload&type=hitnruns"],
 .linkbox a[href^="user.php?action=notify_handle&label"],
@@ -7232,8 +7242,8 @@ input[type="radio"]:active {
 .torrent_table tr.pad div >.linkbox,
 .linkbox >strong,
 .linkbox a,
-#wrapper #content .linkbox a:before,
-#more_news >a:before {
+#wrapper #content .linkbox a:before/*,
+#more_news >a:before*/ {
     font-size: 14px;
     line-height: var(--p-lh);}
 
@@ -7253,7 +7263,7 @@ input[type="radio"]:active {
 .linkbox a[href^="comments.php?action=collages&id"][href$="&type=contributed"]:before   {content: 'Display comments left on collections user has contributed to';}
 .linkbox a[href^="comments.php?action=requests&id"][href$="&type=created"]:before       {content: 'Display comments left on requests created by user';}
 .linkbox a[href^="comments.php?action=requests&id"][href$="&type=voted"]:before         {content: "Display comments left on requests user voted on";}
-#more_news >a:before                                                            {content: 'Get More News';}
+/*#more_news >a:before                                                            {content: 'Get More News';}*/
 .linkbox a[href^="torrents.php?action=redownload&type=hitnruns"]:before         {content: 'Download All HnRs';}
 .linkbox a[href^="user.php?action=notify_handle&label"]:before                  {content: 'Add to notifications';}
 .linkbox a[href^="artist.php?action=edit&artistid"]:before                      {content: 'Edit';}
@@ -7325,7 +7335,7 @@ input[type="radio"]:active {
 .linkbox a[href="inbox.php"]:before                                             {content: 'Inbox';}
 .linkbox a[href="wiki.php?action=create"]:before                                {content: 'Create';}
 
-#more_news >a:hover:before,
+/*#more_news >a:hover:before,*/
 #slides >.nobullet a:hover:before,
 .linkbox a:hover:before {
     background-color: var(--c-anchor-hvr-bcg);}
