@@ -1939,7 +1939,7 @@ a#tag_show\/hide,
 .select2-results__option,
 
 .day-label,
-.event_li.tooltip,
+.event_li[class*="tooltip"], /* adapting for ".event_li.tooltip" AND ".event_li.tooltip_interactive" */
 
 .users_review +[data-readmore-toggle]:before,
 
@@ -8053,7 +8053,7 @@ table#likesrow td {
     margin: 5px;
     display: block;
     /*width: 100%;*/
-    width: calc(100% / 5 - 10px);
+    width: calc(20% - 10px);
     height: auto;
     text-align: center;
     align-self: center;}
@@ -12494,11 +12494,11 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     padding: 0;
     justify-content: center;
     position: relative;}
-#upcoming_calendar .event_li.tooltip:nth-child(odd) {
+#upcoming_calendar .event_li[class*="tooltip"]:nth-child(odd) {
     background-color: var(--c-input-obj);}
-#upcoming_calendar .event_li.tooltip:nth-child(even) {
+#upcoming_calendar .event_li[class*="tooltip"]:nth-child(even) {
     background-color: var(--c-tgroup);}
-/*#upcoming_calendar .event_li.tooltip:nth-child(n+1) {
+/*#upcoming_calendar .event_li[class*="tooltip"]:nth-child(n+1) {
     border-top: 1px solid var(--c-trowb);}*/
 #upcoming_calendar .calendar-day {
     margin-bottom: 10px;}
@@ -12548,7 +12548,7 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     margin-bottom: 0;}
 .calendar-day span[style="color: white;"] {
     color: var(--c-txt) !important;}
-#wrapper .calendar-day .event_li.tooltip:hover {
+#wrapper .calendar-day .event_li[class*="tooltip"]:hover {
     background-color: var(--c-row-hvr);}
 .tooltipster-content h2 {
     width: calc(100% - 10px);
@@ -12646,12 +12646,12 @@ table.event_form_table td.label.small_label[colspan="4"] {
 .calendar .day-events >.tooltip span {
     position: relative;}
 
-.calendar .event_li.tooltip {
+.calendar .event_li[class*="tooltip"] {
     display: flex;
     flex-flow: column;
     text-align: center;}
 
-#upcoming_calendar .event_li.tooltip {
+#upcoming_calendar .event_li[class*="tooltip"] {
     padding: 6px 5px;}
 
 #upcoming_calendar .day-events {
@@ -12695,7 +12695,7 @@ table.event_form_table td.label.small_label[colspan="4"] {
     /*background-color: var(--c-tor-row-hvr);*/}
 /*#upcoming_calendar .calendar-day:hover .day-label {
     background-color: var(--c-edition);}*/
-/*#upcoming_calendar .event_li.tooltip:not(:only-child):hover {
+/*#upcoming_calendar .event_li[class*="tooltip"]:not(:only-child):hover {
     background-color: var(--c-tgroup);}*/
 #upcoming_calendar .calendar-day.today .day-label {
     background: var(--p-subcolhead);}
