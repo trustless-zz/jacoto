@@ -1010,6 +1010,14 @@ td, th, tr {
     width: 20px;
     height: 20px;
     padding-left: 20px;}
+.box.box_info .head.tooltip span[style="float:right;"] a.donor_ico img {
+    background-image: unset;
+    width: auto;
+    height: auto;
+    padding-left: unset;}
+.box.box_info .head.tooltip span[style="float:right;"] a.donor_ico {
+    margin: 2px 0;
+    display: flex;}
 
 td.label {
     vertical-align: top;
@@ -4893,7 +4901,7 @@ li:not(.suggested_similar) .similar_votes >span {
     vertical-align: text-bottom;}
 span.secondary_class {
     line-height: 18px;}
-#users_reviews .head .username_badges,
+/*#users_reviews */.head .username_badges,
 .colhead_dark .username_badges {
     margin-left: 2px;}
 
@@ -5519,6 +5527,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     margin-bottom: -4px;}
 
 /** table padding with no container (this is horrible) **/
+/** there is perhaps a better way with an extra margin applied to the table and an :after pseudo-elemet attached to the tbody to generate a new background (can't attach it to the table itself because of pseudo headers). but I just don't want to touch this mess anymore, and this idea probably won't even work with colheads **/
 #gazelleview table.gazelleinfo tr td:first-child,
 #todo .thin >form tr:not(.colhead) td:first-child,
 #forums .forums_search .search_form >table.layout.border >tbody >tr >td:first-child,
