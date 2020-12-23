@@ -109,6 +109,7 @@ td.read_locked_sticky:before,
 #wrapper .next,
 #wrapper .timeline-nav-button:before,
 .month-picker-header .ui-icon,
+tr.participated >td:nth-child(2):before,
 #nav_userinfo a:before {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -163,7 +164,7 @@ img[title="Seeders"],
 td img[alt="Ratio"],
 #top10 img[alt="Up Votes"],
 #top10 img[alt="Down Votes"],
-tr.participated >td:nth-child(2):before,
+/*tr.participated >td:nth-child(2):before,*/
 .headerSort span:before {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -701,16 +702,19 @@ tr.unreadpm td:first-child {
     float: left;
     margin-right: 5px;
     -webkit-mask-image: url('icons/participated.svg');
-    -webkit-mask-size: auto 16px;
+    -webkit-mask-size: auto 15px;
     mask-image: url('icons/participated.svg');
-    mask-size: auto 16px;}
+    mask-size: auto 15px;
+    opacity: .85;}
 
 #wrapper tr.participated >td.unread                 +td:before,
 #wrapper tr.participated >td.unread_sticky          +td:before,
 #wrapper tr.participated >td.unread_locked          +td:before,
 #wrapper tr.participated >td.unread_locked_sticky   +td:before {
+    background-color: var(--c-txt);
+    opacity: 1;/*
     -webkit-mask-image: url('icons/participated_unread.svg');
-    mask-image: url('icons/participated_unread.svg');}
+    mask-image: url('icons/participated_unread.svg');*/}
 
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright {
@@ -7438,7 +7442,7 @@ input[type="radio"]:active {
 #bookmarks td#sorting_head:after {
     z-index: 2;
     font-weight: 600 !important;
-    content: 'Sorting Note';
+    content: 'Sorting';
     position: absolute;
     left: 0;
     top: 0;
