@@ -9460,11 +9460,12 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	display: block;}
 
 #shop #clickable {
+    cursor: pointer;
 	height: 225px;
-	padding: 10px 0;}
+	padding: 10px 0;/*}
 
 #shop .featured #clickable,
-#shop #clickable {
+#shop #clickable {*/
 	width: calc(100% - 34px);
 	margin: 50px auto 0;}
 
@@ -9531,7 +9532,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #shop .submit_section input, #shop .submit_section button  {
 	margin: 2px;}
 
-#shop #clickable .item_description {
+#shop .item_li:not(.featured) .item_description {
 	visibility: hidden;
 	opacity: 0;
 	position: relative;
@@ -9611,7 +9612,7 @@ h3 a[href^="user.php?action=notify_delete&"] {
 #avatarpreview_dialog .avatar div {
 	width: 150px;
 	height: 150px;
-	background-repeat: 'no-repeat';}
+	background-repeat: no-repeat;}
 
 /*** New, Featured Items ***/
 #shop .new_purchase_icon {
@@ -9685,8 +9686,8 @@ h3 a[href^="user.php?action=notify_delete&"] {
 .inventory #wrapper #content .item_li.featured {
     border-color: var(--c-input-brdr);}
 
-#shop .featured .item_description,
-#shop .featured #clickable:hover .item_description {
+#shop #wrapper .featured .item_description/*,
+#shop .featured #clickable:hover .item_description*/ {
 	opacity: 1;
 	visibility: visible;
 	margin-left: 210px;
@@ -9727,23 +9728,24 @@ h3 a[href^="user.php?action=notify_delete&"] {
 	height: auto; }
 
 /* hiding image in :hover description (Rick's Portal Gun - example) */
-li.item_li #clickable .item_description img {
+li.item_li /*#clickable */.item_description img {
     display: none !important;}
 
 /***Out of Stock Items ()**/
-#shop li.item_li.nostock #clickable .item_description {
+#shop #wrapper li.item_li.nostock /*#clickable */.item_description {
     visibility: visible;
     opacity: 1;
-    font-size: 0;
-    line-height: 0;
     padding: 0;
     /* background-color: var(--c-box); */
     background-color: transparent;
+    bottom: calc(50% - 17px); /* 28px */}
+#shop #wrapper li.item_li.nostock:not(.featured) /*#clickable */.item_description {
+    font-size: 0;
+    line-height: 0;
     color: transparent;
     height: 34px;
-    bottom: calc(50% - 17px); /* 28px */
     top: unset;}
-#shop li.item_li.nostock #clickable .item_description:before {
+#shop li.item_li.nostock /*#clickable */.item_description:before {
     opacity: .7;
     content: 'OUT OF STOCK';
     font-size: 18px;
@@ -9756,17 +9758,20 @@ li.item_li #clickable .item_description img {
     top: 0;
     left: 0;
     width: 100%;
-    text-align: center;}
-#shop li.item_li.nostock:hover #clickable .item_description:before {
-    opacity: 1;}
+    text-align: center;
+    pointer-events: none;}
+#shop li.item_li.featured.nostock /*#clickable */.item_description:before {
+    top: 134px;
+    left: 17px;
+    width: 184px;}
 #shop li.item_li.nostock input[value="Buy & Use"],
 #shop li.item_li.nostock input[value="Buy & Store"] {
     opacity: .5;
     pointer-events: none;}
 
-#shop li.item_li.no_access #clickable .item_description {
+#shop li.item_li.no_access .item_description {
     overflow: visible;}
-#shop li.item_li.no_access #clickable .item_description:after {
+#shop li.item_li.no_access .item_description:after {
     opacity: 0;
     content: 'requirements not met';
     font-size: 16px;
@@ -9794,15 +9799,23 @@ li.item_li #clickable .item_description img {
     left: 0;
     width: 100%;
     text-align: center;}
-#shop li.item_li.no_access.featured:hover .item_description:after,
-#shop li.item_li.no_access #clickable:hover .item_description:after {
+#shop li.item_li.no_access:hover .item_description:after,
+#shop li.item_li.nostock:hover .item_description:before {
     opacity: 1;}
+
+#shop li.item_li.no_access #clickable:hover .item_description:after {
+    /*opacity: 1;*/}
 
 #shop li.item_li.nostock .submit_section {
 	margin-top: -78px;}
 
-#shop li.item_li.featured.nostock #clickable .item_description {
-	visibility: visible;
+#shop #wrapper li.item_li.featured.nostock /*#clickable */.item_description {
+    /*line-height: var(--p-lh);
+    font-size: 14px;
+    color: var(--c-txt);
+    height: 220px;
+    top: 0;*/
+	/*visibility: visible;
 	opacity: 1;
 	position: relative;
 	top: -102px;
@@ -9815,7 +9828,7 @@ li.item_li #clickable .item_description img {
 	margin: 0 auto;
 	overflow: hidden;
 	left: 100px;
-	width: 166px;}
+	width: 166px;*/}
 
 #shop li.item_li.featured.nostock .submit_section {
 	margin-top: -58px;}
@@ -9823,9 +9836,9 @@ li.item_li #clickable .item_description img {
 .nostock img {
 	opacity: 0.5;}
 
-#shop .nostock #clickable .item_description a,
-#shop .nostock #clickable .item_description span,
-#shop .nostock #clickable .item_description .spoilerbox {
+#shop .nostock /*#clickable */.item_description a,
+#shop .nostock /*#clickable */.item_description span,
+#shop .nostock /*#clickable */.item_description .spoilerbox {
     visibility: hidden !important;}
 
 /*** More Info Popup ***/
