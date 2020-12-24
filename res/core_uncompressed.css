@@ -9470,35 +9470,41 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	margin: 50px auto 0;}
 
 /*#shop li.item_type_0.featured #clickable:before,*/
+#crafting_recipes li.item_type_0,
 #shop li.item_type_0 #clickable:before {
     background-color: var(--c-type-0);
     outline: 3px solid var(--c-type-0);
-    outline-offset: -3px;}
+    /*outline-offset: -3px;*/}
 /*#shop li.item_type_1.featured #clickable:before,*/
+#crafting_recipes li.item_type_1,
 #shop li.item_type_1 #clickable:before {
     background-color: var(--c-type-1);
     outline: 3px solid var(--c-type-1);
-    outline-offset: -3px;}
+    /*outline-offset: -3px;*/}
 /*#shop li.item_type_2.featured #clickable:before,*/
+#crafting_recipes li.item_type_2,
 #shop li.item_type_2 #clickable:before {
     background-color: var(--c-type-2);
     outline: 3px solid var(--c-type-2);
-    outline-offset: -3px;}
+    /*outline-offset: -3px;*/}
 /*#shop li.item_type_3.featured #clickable:before,*/
+#crafting_recipes li.item_type_3,
 #shop li.item_type_3 #clickable:before {
     background-color: var(--c-type-3);
     outline: 3px solid var(--c-type-3);
-    outline-offset: -3px;}
+    /*outline-offset: -3px;*/}
 /*#shop li.item_type_4.featured #clickable:before,*/
+#crafting_recipes li.item_type_4,
 #shop li.item_type_4 #clickable:before {
     background-color: var(--c-type-4);
     outline: 3px solid var(--c-type-4);
-    outline-offset: -3px;}
+    /*outline-offset: -3px;*/}
 /*#shop li.item_type_5.featured #clickable:before,*/
+#crafting_recipes li.item_type_5,
 #shop li.item_type_5 #clickable:before {
     background-color: var(--c-type-5);
     outline: 3px solid var(--c-type-5);
-    outline-offset: -3px;}
+    /*outline-offset: -3px;*/}
 
 #shop li.item_li.featured #clickable {
     background-color: unset;
@@ -9508,6 +9514,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     background-color: unset;}
 
 #shop li.item_li #clickable:before {
+    outline-offset: -3px;
     content: '';
     width: calc(100% - 34px);
     position: absolute;
@@ -11785,8 +11792,8 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     width: calc(100% / 6 - 10px);
     margin: 0 10px 10px 0;
 	cursor: pointer;
-    background-color: var(--c-type-2);
-    outline: 3px solid var(--c-type-2);
+    /*background-color: var(--c-type-2);
+    outline: 3px solid var(--c-type-2);*/
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     outline-offset: -3px;}
