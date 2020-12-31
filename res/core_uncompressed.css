@@ -4907,7 +4907,7 @@ span.secondary_class {
     line-height: 18px;}
 /*#users_reviews */.head .username_badges,
 .colhead_dark .username_badges {
-    margin-left: 2px;}
+    margin-left: 3px;}
 
 #wrapper .username_badges img[alt="Warned"],
 #wrapper .username_badges img[alt="Donor"] {
@@ -4925,7 +4925,7 @@ h2 .username_badges >img {
     margin: 2px;}
 h2 .username_badges {
     position: relative;
-    margin-left: 2px;
+    margin-left: 3px;
     top: -3px;
     /*margin-bottom: -3px;*/
     vertical-align: text-bottom;
@@ -8522,6 +8522,7 @@ span.size5 img {
     line-height: 0;
     font-size: 0;
     text-align: center;}
+.username_badges >a >span, /* happy birthday badge (emoji)*/
 #better table[style="width: 600px;"] td a,
 #tools #content >table[style="width: 600px;"] td a,
 #collections .sidebar .box_addtorrent .subhead a {
