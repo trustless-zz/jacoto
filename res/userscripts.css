@@ -9,7 +9,7 @@ https://github.com/hateradio/wbb
 .wbbemot img[alt=":loveflac:"] {
     display: none;}
 
-.wbbcode.wbbimg .wbbbuttons .whutbbutton span,
+.wbbcode.wbbimg .whutbbutton span,
 .wbbcode.wbbimgless .whutbbutton {
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
@@ -44,6 +44,8 @@ https://github.com/hateradio/wbb
     margin: .2em auto;}
 
 .wbbcode.wbbimgless .whutbbutton {
+    min-width: 22px;
+    width: auto;
     text-shadow: 1px 1px 1px var(--c-body);
     border-radius: unset;
     -webkit-box-shadow: var(--p-header-shdw);
@@ -55,16 +57,16 @@ https://github.com/hateradio/wbb
     padding: 2px;
     color: var(--c-txt);
     margin: 3px;
-    background: var(--p-btn);}
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);}
 .wbbcode.wbbimgless .whutbbutton:hover {
     -webkit-box-shadow: none;
     box-shadow: none;
     color: var(--c-low);
-    background: var(--p-btn-hvr);}
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
 .wbbcode.wbbimgless .whutbbutton:active {
-    background: var(--p-btn-act);}
+    background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
 
-.wbbcode.wbbimg .wbbbuttons .whutbbutton {
+.wbbcode.wbbimg .whutbbutton {
     text-shadow: unset;
     width: auto;
     height: auto;
@@ -78,7 +80,7 @@ https://github.com/hateradio/wbb
     border: unset;
     border-radius: unset;
     box-shadow: unset;}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton.wbbpressed {
+.wbbcode.wbbimg .whutbbutton.wbbpressed {
     background-color: var(--c-box);}
 
 .wbbcode .wbbshortcut {
@@ -98,7 +100,7 @@ https://github.com/hateradio/wbb
 .wbbcode .wbbcon {
     color: var(--c-red);}
 
-.wbbcode.wbbimg .wbbbuttons .whutbbutton span {
+.wbbcode.wbbimg .whutbbutton span {
     opacity: .8;
     display: inline-block;
     margin: 0;
@@ -112,107 +114,107 @@ https://github.com/hateradio/wbb
     mask-size: contain;
     background-image: unset;
     background-color: var(--c-txt);}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton.wbbpressed span,
-.wbbcode.wbbimg .wbbbuttons .whutbbutton:hover span {
+.wbbcode.wbbimg .whutbbutton.wbbpressed span,
+.wbbcode.wbbimg .whutbbutton:hover span {
     opacity: 1;
     background-color: var(--c-low);}
 
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-bold {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-typeBold {
     -webkit-mask-image: url('icons/bbbutt/bold.svg');
     mask-image: url('icons/bbbutt/bold.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-text-width {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-typeUnderline {
     -webkit-mask-image: url('icons/bbbutt/und.svg');
     mask-image: url('icons/bbbutt/und.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-italic {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-typeItalic {
     -webkit-mask-image: url('icons/bbbutt/ita.svg');
     mask-image: url('icons/bbbutt/ita.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-minus {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-typeStrikethrough {
     -webkit-mask-image: url('icons/bbbutt/strk.svg');
     mask-image: url('icons/bbbutt/strk.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-exclamation-sign {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-flag {
     width: 20px;
     -webkit-mask-image: url('icons/bbbutt/whut/important.svg');
     mask-image: url('icons/bbbutt/whut/important.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-arrow-right {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-typeH2 {
     -webkit-mask-image: url('icons/bbbutt/whut/heading.svg');
     mask-image: url('icons/bbbutt/whut/heading.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-leaf {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-codeSlash {
     -webkit-mask-image: url('icons/bbbutt/whut/code.svg');
     mask-image: url('icons/bbbutt/whut/code.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-tint {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-dropletHalf {
     -webkit-mask-image: url('icons/bbbutt/color.svg');
     mask-image: url('icons/bbbutt/color.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-text-height {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-textareaT {
     -webkit-mask-image: url('icons/bbbutt/whut/size.svg');
     mask-image: url('icons/bbbutt/whut/size.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-align-left {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-textLeft {
     -webkit-mask-image: url('icons/bbbutt/lef.svg');
     mask-image: url('icons/bbbutt/lef.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-align-center {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-textCenter {
     -webkit-mask-image: url('icons/bbbutt/cent.svg');
     mask-image: url('icons/bbbutt/cent.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-align-right {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-textRight {
     -webkit-mask-image: url('icons/bbbutt/righ.svg');
     mask-image: url('icons/bbbutt/righ.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-list-alt {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-listOl {
     -webkit-mask-image: url('icons/bbbutt/whut/n_list.svg');
     mask-image: url('icons/bbbutt/whut/n_list.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-list {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-listUl {
     -webkit-mask-image: url('icons/bbbutt/list.svg');
     mask-image: url('icons/bbbutt/list.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-globe {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-link45deg {
     -webkit-mask-image: url('icons/bbbutt/link.svg');
     mask-image: url('icons/bbbutt/link.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-picture {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-image {
     -webkit-mask-image: url('icons/bbbutt/img.svg');
     mask-image: url('icons/bbbutt/img.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-comment {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-chatSquareQuote {
     -webkit-mask-image: url('icons/quote.svg');
     mask-image: url('icons/quote.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-asterisk {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-braces {
     -webkit-mask-image: url('icons/bbbutt/pre.svg');
     mask-image: url('icons/bbbutt/pre.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-tasks {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-code {
     -webkit-mask-image: url('icons/bbbutt/whut/source.svg');
     mask-image: url('icons/bbbutt/whut/source.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-warning-sign {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-eye {
     -webkit-mask-image: url('icons/bbbutt/spoil.svg');
     mask-image: url('icons/bbbutt/spoil.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-eye-open {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-shieldLock {
     -webkit-mask-image: url('icons/bbbutt/whut/mature.svg');
     mask-image: url('icons/bbbutt/whut/mature.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-music {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-musicPlayer {
     -webkit-mask-image: url('icons/bbbutt/whut/plat.svg');
     mask-image: url('icons/bbbutt/whut/plat.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-download {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-download {
     -webkit-mask-image: url('icons/bbbutt/whut/id.svg');
     mask-image: url('icons/bbbutt/whut/id.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-user {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-personSquare {
     -webkit-mask-image: url('icons/nav/user.svg');
     mask-image: url('icons/nav/user.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-share {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-bookmarks {
     -webkit-mask-image: url('icons/bbbutt/whut/wiki.svg');
     mask-image: url('icons/bbbutt/whut/wiki.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-info-sign {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-infoSquare {
     -webkit-mask-image: url('icons/bbbutt/whut/rules.svg');
     mask-image: url('icons/bbbutt/whut/rules.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-pencil {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-fonts {
     -webkit-mask-image: url('icons/bbbutt/tex.svg');
     mask-image: url('icons/bbbutt/tex.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-ban-circle {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-x {
     width: 24px;
     -webkit-mask-image: url('icons/bbbutt/whut/nobb.svg');
     mask-image: url('icons/bbbutt/whut/nobb.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-remove-sign {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-trash {
     -webkit-mask-image: url('icons/tor/rm.svg');
     mask-image: url('icons/tor/rm.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-fire {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-emojiSunglasses {
     -webkit-mask-image: url('icons/bbbutt/whut/emoticons.svg');
     mask-image: url('icons/bbbutt/whut/emoticons.svg');}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-wrench {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-toggles {
     -webkit-mask-image: url(icons/nav/useredit.svg);
     mask-image: url(icons/nav/useredit.svg);}
-.wbbcode.wbbimg .wbbbuttons .whutbbutton .icon-question-sign {
+.wbbcode.wbbimg .whutbbutton .wbb-icon-command {
     -webkit-mask-image: url('icons/bbbutt/whut/shortcuts.svg');
     mask-image: url('icons/bbbutt/whut/shortcuts.svg');}
 /***
