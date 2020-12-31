@@ -16,7 +16,11 @@ body {
     padding: 2px;}
 .rating_container {
     margin-top: auto;}
-    
+
+.filter_torrents.advanced {
+    position: relative;}
+#wrapper .filter_torrents.advanced .flright {
+    position: inherit;}
 .filter_torrents.advanced #platcheckbox .flright:before {
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);
     font-size: 14px;
@@ -24,8 +28,8 @@ body {
     content: 'View Less';
     white-space: nowrap;
     position: absolute;
-    right: 0;
-    bottom: 1077px;
+    right: 15px;
+    top: 48px;
     font-family: OpenSans, Sans-Serif !important;
     font-weight: 400;
     cursor: pointer;
