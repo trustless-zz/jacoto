@@ -85,7 +85,7 @@ https://github.com/hateradio/wbb
 
 .wbbcode .wbbshortcut {
     color: var(--c-txt);}
-.wbbshortcut li.wbbnotes {
+.wbbcode .wbbshortcut li.wbbnotes {
     width: auto;
     display: table;
     margin: 3px auto;}

@@ -6462,6 +6462,14 @@ div[id^="twitch-embed-"]*/ {
     filter: var(--p-post-img);
     margin: 0 5px;
     padding: 5px;}
+.trailer >video {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    -webkit-filter: none;
+    filter: none;}
+video
 .box.vertical_space#preview img, /*inbox*/
 .box.vertical_space .body img, /*inbox*/
 #blog .pad img,
