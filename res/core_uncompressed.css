@@ -10124,9 +10124,8 @@ body#user.inventory {}
 	/*background-color: transparent;
 	border-color: transparent; */}
 
-.inventory .spoilerbox img {
-	max-width: 100% !important;}
-
+.inventory .spoilerbox img,
+#wrapper #content table.bbcode_table img,
 .inventory .item_description img {
     max-width: 100% !important;}
 
