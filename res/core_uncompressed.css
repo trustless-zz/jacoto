@@ -6367,6 +6367,8 @@ tr.likes td[id^="likers_"]:hover {
 
 table.bbcode_table tbody {
     display: table-row-group !important;}
+table.bbcode_table td {
+    word-break: break-word;}
 
 #wrapper div[style*="text-align:center;"] table.bbcode_table td {
     text-align: center;}
