@@ -183,108 +183,312 @@ body >#preview-popup img,
 .oculusquest {background-image: url(caticons/grish/oculusquest.svg);}
 
 /* @media (min-width: 801px) { */
-#groupplatform a[href$="=Amiga+CD32"] {background-image: url(caticons/grish/amigacd32.svg);}
-#groupplatform a[href$="=Amstrad+CPC"] {background-image: url(caticons/grish/amstradcpc.svg);}
-#groupplatform a[href$="=Atari+ST"] {background-image: url(caticons/grish/atarist.svg);}
-#groupplatform a[href$="=Fairchild+Channel+F"] {background-image: url(caticons/grish/fairchildchannelf.svg);}
-#groupplatform a[href$="=Game+Boy+Color"] {background-image: url(caticons/grish/gameboycolor.svg);}
-#groupplatform a[href$="=Game+Gear"] {background-image: url(caticons/grish/gamegear.svg);}
-#groupplatform a[href$="=NES"] {background-image: url(caticons/grish/nes.svg);}
-#groupplatform a[href$="=New+Nintendo+3DS"] {background-image: url(caticons/grish/newnintendo3ds.svg);}
-#groupplatform a[href$="=Nintendo+3DS"] {background-image: url(caticons/grish/nintendo3ds.svg);}
-#groupplatform a[href$="=Nokia+N-Gage"] {background-image: url(caticons/grish/nokian-gage.svg);}
-#groupplatform a[href$="=RCA+Studio+II"] {background-image: url(caticons/grish/rcastudioii.svg);}
-#groupplatform a[href$="=Tangerine+Oric"] {background-image: url(caticons/grish/tangerineoric.svg);}
-#groupplatform a[href$="=V.Smile"] {background-image: url(caticons/v.smile.svg);}
-#groupplatform a[href$="=Watara+Supervision"] {background-image: url(caticons/grish/watarasupervision.svg);}
-#groupplatform a[href$="=Wii+U"] {background-image: url(caticons/grish/wiiu.svg);}
-#groupplatform a[href$="=3DO"] {background-image: url(caticons/3do.svg);}
-#groupplatform a[href$="=Android"] {background-image: url(caticons/android.svg);}
-#groupplatform a[href$="=Apple+Bandai+Pippin"] {background-image: url(caticons/applebandaipippin.svg);}
-#groupplatform a[href$="=Atari+2600"] {background-image: url(caticons/atari2600.svg);}
-#groupplatform a[href$="=Atari+5200"] {background-image: url(caticons/atari5200.svg);}
-#groupplatform a[href$="=Atari+7800"] {background-image: url(caticons/atari7800.svg);}
-#groupplatform a[href$="=Atari+Jaguar"] {background-image: url(caticons/atarijaguar.svg);}
-#groupplatform a[href$="=Atari+Lynx"] {background-image: url(caticons/atarilynx.svg);}
-#groupplatform a[href$="=Bandai+WonderSwan"] {background-image: url(caticons/bandaiwonderswan.svg);}
-#groupplatform a[href$="=Bandai+WonderSwan+Color"] {background-image: url(caticons/bandaiwonderswancolor.svg);}
-#groupplatform a[href$="=Board+Game"] {background-image: url(caticons/grish/boardgame.svg);}
-#groupplatform a[href$="=Card+Game"] {background-image: url(caticons/grish/cardgame.svg);}
-#groupplatform a[href$="=Casio+Loopy"] {background-image: url(caticons/casioloopy.svg);}
-#groupplatform a[href$="=Casio+PV-1000"] {background-image: url(caticons/casiopv-1000.svg);}
-#groupplatform a[href$="=Colecovision"] {background-image: url(caticons/colecovision.svg);}
-#groupplatform a[href$="=Commodore+128"] {background-image: url(caticons/commodore128.svg);}
-#groupplatform a[href$="=Commodore+64"] {background-image: url(caticons/commodore64.svg);}
-#groupplatform a[href$="=Commodore+Amiga"] {background-image: url(caticons/commodoreamiga.svg);}
-#groupplatform a[href$="=Commodore+Plus-4"] {background-image: url(caticons/commodoreplus-4.svg);}
-#groupplatform a[href$="=Commodore+VIC-20"] {background-image: url(caticons/commodorevic-20.svg);}
-#groupplatform a[href$="=CreatiVision"] {background-image: url(caticons/creativision.svg);}
-#groupplatform a[href$="=DOS"] {background-image: url(caticons/dos.svg);}
-#groupplatform a[href$="=Dreamcast"] {background-image: url(caticons/dreamcast.svg);}
-#groupplatform a[href$="=Emerson+Arcadia+2001"] {background-image: url(caticons/emersonarcadia2001.svg);}
-#groupplatform a[href$="=Entex+Adventure+Vision"] {background-image: url(caticons/entexadventurevision.svg);}
-#groupplatform a[href$="=Epoch+Super+Casette+Vision"] {background-image: url(caticons/epochsupercasettevision.svg);}
-#groupplatform a[href$="=Funtech+Super+Acan"] {background-image: url(caticons/funtechsuperacan.svg);}
-#groupplatform a[href$="=Game.com"] {background-image: url(caticons/gamecom.png);}
-#groupplatform a[href$="=Game+Boy"] {background-image: url(caticons/grish/gameboy.svg);}
-#groupplatform a[href$="=Game+Boy+Advance"] {background-image: url(caticons/grish/gameboyadvance.svg);}
-#groupplatform a[href$="=GamePark+GP32"] {background-image: url(caticons/gameparkgp32.svg);}
-#groupplatform a[href$="=General+Computer+Vectrex"] {background-image: url(caticons/grish/generalcomputervectrex.svg);}
-#groupplatform a[href$="=Gizmondo"] {background-image: url(caticons/gizmondo.svg);}
-#groupplatform a[href$="=Hartung+Game+Master"] {background-image: url(caticons/hartunggamemaster.svg);}
-#groupplatform a[href$="=Mattel+Intellivision"] {background-image: url(caticons/grish/mattelintellivision.svg);}
-#groupplatform a[href$="=Interactive+DVD"] {background-image: url(caticons/grish/interactivedvd.svg);}
-#groupplatform a[href$="=iOS"] {background-image: url(caticons/grish/ios.svg);}
-#groupplatform a[href$="=Linux"] {background-image: url(caticons/linux.svg);}
-#groupplatform a[href$="=Mac"] {background-image: url(caticons/grish/mac.svg);}
-#groupplatform a[href$="=Magnavox-Phillips+Odyssey"] {background-image: url(caticons/magnavox-phillipsodyssey.svg);}
-#groupplatform a[href$="=Master+System"] {background-image: url(caticons/mastersystem.svg);}
-#groupplatform a[href$="=Mega+Drive"] {background-image: url(caticons/megadrive.svg);}
-#groupplatform a[href$="=Memotech+MTX"] {background-image: url(caticons/grish/memotechmtx.svg);}
-#groupplatform a[href$="=Miles+Gordon+Sam+Coupe"] {background-image: url(caticons/milesgordonsamcoupe.svg);}
-#groupplatform a[href$="=Miniature+Wargames"] {background-image: url(caticons/grish/miniaturewargames.svg);}
-#groupplatform a[href$="=MSX"] {background-image: url(caticons/msx.svg);}
-#groupplatform a[href$="=MSX+2"] {background-image: url(caticons/msx2.svg);}
-#groupplatform a[href$="=NEC+PC-FX"] {background-image: url(caticons/necpc-fx.svg);}
-#groupplatform a[href$="=NEC+PC-98"] {background-image: url(caticons/grish/necpc-98.svg);}
-#groupplatform a[href$="=NEC+SuperGrafx"] {background-image: url(caticons/necsupergrafx.svg);}
-#groupplatform a[href$="=NEC+TurboGrafx-16"] {background-image: url(caticons/grish/necturbografx-16.svg);}
-#groupplatform a[href$="=Nintendo+64"] {background-image: url(caticons/nintendo64.svg);}
-#groupplatform a[href$="=Nintendo+DS"] {background-image: url(caticons/grish/nintendods.svg);}
-#groupplatform a[href$="=Nintendo+GameCube"] {background-image: url(caticons/nintendogamecube.svg);}
-#groupplatform a[href$="=Ouya"] {background-image: url(caticons/ouya.svg);}
-#groupplatform a[href$="=Pen+and+Paper+RPG"] {background-image: url(caticons/grish/penandpaperrpg.svg);}
-#groupplatform a[href$="=Philips+CD-i"] {background-image: url(caticons/grish/philipscd-i.svg);}
-#groupplatform a[href$="=Philips+Videopac%2B"] {background-image: url(caticons/philipsvideopac+.svg);}
-#groupplatform a[href$="=Phone%2FPDA"] {background-image: url(caticons/grish/phonepda.svg);}
-#groupplatform a[href$="=Pico"] {background-image: url(caticons/pico.svg);}
-#groupplatform a[href$="=PlayStation+1"] {background-image: url(caticons/playstation.svg);}
-#groupplatform a[href$="=PlayStation+2"] {background-image: url(caticons/grish/playstation2.svg);}
-#groupplatform a[href$="=PlayStation+3"] {background-image: url(caticons/grish/playstation3.svg);}
-#groupplatform a[href$="=PlayStation+4"] {background-image: url(caticons/grish/playstation4.svg);}
-#groupplatform a[href$="=PlayStation+Portable"] {background-image: url(caticons/grish/playstationportable.svg);}
-#groupplatform a[href$="=PlayStation+Vita"] {background-image: url(caticons/grish/playstationvita.svg);}
-#groupplatform a[href$="=Pokemon+Mini"] {background-image: url(caticons/pokemonmini.svg);}
-#groupplatform a[href$="=Retro+-+Other"] {background-image: url(caticons/retro-other.svg);}
-#groupplatform a[href$="=Saturn"] {background-image: url(caticons/saturn.svg);}
-#groupplatform a[href$="=SG-1000"] {background-image: url(caticons/sg-1000.svg);}
-#groupplatform a[href$="=Sharp+X1"] {background-image: url(caticons/grish/sharpx1.svg);}
-#groupplatform a[href$="=Sharp+X68000"] {background-image: url(caticons/grish/sharpx68000.svg);}
-#groupplatform a[href$="=SNK+Neo+Geo"] {background-image: url(caticons/grish/snkneogeo.svg);}
-#groupplatform a[href$="=SNK+Neo+Geo+Pocket"] {background-image: url(caticons/snkneogeopocket.svg);}
-#groupplatform a[href$="=SNES"] {background-image: url(caticons/snes.svg);}
-#groupplatform a[href$="=Switch"] {background-image: url(caticons/switch.svg);}
-#groupplatform a[href$="=Taito+Type+X"] {background-image: url(caticons/grish/taitotypex.svg);}
-#groupplatform a[href$="=Tandy+Color+Computer"] {background-image: url(caticons/tandycolorcomputer.svg);}
-#groupplatform a[href$="=Thomson+MO5"] {background-image: url(caticons/grish/thomsonmo5.svg);}
-#groupplatform a[href$="=General+Computer+Vectrex"] {background-image: url(caticons/grish/vectrex.svg);}
-#groupplatform a[href$="=Virtual+Boy"] {background-image: url(caticons/virtualboy.svg);}
-#groupplatform a[href$="=Wii"] {background-image: url(caticons/grish/wii.svg);}
-#groupplatform a[href$="=Windows"] {background-image: url(caticons/windows.svg);}
-#groupplatform a[href$="=Xbox"] {background-image: url(caticons/xbox.svg);}
-#groupplatform a[href$="=Xbox+360"] {background-image: url(caticons/xbox360.svg);}
-#groupplatform a[href$="=ZX+Spectrum"] {background-image: url(caticons/zxspectrum.svg);}
-#groupplatform a[href$="=Oculus+Quest"] {background-image: url(caticons/grish/oculusquest.svg);}
+.cats_col   +td #groupplatform a[href$="=Amiga+CD32"],
+.collicon   +td #groupplatform a[href$="=Amiga+CD32"],
+.noticon    +td #groupplatform a[href$="=Amiga+CD32"] {background-image: url(caticons/grish/amigacd32.svg);}
+.cats_col   +td #groupplatform a[href$="=Amstrad+CPC"], 
+.collicon   +td #groupplatform a[href$="=Amstrad+CPC"], 
+.noticon    +td #groupplatform a[href$="=Amstrad+CPC"] {background-image: url(caticons/grish/amstradcpc.svg);}
+.cats_col   +td #groupplatform a[href$="=Atari+ST"], 
+.collicon   +td #groupplatform a[href$="=Atari+ST"], 
+.noticon    +td #groupplatform a[href$="=Atari+ST"] {background-image: url(caticons/grish/atarist.svg);}
+.cats_col   +td #groupplatform a[href$="=Fairchild+Channel+F"], 
+.collicon   +td #groupplatform a[href$="=Fairchild+Channel+F"], 
+.noticon    +td #groupplatform a[href$="=Fairchild+Channel+F"] {background-image: url(caticons/grish/fairchildchannelf.svg);}
+.cats_col   +td #groupplatform a[href$="=Game+Boy+Color"], 
+.collicon   +td #groupplatform a[href$="=Game+Boy+Color"], 
+.noticon    +td #groupplatform a[href$="=Game+Boy+Color"] {background-image: url(caticons/grish/gameboycolor.svg);}
+.cats_col   +td #groupplatform a[href$="=Game+Gear"], 
+.collicon   +td #groupplatform a[href$="=Game+Gear"], 
+.noticon    +td #groupplatform a[href$="=Game+Gear"] {background-image: url(caticons/grish/gamegear.svg);}
+.cats_col   +td #groupplatform a[href$="=NES"], 
+.collicon   +td #groupplatform a[href$="=NES"], 
+.noticon    +td #groupplatform a[href$="=NES"] {background-image: url(caticons/grish/nes.svg);}
+.cats_col   +td #groupplatform a[href$="=New+Nintendo+3DS"], 
+.collicon   +td #groupplatform a[href$="=New+Nintendo+3DS"], 
+.noticon    +td #groupplatform a[href$="=New+Nintendo+3DS"] {background-image: url(caticons/grish/newnintendo3ds.svg);}
+.cats_col   +td #groupplatform a[href$="=Nintendo+3DS"], 
+.collicon   +td #groupplatform a[href$="=Nintendo+3DS"], 
+.noticon    +td #groupplatform a[href$="=Nintendo+3DS"] {background-image: url(caticons/grish/nintendo3ds.svg);}
+.cats_col   +td #groupplatform a[href$="=Nokia+N-Gage"], 
+.collicon   +td #groupplatform a[href$="=Nokia+N-Gage"], 
+.noticon    +td #groupplatform a[href$="=Nokia+N-Gage"] {background-image: url(caticons/grish/nokian-gage.svg);}
+.cats_col   +td #groupplatform a[href$="=RCA+Studio+II"], 
+.collicon   +td #groupplatform a[href$="=RCA+Studio+II"], 
+.noticon    +td #groupplatform a[href$="=RCA+Studio+II"] {background-image: url(caticons/grish/rcastudioii.svg);}
+.cats_col   +td #groupplatform a[href$="=Tangerine+Oric"], 
+.collicon   +td #groupplatform a[href$="=Tangerine+Oric"], 
+.noticon    +td #groupplatform a[href$="=Tangerine+Oric"] {background-image: url(caticons/grish/tangerineoric.svg);}
+.cats_col   +td #groupplatform a[href$="=V.Smile"], 
+.collicon   +td #groupplatform a[href$="=V.Smile"], 
+.noticon    +td #groupplatform a[href$="=V.Smile"] {background-image: url(caticons/v.smile.svg);}
+.cats_col   +td #groupplatform a[href$="=Watara+Supervision"], 
+.collicon   +td #groupplatform a[href$="=Watara+Supervision"], 
+.noticon    +td #groupplatform a[href$="=Watara+Supervision"] {background-image: url(caticons/grish/watarasupervision.svg);}
+.cats_col   +td #groupplatform a[href$="=Wii+U"], 
+.collicon   +td #groupplatform a[href$="=Wii+U"], 
+.noticon    +td #groupplatform a[href$="=Wii+U"] {background-image: url(caticons/grish/wiiu.svg);}
+.cats_col   +td #groupplatform a[href$="=3DO"], 
+.collicon   +td #groupplatform a[href$="=3DO"], 
+.noticon    +td #groupplatform a[href$="=3DO"] {background-image: url(caticons/3do.svg);}
+.cats_col   +td #groupplatform a[href$="=Android"], 
+.collicon   +td #groupplatform a[href$="=Android"], 
+.noticon    +td #groupplatform a[href$="=Android"] {background-image: url(caticons/android.svg);}
+.cats_col   +td #groupplatform a[href$="=Apple+Bandai+Pippin"], 
+.collicon   +td #groupplatform a[href$="=Apple+Bandai+Pippin"], 
+.noticon    +td #groupplatform a[href$="=Apple+Bandai+Pippin"] {background-image: url(caticons/applebandaipippin.svg);}
+.cats_col   +td #groupplatform a[href$="=Atari+2600"], 
+.collicon   +td #groupplatform a[href$="=Atari+2600"], 
+.noticon    +td #groupplatform a[href$="=Atari+2600"] {background-image: url(caticons/atari2600.svg);}
+.cats_col   +td #groupplatform a[href$="=Atari+5200"], 
+.collicon   +td #groupplatform a[href$="=Atari+5200"], 
+.noticon    +td #groupplatform a[href$="=Atari+5200"] {background-image: url(caticons/atari5200.svg);}
+.cats_col   +td #groupplatform a[href$="=Atari+7800"], 
+.collicon   +td #groupplatform a[href$="=Atari+7800"], 
+.noticon    +td #groupplatform a[href$="=Atari+7800"] {background-image: url(caticons/atari7800.svg);}
+.cats_col   +td #groupplatform a[href$="=Atari+Jaguar"], 
+.collicon   +td #groupplatform a[href$="=Atari+Jaguar"], 
+.noticon    +td #groupplatform a[href$="=Atari+Jaguar"] {background-image: url(caticons/atarijaguar.svg);}
+.cats_col   +td #groupplatform a[href$="=Atari+Lynx"], 
+.collicon   +td #groupplatform a[href$="=Atari+Lynx"], 
+.noticon    +td #groupplatform a[href$="=Atari+Lynx"] {background-image: url(caticons/atarilynx.svg);}
+.cats_col   +td #groupplatform a[href$="=Bandai+WonderSwan"], 
+.collicon   +td #groupplatform a[href$="=Bandai+WonderSwan"], 
+.noticon    +td #groupplatform a[href$="=Bandai+WonderSwan"] {background-image: url(caticons/bandaiwonderswan.svg);}
+.cats_col   +td #groupplatform a[href$="=Bandai+WonderSwan+Color"], 
+.collicon   +td #groupplatform a[href$="=Bandai+WonderSwan+Color"], 
+.noticon    +td #groupplatform a[href$="=Bandai+WonderSwan+Color"] {background-image: url(caticons/bandaiwonderswancolor.svg);}
+.cats_col   +td #groupplatform a[href$="=Board+Game"], 
+.collicon   +td #groupplatform a[href$="=Board+Game"], 
+.noticon    +td #groupplatform a[href$="=Board+Game"] {background-image: url(caticons/grish/boardgame.svg);}
+.cats_col   +td #groupplatform a[href$="=Card+Game"], 
+.collicon   +td #groupplatform a[href$="=Card+Game"], 
+.noticon    +td #groupplatform a[href$="=Card+Game"] {background-image: url(caticons/grish/cardgame.svg);}
+.cats_col   +td #groupplatform a[href$="=Casio+Loopy"], 
+.collicon   +td #groupplatform a[href$="=Casio+Loopy"], 
+.noticon    +td #groupplatform a[href$="=Casio+Loopy"] {background-image: url(caticons/casioloopy.svg);}
+.cats_col   +td #groupplatform a[href$="=Casio+PV-1000"], 
+.collicon   +td #groupplatform a[href$="=Casio+PV-1000"], 
+.noticon    +td #groupplatform a[href$="=Casio+PV-1000"] {background-image: url(caticons/casiopv-1000.svg);}
+.cats_col   +td #groupplatform a[href$="=Colecovision"], 
+.collicon   +td #groupplatform a[href$="=Colecovision"], 
+.noticon    +td #groupplatform a[href$="=Colecovision"] {background-image: url(caticons/colecovision.svg);}
+.cats_col   +td #groupplatform a[href$="=Commodore+128"], 
+.collicon   +td #groupplatform a[href$="=Commodore+128"], 
+.noticon    +td #groupplatform a[href$="=Commodore+128"] {background-image: url(caticons/commodore128.svg);}
+.cats_col   +td #groupplatform a[href$="=Commodore+64"], 
+.collicon   +td #groupplatform a[href$="=Commodore+64"], 
+.noticon    +td #groupplatform a[href$="=Commodore+64"] {background-image: url(caticons/commodore64.svg);}
+.cats_col   +td #groupplatform a[href$="=Commodore+Amiga"], 
+.collicon   +td #groupplatform a[href$="=Commodore+Amiga"], 
+.noticon    +td #groupplatform a[href$="=Commodore+Amiga"] {background-image: url(caticons/commodoreamiga.svg);}
+.cats_col   +td #groupplatform a[href$="=Commodore+Plus-4"], 
+.collicon   +td #groupplatform a[href$="=Commodore+Plus-4"], 
+.noticon    +td #groupplatform a[href$="=Commodore+Plus-4"] {background-image: url(caticons/commodoreplus-4.svg);}
+.cats_col   +td #groupplatform a[href$="=Commodore+VIC-20"], 
+.collicon   +td #groupplatform a[href$="=Commodore+VIC-20"], 
+.noticon    +td #groupplatform a[href$="=Commodore+VIC-20"] {background-image: url(caticons/commodorevic-20.svg);}
+.cats_col   +td #groupplatform a[href$="=CreatiVision"], 
+.collicon   +td #groupplatform a[href$="=CreatiVision"], 
+.noticon    +td #groupplatform a[href$="=CreatiVision"] {background-image: url(caticons/creativision.svg);}
+.cats_col   +td #groupplatform a[href$="=DOS"], 
+.collicon   +td #groupplatform a[href$="=DOS"], 
+.noticon    +td #groupplatform a[href$="=DOS"] {background-image: url(caticons/dos.svg);}
+.cats_col   +td #groupplatform a[href$="=Dreamcast"], 
+.collicon   +td #groupplatform a[href$="=Dreamcast"], 
+.noticon    +td #groupplatform a[href$="=Dreamcast"] {background-image: url(caticons/dreamcast.svg);}
+.cats_col   +td #groupplatform a[href$="=Emerson+Arcadia+2001"], 
+.collicon   +td #groupplatform a[href$="=Emerson+Arcadia+2001"], 
+.noticon    +td #groupplatform a[href$="=Emerson+Arcadia+2001"] {background-image: url(caticons/emersonarcadia2001.svg);}
+.cats_col   +td #groupplatform a[href$="=Entex+Adventure+Vision"], 
+.collicon   +td #groupplatform a[href$="=Entex+Adventure+Vision"], 
+.noticon    +td #groupplatform a[href$="=Entex+Adventure+Vision"] {background-image: url(caticons/entexadventurevision.svg);}
+.cats_col   +td #groupplatform a[href$="=Epoch+Super+Casette+Vision"], 
+.collicon   +td #groupplatform a[href$="=Epoch+Super+Casette+Vision"], 
+.noticon    +td #groupplatform a[href$="=Epoch+Super+Casette+Vision"] {background-image: url(caticons/epochsupercasettevision.svg);}
+.cats_col   +td #groupplatform a[href$="=Funtech+Super+Acan"], 
+.collicon   +td #groupplatform a[href$="=Funtech+Super+Acan"], 
+.noticon    +td #groupplatform a[href$="=Funtech+Super+Acan"] {background-image: url(caticons/funtechsuperacan.svg);}
+.cats_col   +td #groupplatform a[href$="=Game.com"], 
+.collicon   +td #groupplatform a[href$="=Game.com"], 
+.noticon    +td #groupplatform a[href$="=Game.com"] {background-image: url(caticons/gamecom.png);}
+.cats_col   +td #groupplatform a[href$="=Game+Boy"], 
+.collicon   +td #groupplatform a[href$="=Game+Boy"], 
+.noticon    +td #groupplatform a[href$="=Game+Boy"] {background-image: url(caticons/grish/gameboy.svg);}
+.cats_col   +td #groupplatform a[href$="=Game+Boy+Advance"], 
+.collicon   +td #groupplatform a[href$="=Game+Boy+Advance"], 
+.noticon    +td #groupplatform a[href$="=Game+Boy+Advance"] {background-image: url(caticons/grish/gameboyadvance.svg);}
+.cats_col   +td #groupplatform a[href$="=GamePark+GP32"], 
+.collicon   +td #groupplatform a[href$="=GamePark+GP32"], 
+.noticon    +td #groupplatform a[href$="=GamePark+GP32"] {background-image: url(caticons/gameparkgp32.svg);}
+.cats_col   +td #groupplatform a[href$="=General+Computer+Vectrex"], 
+.collicon   +td #groupplatform a[href$="=General+Computer+Vectrex"], 
+.noticon    +td #groupplatform a[href$="=General+Computer+Vectrex"] {background-image: url(caticons/grish/generalcomputervectrex.svg);}
+.cats_col   +td #groupplatform a[href$="=Gizmondo"], 
+.collicon   +td #groupplatform a[href$="=Gizmondo"], 
+.noticon    +td #groupplatform a[href$="=Gizmondo"] {background-image: url(caticons/gizmondo.svg);}
+.cats_col   +td #groupplatform a[href$="=Hartung+Game+Master"], 
+.collicon   +td #groupplatform a[href$="=Hartung+Game+Master"], 
+.noticon    +td #groupplatform a[href$="=Hartung+Game+Master"] {background-image: url(caticons/hartunggamemaster.svg);}
+.cats_col   +td #groupplatform a[href$="=Mattel+Intellivision"], 
+.collicon   +td #groupplatform a[href$="=Mattel+Intellivision"], 
+.noticon    +td #groupplatform a[href$="=Mattel+Intellivision"] {background-image: url(caticons/grish/mattelintellivision.svg);}
+.cats_col   +td #groupplatform a[href$="=Interactive+DVD"], 
+.collicon   +td #groupplatform a[href$="=Interactive+DVD"], 
+.noticon    +td #groupplatform a[href$="=Interactive+DVD"] {background-image: url(caticons/grish/interactivedvd.svg);}
+.cats_col   +td #groupplatform a[href$="=iOS"], 
+.collicon   +td #groupplatform a[href$="=iOS"], 
+.noticon    +td #groupplatform a[href$="=iOS"] {background-image: url(caticons/grish/ios.svg);}
+.cats_col   +td #groupplatform a[href$="=Linux"], 
+.collicon   +td #groupplatform a[href$="=Linux"], 
+.noticon    +td #groupplatform a[href$="=Linux"] {background-image: url(caticons/linux.svg);}
+.cats_col   +td #groupplatform a[href$="=Mac"], 
+.collicon   +td #groupplatform a[href$="=Mac"], 
+.noticon    +td #groupplatform a[href$="=Mac"] {background-image: url(caticons/mac.svg);}
+.cats_col   +td #groupplatform a[href$="=Magnavox-Phillips+Odyssey"], 
+.collicon   +td #groupplatform a[href$="=Magnavox-Phillips+Odyssey"], 
+.noticon    +td #groupplatform a[href$="=Magnavox-Phillips+Odyssey"] {background-image: url(caticons/magnavox-phillipsodyssey.svg);}
+.cats_col   +td #groupplatform a[href$="=Master+System"], 
+.collicon   +td #groupplatform a[href$="=Master+System"], 
+.noticon    +td #groupplatform a[href$="=Master+System"] {background-image: url(caticons/mastersystem.svg);}
+.cats_col   +td #groupplatform a[href$="=Mega+Drive"], 
+.collicon   +td #groupplatform a[href$="=Mega+Drive"], 
+.noticon    +td #groupplatform a[href$="=Mega+Drive"] {background-image: url(caticons/megadrive.svg);}
+.cats_col   +td #groupplatform a[href$="=Memotech+MTX"], 
+.collicon   +td #groupplatform a[href$="=Memotech+MTX"], 
+.noticon    +td #groupplatform a[href$="=Memotech+MTX"] {background-image: url(caticons/grish/memotechmtx.svg);}
+.cats_col   +td #groupplatform a[href$="=Miles+Gordon+Sam+Coupe"], 
+.collicon   +td #groupplatform a[href$="=Miles+Gordon+Sam+Coupe"], 
+.noticon    +td #groupplatform a[href$="=Miles+Gordon+Sam+Coupe"] {background-image: url(caticons/milesgordonsamcoupe.svg);}
+.cats_col   +td #groupplatform a[href$="=Miniature+Wargames"], 
+.collicon   +td #groupplatform a[href$="=Miniature+Wargames"], 
+.noticon    +td #groupplatform a[href$="=Miniature+Wargames"] {background-image: url(caticons/grish/miniaturewargames.svg);}
+.cats_col   +td #groupplatform a[href$="=MSX"], 
+.collicon   +td #groupplatform a[href$="=MSX"], 
+.noticon    +td #groupplatform a[href$="=MSX"] {background-image: url(caticons/msx.svg);}
+.cats_col   +td #groupplatform a[href$="=MSX+2"], 
+.collicon   +td #groupplatform a[href$="=MSX+2"], 
+.noticon    +td #groupplatform a[href$="=MSX+2"] {background-image: url(caticons/msx2.svg);}
+.cats_col   +td #groupplatform a[href$="=NEC+PC-FX"], 
+.collicon   +td #groupplatform a[href$="=NEC+PC-FX"], 
+.noticon    +td #groupplatform a[href$="=NEC+PC-FX"] {background-image: url(caticons/necpc-fx.svg);}
+.cats_col   +td #groupplatform a[href$="=NEC+PC-98"], 
+.collicon   +td #groupplatform a[href$="=NEC+PC-98"], 
+.noticon    +td #groupplatform a[href$="=NEC+PC-98"] {background-image: url(caticons/grish/necpc-98.svg);}
+.cats_col   +td #groupplatform a[href$="=NEC+SuperGrafx"], 
+.collicon   +td #groupplatform a[href$="=NEC+SuperGrafx"], 
+.noticon    +td #groupplatform a[href$="=NEC+SuperGrafx"] {background-image: url(caticons/necsupergrafx.svg);}
+.cats_col   +td #groupplatform a[href$="=NEC+TurboGrafx-16"], 
+.collicon   +td #groupplatform a[href$="=NEC+TurboGrafx-16"], 
+.noticon    +td #groupplatform a[href$="=NEC+TurboGrafx-16"] {background-image: url(caticons/grish/necturbografx-16.svg);}
+.cats_col   +td #groupplatform a[href$="=Nintendo+64"], 
+.collicon   +td #groupplatform a[href$="=Nintendo+64"], 
+.noticon    +td #groupplatform a[href$="=Nintendo+64"] {background-image: url(caticons/nintendo64.svg);}
+.cats_col   +td #groupplatform a[href$="=Nintendo+DS"], 
+.collicon   +td #groupplatform a[href$="=Nintendo+DS"], 
+.noticon    +td #groupplatform a[href$="=Nintendo+DS"] {background-image: url(caticons/grish/nintendods.svg);}
+.cats_col   +td #groupplatform a[href$="=Nintendo+GameCube"], 
+.collicon   +td #groupplatform a[href$="=Nintendo+GameCube"], 
+.noticon    +td #groupplatform a[href$="=Nintendo+GameCube"] {background-image: url(caticons/nintendogamecube.svg);}
+.cats_col   +td #groupplatform a[href$="=Ouya"], 
+.collicon   +td #groupplatform a[href$="=Ouya"], 
+.noticon    +td #groupplatform a[href$="=Ouya"] {background-image: url(caticons/ouya.svg);}
+.cats_col   +td #groupplatform a[href$="=Pen+and+Paper+RPG"], 
+.collicon   +td #groupplatform a[href$="=Pen+and+Paper+RPG"], 
+.noticon    +td #groupplatform a[href$="=Pen+and+Paper+RPG"] {background-image: url(caticons/grish/penandpaperrpg.svg);}
+.cats_col   +td #groupplatform a[href$="=Philips+CD-i"], 
+.collicon   +td #groupplatform a[href$="=Philips+CD-i"], 
+.noticon    +td #groupplatform a[href$="=Philips+CD-i"] {background-image: url(caticons/grish/philipscd-i.svg);}
+.cats_col   +td #groupplatform a[href$="=Philips+Videopac%2B"], 
+.collicon   +td #groupplatform a[href$="=Philips+Videopac%2B"], 
+.noticon    +td #groupplatform a[href$="=Philips+Videopac%2B"] {background-image: url(caticons/philipsvideopac+.svg);}
+.cats_col   +td #groupplatform a[href$="=Phone%2FPDA"], 
+.collicon   +td #groupplatform a[href$="=Phone%2FPDA"], 
+.noticon    +td #groupplatform a[href$="=Phone%2FPDA"] {background-image: url(caticons/grish/phonepda.svg);}
+.cats_col   +td #groupplatform a[href$="=Pico"], 
+.collicon   +td #groupplatform a[href$="=Pico"], 
+.noticon    +td #groupplatform a[href$="=Pico"] {background-image: url(caticons/pico.svg);}
+.cats_col   +td #groupplatform a[href$="=PlayStation+1"], 
+.collicon   +td #groupplatform a[href$="=PlayStation+1"], 
+.noticon    +td #groupplatform a[href$="=PlayStation+1"] {background-image: url(caticons/playstation.svg);}
+.cats_col   +td #groupplatform a[href$="=PlayStation+2"], 
+.collicon   +td #groupplatform a[href$="=PlayStation+2"], 
+.noticon    +td #groupplatform a[href$="=PlayStation+2"] {background-image: url(caticons/grish/playstation2.svg);}
+.cats_col   +td #groupplatform a[href$="=PlayStation+3"], 
+.collicon   +td #groupplatform a[href$="=PlayStation+3"], 
+.noticon    +td #groupplatform a[href$="=PlayStation+3"] {background-image: url(caticons/grish/playstation3.svg);}
+.cats_col   +td #groupplatform a[href$="=PlayStation+4"], 
+.collicon   +td #groupplatform a[href$="=PlayStation+4"], 
+.noticon    +td #groupplatform a[href$="=PlayStation+4"] {background-image: url(caticons/grish/playstation4.svg);}
+.cats_col   +td #groupplatform a[href$="=PlayStation+Portable"], 
+.collicon   +td #groupplatform a[href$="=PlayStation+Portable"], 
+.noticon    +td #groupplatform a[href$="=PlayStation+Portable"] {background-image: url(caticons/grish/playstationportable.svg);}
+.cats_col   +td #groupplatform a[href$="=PlayStation+Vita"], 
+.collicon   +td #groupplatform a[href$="=PlayStation+Vita"], 
+.noticon    +td #groupplatform a[href$="=PlayStation+Vita"] {background-image: url(caticons/grish/playstationvita.svg);}
+.cats_col   +td #groupplatform a[href$="=Pokemon+Mini"], 
+.collicon   +td #groupplatform a[href$="=Pokemon+Mini"], 
+.noticon    +td #groupplatform a[href$="=Pokemon+Mini"] {background-image: url(caticons/pokemonmini.svg);}
+.cats_col   +td #groupplatform a[href$="=Retro+-+Other"], 
+.collicon   +td #groupplatform a[href$="=Retro+-+Other"], 
+.noticon    +td #groupplatform a[href$="=Retro+-+Other"] {background-image: url(caticons/retro-other.svg);}
+.cats_col   +td #groupplatform a[href$="=Saturn"], 
+.collicon   +td #groupplatform a[href$="=Saturn"], 
+.noticon    +td #groupplatform a[href$="=Saturn"] {background-image: url(caticons/saturn.svg);}
+.cats_col   +td #groupplatform a[href$="=SG-1000"], 
+.collicon   +td #groupplatform a[href$="=SG-1000"], 
+.noticon    +td #groupplatform a[href$="=SG-1000"] {background-image: url(caticons/sg-1000.svg);}
+.cats_col   +td #groupplatform a[href$="=Sharp+X1"], 
+.collicon   +td #groupplatform a[href$="=Sharp+X1"], 
+.noticon    +td #groupplatform a[href$="=Sharp+X1"] {background-image: url(caticons/grish/sharpx1.svg);}
+.cats_col   +td #groupplatform a[href$="=Sharp+X68000"], 
+.collicon   +td #groupplatform a[href$="=Sharp+X68000"], 
+.noticon    +td #groupplatform a[href$="=Sharp+X68000"] {background-image: url(caticons/grish/sharpx68000.svg);}
+.cats_col   +td #groupplatform a[href$="=SNK+Neo+Geo"], 
+.collicon   +td #groupplatform a[href$="=SNK+Neo+Geo"], 
+.noticon    +td #groupplatform a[href$="=SNK+Neo+Geo"] {background-image: url(caticons/grish/snkneogeo.svg);}
+.cats_col   +td #groupplatform a[href$="=SNK+Neo+Geo+Pocket"], 
+.collicon   +td #groupplatform a[href$="=SNK+Neo+Geo+Pocket"], 
+.noticon    +td #groupplatform a[href$="=SNK+Neo+Geo+Pocket"] {background-image: url(caticons/snkneogeopocket.svg);}
+.cats_col   +td #groupplatform a[href$="=SNES"], 
+.collicon   +td #groupplatform a[href$="=SNES"], 
+.noticon    +td #groupplatform a[href$="=SNES"] {background-image: url(caticons/snes.svg);}
+.cats_col   +td #groupplatform a[href$="=Switch"], 
+.collicon   +td #groupplatform a[href$="=Switch"], 
+.noticon    +td #groupplatform a[href$="=Switch"] {background-image: url(caticons/switch.svg);}
+.cats_col   +td #groupplatform a[href$="=Taito+Type+X"], 
+.collicon   +td #groupplatform a[href$="=Taito+Type+X"], 
+.noticon    +td #groupplatform a[href$="=Taito+Type+X"] {background-image: url(caticons/grish/taitotypex.svg);}
+.cats_col   +td #groupplatform a[href$="=Tandy+Color+Computer"], 
+.collicon   +td #groupplatform a[href$="=Tandy+Color+Computer"], 
+.noticon    +td #groupplatform a[href$="=Tandy+Color+Computer"] {background-image: url(caticons/tandycolorcomputer.svg);}
+.cats_col   +td #groupplatform a[href$="=Thomson+MO5"], 
+.collicon   +td #groupplatform a[href$="=Thomson+MO5"], 
+.noticon    +td #groupplatform a[href$="=Thomson+MO5"] {background-image: url(caticons/grish/thomsonmo5.svg);}
+.cats_col   +td #groupplatform a[href$="=General+Computer+Vectrex"], 
+.collicon   +td #groupplatform a[href$="=General+Computer+Vectrex"], 
+.noticon    +td #groupplatform a[href$="=General+Computer+Vectrex"] {background-image: url(caticons/grish/vectrex.svg);}
+.cats_col   +td #groupplatform a[href$="=Virtual+Boy"], 
+.collicon   +td #groupplatform a[href$="=Virtual+Boy"], 
+.noticon    +td #groupplatform a[href$="=Virtual+Boy"] {background-image: url(caticons/virtualboy.svg);}
+.cats_col   +td #groupplatform a[href$="=Wii"], 
+.collicon   +td #groupplatform a[href$="=Wii"], 
+.noticon    +td #groupplatform a[href$="=Wii"] {background-image: url(caticons/grish/wii.svg);}
+.cats_col   +td #groupplatform a[href$="=Windows"], 
+.collicon   +td #groupplatform a[href$="=Windows"], 
+.noticon    +td #groupplatform a[href$="=Windows"] {background-image: url(caticons/windows.svg);}
+.cats_col   +td #groupplatform a[href$="=Xbox"], 
+.collicon   +td #groupplatform a[href$="=Xbox"], 
+.noticon    +td #groupplatform a[href$="=Xbox"] {background-image: url(caticons/xbox.svg);}
+.cats_col   +td #groupplatform a[href$="=Xbox+360"], 
+.collicon   +td #groupplatform a[href$="=Xbox+360"], 
+.noticon    +td #groupplatform a[href$="=Xbox+360"] {background-image: url(caticons/xbox360.svg);}
+.cats_col   +td #groupplatform a[href$="=ZX+Spectrum"], 
+.collicon   +td #groupplatform a[href$="=ZX+Spectrum"], 
+.noticon    +td #groupplatform a[href$="=ZX+Spectrum"] {background-image: url(caticons/zxspectrum.svg);}
+.cats_col   +td #groupplatform a[href$="=Oculus+Quest"], 
+.collicon   +td #groupplatform a[href$="=Oculus+Quest"], 
+.noticon    +td #groupplatform a[href$="=Oculus+Quest"] {background-image: url(caticons/grish/oculusquest.svg);}
 /* } */
 
 .select2-container--default .select2-selection--single .select2-selection__arrow b,

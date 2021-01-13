@@ -562,7 +562,7 @@
     
     .global_buffs .individual_buff {
         position: relative;
-        border: 1px solid: var(--c-table-brdr);
+        border: 1px solid var(--c-table-brdr);
         background-color: var(--c-box);
         display: none;
         width: auto;
@@ -1086,16 +1086,16 @@
         position: absolute;
         right: 10px;
         top: 10px;}
-    .torrent_table #groupplatform {
+    #wrapper .torrent_table #groupplatform {
         right: 10px;
         left: unset;
         top: 10px;}
-    #bookmarks .torrent_table #groupplatform,
-    #collections .torrent_table #groupplatform {
+    #bookmarks #wrapper .torrent_table #groupplatform,
+    #collections #wrapper .torrent_table #groupplatform {
         top: calc(50% - 17px);
         left: -36px;
         right: unset;}
-    .torrent_notifications #groupplatform/*,
+    #wrapper .torrent_notifications #groupplatform/*,
     .torrent_notifications .torrent_table #groupplatform*/ {
         left: 2px;}
     
@@ -1205,7 +1205,7 @@
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) a {
 		font-size: 18px;}
-    #torrents #torrentbrowse .torrent_table #groupplatform a {
+    #torrents #wrapper #torrentbrowse .torrent_table #groupplatform a {
         font-size: 0;}
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) .tags a {
@@ -2699,6 +2699,8 @@ a[title="Remove"]:before {
         height: auto !important;}
 
 	#user .thin form {order: 1}
+    #user .thin >h2 ~form[method="post"] { /* notifications */
+        order: unset;}
 	#user .box {order: 2}
 
 	#user .sidebar img {width: inherit;}
@@ -3118,6 +3120,7 @@ a[title="Remove"]:before {
         white-space: nowrap;
         line-height: 26px;
         margin-left: 5px;}
+    #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table td.label, /* notifications */
     #user .thin >h2 +form#userform >table.border td.label,
     #shop_search #item_search #advanced_search td.label {
         background-color: var(--c-edition);
@@ -3134,6 +3137,7 @@ a[title="Remove"]:before {
         margin-bottom: 5px;
         width: 100% !important;}
     
+    #user img[alt="RSS feed"], /* notifications */
     .inventory #wrapper .trash_icon {
         max-width: unset !important;
         height: 18px !important;}
