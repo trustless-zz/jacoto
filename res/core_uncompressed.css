@@ -5047,6 +5047,7 @@ h2 .username_badges {
 .sidebar .addtagsdiv input#tags {
     width: 100% !important;
     margin-top: 8px;}
+#collections .sidebar ul.postlist,
 #better table#collection_files,
 #artist .center.thin >h2 +.box.pad div:last-child input[type="submit"],
 .sidebar .addtagsdiv input[type="submit"] {
@@ -5485,6 +5486,8 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     position: inherit;
     font-size: 21px;
     line-height: 21px;}
+#description #groupplatform,
+.sidebar #groupplatform,
 #users_reviews #groupplatform,
 #wiki #groupplatform,
 #wrapper .box.news_post #groupplatform,
@@ -5505,6 +5508,8 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     position: inherit;
     font-size: 15px;
     line-height: var(--p-lh);}
+#description #groupplatform a,
+.sidebar #groupplatform a,
 #wrapper #users_reviews #groupplatform a,
 #wiki #groupplatform a,
 #wrapper .box.news_post #groupplatform a,
