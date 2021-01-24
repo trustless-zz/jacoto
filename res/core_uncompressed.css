@@ -1354,7 +1354,7 @@ table#uploadsrow a,
 table#snatchesrow a,
 table#likesrow a,
 
-.colhead_dark .username_badges a,
+td .username_badges a,
 h2 .username_badges a {
     display: inline-block;}
 
@@ -4910,7 +4910,7 @@ li:not(.suggested_similar) .similar_votes >span {
 span.secondary_class {
     line-height: 18px;}
 /*#users_reviews */.head .username_badges,
-.colhead_dark .username_badges {
+td .username_badges {
     margin-left: 3px;}
 
 #wrapper .username_badges img[alt="Warned"],
@@ -10896,8 +10896,9 @@ td .log_green {
 #user .thin >h3:first-child +.linkbox +form input[type="text"] {
     width: calc(100% - 117px);}
 #user .thin >h3:first-child +.linkbox +form ~.box.pad.center {
-    width: -moz-fit-content;
-    width: fit-content;
+    /*width: -moz-fit-content;
+    width: fit-content;*/
+    display: table;
     padding: 0;
     margin: 0 auto;}
 
