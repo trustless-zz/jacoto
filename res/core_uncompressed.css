@@ -12135,7 +12135,7 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 	line-height: normal;}
 
 /* Buttons */
-#wrapper #content #trading_panel button {
+#wrapper #content #trading_panel >button { /* > so it doesn't mess with the whutbbcode */
 	cursor: pointer;
 	height: 45px;
 	width: 150px;

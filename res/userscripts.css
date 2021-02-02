@@ -3,6 +3,7 @@ WhutBBCode
 https://greasyfork.org/en/scripts/1024-whutbbcode
 https://github.com/hateradio/wbb
 ***/
+/* #wrapper #content is needed to override GGn's trade.css */
 #wrapper .wbbcode {
     width: auto !important;}
 .wbbcode ~.bbbutt,
@@ -43,9 +44,11 @@ https://github.com/hateradio/wbb
     width: fit-content;
     margin: .2em auto;}
 
-.wbbcode.wbbimgless .whutbbutton {
+#wrapper #content .wbbcode.wbbimgless .whutbbutton {
     min-width: 22px;
     width: auto;
+    height: auto;
+    float: unset;
     text-shadow: 1px 1px 1px var(--c-body);
     border-radius: unset;
     -webkit-box-shadow: var(--p-header-shdw);
@@ -58,20 +61,20 @@ https://github.com/hateradio/wbb
     color: var(--c-txt);
     margin: 3px;
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);}
-.wbbcode.wbbimgless .whutbbutton:hover {
+#wrapper #content .wbbcode.wbbimgless .whutbbutton:hover {
     -webkit-box-shadow: none;
     box-shadow: none;
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
-.wbbcode.wbbimgless .whutbbutton:active {
+#wrapper #content .wbbcode.wbbimgless .whutbbutton:active {
     background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
 
-.wbbcode.wbbimg .whutbbutton {
+#wrapper #content .wbbcode.wbbimg .whutbbutton {
     text-shadow: unset;
     width: auto;
     height: auto;
     vertical-align: middle;
-    display: /*inline-*/block;
+    display: block;
     margin: 2px 3px;
     padding: 1px;
     align-self: center;
@@ -80,7 +83,7 @@ https://github.com/hateradio/wbb
     border: unset;
     border-radius: unset;
     box-shadow: unset;}
-.wbbcode.wbbimg .whutbbutton.wbbpressed {
+#wrapper #content .wbbcode.wbbimg .whutbbutton.wbbpressed {
     background-color: var(--c-box);}
 
 .wbbcode .wbbshortcut {
