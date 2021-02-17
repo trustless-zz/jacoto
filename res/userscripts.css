@@ -6,6 +6,9 @@ https://github.com/hateradio/wbb
 /* #wrapper #content is needed to override GGn's trade.css */
 #wrapper .wbbcode {
     width: auto !important;}
+#inbox h2 +#messageform >.box.pad .wbbcode.wbbimg {
+    margin: 7px auto -10px auto !important;}
+#inbox h2 +#messageform >.box.pad .wbbcode.wbbimg ~br,
 .wbbcode ~.bbbutt,
 .wbbemot img[alt=":loveflac:"] {
     display: none;}

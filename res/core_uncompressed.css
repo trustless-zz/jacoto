@@ -4374,6 +4374,8 @@ body:not(#upload) #artist_tr + tr td.label,
 
 #friends .search_form .label strong,
 
+#user #trades_table .colhead strong, /* Your Trades */
+
 #content >.torrent_notifications .colhead strong,
 #staff .thin >.box.pad table .colhead strong,
 #torrents .thin >h2:first-child +.center td.label strong,
@@ -6181,6 +6183,7 @@ tr.likes td[id^="likers_"]:hover {
     opacity: 1;
     transition-delay: .2s;}
 
+#user .thin >h2 +.linkbox +.box.pad:last-child, /* trying to target Your Trades page specifically */
 .ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button span,
 #better .thin >.center:first-child td,
 #bookmarks table.layout td#drag_drop_textnote,
@@ -6650,6 +6653,7 @@ input[type="radio"]:active {
     width: 100%;
     height: 100%;
     margin: 0;}
+#user .thin >h2 +.linkbox +.box.pad:last-child,
 #forums .forum_latest >.search.box.pad #forumlist,
 #forums .forum_latest >.search.box.pad #otherop,
 #forums #newthreadtext,
@@ -11536,6 +11540,8 @@ table.adventure_table h3 {
 
 /*** codeblock ***/
 code.hljs {
+    font-size: 14px;
+    line-height: var(--p-lh);
     padding: 8px;
     color: var(--c-hljs-txt);
     background: var(--c-hljs-bcg);}
@@ -11545,6 +11551,7 @@ pre >code.hljs {
     overflow: visible;}
 pre >code.hljs:after,
 pre >code.hljs:before {
+    text-transform: uppercase;
     height: 1em;
     line-height: 1em;
     font-size: 16px;
@@ -13517,3 +13524,28 @@ table.diff.split_view tr:first-child td {
         padding: 0 17px 0 0;}
 }
 /** /firefox only **/
+
+
+
+
+/* --- reply box reorder wip ---
+#staffpm #inbox,
+#torrent_comments,
+#inbox .thin {
+    display: flex;
+    flex-flow: column;}
+#inbox .thin >h2:first-child {
+    order: -4;}
+#staffpm #inbox .linkbox:first-child,
+#torrent_comments .linkbox:first-child,
+#inbox .thin .linkbox:nth-child(2) {
+    order: -3;}
+#staffpm #inbox >h3,
+#inbox .thin .box.vertical_space:last-of-type +h2 {
+    order: -2;
+    display: none;}
+#staffpm #inbox >.box.pad,
+#torrent_comments #reply_box,
+#inbox h2 +#messageform {
+    order: -1;}
+*/
