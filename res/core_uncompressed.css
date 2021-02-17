@@ -2486,6 +2486,7 @@ input[disabled] {
     line-height: var(--p-lh);}
 
 #slides {
+    background-color: var(--c-tgroup); /* flex oversize *fix* */
     padding: 10px 0 0 0;}
 #slides >.head {
     margin: -10px 0 0 0;}
@@ -2533,6 +2534,10 @@ input[disabled] {
 #slides .slides_container:after {
     right: 0;
     transform: scaleX(-1);}
+
+#slides .slides_container {
+    background-color: var(--c-box);
+    padding-bottom: 3px;}
 
 #dailygazelle img,
 #slides img {
@@ -4222,7 +4227,7 @@ a#tag_show\/hide:active,
 #user #userform #platcheckbox +a:active,
 .filter_torrents.advanced .flright:active {
     background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
-#slides >ul.nobullet,
+/*#slides >ul.nobullet,*/
 #user #content >span[style="float: right;"]:first-child /*sharescore*/{
     margin-top: 3px;}
 #slides >ul.nobullet {
@@ -5784,7 +5789,7 @@ form[name="filter"] h3,
 
 #slides a.prev,
 #slides a.next {
-    margin-top: 12px;}
+    margin-top: 9px;}
 
 /* #log .thin >.header +.box.pad,
 table.gazellepic,
