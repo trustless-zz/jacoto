@@ -164,6 +164,7 @@ img[title="Seeders"],
 td img[alt="Ratio"],
 #top10 img[alt="Up Votes"],
 #top10 img[alt="Down Votes"],
+#changelog td.issue_title +td >span:before,
 /*tr.participated >td:nth-child(2):before,*/
 .headerSort span:before {
     -webkit-mask-position: center;
@@ -518,6 +519,7 @@ a[title="Remove"],
 .xdsoft_datetimepicker .xdsoft_next,
 .next {
     transform: scaleX(-1);}
+#changelog td.issue_title +td >span:before,
 .colhead_dark a[onclick^="Quote"],
 .head a[onclick^="Quote"] {
     -webkit-mask-image: url('icons/quote.svg');
@@ -1510,9 +1512,9 @@ div#fight_skill_points_assign >table,
 #userhistory #content >table,
 #better .thin >h3 +.box.pad,
 #tools #content >span +form[action="tools.php"]:nth-child(2),
-#better #content >h2 +p:nth-child(2),
+#better #content >h2 +p,
 #better table[style="width: 600px;"],
-#better #content >h2 +.box.pad:nth-child(2),
+#better #content >h2 +.box.pad,
 /*#better .thin >.center:first-child,
 #better .thin >.center +table:nth-child(2),*/
 
@@ -1523,6 +1525,9 @@ div#fight_skill_points_assign >table,
 #users_reviews >h2 +.box.pad,
 
 #tools #content >.header +.thin:last-child,
+
+#changelog .thin >.header +.box.pad,
+#changelog .thin >.header ~table.border,
 
 #tools #content >p,
 #better .thin >div,
@@ -1581,7 +1586,7 @@ div#fight_skill_points_assign >table,
 #tools #mastergroups #searchgroups,
 #torrents #content >#newlink,
 #torrents #content >#currentlinks,
-#better #content >h2 +p:nth-child(2),
+#better #content >h2 +p,
 #collections .thin >h2:first-child +form:last-child /* edit description page */ {
     padding: 10px;}
 .sidebar .body {
@@ -1957,6 +1962,10 @@ a#tag_show\/hide,
 
 .users_review +[data-readmore-toggle]:before,
 
+#collections .box.box_coltags li,
+
+#changelog .label_entity,
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -2007,7 +2016,6 @@ img {
 #index #freeleech .group_torrent,
 
 .sidebar .box.box_pack .body.center,
-
 
 #searchforum tr,
 #searchforum tbody,
@@ -2082,6 +2090,7 @@ td img[alt="Ratio"],
     position: relative;
     overflow: hidden;}
 
+#changelog .sidebar .box.issues_labels li a,
 #users_reviews .delete_review a.remove_review,
 #deletereview a,
 #grouplinks,
@@ -2372,12 +2381,13 @@ input[disabled] {
     left: 6px !important;}
 
 /** close/expand head **/
-#index #recommended .head,
-.box.news_post .head {
+#index .main_column .head/*,
+.box.news_post .head*/ {
     position: relative;
     display: flex;}
-.box.news_post .head .newsdate,
+.box .head .newsdate,
 .box.news_post .head .time {
+    font-weight: normal;
     font-size: 14px;
     line-height: 15px;
     position: absolute;
@@ -2512,6 +2522,8 @@ input[disabled] {
 #staffpm #inbox >form#messageform >h3,
 #forums .linkbox.linkbox_bottom +br +h3,
 
+#changelog .sidebar ul,
+
 #tools table[style="width: 960px; text-align: center;"] .colhead td,
 
 #wrapper .pad img[style^="max-height: 64px; transition: all 0.5s ease-in-out"], /* hidden item */
@@ -2618,6 +2630,7 @@ table#grouplinks #curlinkedgroup,
 #recommended #vanityhouse tbody {
     display: block;
     padding: 5px 10px;}
+#changelog .issue_title .sub_info,
 #recommended #vanityhouse tr {
     display: flex;
     flex-flow: row wrap;
@@ -3134,7 +3147,7 @@ li.graph {
 .colhead,
 .colhead_dark {
     background: var(--p-head-grdnt);}
-#manage_collage_table .colhead th,
+/*#manage_collage_table */.colhead th,
 .colhead td,
 .colhead_dark td {
     font-size: var(--p-head);
@@ -3147,6 +3160,7 @@ li.graph {
 #manage_collage_table .colhead >th:first-child,
 #tools .thin >table .colhead >td:first-child,
 .colhead >td:first-child,
+.colhead >th:first-child,
 .colhead_dark >td:first-child {
     padding-left: 10px;}
 .torrent_table tr td.center {
@@ -3632,8 +3646,20 @@ td img[alt="Ratio"],
     /*background-color: var(--c-tag);*/
     color: var(--c-text-s);
     /*visibility: visible;*/}
+#changelog .sidebar .box.issues_labels li:not(:last-child),
+#changelog .labels a:not(:last-child),
 .tags a:not(:last-child) {
     margin-right: 6px;}
+#changelog .sidebar .box.issues_labels ul,
+#changelog .labels {
+    display: flex;
+    flex-flow: row wrap;}
+#changelog .sidebar .box.issues_labels ul {
+    margin-bottom: -5px;}
+#changelog .sidebar .box.issues_labels li {
+    margin-bottom: 5px;
+    padding: 0;
+    display: inline-block;}
 tr:hover .tags a {
     background-color: var(--c-tag);}
 #better tr.torrent.torrent_row:hover .tags a,
@@ -3654,6 +3680,62 @@ table#requests_list         tr:hover .tags a {
 #wrapper #content .tags a:hover {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
+
+#changelog .label_entity.closed {
+     color: var(--c-box);
+     background-color: var(--c-text-s);}
+#changelog .label_entity.opened {
+     color: var(--c-box);
+     background-color: var(--c-on);}
+
+#changelog .label_entity {
+    white-space: nowrap;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1em;
+    padding: 2px 3px;}
+#changelog .labels a {
+    margin-top: 4px;}
+#changelog .labels a,
+#changelog .search_form #labels_all >td >label {
+    display: inline-block;}
+#changelog .issue_title .opened_time {
+    order: 9;
+    display: flex;
+    flex-flow: row;
+    clip-path: polygon(
+        0 0,
+        calc(100% - 60px) 0,
+        calc(100% - 60px) 100%,
+        0% 100%);
+    margin: -8px -50px 0 auto;}
+#changelog .issue_title .opened_time span.time {
+    order: -9;
+    margin: auto 20px 0 0;
+    font-size: 13px;
+    line-height: var(--p-lh);
+    color: var(--c-text-s);}
+#changelog table.border th:nth-child(2) {
+    width: 215px;}
+#changelog td.issue_title +td .sub_info {
+    font-size: 13px;
+    line-height: var(--p-lh);
+    margin-top: 4px;}
+#changelog td.issue_title +td >span:before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-left: 5px;
+    vertical-align: bottom;
+    transform: scaleX(-1);}
+#changelog td.issue_title +td >span:after {
+    content: attr(title);
+    display: inline-block;
+    font-size: 14px;
+    line-height: var(--p-lh);
+    clip-path: polygon(77px 0, 100% 0, 100% 100%, 77px 100%);
+    margin-left: -74px;}
 
 .thin.torrent_history .tags {
     color: var(--c-text-s);
@@ -3983,6 +4065,7 @@ h2#username span#tip_user,
 .box.box_likes.box_torrents span.likes_icon.flright,
 .avatar >div,
 .collage_images,
+#changelog td.issue_title +td >span,
 .torrent_table tr.pad td >.linkbox a[href*="action=torrentrevert"],
 #torrent_table .group/*.discog*/ td span[style="float:right;"] /* bookmark icon */
 /* /image container size correction */ {
@@ -4381,6 +4464,8 @@ body:not(#upload) #artist_tr + tr td.label,
 
 #user #trades_table .colhead strong, /* Your Trades */
 
+#changelog form.search_form td.label strong,
+
 #content >.torrent_notifications .colhead strong,
 #staff .thin >.box.pad table .colhead strong,
 #torrents .thin >h2:first-child +.center td.label strong,
@@ -4437,6 +4522,7 @@ body:not(#upload) #artist_tr + tr td.label,
 .torrent_details .torrent_table >tbody >.colhead_dark td.sign {
     min-width: 18px;}
 
+#changelog form.search_form td.label,
 #wiki .thin >.center >form:first-child .label {
     width: 71px;}
 
@@ -5173,6 +5259,7 @@ a[href^="javascript:Vote("] strong:hover,
 #quickreplybuttons input {
     margin: 0 5px;}
 
+#changelog h1#display_name,
 #clans #clan_stats >span[style="float: right;"]:first-child +.box.pad,
 #torrents #content >span[style="float:right;"]:first-child,
 #tools .thin >#recommended >.head.colhead_dark:first-child,
@@ -6597,6 +6684,7 @@ a[onclick="BBCode.spoiler(this);"] {
     /* cursor: default !important; */}
 .calendar a[style="color: white;"] {
     color: var(--c-anchor) !important;}
+#changelog a:hover .label_entity,
 .calendar a[style="color: white;"]:hover {
     color: var(--c-anchor-hvr) !important;
     background-color: var(--c-anchor-hvr-bcg) !important;}
@@ -6812,6 +6900,10 @@ input[type="radio"]:active {
 
 /*#users_reviews >.flextable:before,*/
 
+#changelog .thin >.header +.box.pad:before,
+
+#changelog .box.description_div:before,
+
 .thin.torrent_history >form#torrent_history_search:before,
 #user .thin >h2:first-child +.center:before,
 #rules .thin >form.search_form:before,
@@ -6832,8 +6924,8 @@ input[type="radio"]:active {
 #wiki .thin >.center >form:first-child:before,
 .permissions:before,
 #tools .thin >.box.pad:first-child:before,
-#better #content >h2 +p:nth-child(2):before,
-#better #content >h2 +.box.pad:nth-child(2):before,
+#better #content >h2 +p:before,
+#better #content >h2 +.box.pad:before,
 #better .thin >.center:first-child:before,
 #tools #content >p:before,
 #friends #content .search_form:before,
@@ -6866,14 +6958,16 @@ input[type="radio"]:active {
 #user #wrapper .invitetree.pad:before {
     content: 'Invite Tree';}
 #tools #content >p:before,
-#better #wrapper #content >h2 +p:nth-child(2):before,
+#better #wrapper #content >h2 +p:before,
 #user #wrapper .thin >.header:first-child +.box.pad:before {
     content: 'Info';}
 #user #wrapper .thin >.header:first-child +.box.pad +.box.pad:before {
     content: 'Send invite';}
+#changelog .box.description_div:before,
 #inbox .thin[xmlns] >#messageform:before {
     margin: 0;
-    width: calc(100% - 20px);
+    width: calc(100% - 20px);}
+#inbox .thin[xmlns] >#messageform:before {
     content: 'New message';}
 #wrapper #crafting_recipes:before {
     margin: 0;
@@ -7074,6 +7168,7 @@ input[type="radio"]:active {
     border-right: 1px solid var(--c-main-brdr);
     border-left: 1px solid var(--c-main-brdr);}
 
+#changelog .box.description_div:before,
 #requests .main_column >table:first-child:before { /* also pseudo head */
     content: 'Details';}
 #wrapper .collections_art_display:before {
@@ -7924,6 +8019,7 @@ ul.poll,
 
 #index .sidebar abbr {
     cursor: help;}
+#index .main_column >.box:not([id]) .head, /* <- GGn Show Stats Change News Item */
 .month-picker-year-table .month-picker-title .ui-button,
 #tools .thin >.box .head,
 #stylesheet_stats .head,
@@ -8583,6 +8679,16 @@ span.size5 img {
     margin-bottom: 15px;
     font-weight: bold;
     text-align: center;}
+#collections .box.box_coltags ul {
+    margin: -2px;}
+#collections .box.box_coltags li {
+    padding: 2px;
+    display: flex;
+    flex-flow: row wrap;}
+#collections .box.box_coltags li:hover {
+    background-color: var(--c-tgroup);}
+#collections .box.box_coltags li a:first-child {
+    margin: auto auto auto 0;}
 
 
 #wiki .sidebar ol.navigation_list {
@@ -10483,6 +10589,7 @@ body#user.inventory {}
     width: 100%;
     padding: 0 0 3px 8px;
     margin: 0;}
+#changelog #changelog_comments,
 #permform .submit_container {
 	clear: both;}
 
