@@ -3746,6 +3746,7 @@ table#requests_list         tr:hover .tags a {
     margin-right: 4px;}
 .rating_container:last-of-type {
     margin-right: 8px;}
+.box.screenshots_div #image_block >span,
 .tags_ratings {
     display: flex;
     flex-flow: row;}
@@ -3982,6 +3983,7 @@ a#tag_show\/hide,
 a.toggle_tags,
 a#toggle_css_gallery,
 a#getmorenews,
+#group_nofo_bigdiv a#group_quick_edit,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
 .torrent_table tr.pad td >.linkbox a:not([href*="?action="]),
@@ -4051,10 +4053,10 @@ h3 a[href^="user.php?action=notify_delete&"],
 table#uploadsrow/* td*/,
 table#likesrow/* td*/,
 table#snatchesrow/* td*/,
-#artist .sidebar >.box:first-child >div:last-child,
+/*#artist .sidebar >.box:first-child >div:last-child,
 .box.box_albumart p,
 .box_image_coverart div[align="center"],
-.box_image_avatar div:last-child,
+.box_image_avatar div:last-child,*/
 /*.username_badges,*/
 .username_badges >a,
 h2 a[href^="feeds.php?"],
@@ -4067,10 +4069,21 @@ h2#username span#tip_user,
 .collage_images,
 #changelog td.issue_title +td >span,
 .torrent_table tr.pad td >.linkbox a[href*="action=torrentrevert"],
+#group_nofo_bigdiv a#group_quick_edit,
 #torrent_table .group/*.discog*/ td span[style="float:right;"] /* bookmark icon */
 /* /image container size correction */ {
     font-size: 0;
     line-height: 0;}
+
+#artist .sidebar >.box:first-child >div:last-child,
+.box.box_albumart p,
+.box_image_coverart div[align="center"],
+.box_image_avatar div:last-child {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-self: center;}
+
 /*span.username_badges {
     display: inline-block;
     vertical-align: text-bottom;}*/
@@ -4121,6 +4134,7 @@ a[href^="javascript:Vote("] strong:before,
 .similar_votes a[onclick] {
     font-size: 18px;}
 button:hover,
+#group_nofo_bigdiv a#group_quick_edit:hover,
 .ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:hover,
 #wrapper #trading_panel button:hover,
 .alertable button:hover,
@@ -4141,6 +4155,7 @@ a[href^="javascript:Vote("] strong:hover,
     color: var(--c-low);
     background: var(--p-btn-hvr);}
 button:active,
+#group_nofo_bigdiv a#group_quick_edit:active,
 .ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:active,
 #wrapper #trading_panel button:active,
 .alertable button:active,
@@ -4189,6 +4204,7 @@ table#otherop.hidden ~table.otheroptoggle a,
     /*margin-right: 5px;
     line-height: 19px;
     margin-top: 3px;*/}
+#group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit,
 body /*#reviewrow a*/#expand_review,
 body /*#reviewrow a*/#load_edit_review,
 body #load_edit_review_dialog,
@@ -4254,6 +4270,7 @@ table#otherop.hidden:not([style="display: table;"]) ~table.otheroptoggle a:befor
 table#otherop.hidden ~table.otheroptoggle a:before,
 a#toggle_css_gallery:before,
 a#getmorenews:before,
+#group_nofo_bigdiv a#group_quick_edit:before,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:before,
 #taglist:not(.hidden) ~table a.toggle_tags:before,
 #taglist.hidden ~table a.toggle_tags:before,
@@ -4281,6 +4298,7 @@ table#otherop.hidden ~table.otheroptoggle a:hover,
 a.toggle_tags:hover,
 a#toggle_css_gallery:hover,
 a#getmorenews:hover,
+#group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit:hover,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
 a#tag_show\/hide:hover,
 #user #userform #platcheckbox +a:hover,
@@ -4304,6 +4322,7 @@ button.alertable-cancel:active,
 table#otherop.hidden ~table.otheroptoggle a:active,
 a#toggle_css_gallery:active,
 a#getmorenews:active,
+#group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit:active,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
 a.toggle_tags:active,
 a#tag_show\/hide:active,
@@ -5074,7 +5093,7 @@ h2 .username_badges {
     height: 100%;}
 .box_game_ratings >.body >div {
     width: calc(100% / 3);
-    display:flex;
+    display: flex;
     align-items:center;}
 #torrents .ratings {
     height: 22px;
@@ -5209,6 +5228,7 @@ input[type=submit]:hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
 a#toggle_css_gallery:hover,
 a#getmorenews:hover,
+#group_nofo_bigdiv a#group_quick_edit:hover,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
@@ -5244,8 +5264,9 @@ a[href^="javascript:Vote("] strong:hover,
     -webkit-box-shadow: none;
     box-shadow: none;}
 
+#group_nofo_bigdiv a#group_quick_edit,
 .box.box_coltags .head span[title="Add Tags"] {
-    padding: 0 !important;
+    /*padding: 0 !important;*/
     margin: -4px -5px 0 0;}
 
 #quickreplypreview  {
@@ -5748,6 +5769,11 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     padding-top: 10px;
     padding-bottom: 0;}
 
+#group_nofo_bigdiv textarea#group_description_bbcode {
+    margin: 10px !important;
+    width: calc(100% - 20px);}
+
+
 /** convert ... to head **/
 #calendar #content >h2,
 .tooltipster-content h2,
@@ -5946,6 +5972,9 @@ input[name="year"],
     width: auto !important;}
 #upload .thin form table .colhead:not(:first-child) {
 	border-top: 1px solid var(--c-table-brdr);}
+
+.box.screenshots_div #image_block input[type="url"],
+.box.screenshots_div #image_block input[type="text"],
 .event_form_table #body, /* calendar new */
 .thin >#request_form input[name="title"],
 /* #upload */input#release_title,
@@ -6071,6 +6100,12 @@ input#file {
 #torrents .center.thin >.box.pad input[name="summary"],
 .ongoing_clan_war .large_progress_bar {
     margin-bottom: 8px;}
+.box.screenshots_div #image_block input[value="PTPImg It"] {
+    padding: 5px 10px !important;
+    margin: 0 0 8px 5px !important;}
+.box.screenshots_div #image_block >a[onclick] {
+    margin-top: -41px;
+    left: calc(50% - 30px);}
 tr.likes td,
 .forum_post tr,
 #top10 .thin >div >table.border td[style="text-align:right"] {
@@ -7415,6 +7450,8 @@ input[type="radio"]:active {
 /*#more_news >a:before                                                            {content: 'Get More News';}*/
 .linkbox a[href^="torrents.php?action=redownload&type=hitnruns"]:before         {content: 'Download All HnRs';}
 .linkbox a[href^="user.php?action=notify_handle&label"]:before                  {content: 'Add to notifications';}
+#group_nofo_bigdiv .head a#group_quick_edit:before                              {content: 'Submit';}
+#group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit:before,
 .linkbox a[href^="artist.php?action=edit&artistid"]:before                      {content: 'Edit';}
 .linkbox a[href^="torrents.php?action=linkgroups&"]:before                      {content: 'Link groups';}
 .linkbox a[href^="ajax.php?action=torrentgroup&"]:before                        {content: 'Export to json';}
@@ -7967,6 +8004,7 @@ table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]
 #rules .thin >#actual_rules .before_rules >div,
 #rules .thin >#actual_rules >div {
     padding: 0 0 10px 0 !important;}
+.box.box_coltags .head span[title="Add Tags"],
 #torrents #content >#currentlinks td,
 #rules .thin >#actual_rules >div:last-child {
     padding: 0 !important;}
