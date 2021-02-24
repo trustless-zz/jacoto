@@ -66,6 +66,7 @@ body >#preview-popup img,
 .\33 do {background-image: url(caticons/3do.svg);}
 .android {background-image: url(caticons/android.svg);}
 .applebandaipippin {background-image: url(caticons/applebandaipippin.svg);}
+.appleii {background-image: url(caticons/appleii.svg);}
 .apps {background-image: url();}
 .atari2600 {background-image: url(caticons/atari2600.svg);}
 .atari5200 {background-image: url(caticons/atari5200.svg);}
@@ -237,6 +238,9 @@ body >#preview-popup img,
 .cats_col   +td #groupplatform a[href$="=Apple+Bandai+Pippin"], 
 .collicon   +td #groupplatform a[href$="=Apple+Bandai+Pippin"], 
 .noticon    +td #groupplatform a[href$="=Apple+Bandai+Pippin"] {background-image: url(caticons/applebandaipippin.svg);}
+.cats_col   +td #groupplatform a[href$="=Apple+II"], 
+.collicon   +td #groupplatform a[href$="=Apple+II"], 
+.noticon    +td #groupplatform a[href$="=Apple+II"] {background-image: url(caticons/appleii.svg);}
 .cats_col   +td #groupplatform a[href$="=Atari+2600"], 
 .collicon   +td #groupplatform a[href$="=Atari+2600"], 
 .noticon    +td #groupplatform a[href$="=Atari+2600"] {background-image: url(caticons/atari2600.svg);}

@@ -891,6 +891,10 @@ input[type="search"],
 #friends #content .search_form input[type="text"],
 #users_reviews >h2 +.box.pad input[type="text"],
 
+#image_block >span,
+
+input.weblinks,
+
 #torrents #content >script ~form #torrent_link input[name="internallink"],
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad input[type="text"] {
     width: 100%;}
@@ -2806,6 +2810,7 @@ table.bbcode_table td,
 #nav_donate {
     position: relative;
     order: -2;}
+#image_block >a[onclick],
 #nav_useredit {
     order: -1;}
 
@@ -3010,6 +3015,7 @@ li.graph {
 .amstradcpc,
 .android,
 .applebandaipippin,
+.appleii,
 .apps,
 .atari2600,
 .atari5200,
@@ -3650,6 +3656,7 @@ td img[alt="Ratio"],
 #changelog .labels a:not(:last-child),
 .tags a:not(:last-child) {
     margin-right: 6px;}
+/*#image_block,*/
 #changelog .sidebar .box.issues_labels ul,
 #changelog .labels {
     display: flex;
@@ -3746,7 +3753,8 @@ table#requests_list         tr:hover .tags a {
     margin-right: 4px;}
 .rating_container:last-of-type {
     margin-right: 8px;}
-.box.screenshots_div #image_block >span,
+#image_block >span,
+/*.box.screenshots_div #image_block >span,*/
 .tags_ratings {
     display: flex;
     flex-flow: row;}
@@ -3767,6 +3775,10 @@ form[name="filter"] {
 #forums td.label,
 td.label {
     text-align: right;}
+
+#image_block >span:first-of-type {
+    order: -2;
+    width: calc(100% - 71px);}
 
 /* filter/search td */
 #collections .thin form.search_form td,
@@ -4010,7 +4022,7 @@ table#otherop.hidden ~table.otheroptoggle a,
 #torrents .group_torrent td:not(.edition_info):first-child,
 #torrents #requests.request_table .colhead a,
 #newthreadform #newthreadtext #answer_block,
-#image_block,
+/*.box.screenshots_div*/ #image_block, /* removing brackets, as per usual */
 .box_tags .stats.nobullet div a,
 a[href^="javascript:IndexVote("] strong,
 a[href^="javascript:Vote("] strong,
@@ -4149,7 +4161,7 @@ a[href^="javascript:Vote("] strong:hover,
 #image_block a:hover,
 #newthreadform #newthreadtext #answer_block a:hover,
 .box.box_coltags .pad li a:nth-child(n+2):hover,
-.box.box_coltags .head span[title="Add Tags"] a:hover,
+/*.box.box_coltags .head span[title="Add Tags"] a:hover,*/
 .torrent_table tr.pad td >.linkbox a[href*="action=torrentrevert"]:hover,
 .filelist_title a.brackets:hover {
     color: var(--c-low);
@@ -4170,7 +4182,7 @@ a[href^="javascript:Vote("] strong:active,
 #image_block a:active,
 #newthreadform #newthreadtext #answer_block a:active,
 .box.box_coltags .pad li a:nth-child(n+2):active,
-.box.box_coltags .head span[title="Add Tags"] a:active,
+/*.box.box_coltags .head span[title="Add Tags"] a:active,*/
 .torrent_table tr.pad td >.linkbox a[href*="action=torrentrevert"]:active,
 .filelist_title a.brackets:active {
     background: var(--p-btn-act);}
@@ -4204,6 +4216,7 @@ table#otherop.hidden ~table.otheroptoggle a,
     /*margin-right: 5px;
     line-height: 19px;
     margin-top: 3px;*/}
+#wrapper .box.box_coltags .head span[title="Add Tags"] a,
 #group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit,
 body /*#reviewrow a*/#expand_review,
 body /*#reviewrow a*/#load_edit_review,
@@ -4280,6 +4293,7 @@ a#tag_show\/hide:before,
 .filter_torrents.advanced .flright:after {
     font-size: 14px;
     line-height: 1em;}
+#wrapper .box.box_coltags .head span[title="Add Tags"] a:hover,
 body /*#reviewrow a*/#expand_review:hover,
 body /*#reviewrow a*/#load_edit_review:hover,
 body #load_edit_review_dialog:hover,
@@ -4305,6 +4319,7 @@ a#tag_show\/hide:hover,
 .filter_torrents.advanced .flright:hover {
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+#wrapper .box.box_coltags .head span[title="Add Tags"] a:active,
 body /*#reviewrow a*/#expand_review:active,
 body /*#reviewrow a*/#load_edit_review:active,
 body #load_edit_review_dialog:active,
@@ -4548,10 +4563,12 @@ body:not(#upload) #artist_tr + tr td.label,
 .screenshots {
     display: flex;
     flex-flow: wrap;
-    margin-bottom: -10px;}
+    /*margin-bottom: -10px;*/}
 .screenshots a {
-    width: calc(25% - (30px / 4));
-    margin: 0 10px 10px 0;
+    /*width: calc(25% - (30px / 4));
+    margin: 0 10px 10px 0;*/
+    width: calc(25% - 10px);
+    margin: 5px;
     align-self: center;
     cursor: default;}
 #css_gallery .preview_wrapper:nth-child(4n),
@@ -4656,12 +4673,16 @@ strong.mature +strong +br,
 
 #menu #nav_index,
 
+.pad.add_tags >br,
+
 #footer >br,
 #clans #clan_stats >br,
 
 .tags a[href="?tags="],
 
 .global_buffs .buff_text >br,
+
+#image_block >br,
 
 #artist td.edition_info ~td, /* torrent checked/unchecked leftover */
 
@@ -4724,7 +4745,7 @@ strong.mature +strong +br,
 .similar li span.similar_votes {
     display: flex;
     flex-flow: row;
-    margin-top: 8px;
+    margin: 8px 0 2px 0;
     justify-content: center;}
 .similar_div .head .flright {
     width: calc(100% - 180px);
@@ -5113,7 +5134,7 @@ h2 .username_badges {
     padding: 0 0 4px 0;}
 .sidebar #weblinksdiv .body.center {
     padding: 4px 4px 0 4px;
-    text-align: left;}
+    /*text-align: left;*/}
 .sidebar #weblinksdiv .body.center a {
     width: 48px;
     height: 48px;
@@ -5127,11 +5148,12 @@ h2 .username_badges {
     height: 100%;
     /*padding-top: 100%;*/}
 
+.pad.add_tags .field_div,
 .sidebar .box_freeleech form {
     display: flex;
     flex-flow: row;
-    justify-content: space-between;
-    margin-top: 8px;}
+    justify-content: space-between;}
+.pad.add_tags .field_div input[type="text"],
 .sidebar .box_freeleech form input[type="number"] {
     width: calc(100% - 58px);}
 
@@ -5163,6 +5185,7 @@ h2 .username_badges {
 .sidebar .addtagsdiv input#tags {
     width: 100% !important;
     margin-top: 8px;}
+.sidebar .box_freeleech form,
 #collections .sidebar ul.postlist,
 #better table#collection_files,
 #artist .center.thin >h2 +.box.pad div:last-child input[type="submit"],
@@ -5973,6 +5996,8 @@ input[name="year"],
 #upload .thin form table .colhead:not(:first-child) {
 	border-top: 1px solid var(--c-table-brdr);}
 
+#image_block input[type="url"],
+#image_block input[type="text"],
 .box.screenshots_div #image_block input[type="url"],
 .box.screenshots_div #image_block input[type="text"],
 .event_form_table #body, /* calendar new */
@@ -6012,7 +6037,7 @@ input[name="year"],
     width: 165px;}
 #torrents .center.thin >.box.pad form input[name="image"],
 #upload input#image {
-    width: calc(100% - 95px);}
+    width: calc(100% - 93px);}
 #upload #weblinks tr td:nth-child(3) {
     padding-left: 20px;}
 #upload input#trailer {
@@ -6023,7 +6048,7 @@ input[name="year"],
     margin-bottom: 2px !important;}
 #image_block input[type="url"],
 #image_block input[type="text"] {
-    width: calc(100% - 160px) !important;}
+    /*width: calc(100% - 160px) !important;*/}
 #image_block ~div input[type="submit"],
 #newthreadform #newthreadtext #answer_block br +input/*,
 #upload td#image_block input[type="text"]:not(#screen0),
@@ -6092,6 +6117,8 @@ input#file {
 .ongoing_clan_war td.label,
 #torrents .center.thin >.box.pad #image_block {
 	text-align: left;}
+#image_block >a[onclick],
+.pad.add_tags .field_div,
 #torrents .torrent_edit >.thin select#groupremasters,
 #image_block >span input,
 /*#image_block >a[onclick],*/
@@ -6103,9 +6130,9 @@ input#file {
 .box.screenshots_div #image_block input[value="PTPImg It"] {
     padding: 5px 10px !important;
     margin: 0 0 8px 5px !important;}
-.box.screenshots_div #image_block >a[onclick] {
+/*.box.screenshots_div #image_block >a[onclick] {
     margin-top: -41px;
-    left: calc(50% - 30px);}
+    left: calc(50% - 30px);}*/
 tr.likes td,
 .forum_post tr,
 #top10 .thin >div >table.border td[style="text-align:right"] {
@@ -6510,6 +6537,7 @@ tr.likes td[id^="likers_"]:hover {
     background-color: var(--c-box);}
 #wrapper #content table.bbcode_table td {
 	border: 1px solid var(--c-table-brdr);}
+.screenshots_div .body,
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td,
 #running_freeleech td.center.cats_col,
 #inbox .colhead >td:first-child,
@@ -7135,6 +7163,7 @@ input[type="radio"]:active {
     z-index: 2;
     margin: 3px 3px 3px 2px;}
 
+#image_block,
 .profile #community_stats:not([style="display: none;"]) {
     display: flex !important;}
 .profile #community_stats {
@@ -8309,6 +8338,7 @@ td >img[title="Gold"] {
 #searchforum table,
 #searchthread table {
     display: block;}
+#image_block,
 #searchforum tbody {
     flex-flow: row wrap;}
 #searchthread tr:nth-child(1) {
