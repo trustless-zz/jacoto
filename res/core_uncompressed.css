@@ -3688,6 +3688,11 @@ table#requests_list         tr:hover .tags a {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
 
+.box.screenshots_div #image_block {
+    /*margin: 5px 5px -3px 5px;*/}
+#wrapper #image_block >span:last-child input {
+    margin-bottom: 0 !important;}
+
 #changelog .label_entity.closed {
      color: var(--c-box);
      background-color: var(--c-text-s);}
@@ -6538,6 +6543,7 @@ tr.likes td[id^="likers_"]:hover {
 #wrapper #content table.bbcode_table td {
 	border: 1px solid var(--c-table-brdr);}
 .screenshots_div .body,
+.box.screenshots_div #image_block,
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td,
 #running_freeleech td.center.cats_col,
 #inbox .colhead >td:first-child,
