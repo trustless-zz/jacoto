@@ -3527,6 +3527,8 @@ h3 a[href^="user.php?action=notify_delete&"],
 #users_reviews >h2 +.box.pad,
 .gallery,
 
+#image_block,
+
 #user .thin >h2 ~form[method="post"],
 
 /*.twitter-tweet,*/
@@ -4645,6 +4647,7 @@ body:not(#upload) #artist_tr + tr td.label,
 
 .hidden,
 input.hidden,
+#image_block.hidden,
 .sidebar .addtagsdiv >br,
 .similar_votes img,
 .torrent_table h4,
@@ -6003,8 +6006,8 @@ input[name="year"],
 
 #image_block input[type="url"],
 #image_block input[type="text"],
-.box.screenshots_div #image_block input[type="url"],
-.box.screenshots_div #image_block input[type="text"],
+/*.box.screenshots_div #image_block input[type="url"],
+.box.screenshots_div #image_block input[type="text"],*/
 .event_form_table #body, /* calendar new */
 .thin >#request_form input[name="title"],
 /* #upload */input#release_title,
@@ -7169,7 +7172,8 @@ input[type="radio"]:active {
     z-index: 2;
     margin: 3px 3px 3px 2px;}
 
-#image_block,
+/*#image_block,*/
+#image_block[style="display: block;"],
 .profile #community_stats:not([style="display: none;"]) {
     display: flex !important;}
 .profile #community_stats {
@@ -8344,7 +8348,7 @@ td >img[title="Gold"] {
 #searchforum table,
 #searchthread table {
     display: block;}
-#image_block,
+/*#image_block,*/
 #searchforum tbody {
     flex-flow: row wrap;}
 #searchthread tr:nth-child(1) {
@@ -12764,6 +12768,7 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     border-top: 1px solid var(--c-trowb);}*/
 #upcoming_calendar .calendar-day {
     margin-bottom: 10px;}
+#image_block,
 .calendar .calendar-row {
     width: 100%;
     display: flex;
