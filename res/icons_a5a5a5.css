@@ -546,9 +546,6 @@ img[alt="Banned"] {
 img[alt="Warned"] {
     background-image: url('icons/a5a5a5/warned.svg');}
 
-/** forum post user stats **/
-#forums .forum_post .avatar >div:first-child:after {
-    background-image: url('icons/a5a5a5/show-hor.svg');}
 
 img[alt="RSS feed"] {
     background-image: url('icons/a5a5a5/rss.svg');}

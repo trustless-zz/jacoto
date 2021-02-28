@@ -6265,14 +6265,15 @@ div.breadcrumbs,
 #user .box.box_items #itemsdiv td >div:hover p:last-child,
 #user .box.box_items #itemsdiv td >div:hover >div,
 .forum_post .comment_rating:hover,
-.avatar:hover .forumstat,
+/*.avatar:hover .forumstat,*/
 /* #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
 .forum_post .colhead_dark a.post_id:hover, */
 #forums .forum_signature td > div:hover,
 tr.likes td[id^="likers_"]:hover {
     transition-delay: .3s;}
-
+.avatar:hover .forumstat {
+    transition-delay: .5s;}
 
 /* forum post 'back to top' button */
  #quickreplypreview .colhead_dark #barpreview,
@@ -6302,15 +6303,16 @@ tr.likes td[id^="likers_"]:hover {
     font-weight: 600;
     font-size: 13px;
     line-height: var(--p-lh);
-    padding: 0 15px;
+    padding: 0 0 3px 0;
     margin: 4px auto 0 auto; /* 4px - image container size correction */
     display: block;
-    width: -moz-fit-content;
-    width: fit-content;
+    /*width: -moz-fit-content;*/
+    width: 100%;
     color: var(--c-low);
-    background-repeat: no-repeat;
+    /*background-repeat: no-repeat;
     background-position: right center;
-    background-size: 0 0;
+    background-size: 0 0;*/
+    background: linear-gradient(155deg,var(--c-b3),var(--c-b4)) -150px 100% / 150px 3px no-repeat;
     opacity: .65;}
 #load_edit_review.brackets:before,
 #load_edit_review.brackets:after,
@@ -6341,10 +6343,12 @@ tr.likes td[id^="likers_"]:hover {
 .ui-widget-header:after {
     content: none !important;}
 #forums .forum_post .avatar:hover >div:first-child:after {
-    background-size: 10px 10px;
+    /*background-size: 10px 10px;*/
     opacity: 1;
-    transition-delay: .2s;}
-
+    background-position: 0 100%;
+    transition: all .5s linear;
+    /*transition-delay: .2s;*/}
+    
 #user .thin >h2 +.linkbox +.box.pad:last-child, /* trying to target Your Trades page specifically */
 .ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button span,
 #better .thin >.center:first-child td,
