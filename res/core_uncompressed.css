@@ -6346,7 +6346,7 @@ tr.likes td[id^="likers_"]:hover {
     /*background-size: 10px 10px;*/
     opacity: 1;
     background-position: 0 100%;
-    transition: all .5s linear;
+    transition: all .5s ease-out;
     /*transition-delay: .2s;*/}
     
 #user .thin >h2 +.linkbox +.box.pad:last-child, /* trying to target Your Trades page specifically */
