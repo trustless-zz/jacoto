@@ -970,7 +970,7 @@ a#mh_sort_screenshots_button:active {
 a#steamScreenshotsDo:before {
     content: 'Steam';}
 a#mh_sort_screenshots_button:before {
-    content: 'sort';}
+    content: 'Sort';}
 a#steamScreenshotsDo:before,
 a#mh_sort_screenshots_button:before{
     font-size: 14px;

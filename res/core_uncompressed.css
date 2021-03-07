@@ -3760,6 +3760,9 @@ table#requests_list         tr:hover .tags a {
     margin-right: 4px;}
 .rating_container:last-of-type {
     margin-right: 8px;}
+/*#wrapper #trading_panel div.gold_trade,
+#wrapper #trading_panel .gold_trade .gold_trade_buttons,
+#wrapper #trading_panel .gold_trade .gold_trade_box,*/
 #image_block >span,
 /*.box.screenshots_div #image_block >span,*/
 .tags_ratings {
@@ -6314,6 +6317,8 @@ tr.likes td[id^="likers_"]:hover {
     background-size: 0 0;*/
     background: linear-gradient(155deg,var(--c-b3),var(--c-b4)) -150px 100% / 150px 3px no-repeat;
     opacity: .65;}
+#changelog #search_terms a.brackets:before,
+#changelog #search_terms a.brackets:after,
 #load_edit_review.brackets:before,
 #load_edit_review.brackets:after,
 #load_edit_review_dialog.brackets:before,
@@ -8768,7 +8773,7 @@ span.size5 img {
     display: flex;
     flex-flow: row wrap;}
 #collections .box.box_coltags li:hover {
-    background-color: var(--c-tgroup);}
+    /*background-color: var(--c-tgroup);*/}
 #collections .box.box_coltags li a:first-child {
     margin: auto auto auto 0;}
 
@@ -12269,8 +12274,8 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 /*** Linkbox ***/
 #wrapper #trading_panel .linkbox {
     font-size: inherit;
-    margin-bottom: 5px;
-    padding: 6px;
+    margin: 0 0 5px 0;
+    padding: 5px;
 	width: 100%;
 	text-align: left;}
 
@@ -12381,6 +12386,8 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 
 /* Gold trade boxes */
 #wrapper #trading_panel div.gold_trade {
+    display: flex;
+    flex-flow: row;
     background: var(--p-subcolhead);
 	height: 42px;
 	width: 100%;
@@ -12388,19 +12395,24 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 	text-align: center;}
 
 #wrapper #trading_panel .gold_trade .gold_trade_max {
-    position: absolute;
-    width: 90px;
-    top: 36px;
-    margin: 2px 0;
-    right: 85px;
-	display: block;
+   /* position: absolute;*/
+    display: flex;
+    flex-flow: column;
+    min-width: 90px;
+    /*top: 36px;*/
+    margin: 2px 2px 2px 4px;
+    /*right: 85px;*/
+    order: 2;
 	font-weight: 600;}
 
 #wrapper #trading_panel .gold_trade .gold_trade_box {
+    display: flex;
+    flex-flow: row;
     margin: 0;
+    order: 1;
 	width: calc(100% - 175px);
     height: 42px;
-	float: left;
+	float: unset;
 	border: none;
 	border-radius: 0;}
 
@@ -12422,11 +12434,11 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     padding-left: 26px;}
 
 #wrapper #trading_panel .gold_trade .gold_trade_box_left {
-    margin: 12px 5px 12px 10px;
+    margin: auto 5px auto 10px;
 	height: 18px;
 	width: 18px;
 	position: relative;
-	float: left;
+	float: unset;
 	background-color: unset;}
 
 #wrapper #trading_panel .gold_trade .gold_trade_box_left img {
@@ -12439,7 +12451,7 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 #wrapper #trading_panel .gold_trade .gold_trade_box_right {
 	height: 100%;
 	width: calc(100% - 33px);
-	float: left;
+	float: unset;
 	background-color: unset;}
 #wrapper #trading_panel .gold_trade input#my_gold_trade_amount {
     width: 100%;
@@ -12459,10 +12471,13 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 	-webkit-appearance: none;}
 
 #wrapper #trading_panel .gold_trade .gold_trade_buttons {
-	width: 70px;
-	float: right;
+    display: flex;
+    flex-flow: row;
+    order: 3;
+	width: auto;
+	float: unset;
     height: 28px;
-    margin: 7px 10px 7px 0;}
+    margin: 7px auto 7px 0;}
 #wrapper #trading_panel .gold_trade .gold_trade_buttons a {
     padding: 1px;
     margin-left: 5px;
@@ -13189,6 +13204,10 @@ div#fight_skill_points_assign >table {
 .review_cell .flextable-cell:last-child {
     width: 100%;
     padding: 6px 10px 6px 5px;}
+#wrapper .review_cell img[src="static/common/avatars/default.png"] {
+    background: unset;
+    margin: unset;
+    border: unset;}
 #users_reviews .review_cell .flextable {
     display: flex;
     margin: 0;
@@ -13560,11 +13579,19 @@ img::selection {
 
 
 /** webkit scrollbar **/
+.fancybox-thumbs-y>ul::-webkit-scrollbar-button,
 .xdsoft_time_box::-webkit-scrollbar-button {
     display: none !important;}
+.fancybox-thumbs-y>ul::-webkit-scrollbar,
 .xdsoft_time_box::-webkit-scrollbar {
     height: 10px !important;
     width: 10px !important;}
+.fancybox-thumbs-y>ul::-webkit-scrollbar-thumb {
+    border-radius: 0;}
+.fancybox-thumbs-y>ul::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 0;
+    box-shadow: none;}
 
 ::-webkit-scrollbar-button {
     display: none;}
@@ -13577,12 +13604,14 @@ img::selection {
 ::-webkit-scrollbar-button {
 	border: 1px solid var(--c-tor-row-hvr);}
 
+.fancybox-thumbs-y>ul::-webkit-scrollbar-thumb:vertical,
 ::-webkit-scrollbar-thumb:vertical {
     border-right: 1px solid;
     border-left: 1px solid;
     border-color: var(--c-tor-row-hvr);
     background: var(--p-scroll-grdnt);}
 
+.fancybox-thumbs-y>ul::-webkit-scrollbar-thumb:horizontal,
 ::-webkit-scrollbar-thumb:horizontal {
     border-top: 1px solid;
     border-bottom: 1px solid;
@@ -13613,14 +13642,17 @@ img::selection {
 ::-webkit-scrollbar:hover {
     background-color: var(--c-tgroup);}
 
+.fancybox-thumbs-y>ul::-webkit-scrollbar-thumb:hover,
 ::-webkit-scrollbar-button:hover,
 ::-webkit-scrollbar-thumb:hover,
 ::-webkit-scrollbar:hover {
     border-color: var(--c-body);}
 
+.fancybox-thumbs-y>ul::-webkit-scrollbar-thumb:vertical:hover,
 ::-webkit-scrollbar-thumb:vertical:hover {
     background: var(--p-scroll-grdnt-hvr);}
 
+.fancybox-thumbs-y>ul::-webkit-scrollbar-thumb:horizontal:hover,
 ::-webkit-scrollbar-thumb:horizontal:hover {
     background: var(--p-searchbar-grdnt);}
 
@@ -13650,7 +13682,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=21141
 **/
 /*
 .glow_pulse {
-    animation: glow_pulse 1.35s infinite alternate;}
+    animation: glow_pulse 1.35s ease-in-out infinite alternate;}
 
 @keyframes glow_pulse {
 	0% {text-shadow: unset;}
