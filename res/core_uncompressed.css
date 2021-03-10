@@ -5241,6 +5241,7 @@ textarea {
 textarea:focus {
     outline-width: 1px !important;}
 
+.month-picker.ui-widget-content,
 .review_cell .flextable-cell:first-child img:not(.avatar),
 #css_gallery .preview_image,
 img#authcode,
@@ -12737,7 +12738,7 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     font-size: var(--p-head);
     width: var(--p-head);
     height: var(--p-head);
-    cursor: default;
+    /*cursor: default;*/
     margin: 0;}
 .month-picker-header td,
 .month-picker-header span,
