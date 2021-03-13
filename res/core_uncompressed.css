@@ -670,6 +670,8 @@ td.center.cats_col+td,
 
 /*#calendar #content,*/
 
+.box.userreviews_div,
+
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
 #forums .forum_index            tr:not(.colhead) td:first-child,
@@ -4722,7 +4724,8 @@ strong.mature +strong +br,
 .similar ul {
     min-height: 5px;
     padding: 10px 0 0 0;
-    max-height: 350px;
+    /*max-height: 350px;*/
+    max-height: 380px;
     list-style: none;
     margin: 0px;
     overflow-y: scroll;
@@ -7460,6 +7463,7 @@ input[type="radio"]:active {
 #torrents .linkbox .addbookmark,
 #torrents .linkbox .removebookmark,
 #torrents .linkbox a[href^="torrents.php?action=grouplog&"],
+#torrents .linkbox a[href*="torrents.php?action=revert&"],
 #torrents .linkbox a[href^="torrents.php?action=history&"],
 .linkbox a[href="inbox.php?action=compose"],
 .linkbox a[href="inbox.php?action=sentbox"],
@@ -7562,6 +7566,7 @@ input[type="radio"]:active {
 #torrents .linkbox .addbookmark:before                                          {content: 'Bookmark';}
 #torrents .linkbox .removebookmark:before                                       {content: 'Unbookmark';}
 #torrents .linkbox a[href^="torrents.php?action=grouplog&"]:before              {content: 'View log';}
+#torrents .linkbox a[href*="torrents.php?action=revert&"]:before               {content: 'Revert to this revision';}
 .linkbox a[href^="artist.php?action=history&artistid"]:before,
 .torrent_table tr.pad td >.linkbox a[onclick^="show_history"]:before,
 #torrents .linkbox a[href^="torrents.php?action=history&"]:before               {content: 'View history';}
@@ -10721,7 +10726,7 @@ body#user.inventory {}
     margin: -10px -10px 0 -10px;}
 #tools #wrapper #mastergroups >span[style="float: right"] h3 {
     margin: 0;}
-
+.userreviews span#allreviewslink,
 #tools #mastergroups #searchgroups span[style="float: right;"] {
     position: absolute;
     top: 0;
@@ -13192,10 +13197,14 @@ div#fight_skill_points_assign >table {
     overflow: unset;
     -webkit-box-flex: unset;
     flex-grow: unset;}
-
+.review_cell .flextable-cell:first-child,
+.review_cell .flextable-cell:first-child div {
+    align-self:flex-start;
+    flex-flow: column;
+    display: flex;}
 .review_cell .flextable-cell:first-child {
-    font-size: 0;
-    line-height: 0;
+    /*font-size: 0;
+    line-height: 0;*/
     width: auto;
     padding: 5px;}
 .review_cell .flextable-cell .avatar {
@@ -13335,11 +13344,12 @@ div#fight_skill_points_assign >table {
 #wrapper .users_review[aria-expanded="true"] +[data-readmore-toggle]:before {
     opacity: 0;}
 
-.userreviews tr:last-child:not(:only-child),
+/*.userreviews tr:last-child:not(:only-child),*/
 .users_review +[data-readmore-toggle] {
     background-color: transparent !important;}
 .userreviews tr:last-child:not(:only-child) td {
-    text-align: right;}
+    padding: 0;
+    /*text-align: right;*/}
 
 
 
