@@ -2036,15 +2036,15 @@ table#likesrow tr
     width: 100%;
     display: flex;}
 
-/*#bookmarks tr.group_torrent a.tooltip,*/
+#bookmarks tr.group_torrent a.tooltip,
 img[title="Downloaded"],
 img[title="Uploaded"],
 img[title="Leechers"],
-/*#bookmarks */img[alt="Leechers"],
+#bookmarks img[alt="Leechers"],
 img[title="Seeders"],
-/*#bookmarks */img[alt="Seeders"],
+#bookmarks img[alt="Seeders"],
 img[title="Snatches"],
-/*#bookmarks */img[alt="Snatches"],
+#bookmarks img[alt="Snatches"],
 .torrent_table #user_rating_icon img,
 #index #freeleech .group_torrent >span:first-child a,
 #stats_ratio a,
@@ -3278,26 +3278,16 @@ table.adventure_table .colhead td {
     padding: 4px 5px;
     font-size: 13px;
     line-height: 18px;}
-.noticon    +td >span:first-child,
-.cats_col   +td >span:first-child,
-.collicon   +td >span:first-child,
-.group_torrent td[colspan="3"] >span:first-child,       /* bookmarks.php */
-.torrent_details .group_torrent td:first-child span,    /* torrents.php - game page */
-.torrent_table td[colspan="4"] >span:first-child,       /* torrents.php - search */
-.group_torrent td[colspan="2"] >span:first-child        /* artist.php */
-
-/*#top10 td.center.cats_col +td >span a,
+#top10 td.center.cats_col +td >span a,
 #artist #torrent_table .group_torrent td[colspan="2"] >span:first-child,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child,
 #bookmarks #torrent_table td[colspan="3"] >span:first-child,
 .torrent_details .group_torrent td:first-child span,
 .torrent_table td[colspan="4"] >span:first-child,
-#torrents .torrent_notifications .noticon +td >span:first-child*/ {
-    /*font-size: 0;*/
+#torrents .torrent_notifications .noticon +td >span:first-child {
     position: relative;
     z-index: 1;
     font-size: 0;
-    line-height: 0;
     display: inline-block;
     vertical-align: top;}
 #top10 td.center.cats_col +td >span a,
@@ -3307,15 +3297,7 @@ table.adventure_table .colhead td {
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child a {
     /* cursor: pointer */;}
-.noticon    +td >span:first-child >a,
-.cats_col   +td >span:first-child >a,
-.collicon   +td >span:first-child >a,
-.group_torrent td[colspan="3"] >span:first-child a,     /* bookmarks.php */
-.torrent_details .group_torrent td:first-child span a,  /* torrents.php - game page */
-.torrent_table td[colspan="4"] >span:first-child >a,    /* torrents.php - search */
-.group_torrent td[colspan="2"] >span:first-child a      /* artist.php */
-
-/*#bookmarks #torrent_table td[colspan="3"] >span:first-child a,
+#bookmarks #torrent_table td[colspan="3"] >span:first-child a,
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child >a,
 #artist #torrent_table .group_torrent td[colspan="2"] >span:first-child a,
@@ -3329,9 +3311,7 @@ table.adventure_table .colhead td {
 #downloaded_table           td.center.cats_col +td span:first-child a,
 #extlink_table              td.center.cats_col +td span:first-child a,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a,
-#torrents .torrent_notifications .noticon +td >span:first-child >a*/ {
-    width: 18px;
-    height: 18px;
+#torrents .torrent_notifications .noticon +td >span:first-child >a {
     margin-right: 3px;
     display: inline-block;}
 .torrent_table .show_torrents .show_torrents_link:after {
@@ -4603,7 +4583,6 @@ body:not(#upload) #artist_tr + tr td.label,
     margin: 5px;
     align-self: center;
     cursor: default;}
-#top10 td.center.cats_col +td >span a:last-child,
 #css_gallery .preview_wrapper:nth-child(4n),
 .screenshots a:nth-child(4n) {
     margin-right: 0;}
