@@ -1134,8 +1134,6 @@ a[title="Copy Description"] {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-size: contain;
-    -webkit-mask-image: url(icons/tor/cp.svg);
-    mask-image: url(icons/tor/cp.svg);
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: contain;
