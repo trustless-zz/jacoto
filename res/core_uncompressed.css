@@ -2021,6 +2021,10 @@ img {
 #inbox #messageform +h2 +form >.box.pad tbody,
 #index #freeleech .group_torrent,
 
+#grouplinks,
+#grouplinks tbody,
+#grouplinks tr,
+
 .sidebar .box.box_pack .body.center,
 
 #searchforum tr,
@@ -2370,6 +2374,7 @@ input[disabled] {
 	cursor: default;
     pointer-events: none;
     opacity: .5;
+    filter: grayscale(.4);
     -webkit-box-shadow: none;
     box-shadow: none;}
 
@@ -3011,7 +3016,8 @@ li.graph {
     background-color: #000d6b;
     background-image: linear-gradient(to top, #000d6b 0%, #0038ff 15%, #0078ff 40%, #009fff 65%, #00dfff 100%);}
 
-#torrent_table td.center.cats_col >div[title=""][class=""],
+#torrent_table .center.cats_col >.cats_.tags_0[title="0"],
+#torrent_table .center.cats_col >div[title=""][class=""],
 .\33 do,
 .amigacd32,
 .amstradcpc,
@@ -3278,18 +3284,27 @@ table.adventure_table .colhead td {
     padding: 4px 5px;
     font-size: 13px;
     line-height: 18px;}
-#top10 td.center.cats_col +td >span a,
+.noticon    +td >span:not([id]):first-child,
+.cats_col   +td >span:not([id]):first-child,
+.collicon   +td >span:not([id]):first-child,            /* <- does nothing at the moment */
+.group_torrent td[colspan="3"] >span:first-child,       /* bookmarks.php & collections.php */
+.torrent_details .group_torrent td:first-child span,    /* torrents.php - game page */
+.torrent_table td[colspan="4"] >span:first-child,       /* torrents.php - search */
+.group_torrent td[colspan="2"] >span:first-child        /* artist.php */
+/*#top10 td.center.cats_col +td >span a,
 #artist #torrent_table .group_torrent td[colspan="2"] >span:first-child,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child,
 #bookmarks #torrent_table td[colspan="3"] >span:first-child,
 .torrent_details .group_torrent td:first-child span,
 .torrent_table td[colspan="4"] >span:first-child,
-#torrents .torrent_notifications .noticon +td >span:first-child {
+#torrents .torrent_notifications .noticon +td >span:first-child*/ {
     position: relative;
     z-index: 1;
     font-size: 0;
+    line-height: 0; /* - */
     display: inline-block;
     vertical-align: top;}
+
 #top10 td.center.cats_col +td >span a,
 #artist #torrent_table .group_torrent td[colspan="2"] >span:first-child a,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child aa,
@@ -3297,7 +3312,15 @@ table.adventure_table .colhead td {
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child a {
     /* cursor: pointer */;}
-#bookmarks #torrent_table td[colspan="3"] >span:first-child a,
+
+.noticon    +td >span:not([id]):first-child >a,
+.cats_col   +td >span:not([id]):first-child >a,
+.collicon   +td >span:not([id]):first-child >a,         /* <- does nothing at the moment */
+.group_torrent td[colspan="3"] >span:first-child a,     /* bookmarks.php & collections.php */
+.torrent_details .group_torrent td:first-child span a,  /* torrents.php - game page */
+.torrent_table td[colspan="4"] >span:first-child >a,    /* torrents.php - search */
+.group_torrent td[colspan="2"] >span:first-child a      /* artist.php */
+/*#bookmarks #torrent_table td[colspan="3"] >span:first-child a,
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child >a,
 #artist #torrent_table .group_torrent td[colspan="2"] >span:first-child a,
@@ -3311,7 +3334,9 @@ table.adventure_table .colhead td {
 #downloaded_table           td.center.cats_col +td span:first-child a,
 #extlink_table              td.center.cats_col +td span:first-child a,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >span:first-child >a,
-#torrents .torrent_notifications .noticon +td >span:first-child >a {
+#torrents .torrent_notifications .noticon +td >span:first-child >a*/ {
+    width: 18px;    /* - */
+    height: 18px;   /* - */
     margin-right: 3px;
     display: inline-block;}
 .torrent_table .show_torrents .show_torrents_link:after {
@@ -4583,6 +4608,7 @@ body:not(#upload) #artist_tr + tr td.label,
     margin: 5px;
     align-self: center;
     cursor: default;}
+#top10 .cats_col +td >span:not([id]):first-child >a:last-child,
 #css_gallery .preview_wrapper:nth-child(4n),
 .screenshots a:nth-child(4n) {
     margin-right: 0;}
@@ -5108,10 +5134,11 @@ h2 .username_badges {
     line-height: 36px;}
 
 #wrapper #grouplinks {
+    width: 100%;
     background: var(--p-grouplinks);
     min-height: 38px;}
 #grouplinks a div {
-    opacity: .6;
+    opacity: .55;
     filter: grayscale(.4);
     padding: 3px;
     margin: -3px;}
@@ -8364,6 +8391,7 @@ td >img[title="Gold"] {
 #searchthread table {
     display: block;}
 /*#image_block,*/
+#grouplinks tr,
 #searchforum tbody {
     flex-flow: row wrap;}
 #searchthread tr:nth-child(1) {
