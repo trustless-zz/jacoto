@@ -45,6 +45,7 @@ body >#preview-popup img,
 .Steam {background-image: url("weblinks/a5a5a5/Steam.svg");}
 .Oculus {background-image: url("weblinks/a5a5a5/Oculus.svg");}
 
+#torrents #torrentbrowse #torrent_table .center.cats_col >.cats_.tags_0[title="0"],
 #torrents #torrentbrowse #torrent_table td.center.cats_col >div[title=""][class=""] {
     background-image: url(caticons/missing.svg);}
 .amigacd32 {background-image: url(caticons/a5a5a5/amigacd32.svg);}

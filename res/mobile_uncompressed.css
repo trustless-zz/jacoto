@@ -1480,6 +1480,7 @@
     /* snatched/seeding/etc. stripe */
     tr.group_torrent >td {
         position: unset;}
+    tr.group_torrent td.edition_info,
     tr.group_torrent {
         position: relative;}
     
@@ -1567,7 +1568,7 @@
 	/****Group Links****/
 	#grouplinks {height: auto;}
 	#torrents #wrapper .main_column #grouplinks td {
-        display: table-cell;
+        display: flex;
 		padding: 5px 8px;
 		float: unset;}
 
@@ -1630,7 +1631,7 @@
 		margin-left: -10px;} */
 
 	/****The dropdown menu with DL, RP, ED, etc.****/
-	#torrents .main_column tr.group_torrent td:nth-child(1) span:not(.new_status) {
+	#torrents .main_column tr.group_torrent td:nth-child(1) >span:not(.new_status) {
 		/* color: transparent; */
         position: absolute;
         right: 5px;
@@ -1652,7 +1653,7 @@
         position: absolute;
         right: 4px;} */
     
-	#torrents .main_column tr.group_torrent td:nth-child(1) span:not(.new_status):before {
+	#torrents .main_column tr.group_torrent td:nth-child(1) >span:not(.new_status):before {
         z-index: 2;
         transform: rotate(90deg);
         content: '';
@@ -1668,7 +1669,7 @@
         mask-repeat: no-repeat;
         mask-size: contain;
         background-color: var(--c-txt);}
-    #torrents .main_column tr.group_torrent td:nth-child(1) span:not(.new_status):after {
+    #torrents .main_column tr.group_torrent td:nth-child(1) >span:not(.new_status):after {
         content: '';
         position: absolute;
         z-index: 1;
@@ -1677,10 +1678,10 @@
         top: -5px;
         right: 0;
         background-color: transparent;}
-    #torrents .main_column tr.group_torrent td:nth-child(1) span:not(.new_status):hover:after {
+    #torrents .main_column tr.group_torrent td:nth-child(1) >span:not(.new_status):hover:after {
         background-color: var(--c-anchor-hvr-bcg-obj);}
 
-	#torrents .main_column tr.group_torrent td:nth-child(1) span:not(.new_status):hover {
+	#torrents .main_column tr.group_torrent td:nth-child(1) >span:not(.new_status):hover {
 		height: auto;
 		padding-right: 35px;
         /* max-width: 96px; */
@@ -1689,7 +1690,7 @@
         margin-bottom: 5px;
 		/* background-color: transparent !important */;}
 
-	#torrents .main_column tr.group_torrent td:nth-child(1) span:not(.new_status) a {
+	#torrents .main_column tr.group_torrent td:nth-child(1) >span:not(.new_status) a {
 		display: none;
 		position: relative;
 		z-index: 5;
@@ -1704,7 +1705,7 @@
 		/* border-bottom: 1px var(--darkBlue2) solid !important;
 		color: var(--white); */}
     
-    #torrents .main_column tr.group_torrent td:nth-child(1) span:not(.new_status) a:after {
+    #torrents .main_column tr.group_torrent td:nth-child(1) >span:not(.new_status) a:after {
         content: '';
         position: absolute;
         width: 100%;
@@ -1767,7 +1768,7 @@ a[title="Remove"]:before {
     
     
 
-	#torrents .main_column tr.group_torrent td:nth-child(1) span:not(.new_status):hover a {
+	#torrents .main_column tr.group_torrent td:nth-child(1) >span:not(.new_status):hover a {
 		display:block;
 		/* background:#2b4e66;
 		border:0 solid var(--white); */
@@ -1777,7 +1778,7 @@ a[title="Remove"]:before {
 		text-align: center;
 		/* right: -46px; */}
 
-	#torrents .main_column tr.group_torrent td:nth-child(1) span:not(.new_status):hover a:hover {
+	#torrents .main_column tr.group_torrent td:nth-child(1) >span:not(.new_status):hover a:hover {
 		/* background: var(--darkBlue); */
 		text-decoration: none;}
 
