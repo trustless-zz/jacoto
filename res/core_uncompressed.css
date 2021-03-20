@@ -2360,6 +2360,7 @@ img[style^="max-height: 64px; transition: all 0.5s ease-in-out"],
     -webkit-transition: none !important;
     -o-transition: none !important;
     transition: none !important;}
+.center_poll, /* <- Blank - Show the results! */
 .fancybox-button.disabled,
 .fancybox-button:disabled {
     opacity: .5 !important;
@@ -2595,6 +2596,7 @@ table#grouplinks #curlinkedgroup,
     display: block;
     margin: 8px auto 10px auto;}
 
+.center_poll, /* <- Blank - Show the results! */
 .large_progress_bar .main_bar,
 #center_poll {
     background-image: var(--p-poll-grdnt);
