@@ -3354,6 +3354,48 @@ a[title="Remove"]:before {
     
     #site_style_tr .preview_wrapper {
         width: calc(25% - 13px);}
+    
+    
+    
+    /***Calendar***/
+    #calendar .calendar .calendar-day-np,
+    #calendar #wrapper .calendar .calendar-heading {
+        display: none;}
+    #calendar .calendar tbody,
+    #calendar .calendar .calendar-row,
+    #calendar .calendar .calendar-day {
+        width: 100%;
+        display: flex;}
+    #calendar .calendar .calendar-day {
+        min-height: 50px;
+        flex-flow: row;}
+    #calendar .calendar .day-events >p {
+        margin: 10px auto !important;
+        padding: 5px 0;}
+    #calendar .calendar .day-events {
+        margin: auto;}
+    #calendar .day-events a {
+        padding: 0;
+        width: auto;}
+    #calendar .calendar tbody,
+    #calendar .calendar .calendar-row {
+        flex-flow: column;}
+    #calendar .calendar .day-number {
+        color: var(--c-text-s);
+        height: 100%;
+        order: -9;
+        position: relative;
+        width: 45px;
+        font-size: 35px;
+        margin: auto 10px;}
+    #calendar .calendar .day-events>p:before,
+    #calendar .calendar .day-number:before {
+        content: none;}
+    
+    .ui-widget td.label.small_label {
+        background-color: unset;
+        display: revert;
+        width: auto;}
 }
 
 

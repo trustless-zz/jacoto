@@ -7201,7 +7201,10 @@ input[type="radio"]:active {
 #torrents .torrent_edit td.label,
 #inbox #messageform #quickpost .comp td:first-child {
     vertical-align: top;
-    text-align: right;
+    text-align: right;}
+.ui-widget #event_div td.label,
+#torrents .torrent_edit td.label,
+#inbox #messageform #quickpost .comp td:first-child {
     width: 80px;}
 .filter_torrents.advanced .submit,
 #inbox #messageform #quickpost .comp td:first-child h3 {
