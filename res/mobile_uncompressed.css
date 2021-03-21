@@ -3240,9 +3240,9 @@ a[title="Remove"]:before {
 	#shop #content li.no_items, #loading {margin-left: 50px;}
 /*	#shop_search {display: none;}*/
 
-	.more_info .col_1 {width: 75px;}
-	.more_info #img_box img {max-width: 75px; width: 75px; height: auto;}
-	.more_info .col_2 {left: 75px;}
+	.more_info .col_1 {width: 115px;}
+	.more_info #img_box img {max-width: 115px; width: 115px; height: auto;}
+	.more_info .col_2 {left: 115px;}
 
 	.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable.ui-resizable {width: 100% !important;}
 
@@ -3391,7 +3391,11 @@ a[title="Remove"]:before {
     #calendar .calendar .day-events>p:before,
     #calendar .calendar .day-number:before {
         content: none;}
-    
+    #calendar .change_month_links #last_month {
+        margin-right: 22px;}    
+    .ui-dialog.ui-widget {
+        max-width: calc(100% - 30px);
+        left: 15px !important;}    
     .ui-widget td.label.small_label {
         background-color: unset;
         display: revert;

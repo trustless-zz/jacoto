@@ -4681,6 +4681,7 @@ body:not(#upload) #artist_tr + tr td.label,
 .hidden,
 input.hidden,
 #image_block.hidden,
+#wrapper #content .item.hidden, /* <- 'display: grid;' (pet levels) override*/
 .sidebar .addtagsdiv >br,
 .similar_votes img,
 .torrent_table h4,
@@ -9511,6 +9512,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
     width: 31px;
     color: var(--c-r10);
     text-shadow: 0 0 1px var(--c-r99);}
+
 /* /ONLY needed to make item levels visible again */
 
 
