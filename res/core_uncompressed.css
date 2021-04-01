@@ -7640,6 +7640,7 @@ input[type="radio"]:active {
     background-color: var(--c-box);
     border: 1px solid var(--c-main-brdr);}
 .ui-dialog {
+    max-width: calc(100% - 106px);
     border: 1px solid var(--c-main-brdr);
     padding: 0px;
     -webkit-box-shadow: var(--p-main-shdw);
@@ -9440,6 +9441,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 	left: 2px;} */
 
 /* ONLY needed to make item levels visible again */
+/* grid allows the 'h3:before' to be relative to the '.item' instead of the 'h3' */
 #crafting_panel         .item,
 #backpack               .item,
 #equipment              .item,
@@ -13199,6 +13201,160 @@ div#fight_skill_points_assign >table {
     color: var(--c-blackout-show);}
 #wrapper .redacted_bbcode_show a {
     color: var(--c-blackout-a);}
+
+
+/*** Medals TEMPORARY ***/
+/***************************************************
+********************* MEDALS ***********************
+****************************************************/
+#users_medals.pad:before {
+    content: 'temporary solution, work in progress';
+    color: red;
+    background-color: black;
+    padding: 2px 5px;}
+
+/* Managers */
+.medals_manager .wide_text {
+	width: 99%;}
+
+/* Users Medals Page */
+#users_medals {
+     background: rgba(0, 0, 0, 0.4);
+     border-radius: 15px;
+}
+#users_medals h2 {
+     margin-left: 1rem;
+}
+#users_medals .flextable {
+     width: 93%;
+     margin: 0 auto;
+}
+
+#users_medals .flextable-cell.medal_cell {
+     max-width: 25%;
+     max-height: 200px;
+     min-height: 60px;
+     z-index: 100;
+     position: relative;
+     text-align: center;
+}
+
+#users_medals .medal_name {
+     margin-bottom: 10px;
+}
+
+#users_medals .primary.medal_image_div {
+     position: relative;
+     height: 150px;
+     bottom: 10px;
+}
+#users_medals .primary.medal_image {
+     max-width: 150px;
+     max-height: 150px;
+     position: absolute;
+     bottom: 0;
+     right: 0; left: 0;
+     margin: auto;
+}
+#users_medals .medal_cell.inactive .medal_image {
+     opacity: 65%;
+}
+#users_medals .medal_cell.inactive .medal_name {
+     color: #ababab;
+}
+#users_medals .medal_image_div .drop_shadow {
+     width: 80px;
+     margin: 0 auto;
+     position: absolute;
+     bottom: -5px;
+     left:0; right: 0;
+     z-index: -1;
+     transform: scale(0.9);
+     box-shadow: 0 0 8px 2px #000000;
+}
+
+/* Medal Info Box - On hover */
+#users_medals .medal_info {
+     opacity: 0;
+     z-index: 101;
+     padding: 10px;
+     background: rgba(0, 0, 0, 0.5);
+     color: #fff;
+     border-radius: 10px;
+     overflow-wrap: break-word;
+     transition: opacity .5s;
+}
+
+#users_medals .medal_info .medal_name,
+#users_medals .medal_info .medal_image_div {
+     text-align: center;
+}
+
+#users_medals .medal_info .medal_image_div {
+     margin: 10px 0 10px 0;
+}
+#users_medals .medal_info img.medal_image {
+     max-width: 100px;
+     max-height: 100px;
+}
+#users_medals .medal_info .description_item { margin-bottom: 10px; }
+#users_medals .medal_info .description_item strong { padding-right: 2px; }
+
+#users_medals .medal_cell:hover .medal_info {
+     visibility: visible;
+     opacity: 1;
+     position: absolute;
+     top: 0; left: 0; right: 0; bottom: 0;
+     margin: auto;
+     display: block;
+     overflow-y: scroll;
+     overflow-x: hidden;
+     text-align: left
+}
+
+/* Hover animation */
+#users_medals .primary {
+     opacity: 1;
+     transition: opacity .2s;
+}
+#users_medals .medal_cell:hover .primary {
+     opacity: 0;
+}
+
+/* Style the shelf */
+#users_medals .flextable-cell.flex-shelf {
+     flex-grow: 4;
+     width: 100%;
+     position: relative;
+     top: -55px;
+}
+#users_medals .shelf {
+     position: relative;
+     border-bottom: 40px solid #463112;
+     border-left: 20px solid transparent;
+     border-right: 20px solid transparent;
+     z-index: 0;
+}
+#users_medals .shelf:after {
+     content: '';
+     background: #5f4928;
+     height: 10px;
+     width: calc(100% + 40px); 
+     /*IE9+*/
+     position: absolute;
+     top: 40px;
+     left: 0;
+     right: 0;
+     z-index: 1;
+     margin: 0 -20px;
+}
+
+
+     #users_medals .flextable-cell.medal_cell {
+         max-width: 25%;
+     }
+/*** /Medals ***/
+
 
 
 /*** New Reviews Page ***/
