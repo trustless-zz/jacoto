@@ -3400,6 +3400,13 @@ a[title="Remove"]:before {
         background-color: unset;
         display: revert;
         width: auto;}
+    
+    /*** Medals ***/
+    #users_medals .flextable-cell.medal_cell {
+        max-width: calc(50% - 10px);}
+    #users_medals .medal_info {
+        overflow-y: auto !important;}
+    /*** /Medals ***/
 }
 
 

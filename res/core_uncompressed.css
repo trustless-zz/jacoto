@@ -895,6 +895,10 @@ input[type="search"],
 
 #image_block >span,
 
+.medals_manager .wide_text,
+
+#wiki .sidebar .box.box_addalias input[type="text"],
+
 input.weblinks,
 
 #torrents #content >script ~form #torrent_link input[name="internallink"],
@@ -1378,8 +1382,11 @@ h2 .username_badges a {
     width: 24px;
     height: 24px;
     background-size: 12px 24px;}
+.flleft,
 .prev {
     float: left;}
+#user .box.box_gold .head.colhead_dark >span,
+.flright,
 .next {
     float: right;}
 
@@ -1971,6 +1978,10 @@ a#tag_show\/hide,
 #collections .box.box_coltags li,
 
 #changelog .label_entity,
+
+/*#users_medals .primary,*/
+#users_medals .flextable-cell.medal_cell,
+#users_medals .medal_info,
 
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
@@ -3793,6 +3804,7 @@ table#requests_list         tr:hover .tags a {
 #wrapper #trading_panel .gold_trade .gold_trade_buttons,
 #wrapper #trading_panel .gold_trade .gold_trade_box,*/
 #image_block >span,
+#wiki .sidebar .box.box_addalias .add_form,
 /*.box.screenshots_div #image_block >span,*/
 .tags_ratings {
     display: flex;
@@ -4018,6 +4030,7 @@ input[type=submit],
 .forum_latest .search #cat_list a[onclick],
 .similar_votes a,
 .box_tags .stats.nobullet div a,
+.box.box_info.pad a[title="Delete Alias"],
 a[href^="javascript:IndexVote("] strong,
 a[href^="javascript:Vote("] strong,
 #requests table.border td.nobr:nth-child(2) strong,
@@ -4063,6 +4076,7 @@ table#otherop.hidden ~table.otheroptoggle a,
 #newthreadform #newthreadtext #answer_block,
 /*.box.screenshots_div*/ #image_block, /* removing brackets, as per usual */
 .box_tags .stats.nobullet div a,
+.box.box_info.pad a[title="Delete Alias"],
 a[href^="javascript:IndexVote("] strong,
 a[href^="javascript:Vote("] strong,
 #requests table.border td.nobr:nth-child(2) strong,
@@ -4176,6 +4190,7 @@ a[href^="javascript:Vote("] strong:before,
 #requests table.border td.nobr:nth-child(2) strong:before,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:before,
 .box_tags .stats.nobullet div a:before,
+.box.box_info.pad a[title="Delete Alias"]:before,
 .box.box_coltags .head span[title="Add Tags"] a:before {
     font-size: 18px;
     line-height: 14px;}
@@ -4197,6 +4212,7 @@ a[href^="javascript:Vote("] strong:hover,
 #requests table.border td.nobr:nth-child(2) strong:hover,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:hover,
 .box_tags .stats.nobullet div a:hover,
+.box.box_info.pad a[title="Delete Alias"]:hover,
 #image_block a:hover,
 #newthreadform #newthreadtext #answer_block a:hover,
 .box.box_coltags .pad li a:nth-child(n+2):hover,
@@ -4218,6 +4234,7 @@ a[href^="javascript:Vote("] strong:active,
 #requests table.border td.nobr:nth-child(2) strong:active,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:active,
 .box_tags .stats.nobullet div a:active,
+.box.box_info.pad a[title="Delete Alias"]:active,
 #image_block a:active,
 #newthreadform #newthreadtext #answer_block a:active,
 .box.box_coltags .pad li a:nth-child(n+2):active,
@@ -4234,9 +4251,9 @@ a[href^="javascript:Vote("] strong:active,
     width: 565px;} /*600*/
 
 .flright {
-    float: right;}
+    /*float: right;*/}
 .flleft {
-	float: left;}
+	/*float: left;*/}
 a.toggle_tags,
 #wrapper .forum_latest .search #cat_list a[onclick],
 #user #userform #platcheckbox +a,
@@ -4492,6 +4509,7 @@ body:not(#upload) #artist_tr + tr td.label,
 
 /* #requests table#requests_list tr:not(.colhead_dark) td:not(first-child),
 #torrents .torrent_notifications table.border tr:not(.colhead) td, */
+#users_medals .medal_cell.inactive .medal_name,
 .filter_torrents.advanced td[colspan="7"] {
     color: var(--c-text-s);}
 .torrent_details .torrent_table tr.pad tr td,
@@ -4739,6 +4757,10 @@ strong.mature +strong +br,
 /* forum post 'back to top' button */
 .username_badges:empty,
 
+#users_medals .flextable-cell.flex-shelf,
+#users_medals .medal_image_div .drop_shadow,
+
+
 #artist #requests .colhead_dark a,
 #userhistory .colhead_dark span[id*="bar"],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
@@ -4810,6 +4832,7 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1):before,
 .box_tags .stats.nobullet div a:nth-child(1):before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(2):before {
     content: '-';}
+.box.box_info.pad a[title="Delete Alias"]:before,
 .box_tags .stats.nobullet div a:nth-child(3):before {
     font-size: 14px;
     line-height: 14px;
@@ -5300,6 +5323,7 @@ a#getmorenews:hover,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
+.box.box_info.pad a[title="Delete Alias"]:hover,
 #user #userform #platcheckbox +a:hover,
 a#tag_show\/hide:hover,
 .filter_torrents.advanced .flright:hover,
@@ -7045,6 +7069,7 @@ input[type="radio"]:active {
 #tools #content >p:before,
 #friends #content .search_form:before,
 #torrents #content >#newlink:before,
+#wiki .sidebar .box.box_addalias:before,
 #users_reviews >h2 +.box.pad:before {
     display: block;
     text-align: left;
@@ -7061,6 +7086,8 @@ input[type="radio"]:active {
     content: 'Toolbox';}
 #tools .thin >.box.pad:first-child:before {
     content: 'Chart';}
+#wiki .sidebar .box.box_addalias:before {
+    content: 'Add Alias';}
 /*#wrapper #users_reviews >.flextable:before {
     content: 'Reviews';}*/
 #better #wrapper #content >h2 +.box.pad:nth-child(2):before,
@@ -7501,7 +7528,9 @@ input[type="radio"]:active {
 .linkbox a[href="inbox.php?action=compose"],
 .linkbox a[href="inbox.php?action=sentbox"],
 .linkbox a[href="inbox.php"],
-.linkbox a[href="wiki.php?action=create"] {
+.linkbox a[href="wiki.php?action=create"],
+.linkbox a[href^="wiki.php?action=edit&"],
+.linkbox a[href^="wiki.php?action=revisions&"] {
     /* display: contents; */
     -webkit-transition: all 0s;
     -o-transition: all 0s;
@@ -7599,7 +7628,7 @@ input[type="radio"]:active {
 #torrents .linkbox .addbookmark:before                                          {content: 'Bookmark';}
 #torrents .linkbox .removebookmark:before                                       {content: 'Unbookmark';}
 #torrents .linkbox a[href^="torrents.php?action=grouplog&"]:before              {content: 'View log';}
-#torrents .linkbox a[href*="torrents.php?action=revert&"]:before               {content: 'Revert to this revision';}
+#torrents .linkbox a[href*="torrents.php?action=revert&"]:before                {content: 'Revert to this revision';}
 .linkbox a[href^="artist.php?action=history&artistid"]:before,
 .torrent_table tr.pad td >.linkbox a[onclick^="show_history"]:before,
 #torrents .linkbox a[href^="torrents.php?action=history&"]:before               {content: 'View history';}
@@ -7607,6 +7636,8 @@ input[type="radio"]:active {
 .linkbox a[href="inbox.php?action=sentbox"]:before                              {content: 'Sentbox';}
 .linkbox a[href="inbox.php"]:before                                             {content: 'Inbox';}
 .linkbox a[href="wiki.php?action=create"]:before                                {content: 'Create';}
+.linkbox a[href^="wiki.php?action=edit&"]:before                                {content: 'Contribute';}
+.linkbox a[href^="wiki.php?action=revisions&"]:before                           {content: 'History';}
 
 /*#more_news >a:hover:before,*/
 #slides >.nobullet a:hover:before,
@@ -8011,6 +8042,8 @@ input[class="date_picker"] {
     margin-left: auto;
     margin-right: auto;}
 
+.box.box_info.pad a[title="Delete Alias"],
+#wiki .sidebar .box.box_addalias input[type="submit"],
 #shop_search input[name="setdefault"],
 #better .thin >.center:first-child input[type="submit"],
 #better form#torrentid_input input[type="submit"],
@@ -8092,6 +8125,7 @@ table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]
 #rules .thin >#actual_rules .before_rules >div,
 #rules .thin >#actual_rules >div {
     padding: 0 0 10px 0 !important;}
+#wiki .sidebar .box.box_addalias >div,
 .box.box_coltags .head span[title="Add Tags"],
 #torrents #content >#currentlinks td,
 #rules .thin >#actual_rules >div:last-child {
@@ -8145,6 +8179,7 @@ ul.poll,
 
 #index .sidebar abbr {
     cursor: help;}
+#users_medals .medal_name strong,
 #index .main_column >.box:not([id]) .head, /* <- GGn Show Stats Change News Item */
 .month-picker-year-table .month-picker-title .ui-button,
 #tools .thin >.box .head,
@@ -9269,6 +9304,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #shop .items_shop #items_navigation {
     margin: 0 0 15px 0;}
 
+#users_medals .flextable-cell.medal_cell:hover,
 #wrapper #items_list li.item_li:hover {
     -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
@@ -12860,6 +12896,7 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     width: 100%;
     height: 100%;
     opacity: 0;}
+#users_medals .medal_cell.inactive .medal_image,
 #calendar .day-events >p:hover:before,
 .calendar .day-events >.tooltip:hover:before {
     opacity: .65;}
@@ -13203,156 +13240,147 @@ div#fight_skill_points_assign >table {
     color: var(--c-blackout-a);}
 
 
-/*** Medals TEMPORARY ***/
-/***************************************************
-********************* MEDALS ***********************
-****************************************************/
-#users_medals.pad:before {
-    content: 'temporary solution, work in progress';
-    color: red;
-    background-color: black;
-    padding: 2px 5px;}
+/*** Medals ***/
+
 
 /* Managers */
 .medals_manager .wide_text {
-	width: 99%;}
+	/*width: 100%;*/}
 
 /* Users Medals Page */
 #users_medals {
-     background: rgba(0, 0, 0, 0.4);
-     border-radius: 15px;
-}
+    padding: 0;
+    margin: 0 0 300px 0;
+     /*background: rgba(0, 0, 0, 0.4);
+     border-radius: 15px;*/}
 #users_medals h2 {
-     margin-left: 1rem;
-}
+     /*margin-left: 1rem;*/}
 #users_medals .flextable {
-     width: 93%;
-     margin: 0 auto;
-}
+    display: flex;
+    flex-flow: row wrap;
+    width: calc(100% + 10px);
+    margin: 0 0 0 -10px;
+    padding: 0;}
 
 #users_medals .flextable-cell.medal_cell {
-     max-width: 25%;
-     max-height: 200px;
-     min-height: 60px;
-     z-index: 100;
-     position: relative;
-     text-align: center;
-}
+    position: relative;
+	list-style: none;
+	margin: 0 0 10px 10px;
+	width: 100%;
+	/*min-height: 200px;*/
+	padding: 0;
+	/*float: left;*/
+	display: flex;
+    flex-flow: column;
+    background-color: var(--c-box);
+	-webkit-box-shadow: var(--p-main-shdw);
+	box-shadow: var(--p-main-shdw);
+    border: 1px solid var(--c-main-brdr);
+    max-width: calc(25% - 10px);
+    max-height: 300px;
+    min-height: 60px;
+    /*z-index: 100;*/
+    text-align: center;}
+#users_medals .flextable-cell.medal_cell.inactive .medal_info,
+#users_medals .flextable-cell.medal_cell.inactive {
+    background-color: var(--c-input-obj);}
 
 #users_medals .medal_name {
-     margin-bottom: 10px;
-}
+    vertical-align: middle;
+    font-size: 17px;
+    line-height: 1em;
+    margin: 0;
+    /*max-height: 34px;*/
+    width: calc(100% - 10px);
+    /*position: absolute;
+    top: 0;
+    left: 0;*/
+    padding: 8px 5px;
+    /*font-weight: 600;*/
+    background: var(--p-post-colhead-bcg);
+     /*margin-bottom: 10px;*/}
 
 #users_medals .primary.medal_image_div {
-     position: relative;
-     height: 150px;
-     bottom: 10px;
-}
+    text-align: center;
+    position: relative;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    /*height: auto;
+    width: auto;*/
+    /*bottom: 10px;*/}
 #users_medals .primary.medal_image {
-     max-width: 150px;
-     max-height: 150px;
-     position: absolute;
-     bottom: 0;
-     right: 0; left: 0;
-     margin: auto;
-}
+    max-width: 150px;
+    max-height: 150px;
+    /*position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;*/
+    margin: auto;}
 #users_medals .medal_cell.inactive .medal_image {
-     opacity: 65%;
-}
+     /*opacity: .65;*/}
 #users_medals .medal_cell.inactive .medal_name {
-     color: #ababab;
-}
+     /*color: var(--c-text-s);*/}
 #users_medals .medal_image_div .drop_shadow {
-     width: 80px;
+    /*display: none;*/
+     /*width: 80px;
      margin: 0 auto;
      position: absolute;
      bottom: -5px;
      left:0; right: 0;
      z-index: -1;
      transform: scale(0.9);
-     box-shadow: 0 0 8px 2px #000000;
-}
+     box-shadow: 0 0 8px 2px #000000;*/}
 
 /* Medal Info Box - On hover */
 #users_medals .medal_info {
-     opacity: 0;
-     z-index: 101;
-     padding: 10px;
-     background: rgba(0, 0, 0, 0.5);
-     color: #fff;
-     border-radius: 10px;
-     overflow-wrap: break-word;
-     transition: opacity .5s;
-}
+    display: block;
+    opacity: 0;
+    z-index: 2;
+    padding: 10px;
+    background: var(--c-box);
+    color: var(--c-txt);
+    overflow-wrap: break-word;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    text-align: left;
+    box-sizing: border-box;}
 
-#users_medals .medal_info .medal_name,
 #users_medals .medal_info .medal_image_div {
-     text-align: center;
-}
-
-#users_medals .medal_info .medal_image_div {
-     margin: 10px 0 10px 0;
-}
+    text-align: center;
+    margin: 8px auto 8px auto;}
 #users_medals .medal_info img.medal_image {
-     max-width: 100px;
-     max-height: 100px;
-}
-#users_medals .medal_info .description_item { margin-bottom: 10px; }
-#users_medals .medal_info .description_item strong { padding-right: 2px; }
+    max-width: 100px;
+    max-height: 100px;}
+
+#users_medals .medal_info .medal_name {
+    text-align: center;
+    width: calc(100% + 10px);
+    margin: -10px -10px 10px -10px;}
+#users_medals .medal_info .description_item {
+    margin-bottom: 12px; }
+#users_medals .medal_info .description_item strong {
+    padding-right: 2px; }
 
 #users_medals .medal_cell:hover .medal_info {
-     visibility: visible;
-     opacity: 1;
-     position: absolute;
-     top: 0; left: 0; right: 0; bottom: 0;
-     margin: auto;
-     display: block;
-     overflow-y: scroll;
-     overflow-x: hidden;
-     text-align: left
-}
+    opacity: 1;}
 
 /* Hover animation */
 #users_medals .primary {
-     opacity: 1;
-     transition: opacity .2s;
-}
+     /*opacity: 1;*/}
 #users_medals .medal_cell:hover .primary {
-     opacity: 0;
-}
+     /*opacity: 0;*/}
 
 /* Style the shelf */
 #users_medals .flextable-cell.flex-shelf {
-     flex-grow: 4;
-     width: 100%;
-     position: relative;
-     top: -55px;
-}
-#users_medals .shelf {
-     position: relative;
-     border-bottom: 40px solid #463112;
-     border-left: 20px solid transparent;
-     border-right: 20px solid transparent;
-     z-index: 0;
-}
-#users_medals .shelf:after {
-     content: '';
-     background: #5f4928;
-     height: 10px;
-     width: calc(100% + 40px); 
-     /*IE9+*/
-     position: absolute;
-     top: 40px;
-     left: 0;
-     right: 0;
-     z-index: 1;
-     margin: 0 -20px;
-}
+    /*display: none;*/}
 
-
-     #users_medals .flextable-cell.medal_cell {
-         max-width: 25%;
-     }
 /*** /Medals ***/
 
 
