@@ -3405,6 +3405,10 @@ a[title="Remove"]:before {
     #users_medals .flextable-cell.medal_cell {
         max-width: calc(50% - 10px);}
     #users_medals .medal_info {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         overflow-y: auto !important;}
     /*** /Medals ***/
 }

@@ -13337,15 +13337,15 @@ div#fight_skill_points_assign >table {
     display: block;
     opacity: 0;
     z-index: 2;
-    padding: 10px;
+    padding: 10px 10px 0 10px;
     background: var(--c-box);
     color: var(--c-txt);
     overflow-wrap: break-word;
     position: absolute;
-    top: 0;
+    /*top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 0;*/
     margin: auto;
     overflow-y: hidden;
     overflow-x: hidden;
