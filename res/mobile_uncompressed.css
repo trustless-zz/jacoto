@@ -706,6 +706,8 @@
 		height: auto;
 		width: 100%;} */
 
+    
+    
     #wrapper img,
 	img {
 		max-width: 100% !important;}
@@ -2271,8 +2273,12 @@ a[title="Remove"]:before {
     .avatar:hover .forumstat {
         transition-delay: unset;}
     
-    #wrapper #blog .pad img,
+    #inbox #messageform #preview img, /* inbox compose preview */
+    #wrapper .box.vertical_space#preview img, /*inbox*/
+    #wrapper .box.vertical_space .body img, /*inbox*/
+    #blog #wrapper .pad img,
     #wrapper #profilediv img,
+    #wrapper #profilediv video,
     #wiki #wrapper .wiki_article a img,
     #wrapper #wrapper .box.news_post>.pad img,
     #wrapper .forum_post td.body img,

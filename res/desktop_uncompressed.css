@@ -1199,6 +1199,14 @@ body {
 }*/
 
 @media (min-width: 801px) and (max-width: 1200px) {
+    /*#blog .pad img,*/
+    #profilediv img,
+    #profilediv video,
+    #wiki .wiki_article a img,
+    /*.box.news_post>.pad img,*/
+    /*.forum_post td.body img,*/
+    blockquote#description img {
+        max-width: 100% !important;}
     #css_gallery .preview_wrapper {
         width: calc((100% / 3) - (20px / 3));}
     #css_gallery .preview_wrapper:nth-child(3n) {
@@ -1209,8 +1217,13 @@ body {
         white-space: normal;}
 }
 @media (min-width: 801px) and (max-width: 920px) {
-table#existing_freeleech_pots td {
-    word-break: break-word;}
+    #inbox #messageform #preview img, /* inbox compose preview */
+    .box.vertical_space#preview img, /*inbox*/
+    .box.vertical_space .body img, /*inbox*/
+    #blog .pad img {
+        max-width: 100% !important;}
+    table#existing_freeleech_pots td {
+        word-break: break-word;}
 }
 
 @media (max-width: 900px) {

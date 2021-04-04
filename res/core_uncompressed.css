@@ -4641,7 +4641,7 @@ body:not(#upload) #artist_tr + tr td.label,
     margin: -10px -10px 10px -10px;}
 .trailer {
     position: relative;
-    padding-bottom: calc(56.25% - 10px);
+    padding: 0 0 56.25% 0;
     height: 0;}
 .trailer iframe {
     position: absolute;
@@ -4759,6 +4759,7 @@ strong.mature +strong +br,
 
 #users_medals .flextable-cell.flex-shelf,
 #users_medals .medal_image_div .drop_shadow,
+#users_medals .flextable-cell.medal_cell:empty,
 
 
 #artist #requests .colhead_dark a,
@@ -4818,8 +4819,8 @@ strong.mature +strong +br,
     margin: -4px 0 0 0;}
 .similar_div .head .flright form input[type="text"] {
     width: 100%;
-    min-width: 170px;
-    max-width: calc(50% + 60px);}
+    /*min-width: 170px;*/
+    max-width: calc(50% + 50px);}
 #image_block >a[onclick]:nth-of-type(1):before,
 a[href^="javascript:IndexVote("] strong:before,
 a[href^="javascript:Vote("] strong:before,
@@ -6705,20 +6706,45 @@ iframe {
 .forum_post */
 iframe/*,
 div[id^="twitch-embed-"]*/ {
-    max-width: calc(100% - 10px)!important;
+    max-width: 100% !important;
+    /*-webkit-filter: var(--p-post-img);
+    filter: var(--p-post-img);
+    margin: 0;
+    padding: 5px;*/}
+/*.box.vertical_space video,
+#blog .pad video,
+.box.news_post >.pad video,
+.forum_post td.body*/
+video.bb,
+video {
+    max-width: 710px;
+    height: auto;}
+iframe,
+video.bb,
+video {
+    box-sizing: border-box;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
     margin: 0 5px;
     padding: 5px;}
-/*.box.vertical_space video,
-#blog .pad video,
-.box.news_post >.pad video,
-.forum_post td.body*/ video {
-    max-width: 80%;
+#inbox #messageform #preview img, /* inbox compose preview */
+.box.vertical_space#preview img, /*inbox*/
+.box.vertical_space .body img, /*inbox*/
+#blog .pad img,
+#profilediv img,
+#profilediv video,
+#wiki .wiki_article a img,
+.box.news_post>.pad img,
+.forum_post td.body img,
+blockquote#description img {
+    box-sizing: border-box;
+    max-width: 710px !important;
+    width: auto;
     height: auto;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
-    margin: 0 5px;
+    margin: 0;
+    /*padding: 7px;*/
     padding: 5px;}
 .trailer >video {
     width: auto;
@@ -6727,23 +6753,7 @@ div[id^="twitch-embed-"]*/ {
     padding: 0;
     -webkit-filter: none;
     filter: none;}
-video
-.box.vertical_space#preview img, /*inbox*/
-.box.vertical_space .body img, /*inbox*/
-#blog .pad img,
-#profilediv img,
-#wiki .wiki_article a img,
-.box.news_post>.pad img,
-.forum_post td.body img,
-blockquote#description img {
-    max-width: 714px !important;
-    width: auto;
-    height: auto;
-    -webkit-filter: var(--p-post-img);
-    filter: var(--p-post-img);
-    /*margin: -4px 0;
-    padding: 7px;*/
-    padding: 5px;}
+#inbox #messageform #preview a:hoverimg, /* inbox compose preview */
 .box.vertical_space#preview a:hover img, /*inbox*/
 .box.vertical_space .body a:hover img, /*inbox*/
 #wiki .wiki_article a:hover img,
@@ -8614,12 +8624,14 @@ h2 .user_title span.size10 {
     vertical-align: middle;} /*bottom*/
 /* ---gameroom--- ../images with size=4 code will float left, size=5 will float right */
 span.size4 iframe,
+span.size4 video,
 /*span.size4 div[id^="twitch-embed-"],*/
 span.size4 .twitter_post,
 span.size4 img {
     float: left;
     margin-right: 10px !important;}
 span.size5 iframe,
+span.size5 video,
 /*span.size5 div[id^="twitch-embed-"],*/
 span.size5 .twitter_post,
 span.size5 img {
