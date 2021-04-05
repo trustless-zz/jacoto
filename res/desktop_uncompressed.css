@@ -1066,6 +1066,7 @@ body {
 
 /* trading */
 @media (min-width: 801px) and (max-width: 1347px) {
+    
     #wrapper #trading_panel #items {
         width: 275px;}
 }
@@ -1118,7 +1119,8 @@ body {
 }
 
 /* forum post image size */
-@media (min-width: 801px) and (max-width: 1019px) {
+@media (min-width: 801px) and (max-width: 1070px) {
+    /*#wrapper .forum_post td.body #contentpreview img,*/
     #wrapper .forum_post td.body img {
         max-width: 100% !important;}
 }
@@ -1198,7 +1200,15 @@ body {
         margin: 0 5px !important;}
 }*/
 
+@media (min-width: 801px) and (max-width: 1385px) {
+    #request_comments .forum_post td.body img,
+    #torrent_comments .forum_post td.body img {
+        max-width: 100% !important;}
+}
 @media (min-width: 801px) and (max-width: 1200px) {
+    video.bb,
+    video {
+        max-width: 100%;}
     /*#blog .pad img,*/
     #profilediv img,
     #profilediv video,
@@ -1217,13 +1227,15 @@ body {
         white-space: normal;}
 }
 @media (min-width: 801px) and (max-width: 920px) {
+    table#existing_freeleech_pots td {
+        word-break: break-word;}
+}
+@media (min-width: 801px) and (max-width: 899px) {
     #inbox #messageform #preview img, /* inbox compose preview */
     .box.vertical_space#preview img, /*inbox*/
     .box.vertical_space .body img, /*inbox*/
     #blog .pad img {
         max-width: 100% !important;}
-    table#existing_freeleech_pots td {
-        word-break: break-word;}
 }
 
 @media (max-width: 900px) {

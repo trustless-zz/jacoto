@@ -3573,6 +3573,17 @@ h3 a[href^="user.php?action=notify_delete&"],
 
 /*.twitter-tweet,*/
 
+#inbox #messageform #preview img, /* inbox compose preview */
+.box.vertical_space#preview img, /*inbox*/
+.box.vertical_space .body img, /*inbox*/
+#blog .pad img,
+#profilediv img,
+#profilediv video,
+#wiki .wiki_article a img,
+.box.news_post>.pad img,
+.forum_post td.body img,
+blockquote#description img,
+
 .permissions {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
@@ -6693,6 +6704,8 @@ img[style^="max-height: 64px; transition: all 0.5s ease-in-out"],
 .box.box_info iframe,
 .box.news_post iframe,
 .forum_post */
+video.bb,
+video,
 iframe {
     -webkit-box-sizing: content-box;
     box-sizing: content-box;
@@ -6717,16 +6730,26 @@ div[id^="twitch-embed-"]*/ {
 .forum_post td.body*/
 video.bb,
 video {
-    max-width: 710px;
+    max-width: 700px;
     height: auto;}
+#inbox #messageform #preview img, /* inbox compose preview */
+.box.vertical_space#preview img, /*inbox*/
+.box.vertical_space .body img, /*inbox*/
+#blog .pad img,
+#profilediv img,
+#profilediv video,
+#wiki .wiki_article a img,
+.box.news_post>.pad img,
+.forum_post td.body img,
+blockquote#description img,
 iframe,
 video.bb,
 video {
-    box-sizing: border-box;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
-    margin: 0 5px;
+    margin: 0;
     padding: 5px;}
+/* *maybe* selecting img[style="max-width: 600px;"] instead would be a better idea? */
 #inbox #messageform #preview img, /* inbox compose preview */
 .box.vertical_space#preview img, /*inbox*/
 .box.vertical_space .body img, /*inbox*/
@@ -6737,15 +6760,15 @@ video {
 .box.news_post>.pad img,
 .forum_post td.body img,
 blockquote#description img {
-    box-sizing: border-box;
     max-width: 710px !important;
     width: auto;
     height: auto;
+    /*-webkit-box-sizing: border-box;
+    box-sizing: border-box;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
     margin: 0;
-    /*padding: 7px;*/
-    padding: 5px;}
+    padding: 5px;*/}
 .trailer >video {
     width: auto;
     height: auto;
@@ -6753,7 +6776,7 @@ blockquote#description img {
     padding: 0;
     -webkit-filter: none;
     filter: none;}
-#inbox #messageform #preview a:hoverimg, /* inbox compose preview */
+#inbox #messageform #preview a:hover img, /* inbox compose preview */
 .box.vertical_space#preview a:hover img, /*inbox*/
 .box.vertical_space .body a:hover img, /*inbox*/
 #wiki .wiki_article a:hover img,

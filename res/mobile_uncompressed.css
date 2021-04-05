@@ -712,6 +712,8 @@
 	img {
 		max-width: 100% !important;}
 
+    video.bb,
+    video,
 	form {
 		max-width: 100%;}
     
