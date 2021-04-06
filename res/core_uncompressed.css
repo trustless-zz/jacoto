@@ -2580,7 +2580,7 @@ input[disabled] {
     max-width: calc(100% - 20px) !important;
     margin: 10px auto;}
 #dailygazelle img {
-    display: block;}
+    /*display: block;*/}
 .review_cell .flextable-cell:first-child img:not(.avatar):hover,
 /*.profile .box_art_gallery .large_row */#wrapper .gallery_row a:hover,
 /*.profile .box_art_gallery .small_row .gallery_small_slot:hover a,*/
@@ -2597,6 +2597,10 @@ table#grouplinks #curlinkedgroup,
 #slides .slides_control .center {
     width: calc(100% - 18px);
     margin: 0 auto;}
+#dailygazelle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;}
 #dailygazelle #gazelletitle {
     display: block;
     padding: 0 10px;}
@@ -2605,7 +2609,7 @@ table#grouplinks #curlinkedgroup,
     width: -moz-fit-content;
     width: fit-content;
     display: block;
-    margin: 8px auto 10px auto;}
+    margin: 0 auto 10px auto;}
 
 .center_poll, /* <- Blank - Show the results! */
 .large_progress_bar .main_bar,
