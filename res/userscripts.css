@@ -1272,3 +1272,51 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=170664
 /***
 /Add Upload Link to Torrents Search Results
 ***/
+
+
+/***
+GGn Equipment Loadout Manager
+https://openuserjs.org/scripts/SB100/GGn_Equipment_Loadout_Manager
+https://gazellegames.net/forums.php?action=viewthread&threadid=24076#_1995440229
+***/
+.loadout-manager {
+    background-color: var(--c-box);
+    color: var(--c-txt);
+    z-index: 10;
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);
+    border: 1px solid var(--c-main-brdr);
+    padding: 10px;}
+.loadout-manager__form{
+    overflow-y: auto;}
+.loadout-manager__select {
+    padding: 0 20px 0 4px;
+    margin: 0 auto 8px 0;
+    height: 24px;}
+.loadout-manager >.loadout-manager__select:last-child {
+    margin-bottom: 0;}
+.loadout-manager__form input[type='text'] {
+    margin: 0 auto 8px 0;
+    width: calc(100% - 10px);}
+.loadout-manager >strong:first-child {
+    display: block;
+    text-align: left;
+    width: 100%;
+    font-weight: 600;
+    background: var(--p-head-grdnt);
+    font-size: var(--p-head) !important;
+    line-height: var(--p-head);
+    padding: 9px 10px;
+    margin: -10px -10px 10px -10px;}
+.loadout-manager__buttons {
+    margin: 0 auto 8px 0;}
+.loadout-manager__buttons input {
+    margin-right: 5px;}
+.loadout-manager__buttons input:last-child {
+    margin-right: 0;}
+.loadout-manager__form input[type='checkbox'] {
+    margin: revert;
+    margin-left: 2px;
+    margin-right: 5px;}
+.loadout-manager__form fieldset {
+    border-color: var(--c-edition);}
