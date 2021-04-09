@@ -13376,7 +13376,7 @@ div#fight_skill_points_assign >table {
     display: block;
     opacity: 0;
     z-index: 2;
-    padding: 10px 10px 0 10px;
+    padding: 10px 10px 2px 10px;
     background: var(--c-box);
     color: var(--c-txt);
     overflow-wrap: break-word;
@@ -13403,7 +13403,7 @@ div#fight_skill_points_assign >table {
     width: calc(100% + 10px);
     margin: -10px -10px 10px -10px;}
 #users_medals .medal_info .description_item {
-    margin-bottom: 12px; }
+    margin-bottom: 8px; }
 #users_medals .medal_info .description_item strong {
     padding-right: 2px; }
 
