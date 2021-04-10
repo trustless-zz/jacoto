@@ -9007,6 +9007,10 @@ span.size5 img {
 #achievements tr:not(.colhead):not(:last-child) td:not(.achlabel):hover {
     background-color: var(--c-row-hvr);}
 
+.sidebar .secondary_classes {
+    margin: 0 auto 0 40px;}
+
+
 /*** User Info Box ***/
 .profile .box_stats .label {
 	display: none;}
@@ -10895,6 +10899,8 @@ body#user.inventory {}
 h2 span.secondary_class {
     /*margin-bottom: -3px;*/
     display: inline-block;}
+h2 span.secondary_class:nth-child(n+2) {
+    vertical-align: -3px;}
 #tms_form {
 	margin-top:-15px;}
 #tms h2, #platforms h2 {

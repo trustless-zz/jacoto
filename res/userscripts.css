@@ -1320,3 +1320,50 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=24076#_1995440229
     margin-right: 5px;}
 #wrapper .loadout-manager__form fieldset {
     border-color: var(--c-edition);}
+#wrapper .loadout-manager__arrow {
+    width: 20px;
+    height: 25px;
+    padding: 5px;
+    font-size: 0;
+    line-height: 0;
+    background-color: var(--c-box);
+    border: 1px solid var(--c-main-brdr);
+    display: flex;
+    left: -32px;
+    top: -1px;}
+#wrapper .loadout-manager__arrow:after {
+    z-index: -1;
+    content:'';
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);}
+#wrapper .loadout-manager__arrow:before {
+    content:'';
+    display: block;
+    -webkit-mask-image: url(icons/show.svg);
+    mask-image: url(icons/show.svg);
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: var(--c-text-s);
+    width: 100%;
+    height: 100%;
+    transform: rotate(90deg);
+    left: -25px;
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;    }
+#wrapper .loadout-manager__arrow:hover:before {
+    background-color: var(--c-low);}
+#wrapper .loadout-manager.loadout-manager--opened .loadout-manager__arrow:before {
+    transform: rotate(-90deg);}
+/***
+/GGn Equipment Loadout Manager
+***/
