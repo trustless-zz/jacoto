@@ -1983,6 +1983,8 @@ a#tag_show\/hide,
 #users_medals .flextable-cell.medal_cell,
 #users_medals .medal_info,
 
+.timeline__content__wrap,
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -5364,6 +5366,7 @@ a[href^="javascript:Vote("] strong:hover,
 .gallery_row a:hover,
 .sidebar img:hover,
 .userratingdiv img,
+.timeline__content__wrap:hover,
 /*.hovereffect:hover,*/
 .collections_art_display td:hover .hovereffect,
 #wrapper .calendar .calendar-day:hover,
@@ -13653,7 +13656,8 @@ div#fight_skill_points_assign >table {
     right: -10px;
     top: 50%;
     width: 20px;}
-
+#wrapper .timeline__wrap {
+    overflow: visible;}
 .timeline__item.animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
@@ -13667,13 +13671,27 @@ div#fight_skill_points_assign >table {
 .timeline__item--right {
     left: 50%;
     padding: 5px 0 5px 30px;}
+
+.timeline__content__wrap {
+    -webkit-box-shadow: var(--p-header-shdw);
+    box-shadow: var(--p-header-shdw);}
     
+.timeline__content[style^="background-image"] {
+    background-size: contain;
+    text-shadow:
+        -1px  -1px  0   var(--c-box),
+         1px  -1px  0   var(--c-box),
+        -1px   1px  0   var(--c-box),
+         1px   1px  0   var(--c-box),
+         0     0    5px var(--c-box);}
 .timeline__item--right .timeline__content:before {
+    left: -13px;
     border-bottom: 10px solid transparent;
     border-right: 12px solid var(--c-table-brdr);
     border-left: none;
     border-top: 10px solid transparent;}
 .timeline__item--right .timeline__content:after {
+    left: -11px;
     border-bottom: 9px solid transparent;
     border-right: 11px solid var(--c-row-hvr);
     border-left: none;
@@ -13685,10 +13703,12 @@ div#fight_skill_points_assign >table {
     color: var(--c-text);
     padding: 10px;}
 .timeline__content:before {
+    right: -13px;
     border-bottom: 10px solid transparent;
     border-left: 12px solid var(--c-table-brdr);
     border-top: 10px solid transparent;}
 .timeline__content:after {
+    right: -11px;
     border-bottom: 9px solid transparent;
     border-left: 11px solid var(--c-row-hvr);
     border-top: 9px solid transparent;}
