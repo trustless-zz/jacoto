@@ -1280,6 +1280,9 @@ https://openuserjs.org/scripts/SB100/GGn_Equipment_Loadout_Manager
 https://gazellegames.net/forums.php?action=viewthread&threadid=24076#_1995440229
 ***/
 #wrapper .loadout-manager {
+    -webkit-transition: all .1s linear;
+    -o-transition: all .1s linear;
+    transition: all .1s linear;
     background-color: var(--c-box);
     color: var(--c-txt);
     z-index: 10;
@@ -1326,12 +1329,13 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=24076#_1995440229
     padding: 5px;
     font-size: 0;
     line-height: 0;
-    background-color: var(--c-box);
+    background-color: transparent;
     border: 1px solid var(--c-main-brdr);
     display: flex;
     left: -32px;
     top: -1px;}
 #wrapper .loadout-manager__arrow:after {
+    background-color: var(--c-box);
     z-index: -1;
     content:'';
     position: absolute;
@@ -1359,7 +1363,14 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=24076#_1995440229
     left: -25px;
     -webkit-transition: all .1s linear;
     -o-transition: all .1s linear;
-    transition: all .1s linear;    }
+    transition: all .1s linear;}
+#wrapper .loadout-manager__arrow:hover {
+    background-color: var(--c-colhead-click);}
+#wrapper .loadout-manager__arrow:active {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+    background-color: var(--c-colhead-act);}
 #wrapper .loadout-manager__arrow:hover:before {
     background-color: var(--c-low);}
 #wrapper .loadout-manager.loadout-manager--opened .loadout-manager__arrow:before {
