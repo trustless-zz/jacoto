@@ -80,8 +80,10 @@ body {
 #tools .thin >#recommended >form#torrent_form >h2 +table tr:not(.colhead):hover,
 #tools #mastergroups table tr:not(.colhead):hover,
 #wiki .thin >table tr:not(.colhead):hover,
+#wiki .thin form:only-child table tr:not(.colhead):hover, /* wiki Revision history */
 #torrents .torrent_notifications table.border tr:not(.colhead):hover,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):hover,
+#wrapper #content table.diff.split_view tr:hover, /* (torrent, wiki, etc.) history compare table */
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child):hover td {
     background-color: var(--c-row-hvr) !important;}
 .torrent_table .group:hover .empty_group,

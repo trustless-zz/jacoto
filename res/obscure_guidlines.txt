@@ -1,0 +1,83 @@
+// yeah I know this is terrible
+
+https://meyerweb.com/eric/tools/color-blend/
+https://contrast-ratio.com/
+https://color.adobe.com/
+
+
+---------universal
+first, come up with two main colors, similar to each other
+----contrast ratio
+b1              :b2                 ~1.04
+b1              :b3                 ~1.45
+b3              :sb                 ~1.15
+
+----mixing colors
+bg = anchor+b1
+
+unread-s = b1
+
+unread-br = b3
+
+anchor-hvr-bcg(-obj) = b1(LIGHT)+box(current), 3 from box
+
+selection(-i) = b1, meet the required contrast-ratio with adobe RGB(!) brightness
+
+
+---------DARK
+----contrast ratio
+b1              :box                ~2.60
+b2              :box                ~2.70
+anchor          :box                =8          // just play with the brightness on b1, I think?
+blackout        :blackout-a         =8          // just play with the brightness on anchor, I think?
+blackout        :blackout-show      =8
+selection(-i)   :high-t             ~4.50       // calculated without opacity
+
+----mixing colors
+b3/b4 = b1+box, 4+5 from b1    // explanation: b3/b4 = blend b1 and box with ten midpoints, then pick midpoints 4 and 5 (counting from b1) and blend those with one midpoint.
+
+sb1/sb2 = b1+box, 6 from b1
+
+btn = b1+box, 2+3 from b1 => 3 midpoints, 2 from 3    // explanation: blend b1 and box with ten midpoints, then pick midpoints 2 and 3 (counting from b1) and blend those with three midpoints and pick the second one (counting from 3).
+
+//alternatively(?): anchor-hvr-bcg(-obj) = b1+box, 5+6 from box => 5 from  5
+
+fbb-c = anchor+b1, 5+6 from anchor => 8 midpoints, 3 from 6
+
+
+
+---------LIGHT
+----contrast ratio
+b1              :box                ~2.04
+b2              :box                ~2.14
+anchor          :box                ~4.82       // just play with the brightness on b1, I think?
+blackout        :blackout-a         ~13.28      // just play with the brightness on anchor, I think?
+blackout        :blackout-show      ~13.75
+selection(-i)   :high-t             ~4.50       // calculated without opacity
+
+----mixing colors
+b3/b4 = b1+box, 7 from b1
+
+sb1/sb2 = b1+box, 9 from b1
+
+btn = b1+box, 8 midpoints, 6 from box
+
+fbb-c = adobe HSB(!), b1 set B to 100, adjust S to meet the contrast ratio of 6.5 to fbb-bcg
+
+---------NQD
+----contrast ratio
+b1              :box                ~2.61
+b2              :box                ~2.74
+anchor          :box                ~8          // just play with the brightness on b1, I think?
+blackout        :blackout-a         ~9.42       // just play with the brightness on anchor, I think?
+blackout        :blackout-show      ~9.57
+selection(-i)   :high-t             ~4.54       // calculated without opacity
+
+----mixing colors
+b3/b4 = b1+box, 5 from b1
+
+sb1/sb2 = b1+box, 6+7 from box
+
+btn = b1+box, 3 from b1
+
+fbb-c = adobe HSB(!), b1 adjust B to meet the contrast ratio of 5 to fbb-bcg

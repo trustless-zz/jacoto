@@ -722,6 +722,7 @@ tr.unreadpm td:first-child {
 
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright {
+    display: flex;
     margin: -1px 0;}
 
 #stats_share_score  a:before,
@@ -900,6 +901,8 @@ input[type="search"],
 #wiki .sidebar .box.box_addalias input[type="text"],
 
 input.weblinks,
+
+input#newkeyname,
 
 #torrents #content >script ~form #torrent_link input[name="internallink"],
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad input[type="text"] {
@@ -1350,6 +1353,8 @@ a[onclick="BBCode.spoiler(this);"],
 #bookmarks table#requests_list a[href^="upload.php"],
 #index #freeleech .group_torrent >span:first-child a,
 
+.sidebar .box.box_contributors a:not(.username),  /* collage contributors donor icon */
+
 #top10 .thin >.center tr,
 #top10 .thin >.center td,
 
@@ -1542,6 +1547,9 @@ div#fight_skill_points_assign >table,
 #changelog .thin >.header +.box.pad,
 #changelog .thin >.header ~table.border,
 
+#wiki .thin form:only-child table, /* wiki Revision history */
+#wiki .box.center_revision, /* wiki revision compare */
+
 #tools #content >p,
 #better .thin >div,
 #better .thin >table,
@@ -1582,6 +1590,8 @@ div#fight_skill_points_assign >table,
 
 #friends #content .search_form,
 #friends .comment_td,
+
+#wiki .box.center_revision, /* wiki revision compare */
 
 #user .thin >h2:first-child +.center,
 .thin.torrent_history >form#torrent_history_search,
@@ -1651,6 +1661,7 @@ span.user_title a:hover,
 
 
 #taglist a:hover,
+.sidebar .box.box_contributors a:not(.username),  /* collage contributors donor icon */
 .filter_torrents.advanced #taglist td:hover,
 /* .torrent_details .group_torrent td:first-child a, */
 .box_game_ratings a[target="_blank"]:hover,
@@ -1766,6 +1777,7 @@ a,
 #downloaded_table           tr:not(.colhead),
 #extlink_table              tr:not(.colhead),
 #wiki .thin >table tr:not(.colhead),
+#wiki .thin form:only-child table tr:not(.colhead), /* wiki Revision history */
 #torrents .torrent_notifications table.border tr:not(.colhead),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead),
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td,
@@ -1984,6 +1996,8 @@ a#tag_show\/hide,
 #users_medals .medal_info,
 
 .timeline__content__wrap,
+
+table.diff.split_view tr, /* (torrent, wiki, etc.) history compare table */
 
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
@@ -2948,7 +2962,7 @@ a .error_message:hover {
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: 1px solid var(--c-main-brdr);
-    background-color: var(--c-img-bcg-anchor);}
+    /*background-color: var(--c-img-bcg-anchor);*/}
 #index #clans a {
     display: block;
     border: 8px solid var(--c-b3);
@@ -4469,6 +4483,7 @@ body:not(#upload) #artist_tr + tr td.label,
 #upload input#getYT {
     vertical-align: top;}
 
+#wiki input[type="submit"][value="Compare"],
 .torrent_table input[type="submit"][value="Compare"] {
     margin: 5px;}
 
@@ -5041,6 +5056,7 @@ li:not(.suggested_similar) .similar_votes >span {
 #torrents .torrent_details tr table .colhead_dark td,
 #tools .thin >#recommended >form#torrent_form .colhead td,
 #tools #content >.header +table .colhead td,
+#user #wrapper #content td table .colhead td, /* (API Keys table, user settings) #wrapper #content to override the table padding hack */
 #tools #mastergroups table .colhead th {
     font-weight: normal;
     position: relative;
@@ -5102,6 +5118,7 @@ li:not(.suggested_similar) .similar_votes >span {
     display: none;}
 
 /** error message **/
+#wrapper .thin >h2#error +.box.pad:last-child, /* - new? */
 #wrapper .thin:not(.center) >h2:first-child +.box.pad:last-child { /*the same structure as 'Edit Images' page */
     background-color: unset;
     -webkit-box-shadow: unset;
@@ -5117,15 +5134,18 @@ li:not(.suggested_similar) .similar_votes >span {
     line-height: var(--p-lh);
     font-weight: 400;}
 
+.sidebar .box.box_contributors a:not(.username),  /* collage contributors donor icon */
 .username_badges >a,
 .username_badges >img {
     margin: 0 2px;}
+.sidebar .box.box_contributors img,  /* collage contributors donor icon */
 .username_badges img {
     max-height: 18px;
     /* max-width: 18px; */
     vertical-align: text-bottom;}
 span.secondary_class {
     line-height: 18px;}
+.sidebar .box.box_contributors a:not(.username),  /* collage contributors donor icon */
 /*#users_reviews */.head .username_badges,
 td .username_badges {
     margin-left: 3px;}
@@ -5459,6 +5479,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowa,
 #tools .thin >#recommended >form#torrent_form >h2 +table tr:not(.colhead):nth-child(odd),
 #tools #mastergroups table tr:not(.colhead):nth-child(odd),
 #wiki .thin >table tr:not(.colhead):nth-child(odd),
+#wiki .thin form:only-child table tr:not(.colhead):nth-child(odd), /* wiki Revision history */
 #torrents .torrent_notifications table.border tr:not(.colhead):nth-child(odd),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(odd),
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(odd) td:nth-child(-n+2),
@@ -5491,6 +5512,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 #tools .thin >#recommended >form#torrent_form >h2 +table tr:not(.colhead):nth-child(even),
 #tools #mastergroups table tr:not(.colhead):nth-child(even),
 #wiki .thin >table tr:not(.colhead):nth-child(even),
+#wiki .thin form:only-child table tr:not(.colhead):nth-child(even), /* wiki Revision history */
 #torrents .torrent_notifications table.border tr:not(.colhead):nth-child(even),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(even),
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(even) td:nth-child(-n+2),
@@ -6068,6 +6090,7 @@ input[name="year"],
     width: 100% !important;
     margin: 0 0 15px 0 !important;
     padding: 10px;}
+/*#user td table,*/ /* (API Keys table, user settings), not specific enough - doesn't work */
 #wrapper .calendar-day,
 #clans #clan_stats >div table,
 #rules .thin >.box.pad >table,
@@ -6083,6 +6106,20 @@ input[name="year"],
     width: auto !important;}
 #upload .thin form table .colhead:not(:first-child) {
 	border-top: 1px solid var(--c-table-brdr);}
+
+/* (API Keys table, user settings) hack */
+#user #wrapper #content td table .colhead {
+    border: 1px solid var(--c-table-brdr);}
+#user #wrapper #content td table .colhead:not(:last-child) {
+    border-bottom: none;}
+#user #wrapper #content td table .colhead ~.rowa,
+#user #wrapper #content td table .colhead ~.rowb {
+    border-left: 1px solid var(--c-table-brdr);
+    border-right: 1px solid var(--c-table-brdr);}
+#user #wrapper #content td table .colhead ~.rowa:last-child,
+#user #wrapper #content td table .colhead ~.rowb:last-child {
+    border-bottom: 1px solid var(--c-table-brdr);}
+
 
 #image_block input[type="url"],
 #image_block input[type="text"],
@@ -6431,6 +6468,7 @@ tr.likes td[id^="likers_"]:hover {
     transition: all .5s ease-out;
     /*transition-delay: .2s;*/}
     
+#wiki .box.center_revision >.body, /* wiki revision compare */
 #user .thin >h2 +.linkbox +.box.pad:last-child, /* trying to target Your Trades page specifically */
 .ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button span,
 #better .thin >.center:first-child td,
@@ -6502,6 +6540,7 @@ form#drag_drop_collage_form .drag_drop_save:first-child {
 	border-bottom: 1px solid var(--c-table-brdr);
     background-color: var(--c-tgroup);}
 
+#wiki #wrapper .thin form:only-child table tr:not(.colhead):last-child, /* wiki Revision history */
 #torrents #wrapper .torrent_details tr.pad div[id^=history] tr:not(.colhead):last-child {
 	border-top: 1px solid var(--c-table-brdr);
     background-color: var(--c-tgroup)!important;}
@@ -6631,6 +6670,8 @@ tr.likes td[id^="likers_"]:hover {
     background-color: var(--c-box);}
 #wrapper #content table.bbcode_table td {
 	border: 1px solid var(--c-table-brdr);}
+#user #wrapper #content td table .rowb td,
+#user #wrapper #content td table .rowa td, /* (API Keys table, user settings) #wrapper #content to override the table padding hack */
 .screenshots_div .body,
 .box.screenshots_div #image_block,
 #wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td,
@@ -6929,6 +6970,7 @@ input[type="radio"]:active {
 #forums .forum_latest >.search.box.pad #forumlist,
 #forums .forum_latest >.search.box.pad #otherop,
 #forums #newthreadtext,
+.sidebar .box.box_contributors img, /* collage contributors donor icon */
 .sidebar .box_badges img,
 .sidebar .box_image_avatar img,
 .sidebar .box_fights_stats img,
@@ -7083,6 +7125,8 @@ input[type="radio"]:active {
 
 #changelog .box.description_div:before,
 
+#wiki .box.center_revision:before, /* wiki revision compare */
+
 .thin.torrent_history >form#torrent_history_search:before,
 #user .thin >h2:first-child +.center:before,
 #rules .thin >form.search_form:before,
@@ -7122,6 +7166,8 @@ input[type="radio"]:active {
     background: var(--p-head-grdnt);
     font-weight: 600;
     content: 'Search';}
+#wiki .box.center_revision:before /* wiki revision compare */{
+    content: 'Split View';}
 #wrapper .permissions:before {
     content: 'Toolbox';}
 #tools .thin >.box.pad:first-child:before {
@@ -13986,7 +14032,16 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=21141
 */
 
 
-/** split view **/
+/** split view **/ /* (torrent, wiki, etc.) history compare table */
+#wrapper #content table.diff.split_view {
+    width: 100%;
+    background: var(--c-box);
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin: 0;}
+#wrapper #content blockquote table.diff.split_view {
+    border: 1px solid var(--c-quote-brdr);}
 table.diff.split_view tbody tr:nth-child(1) td:nth-child(3)::before,
 table.diff.split_view tbody tr:nth-child(1) td:nth-child(1)::before {
     text-decoration: unset;
