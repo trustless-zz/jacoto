@@ -1647,6 +1647,7 @@ a:hover,
 .forum_signature a:hover img,
 #profilediv a:hover img,
 .box.news_post >.pad a:hover img,
+a.hidden_item:hover img,
 .forum_post .colhead_dark a.username:hover,
 #newthreadpreview .forum_post .colhead_dark span[style="float: left;"] a[href="#newthreadpreview"]:hover,
 #quickreplypreview .colhead_dark span:not(#barpreview) a[href="#postpreview"]:hover,
@@ -1658,6 +1659,8 @@ span.user_title a:hover,
 .ui-widget-content a:hover {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
+
+
 
 
 #taglist a:hover,
@@ -2369,7 +2372,7 @@ img#authcode,
     color: var(--c-low);
     text-shadow: 0 0 5px var(--c-curtain);}
 
-
+a.hidden_item img,
 img[style^="max-height: 64px; transition: all 0.5s ease-in-out"],
 .fancybox-thumbs>ul>li:before,
 .fancybox-button {
@@ -2565,6 +2568,7 @@ input[disabled] {
 
 #tools table[style="width: 960px; text-align: center;"] .colhead td,
 
+#wrapper a.hidden_item img,
 #wrapper .pad img[style^="max-height: 64px; transition: all 0.5s ease-in-out"], /* hidden item */
 
 #torrents #wrapper .torrent_notifications .noticon +td,
@@ -6745,6 +6749,7 @@ span.size10 {
     margin: 0;
     padding: 0;}
 
+a.hidden_item img,
 img[style^="max-height: 64px; transition: all 0.5s ease-in-out"],
 /*#wiki iframe,
 .box.vertical_space iframe,*/ /*inbox*/
