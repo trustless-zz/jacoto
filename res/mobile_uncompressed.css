@@ -3419,6 +3419,11 @@ a[title="Remove"]:before {
         bottom: 0;
         overflow-y: auto !important;}
     /*** /Medals ***/
+    
+    /*** user settings save button ***/
+    #user form#userform td.right[colspan="2"] {
+        min-width: calc(100vw - 32px);}
+    /*** /user settings save button ***/
 }
 
 

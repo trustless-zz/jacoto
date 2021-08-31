@@ -9710,7 +9710,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
 
 
 
-/* user settings save button */
+/*** user settings save button ***/
+/****** not working amymore for whatever reason
 #user form#userform td.right[colspan="2"] {
     position: sticky;
     bottom: 0;
@@ -9729,6 +9730,40 @@ table#downloaded_table td.center.cats_col +td >span:before {
             var(--c-tgroup) 0%,
             transparent 100%);
     text-align: center;}
+*/
+#user form#userform td.right[colspan="2"] {
+    position: sticky;
+    bottom: 0;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    min-width: 155px; /* mobile has to have a different min-width now */
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: 
+        linear-gradient(
+            0deg,
+            var(--c-tgroup) 0%,
+            transparent 100%),
+        linear-gradient(
+            0deg,
+            var(--c-tgroup) 0%,
+            transparent 100%);
+    text-align: center;}
+#user form#userform td.right[colspan="2"] input#save {
+    margin: 0 auto;}
+/* tr#site_style_tr is used to avoid any possible clash elsewhere */
+#user #userform tr#site_style_tr ~tr:last-child {
+    position: absolute;
+    height: calc(100% - 36px);
+    top: 36px;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+    width: 0;}
+#user form#userform tr#site_style_tr ~tr:nth-last-child(2) td {
+    padding-bottom: 55px;}
+/*** /user settings save button ***/
 
 
 
