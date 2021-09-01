@@ -272,11 +272,11 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
 #quick-crafter button#AC +br {
     margin-bottom: 3px;}
 #quick-crafter >button {
-    background: linear-gradient(to bottom,var(--c-tgroup) 0,var(--c-body) 100%);
-    color: var(--c-txt) !important;}
+    background: unset;
+    color: #fff;}
 #quick-crafter .qcbutton_book[style$="background-color: green;"],
 #quick-crafter >button:hover {
-    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);
+    background: linear-gradient(to bottom, transparent 0%, var(--c-box) 100%);
     color: var(--c-low) !important;}
 #wrapper #quick-crafter >button:active {
     background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
@@ -301,8 +301,8 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
 #quick-crafter button +br {
     margin-top: 8px;}
 
-#quick-crafter #clear_button {
-    color: var(--c-red) !important;}
+/*#quick-crafter #clear_button {
+    color: var(--c-red) !important;}*/
 
 #quick-crafter #current_craft_box:empty {
     display: none;}
