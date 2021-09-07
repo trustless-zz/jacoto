@@ -3597,6 +3597,8 @@ h3 a[href^="user.php?action=notify_delete&"],
 
 /*.twitter-tweet,*/
 
+.users_review,
+
 #inbox #messageform #preview img, /* inbox compose preview */
 .box.vertical_space#preview img, /*inbox*/
 .box.vertical_space .body img, /*inbox*/
