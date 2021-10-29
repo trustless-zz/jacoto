@@ -1095,9 +1095,13 @@ pre {
     margin: 4px 5px 10px 5px;}
 .spoilerbox {
     margin: 4px 5px;}
-.torrent_details blockquote {
+/*.torrent_details blockquote {
     max-height: 2000px;
     overflow: auto;}
+.torrent_details #reply_box blockquote,
+.torrent_details blockquote blockquote {
+    max-height: unset;
+    overflow: unset;}*/
 pre {
     overflow: auto;
     white-space: pre-wrap;}

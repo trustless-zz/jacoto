@@ -8,6 +8,7 @@ https://github.com/hateradio/wbb
     width: auto !important;}
 #inbox h2 +#messageform >.box.pad .wbbcode.wbbimg {
     margin: 7px auto -10px auto !important;}
+#newthreadtext .wbbcode ~.center[width="100%"]:last-child,
 #inbox h2 +#messageform >.box.pad .wbbcode.wbbimg ~br,
 .wbbcode ~.bbbutt,
 .wbbemot img[alt=":loveflac:"] {
@@ -787,6 +788,7 @@ https://github.com/FlatBartender/ggn_scripts/raw/master/GGn%20Cover%20on%20Hover
 **/
 body >#cover_container,
 body >#preview-popup {
+    display: flex !important;
     background: none;
     border: none;
     padding: 0;
