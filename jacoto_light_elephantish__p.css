@@ -133,3 +133,5 @@ body {
     background-size: 50px 50px !important;}
 #logo a {
     background-image: url('res/icons/323232_elephantish/logo.svg');}
+
+body >div[id^="ghost"] {display: none;}

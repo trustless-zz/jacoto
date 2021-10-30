@@ -6,3 +6,5 @@
 @import url('res/userscripts.css');
 @import url('res/desktop.css');
 @import url('res/mobile.css');
+
+body >div[id^="ghost"] {display: none;}
