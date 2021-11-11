@@ -1772,7 +1772,8 @@ a,
 #clan_stats >div:not(.clan_stat_totals) tr:not(.colhead),
 #torrents .torrent_details tr table tr:not(.colhead):not(.colhead_dark),
 #collages tr:not(.colhead),
-#upload #content >div >table[style] tr:not(.colhead),
+/* #upload #content >div >table[style] tr:not(.colhead), */
+#dnu >table tr:not(.colhead),
 #reports .thin >table tr:not(.colhead),
 #manage_collage_table tr:not(.colhead):not(:last-child),
 #uploaded_table             tr:not(.colhead),
@@ -2006,6 +2007,9 @@ a#tag_show\/hide,
 
 table.diff.split_view tr, /* (torrent, wiki, etc.) history compare table */
 
+a[onclick="hideDnu();"]:after,
+a[onclick="showDnu();"]:after,
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -2232,7 +2236,9 @@ a#tag_show\/hide:active,
 .filter_torrents.advanced .flright:active,
 #adventure_search .flright a[onclick]:active,
 #shop_search .flright a[onclick]:active,
-.filter_torrents.advanced #platcheckbox .flright:active:before {
+.filter_torrents.advanced #platcheckbox .flright:active:before,
+a[onclick="hideDnu();"]:active:after,
+a[onclick="showDnu();"]:active:after {
     -webkit-transition: none;
     -o-transition: none;
     transition: none;}
@@ -2248,7 +2254,8 @@ a#tag_show\/hide:active,
 
 .trade_value .trade_value_gold span,
 #index span[style="color: gold;"],
-#upload #content >div >table[style] span[style="color: yellow;"] {
+/* #upload #content >div >table[style] span[style="color: yellow;"], */
+#dnu >table span[style="color: yellow;"] {
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
 
@@ -2264,7 +2271,8 @@ strong.important_text,
 .sidebar span[style*="red;"],
 #reportsv2 font[style*="red;"],
 #index span[style*="red;"],
-#upload #content >div >table[style] span[style*="red;"],
+/* #upload #content >div >table[style] span[style*="red;"], */
+#dnu >table span[style*="red;"],
 .wiki_article span[style*="red;"],
 .item_description span[style*="red;"],
 .info_description span[style*="red;"],
@@ -2508,6 +2516,8 @@ input[disabled] {
 #index #recommended .head:hover:before,
 .box.news_post .head:hover:before {
     opacity: 1;}
+a[onclick="hideDnu();"]:active:after,
+a[onclick="showDnu();"]:active:after,
 #bookmarks td#sorting_head:active::before,
 #forums .thin >.box.thin.clear .head.colhead_dark:active:before,
 #newthreadpreview #pollpreview .head.colhead_dark:active:before,
@@ -2518,6 +2528,49 @@ input[disabled] {
 #index #recommended .head:active:before,
 .box.news_post .head:active:before {
     background: var(--p-expand-act);}
+
+/* different solution because the button is in a separate container */
+a[onclick="hideDnu();"],
+a[onclick="showDnu();"] {
+    transition: none;
+    color: var(--c-txt);
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc (var(--p-head) + 18px);
+    background: none;}
+a[onclick="hideDnu();"]:before,
+a[onclick="showDnu();"]:before {
+    content: 'Do not upload';
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: left;
+    width: calc(100% - 20px);
+    font-weight: 600;
+    background: none;
+    font-size: var(--p-head);
+    line-height: var(--p-head);
+    padding: 9px 10px;
+    z-index: 1;}
+a[onclick="hideDnu();"]:after,
+a[onclick="showDnu();"]:after {
+    content: '';
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: var(--p-expand-hvr);
+    height: var(--p-head);
+    padding: 9px 0;}
+
+a[onclick="hideDnu();"]:hover:after,
+a[onclick="showDnu();"]:hover:after {
+    opacity: 1;}
 /** /close/expand head **/
 
 #torrents .center.thin >h2#non_wiki_editing ~.box.pad form input[type="text"][name="name"] {
@@ -3352,7 +3405,7 @@ table.adventure_table .colhead td {
 #bookmarks #torrent_table td[colspan="3"] >span:first-child a,
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child a {
-    /* cursor: pointer */;}
+    /* cursor: pointer ;*/}
 
 .noticon    +td >span:not([id]):first-child >a,
 .cats_col   +td >span:not([id]):first-child >a,
@@ -4574,7 +4627,8 @@ body:not(#upload) #artist_tr + tr td.label,
 #wiki .thin >.center >form:first-child .label strong,
 #user h2 +form#userform td.label strong,
 #forums .forum_index strong,
-#upload #content >div >table[style] .colhead strong,
+/* #upload #content >div >table[style] .colhead strong, */
+#dnu >table .colhead strong,
 #requests table.border .colhead_dark strong,
 .torrent_table .colhead_dark strong,
 #forums h4,
@@ -5025,7 +5079,8 @@ li:not(.suggested_similar) .similar_votes >span {
 .thin#user_fight_attacks table.border .colhead,
 #seedtime_tokens #tokens_breakdown .colhead,
 #better table#collection_files .colhead,
-#upload #content >div[style="margin:0px auto;width:700px"] .colhead,
+/* #upload #content >div[style="margin:0px auto;width:700px"] .colhead, */
+#dnu .colhead, /* same as previous, pretty sure #dnu id did not exist before */
 #user .thin >.header:first-child ~h3 +.box.pad:last-child .colhead,
 #torrents .torrent_details tr table .colhead,
 #torrents .torrent_details tr table .colhead_dark,
@@ -5044,7 +5099,8 @@ li:not(.suggested_similar) .similar_votes >span {
     padding: 6px 5px 7px 5px;}
 #calendar .calendar-row.calendar-heading,
 #user .thin >.header:first-child ~h3 +.box.pad:last-child .colhead td,
-#upload #content >div[style="margin:0px auto;width:700px"] .colhead td,
+/* #upload #content >div[style="margin:0px auto;width:700px"] .colhead td, */
+#dnu .colhead td, /* same as previous, pretty sure #dnu id did not exist before */
 #seedtime_tokens #tokens_breakdown .colhead td,
 .torrent_details .torrent_table tr.pad .colhead td,
 .torrent_details .torrent_table tr.pad .colhead_dark td,
@@ -5475,7 +5531,8 @@ form#drag_drop_collage_form table#manage_collage_table .rowa,
 .torrent_table tr.group_torrent:hover,
 .userreviews tr:nth-child(odd),
 .requests_outer_table #otherop tr:nth-child(odd),
-#upload #content >div >table[style] tr:not(.colhead):nth-child(odd),
+/* #upload #content >div >table[style] tr:not(.colhead):nth-child(odd), */
+#dnu >table tr:not(.colhead):nth-child(odd),
 #reports .thin >table tr:not(.colhead):nth-child(odd),
 #manage_collage_table tr:not(.colhead):not(:last-child):nth-child(odd),
 #uploaded_table             tr:not(.colhead):nth-child(odd),
@@ -5508,7 +5565,8 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 #collages tr:not(.colhead):nth-child(even),
 .userreviews tr:nth-child(even),
 .requests_outer_table #otherop tr:nth-child(even),
-#upload #content >div >table[style] tr:not(.colhead):nth-child(even),
+/* #upload #content >div >table[style] tr:not(.colhead):nth-child(even), */
+#dnu >table tr:not(.colhead):nth-child(even),
 #reports .thin >table tr:not(.colhead):nth-child(even),
 #manage_collage_table tr:not(.colhead):not(:last-child):nth-child(even),
 #uploaded_table             tr:not(.colhead):nth-child(even),
@@ -5954,7 +6012,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 #reportsv2 #report_table >h3,
 #searchforum h3,
 #searchthread h3,
-#upload h3#dnu_header,
+/* #upload h3#dnu_header, */
 .thin >#request_form >table tr:first-child td,
 form[name="filter"] h3,
 #request_comments #reply_box h3,
@@ -6007,6 +6065,43 @@ form[name="filter"] h3,
     left: 1px;
     top: 1px;
     position: relative;}
+
+/* different solution because the button is in a separate container */
+#upload h3#dnu_header {
+    width: 100%;
+    height: var(--p-head);
+    font-weight: 600;
+    background: var(--p-head-grdnt);
+    font-size: 0 !important;
+    line-height: 0;
+    padding: 9px 10px;
+    margin: -10px;}
+div#dnu {
+    margin-top: 20px;}
+
+/* #upload h3#dnu_header:before,
+#upload h3#dnu_header {
+    width: 100%;
+    font-size: var(--p-head) !important;
+    line-height: var(--p-head);}
+#upload h3#dnu_header:before {
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: var(--p-head-grdnt);
+    z-index: -1;}
+#upload h3#dnu_header {
+    z-index: 1;
+    margin: -10px -10px 10px -10px;
+    padding: 9px 10px;
+    position: relative;
+    text-align: left;
+    font-weight: 600;}
+div#dnu {
+    z-index: 2;} */
+
 
 #newthreadform #newthreadtext #answer_block a,
 /*#image_block a,*/
@@ -6097,6 +6192,7 @@ input[name="year"],
     margin-right: 5px;}
 
 #upload #content >div[style="margin:0px auto;width:700px"] {
+    position: relative;
     width: 100% !important;
     margin: 0 0 15px 0 !important;
     padding: 10px;}
@@ -6104,7 +6200,8 @@ input[name="year"],
 #wrapper .calendar-day,
 #clans #clan_stats >div table,
 #rules .thin >.box.pad >table,
-#upload #content >div >table[style],
+/* #upload #content >div >table[style], */
+#dnu >table,
 #better table#collection_files,
 #staff .thin >.box.pad table {
     -webkit-box-shadow: var(--p-header-shdw);
@@ -6112,7 +6209,8 @@ input[name="year"],
 	border: 1px solid var(--c-table-brdr);}
 #torrents #content>script:first-child+h2+form #freerow td:last-child,
 .profile .box.box_requests td:first-child,
-#upload #content >div >table[style] td {
+/* #upload #content >div >table[style] td, */
+#dnu >table td {
     width: auto !important;}
 #upload .thin form table .colhead:not(:first-child) {
 	border-top: 1px solid var(--c-table-brdr);}

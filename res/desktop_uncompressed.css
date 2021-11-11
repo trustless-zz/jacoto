@@ -66,7 +66,8 @@ body {
 #clan_stats >div:not(.clan_stat_totals) tr:not(.colhead):hover,
 #torrents .torrent_details tr table tr:not(.colhead):not(.colhead_dark):hover,
 #collages tr:not(.colhead):hover,
-#upload #content >div >table[style] tr:not(.colhead):hover,
+/* #upload #content >div >table[style] tr:not(.colhead):hover, */
+#dnu >table tr:not(.colhead):hover,
 #reports .thin >table tr:not(.colhead):hover,
 #manage_collage_table tr:not(.colhead):not(:last-child):hover,
 #uploaded_table             tr:not(.colhead):hover,
