@@ -6350,7 +6350,7 @@ input#file {
 .ongoing_clan_war td.label,
 #torrents .center.thin >.box.pad #image_block {
 	text-align: left;}
-#image_block >a[onclick],
+/* #image_block >a[onclick], */
 .pad.add_tags .field_div,
 #torrents .torrent_edit >.thin select#groupremasters,
 #image_block >span input,
@@ -6360,6 +6360,8 @@ input#file {
 #torrents .center.thin >.box.pad input[name="summary"],
 .ongoing_clan_war .large_progress_bar {
     margin-bottom: 8px;}
+#image_block >a[onclick] {
+    margin-bottom: auto;}
 .box.screenshots_div #image_block input[value="PTPImg It"] {
     padding: 5px 10px !important;
     margin: 0 0 8px 5px !important;}

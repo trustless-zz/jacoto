@@ -1380,3 +1380,14 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=24076#_1995440229
 /***
 /GGn Equipment Loadout Manager
 ***/
+
+
+/***
+GGn hide group info on upload
+https://gazellegames.net/forums.php?action=viewthread&threadid=21302#_2957329568
+https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-hide-group-info-on-upload.user.js
+***/
+#upload table#torrent_properties a {
+    display: inline;
+    padding: unset;
+    margin: unset;}
