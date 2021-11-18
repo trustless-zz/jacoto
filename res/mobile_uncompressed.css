@@ -1932,7 +1932,7 @@ a[title="Remove"]:before {
 	/*.box_tags li div {display: none !important;}*/
 	/*  .box_tags li div {color: transparent;}
 	.box_tags li div a {color: transparent;} */
-	.box_tags li div a:last-of-type {/* color: var(--lightBlue) */;}
+	.box_tags li div a:last-of-type {/* color: var(--lightBlue); */}
     
 #friends .forum_post.vertical_margin .colhead,
 #collections .sidebar .box.box_comment .head,
@@ -2114,6 +2114,7 @@ a[title="Remove"]:before {
 	#forums span[style="float:right;"] a {/*color: var(--grey);*/}
 	#forums .forum_index tr td {padding: 15px 0px;}
     
+    #user .thin >.header:first-child +.box.pad +.box.pad table.border td.label,
     #collections #wrapper .thin form.search_form td.label,
     #requests form#request_form td.label,
     #collections table#edit_collage td.label,
@@ -3252,6 +3253,7 @@ a[title="Remove"]:before {
 	.more_info #img_box img {max-width: 115px; width: 115px; height: auto;}
 	.more_info .col_2 {left: 115px;}
 
+#user .thin >.header:first-child +.box.pad +.box.pad table.border td.label,
 	.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable.ui-resizable {width: 100% !important;}
 
 	#user.log .center,
@@ -3363,6 +3365,8 @@ a[title="Remove"]:before {
     #site_style_tr .preview_wrapper {
         width: calc(25% - 13px);}
     
+    #user #wrapper .thin >.header:first-child +.box.pad +.box.pad table.border td:not(.label) {
+        flex-flow: row wrap;}
     
     
     /***Calendar***/
@@ -3380,6 +3384,7 @@ a[title="Remove"]:before {
     #calendar .calendar .day-events >p {
         margin: 10px auto !important;
         padding: 5px 0;}
+    #user .thin >.header:first-child +.box.pad +.box.pad table.border input[type="submit"],
     #calendar .calendar .day-events {
         margin: auto;}
     #calendar .day-events a {

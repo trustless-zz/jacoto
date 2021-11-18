@@ -6,6 +6,9 @@ https://github.com/hateradio/wbb
 /* #wrapper #content is needed to override GGn's trade.css */
 #wrapper .wbbcode {
     width: auto !important;}
+#wrapper .wbbarea {
+    max-height: unset !important;
+    margin: 3px 0 0 0 !important;}
 #inbox h2 +#messageform >.box.pad .wbbcode.wbbimg {
     margin: 7px auto -10px auto !important;}
 #newthreadtext .wbbcode ~.center[width="100%"]:last-child,

@@ -904,6 +904,8 @@ input.weblinks,
 
 input#newkeyname,
 
+#user .thin >.header:first-child +.box.pad +.box.pad table.border input[type="text"],
+
 #torrents #content >script ~form #torrent_link input[name="internallink"],
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad input[type="text"] {
     width: 100%;}
@@ -3899,6 +3901,7 @@ table#requests_list         tr:hover .tags a {
 #wrapper #trading_panel .gold_trade .gold_trade_box,*/
 #image_block >span,
 #wiki .sidebar .box.box_addalias .add_form,
+#user .thin >.header:first-child +.box.pad +.box.pad table.border td:not(.label),
 /*.box.screenshots_div #image_block >span,*/
 .tags_ratings {
     display: flex;
@@ -3968,6 +3971,9 @@ select {
     color: unset; /*var(--c-low);*/
     font-size: 14px;
     font-family: OpenSans, Sans-Serif;}
+#wrapper input[type="text"][required] {
+    padding: 0 4px 0 6px;
+    box-shadow: inset 2px 0 0 0 var(--c-unread-s), var(--p-input-shdw);}
 
 .select2-container .select2-selection--single,
 select {
@@ -4531,9 +4537,8 @@ body:not(#upload) #artist_tr + tr td.label,
 .filter_torrents.advanced tr:first-child >td.label {
     vertical-align: top;} */
 #user .thin >.header:first-child +.box.pad +.box.pad table.border td.label {
-    width: 41px;}
-#better .thin >.center:first-child input[type="text"],
-#user .thin >.header:first-child +.box.pad +.box.pad table.border input[type="text"] {
+    width: 180px !important;}
+#better .thin >.center:first-child input[type="text"] {
     width: calc(100% - 72px);}
 #image_block >a,
 #better .thin >.center:first-child input[type="submit"],
@@ -5472,7 +5477,8 @@ a[href^="javascript:Vote("] strong:hover,
 #quickreplybuttons {
     display: flex;
     justify-content: center;}
-#user .thin >.header:first-child +.box.pad +.box.pad table.border input[type="text"],
+#user .thin >.header:first-child +.box.pad +.box.pad table.border input[type="text"] {
+    margin: 0 auto 0 5px;}
 #inbox #preview +#buttons input,
 #quickreplybuttons input {
     margin: 0 5px;}
@@ -6351,6 +6357,7 @@ input#file {
 #torrents .center.thin >.box.pad #image_block {
 	text-align: left;}
 /* #image_block >a[onclick], */
+#user .thin >.header:first-child +.box.pad +.box.pad table.border tr:nth-last-child(n+2) input,
 .pad.add_tags .field_div,
 #torrents .torrent_edit >.thin select#groupremasters,
 #image_block >span input,
@@ -8239,6 +8246,7 @@ input[class="date_picker"] {
     margin-left: auto;
     margin-right: auto;}
 
+#user .thin >.header:first-child +.box.pad +.box.pad table.border input[type="submit"],
 .box.box_info.pad a[title="Delete Alias"],
 #wiki .sidebar .box.box_addalias input[type="submit"],
 #shop_search input[name="setdefault"],
@@ -9046,10 +9054,13 @@ span.size5 img {
 #collections .box.box_coltags li {
     padding: 2px;
     display: flex;
-    flex-flow: row wrap;}
+    flex-flow: row;}
 #collections .box.box_coltags li:hover {
     /*background-color: var(--c-tgroup);*/}
 #collections .box.box_coltags li a:first-child {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     margin: auto auto auto 0;}
 
 
