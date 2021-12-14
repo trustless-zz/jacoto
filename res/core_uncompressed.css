@@ -2534,6 +2534,7 @@ a[onclick="showDnu();"]:active:after,
 /* different solution because the button is in a separate container */
 a[onclick="hideDnu();"],
 a[onclick="showDnu();"] {
+    cursor: default;
     transition: none;
     color: var(--c-txt);
     font-size: 0;
