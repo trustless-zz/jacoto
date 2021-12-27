@@ -9765,6 +9765,19 @@ table#downloaded_table td.center.cats_col +td >span:before {
     width: 31px;
     color: var(--c-r10);
     text-shadow: 0 0 1px var(--c-r99);}
+.item img.equipment_level[src$="level11.png"] ~h3:before {
+    content: '11';
+    width: 22px;
+    color: var(--c-r10);}
+.item img.equipment_level[src$="level12.png"] ~h3:before,/* {
+    content: '12';
+    width: 22px;
+    color: var(--c-r10);} */
+.item img.equipment_level[src$="level12plus.png"] ~h3:before {
+    content: '12+';
+    width: 31px;
+    color: var(--c-r10);
+    text-shadow: 0 0 1px var(--c-r99);}
 
 /* /ONLY needed to make item levels visible again */
 
