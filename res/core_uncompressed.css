@@ -986,7 +986,7 @@ ul {
 #toplink,
 .box.news_post .head a:not(#markread),
 .forum_post .colhead_dark a[onclick],
-.forum_post .colhead_dark div[style="float: right;"]>a:nth-child(1),
+.forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
 .thin.torrent_history>form#torrent_history_search~table tr:not(.colhead) td:nth-child(2),
 .torrent_table .addbookmark,
 .torrent_table .removebookmark {
@@ -6511,16 +6511,18 @@ tr.likes td[id^="likers_"]:hover {
     transition-delay: .5s;}
 
 /* forum post 'back to top' button */
- #quickreplypreview .colhead_dark #barpreview,
- .forum_post .colhead_dark div[style="float: right;"],
- #newthreadpreview .forum_post .colhead_dark #barpreview {
+#quickreplypreview .colhead_dark #barpreview,
+.forum_post .colhead_dark div[style="float: right;"],
+#newthreadpreview .forum_post .colhead_dark #barpreview {
      height: 18px;
      font-size: 0;
      line-height: 0;
      min-width: 18px;
      position: absolute;
      right: 5px;
-     top: 7px;
+     /* top: 7px; */
+     top: 0;
+     padding-top: 7px;
      z-index: 999;}
 #quickreplypreview .colhead_dark span[style="float:left;"],
 .forum_post .colhead_dark div[style="float: left;"],

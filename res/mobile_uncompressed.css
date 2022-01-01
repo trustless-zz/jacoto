@@ -2291,7 +2291,7 @@ a[title="Remove"]:before {
     /*#wrapper #quickreplypreview .colhead_dark #barpreview,*/
     #wrapper .forum_post .colhead_dark div[style="float: right;"]/*,
     #wrapper #newthreadpreview .forum_post .colhead_dark #barpreview*/ {
-        top: 14px;}
+        padding-top: 14px;}
     
 	.username_badges {display: none;}
 	/* #forums .box {margin-top: 0px; padding: 0px;} */
@@ -3554,9 +3554,15 @@ a[title="Remove"]:before {
 
 @media (max-width: 599px) {
     #quickreplypreview .colhead_dark #barpreview,
-    .forum_post .colhead_dark div[style="float: right;"],
+    /* .forum_post .colhead_dark div[style="float: right;"], */
+    .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
     #newthreadpreview .forum_post .colhead_dark #barpreview {
         display: none;}
+    #wrapper .forum_post .colhead_dark div[style="float: right;"] {
+        background: linear-gradient(90deg,var(--c-main-brdr) 0,transparent 1px),
+                    linear-gradient(155deg,var(--c-table-brdr),var(--c-body));
+        height: calc(100% - 14px);
+        min-width: 0;}
     body #wrapper #content .sub {
         left: calc(100% - 34px);}
     #wrapper #content #quickreplypreview .colhead_dark span[style="float:left;"],
@@ -3594,6 +3600,9 @@ a[title="Remove"]:before {
     #site_style_tr .preview_wrapper {
         width: calc(50% - 12px);
         margin: 5px;}
+    #requests .forum_post .colhead_dark div[style="float: left;"] >strong,
+    #torrents .forum_post .colhead_dark div[style="float: left;"] >strong {
+        flex: 1 1 0%;}
 }
 
 @media (max-width: 420px) {
