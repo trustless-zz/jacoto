@@ -13219,6 +13219,7 @@ table.event_form_table td.label.small_label[colspan="4"] {
     margin-top: 10px;}
 #calendar .calendar .calendar-day,
 #calendar .calendar .calendar-day-np {
+    overflow: hidden;
     min-height: 120px;
     height: auto;
     padding: unset;}
@@ -13236,12 +13237,12 @@ table.event_form_table td.label.small_label[colspan="4"] {
     content: '+';
     position: absolute;
     right: 2px;
-    bottom: 0;
+    bottom: -4px;
     width: auto;
     height: auto;
     display: table;
     font-size: 30px;
-    line-height: 0;
+    line-height: 1em;
     font-weight: 600;
     text-shadow: none;
     color: var(--c-sticky-id-brdr);}
