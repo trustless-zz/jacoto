@@ -4863,6 +4863,7 @@ strong.mature +strong +br,
 #users_medals .medal_image_div .drop_shadow,
 #users_medals .flextable-cell.medal_cell:empty,
 
+#forums .forum_post .avatar >div:first-child:only-child:after,
 
 #artist #requests .colhead_dark a,
 #userhistory .colhead_dark span[id*="bar"],
