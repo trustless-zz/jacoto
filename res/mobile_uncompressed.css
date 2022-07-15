@@ -1842,15 +1842,13 @@ a[title="Remove"]:before {
 	#torrents .main_column .screenshots img {}
     
     #torrents .main_column .box.screenshots_div >.body {
-        padding-top: 0;
-        padding-right: 0;}
+        padding: 0 0 0 5px;}
 
 	#torrents .main_column .screenshots {
-        padding-top: 10px;
-        padding-right: 10px;
-		position: relative;
-		max-height: 300px;
-		overflow-y: scroll;}
+        padding: 5px 10px 5px 0;
+        position: relative;
+        max-height: 300px;
+        overflow-y: auto;}
 
 	#torrents #wrapper .main_column td#usersreviewimage:nth-child(1) {
 		float: left;
@@ -3483,6 +3481,16 @@ a[title="Remove"]:before {
     #upload #content:after{
         font-size: 19px;}
 }
+@media (min-width: 421px) and (max-width: 800px) {
+    .box_game_ratings>.body {
+            flex-flow: column;}
+    .box_game_ratings>.body>div {
+            width: 100%;}
+    .box_game_ratings>.body>br {
+            display: none;}
+    .box_game_ratings>.body>div:not(:last-child) {
+            margin-bottom: 8px;}
+}
 
 @media (max-width: 699px) {
     .permission_container {
@@ -3522,7 +3530,7 @@ a[title="Remove"]:before {
         width: calc(50% - 10px);}
     #wrapper #recommended #vanityhouse td,
     #wrapper .screenshots a {
-        width: calc(50% - 5px);}
+        width: calc(50% - 7.5px);}
     .screenshots a:nth-child(2n) {
         margin-right: 0;}
     #wrapper .similar_div .head .flright {
@@ -3578,6 +3586,8 @@ a[title="Remove"]:before {
 }
 
 @media (max-width: 569px) {
+    #torrents .sidebar .box_tags {
+        width: 100%;}
     .profile .box_community #community_stats ul {
         width: calc(100% - 18px);}
 }
@@ -3612,15 +3622,15 @@ a[title="Remove"]:before {
     #collections #wrapper .sidebar .box,
     #torrents #wrapper .sidebar .box {
         width: 100%;}
-}
-@media (max-width: 399px) {
-    #header #searchbars .autocomplete_list {
-        width: 200px;}
     .similar_div .head .flright {
         float: unset;}
     #wrapper .similar_div .head .flright form input[type="text"] {
         margin-top: 5px;
         width: calc(100% - 53px);}
+}
+@media (max-width: 399px) {
+    #header #searchbars .autocomplete_list {
+        width: 200px;}
 }
 @media (max-width: 359px) {
     #header #searchbars .autocomplete_list {

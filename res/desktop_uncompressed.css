@@ -7,6 +7,8 @@ body {
 .main_column {
     width: calc(100% - 315px);}    
 
+.box.screenshots_div:before,
+.box.screenshots_div:after,
 #torrent_table #hyphen {
     display: none;}
 
