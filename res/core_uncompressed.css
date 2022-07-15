@@ -5410,7 +5410,7 @@ textarea {
     -o-transition: all .1s linear, height 0s;
     transition: all .1s linear, height 0s;
     
-    min-height: 47px; /*28px without webkit stuff*/
+    min-height: 51px; /*28px without webkit stuff*/
     border: 1px solid var(--c-input-brdr);
     background-color: var(--c-input);
     -webkit-box-shadow: var(--p-input-shdw);
