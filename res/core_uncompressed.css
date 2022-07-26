@@ -674,6 +674,9 @@ td.center.cats_col+td,
 
 .box.screenshots_div,
 
+.sidebar #tags_box #tagslist,
+.sidebar #tags_box >a,
+
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
 #forums .forum_index            tr:not(.colhead) td:first-child,
@@ -4423,8 +4426,8 @@ button.alertable-cancel,
 .torrent_table tr.pad td >.linkbox a[href*="action=torrentrevert"]:before {
     content: 'Revert to this revision';}
 
-.torrent_table tr.pad td >.linkbox a {
-    margin-bottom: 5px;}
+/* .torrent_table tr.pad td >.linkbox a {
+    margin-bottom: 5px;} */
 
 #user #userform #platcheckbox +a:before {
     content: 'Hide';}
@@ -5172,8 +5175,8 @@ li:not(.suggested_similar) .similar_votes >span {
     margin: -3px 0 0 5px;
     /* outline: 4px solid var(--c-body) !important; */}
 
-.forum_post .colhead_dark {
-    overflow: hidden;}
+/* .forum_post .colhead_dark {
+    overflow: hidden;} */
 /*#quickreplypreview .colhead_dark span[style="float:left;"],
 .forum_post .colhead_dark div[style="float: left;"],
 .forum_post .colhead_dark div[style="float:left;"],
@@ -6174,6 +6177,7 @@ div#dnu {
 
 
 form#tag_add_form {
+    position: relative;
     margin-top: 12px;
     display: none;}
 form#tag_add_form input[type="submit"] {
@@ -6441,6 +6445,10 @@ div.breadcrumbs,
 #existing_freeleech_pots tr:not(.colhead) td:nth-child(n+2):not(:last-child),
 #bookmarks span.time {
     font-size: 13px;}
+/* floating (32px to 34px) colhead height fix */
+#wrapper .head .time,
+#wrapper .colhead_dark .time {
+    line-height: 17.5px;}
 #forums .forum_index.forum_latest tr span[style="float:right;"],
 #forums .forum_mythreads tr span[style="float:right;"],
 #forums .last_poster,
@@ -6706,6 +6714,7 @@ form#drag_drop_collage_form .drag_drop_save:first-child {
     border-top: 1px solid var(--c-table-brdr);
     border-bottom: 1px solid var(--c-table-brdr);}
 
+#reports .thin>table >tbody >.colhead +tr:last-child >td:nth-child(3):last-child,
 #reports .thin>table >tbody >.colhead +tr:last-child >td:first-child {
     text-align: center;
     background-color: var(--c-tgroup);}
@@ -7432,8 +7441,8 @@ form#tag_add_form >input,
     padding-top: 47px;}
 /* #upload */ #reviews_table p:first-child {
     margin-bottom: 5px !important;}
-#reportsv2 #dynamic_form >ul:last-of-type {
-    margin-bottom: 5px;}
+/* #reportsv2 #dynamic_form >ul:last-of-type {
+    margin-bottom: 5px;} */
 #reportsv2 #dynamic_form >table.border {
     margin-bottom: 36px;}
 #reportsv2 #report_table >input[type="submit"] {
@@ -7569,10 +7578,26 @@ form#tag_add_form >input,
 #gazelleview table.gazelleinfo:before {
     content: 'Info';}
 
+.gallery_slot,
+.forum_post .colhead_dark,
+.sidebar #tags_box,
 #gazelleview table.gazelleinfo,
 .collections_art_display,
 #requests .main_column >table:first-child {
     overflow: hidden;}
+
+.sidebar #tags_box #tagging_rules {
+    top: 3px;}
+.sidebar #tags_box #tagslist:after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 20px);
+    left: -10px;
+    bottom: -497px;
+    height: 500px;
+    z-index: 0;
+    background-color: var(--c-tgroup);
+    border-top: 1px solid var(--c-table-brdr);}
 
 #gazelleview table.gazelleinfo:after,
 .collections_art_display:after,
@@ -9593,6 +9618,9 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #items_navigation ul ul li {
 	margin-left: 6px;}
 
+.sidebar #tags_box #tagslist,
+.torrent_table tr.pad td >.linkbox a,
+#reportsv2 #dynamic_form >ul:last-of-type,
 #items_navigation ul ul li:last-of-type {
 	margin-bottom: 5px;}
 
@@ -10883,8 +10911,8 @@ body#user.inventory {}
     width: 100%;
     display: inline-block;}
 
-.gallery_slot {
-    overflow: hidden;}
+/* .gallery_slot {
+    overflow: hidden;} */
 
 .gallery_main_slot {
     display: flex;
@@ -11161,8 +11189,6 @@ body#user.inventory {}
 	font-size:1em;
 	height: 45px;}
 /*h2 span.secondary_class,*/
-.head .time, /* floating (33px to 34px) colhead height fix */
-.colhead_dark .time, /* floating (33px to 34px) colhead height fix */
 #tm_time input[type="text"] {
 	vertical-align: middle;}
 h2 span.secondary_class {
