@@ -6225,6 +6225,8 @@ input#year,
 input[name="year"],
 .requests_outer_table input[name="year"] {
     width: 45px;}
+#wrapper input[type="number"][name="year"] {
+    width: 63px;}
 .thin >#request_form input[name="image"] {
     width: calc(100% - 95px);
     margin-right: 5px;}
@@ -6295,6 +6297,10 @@ form#tag_add_form input#tags,
 /* #upload #reviews_table */ input#meta {
     width: 35px;
     margin-bottom: 5px;}
+input#gamespotscore[type="number"],
+input#ignscore[type="number"],
+input#meta[type="number"] {
+    width: 55px;}
 .box_image_avatar .head {
     margin-bottom: 10px;}
 .box.pad >p:first-child,
@@ -7588,7 +7594,7 @@ form#tag_add_form >input,
 
 .sidebar #tags_box #tagging_rules {
     top: 3px;}
-.sidebar #tags_box #tagslist:after {
+.sidebar #tags_box #tagslist:not(:last-child):after {
     content: '';
     position: absolute;
     width: calc(100% + 20px);
