@@ -2006,7 +2006,7 @@ a#tag_show\/hide,
 .day-label,
 .event_li[class*="tooltip"], /* adapting for ".event_li.tooltip" AND ".event_li.tooltip_interactive" */
 
-.users_review +[data-readmore-toggle]:before,
+/*.users_review +*/[data-readmore-toggle]:before,
 
 #collections .box.box_coltags li,
 
@@ -4915,6 +4915,7 @@ strong.mature +strong +br,
     width: calc(20% - 10px);
     margin: 0 5px 10px 5px;
     align-self: center;}
+#wrapper .comment_rating p[data-readmore][aria-expanded="true"],
 .sidebar .box.box_image_coverart a {
     display: inline;}
 #content >a:first-child,
@@ -12022,6 +12023,7 @@ td .log_green {
     width: 120px;}
 #adventureclub .inline_list +.inline_list {
     margin-top: 5px;}
+#wrapper .comment_rating p[data-readmore],
 #user #content>#progress_bar~.linkbox,
 #adventureclub table#monsters_search td.label:first-child {
     width: auto;}
@@ -13881,37 +13883,42 @@ div#fight_skill_points_assign >table {
     margin-top: 5px;}
 
 
-.users_review +[data-readmore-toggle] {
+/*.users_review +*/[data-readmore-toggle] {
     padding: 2px 0;
     text-align: center;
     position: relative;}
-#wrapper .users_review +[data-readmore-toggle]:before {
+#wrapper /*.users_review +*/[data-readmore-toggle]:before {
     content: '';
     width: 100%;
     height: 20px;
     top: -20px;
-    left: 0;
+    right: 0;
     position: absolute;
     background-repeat: no-repeat;
     pointer-events: none;
     background-size: 200% 200%;
     background-position: 50% 100%;
     opacity: 1;}
-#wrapper .users_review +[data-readmore-toggle]:hover:before {
+#wrapper .comment_rating [data-readmore-toggle]:before {
+    width: calc(100% - 40px);}
+#wrapper /*.users_review +*/[data-readmore-toggle]:hover:before {
     background-position: 0 0;}
-.userreviews tr:nth-child(odd) .users_review +[data-readmore-toggle]:before {
+.comment_rating /*.users_review +*/[data-readmore-toggle]:before,
+.userreviews tr:nth-child(odd) /*.users_review +*/[data-readmore-toggle]:before {
     background: linear-gradient(180deg, var(--c-b00), var(--c-box))}
-.userreviews tr:nth-child(even) .users_review +[data-readmore-toggle]:before {
+.userreviews tr:nth-child(even) /*.users_review +*/[data-readmore-toggle]:before {
     background: linear-gradient(180deg, var(--c-b00), var(--c-trowb))}
-.users_review[data-readmore] {
+/*.users_review*/[data-readmore] {
     padding-bottom: 0;}
-.users_review[data-readmore][aria-expanded="true"] {
+/* #wrapper .comment_rating p[data-readmore][aria-expanded="true"] {
+    padding-bottom: 20px;} */
+/*.users_review*/[data-readmore][aria-expanded="true"] {
     padding-bottom: 5px;}
-#wrapper .users_review[aria-expanded="true"] +[data-readmore-toggle]:before {
+#wrapper /*.users_review*/[data-readmore][aria-expanded="true"] +[data-readmore-toggle]:before {
     opacity: 0;}
 
 /*.userreviews tr:last-child:not(:only-child),*/
-.users_review +[data-readmore-toggle] {
+/*.users_review +*/[data-readmore-toggle] {
     background-color: transparent !important;}
 .userreviews tr:last-child:not(:only-child) td {
     padding: 0;
