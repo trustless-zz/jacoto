@@ -221,7 +221,11 @@ a[onclick^="edit"],
 a[title="Edit"],
 h3 a[href^="user.php?action=notify_delete&"],
 .inventory .trash_icon,
+.box_coltags a[href^="collections.php?action=delete_tag"],
+.box_coltags a[href^="user.php?id"],
+a[onclick^="deleteTag("],
 a[title="Remove"],
+.box_info.pad a[title="Delete Alias"],
 #friends .colhead_dark .remove_friend,
 .colhead_dark a[onclick^="Quote"],
 .head a[onclick^="Quote"],
@@ -277,6 +281,10 @@ a[title="Edit"]:hover,
 h3 a[href^="user.php?action=notify_delete&"]:hover,
 .inventory .trash_icon:hover,
 a[title="Remove"]:hover,
+.box_info.pad a[title="Delete Alias"]:hover,
+/* .box_coltags a[href^="collections.php?action=delete_tag"]:hover,
+.box_coltags a[href^="user.php?id"]:hover,
+a[onclick^="deleteTag("]:hover, */
 #friends .colhead_dark .remove_friend:hover,
 .colhead_dark a[onclick^="Quote"]:hover,
 .head a[onclick^="Quote"]:hover,
@@ -287,6 +295,10 @@ td a:hover img[alt="Ratio"],
 #users_reviews .delete_review a.remove_review:hover,
 #deletereview a:hover {
     background-color: var(--c-anchor-hvr);}
+.box_coltags a[href^="collections.php?action=delete_tag"]:hover,
+.box_coltags a[href^="user.php?id"]:hover,
+#wrapper a[onclick^="deleteTag("]:hover {
+    background: var(--c-anchor-hvr);}
 
 #wrapper .timeline-nav-button:hover:before,
 .month-picker-header .ui-icon:hover,
@@ -489,11 +501,17 @@ a[title="Edit"] {
 h3 a[href^="user.php?action=notify_delete&"],
 .inventory .trash_icon,
 a[title="Remove"],
+.box_info.pad a[title="Delete Alias"],
+.box_coltags a[href^="collections.php?action=delete_tag"],
+a[onclick^="deleteTag("],
 #friends .colhead_dark .remove_friend,
 #users_reviews .delete_review a.remove_review,
 #deletereview a {
     -webkit-mask-image: url('icons/tor/rm.svg');
     mask-image: url('icons/tor/rm.svg');}
+.box_coltags a[href^="user.php?id"] {
+    -webkit-mask-image: url('icons/nav/user.svg');
+    mask-image: url('icons/nav/user.svg');}
 
 .torrent_table .addbookmark {
     -webkit-mask-image: url('icons/addbookmark.svg');
@@ -910,6 +928,8 @@ input.weblinks,
 form[method="post"][action="tools.php?action=trivia_suggestions"] >input[type="text"],
 
 input#newkeyname,
+
+#collections .sidebar .box_addtorrent input[name="url"],
 
 form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 
@@ -1889,7 +1909,7 @@ input[type=submit],
 .hovereffect h2,
 #shop .item_description,
 fancybox-button,
-.box.box_coltags .pad li a:nth-child(n+2),
+/* .box.box_coltags .pad li a:nth-child(n+2), */
 .box.box_coltags .head span[title="Add Tags"] a,
 /*#reviewrow a*/#expand_review,
 /*#reviewrow a*/#load_edit_review,
@@ -2119,6 +2139,10 @@ a[title="External Link"],
 a[title="Edit"],
 a[onclick^="edit"],
 a[title="Remove"],
+.box_info.pad a[title="Delete Alias"],
+.box_coltags a[href^="collections.php?action=delete_tag"],
+.box_coltags a[href^="user.php?id"],
+a[onclick^="deleteTag("],
 #friends .colhead_dark .remove_friend,
 #users_reviews .delete_review a.remove_review,
 #deletereview a,
@@ -2222,7 +2246,7 @@ button:active,
 input[type=button]:active,
 input[type=submit]:active,
 #markread:active:before,
-.box.box_coltags .pad li a:nth-child(n+2):active,
+/* .box.box_coltags .pad li a:nth-child(n+2):active, */
 /*#reviewrow a*/#expand_review:active,
 /*#reviewrow a*/#load_edit_review:active,
 #load_edit_review_dialog:active,
@@ -3916,6 +3940,7 @@ table#requests_list         tr:hover .tags a {
 #wiki .sidebar .box.box_addalias .add_form,
 #user .thin >.header:first-child +.box.pad +.box.pad table.border td:not(.label),
 /*.box.screenshots_div #image_block >span,*/
+#collections .sidebar .add_torrent .field_div,
 .tags_ratings {
     display: flex;
     flex-flow: row;}
@@ -4142,16 +4167,16 @@ input[type=button],
 input[type=submit],
 .forum_latest .search #cat_list a[onclick],
 .similar_votes a,
-.box_tags .stats.nobullet div a,
-.box.box_info.pad a[title="Delete Alias"],
-a[href^="javascript:IndexVote("] strong,
-a[href^="javascript:Vote("] strong,
-#requests table.border td.nobr:nth-child(2) strong,
+.box_tags .stats.nobullet div a:not([onclick^="deleteTag("]),
+/* .box.box_info.pad a[title="Delete Alias"], */
+a[href^="javascript:IndexVote("],
+a[href^="javascript:Vote("],
+/* #requests table.border td.nobr:nth-child(2) a, */
 #torrents #requests.request_table #requests_list .requestrows a.brackets,
 #image_block a,
 .answers >a[onclick],
 #newthreadform #newthreadtext #answer_block a,
-.box.box_coltags .pad li a:nth-child(n+2),
+/* .box.box_coltags .pad li a:nth-child(n+2), */
 .box.box_coltags .head span[title="Add Tags"] a,
 #user #userform #platcheckbox +a,
 a#tag_show\/hide,
@@ -4190,11 +4215,11 @@ table#otherop.hidden ~table.otheroptoggle a,
 #torrents #requests.request_table .colhead a,
 #newthreadform #newthreadtext #answer_block,
 /*.box.screenshots_div*/ #image_block, /* removing brackets, as per usual */
-.box_tags .stats.nobullet div a,
+#wrapper .box_tags .stats.nobullet div a,
 .box.box_info.pad a[title="Delete Alias"],
-a[href^="javascript:IndexVote("] strong,
-a[href^="javascript:Vote("] strong,
-#requests table.border td.nobr:nth-child(2) strong,
+a[href^="javascript:IndexVote("],
+a[href^="javascript:Vote("],
+/* #requests table.border td.nobr:nth-child(2) a, */
 .forum_post tr.likes >td:first-child,
 tr.likes td[id^="likers_"] >strong,
 #inbox #searchbox,
@@ -4238,6 +4263,7 @@ table#snatchesrow/* td*/,
 .box_image_coverart div[align="center"],
 .box_image_avatar div:last-child,*/
 /*.username_badges,*/
+#wrapper .box.box_coltags .pad li a:nth-child(n+2),
 .username_badges >a,
 h2 a[href^="feeds.php?"],
 h3 a[href^="feeds.php?"],
@@ -4281,8 +4307,9 @@ table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]
     margin-right: 3px;}
 .box_tags .stats.nobullet div a:nth-child(2) {
     margin-left: 4px;}
-.box_tags .stats.nobullet div a:nth-child(3) {
-    margin-left: 5px;}
+/* .box_tags .stats.nobullet div a:nth-child(3), */
+a[onclick^="deleteTag("] {
+    margin: auto auto auto 8px;}
 .box_tags .stats.nobullet div {
     display: flex !important;
     min-width: 80px;
@@ -4291,6 +4318,7 @@ table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]
 .box_tags .stats.nobullet {
     margin-top: 0;
     line-height: 26px;}
+#requests .box_linked_group .head,
 .box_tags .head {
     margin-bottom: 10px;}
 .box_tags .stats.nobullet li {
@@ -4302,17 +4330,19 @@ table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]
 #image_block >a[onclick]:before,
 #image_block a,
 #newthreadform #newthreadtext #answer_block a,
-a[href^="javascript:IndexVote("] strong:before,
-a[href^="javascript:Vote("] strong:before,
-#requests table.border td.nobr:nth-child(2) strong:before,
+a[href^="javascript:IndexVote("]:before,
+a[href^="javascript:Vote("]:before,
+/* #requests table.border td.nobr:nth-child(2) a:before, */
 #torrents #requests.request_table #requests_list .requestrows a.brackets:before,
 .box_tags .stats.nobullet div a:before,
-.box.box_info.pad a[title="Delete Alias"]:before,
+/* .box.box_info.pad a[title="Delete Alias"]:before, */
 .box.box_coltags .head span[title="Add Tags"] a:before {
     font-size: 18px;
     line-height: 14px;}
 .box_tags .stats.nobullet div a:nth-child(2):before {
-    padding-right: 1px;}
+    /* padding-right: 1px; */
+}
+#collections .sidebar .box_addtorrent input[value="+"],
 #torrents #requests.request_table #requests_list .requestrows a.brackets,
 .similar_votes a[onclick] {
     font-size: 18px;}
@@ -4324,15 +4354,15 @@ button:hover,
 input[type=button]:hover,
 input[type=submit]:hover,
 .similar_votes a:hover,
-a[href^="javascript:IndexVote("] strong:hover,
-a[href^="javascript:Vote("] strong:hover,
-#requests table.border td.nobr:nth-child(2) strong:hover,
+a[href^="javascript:IndexVote("]:hover,
+a[href^="javascript:Vote("]:hover,
+#requests table.border td.nobr:nth-child(2) a:hover,
 #torrents #requests.request_table #requests_list .requestrows a.brackets:hover,
 .box_tags .stats.nobullet div a:hover,
-.box.box_info.pad a[title="Delete Alias"]:hover,
+/* .box.box_info.pad a[title="Delete Alias"]:hover, */
 #image_block a:hover,
 #newthreadform #newthreadtext #answer_block a:hover,
-.box.box_coltags .pad li a:nth-child(n+2):hover,
+/* .box.box_coltags .pad li a:nth-child(n+2):hover, */
 /*.box.box_coltags .head span[title="Add Tags"] a:hover,*/
 .torrent_table tr.pad td >.linkbox a[href*="action=torrentrevert"]:hover,
 .filelist_title a.brackets:hover {
@@ -4346,15 +4376,15 @@ button:active,
 input[type=button]:active,
 input[type=submit]:active,
 .similar_votes a:active,
-a[href^="javascript:IndexVote("] strong:active,
-a[href^="javascript:Vote("] strong:active,
-#requests table.border td.nobr:nth-child(2) strong:active,
+a[href^="javascript:IndexVote("]:active,
+a[href^="javascript:Vote("]:active,
+/* #requests table.border td.nobr:nth-child(2) a:active, */
 #torrents #requests.request_table #requests_list .requestrows a.brackets:active,
 .box_tags .stats.nobullet div a:active,
-.box.box_info.pad a[title="Delete Alias"]:active,
+/* .box.box_info.pad a[title="Delete Alias"]:active, */
 #image_block a:active,
 #newthreadform #newthreadtext #answer_block a:active,
-.box.box_coltags .pad li a:nth-child(n+2):active,
+/* .box.box_coltags .pad li a:nth-child(n+2):active, */
 /*.box.box_coltags .head span[title="Add Tags"] a:active,*/
 .torrent_table tr.pad td >.linkbox a[href*="action=torrentrevert"]:active,
 .filelist_title a.brackets:active {
@@ -4389,6 +4419,7 @@ table#otherop.hidden ~table.otheroptoggle a,
     /*margin-right: 5px;
     line-height: 19px;
     margin-top: 3px;*/}
+#wrapper #newthreadform #newthreadtext #answer_block a,
 #wrapper .answers >a[onclick],
 #tags_box a#tags_add_toggle,
 #wrapper .box.box_coltags .head span[title="Add Tags"] a,
@@ -4481,6 +4512,7 @@ button.alertable-cancel:hover,
 #wrapper .answers >a[onclick]:hover,
 #wrapper #image_block >a[onclick]:hover,
 #wrapper .forum_latest .search #cat_list a[onclick]:hover,
+#wrapper #newthreadform #newthreadtext #answer_block a:hover,
 #adventure_search .flright a[onclick]:hover,
 #shop_search .flright a[onclick]:hover,
 .torrent_table tr.pad td >.linkbox a:not([href*="?action="]):hover,
@@ -4510,6 +4542,7 @@ button.alertable-cancel:active,
 #wrapper .answers >a[onclick]:active,
 #wrapper #image_block >a[onclick]:active,
 #wrapper .forum_latest .search #cat_list a[onclick]:active,
+#wrapper #newthreadform #newthreadtext #answer_block a:active,
 #adventure_search .flright a[onclick]:active,
 #shop_search .flright a[onclick]:active,
 .torrent_table tr.pad td >.linkbox a:not([href*="?action="]):active,
@@ -4539,7 +4572,8 @@ form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 #wrapper [type="button"][value="Cancel"],
 a[href="#"],
 a[onclick] {
-    /*cursor: default;*/}
+    /*cursor: default;*/
+}
 /* #index .sidebar #freeleech .group_torrent a,
 td.body a[onclick^="Quote"], */
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip {
@@ -4950,9 +4984,9 @@ strong.mature +strong +br,
     /*min-width: 170px;*/
     max-width: calc(50% + 50px);}
 #image_block >a[onclick]:nth-of-type(1):before,
-a[href^="javascript:IndexVote("] strong:before,
-a[href^="javascript:Vote("] strong:before,
-#requests table.border td.nobr:nth-child(2) strong:before,
+a[href^="javascript:IndexVote("]:before,
+a[href^="javascript:Vote("]:before,
+/* #requests table.border td.nobr:nth-child(2) a:before, */
 .box_tags .stats.nobullet div a:nth-child(2):before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(1):before,
 .box.box_coltags .head span[title="Add Tags"] a:before {
@@ -4961,11 +4995,11 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1):before,
 .box_tags .stats.nobullet div a:nth-child(1):before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(2):before {
     content: '-';}
-.box.box_info.pad a[title="Delete Alias"]:before,
+/* .box.box_info.pad a[title="Delete Alias"]:before,
 .box_tags .stats.nobullet div a:nth-child(3):before {
     font-size: 14px;
     line-height: 14px;
-    content: 'X';}
+    content: 'X';} */
 li:not(.suggested_similar) .similar_votes >span {
     order: 2;
     font-size: 16px;
@@ -4985,6 +5019,33 @@ li:not(.suggested_similar) .similar_votes >span {
 .similar:after {
     transform: scaleY(-1);
     bottom: 8px;} */
+
+/***** round +/-/etc buttons *****/
+a[href^="javascript:IndexVote("],
+a[href^="javascript:Vote("],
+/* .box_tags .stats.nobullet div a, */
+a[onclick^="voteTag("],
+/* #wrapper a[onclick^="deleteTag("], */
+a[onclick^="similarVote("] {
+    border-radius: 50%;
+    width: 4px;
+    height: 14px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;}
+a[href^="javascript:IndexVote("]:before,
+a[href^="javascript:Vote("]:before,
+/* #wrapper .box_tags .stats.nobullet div a:before, */
+#wrapper a[onclick^="voteTag("]:before,
+/* #wrapper a[onclick^="deleteTag("]:before, */
+a[onclick^="similarVote("]:before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    line-height: 24px;}
+
 
 .sub {
     opacity: 0;/*}
@@ -5460,22 +5521,24 @@ a#getmorenews:hover,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
-.box.box_info.pad a[title="Delete Alias"]:hover,
+/* .box.box_info.pad a[title="Delete Alias"]:hover, */
 #user #userform #platcheckbox +a:hover,
 a#tag_show\/hide:hover,
 .filter_torrents.advanced .flright:hover,
+#newthreadform #newthreadtext #answer_block a:hover,
 #adventure_search .flright a[onclick]:hover,
 #shop_search .flright a[onclick]:hover,
 a.toggle_tags:hover,
 .torrent_table tr.pad td >.linkbox a:hover,
-a[href^="javascript:IndexVote("] strong:hover,
-a[href^="javascript:Vote("] strong:hover,
-.box.box_coltags .pad li a:nth-child(n+2):hover,
+a[href^="javascript:IndexVote("]:hover,
+a[href^="javascript:Vote("]:hover,
+/* .box.box_coltags .pad li a:nth-child(n+2):hover, */
 /*#reviewrow a*/#expand_review:hover,
 /*#reviewrow a*/#load_edit_review:hover,
+#wrapper #image_block >a[onclick]:hover,
 #load_edit_review_dialog:hover,
 .box.box_coltags .head span[title="Add Tags"] a:hover,
-#requests table.border td.nobr:nth-child(2) strong:hover,
+/* #requests table.border td.nobr:nth-child(2) a:hover, */
 #torrents #requests.request_table #requests_list .requestrows a.brackets:hover,
 .similar img:hover,
 #css_gallery .preview_image:hover,
@@ -9098,6 +9161,8 @@ span.size5 img {
 #collections .box.box_comment {
     display: flex;
     flex-flow: column;}
+.sidebar #tags_box #tagslist {
+    min-height: 31px;}    
 #collections .sidebar .box.box_comment .subhead {
     margin-top: 8px;
     font-size: 12px;
@@ -9121,7 +9186,8 @@ span.size5 img {
     /* cursor: default;
     background-color: transparent; */}
 #collections .sidebar .box_addtorrent input[name="url"] {
-    width: calc(100% - 39px);}
+    /* width: calc(100% - 39px); */
+}
 #collections .sidebar .box.box_comment a[href^="reports.php?action=report"] {
     float: right;}
 #collections .sidebar .box.box_comment +.box.pad {
@@ -13505,8 +13571,9 @@ h2 >s >#groupplatform {
 
 /* /Ignore Group */
 
-
-
+/* missing group (missing.svg) */
+.torrent_table #displayname #groupname a:empty:before {
+    content: '[error]';}
 
 
 /**********************************************
