@@ -4172,7 +4172,7 @@ input[type=submit],
 a[href^="javascript:IndexVote("],
 a[href^="javascript:Vote("],
 /* #requests table.border td.nobr:nth-child(2) a, */
-#torrents #requests.request_table #requests_list .requestrows a.brackets,
+/* #torrents #requests.request_table #requests_list .requestrows a.brackets, */
 #image_block a,
 .answers >a[onclick],
 #newthreadform #newthreadtext #answer_block a,
@@ -4333,7 +4333,7 @@ a[onclick^="deleteTag("] {
 a[href^="javascript:IndexVote("]:before,
 a[href^="javascript:Vote("]:before,
 /* #requests table.border td.nobr:nth-child(2) a:before, */
-#torrents #requests.request_table #requests_list .requestrows a.brackets:before,
+/* #torrents #requests.request_table #requests_list .requestrows a.brackets:before, */
 .box_tags .stats.nobullet div a:before,
 /* .box.box_info.pad a[title="Delete Alias"]:before, */
 .box.box_coltags .head span[title="Add Tags"] a:before {
@@ -4343,7 +4343,7 @@ a[href^="javascript:Vote("]:before,
     /* padding-right: 1px; */
 }
 #collections .sidebar .box_addtorrent input[value="+"],
-#torrents #requests.request_table #requests_list .requestrows a.brackets,
+/* #torrents #requests.request_table #requests_list .requestrows a.brackets, */
 .similar_votes a[onclick] {
     font-size: 18px;}
 button:hover,
@@ -4357,7 +4357,7 @@ input[type=submit]:hover,
 a[href^="javascript:IndexVote("]:hover,
 a[href^="javascript:Vote("]:hover,
 #requests table.border td.nobr:nth-child(2) a:hover,
-#torrents #requests.request_table #requests_list .requestrows a.brackets:hover,
+/* #torrents #requests.request_table #requests_list .requestrows a.brackets:hover, */
 .box_tags .stats.nobullet div a:hover,
 /* .box.box_info.pad a[title="Delete Alias"]:hover, */
 #image_block a:hover,
@@ -4379,7 +4379,7 @@ input[type=submit]:active,
 a[href^="javascript:IndexVote("]:active,
 a[href^="javascript:Vote("]:active,
 /* #requests table.border td.nobr:nth-child(2) a:active, */
-#torrents #requests.request_table #requests_list .requestrows a.brackets:active,
+/* #torrents #requests.request_table #requests_list .requestrows a.brackets:active, */
 .box_tags .stats.nobullet div a:active,
 /* .box.box_info.pad a[title="Delete Alias"]:active, */
 #image_block a:active,
@@ -5539,7 +5539,7 @@ a[href^="javascript:Vote("]:hover,
 #load_edit_review_dialog:hover,
 .box.box_coltags .head span[title="Add Tags"] a:hover,
 /* #requests table.border td.nobr:nth-child(2) a:hover, */
-#torrents #requests.request_table #requests_list .requestrows a.brackets:hover,
+/* #torrents #requests.request_table #requests_list .requestrows a.brackets:hover, */
 .similar img:hover,
 #css_gallery .preview_image:hover,
 .screenshots img:hover,
@@ -6685,7 +6685,7 @@ tr.likes td[id^="likers_"]:hover {
 .linkbox .brackets:after,
 #user script +.thin h2 +#userform:before,
 #collections .edition_info:before,
-#torrents #requests.request_table #requests_list .requestrows a.brackets:before,
+/* #torrents #requests.request_table #requests_list .requestrows a.brackets:before, - round buttons */
 #torrents #requests.request_table #requests_list .requestrows a.brackets:after,
 /* #bookmarks .edition_info:before, */
 #newthreadpreview div#pollpreview:after,
