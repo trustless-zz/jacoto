@@ -2983,9 +2983,9 @@ table.bbcode_table td,
 #header #stats_ratio {
     font-size: 0;}
 #stats_ratio:before {
-    width: 16px;
-    height: 16px;
-    margin: 2px 2px 0 0;
+    width: 14px;
+    height: 14px;
+    margin: 3px 3px 0 0;
     content: '';}
 #stats_ratio span.stat:before {
     content: ':';}
