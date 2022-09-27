@@ -19,6 +19,12 @@ body {
 .rating_container {
     margin-top: auto;}
 
+#wrapper .similar ul {
+    resize: vertical;
+    min-height: 200px;
+    max-height: unset;
+    height: 380px;}
+
 .filter_torrents.advanced {
     position: relative;}
 #wrapper .filter_torrents.advanced .flright {
