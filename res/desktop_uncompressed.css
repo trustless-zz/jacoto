@@ -60,6 +60,11 @@ body {
     
 .sidebar {
     flex-direction: column;}
+
+#tags_box div a {
+    opacity: .5;}
+#tags_box li:hover div a {
+    opacity: 1;}
     
 /* row hovers */
 #inbox .thin >.box.pad #messageform tr:not(.colhead):hover,

@@ -1858,13 +1858,28 @@ a[title="Remove"]:before {
 		margin-bottom:10px;}
 
 	#wrapper .userreviews tr {
-		padding-bottom: 10px;
-		display: flex;}
+		/* padding-bottom: 10px;
+		display: flex; */
+        }
     #wrapper #content td#usersreview {
-        width: 100%;}
+        /* width: 100%; */
+        }
     
     #wrapper #content #allreviewslink {
-        bottom: -30px;}
+        /* bottom: -30px; */
+        }
+    #torrents #wrapper #content .userreviews .users_review,
+    #torrents #wrapper #content .userreviews #usersreviewimage {
+        float: unset;
+        margin: unset;
+        text-align: unset;}
+    #torrents #wrapper #content .userreviews #usersreviewimage {
+        display: table-cell;
+        padding: 5px;}
+    #torrents #wrapper #content .userreviews .users_review {
+        display: block;
+        padding: 5px;
+        width: unset;}
 
 	/****Sidebar boxes****/
 	/* #torrents .sidebar .box .body {padding: 5px;} */
