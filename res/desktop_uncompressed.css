@@ -96,6 +96,7 @@ body {
 #wiki .thin >table tr:not(.colhead):hover,
 #wiki .thin form:only-child table tr:not(.colhead):hover, /* wiki Revision history */
 #torrents .torrent_notifications table.border tr:not(.colhead):hover,
+#torrents .torrent_notifications table.border tr:not(.colhead):hover .noticon +td #groupplatform a, /* shared class/id mess */
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):hover,
 #wrapper #content table.diff.split_view tr:hover, /* (torrent, wiki, etc.) history compare table */
 .clan_stat_totals table.border tr:not(.colhead):not(:last-child):hover td {
@@ -555,6 +556,7 @@ body {
 
 #userinfo_stats li:not(#stats_ratio) {
     background-color: var(--c-input-obj);}
+#stats_ratio:hover,
 #nav_useredit:hover,
 #nav_logout:hover,
 #nav_donate:hover,

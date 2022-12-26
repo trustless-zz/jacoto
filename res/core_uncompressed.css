@@ -150,7 +150,7 @@ tr.likes td[id^="likers_"] >strong:nth-of-type(2),
 #bb_righ,
 #bb_pre,
 #bb_youtube,
-#stats_ratio:before,
+/* #stats_ratio >a:before, */
 img[title="Snatches"],
 #bookmarks img[alt="Snatches"],
 img[title="Downloaded"],
@@ -235,6 +235,7 @@ a[title="Remove"],
 #stats_share_score a:before,
 td a img[alt="Ratio"],
 #users_reviews .delete_review a.remove_review,
+#stats_ratio >a:before,
 #deletereview a {
     -webkit-mask-position: center;
     -webkit-mask-repeat: no-repeat;
@@ -293,6 +294,7 @@ a[onclick^="deleteTag("]:hover, */
 #userhistory .colhead_dark a:hover img[alt="Last read post"],
 td a:hover img[alt="Ratio"],
 #users_reviews .delete_review a.remove_review:hover,
+#stats_ratio >a:hover:before,
 #deletereview a:hover {
     background-color: var(--c-anchor-hvr);}
 .box_coltags a[href^="collections.php?action=delete_tag"]:hover,
@@ -436,7 +438,7 @@ a[title="Download"],
     mask-image: url('icons/upload.svg');}
 td img[alt="Ratio"],
 .profile .box_stats #ratio .stat:before,
-#stats_ratio:before {
+#stats_ratio >a:before {
     -webkit-mask-image: url('icons/ratio.svg');
     mask-image: url('icons/ratio.svg');}
 .torrent_table .show_torrents_link:after,
@@ -2043,6 +2045,8 @@ table.diff.split_view tr, /* (torrent, wiki, etc.) history compare table */
 a[onclick="hideDnu();"]:after,
 a[onclick="showDnu();"]:after,
 
+#stats_ratio,
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -2122,7 +2126,7 @@ img[title="Snatches"],
 #bookmarks img[alt="Snatches"],
 .torrent_table #user_rating_icon img,
 #index #freeleech .group_torrent >span:first-child a,
-#stats_ratio a,
+/* #stats_ratio a, */
 #stats_gold a,
 #stats_leeching a,
 #stats_seeding a,
@@ -2963,29 +2967,36 @@ table.bbcode_table td,
     margin-bottom: 20px;
     display: flex;}
 
-    #header #logo a {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-position: center;}
+#header #logo a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-position: center;}
 
-    #logo {
-        background: unset !important;
-        left: 0;
-        z-index: 999;}
+#logo {
+    background: unset !important;
+    left: 0;
+    z-index: 999;}
 
-    #logo a {
-        background-color: transparent;
-        display: block;}
+#logo a {
+    background-color: transparent;
+    display: block;}
 
 #header #stats_ratio {
     font-size: 0;}
-#stats_ratio:before {
+#stats_ratio >a {
+    display: inline-block;
+    width: auto;
+    height: 0;
+    position: relative;
+    z-index: 1;}
+#stats_ratio >a:before {
     width: 14px;
     height: 14px;
     margin: 3px 3px 0 0;
+    display: inline-block;
     content: '';}
 #stats_ratio span.stat:before {
     content: ':';}
@@ -4676,7 +4687,7 @@ body:not(#upload) #artist_tr + tr td.label,
     color: var(--c-txt);}
 
 .sidebar .box.box_badges,
-.sidebar .box_albumart {
+.sidebar .box.box_albumart {
     padding-bottom: 0;}
 
 .linkbox {
@@ -5553,7 +5564,7 @@ a[href^="javascript:Vote("]:hover,
 .collections_art_display td:hover .hovereffect,
 #wrapper .calendar .calendar-day:hover,
 .filelist_title a.brackets:hover,
-.review_cell .flextable-cell:first-child img:not(.avatar):hover{
+.review_cell .flextable-cell:first-child img:not(.avatar):hover {
     -webkit-box-shadow: none;
     box-shadow: none;}
 
@@ -5775,6 +5786,54 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     margin-top: -14px;}
 */
 
+#torrents .torrent_notifications >table.border {
+    position: relative;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-top: none;}
+#torrents .torrent_notifications >table.border:before {
+    content: '';
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    background-color: var(--c-tgroup);
+    height: calc(100% + 48px);
+    z-index: -1;
+    -webkit-box-shadow: var(--p-main-shdw);
+    box-shadow: var(--p-main-shdw);}
+#torrents .torrent_notifications >span.center {
+    display: flex;
+    width: 100%;
+    text-align: left;
+    box-sizing: border-box;
+    border: 1px solid var(--c-main-brdr);
+    border-bottom: 1px solid var(--c-table-brdr);}
+#torrents .torrent_notifications >span.center >input {
+    margin: 10px 0 10px 10px;}
+#torrents .torrent_notifications >span.center >a {
+    margin: auto 10px auto auto;}
+/***** more mess because Notifications and Deleted Torrents share the same classes/ids *****/
+#torrents .torrent_notifications table.border tr:not(.colhead):nth-child(even) .noticon +td #groupplatform a {
+    background-color: var(--c-trowb);}
+#torrents .torrent_notifications table.border tr:not(.colhead):nth-child(odd) .noticon +td #groupplatform a {
+    background-color: var(--c-box);}
+#torrents #wrapper .torrent_notifications table.border tr:not(.colhead) .noticon +td #groupplatform a:hover {
+    background-color: var(--c-anchor-hvr-bcg) !important;}
+#torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) {
+    font-size: 0;
+    line-height: 0;}
+#torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >a:not(:last-of-type) {
+    display: inline-block;
+    margin-right: 3px;}
+#torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >a:last-of-type {
+    vertical-align: text-top;
+    font-size: 14px;
+    line-height: var(--p-lh);}
+
+
+
+
 /* revisit later */
 #allreviews h2 {
     background: var(--p-head-grdnt);
@@ -5876,9 +5935,9 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     left: -36px;
     top: calc(50% - 17px);}
 .cats_col   div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
-.collicon   div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
-.noticon    div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications)/*,
-#better .torrent_table td.center.collicon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+.collicon   div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications)
+/* .noticon    div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) - shared class/id mess */
+/* #better .torrent_table td.center.collicon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #bookmarks td.center.collicon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #collections .group.discog td.collicon:nth-child(2) >div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #uploaded_table             td.center.cats_col div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
