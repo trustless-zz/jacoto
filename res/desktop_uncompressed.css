@@ -1,5 +1,4 @@
-﻿@media (min-width: 801px) {
-html {
+﻿html {
     overflow-x: hidden;
     overflow-y: scroll;}
 body {
@@ -16,6 +15,28 @@ body {
     /*margin-top: calc(12px * var(--p-lh) - 16px);*/
     margin-top: 2px;
     padding: 2px;}
+
+tr:hover .tags a {
+    background-color: var(--c-tag);}
+#better tr.torrent.torrent_row:hover .tags a,
+#running_freeleech          tr:hover .tags a,
+#requests                   tr:hover .tags a,
+.torrent_notifications      tr:hover .tags a,
+#uploaded_table             tr:hover .tags a,
+#seeding_table              tr:hover .tags a,
+#leeching_table             tr:hover .tags a,
+#snatched_table             tr:hover .tags a,
+#snatched_not_seeding_table tr:hover .tags a,
+#seeding_not_snatched_table tr:hover .tags a,
+#downloaded_table           tr:hover .tags a,
+#extlink_table              tr:hover .tags a,
+#top10                      tr:hover .tags a,
+table#requests_list         tr:hover .tags a {
+    background-color: var(--c-tag-2);}
+#wrapper #content .tags a:hover {
+    background-color: var(--c-anchor-hvr-bcg);
+    color: var(--c-anchor-hvr);}
+
 .rating_container {
     margin-top: auto;}
 
@@ -878,7 +899,7 @@ body {
         -webkit-box-shadow: var(--p-header-shdw);
         box-shadow: var(--p-header-shdw);}
     /*** /Medals ***/
-}
+
 
 
 @media (min-width: 1300px) {
@@ -895,12 +916,12 @@ body {
 
 
 /** scale **/
-@media (min-width: 801px) and (max-width: 1421px) {
+@media (max-width: 1421px) {
     .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
     .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
         width: 100%;}
 }
-@media (min-width: 801px) and (max-width: 1280px) {
+@media (max-width: 1280px) {
     #header #nav_userinfo a.username {
         transition-delay: .5s;
         color: transparent;}
@@ -957,7 +978,7 @@ body {
             calc(100% + 10px) 300px,
             -10px 300px);}
 }
-@media (min-width: 801px) and (max-width: 1185px) {
+@media (max-width: 1185px) {
     .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
     #artist #torrent_table .group_torrent td[colspan="2"] >a,
     #collections #torrent_table .group_torrent td[colspan="3"] >a,
@@ -969,7 +990,7 @@ body {
     #wrapper .global_buffs {
         width: calc(200px - 200px / 3);}
 }
-@media (min-width: 801px) and (max-width: 1600px) {
+@media (max-width: 1600px) {
     #wrapper .global_buffs .buff_text .buff_multiplier {
         font-size: 15px;}
     #wrapper .global_buffs .buff_text .buff_label {
@@ -987,7 +1008,7 @@ body {
     #wrapper .global_buffs {
         width: calc(170px / 3);}
 }
-@media (min-width: 801px) and (max-width: 1450px) {
+@media (max-width: 1450px) {
     #wrapper #header .clan_trophy img {
         height: 48px;
         padding: 5px 0;}
@@ -1019,7 +1040,7 @@ body {
         width: 149px;} */
 
 /* backpack */
-@media (min-width: 801px) and (max-width: 1302px) {
+@media (max-width: 1302px) {
     #wrapper #backpack  #items {
         width: 275px;}
     #wrapper .calendar .day-number {
@@ -1030,7 +1051,7 @@ body {
         min-height: 9.217vw;
         /*min-height: 100px;*/}
 }
-@media (min-width: 801px) and (max-width: 1178px) {
+@media (max-width: 1178px) {
     #wrapper #backpack  #items {
         width: calc(100% - 237px);
         float: right;
@@ -1042,15 +1063,15 @@ body {
 }
 
 /* crafting */
-@media (min-width: 801px) and (max-width: 1420px) {
+@media (max-width: 1420px) {
     #wrapper #crafting_panel #items {
         width: 399px;}
 }
-@media (min-width: 801px) and (max-width: 1296px) {
+@media (max-width: 1296px) {
     #wrapper #crafting_panel #items {
         width: 275px;}
 }
-@media (min-width: 801px) and (max-width: 1172px) {
+@media (max-width: 1172px) {
     #wrapper #crafting_panel #items {
         width: calc(100% - 237px);
         float: right;
@@ -1063,15 +1084,15 @@ body {
 }
 
 /* equipment */
-@media (min-width: 801px) and (max-width: 1413px) {
+@media (max-width: 1413px) {
     #wrapper #equipment #items {
         width: 399px;}
 }
-@media (min-width: 801px) and (max-width: 1289px) {
+@media (max-width: 1289px) {
     #wrapper #equipment #items {
         width: 275px;}
 }
-@media (min-width: 801px) and (max-width: 1165px) {
+@media (max-width: 1165px) {
     #wrapper #equipment #items {
         width: calc(100% - 237px);
         float: right;
@@ -1083,16 +1104,16 @@ body {
 }
 
 /* trading */
-@media (min-width: 801px) and (max-width: 1347px) {
+@media (max-width: 1347px) {
     
     #wrapper #trading_panel #items {
         width: 275px;}
 }
-@media (min-width: 801px) and (max-width: 1223px) {
+@media (max-width: 1223px) {
     #wrapper #content #trading_panel #my_trade_table {
         width: 275px;}
 }
-@media (min-width: 801px) and (max-width: 1099px) {
+@media (max-width: 1099px) {
     #wrapper #content #trading_panel #other_trade_table {
         width: 275px;}
     #wrapper .calendar .day-number {
@@ -1101,7 +1122,7 @@ body {
     #calendar .calendar .calendar-day-np {
         /*min-height: 80px;*/}
 }
-@media (min-width: 801px) and (max-width: 975px) {
+@media (max-width: 975px) {
     #wrapper #trading_panel #items {
         width: 100%;
         float: right;
@@ -1113,13 +1134,13 @@ body {
 }
     
 /* shop */
-@media (min-width: 801px) and (max-width: 1239px) {
+@media (max-width: 1239px) {
     #shop li.item_li {
         width: calc(100% / 3 - 10px);}
     #shop li.featured {
         width: calc(50% - 10px);}
 }
-@media (min-width: 801px) and (max-width: 1017px) {
+@media (max-width: 1017px) {
     #shop li.item_li {
         width: calc(50% - 10px);}
     #wrapper .inventory li.item_li, /*inventory */
@@ -1129,7 +1150,7 @@ body {
 
 
 /* top10 tags */
-@media (min-width: 801px) and (max-width: 1150px) {
+@media (max-width: 1150px) {
     .thin.top10_tags #ut,
     .thin.top10_tags #ur,
     .thin.top10_tags #v {
@@ -1137,31 +1158,31 @@ body {
 }
 
 /* forum post image size */
-@media (min-width: 801px) and (max-width: 1070px) {
+@media (max-width: 1070px) {
     /*#wrapper .forum_post td.body #contentpreview img,*/
     #wrapper .forum_post td.body img {
         max-width: 100% !important;}
 }
 /* news post image size */
-@media (min-width: 801px) and (max-width: 1170px) {
+@media (max-width: 1170px) {
     #wrapper .box.news_post >.pad img {
         max-width: 100% !important;}
 }
 
 /* games >filter */ /* 53% */ /* revisit */
-@media (min-width: 801px) and (max-width: 1420px) {
+@media (max-width: 1420px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 487px;}
 }
-@media (min-width: 801px) and (max-width: 1320px) {
+@media (max-width: 1320px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 413px;}
     .filter_torrents.advanced .flright:before {
         bottom: 1191px;}
 }
-@media (min-width: 801px) and (max-width: 1220px) {
+@media (max-width: 1220px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 345px;}
@@ -1169,29 +1190,29 @@ body {
         content: none;
         /*bottom: 1191px;*/}
 }
-@media (min-width: 801px) and (max-width: 1120px) {
+@media (max-width: 1120px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 309px;}
     .filter_torrents.advanced .flright:before {
         /*bottom: 1229px;*/}
 }
-/*@media (min-width: 801px) and (max-width: 1020px) {
+/*@media (max-width: 1020px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 309px;}
 }
-@media (min-width: 801px) and (max-width: 905px) {
+@media (max-width: 905px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 318px;}
 }
-@media (min-width: 801px) and (max-width: 805px) {
+@media (max-width: 805px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 271px;}
 }*/
-@media (min-width: 801px) and (max-width: 966px) {
+@media (max-width: 966px) {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 213px;}
@@ -1218,12 +1239,12 @@ body {
         margin: 0 5px !important;}
 }*/
 
-@media (min-width: 801px) and (max-width: 1385px) {
+@media (max-width: 1385px) {
     #request_comments .forum_post td.body img,
     #torrent_comments .forum_post td.body img {
         max-width: 100% !important;}
 }
-@media (min-width: 801px) and (max-width: 1200px) {
+@media (max-width: 1200px) {
     video.bb,
     video {
         max-width: 100%;}
@@ -1244,11 +1265,11 @@ body {
     table#existing_freeleech_pots td {
         white-space: normal;}
 }
-@media (min-width: 801px) and (max-width: 920px) {
+@media (max-width: 920px) {
     table#existing_freeleech_pots td {
         word-break: break-word;}
 }
-@media (min-width: 801px) and (max-width: 899px) {
+@media (max-width: 899px) {
     #inbox #messageform #preview img, /* inbox compose preview */
     .box.vertical_space#preview img, /*inbox*/
     .box.vertical_space .body img, /*inbox*/
@@ -1353,12 +1374,12 @@ body {
 #wrapper .twitter-tweet {
     width: 525px !important;}
 }
-@media (min-width: 801px) and (max-width: 850px) {
+@media (max-width: 850px) {
 #wrapper .twitter-tweet {
     width: 475px !important;}
 }
 
-@media (min-width: 751px) and (max-width: 800px) {
+/* @media (min-width: 751px) and (max-width: 800px) {
 #wrapper .twitter-tweet {
     width: 565px !important;}
 }
@@ -1393,4 +1414,4 @@ body {
 @media (min-width: 360px) and (max-width: 400px) {
 #wrapper .twitter-tweet {
     width: 175px !important;}
-}
+} */

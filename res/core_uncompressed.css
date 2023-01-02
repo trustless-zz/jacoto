@@ -3814,7 +3814,7 @@ td img[alt="Ratio"],
 .torrent_table #upvote,
 .torrent_table #downvote,
 .torrent_table #novote {
-    font-size: 17px;
+     font-size: 17px;
     font-weight: bold;}
 .user_online,
 .torrent_table #upvote {
@@ -3853,7 +3853,7 @@ td img[alt="Ratio"],
     margin-bottom: 5px;
     padding: 0;
     display: inline-block;}
-tr:hover .tags a {
+/* tr:hover .tags a {
     background-color: var(--c-tag);}
 #better tr.torrent.torrent_row:hover .tags a,
 #running_freeleech          tr:hover .tags a,
@@ -3872,7 +3872,7 @@ table#requests_list         tr:hover .tags a {
     background-color: var(--c-tag-2);}
 #wrapper #content .tags a:hover {
     background-color: var(--c-anchor-hvr-bcg);
-    color: var(--c-anchor-hvr);}
+    color: var(--c-anchor-hvr);} */
 
 .box.screenshots_div #image_block {
     /*margin: 5px 5px -3px 5px;*/}
@@ -8496,7 +8496,7 @@ table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]
     width: calc(100% - 375px);}
 
 #user .thin >h2 ~br +br +h3,
-#user .thin >h2 +h3 { /* can not handle mroe than 1 line */
+#user .thin >h2 +h3 { /* can not handle more than 1 line */
     margin: 0;
     font-size: var(--p-head);
     line-height: var(--p-head);
@@ -8511,7 +8511,9 @@ table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]
     display: flex;
     flex-flow: row;
     top: 1px;
-    margin-bottom: -36px;}
+    margin-bottom: -36px;
+/* but ugly is still better than dysfunctional */
+    word-break: break-word;}
 #user .thin >h2:first-child +form[method="post"]:before {
     line-height: var(--p-head);
     content: 'Create a new notification filter';

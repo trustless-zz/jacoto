@@ -1,5 +1,4 @@
-﻿@media (max-width: 800px) {
-	/* #header {display:none;} */
+﻿	/* #header {display:none;} */
     .clan_trophy {display: none;}
     
         #header #userinfo #userinfo_username .sub {
@@ -1099,9 +1098,9 @@
         top: calc(50% - 17px);
         left: -36px;
         right: unset;}
-    #wrapper .torrent_notifications #groupplatform/*,
-    .torrent_notifications .torrent_table #groupplatform*/ {
-        left: 2px;}
+    /*#wrapper .torrent_notifications #groupplatform,
+    .torrent_notifications .torrent_table #groupplatform {
+        left: 2px;} */
     
     #userinfo_stats >li a {
         position: unset;}
@@ -1381,7 +1380,7 @@
 /*****************************************
 *********NOTIFICATIONS PAGES**************
 *****************************************/
-	#torrents .torrent_notifications .group_torrent {display: block;}
+	/* #torrents .torrent_notifications .group_torrent {display: block;}
 	#torrents .torrent_notifications td {color: var(--c-text-s);}
 
 	#torrents .torrent_notifications td:nth-child(2) {width: auto; }
@@ -1391,7 +1390,17 @@
 	#torrents .torrent_notifications td:nth-child(4),
 	#torrents .torrent_notifications td:nth-child(5),
 	#torrents .torrent_notifications td:nth-child(6)
-		{display: none !important;}
+		{display: none !important;} */
+    #torrents .torrent_notifications .colhead td {
+        font-size: 14px;
+        line-height: 16px;}
+    #torrents .torrent_notifications td:nth-child(4) {
+        text-align: center;}
+    #torrents .torrent_notifications td:nth-child(5),
+    #torrents .torrent_notifications td:nth-child(7) {
+        display: none;}
+    #torrents .torrent_notifications tr.group_torrent >td {
+        position: relative;}
 
 /*****************************************revisit
 **************GAMES PAGES*****************
@@ -3442,18 +3451,18 @@ a[title="Remove"]:before {
     #user form#userform td.right[colspan="2"] {
         min-width: calc(100vw - 32px);}
     /*** /user settings save button ***/
-}
 
 
 
 
 
-@media (min-width: 700px) and (max-width: 800px) {
+
+@media (min-width: 700px) {
     .similar li {
         width: calc(25% - 10px);}
 }
 
-@media (min-width: 650px) and (max-width: 800px) {
+@media (min-width: 650px) {
     #torrents #torrentbrowse .torrent_table td:nth-of-type(10),
     #torrents #torrentbrowse .torrent_table td:nth-of-type(9),
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(8),
@@ -3489,14 +3498,14 @@ a[title="Remove"]:before {
         font-size: 9px;}
 }
 
-@media (min-width: 500px) and (max-width: 800px) {
+@media (min-width: 500px) {
 	#equipment:after,
     #crafting_panel:after,
     #trading_panel:after,
     #upload #content:after{
         font-size: 19px;}
 }
-@media (min-width: 421px) and (max-width: 800px) {
+@media (min-width: 421px) {
     .box_game_ratings>.body {
             flex-flow: column;}
     .box_game_ratings>.body>div {
@@ -3655,4 +3664,42 @@ a[title="Remove"]:before {
 @media (max-width: 349px) {
     #wrapper #header .global_buffs {
         display: none;}
+}
+
+/* smh */
+@media (min-width: 751px) {
+#wrapper .twitter-tweet {
+    width: 565px !important;}
+}
+@media (min-width: 701px) and (max-width: 750px) {
+#wrapper .twitter-tweet {
+    width: 515px !important;}
+}
+@media (min-width: 651px) and (max-width: 700px) {
+#wrapper .twitter-tweet {
+    width: 465px !important;}
+}
+@media (min-width: 601px) and (max-width: 650px) {
+#wrapper .twitter-tweet {
+    width: 415px !important;}
+}
+@media (min-width: 551px) and (max-width: 600px) {
+#wrapper .twitter-tweet {
+    width: 365px !important;}
+}
+@media (min-width: 501px) and (max-width: 550px) {
+#wrapper .twitter-tweet {
+    width: 315px !important;}
+}
+@media (min-width: 451px) and (max-width: 500px) {
+#wrapper .twitter-tweet {
+    width: 265px !important;}
+}
+@media (min-width: 401px) and (max-width: 450px) {
+#wrapper .twitter-tweet {
+    width: 215px !important;}
+}
+@media (min-width: 360px) and (max-width: 400px) {
+#wrapper .twitter-tweet {
+    width: 175px !important;}
 }
