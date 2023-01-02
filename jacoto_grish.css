@@ -1,8 +1,8 @@
 ﻿@import url('res/core.css');
 @import url('res/icons_grish.css');
 @import url('res/userscripts.css');
-@import url('res/desktop.css');
-@import url('res/mobile.css');
+@import url('res/desktop.css') screen and (min-width: 801px);
+@import url('res/mobile.css') screen and (max-width: 800px);
 
 @import url('https://gazellegames.net/static/styles/game_room/cssFiles/holidayeffects.css');
 
