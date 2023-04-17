@@ -14045,6 +14045,13 @@ div#fight_skill_points_assign >table {
 #wrapper /*.users_review*/[data-readmore][aria-expanded="true"] +[data-readmore-toggle]:before {
     opacity: 0;}
 
+/*** aria-expand incorrect height bug fix, ruins transition ***/
+#wrapper #content /*.users_review*/[data-readmore][aria-expanded="true"][style*="height: 96px"] +[data-readmore-toggle]:before {
+    opacity: 1;}
+[data-readmore][aria-expanded="true"]:not([style*="height: 96px"]) {
+    height: unset !important;}
+/*** /aria-expand incorrect height bug fix, ruins transition ***/
+
 /*.userreviews tr:last-child:not(:only-child),*/
 /*.users_review +*/[data-readmore-toggle] {
     background-color: transparent !important;}
