@@ -1993,7 +1993,8 @@ a:after, */
 
 th[aria-disabled="false"],
 
-#header li[id="notilia nav_notifications"] strong,
+/* #header li[id="notilia nav_notifications"] strong, */
+#header .newnoti,
 
 .torrent_table .ignored td.center:first-child:after,
 .torrent_table .ignored >td:not(:first-child):not(:nth-child(11)),
@@ -3011,12 +3012,15 @@ table.bbcode_table td,
     color: var(--c-em-hvr);
     -webkit-box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr);
     box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr);}
-/* notifications don't get a .highlight */
-#header li[id="notilia nav_notifications"] strong {
+/* notifications & deleted torrents don't get a .highlight */
+#header .notificationsico .newnoti,
+#header .deltornotifsico .newnoti {
     color: var(--c-em-hvr);}
-#header li[id="notilia nav_notifications"] a.notificationsico {
+#header .notificationsico,
+#header .deltornotifsico {
     position: relative;}
-#header li[id="notilia nav_notifications"] strong:before {
+#header .notificationsico .newnoti:before,
+#header .deltornotifsico .newnoti:before {
     content: '';
     position: absolute;
     width: 100%;
@@ -3025,9 +3029,8 @@ table.bbcode_table td,
     left: 0;
     -webkit-box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr);
     box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr);}
-#header li[id="notilia nav_notifications"].active strong:before {
+#header .active .newnoti:before {
     content: none;}
-
 /* / desktop/mobile duplicate merge */
 
 .large_progress_bar .main_bar {

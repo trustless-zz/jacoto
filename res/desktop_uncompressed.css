@@ -617,7 +617,9 @@ table#requests_list         tr:hover .tags a {
     box-shadow: unset;}
 #header #searchbars .autocomplete_list .highlight:hover,
 #header .highlight:hover,
-#header li[id="notilia nav_notifications"]:hover strong {
+/* #header li[id="notilia nav_notifications"]:hover strong, */
+#header .notificationsico:hover .newnoti,
+#header .deltornotifsico:hover .newnoti {
     color: var(--c-anchor-hvr);}
     
 #header #userinfo_stats:before {
