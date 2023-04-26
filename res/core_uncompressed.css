@@ -5829,11 +5829,14 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 #torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >a:not(:last-of-type) {
     display: inline-block;
     margin-right: 3px;}
-#torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >a:last-of-type {
+/* #torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >a:last-of-type, */
+#torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >a[href^="torrents.php?torrentid="] {
     vertical-align: text-top;
     font-size: 14px;
-    line-height: var(--p-lh);}
-
+    line-height: var(--p-lh);
+    display: inline;}
+#torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >br+a {
+    margin-top: 5px;}
 
 
 
