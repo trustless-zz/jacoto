@@ -694,6 +694,8 @@ td.center.cats_col+td,
 
 .box.screenshots_div,
 
+.sidebar #freeleech .stats.nobullet,
+
 .sidebar #tags_box #tagslist,
 .sidebar #tags_box >a,
 
@@ -2675,7 +2677,9 @@ a[onclick="showDnu();"]:hover:after {
 #torrents #wrapper .torrent_notifications .noticon +td,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a {
     margin: 0;}
-
+.sidebar #freeleech .stats.nobullet {
+    margin-right: -10px;}
+.sidebar #freeleech .stats.nobullet:after,
 #slides .slides_container:before,
 #slides .slides_container:after {
     content: '';
@@ -2687,6 +2691,7 @@ a[onclick="showDnu();"]:hover:after {
     z-index: 99;}
 #slides .slides_container:before {
     left: 0;}
+.sidebar #freeleech .stats.nobullet:after,
 #slides .slides_container:after {
     right: 0;
     transform: scaleX(-1);}
@@ -2712,6 +2717,7 @@ a[onclick="showDnu();"]:hover:after {
     border-color: var(--c-b3);}
 .sidebar #slides a.prev {
     margin-left: 10px;}
+.sidebar #low_seed_fl_more,
 table#grouplinks #curlinkedgroup,
 .sidebar #slides a.next {
     margin-right: 10px;}
@@ -9687,6 +9693,7 @@ tr.unreadpm td:first-child:after,
 #color_uploaded:before,
 #color_snatched:before,
 #color_downloaded:before {
+    cursor: default;
     opacity: .8;}
 tr:hover #color_leeching:before,
 tr:hover #color_seeding:before,
