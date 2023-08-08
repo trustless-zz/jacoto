@@ -699,6 +699,11 @@ td.center.cats_col+td,
 .sidebar #tags_box #tagslist,
 .sidebar #tags_box >a,
 
+.group_torrent:has(strong[class$="freeleech_label"]),
+.group_torrent:has(.reported_label),
+.group_torrent:has(#trumpable_tag),
+.group_torrent:has(.trumpable_label),
+
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
 #forums .forum_index            tr:not(.colhead) td:first-child,
@@ -5947,7 +5952,8 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     left: -36px;
     top: calc(50% - 17px);}
 .cats_col   div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
-.collicon   div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications)
+.collicon   div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+.noticon    div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications)
 /* .noticon    div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) - shared class/id mess */
 /* #better .torrent_table td.center.collicon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #bookmarks td.center.collicon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
@@ -5975,10 +5981,14 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 #torrent_table #groupplatform a*/ {
     width: 100%;
     height: 100%;
-    display: block;
+    display: inline-block; /* inline as per request https://gazellegames.net/forums.php?action=viewthread&threadid=19304&postid=2833659#post2833659 */
     background-size: 28px 28px;
     background-repeat: no-repeat;
     background-position: center;}
+.cats_col div,
+.collicon div,
+.noticon div {
+    display: inline-block; /* inline as per request https://gazellegames.net/forums.php?action=viewthread&threadid=19304&postid=2833659#post2833659 */}
 #requests .thin >table.border .colhead_dark {
     white-space: nowrap;}
 /*#wrapper h2 #groupplatform {
@@ -9677,6 +9687,11 @@ tr.unreadpm td:first-child:after,
 
 .torrent_table .ignored td.center:first-child:after,
 
+.group_torrent:has(strong[class$="freeleech_label"]) td:first-child:before,
+.group_torrent:has(.reported_label) td:first-child:after,
+.group_torrent:has(#trumpable_tag) td:first-child:after,
+.group_torrent:has(.trumpable_label) td:first-child:after,
+
 #color_leeching:before,
 #color_seeding:before,
 #color_uploaded:before,
@@ -9688,6 +9703,11 @@ tr.unreadpm td:first-child:after,
     position: absolute;
     top: 0;
     left: 0;}
+.group_torrent:has(strong[class$="freeleech_label"]) td:first-child:before,
+.group_torrent:has(.reported_label) td:first-child:after,
+.group_torrent:has(#trumpable_tag) td:first-child:after,
+.group_torrent:has(.trumpable_label) td:first-child:after,
+
 #color_leeching:before,
 #color_seeding:before,
 #color_uploaded:before,
@@ -9695,6 +9715,11 @@ tr.unreadpm td:first-child:after,
 #color_downloaded:before {
     cursor: default;
     opacity: .8;}
+.group_torrent:hover:has(strong[class$="freeleech_label"]) td:first-child:before,
+.group_torrent:hover:has(.reported_label) td:first-child:after,
+.group_torrent:hover:has(#trumpable_tag) td:first-child:after,
+.group_torrent:hover:has(.trumpable_label) td:first-child:after,
+
 tr:hover #color_leeching:before,
 tr:hover #color_seeding:before,
 tr:hover #color_uploaded:before,
@@ -9722,8 +9747,32 @@ table#snatched_not_seeding_table td.center.cats_col +td >span:before,
 table#seeding_not_snatched_table td.center.cats_col +td >span:before,
 table#downloaded_table td.center.cats_col +td >span:before {
     content: none;}
-
-
+#wrapper .group_torrent:has(strong[class$="freeleech_label"]) a[id^="color_"][onclick]:before,
+#wrapper .group_torrent:has(.reported_label) a[id^="color_"][onclick]:before,
+#wrapper .group_torrent:has(#trumpable_tag) a[id^="color_"][onclick]:before,
+#wrapper .group_torrent:has(.trumpable_label) a[id^="color_"][onclick]:before,
+#wrapper .group_torrent:has(strong[class$="freeleech_label"]):has(.reported_label) td:first-child:before,
+#wrapper .group_torrent:has(strong[class$="freeleech_label"]):has(#trumpable_tag) td:first-child:before,
+#wrapper .group_torrent:has(strong[class$="freeleech_label"]):has(.trumpable_label) td:first-child:before {
+    left: 2px;}
+#wrapper .group_torrent:has(strong[class$="freeleech_label"]):has(.reported_label) a[id^="color_"][onclick]:before,
+#wrapper .group_torrent:has(strong[class$="freeleech_label"]):has(#trumpable_tag) a[id^="color_"][onclick]:before,
+#wrapper .group_torrent:has(strong[class$="freeleech_label"]):has(.trumpable_label) a[id^="color_"][onclick]:before {
+    left: 4px;}
+.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(a[id^="color_"][onclick]),
+.group_torrent td:first-child:has(.reported_label):has(a[id^="color_"][onclick]),
+.group_torrent td:first-child:has(#trumpable_tag):has(a[id^="color_"][onclick]),
+.group_torrent td:first-child:has(.trumpable_label):has(a[id^="color_"][onclick]),
+.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(.reported_label),
+.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(#trumpable_tag),
+.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(.trumpable_label) {
+    padding-left: 7px;}
+.group_torrent td:first-child:has(.reported_label):has(a[id^="color_"][onclick]),
+.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(#trumpable_tag):has(a[id^="color_"][onclick]),
+.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(.trumpable_label):has(a[id^="color_"][onclick]) {
+    padding-left: 9px;}
+.group_torrent:has(strong[class$="freeleech_label"]) td:first-child:before {
+    background-color: var(--c-fl);}
 /*****************************************************
 ******************* ALL ITEM PAGES *******************
 *****************************************************/
@@ -13608,6 +13657,10 @@ table.event_form_table td.label.small_label[colspan="4"] {
     filter: grayscale(0);}
 #displayname s {
     text-decoration: unset;}
+.group_torrent:has(.reported_label) td:first-child:after,
+.group_torrent:has(#trumpable_tag) td:first-child:after,
+.group_torrent:has(.trumpable_label) td:first-child:after,
+
 .torrent_table .ignored td.center:first-child:after {
     background-color: var(--c-red);}
 
