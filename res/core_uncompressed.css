@@ -699,11 +699,6 @@ td.center.cats_col+td,
 .sidebar #tags_box #tagslist,
 .sidebar #tags_box >a,
 
-.group_torrent:has(strong[class$="freeleech_label"]),
-.group_torrent:has(.reported_label),
-.group_torrent:has(#trumpable_tag),
-.group_torrent:has(.trumpable_label),
-
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
 #forums .forum_index            tr:not(.colhead) td:first-child,
@@ -9687,11 +9682,6 @@ tr.unreadpm td:first-child:after,
 
 .torrent_table .ignored td.center:first-child:after,
 
-.group_torrent:has(strong[class$="freeleech_label"]) td:first-child:before,
-.group_torrent:has(.reported_label) td:first-child:after,
-.group_torrent:has(#trumpable_tag) td:first-child:after,
-.group_torrent:has(.trumpable_label) td:first-child:after,
-
 #color_leeching:before,
 #color_seeding:before,
 #color_uploaded:before,
@@ -9703,11 +9693,6 @@ tr.unreadpm td:first-child:after,
     position: absolute;
     top: 0;
     left: 0;}
-.group_torrent:has(strong[class$="freeleech_label"]) td:first-child:before,
-.group_torrent:has(.reported_label) td:first-child:after,
-.group_torrent:has(#trumpable_tag) td:first-child:after,
-.group_torrent:has(.trumpable_label) td:first-child:after,
-
 #color_leeching:before,
 #color_seeding:before,
 #color_uploaded:before,
@@ -9715,11 +9700,6 @@ tr.unreadpm td:first-child:after,
 #color_downloaded:before {
     cursor: default;
     opacity: .8;}
-.group_torrent:hover:has(strong[class$="freeleech_label"]) td:first-child:before,
-.group_torrent:hover:has(.reported_label) td:first-child:after,
-.group_torrent:hover:has(#trumpable_tag) td:first-child:after,
-.group_torrent:hover:has(.trumpable_label) td:first-child:after,
-
 tr:hover #color_leeching:before,
 tr:hover #color_seeding:before,
 tr:hover #color_uploaded:before,
@@ -9747,6 +9727,38 @@ table#snatched_not_seeding_table td.center.cats_col +td >span:before,
 table#seeding_not_snatched_table td.center.cats_col +td >span:before,
 table#downloaded_table td.center.cats_col +td >span:before {
     content: none;}
+
+/*** isolating :has() because firefox doesn't fully support it yet ***/
+.group_torrent:has(strong[class$="freeleech_label"]),
+.group_torrent:has(.reported_label),
+.group_torrent:has(#trumpable_tag),
+.group_torrent:has(.trumpable_label) {
+    position: relative;}
+.group_torrent:has(strong[class$="freeleech_label"]) td:first-child:before,
+.group_torrent:has(.reported_label) td:first-child:after,
+.group_torrent:has(#trumpable_tag) td:first-child:after,
+.group_torrent:has(.trumpable_label) td:first-child:after {
+    content: '';
+    height: 100%;
+    width: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;}
+.group_torrent:has(.reported_label) td:first-child:after,
+.group_torrent:has(#trumpable_tag) td:first-child:after,
+.group_torrent:has(.trumpable_label) td:first-child:after {
+    background-color: var(--c-red);}
+.group_torrent:has(strong[class$="freeleech_label"]) td:first-child:before,
+.group_torrent:has(.reported_label) td:first-child:after,
+.group_torrent:has(#trumpable_tag) td:first-child:after,
+.group_torrent:has(.trumpable_label) td:first-child:after{
+    cursor: default;
+    opacity: .8;}
+.group_torrent:hover:has(strong[class$="freeleech_label"]) td:first-child:before,
+.group_torrent:hover:has(.reported_label) td:first-child:after,
+.group_torrent:hover:has(#trumpable_tag) td:first-child:after,
+.group_torrent:hover:has(.trumpable_label) td:first-child:after {
+    opacity: 1;}
 #wrapper .group_torrent:has(strong[class$="freeleech_label"]) [id^="color_"]:before,
 #wrapper .group_torrent:has(.reported_label) [id^="color_"]:before,
 #wrapper .group_torrent:has(#trumpable_tag) [id^="color_"]:before,
@@ -9773,6 +9785,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
     padding-left: 9px;}
 .group_torrent:has(strong[class$="freeleech_label"]) td:first-child:before {
     background-color: var(--c-fl);}
+/*** /isolating :has() because firefox doesn't fully support it yet ***/
+
 /*****************************************************
 ******************* ALL ITEM PAGES *******************
 *****************************************************/
@@ -13657,10 +13671,6 @@ table.event_form_table td.label.small_label[colspan="4"] {
     filter: grayscale(0);}
 #displayname s {
     text-decoration: unset;}
-.group_torrent:has(.reported_label) td:first-child:after,
-.group_torrent:has(#trumpable_tag) td:first-child:after,
-.group_torrent:has(.trumpable_label) td:first-child:after,
-
 .torrent_table .ignored td.center:first-child:after {
     background-color: var(--c-red);}
 
