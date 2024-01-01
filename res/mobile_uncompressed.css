@@ -3174,6 +3174,7 @@ a[title="Remove"]:before {
     .inventory #wrapper .trash_icon {
         max-width: unset !important;
         height: 18px !important;}
+    #wrapper .trade_value .trade_value_gold img,
     #wrapper #trading_panel .trade_table#other_trade_table .gold_trade_box img,
     #wrapper #trading_panel .gold_trade .gold_trade_buttons img {
         height: 26px !important;}
