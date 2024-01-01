@@ -3169,13 +3169,19 @@ a[title="Remove"]:before {
         margin-bottom: 5px;
         width: 100% !important;}
     
+    #wrapper #trading_panel .gold_trade .gold_trade_box_left img,
     #user img[alt="RSS feed"], /* notifications */
     .inventory #wrapper .trash_icon {
         max-width: unset !important;
         height: 18px !important;}
+    #wrapper #trading_panel .trade_table#other_trade_table .gold_trade_box img,
+    #wrapper #trading_panel .gold_trade .gold_trade_buttons img {
+        height: 26px !important;}
     
     #shop_search #item_search tbody:not(#advanced_search) td:last-child {
         margin: -26px 0 0 auto;}
+    #wrapper #content #trading_panel #other_trade_table .gold_trade_box {
+        width: 100%;}
     
     #wrapper #content #items_navigation {
         width: 0;
@@ -3310,10 +3316,10 @@ a[title="Remove"]:before {
 	#crafting_panel #items,
 	#crafting_panel #results_section,
 	#crafting_panel #slots_panel,
-	#trading_panel #items,
+	/* #trading_panel #items,
 	#trading_panel .trade_table,
 	#trading_panel .message_section,
-	#trading_panel button, /*{display: none;}*/
+	#trading_panel button, */
     
     #crafting_panel div,
     /*#crafting_panel h2,*/
@@ -3328,12 +3334,19 @@ a[title="Remove"]:before {
     #upload #content br {
 		display: none !important;}
     
+    /* #wrapper #trading_panel .trade_table, */
+    #wrapper #trading_panel #items {
+        width: 100%;
+        height: 280px;}
+    #wrapper #content #trading_panel .trade_table {
+        width: calc(50% - 7.5px);}
+    
     #wrapper #crafting_recipes li.item_li {
         width: calc(100% / 4 - 10px);}
     
 	#equipment:after,
     #crafting_panel:after,
-    #trading_panel:after,
+    /* #trading_panel:after, */
     #upload #content:after {
         font-weight: 600;
         font-size: 19px;
@@ -3352,8 +3365,8 @@ a[title="Remove"]:before {
 	#crafting_panel:after {
         content: "Crafting Manager is disabled on mobile.";}
     
-	#trading_panel:after {
-        content: "Trading is disabled on mobile.";}
+	/* #trading_panel:after {
+        content: "Trading is disabled on mobile.";} */
 
     #upload #content:after {
 		content: "Uploading is disabled on mobile.";}
@@ -3501,7 +3514,7 @@ a[title="Remove"]:before {
 @media (min-width: 500px) {
 	#equipment:after,
     #crafting_panel:after,
-    #trading_panel:after,
+    /* #trading_panel:after, */
     #upload #content:after{
         font-size: 19px;}
 }
@@ -3620,7 +3633,7 @@ a[title="Remove"]:before {
         width: 100%;}
     #wrapper #equipment:after,
     #wrapper #crafting_panel:after,
-    #wrapper #trading_panel:after,
+    /* #wrapper #trading_panel:after, */
     #wrapper #upload #content:after {
         font-size: 17px;}
     #quickreplychecks {
@@ -3703,3 +3716,62 @@ a[title="Remove"]:before {
 #wrapper .twitter-tweet {
     width: 175px !important;}
 }
+
+
+
+
+/* @media (min-width: 677px) {
+    #wrapper #trading_panel .item,
+    #crafting_panel .item,
+    #equipment .item, #backpack .item {
+        width: calc((100% / 5) - 24px);
+        height: 0;
+        padding-bottom: calc((100% / 5) - 20px) !important;}
+}
+@media (min-width: 553px) and (max-width: 676px) {
+    #wrapper #trading_panel .item,
+    #crafting_panel .item,
+    #equipment .item, #backpack .item {
+        width: calc((100% / 4) - 24px);
+        height: 0;
+        padding-bottom: calc((100% / 4) - 20px) !important;}
+}
+@media (min-width: 429px) and (max-width: 552px) {
+    #wrapper #trading_panel .item,
+    #crafting_panel .item,
+    #equipment .item, #backpack .item {
+        width: calc((100% / 3) - 24px);
+        height: 0;
+        padding-bottom: calc((100% / 3) - 20px) !important;}
+}
+@media (min-width: 305px) and (max-width: 428px) {
+    #wrapper #trading_panel .item,
+    #crafting_panel .item,
+    #equipment .item, #backpack .item {
+        width: calc((100% / 2) - 24px);
+        height: 0;
+        padding-bottom: calc((100% / 2) - 20px) !important;}
+} */
+
+@media (max-width: 639px) {
+    /* #wrapper #trading_panel .gold_trade .gold_trade_buttons {
+        display: none;} */
+    #wrapper #trading_panel .gold_trade .gold_trade_max {
+        margin-left: auto;}
+    #wrapper #trading_panel .gold_trade .gold_trade_box {
+        width: calc(100% - 10px);}
+    #wrapper #trading_panel div.gold_trade {
+        flex-flow: row wrap;
+        height: auto;}
+    #trading_panel #my_trade_table .items-wrapper:before {
+        top: 120px;}
+}
+/* @media (max-width: 479px) {
+    #wrapper #trading_panel div.gold_trade {
+        flex-flow: column;
+        height: auto;}
+    #trading_panel #my_trade_table .items-wrapper:before {
+        top: 120px;}
+    #wrapper #trading_panel .gold_trade .gold_trade_box {
+        width: calc(100% - 10px);}
+} */

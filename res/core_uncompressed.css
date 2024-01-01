@@ -9943,7 +9943,8 @@ table#downloaded_table td.center.cats_col +td >span:before {
     line-height: 1em;
 	position: absolute;
 	bottom: 2px;
-	width: 100px;}
+	/* width: 100px; */
+	width: calc(100% - 8px);}
 
 #crafting_panel .item.used,
 #equipment .item.used,
@@ -12955,7 +12956,8 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 	list-style-type: none;
 	margin: 0 0 10px 0;
 	padding: 4px;
-	height: 80px;
+	/* height: 80px; */
+    height: auto;
 	font-size: 14px;
 	word-break: break-word;
 	line-height: 80px;

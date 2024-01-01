@@ -1129,7 +1129,7 @@ table#requests_list         tr:hover .tags a {
         width: 100%;
         float: right;
         margin: 0 0 15px 0;
-        height: 229px;}
+        height: 280px;}
     #wrapper #content #trading_panel #my_trade_table,
     #wrapper #content #trading_panel #other_trade_table {
         width: calc(50% - 7.5px);}
