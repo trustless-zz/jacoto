@@ -1218,9 +1218,9 @@
 		line-height: 19px;}
     .tags a {
         background-color: var(--c-tag);}
-    #top10 .tags a,
+    /* #top10 .tags a,
     table#requests_list .tags a {
-        background-color: var(--c-tag-2);}
+        background-color: var(--c-tag-2);} */
 
 	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) .rating_container {}
 
@@ -1655,12 +1655,28 @@
 		margin-right: 0;
 		/* overflow: hidden; */}
     
-    #torrents .main_column tr.group_torrent td:not(.edition_info):nth-child(1):before {
+    /* #torrents .main_column tr.group_torrent td:not(.edition_info):nth-child(1):before {
         content: '';
         width: 36px;
         height: 28px;
         display: block;
-        float: right;}
+        float: right;} */
+
+    
+    #wrapper #content .group_torrent:has(strong[class$="freeleech_label"]):has([id^="color_"]),
+    #wrapper #content .group_torrent:has(.reported_label):has([id^="color_"]),
+    #wrapper #content .group_torrent:has(#trumpable_tag):has([id^="color_"]),
+    #wrapper #content .group_torrent:has(.trumpable_label):has([id^="color_"]),
+    #wrapper #content .group_torrent:has(strong[class$="freeleech_label"]):has(.reported_label),
+    #wrapper #content .group_torrent:has(strong[class$="freeleech_label"]):has(#trumpable_tag),
+    #wrapper #content .group_torrent:has(strong[class$="freeleech_label"]):has(.trumpable_label) {
+        padding-left: 6px;}
+    #wrapper #content .group_torrent:has(.reported_label):has([id^="color_"]),
+    #wrapper #content .group_torrent:has(strong[class$="freeleech_label"]):has(#trumpable_tag):has([id^="color_"]),
+    #wrapper #content .group_torrent:has(strong[class$="freeleech_label"]):has(.trumpable_label):has([id^="color_"]) {
+        padding-left: 8px;}
+    
+    
     
     /*#torrents .main_column tr.group_torrent td:nth-child(1) span:not(.new_status):hover {
         position: absolute;

@@ -9771,7 +9771,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 #wrapper .group_torrent:has(strong[class$="freeleech_label"]):has(#trumpable_tag) [id^="color_"]:before,
 #wrapper .group_torrent:has(strong[class$="freeleech_label"]):has(.trumpable_label) [id^="color_"]:before {
     left: 4px;}
-.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has([id^="color_"]),
+/* .group_torrent td:first-child:has(strong[class$="freeleech_label"]):has([id^="color_"]),
 .group_torrent td:first-child:has(.reported_label):has([id^="color_"]),
 .group_torrent td:first-child:has(#trumpable_tag):has([id^="color_"]),
 .group_torrent td:first-child:has(.trumpable_label):has([id^="color_"]),
@@ -9782,7 +9782,7 @@ table#downloaded_table td.center.cats_col +td >span:before {
 .group_torrent td:first-child:has(.reported_label):has([id^="color_"]),
 .group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(#trumpable_tag):has([id^="color_"]),
 .group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(.trumpable_label):has([id^="color_"]) {
-    padding-left: 9px;}
+    padding-left: 9px;} */
 .group_torrent:has(strong[class$="freeleech_label"]) td:first-child:before {
     background-color: var(--c-fl);}
 /*** /isolating :has() because firefox doesn't fully support it yet ***/

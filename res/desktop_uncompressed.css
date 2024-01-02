@@ -274,7 +274,23 @@ table#requests_list         tr:hover .tags a {
     position: relative;
     z-index: 9;}
 
-    
+
+
+.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has([id^="color_"]),
+.group_torrent td:first-child:has(.reported_label):has([id^="color_"]),
+.group_torrent td:first-child:has(#trumpable_tag):has([id^="color_"]),
+.group_torrent td:first-child:has(.trumpable_label):has([id^="color_"]),
+.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(.reported_label),
+.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(#trumpable_tag),
+.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(.trumpable_label) {
+    padding-left: 7px;}
+.group_torrent td:first-child:has(.reported_label):has([id^="color_"]),
+.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(#trumpable_tag):has([id^="color_"]),
+.group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(.trumpable_label):has([id^="color_"]) {
+    padding-left: 9px;}
+
+
+
 #toplink {
     position: absolute;
     top: 100vh;
