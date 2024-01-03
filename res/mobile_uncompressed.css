@@ -668,7 +668,7 @@
         right: unset;
         left: -170px;
         top: -6px;}
-    #content .sub span a {}
+    /* #content .sub span a {} */
     
     
     
@@ -680,7 +680,7 @@
 /*****************************************
 **************DEFAULT STYLES**************
 *****************************************/
-	body {}
+	/* body {} */
     
     .ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-draggable.ui-resizable,
     #torrents .main_column .torrent_table,
@@ -699,7 +699,7 @@
         -webkit-box-sizing: border-box;
         box-sizing: border-box;}
     
-	#content {}
+	/* #content {} */
 
 	/* h2 {
 		height: auto;
@@ -740,7 +740,7 @@
 	td.nobr {
 		white-space: normal;}
 
-	input, textarea {}
+	/* input, textarea {} */
 
 	a {
 	  overflow-wrap: break-word;
@@ -751,7 +751,7 @@
 	  -webkit-hyphens: auto;
 	  hyphens: auto;}
 
-	.box, table {}
+	/* .box, table {} */
 
 	/* ::-webkit-scrollbar {
 		width: 12px;}
@@ -930,14 +930,14 @@
 		flex-wrap: wrap;
 		flex-direction: row;}
 
-	.sidebar img {}
+	/* .sidebar img {} */
 
 	.main_column {
 		float:none;
 		width: auto;
 		order: 1;}
 
-	.newsdate {}
+	/* .newsdate {} */
 
 	/**** Hide news items ***/
 	#index .main_column .box:nth-child(n+3),
@@ -960,10 +960,10 @@
     #wrapper #dailygazelle img,
     #wrapper #slides img {
         max-width: calc(100% - 20px) !important;}
-	.slides_container {}
-	.slides_control {}
+	/* .slides_container {} */
+	/* .slides_control {} */
 	.sidebar #slides ul {width: 100%; margin: 0 auto;}
-	#slides .center a {}
+	/* #slides .center a {} */
 
 	/* .sidebar #slides ul a {
 		max-width: 80%;
@@ -1222,9 +1222,9 @@
     table#requests_list .tags a {
         background-color: var(--c-tag-2);} */
 
-	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) .rating_container {}
+	/* #torrents #torrentbrowse .torrent_table td:nth-of-type(3) .rating_container {} */
 
-	#torrents #torrentbrowse .torrent_table td:nth-of-type(3) .rating_container:hover {}
+	/* #torrents #torrentbrowse .torrent_table td:nth-of-type(3) .rating_container:hover {} */
 
 	.tags_ratings {
 		padding: 3px 0;}
@@ -1526,8 +1526,7 @@
 	#torrents .sidebar .box {
         width: calc(50% - 7.5px);}
 
-	#torrents #content .new_status {/*margin: auto 4px; float: none;*/
-    }
+	/* #torrents #content .new_status {margin: auto 4px; float: none;} */
 
 	/**** Bring tables, td, tr back to default (mostly) from the browse page *****/
 	#torrents .main_column tr.group {
@@ -1563,8 +1562,8 @@
 		/* color: var(--white); */}
 	#torrents .main_column table:not(.forum_post):not(#collages) td:nth-child(5) {
 		display: inline;}
-	#torrents .main_column table:not(.forum_post):not(#collages) td:nth-child(6) {
-		/* color: var(--white); */}
+	/* #torrents .main_column table:not(.forum_post):not(#collages) td:nth-child(6) {
+		color: var(--white);} */
 	#torrents .main_column table:not(.forum_post):not(#collages) td:nth-child(7) {
 		float: none;
 		margin-left: 0px;
@@ -1613,8 +1612,8 @@
     #collections .edition_info strong {
         position: absolute;}
 
-	#torrents .main_column tr.group_torrent:hover {
-		/* background-color:transparent; */}
+	/* #torrents .main_column tr.group_torrent:hover {
+		background-color:transparent;} */
 
 	/* tbody[id^="edition_"], tbody[id*=" edition_"] {line-height: 1.6em;} */
 
@@ -1661,6 +1660,13 @@
         height: 28px;
         display: block;
         float: right;} */
+    #torrents .main_column tr.group_torrent td:not(.edition_info):nth-child(1) >a:before {
+        content: '';
+        width: 33px;
+        height: 28px;
+        display: block;
+        float: right;
+        pointer-events: none;}
 
     
     #wrapper #content .group_torrent:has(strong[class$="freeleech_label"]):has([id^="color_"]),
@@ -1864,7 +1870,7 @@ a[title="Remove"]:before {
 	#torrents #collages tr {padding:0 5px 10px 5px; display: block;}
 	#torrents #collages tr.colhead {padding: 5px 5px 5px 15px;} */
 
-	#torrents .main_column .screenshots img {}
+	/* #torrents .main_column .screenshots img {} */
     
     #torrents .main_column .box.screenshots_div >.body {
         padding: 0 0 0 5px;}
@@ -1882,17 +1888,17 @@ a[title="Remove"]:before {
 	#wrapper tr#usersreviewimage {
 		margin-bottom:10px;}
 
-	#wrapper .userreviews tr {
-		/* padding-bottom: 10px;
-		display: flex; */
-        }
-    #wrapper #content td#usersreview {
-        /* width: 100%; */
-        }
+	/* #wrapper .userreviews tr {
+		padding-bottom: 10px;
+		display: flex;
+        } */
+    /* #wrapper #content td#usersreview {
+        width: 100%;
+        } */
     
-    #wrapper #content #allreviewslink {
-        /* bottom: -30px; */
-        }
+    /* #wrapper #content #allreviewslink {
+        bottom: -30px;
+        } */
     #torrents #wrapper #content .userreviews .users_review,
     #torrents #wrapper #content .userreviews #usersreviewimage {
         float: unset;
@@ -1959,8 +1965,8 @@ a[title="Remove"]:before {
 	#torrents .userratingdiv td {text-align: center;}
 	#torrents .userratingdiv table {background:none;}
 
-	#torrents #weblinksdiv .body {/*padding: 0px;*/}
-	#torrents #weblinksdiv .body.center {/* margin: 10px 5px; */}
+	/* #torrents #weblinksdiv .body {padding: 0px;} */
+	/* #torrents #weblinksdiv .body.center {margin: 10px 5px;} */
     .sidebar #weblinksdiv .body.center a {
         width: 55px;
         height: 55px;}
@@ -1970,7 +1976,7 @@ a[title="Remove"]:before {
 	/*.box_tags li div {display: none !important;}*/
 	/*  .box_tags li div {color: transparent;}
 	.box_tags li div a {color: transparent;} */
-	.box_tags li div a:last-of-type {/* color: var(--lightBlue); */}
+	/* .box_tags li div a:last-of-type {color: var(--lightBlue);} */
     
 #friends .forum_post.vertical_margin .colhead,
 #collections .sidebar .box.box_comment .head,
@@ -1989,15 +1995,15 @@ a[title="Remove"]:before {
 		max-height: 300px;
 		overflow: auto;}
 
-	#torrents .main_column .forum_post .colhead_dark td {}
+	/* #torrents .main_column .forum_post .colhead_dark td {} */
 
-	#torrents .main_column .forum_post td {
-		/* display:block; */}
+	/* #torrents .main_column .forum_post td {
+		display:block;} */
 
-	#torrents .main_column .forum_post td.body {
-		/* padding: 10px;
+	/* #torrents .main_column .forum_post td.body {
+		padding: 10px;
         margin-left: 100px;
-        display: block;*/}
+        display: block;} */
     #clans td,
     #user .thin >h2:first-child +.center ~table.border td,
     #user .box.box_gold #box_gold_scrollbar td,
@@ -2053,7 +2059,7 @@ a[title="Remove"]:before {
         display: block;}
 	#torrents .thin.torrent_history .colhead {
         display: none;}
-	#torrents .thin.torrent_history td {/* color: white; */}
+	/* #torrents .thin.torrent_history td {color: white;} */
 	#torrents .thin.torrent_history td:nth-child(2) {
         width: auto;
         float: none;
@@ -2063,17 +2069,17 @@ a[title="Remove"]:before {
 	/*Torrent Edit Page*/
 	.torrent_edit form {width: 100%;}
 	/* #torrents .torrent_edit td {color: white;} */
-	#torrents .torrent_edit td:nth-child(1) {
-        /* display: block;
-        width: 100%; */}
-	#torrents .torrent_edit td:nth-child(2) {
-        /* width: auto;
-        padding: 10px 5px; */}
-	#torrents .torrent_edit td.label {
-		/* background-color: var(--mediumBlue); */
-        /* box-shadow: 0px 5px 10px var(--black); */
-		/* padding: 5px;
-		display: block;*/}
+	/* #torrents .torrent_edit td:nth-child(1) {
+        display: block;
+        width: 100%;} */
+	/* #torrents .torrent_edit td:nth-child(2) {
+        width: auto;
+        padding: 10px 5px;} */
+	/* #torrents .torrent_edit td.label {
+		background-color: var(--mediumBlue);
+        box-shadow: 0px 5px 10px var(--black);
+		padding: 5px;
+		display: block;} */
 	/* #torrents .torrent_edit textarea {margin: 0;}
 	#torrents .torrent_edit select,
     #torrents .torrent_edit input {margin: 10px 0} */
@@ -2149,7 +2155,7 @@ a[title="Remove"]:before {
     #forums .last_poster {
         line-height: calc(1em + 2px);} */
 
-	#forums span[style="float:right;"] a {/*color: var(--grey);*/}
+	/* #forums span[style="float:right;"] a {color: var(--grey);} */
 	#forums .forum_index tr td {padding: 15px 0px;}
     
     #user .thin >.header:first-child +.box.pad +.box.pad table.border td.label,
@@ -2198,11 +2204,11 @@ a[title="Remove"]:before {
         display: flex;
         flex-flow: row wrap;}
     
-	.forum_post .colhead_dark {
-		/* font-size: .8em;
+	/* .forum_post .colhead_dark {
+		font-size: .8em;
 		padding: 5px 0;
 		width: 100%;
-		min-height: 30px; */}
+		min-height: 30px;} */
     #wrapper #quickreplypreview .colhead_dark span[style="float:left;"],
     #wrapper .forum_post .colhead_dark div[style="float: left;"],
     #wrapper .forum_post .colhead_dark div[style="float:left;"],
@@ -2233,7 +2239,7 @@ a[title="Remove"]:before {
         margin-left:-10px;
         margin-right: 4px;}
 	/* #forums .forum_post .colhead_dark a.post_id {margin-top: 2px !important; margin-left: 2px;} */
-	.forum_post .colhead_dark div[style="float:left;"] a {/*padding: 0px 3px;*/ /* font-size: 1em; */}
+	/* .forum_post .colhead_dark div[style="float:left;"] a {padding: 0px 3px; font-size: 1em;} */
 
     #wrapper #quickreplypreview .colhead_dark span[style="float:left;"] .user_title,
     #wrapper .forum_post .colhead_dark div[style="float: left;"] .user_title,
@@ -2709,12 +2715,12 @@ a[title="Remove"]:before {
         justify-content: space-between;
         width: 100%;}
 	#requests .sidebar .box {width: calc(50% - 7.5px);}
-	#requests .sidebar .box:nth-of-type(1) {/* margin-right: 3%; */}
-	#requests .sidebar .box:nth-of-type(3) {/* margin-right: 3%; */}
+	/* #requests .sidebar .box:nth-of-type(1) {margin-right: 3%;} */
+	/* #requests .sidebar .box:nth-of-type(3) {margin-right: 3%;} */
 	#requests .main_column input {padding: 5px !important; margin: 5px !important;}
-	#requests form textarea {
-        /* max-width: 95%;
-        height: 50px;*/}
+	/* #requests form textarea {
+        max-width: 95%;
+        height: 50px;} */
 	#requests .box table {background: none;}
 
 /*****************************************
@@ -2757,7 +2763,7 @@ a[title="Remove"]:before {
 	#user .thin table td {display: block; }
 	#user .thin form {width: 100%;}
 
-	#user td.label {}
+	/* #user td.label {} */
 	#user select {min-width: auto; width: 95% !important}
 	#user table {min-width: 100% !important}
 	#user .thin table td.right {text-align: left;}
@@ -2772,15 +2778,15 @@ a[title="Remove"]:before {
 	/* Snatches, Likes, Uploads boxes */
 	#user .likes_icon img {width: 20px; float: right;}
 	#snatchesrow td, #uploadsrow td, #likesrow td {width: 100%;}
-	#snatchesrow img, #uploadsrow img,  #likesrow img {
-		/* min-width: 0%;
+	/* #snatchesrow img, #uploadsrow img,  #likesrow img {
+		min-width: 0%;
 		width: 24%;
 		float: left;
 		min-height: 117px !important;
 		max-height: 117px;
-		margin-top: 5px; */}
-	#snatchesrow td:nth-of-type(5), #uploadsrow td:nth-of-type(5), #likesrow td:nth-of-type(5) {
-		/* display:none !important;*/}
+		margin-top: 5px;} */
+	/* #snatchesrow td:nth-of-type(5), #uploadsrow td:nth-of-type(5), #likesrow td:nth-of-type(5) {
+		display:none !important;} */
 
 	/* Community Stats Box */
 	.profile .box_community #community_stats {
@@ -3148,7 +3154,7 @@ a[title="Remove"]:before {
         padding-right: 10px;}
     
 
-	#share_score_breakdown .label {}
+	/* #share_score_breakdown .label {} */
 
 
 
@@ -3211,8 +3217,8 @@ a[title="Remove"]:before {
         box-shadow: none;
         position: absolute;
         z-index: 99;
-        top: 0;
-        right: 0;}
+        top: 1px;
+        right: 1px;}
     
     #wrapper #content #items_navigation:hover {
         padding: 10px;
@@ -3222,8 +3228,10 @@ a[title="Remove"]:before {
         -webkit-box-shadow: var(--p-main-shdw);
         box-shadow: var(--p-main-shdw);
         border: 1px solid var(--c-main-brdr);
-        margin: 0 0 15px 0;}
-    
+        margin: 0 0 15px 0;
+        top: 0;
+        right: 0;}
+
     #wrapper #content #items_navigation:before {
         top: 3px;
         right: 3px;}

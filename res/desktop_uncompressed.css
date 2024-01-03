@@ -1036,9 +1036,9 @@ table#requests_list         tr:hover .tags a {
         width: 48px;}
     #wrapper .global_buffs .fa {
         font-size: 22px;}
-    #wrapper .global_buffs .buff_text {
-        /*line-height: var(--p-lh);*/
-        /*font-size: 11px;*/}
+    /* #wrapper .global_buffs .buff_text {
+        line-height: var(--p-lh);
+        font-size: 11px;} */
     #wrapper .global_buffs .buff_text .buff_multiplier {
         font-size: 12px;}
     #wrapper #toplink {
@@ -1134,11 +1134,11 @@ table#requests_list         tr:hover .tags a {
 @media (max-width: 1099px) {
     #wrapper #content #trading_panel #other_trade_table {
         width: 275px;}
-    #wrapper .calendar .day-number {
-        /*font-size: 4em;*/}
-    #calendar .calendar .calendar-day,
+    /* #wrapper .calendar .day-number {
+        font-size: 4em;} */
+    /* #calendar .calendar .calendar-day,
     #calendar .calendar .calendar-day-np {
-        /*min-height: 80px;*/}
+        min-height: 80px;} */
 }
 @media (max-width: 975px) {
     #wrapper #trading_panel #items {
@@ -1212,8 +1212,8 @@ table#requests_list         tr:hover .tags a {
     .filter_torrents input.inputtext[name="filelist"],
     .filter_torrents input.inputtext.smaller {
         width: 309px;}
-    .filter_torrents.advanced .flright:before {
-        /*bottom: 1229px;*/}
+    /* .filter_torrents.advanced .flright:before {
+        bottom: 1229px;} */
 }
 /*@media (max-width: 1020px) {
     .filter_torrents input.inputtext[name="filelist"],

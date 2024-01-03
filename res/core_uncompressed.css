@@ -1159,8 +1159,8 @@ a[onclick^="QuoteJump(event"] +blockquote {
     max-width: 100% !important;
     margin: 3px 0;}
 
-strong.mature +strong +br +a[onclick] {
-    /* margin-top: 0 !important; */}
+/* strong.mature +strong +br +a[onclick] {
+    margin-top: 0 !important;} */
 
 #userinfo_username .sub {
     visibility: visible !important;}
@@ -2705,8 +2705,8 @@ a[onclick="showDnu();"]:hover:after {
     max-height: 280px !important;
     max-width: calc(100% - 20px) !important;
     margin: 10px auto;}
-#dailygazelle img {
-    /*display: block;*/}
+/* #dailygazelle img {
+    display: block;} */
 .review_cell .flextable-cell:first-child img:not(.avatar):hover,
 /*.profile .box_art_gallery .large_row */#wrapper .gallery_row a:hover,
 /*.profile .box_art_gallery .small_row .gallery_small_slot:hover a,*/
@@ -3458,13 +3458,13 @@ table.adventure_table .colhead td {
     display: inline-block;
     vertical-align: top;}
 
-#top10 td.center.cats_col +td >span a,
+/* #top10 td.center.cats_col +td >span a,
 #artist #torrent_table .group_torrent td[colspan="2"] >span:first-child a,
 #collections #torrent_table .group_torrent td[colspan="3"] >span:first-child aa,
 #bookmarks #torrent_table td[colspan="3"] >span:first-child a,
 .torrent_details .group_torrent td:first-child span a,
 .torrent_table td[colspan="4"] >span:first-child a {
-    /* cursor: pointer ;*/}
+    cursor: pointer ;} */
 
 .noticon    +td >span:not([id]):first-child >a,
 .cats_col   +td >span:not([id]):first-child >a,
@@ -3883,8 +3883,8 @@ table#requests_list         tr:hover .tags a {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);} */
 
-.box.screenshots_div #image_block {
-    /*margin: 5px 5px -3px 5px;*/}
+/* .box.screenshots_div #image_block {
+    margin: 5px 5px -3px 5px;} */
 #wrapper #image_block >span:last-child input {
     margin-bottom: 0 !important;}
 
@@ -4088,8 +4088,8 @@ input[type="url"] {
     padding: 0 4px;}
 /* #searchforum input[type="search"],
 #searchthread input[type="search"] */
-input[type="search"] {
-    /* height: 26px; */}
+/* input[type="search"] {
+    height: 26px;} */
 input[type="search"]:focus {
     color: var(--c-low) !important;
     border-color: var(--c-b1) !important;
@@ -4359,9 +4359,8 @@ a[href^="javascript:Vote("]:before,
 .box.box_coltags .head span[title="Add Tags"] a:before {
     font-size: 18px;
     line-height: 14px;}
-.box_tags .stats.nobullet div a:nth-child(2):before {
-    /* padding-right: 1px; */
-}
+/* .box_tags .stats.nobullet div a:nth-child(2):before {
+    padding-right: 1px;} */
 #collections .sidebar .box_addtorrent input[value="+"],
 /* #torrents #requests.request_table #requests_list .requestrows a.brackets, */
 .similar_votes a[onclick] {
@@ -4417,10 +4416,10 @@ a[href^="javascript:Vote("]:active,
 .filter_torrents input.inputtext.smaller {
     width: 565px;} /*600*/
 
-.flright {
-    /*float: right;*/}
-.flleft {
-	/*float: left;*/}
+/* .flright {
+    float: right;} */
+/* .flleft {
+	float: left;} */
 a.toggle_tags,
 #wrapper .forum_latest .search #cat_list a[onclick],
 #user #userform #platcheckbox +a,
@@ -4587,13 +4586,12 @@ form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 #platcheckbox td[colspan="5"] strong {
     color: var(--c-txt);
     font-weight: 600;}
-[type="button"][value="Preview"],
+/* [type="button"][value="Preview"],
 [type="button"][value="Editor"],
 #wrapper [type="button"][value="Cancel"],
 a[href="#"],
 a[onclick] {
-    /*cursor: default;*/
-}
+    cursor: default;} */
 /* #index .sidebar #freeleech .group_torrent a,
 td.body a[onclick^="Quote"], */
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip {
@@ -5628,9 +5626,9 @@ h3 {
 #tools .thin >#recommended >.head.colhead_dark:first-child strong {
     font-weight: bold !important;}
 
-.unreadpm {
-    /* background-color: var(--c-tgroup); */
-    /* box-shadow: inset 0 -2px 0 0 var(--c-b3); */}
+/* .unreadpm {
+    background-color: var(--c-tgroup);
+    box-shadow: inset 0 -2px 0 0 var(--c-b3);} */
 
 .rowa,
 .row_a,
@@ -6471,9 +6469,9 @@ input#meta[type="number"] {
 #uploaad textarea#album_desc,
 #upload textarea#release_desc {
     margin-bottom: 2px !important;}
-#image_block input[type="url"],
+/* #image_block input[type="url"],
 #image_block input[type="text"] {
-    /*width: calc(100% - 160px) !important;*/}
+    width: calc(100% - 160px) !important;} */
 #image_block ~div input[type="submit"],
 #newthreadform #newthreadtext #answer_block br +input/*,
 #upload td#image_block input[type="text"]:not(#screen0),
@@ -7547,9 +7545,9 @@ form#tag_add_form >input,
 #inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child),
 #inbox #messageform +h2 +form >.box.pad tr:not(:last-child) {
     width: calc(100% - 180px);}
-#inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child) td,
+/* #inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child) td,
 #inbox #messageform +h2 +form >.box.pad tr:not(:last-child) td {
-    /*vertical-align: bottom;*/}
+    vertical-align: bottom;} */
 #inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child) td:not(.label),
 #inbox #messageform +h2 +form >.box.pad tr:not(:last-child) td:not(.label) {
     padding-right: 20px;
@@ -9263,9 +9261,9 @@ span.size5 img {
     font-size: 14px;
     /* cursor: default;
     background-color: transparent; */}
-#collections .sidebar .box_addtorrent input[name="url"] {
-    /* width: calc(100% - 39px); */
-}
+/* #collections .sidebar .box_addtorrent input[name="url"] {
+    width: calc(100% - 39px);
+} */
 #collections .sidebar .box.box_comment a[href^="reports.php?action=report"] {
     float: right;}
 #collections .sidebar .box.box_comment +.box.pad {
@@ -9279,8 +9277,8 @@ span.size5 img {
     padding: 2px;
     display: flex;
     flex-flow: row;}
-#collections .box.box_coltags li:hover {
-    /*background-color: var(--c-tgroup);*/}
+/* #collections .box.box_coltags li:hover {
+    background-color: var(--c-tgroup);} */
 #collections .box.box_coltags li a:first-child {
     overflow: hidden;
     white-space: nowrap;
@@ -9862,11 +9860,11 @@ table#downloaded_table td.center.cats_col +td >span:before {
 
 
 /*** Crafting / Equipment / Trading ***/
-#crafting_panel h2,
+/* #crafting_panel h2,
 #equipment h2,
 #trading_panel h2,
 #backpack h2 {
-	/* visibility: hidden; */}
+	visibility: hidden;} */
 
 #backpack #slots_panel ul,
 #wrapper #trading_panel .items-wrapper,
@@ -10476,7 +10474,7 @@ h3 a[href^="user.php?action=notify_delete&"] {
     color: var(--c-anchor);}
 
 /*** Confirmation Box ***/
-.alertable-buttons button {}
+/* .alertable-buttons button {} */
 
 /*** Avatar Preview ***/
 #contentpreview {
@@ -10676,19 +10674,19 @@ li.item_li /*#clickable */.item_description img {
 #shop li.item_li.nostock:hover .item_description:before {
     opacity: 1;}
 
-#shop li.item_li.no_access #clickable:hover .item_description:after {
-    /*opacity: 1;*/}
+/* #shop li.item_li.no_access #clickable:hover .item_description:after {
+    opacity: 1;} */
 
 #shop li.item_li.nostock .submit_section {
 	margin-top: -78px;}
 
-#shop #wrapper li.item_li.featured.nostock /*#clickable */.item_description {
-    /*line-height: var(--p-lh);
+/* #shop #wrapper li.item_li.featured.nostock #clickable .item_description {
+    line-height: var(--p-lh);
     font-size: 14px;
     color: var(--c-txt);
     height: 220px;
-    top: 0;*/
-	/*visibility: visible;
+    top: 0;
+	visibility: visible;
 	opacity: 1;
 	position: relative;
 	top: -102px;
@@ -10701,7 +10699,7 @@ li.item_li /*#clickable */.item_description img {
 	margin: 0 auto;
 	overflow: hidden;
 	left: 100px;
-	width: 166px;*/}
+	width: 166px;} */
 
 #shop li.item_li.featured.nostock .submit_section {
 	margin-top: -58px;}
@@ -10820,13 +10818,13 @@ li.item_li /*#clickable */.item_description img {
 #shop.fl_shop #content {
 	min-height: 350px;}
 
-.freeleech_shop_main .box,
+/* .freeleech_shop_main .box,
 .freeleech_shop_main table,
 .global_buffs_shop_main .box,
 .global_buffs_shop_main table {
-	/* background: none; */}
+	background: none;} */
 
-.freeleech_shop_main a, .global_buffs_shop_main a {}
+/* .freeleech_shop_main a, .global_buffs_shop_main a {} */
 
 #shop .box_add_freeleech {
 	padding: 0;}
@@ -10851,13 +10849,13 @@ li.item_li /*#clickable */.item_description img {
 **********************************/
 
 
-body#user.inventory {}
+/* body#user.inventory {} */
 
-#user.inventory #logo {}
+/* #user.inventory #logo {} */
 
-#user.inventory #alerts {} /*revisit*/
+/* #user.inventory #alerts {} */ /*revisit*/
 
-.inventory h2 {}
+/* .inventory h2 {} */
 
 #user .inventory .center {
 	padding: 0;}
@@ -10910,8 +10908,8 @@ body#user.inventory {}
 	padding: 0;
 	margin: 0 0 0 120px;}
 
-.inventory h4 {
-    /* font-size: 1.1em; */}
+/* .inventory h4 {
+    font-size: 1.1em;} */
 
 .inventory #content li.item_li .item_description {
     text-align: left;
@@ -10977,9 +10975,9 @@ body#user.inventory {}
     padding: 9px 10px;
     margin: -10px -10px 10px -10px;}
 
-.inventory .spoilerbox {
-	/*background-color: transparent;
-	border-color: transparent; */}
+/* .inventory .spoilerbox {
+	background-color: transparent;
+	border-color: transparent;} */
 
 .inventory .spoilerbox img,
 #wrapper #content table.bbcode_table img,
@@ -10987,7 +10985,7 @@ body#user.inventory {}
     max-width: 100% !important;}
 
 /*** Books ***/
-.book_dialog {}
+/* .book_dialog {} */
 
 .book {
 	margin: 10px;
@@ -10996,7 +10994,7 @@ body#user.inventory {}
 .book .book_content {
 	padding: 10px;}
 
-.book .page {}
+/* .book .page {} */
 
 .book span {
     line-height: var(--p-lh);}
@@ -11006,7 +11004,7 @@ body#user.inventory {}
 	width: 100%;
 	display: block;}
 
-.book blockquote {}
+/* .book blockquote {} */
 
 .page_break {
 	margin-bottom: 20px;
@@ -11018,13 +11016,13 @@ body#user.inventory {}
 	content: attr(id);}
 
 /*** Flags that staffer is on a different user's inventory ***/
-.others_inventory h2 {
-	/* display: block;
+/* .others_inventory h2 {
+	display: block;
 	position: absolute;
 	top: -150px;
 	text-align: center;
 	border-bottom: none;
-	font-size: 2.5em; */}
+	font-size: 2.5em;} */
 
 .thin.inventory.others_inventory .item_li >form {
     margin-top: 49px;}
@@ -11257,8 +11255,8 @@ body#user.inventory {}
     -webkit-box-shadow: inset var(--p-graph-sh);
     box-shadow: inset var(--p-graph-sh);}
 
-.box_fights_stats .stat_bar progress::-webkit-progress-value {}
-.box_fights_stats .stat_bar progress::-moz-progress-bar {}
+/* .box_fights_stats .stat_bar progress::-webkit-progress-value {} */
+/* .box_fights_stats .stat_bar progress::-moz-progress-bar {} */
 
 .box_fights_stats .stat_bar progress.experience_bar {
 	color: var(--c-gold);}
@@ -11451,15 +11449,15 @@ h2 span.secondary_class:nth-child(n+2) {
 #tools .user_applications .rowa,
 #tools .user_applications .rowb {
 	 height: auto;}
-#tools .user_applications .rowa:hover td,
-#tools .user_applications .rowb:hover td {}
-#tools .user_applications .rowa:hover input,
-#tools .user_applications .rowb:hover input {}
+/* #tools .user_applications .rowa:hover td,
+#tools .user_applications .rowb:hover td {} */
+/* #tools .user_applications .rowa:hover input,
+#tools .user_applications .rowb:hover input {} */
 #tools .user_applications table td {
 	display: block;
 	padding: 10px 10px;
 	height: 30px;}
-#tools .thin.user_applications tr.colhead:hover td {}
+/* #tools .thin.user_applications tr.colhead:hover td {} */
 #tools .user_applications table td:nth-of-type(2):before {
 	content: "Email: ";
 	display: block;
@@ -11802,8 +11800,8 @@ td .log_green {
 	font-size: 11px;
 	font-style: italic;
 	font-weight: normal;}
-#achievements td .italic:last-child {
-    /* color: var(--c-low); */}
+/* #achievements td .italic:last-child {
+    color: var(--c-low);} */
 
 #seedtime_tokens #tokens_breakdown,
 #achievements {
@@ -11997,9 +11995,9 @@ td .log_green {
 	position: absolute;
 	top: 0;}
 
-.large_progress_bar .main_bar {}
+/* .large_progress_bar .main_bar {} */
 
-.large_progress_bar .main_bar.complete {}
+/* .large_progress_bar .main_bar.complete {} */
 
 
 
@@ -12077,11 +12075,11 @@ td .log_green {
         100%    100%,
         2px     100%); /* fix #2 */}
 
-#seed_snatch_breakdown .large_progress_bar .main_bar {}
+/* #seed_snatch_breakdown .large_progress_bar .main_bar {} */
 
-#seed_time_breakdown .large_progress_bar .main_bar {}
+/* #seed_time_breakdown .large_progress_bar .main_bar {} */
 
-#seed_size_breakdown .large_progress_bar .main_bar {}
+/* #seed_size_breakdown .large_progress_bar .main_bar {} */
 
 
 /** 100% gap (dirty) fix **/
@@ -12313,15 +12311,15 @@ table.adventure_table h3 {
      padding: 2px;
      width: 19%;
      display: inline-block;}
-.attacks_manager #attributes ul li input:checked + label,
-.monsters_manager ul.inline_list li input:checked + label {}
-.monsters_manager #attributes_div tr:not(:last-child) td {}
+/* .attacks_manager #attributes ul li input:checked + label,
+.monsters_manager ul.inline_list li input:checked + label {} */
+/* .monsters_manager #attributes_div tr:not(:last-child) td {} */
 
 #adventureclub ul.inline_list {margin-top: 0;}
-#adventureclub .linkbox {}
+/* #adventureclub .linkbox {} */
 #adventureclub .effects_div {float: left; padding-right: 1.5em;}
-#adventureclub tr.outer_row {}
-#adventureclub tr.main_row + tr.sub_row {}
+/* #adventureclub tr.outer_row {} */
+/* #adventureclub tr.main_row + tr.sub_row {} */
 #adventureclub tr.sub_row {
      font-size: 0.9em;}
 #adventureclub td.image_col {
@@ -12361,7 +12359,7 @@ table.adventure_table h3 {
     /*text-indent: 0;
     top: 0;*/
     right: 5px;}
-#seedtime_tokens .large_progress_bar.month8 .main_bar {}
+/* #seedtime_tokens .large_progress_bar.month8 .main_bar {} */
 
 
 
@@ -12850,9 +12848,9 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 #equipment .itemslot .item:hover {
     border-color: var(--c-b3);}
 
-#equipment .itemslot .item img {}
+/* #equipment .itemslot .item img {} */
 
-#equipment .itemslot .item h3 {}
+/* #equipment .itemslot .item h3 {} */
 
 #equipment {
 	margin: 0 auto;
@@ -13727,8 +13725,8 @@ div#fight_skill_points_assign >table {
 #fight_skill_points_assign table tr.colhead td:last-child,
 #fight_skill_points_assign table tr.colhead td:nth-child(1) {
 	width: 78px;}
-#fight_skill_points_assign table tr.colhead td:nth-child(2) {
-	/*width: 160px;*/}
+/* #fight_skill_points_assign table tr.colhead td:nth-child(2) {
+	width: 160px;} */
 #fight_skill_points_assign table tr.colhead td:nth-child(3),
 #fight_skill_points_assign table tr.colhead td:nth-child(4),
 #fight_skill_points_assign table tr.colhead td:nth-child(5) {
@@ -13799,8 +13797,8 @@ div#fight_skill_points_assign >table {
 
 
 /* Managers */
-.medals_manager .wide_text {
-	/*width: 100%;*/}
+/* .medals_manager .wide_text {
+	width: 100%;} */
 
 /* Users Medals Page */
 #users_medals {
@@ -13808,8 +13806,8 @@ div#fight_skill_points_assign >table {
     margin: 0 0 300px 0;
      /*background: rgba(0, 0, 0, 0.4);
      border-radius: 15px;*/}
-#users_medals h2 {
-     /*margin-left: 1rem;*/}
+/* #users_medals h2 {
+    margin-left: 1rem;} */
 #users_medals .flextable {
     display: flex;
     flex-flow: row wrap;
@@ -13872,20 +13870,20 @@ div#fight_skill_points_assign >table {
     right: 0;
     left: 0;*/
     margin: auto;}
-#users_medals .medal_cell.inactive .medal_image {
-     /*opacity: .65;*/}
-#users_medals .medal_cell.inactive .medal_name {
-     /*color: var(--c-text-s);*/}
-#users_medals .medal_image_div .drop_shadow {
-    /*display: none;*/
-     /*width: 80px;
+/* #users_medals .medal_cell.inactive .medal_image {
+     opacity: .65;} */
+/* #users_medals .medal_cell.inactive .medal_name {
+     color: var(--c-text-s);} */
+/* #users_medals .medal_image_div .drop_shadow {
+    display: none;
+     width: 80px;
      margin: 0 auto;
      position: absolute;
      bottom: -5px;
      left:0; right: 0;
      z-index: -1;
      transform: scale(0.9);
-     box-shadow: 0 0 8px 2px #000000;*/}
+     box-shadow: 0 0 8px 2px #000000;} */
 
 /* Medal Info Box - On hover */
 #users_medals .medal_info {
@@ -13927,14 +13925,14 @@ div#fight_skill_points_assign >table {
     opacity: 1;}
 
 /* Hover animation */
-#users_medals .primary {
-     /*opacity: 1;*/}
-#users_medals .medal_cell:hover .primary {
-     /*opacity: 0;*/}
+/* #users_medals .primary {
+     opacity: 1;} */
+/* #users_medals .medal_cell:hover .primary {
+     opacity: 0;} */
 
 /* Style the shelf */
-#users_medals .flextable-cell.flex-shelf {
-    /*display: none;*/}
+/* #users_medals .flextable-cell.flex-shelf {
+    display: none;} */
 
 /*** /Medals ***/
 
