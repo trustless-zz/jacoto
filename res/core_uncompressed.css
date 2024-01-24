@@ -2700,6 +2700,13 @@ a[onclick="showDnu();"]:hover:after {
     background-color: var(--c-box);
     padding-bottom: 3px;}
 
+.sidebar #freeleech .partial_freeleech_label {
+    position: absolute;
+    right: 5px;
+    padding: 0 5px 0 10px;
+    background: linear-gradient(90deg, transparent 0, var(--c-box) 10px);
+    height: 20px;}
+
 #dailygazelle img,
 #slides img {
     max-height: 280px !important;
