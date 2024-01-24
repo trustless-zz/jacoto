@@ -359,6 +359,12 @@
     flex-direction: row;}
     
     
+
+
+    .main_column table .ext_link_tr {
+        min-height: 28px;}
+    .main_column table .ext_link_tr >td:not(:first-child) {
+        display: none !important;}
     
     
     #menu ul {
