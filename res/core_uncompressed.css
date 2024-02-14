@@ -9648,6 +9648,19 @@ span.size5 img {
 #wrapper #trumpable_tag {
     color: var(--c-red);}
 
+.sidebar #freeleech .reported_label,
+.sidebar #freeleech .trumpable_label {
+    position: absolute;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,0) 0%, var(--c-box) 10px);
+    padding: 0 10px;
+    height: 20px;}
+.sidebar #freeleech .group_torrent:hover .reported_label,
+.sidebar #freeleech .group_torrent:hover .trumpable_label {
+    position: unset;
+    padding: unset;
+    height: unset;}
+
 #color_leeching:hover,
 #color_leeching:hover .torrent_info_tags,
 #color_leeching a:hover,
