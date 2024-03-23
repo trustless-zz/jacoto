@@ -1444,6 +1444,8 @@ h2 .username_badges a {
     float: right;
     height: 100%;
     width: 300px;}
+#grouplinks:not(:has(td)) {
+    display: none;}
 #forums .thin table,
 #upload .thin form >table,
 #upload .thin form div >table,
@@ -2188,7 +2190,7 @@ td img[alt="Ratio"],
 #changelog .sidebar .box.issues_labels li a,
 #users_reviews .delete_review a.remove_review,
 #deletereview a,
-#grouplinks,
+/* #grouplinks, */
 #nav_logout,
 #nav_donate,
 #nav_useredit,
