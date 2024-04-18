@@ -44,7 +44,8 @@ table#requests_list         tr:hover .tags a {
     resize: vertical;
     min-height: 200px;
     max-height: unset;
-    height: 380px;}
+    height: 380px;
+    align-content: start;}
 
 .filter_torrents.advanced {
     position: relative;}
