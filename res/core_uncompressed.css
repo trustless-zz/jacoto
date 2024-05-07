@@ -2055,6 +2055,8 @@ a[onclick="showDnu();"]:after,
 .group_torrent td:first-child:before,
 .group_torrent [id^="color_"]:before,
 
+/* #forums #wrapper .forum_post .avatar:hover >div:only-child:after, */
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -4947,7 +4949,7 @@ strong.mature +strong +br,
 #users_medals .medal_image_div .drop_shadow,
 #users_medals .flextable-cell.medal_cell:empty,
 
-#forums .forum_post .avatar >div:only-child:after,
+#forums #wrapper .forum_post .avatar >div:only-child:after,
 
 .sidebar #freeleech strong.partial_freeleech_label,
 
@@ -6750,6 +6752,8 @@ tr.likes td[id^="likers_"]:hover {
     background-size: 0 0;*/
     background: linear-gradient(155deg,var(--c-b3),var(--c-b4)) -150px 100% / 150px 3px no-repeat;
     opacity: .65;}
+/* #forums .forum_post .avatar >div:only-child:after {
+    background: linear-gradient(0deg, var(--c-red),var(--c-red)) 0 calc(100% + 4px) / 150px 3px no-repeat;} */
 #changelog #search_terms a.brackets:before,
 #changelog #search_terms a.brackets:after,
 #load_edit_review.brackets:before,
@@ -6786,7 +6790,8 @@ tr.likes td[id^="likers_"]:hover {
     background-position: 0 100%;
     transition: all .5s ease-out;
     /*transition-delay: .2s;*/}
-    
+/* #forums #wrapper .forum_post .avatar:hover >div:only-child:after {
+    content: 'Private';} */
 #wiki .box.center_revision >.body, /* wiki revision compare */
 #user .thin >h2 +.linkbox +.box.pad:last-child, /* trying to target Your Trades page specifically */
 .ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button span,
