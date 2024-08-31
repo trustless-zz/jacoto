@@ -145,6 +145,7 @@ body >#preview-popup img,
 .playstation2 {background-image: url(caticons/grish/playstation2.svg);}
 .playstation3 {background-image: url(caticons/grish/playstation3.svg);}
 .playstation4 {background-image: url(caticons/grish/playstation4.svg);}
+.playstation5 {background-image: url(caticons/grish/playstation5.svg);}
 .playstationportable {background-image: url(caticons/grish/playstationportable.svg);}
 .playstationvita {background-image: url(caticons/grish/playstationvita.svg);}
 .pokemonmini {background-image: url(caticons/pokemonmini.svg);}
@@ -425,6 +426,9 @@ body >#preview-popup img,
 .cats_col   +td #groupplatform a[href$="=PlayStation+4"], 
 .collicon   +td #groupplatform a[href$="=PlayStation+4"], 
 .noticon    +td #groupplatform a[href$="=PlayStation+4"] {background-image: url(caticons/grish/playstation4.svg);}
+.cats_col   +td #groupplatform a[href$="=PlayStation+5"], 
+.collicon   +td #groupplatform a[href$="=PlayStation+5"], 
+.noticon    +td #groupplatform a[href$="=PlayStation+5"] {background-image: url(caticons/grish/playstation5.svg);}
 .cats_col   +td #groupplatform a[href$="=PlayStation+Portable"], 
 .collicon   +td #groupplatform a[href$="=PlayStation+Portable"], 
 .noticon    +td #groupplatform a[href$="=PlayStation+Portable"] {background-image: url(caticons/grish/playstationportable.svg);}
