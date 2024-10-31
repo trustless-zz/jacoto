@@ -1592,6 +1592,9 @@ div#fight_skill_points_assign >table,
 #wiki .thin form:only-child table, /* wiki Revision history */
 #wiki .box.center_revision, /* wiki revision compare */
 
+#reply_box >.box.pad,
+#forums .linkbox.linkbox_bottom +div[class="box"], /* Halloween 2024: Song Lyric Creation forum thread rules box */
+#forums .thin >h2:first-child ~.box:nth-last-child(2), /* part of the forum thread rules agreement */
 #tools #content >p,
 #better .thin >div,
 #better .thin >table,
@@ -1634,6 +1637,9 @@ div#fight_skill_points_assign >table,
 #friends .comment_td,
 
 #wiki .box.center_revision, /* wiki revision compare */
+
+#forums .linkbox.linkbox_bottom +div[class="box"], /* Halloween 2024: Song Lyric Creation forum thread rules box */
+#forums .thin >h2:first-child ~.box:nth-last-child(2), /* part of the forum thread rules agreement */
 
 #user .thin >h2:first-child +.center,
 .thin.torrent_history >form#torrent_history_search,
@@ -2672,7 +2678,10 @@ a[onclick="showDnu();"]:hover:after {
 
 #user .thin >h2:first-child +.box.pad:nth-last-of-type(2) p:last-child,
 #staffpm #inbox >form#messageform >h3,
-#forums .linkbox.linkbox_bottom +br +h3,
+#forums .linkbox.linkbox_bottom ~br ~h3,
+
+#forums .linkbox.linkbox_bottom +div[class="box"] >ol,
+#forums .thin >h2:first-child ~.box:nth-last-child(2) ol, /* part of the forum thread rules agreement */
 
 #changelog .sidebar ul,
 
@@ -3604,7 +3613,7 @@ textarea,
 .sidebar >div,
 #requests .main_column >table:first-child,
 #upload #content >div[style="margin:0px auto;width:700px"],
-#forums .linkbox.linkbox_bottom +br +h3,
+#forums .linkbox.linkbox_bottom ~br ~h3,
 /*.box.box_info iframe,
 .forum_post td.body iframe,
 #blog .pad iframe,
@@ -4347,6 +4356,7 @@ a[onclick^="deleteTag("] {
 .box_tags .stats.nobullet {
     margin-top: 0;
     line-height: 26px;}
+#wrapper #reply_box >.box.pad,
 #requests .box_linked_group .head,
 .box_tags .head {
     margin-bottom: 10px;}
@@ -4954,6 +4964,8 @@ strong.mature +strong +br,
 
 .sidebar #freeleech strong.partial_freeleech_label,
 
+#forums .thin >h2+br:nth-child(2):nth-last-child(3), /* part of the forum thread rules agreement */
+
 #artist #requests .colhead_dark a,
 #userhistory .colhead_dark span[id*="bar"],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
@@ -5491,12 +5503,12 @@ h2 .username_badges {
     margin-top: -16px;
     line-height: 1em;}
 
-#reply_box >.box.pad {
+/* #reply_box >.box.pad {
     background-color: var(--c-box);
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: 1px solid var(--c-main-brdr);
-    margin-bottom: 10px;}
+    margin-bottom: 10px;} */
 #reply_box .head {
     margin: -10px -10px 10px -10px;}
 
@@ -5799,7 +5811,11 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     right: 0;
     bottom: -27px;
     font-weight: bold;}*/
-
+#forums .thin >h2:first-child ~.box[style]:last-child /* part of the forum thread rules agreement */{
+    position: relative;
+    top: -52px;}
+#forums .thin >h2:first-child ~.box:nth-last-child(2) /* part of the forum thread rules agreement */{
+    padding-bottom: 46px;}
 /*
 #deletereview {
     float: right;
@@ -6200,7 +6216,8 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 .thin >#request_form >table tr:first-child td,
 form[name="filter"] h3,
 #request_comments #reply_box h3,
-#forums .linkbox.linkbox_bottom +br +h3 {
+#forums .linkbox.linkbox_bottom ~br ~h3,
+#forums .linkbox.linkbox_bottom +div[class="box"] >h2 {
     text-align: left;
     width: 100%;
     font-weight: 600;
@@ -6888,7 +6905,7 @@ form#drag_drop_collage_form .drag_drop_save:first-child {
 #reportsv2 #dynamic_form >table.border:before,
 #reports .thin >h3,
 #reportsv2 #report_table >h3,
-#forums .linkbox.linkbox_bottom +br +h3 {
+#forums .linkbox.linkbox_bottom ~br ~h3 {
     width: calc(100% - 2px);
     margin: 1px auto 0 auto;
     position: relative;
@@ -7439,6 +7456,7 @@ form#tag_add_form >input,
 #gazelles .thin >h2:first-child +.box.pad:before,
 .gazelles_art_display:before,
 #actual_rules:before,
+#forums .thin >h2:first-child ~.box:nth-last-child(2):before, /* part of the forum thread rules agreement */
 .thin.forum_latest >.search.box.pad:before,
 #requests .thin >.center.box.pad:before,
 #top10 .thin >.center:before,
@@ -8364,6 +8382,7 @@ form#drag_drop_collage_form .drag_drop_save,
     content: 'Gazelles';}
 #top10 #wrapper .thin >.center:before {
     content: 'Filter by tags';}
+#forums #wrapper .thin >h2:first-child ~.box:nth-last-child(2):before, /* part of the forum thread rules agreement */
 #wrapper #actual_rules:before {
     content: 'Rules';}
 #torrentbrowse .filter_torrents.basic >h3:before {
