@@ -48,6 +48,8 @@
     --c-high-t:							rgb(0, 0, 0);
     --c-tag:							rgba(22, 22, 22);
     --c-tag-2:                          rgb(0, 0, 0);
+    --c-lb1: 							#A38B7E;
+    --c-lb2: 							#A68176; 
     --c-b1: 							#968074;
     --c-b2: 							#99776D;    
     --c-b3: 							#7a685e;
@@ -133,5 +135,5 @@ body {
 #user[style^="background: url("] {
     background-image: url('res/icons/a5a5a5_elephantish/background.svg') !important;
     background-size: 50px 50px !important;}
-#logo a {
-    background-image: url('res/icons/a5a5a5_elephantish/logo.svg');}
+/* #logo a {
+    background-image: url('res/icons/a5a5a5_elephantish/logo.svg');} */

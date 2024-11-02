@@ -47,6 +47,8 @@
     --c-high-t:							#000;
     --c-tag:							rgba(0, 0, 0, .10);
     --c-tag-2:                          rgba(0, 0, 0, .16);
+    --c-lb1: 							#4B83B8;
+    --c-lb2: 							#4E8FBA;
     --c-b1: 							#41719E;
     --c-b2: 							#437BA1;    
     --c-b3: 							#315678;
@@ -132,8 +134,8 @@ body {
 #user[style^="background: url("] {
     background-image: url('res/icons/grish/background.svg') !important;
     background-size: 50px 50px !important;}
-#logo a {
-    background-image: url('res/icons/grish/logo.svg');}
+/* #logo a {
+    background-image: url('res/icons/grish/logo.svg');} */
 
 a:hover {
     text-decoration: underline;}
