@@ -831,32 +831,35 @@ table#requests_list         tr:hover .tags a {
     background-color: transparent;
     display: block;}
 */
-#logo:before,
-#logo:after {
+/* #logo:after, */
+#logo:before {
     content: '';
     width: 74px;
     position: absolute;
+    top: 0;
     left: 0;
     z-index: -99;
     pointer-events: none;
     -webkit-transition: all .25s linear;
     transition: all .25s linear;
     /* animation: logo_remove .25s linear forwards;
-    transform: translateX(-60%); */}
-#logo:before {
-    background: linear-gradient(135deg,var(--c-b1) calc(100% - 53px),var(--c-b00) calc(100% - 24px)) no-repeat -35px 0;
-    top: 0px;
-    height: 34px;}
-#logo:after {
+    transform: translateX(-60%); */
+    background:
+        linear-gradient(135deg,var(--c-b2) calc(100% - 74px),var(--c-b00) calc(100% - 45px)) no-repeat bottom/74px 30px,
+        linear-gradient(135deg,var(--c-b1) calc(100% - 53px),var(--c-b00) calc(100% - 24px)) no-repeat top/74px 34px;
+    height: 100%;
+    background-position-x: -35px;}
+/* #logo:after {
     background: linear-gradient(135deg,var(--c-b2) calc(100% - 74px),var(--c-b00) calc(100% - 45px)) no-repeat -35px 0;
     top: 34px;
-    height: 30px;}
-#logo:hover:after,
+    height: 30px;} */
+/* #logo:hover:after, */
 #logo:hover:before {
-    background-position: 0 0;
+    background-position-x: 0;
     /* animation: logo_move .325s linear forwards; */}
 /* #logo:hover:after {
     animation-delay: .05s;} */
+#header #logo:after,
 #header #logo a {
 /*    position: absolute;*/
     /* opacity: 1; */
@@ -867,7 +870,8 @@ table#requests_list         tr:hover .tags a {
     /* -webkit-transition: all .25s linear;
     -o-transition: all .25s linear;
     transition: all .25s linear; */
-    background-size: auto 58px;
+    -webkit-mask-size: auto 58px;
+    mask-size: auto 58px;
     /*background-position: center;*/}
 /* #logo a:hover:before {
     opacity: 0;}

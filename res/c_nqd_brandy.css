@@ -1,11 +1,12 @@
-﻿/** COLORS **/
-:root {
+﻿:root {
     --c-selection:                      rgba(163, 100, 65, .996);
     --c-selection-i:                    rgba(163, 100, 65, .75);
     --c-blackout-a:                     #F29461;
     --c-unread-s:                       #995D3D;
     --c-unread-br:                      #724C37;
     --c-fbb-c:                          #E68C5C;
+    --c-lb1: 							#B36D47;
+    --c-lb2: 							#B5705B;
     --c-b1: 							#995D3D;
     --c-b2: 							#9C604E;
     --c-b3: 							#724C37;
@@ -60,7 +61,3 @@
     --c-type-4:                         rgba(84,    84,     84,     .21);
     --c-type-5:                         rgba(0,     92,     119,    .21);
 }
-/** /COLORS **/
-
-#logo a {
-    background-image: url('icons/c8c8c8_brandy/logo.svg');}

@@ -43,6 +43,8 @@ btn = b1+box, 2+3 from b1 => 3 midpoints, 2 from 3    // explanation: blend b1 a
 
 fbb-c = anchor+b1, 5+6 from anchor => 8 midpoints, 3 from 6
 
+lb1 & lb2 = set adobe color to 'HSB' and add 10 to 'B' (5 instead of 10 for elephant)
+
 
 
 ---------LIGHT
@@ -63,6 +65,10 @@ btn = b1+box, 8 midpoints, 6 from box
 
 fbb-c = adobe HSB(!), b1 set B to 100, adjust S to meet the contrast ratio of 6.5 to fbb-bcg
 
+lb1 & lb2 = set adobe color to 'HSB' and subtract 10 from 'B' (5 instead of 10 for elephant)
+
+
+
 ---------NQD
 ----contrast ratio
 b1              :box                ~2.61
@@ -80,3 +86,5 @@ sb1/sb2 = b1+box, 6+7 from box
 btn = b1+box, 3 from b1
 
 fbb-c = adobe HSB(!), b1 adjust B to meet the contrast ratio of 5 to fbb-bcg
+
+lb1 & lb2 = set adobe color to 'HSB' and add 10 to 'B'

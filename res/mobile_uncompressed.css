@@ -107,8 +107,10 @@
         top: 0;
         background: var(--p-userinfo);}
     
+    #header #logo:after,
     #header #logo a {
-        background-size: auto 38px;}
+        -webkit-mask-size: auto 38px;
+        mask-size: auto 38px;}
     #logo {
         order: 1;
         

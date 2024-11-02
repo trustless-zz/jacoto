@@ -1351,7 +1351,7 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1),
 .Nintendo,
 .EpicGames,
 
-#logo a,
+/* #logo a, */
 
 .box.box_likes.box_torrents span.likes_icon.flright img,
 img[src="static/common/thumbsup.png"],
@@ -2996,7 +2996,7 @@ table.bbcode_table td,
     height: 100%;
     top: 0;
     left: 0;
-    background-position: center;}
+    /* background-position: center; */}
 
 #logo {
     background: unset !important;
@@ -3004,8 +3004,22 @@ table.bbcode_table td,
     z-index: 999;}
 
 #logo a {
-    background-color: transparent;
+    -webkit-mask: url('icons/logo_outer.svg') no-repeat center;
+    mask: url('icons/logo_outer.svg') no-repeat center;
+    background: linear-gradient(0deg, var(--c-tor-row-hvr), var(--c-tor-rowb));
     display: block;}
+#logo:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-mask: url('icons/logo_inner.svg') no-repeat center;
+    mask: url('icons/logo_inner.svg') no-repeat center;
+    background: linear-gradient(-65deg, var(--c-lb2) 20%, var(--c-lb1) 65%);
+    pointer-events: none;}
 
 #header #stats_ratio {
     font-size: 0;}

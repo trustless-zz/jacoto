@@ -1,11 +1,12 @@
-﻿/** COLORS **/
-:root {
+﻿:root {
     --c-selection:                      rgba(140, 101, 168, .996);
     --c-selection-i:                    rgba(140, 101, 168, .75);
     --c-blackout-a:                     #D096FA;
     --c-unread-s:                       #825D9C;
     --c-unread-br:                      #634C74;
     --c-fbb-c:                          #C18BE8;
+    --c-lb1: 							#976DB5;
+    --c-lb2: 							#A969B8;
     --c-b1: 							#825D9C;
     --c-b2: 							#925A9E;
     --c-b3: 							#634C74;
@@ -60,7 +61,3 @@
     --c-type-4:                         rgba(84,    84,     84,     .21);
     --c-type-5:                         rgba(0,     92,     119,    .21);
 }
-/** /COLORS **/
-
-#logo a {
-    background-image: url('icons/c8c8c8_veotrope/logo.svg');}

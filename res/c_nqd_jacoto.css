@@ -1,11 +1,12 @@
-﻿/** COLORS **/
-:root {
+﻿:root {
     --c-selection:                      rgba(12, 130, 128, .996);
     --c-selection-i:                    rgba(12, 130, 128, .75);
     --c-blackout-a:                     rgb(18, 201, 194);
     --c-unread-s:                       #0B7874;
     --c-unread-br:                      #175D5A;
     --c-fbb-c:                          #10B5B0;
+    --c-lb1: 							#0D918D;
+    --c-lb2: 							#3B9478;
     --c-b1: 							#0B7874;
     --c-b2: 							#317A63;
     --c-b3: 							#175D5A;
@@ -60,7 +61,3 @@
     --c-type-4:                         rgba(84,    84,     84,     .21);
     --c-type-5:                         rgba(0,     92,     119,    .21);
 }
-/** /COLORS **/
-
-#logo a {
-    background-image: url('icons/c8c8c8/logo.svg');}

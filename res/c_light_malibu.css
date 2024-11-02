@@ -1,11 +1,12 @@
-﻿/** COLORS **/
-:root {
+﻿:root {
     --c-selection:                      rgba(71, 123, 166, .996); /* Chrome is SPECIAL */
     --c-selection-i:                    rgba(71, 123, 166, .75);
     --c-blackout-a:                     #9ECFF8;
     --c-unread-s:                       #6CBAFA;
     --c-unread-br:                      #9ECFF8;
     --c-fbb-c:                          #D1EAFF;
+    --c-lb1: 							#60A7E0;
+    --c-lb2: 							#7BA1E3;
     --c-b1: 							#6CBAFA;/*MALIBU*/
     --c-b2: 							#87B2FC;/*#90AFFC*/
     --c-b3: 							#9ECFF8;
@@ -60,7 +61,3 @@
     --c-type-4:                         rgba(84,    84,     84,     .17);
     --c-type-5:                         rgba(0,     92,     119,    .17);
 }
-/** /COLORS **/
-
-#logo a {
-    background-image: url('icons/323232_malibu/logo.svg');}

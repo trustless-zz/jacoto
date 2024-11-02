@@ -1,11 +1,12 @@
-﻿/** COLORS **/
-:root {
+﻿:root {
     --c-selection:                      rgba(12, 133, 129, .996); /* Chrome is SPECIAL */
     --c-selection-i:                    rgba(12, 133, 129, .75);
     --c-blackout-a:                     rgb(142, 225, 222);
     --c-unread-s:                       rgb(18, 201, 194);
     --c-unread-br:                      rgb(142, 225, 222);
     --c-fbb-c:                          #47FFF9;
+    --c-lb1: 							#10B0AB;
+    --c-lb2: 							#47B391;
     --c-b1: 							rgb(18, 201, 194);/*JAva*/
     --c-b2: 							rgb(81, 204, 165);/*puerTO riCO*/
     --c-b3: 							rgb(142, 225, 222);
@@ -60,7 +61,3 @@
     --c-type-4:                         rgba(84,    84,     84,     .17);
     --c-type-5:                         rgba(0,     92,     119,    .17);
 }
-/** /COLORS **/
-
-#logo a {
-    background-image: url('icons/323232/logo.svg');}
