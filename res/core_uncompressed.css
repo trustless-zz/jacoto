@@ -3406,8 +3406,9 @@ table.adventure_table .colhead td {
 #torrents .torrent_details .torrent_table tr.pad td,
 #torrents .group_torrent td:first-child,
 #artist #torrent_table .group_torrent td[colspan="2"],
-#torrents .torrent_details tr table tr:not(.colhead_dark):not(.colhead) td,
+#torrents .torrent_details tr table tr:not(.colhead_dark):not(.colhead) td, /* [torrent group -> 'View Filelist' table] (checked) also needs overflow-wrap */
 #torrent_table tr.group td.center +td /*artist*/{
+    overflow-wrap: anywhere;
     white-space: normal;}
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a,
 #artist #torrent_table .group_torrent td[colspan="2"] >a,
