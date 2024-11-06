@@ -67,14 +67,14 @@ https://github.com/hateradio/wbb
     padding: 2px;
     color: var(--c-txt);
     margin: 3px;
-    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);}
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%) !important;}
 #wrapper #content .wbbcode.wbbimgless .whutbbutton:hover {
     -webkit-box-shadow: none;
     box-shadow: none;
     color: var(--c-low);
-    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%) !important;}
 #wrapper #content .wbbcode.wbbimgless .whutbbutton:active {
-    background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
+    background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%) !important;}
 
 #wrapper #content .wbbcode.wbbimg .whutbbutton {
     text-shadow: unset;
@@ -85,13 +85,13 @@ https://github.com/hateradio/wbb
     margin: 2px 3px;
     padding: 1px;
     align-self: center;
-    background: unset;
+    background: unset !important;
     color: unset;
     border: unset;
     border-radius: unset;
     box-shadow: unset;}
 #wrapper #content .wbbcode.wbbimg .whutbbutton.wbbpressed {
-    background-color: var(--c-box);}
+    background-color: var(--c-box) !important;}
 
 .wbbcode .wbbshortcut {
     color: var(--c-txt);}
@@ -122,10 +122,11 @@ https://github.com/hateradio/wbb
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: contain;
-    background-image: unset;
-    background-color: var(--c-txt);}
-.wbbcode.wbbimg .whutbbutton.wbbpressed span,
-.wbbcode.wbbimg .whutbbutton:hover span {
+    background-image: unset;}
+#wrapper .wbbcode.wbbimg .whutbbutton span {
+    background: var(--c-txt);}
+#wrapper .wbbcode.wbbimg .whutbbutton.wbbpressed span,
+#wrapper .wbbcode.wbbimg .whutbbutton:hover span {
     opacity: 1;
     background-color: var(--c-low);}
 
