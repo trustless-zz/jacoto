@@ -7332,6 +7332,7 @@ input[type="radio"]:active {
     width: 100%;
     height: 100%;
     margin: 0;}
+#wiki .thin >.center >form:first-child >table.border, /* wiki search */
 #user .thin >h2 +.linkbox +.box.pad:last-child,
 #forums .forum_latest >.search.box.pad #forumlist,
 #forums .forum_latest >.search.box.pad #otherop,
@@ -7361,6 +7362,10 @@ input[type="radio"]:active {
     margin: 0;}
 .sidebar .box_badges img {
     margin: 3px;}
+
+#wiki #wrapper .thin >.center >form:first-child >table.border tr  /* wiki search */{
+    background: none !important;
+    border: none;}
 
 #clans #wrapper #clan_stats >span[style="float: right;"]:first-child +.box.pad {
     position: relative;
@@ -11465,7 +11470,7 @@ li.item_li /*#clickable */.item_description img {
 	margin:10px 0px;
 	text-align: center;}
 #tms .box {
-	background:none;}
+	background: none;}
 #tm_time {
 	background-color: var(--c-box);
 	padding:1px 3px 1px 15px;
