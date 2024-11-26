@@ -84,8 +84,10 @@ table#requests_list         tr:hover .tags a {
 .sidebar {
     flex-direction: column;}
 
+.box_coltags .pad li a:not([href^="torrents.php?taglist="]),
 #tags_box div a {
     opacity: .5;}
+.box_coltags .pad li:hover a:not([href^="torrents.php?taglist="]),
 #tags_box li:hover div a {
     opacity: 1;}
     
