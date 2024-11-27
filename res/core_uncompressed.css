@@ -83,11 +83,10 @@
     font-weight: bold;   
     font-style: italic;}
 
-/** Get More News - duplicate news bug fix **/
-#index .box.news_post:empty,
+/* #index .box.news_post:empty,
 #index .box.news_post >.head:nth-child(3),
 #index .box.news_post >.head:nth-child(3) +.pad {
-    display: none;}
+    display: none;} */
 
 /** masks **/
 #toplink a,
@@ -698,6 +697,21 @@ td.center.cats_col+td,
 
 .sidebar #tags_box #tagslist,
 .sidebar #tags_box >a,
+
+#collections .sidebar .box_addtorrent,
+
+/* notifications & deleted torrents don't get a .highlight */
+#header .notificationsico,
+#header .deltornotifsico,
+/* /notifications & deleted torrents don't get a .highlight */
+
+#upcoming_calendar .calendar-day.today,
+#calendar .day-events >p a,
+.calendar .day-events >.tooltip span,
+
+#tools #content >.header,
+
+#adventureclub .linkbox:first-child +div +div,
 
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
@@ -1444,8 +1458,8 @@ h2 .username_badges a {
     float: right;
     height: 100%;
     width: 300px;}
-#grouplinks:not(:has(td)) {
-    display: none;}
+/* #grouplinks:not(:has(td)) {
+    display: none;} */
 #forums .thin table,
 #upload .thin form >table,
 #upload .thin form div >table,
@@ -1641,6 +1655,16 @@ div#fight_skill_points_assign >table,
 
 #forums .linkbox.linkbox_bottom +div[class="box"], /* Halloween 2024: Song Lyric Creation forum thread rules box */
 #forums .thin >h2:first-child ~.box:nth-last-child(2), /* part of the forum thread rules agreement */
+
+#adventureclub .linkbox:first-child +div +div,
+
+.ui-dialog .ui-dialog-content,
+
+.book .book_content,
+
+#gazelleview #imgrow td:first-child,
+
+#fight_skill_points_assign tr.submit_section td,
 
 #user .thin >h2:first-child +.center,
 .thin.torrent_history >form#torrent_history_search,
@@ -1925,6 +1949,7 @@ input[type=submit],
 fancybox-button,
 /* .box.box_coltags .pad li a:nth-child(n+2), */
 .box.box_coltags .head span[title="Add Tags"] a,
+#collections .sidebar .box_addtorrent .subhead a,
 /*#reviewrow a*/#expand_review,
 /*#reviewrow a*/#load_edit_review,
 #load_edit_review_dialog,
@@ -2273,6 +2298,7 @@ input[type=submit]:active,
 /*#reviewrow a*/#load_edit_review:active,
 #load_edit_review_dialog:active,
 .box.box_coltags .head span[title="Add Tags"] a:active,
+#collections .sidebar .box_addtorrent .subhead a:active,
 .slides_control,
 a>strong,
 /*.profile .box_art_gallery .gallery_row a>img,*/
@@ -2520,6 +2546,8 @@ input[disabled] {
     left: 0;
     top: 0;
     z-index: 2;}
+#bookmarks td#sorting_head:before,
+#tools #content >.header,
 #index #recommended .head strong,
 .box.news_post .head strong {
     z-index: 1;}
@@ -2664,6 +2692,8 @@ a[onclick="showDnu();"]:hover:after {
 .slides_control {
     height: 345px !important;
     width: 100% !important;}
+
+#tools #wrapper #mastergroups >span[style="float: right"] h3,
 
 #slides >ul,
 #slides .slides_container,
@@ -3054,9 +3084,9 @@ table.bbcode_table td,
 #header .notificationsico .newnoti,
 #header .deltornotifsico .newnoti {
     color: var(--c-em-hvr);}
-#header .notificationsico,
+/* #header .notificationsico,
 #header .deltornotifsico {
-    position: relative;}
+    position: relative;} */
 #header .notificationsico .newnoti:before,
 #header .deltornotifsico .newnoti:before {
     content: '';
@@ -4234,6 +4264,7 @@ a[href^="javascript:Vote("],
 #newthreadform #newthreadtext #answer_block a,
 /* .box.box_coltags .pad li a:nth-child(n+2), */
 .box.box_coltags .head span[title="Add Tags"] a,
+#collections .sidebar .box_addtorrent .subhead a,
 #user #userform #platcheckbox +a,
 a#tag_show\/hide,
 .filter_torrents.advanced .flright,
@@ -4376,6 +4407,13 @@ a[onclick^="deleteTag("] {
 .box_tags .stats.nobullet {
     margin-top: 0;
     line-height: 26px;}
+.box_image_avatar .head,
+#expanded_review_box #load_edit_review_dialog,
+#threadpoll #poll_results,
+.box.box_image.box_image_coverart .head,
+#items_navigation ul ul ul li:last-of-type,
+#upcoming_calendar .calendar-day,
+.timeline__content p,
 #wrapper #reply_box >.box.pad,
 #requests .box_linked_group .head,
 .box_tags .head {
@@ -4422,6 +4460,7 @@ a[href^="javascript:Vote("]:hover,
 #newthreadform #newthreadtext #answer_block a:hover,
 /* .box.box_coltags .pad li a:nth-child(n+2):hover, */
 /*.box.box_coltags .head span[title="Add Tags"] a:hover,*/
+#collections .sidebar .box_addtorrent .subhead a:hover,
 .torrent_table tr.pad td >.linkbox >a[href*="?action="]:hover,
 .filelist_title a.brackets:hover {
     color: var(--c-low);
@@ -4444,6 +4483,7 @@ a[href^="javascript:Vote("]:active,
 #newthreadform #newthreadtext #answer_block a:active,
 /* .box.box_coltags .pad li a:nth-child(n+2):active, */
 /*.box.box_coltags .head span[title="Add Tags"] a:active,*/
+#collections .sidebar .box_addtorrent .subhead a:active,
 .torrent_table tr.pad td >.linkbox >a[href*="?action="]:active,
 .filelist_title a.brackets:active {
     background: var(--p-btn-act);}
@@ -4481,6 +4521,8 @@ table#otherop.hidden ~table.otheroptoggle a,
 #wrapper .answers >a[onclick],
 #tags_box a#tags_add_toggle,
 #wrapper .box.box_coltags .head span[title="Add Tags"] a,
+#collections #wrapper .sidebar .box_addtorrent .subhead a,
+#collections .sidebar .box_addtorrent .subhead a,
 #group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit,
 body /*#reviewrow a*/#expand_review,
 body /*#reviewrow a*/#load_edit_review,
@@ -4560,6 +4602,7 @@ a#tag_show\/hide:before,
     font-size: 14px;
     line-height: 1em;}
 #wrapper .box.box_coltags .head span[title="Add Tags"] a:hover,
+#collections #wrapper .sidebar .box_addtorrent .subhead a:hover,
 body /*#reviewrow a*/#expand_review:hover,
 body /*#reviewrow a*/#load_edit_review:hover,
 body #load_edit_review_dialog:hover,
@@ -4590,6 +4633,7 @@ a#tag_show\/hide:hover,
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
 #tags_box a#tags_add_toggle:active,
 #wrapper .box.box_coltags .head span[title="Add Tags"] a:active,
+#collections #wrapper .sidebar .box_addtorrent .subhead a:active,
 body /*#reviewrow a*/#expand_review:active,
 body /*#reviewrow a*/#load_edit_review:active,
 body #load_edit_review_dialog:active,
@@ -4984,7 +5028,51 @@ strong.mature +strong +br,
 
 .sidebar #freeleech strong.partial_freeleech_label,
 
+/** Get More News - duplicate news bug fix **/
+#index .box.news_post:empty,
+#index .box.news_post >.head:nth-child(3),
+#index .box.news_post >.head:nth-child(3) +.pad,
+/** /Get More News - duplicate news bug fix **/
+
+#grouplinks:not(:has(td)),
+
+.twitter_post h4,
+.twitter_post >br,
+.linkbox br:last-child,
+#bookmarks #torrent_table .discog span[style="float:left;"] >br:first-child,
+#bookmarks #torrent_table .colhead_dark td[width="70%"] a,
+.profile .box_stats .label,
+#wrapper #content .item img.equipment_level,
+#shop .featured #stock_info,
+#shop .featured #upload_info,
+#shop .featured #life_info,
+#shop .featured #attack_info,
+#shop .featured #stock_info,
+#shop .featured #item_type,
+#shop .featured #slot_info,
+#shop .featured #extended_info,
+.inventory .top_linkbox,
+#tms h2, #platforms h2,
+#tools .user_applications table .colhead:nth-of-type(2),
+#user #itemsdiv div[style="text-align:center;"],
+#user #itemsdiv span[style="text-decoration: underline;"],
+#user #wrapper #itemsdiv p:empty,
+#user #itemsdiv p:not(:first-child),
+#achievements .spacer,
+#adventureclub #adventure_search table#monsters_search td.label:not(:first-child) br,
+#wrapper #content #trading_panel button#cancel_trade[style="visibility: hidden;"],
+#backpack #slots_header img,
+#users_reviews .users_review >h3,
+#users_reviews .review_date .label,
+
+.thin.torrent_history .linkbox + table[width="100%"] tr:not([class="colhead nobr"]) td:last-child:empty, /** hiding an empty column on the 'Hit 'n' Runs' page, but not on the 'Torrent History' page, since it's being used there **/
+
 #forums .thin >h2+br:nth-child(2):nth-last-child(3), /* part of the forum thread rules agreement */
+
+#shop .colhead:only-child, /* for empty existing_freeleech_pots etc. */
+#gazelleview #torrent_comments >h1:first-child,
+.avatar .forumstat >strong:first-child,
+.avatar .forumstat >br:first-of-type,
 
 #artist #requests .colhead_dark a,
 #userhistory .colhead_dark span[id*="bar"],
@@ -5337,9 +5425,8 @@ a[onclick^="similarVote("]:before {
 .thin.torrent_history >form#torrent_history_search input#search_query {
     width: calc(100% - 393px);}
 
-/** hiding an empty column on the 'Hit 'n' Runs' page, but not on the 'Torrent History' page, since it's being used there **/
-.thin.torrent_history .linkbox + table[width="100%"] tr:not([class="colhead nobr"]) td:last-child:empty {
-    display: none;}
+/* .thin.torrent_history .linkbox + table[width="100%"] tr:not([class="colhead nobr"]) td:last-child:empty {
+    display: none;} */
 
 /** error message **/
 #wrapper .thin >h2#error +.box.pad:last-child, /* - new? */
@@ -5603,6 +5690,7 @@ a[href^="javascript:Vote("]:hover,
 #wrapper #image_block >a[onclick]:hover,
 #load_edit_review_dialog:hover,
 .box.box_coltags .head span[title="Add Tags"] a:hover,
+#collections .sidebar .box_addtorrent .subhead a:hover,
 /* #requests table.border td.nobr:nth-child(2) a:hover, */
 /* #torrents #requests.request_table #requests_list .requestrows a.brackets:hover, */
 .similar img:hover,
@@ -6494,8 +6582,8 @@ input#gamespotscore[type="number"],
 input#ignscore[type="number"],
 input#meta[type="number"] {
     width: 55px;}
-.box_image_avatar .head {
-    margin-bottom: 10px;}
+/* .box_image_avatar .head {
+    margin-bottom: 10px;} */
 .box.pad >p:first-child,
 #upload textarea#album_desc + p {
     margin-top: 0;}
@@ -6680,11 +6768,11 @@ div.breadcrumbs,
     padding-top: 7px;
     padding-bottom: 7px;}
 
-#shop .colhead:only-child, /* for empty existing_freeleech_pots etc. */
+/* #shop .colhead:only-child,
 #gazelleview #torrent_comments >h1:first-child,
 .avatar .forumstat >strong:first-child,
 .avatar .forumstat >br:first-of-type {
-    display: none;}
+    display: none;} */
 
 
 #reviewrow #review_form >p {
@@ -6700,8 +6788,8 @@ div.breadcrumbs,
 #expanded_review_box >p:first-child {
     margin: 0;
     text-align: center;}
-#expanded_review_box #load_edit_review_dialog {
-    margin-bottom: 10px;}
+/* #expanded_review_box #load_edit_review_dialog {
+    margin-bottom: 10px;} */
 
 
 .avatar .forumstat {
@@ -6835,13 +6923,7 @@ tr.likes td[id^="likers_"]:hover {
     /*transition-delay: .2s;*/}
 /* #forums #wrapper .forum_post .avatar:hover >div:only-child:after {
     content: 'Private';} */
-#wiki .box.center_revision >.body, /* wiki revision compare */
-#user .thin >h2 +.linkbox +.box.pad:last-child, /* trying to target Your Trades page specifically */
-.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button span,
-#better .thin >.center:first-child td,
-#bookmarks table.layout td#drag_drop_textnote,
-#bookmarks #wrapper td.edition_info {
-    padding: 0;}
+
 #bookmarks #wrapper td.edition_info strong {
     padding-right: 5px;
     display: block;
@@ -7218,8 +7300,8 @@ blockquote#description img {
     width: 854px;
     height: 480px;}*/
 
-.twitter_post h4 {
-    display: none;}
+/* .twitter_post h4 {
+    display: none;} */
 /*div[id^="twitch-embed-"],*/
 .twitter_post {
     margin: 0 5px;
@@ -7227,8 +7309,8 @@ blockquote#description img {
     /*overflow: hidden;*/
     /*width: -moz-fit-content;
     width: fit-content;*/}
-.twitter_post >br {
-    display: none;}
+/* .twitter_post >br {
+    display: none;} */
 /*.twitter-tweet {
     margin: 0 auto !important;}*/
 /* twitter align test */
@@ -7436,8 +7518,8 @@ input[type="radio"]:active {
 #threadpoll #poll_results ul#poll_options {
     padding: 0;
     margin-bottom: 15px;}
-#threadpoll #poll_results {
-    margin-bottom: 10px;}
+/* #threadpoll #poll_results {
+    margin-bottom: 10px;} */
 
 #wrapper .forum_latest .search #cat_list a[onclick] {
     margin-bottom: 4px;}
@@ -7914,17 +7996,17 @@ form#tag_add_form >input,
 .linkbox {
     font-size: 0;
     line-height: 7px;} /*br*/
-.linkbox br:last-child {
-    display: none;}
+/* .linkbox br:last-child {
+    display: none;} */
 .linkbox +.linkbox {
     margin-top: -5px;}
 
 /* #torrents #content >#currentlinks td ul.thin strong, //link groups -revisit
 #torrents #content >#currentlinks td ul.thin a, */
-#collections .linkbox a,
+/* #collections .linkbox a,
 .torrent_details tr.pad div[id^=peers] .linkbox {
     font-size: 14px;
-    line-height: var(--p-lh);}
+    line-height: var(--p-lh);} */
 
 #wrapper #content .linkbox a.brackets,
 #bookmarks .linkbox a,
@@ -8021,6 +8103,11 @@ form#tag_add_form >input,
     transition: all 0s;
     font-size: 0;
     line-height: 0;}
+
+.qtip-default .pad.review,
+
+#collections .linkbox a,
+.torrent_details tr.pad div[id^=peers] .linkbox,
 
 .torrent_table tr.pad div >.linkbox,
 .linkbox >strong,
@@ -8214,8 +8301,8 @@ form#tag_add_form >input,
 #bookmarks td#sorting_head {
     font-size: 0;
     line-height: var(--p-head);}
-#bookmarks td#sorting_head:before {
-    z-index: 1;}
+/* #bookmarks td#sorting_head:before {
+    z-index: 1;} */
 #bookmarks td#sorting_head:after {
     z-index: 2;
     font-weight: 600 !important;
@@ -8324,9 +8411,9 @@ td.center.cats_col*/ {
     clear: both;
     line-height: 20px;}
 /* .thin.torrent_history >form#torrent_history_search td.label, */
-#bookmarks #torrent_table .discog span[style="float:left;"] >br:first-child,
+/* #bookmarks #torrent_table .discog span[style="float:left;"] >br:first-child,
 #bookmarks #torrent_table .colhead_dark td[width="70%"] a {
-    display: none;}
+    display: none;} */
 #torrent_table .group.discog td[colspan="5"] >span:last-child {
     clear: right;
     margin-bottom: -5px;}
@@ -8338,6 +8425,23 @@ td.center.cats_col*/ {
     line-height: 26px;}
 .thin.torrent_history >form#torrent_history_search table#th_search >tbody >tr:last-child >td.label {
     padding-top: 10px;}
+
+#inbox .comp td,
+#shop .box_add_freeleech,
+#user .inventory .center,
+#gazelleview #titlerow td:first-child,
+#user .thin >h3:first-child +.linkbox +form td,
+#adventureclub form[name="realms_search"] td,
+#adventureclub tbody#advanced_search li,
+#wrapper .select2-container--default .select2-selection--multiple .select2-selection__rendered,
+#wrapper .select2-container--default .select2-selection--multiple .select2-selection__rendered li,
+.qtip-content,
+#wiki .box.center_revision >.body, /* wiki revision compare */
+#user .thin >h2 +.linkbox +.box.pad:last-child, /* trying to target Your Trades page specifically */
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button span,
+#better .thin >.center:first-child td,
+#bookmarks table.layout td#drag_drop_textnote,
+#bookmarks #wrapper td.edition_info,
 
 #staffpm #inbox,
 #torrents #content >#newlink td,
@@ -9145,8 +9249,8 @@ span.size5 img {
 /* #inbox tr.unreadpm td,
 #inbox tr.unreadpm td a {
      font-weight: 600;} */
-#inbox .comp td {
-     padding: 0;}
+/* #inbox .comp td {
+     padding: 0;} */
 #inbox .userclasses {
      float: left;
      width: 25%;}
@@ -9300,9 +9404,9 @@ span.size5 img {
 #collections .sidebar ul {
     margin: 0;
     padding: 0 !important;}
-.box.box_image.box_image_coverart .head,
-#collections .sidebar .box_addtorrent .head {
-    margin-bottom: 10px;}
+/* #collections .sidebar .box_addtorrent .head, */
+/* .box.box_image.box_image_coverart .head {
+    margin-bottom: 10px;} */
 .sidebar #tags_box #tagslist,
 #collections .box.box_comment {
     display: flex;
@@ -9322,11 +9426,13 @@ span.size5 img {
 #collections .sidebar .box_addtorrent .subhead {
     line-height: 0;
     font-size: 0;
-    text-align: center;}
+    /* text-align: center; */
+    position: absolute;
+    right: 5px;
+    top: 5px;}
 .username_badges >a >span, /* happy birthday badge (emoji)*/
 #better table[style="width: 600px;"] td a,
-#tools #content >table[style="width: 600px;"] td a,
-#collections .sidebar .box_addtorrent .subhead a {
+#tools #content >table[style="width: 600px;"] td a {
     line-height: var(--p-lh);
     font-size: 14px;
     /* cursor: default;
@@ -9475,8 +9581,8 @@ span.size5 img {
 
 
 /*** User Info Box ***/
-.profile .box_stats .label {
-	display: none;}
+/* .profile .box_stats .label {
+	display: none;} */
 .profile .box_stats {
 	display: flex;
 	flex-direction: column;
@@ -9922,8 +10028,8 @@ table#downloaded_table              td.center.cats_col +td >span:before {
 #items_navigation ul ul ul li {
 	margin-left: 12px;}
 
-#items_navigation ul ul ul li:last-of-type {
-	margin-bottom: 10px;}
+/* #items_navigation ul ul ul li:last-of-type {
+	margin-bottom: 10px;} */
 
 .items_style .global_buffs {
 	right: -15px;
@@ -10154,8 +10260,8 @@ table#downloaded_table              td.center.cats_col +td >span:before {
 
 
 
-#wrapper #content .item img.equipment_level {
-    display: none;}
+/* #wrapper #content .item img.equipment_level {
+    display: none;} */
 
 /*
 #wrapper #content li.item[title^="Level:"]:before {
@@ -10667,7 +10773,7 @@ h3 a[href^="user.php?action=notify_delete&"] {
 	text-align: left;
 	height: 30px;	}
 
-#shop .featured #stock_info,
+/* #shop .featured #stock_info,
 #shop .featured #upload_info,
 #shop .featured #life_info,
 #shop .featured #attack_info,
@@ -10675,7 +10781,7 @@ h3 a[href^="user.php?action=notify_delete&"] {
 #shop .featured #item_type,
 #shop .featured #slot_info,
 #shop .featured #extended_info {
-	display: none;}
+	display: none;} */
 
 #shop .more_info p.center,
 #shop .more_info #stock_info,
@@ -10876,8 +10982,8 @@ li.item_li /*#clickable */.item_description img {
     line-height: var(--p-head);
     margin: 0;
     float: unset;}
-.ui-dialog .ui-dialog-content {
-    padding: 10px;}
+/* .ui-dialog .ui-dialog-content {
+    padding: 10px;} */
 
 .ui-dialog table {
 	background: none;}
@@ -10913,8 +11019,8 @@ li.item_li /*#clickable */.item_description img {
 
 /* .freeleech_shop_main a, .global_buffs_shop_main a {} */
 
-#shop .box_add_freeleech {
-	padding: 0;}
+/* #shop .box_add_freeleech {
+	padding: 0;} */
 
 #running_freeleech td.center.cats_col +td >strong {
     font-weight: normal;}
@@ -10944,8 +11050,8 @@ li.item_li /*#clickable */.item_description img {
 
 /* .inventory h2 {} */
 
-#user .inventory .center {
-	padding: 0;}
+/* #user .inventory .center {
+	padding: 0;} */
 
 #user .inventory td.label {
 	background-color: transparent;}
@@ -11020,8 +11126,8 @@ li.item_li /*#clickable */.item_description img {
     height: 24px;
     margin-left: 120px;}
 
-.inventory .top_linkbox {
-	display: none;}
+/* .inventory .top_linkbox {
+	display: none;} */
 
 .inventory .bottom_linkbox {
     width: calc(100% - 237px);
@@ -11078,13 +11184,13 @@ li.item_li /*#clickable */.item_description img {
 	margin: 10px;
 	padding: 25px 75px;;}
 
-.book .book_content {
-	padding: 10px;}
+/* .book .book_content {
+	padding: 10px;} */
 
 /* .book .page {} */
 
-.book span {
-    line-height: var(--p-lh);}
+/* .book span {
+    line-height: var(--p-lh);} */
 
 .book span.size7 {
 	border-bottom: 2px solid var(--c-table-brdr);
@@ -11431,8 +11537,8 @@ li.item_li /*#clickable */.item_description img {
     line-height: var(--p-head);
     padding: 9px 10px;
     margin: -10px -10px 0 -10px;}
-#tools #wrapper #mastergroups >span[style="float: right"] h3 {
-    margin: 0;}
+/* #tools #wrapper #mastergroups >span[style="float: right"] h3 {
+    margin: 0;} */
 .userreviews span#allreviewslink,
 #tools #mastergroups #searchgroups span[style="float: right;"] {
     position: absolute;
@@ -11494,8 +11600,8 @@ h2 span.secondary_class:nth-child(n+2) {
     vertical-align: -3px;}
 #tms_form {
 	margin-top:-15px;}
-#tms h2, #platforms h2 {
-	display: none;}
+/* #tms h2, #platforms h2 {
+	display: none;} */
 #tms td {
 	width: 20%;}
 #tools .thin td:first-of-type {
@@ -11525,8 +11631,8 @@ h2 span.secondary_class:nth-child(n+2) {
 	padding: 0;
 	box-shadow: none;
 	border-radius: 0px;}
-#tools .user_applications table .colhead:nth-of-type(2) {
-	display: none;}
+/* #tools .user_applications table .colhead:nth-of-type(2) {
+	display: none;} */
 #tools .user_applications table tr {
 	width: 49%;
 	float: left;
@@ -11619,11 +11725,11 @@ h2 span.secondary_class:nth-child(n+2) {
 	max-width: 150px;
 	float: left;
 	padding: 5px;}
-#user #itemsdiv div[style="text-align:center;"],
+/* #user #itemsdiv div[style="text-align:center;"],
 #user #itemsdiv span[style="text-decoration: underline;"],
 #user #wrapper #itemsdiv p:empty,
 #user #itemsdiv p:not(:first-child) {
-	display: none;}
+	display: none;} */
 .select2-search__field {
 	height: 30px;}
 .equipment_manager #equip_slots {
@@ -11687,10 +11793,10 @@ h2 span.secondary_class:nth-child(n+2) {
 /*****************************************
 *************GAZELLE VIEWER***************
 *****************************************/
-#gazelleview #titlerow td:first-child {
-    padding: 0;}
-#gazelleview #imgrow td:first-child {
-    padding: 10px;}
+/* #gazelleview #titlerow td:first-child {
+    padding: 0;} */
+/* #gazelleview #imgrow td:first-child {
+    padding: 10px;} */
 #gazelleview table.gazelleinfo tr td:first-child {
     width: 40%;}
 #gazelleview table.gazelleinfo td#tags form {
@@ -11809,8 +11915,8 @@ td .log_green {
 /*****************************************
 **************USER SEARCH*****************
 *****************************************/
-#user .thin >h3:first-child +.linkbox +form td {
-    padding: 0;}
+/* #user .thin >h3:first-child +.linkbox +form td {
+    padding: 0;} */
 #user .thin >h3:first-child +.linkbox +form input[type="text"] {
     width: calc(100% - 117px);}
 #user .thin >h3:first-child +.linkbox +form ~.box.pad.center {
@@ -11868,11 +11974,12 @@ td .log_green {
 #achievements td.achlabel .bold {
     font-weight: 600;}
 
+.book span,
 #achievements .colhead span.italic {
     line-height: var(--p-lh);}
 
-#achievements .spacer {
-    display: none;}
+/* #achievements .spacer {
+    display: none;} */
 
 #achievements td {
     vertical-align: middle;
@@ -12259,9 +12366,9 @@ td .log_green {
     order: -1;}
 
 
-#adventureclub .linkbox:first-child +div +div {
+/* #adventureclub .linkbox:first-child +div +div {
     padding: 10px;
-    position: relative;}
+    position: relative;} */
 
 
 #adventureclub form[name="realms_search"] table#realms_search {
@@ -12269,8 +12376,8 @@ td .log_green {
 #adventureclub form[name="realms_search"] tbody {
     display: flex;
     justify-content: space-between;}
-#adventureclub form[name="realms_search"] td {
-    padding: 0;}
+/* #adventureclub form[name="realms_search"] td {
+    padding: 0;} */
 #adventureclub form[name="realms_search"] .flleft {
     line-height: 26px;
     margin: 0 10px 0 5px;}
@@ -12306,8 +12413,8 @@ td .log_green {
     vertical-align: top;}
 #adventureclub tbody#advanced_search tr:first-child td[rowspan="6"] {
     padding-top: 13px;}
-#adventureclub tbody#advanced_search li {
-    padding: 0;}
+/* #adventureclub tbody#advanced_search li {
+    padding: 0;} */
 #adventureclub tbody#advanced_search td.label:first-child {
     width: 120px;}
 #adventureclub .inline_list +.inline_list {
@@ -12321,14 +12428,14 @@ td .log_green {
     line-height: 26px;}
 #adventureclub #adventure_search select +input[type="number"] {
     margin-left: 5px;}
-#adventureclub #adventure_search table#monsters_search td.label:not(:first-child) br {
-    display: none;}
+/* #adventureclub #adventure_search table#monsters_search td.label:not(:first-child) br {
+    display: none;} */
 #adventureclub #adventure_search tbody:first-child input[type="submit"] {
     vertical-align: bottom;}
 
-#wrapper .select2-container--default .select2-selection--multiple .select2-selection__rendered,
+/* #wrapper .select2-container--default .select2-selection--multiple .select2-selection__rendered,
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__rendered li {
-    padding: 0;}
+    padding: 0;} */
 #wrapper #content .select2-container--default .select2-selection--multiple {
     border-radius: 0;
     min-height: 26px;
@@ -13067,8 +13174,8 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 	font-size: 18px;
 	font-weight: 600;}
 
-#wrapper #content #trading_panel button#cancel_trade[style="visibility: hidden;"] {
-    display: none;}
+/* #wrapper #content #trading_panel button#cancel_trade[style="visibility: hidden;"] {
+    display: none;} */
 
 #wrapper #trading_panel button:hover {
 	filter: unset;}
@@ -13347,8 +13454,8 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 #backpack #slots_panel ul li {
 	padding: 4px;}
 
-#backpack #slots_header img {
-    display: none;}
+/* #backpack #slots_header img {
+    display: none;} */
 #backpack #slots_header span {
     font-size: var(--p-head);
     line-height: var(--p-head);
@@ -13502,8 +13609,8 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     background-color: var(--c-tgroup);}
 /*#upcoming_calendar .event_li[class*="tooltip"]:nth-child(n+1) {
     border-top: 1px solid var(--c-trowb);}*/
-#upcoming_calendar .calendar-day {
-    margin-bottom: 10px;}
+/* #upcoming_calendar .calendar-day {
+    margin-bottom: 10px;} */
 #image_block,
 .calendar .calendar-row {
     width: 100%;
@@ -13646,10 +13753,10 @@ table.event_form_table td.label.small_label[colspan="4"] {
 .month-picker-header .ui-icon-circle-triangle-w {
     margin-left: -9px;}
 
-#upcoming_calendar .calendar-day.today,
+/* #upcoming_calendar .calendar-day.today,
 #calendar .day-events >p a,
 .calendar .day-events >.tooltip span {
-    position: relative;}
+    position: relative;} */
 
 .calendar .event_li[class*="tooltip"] {
     display: flex;
@@ -13859,8 +13966,8 @@ div#fight_skill_points_assign >table {
     font-size: 16px;
     vertical-align: middle;
     line-height: 16px;}
-#fight_skill_points_assign tr.submit_section td {
-	padding: 10px;}
+/* #fight_skill_points_assign tr.submit_section td {
+	padding: 10px;} */
 #fight_skill_points_assign tr.submit_section #assignable_skill_points {
 	font-size: 24px;}
 #fight_skill_points_assign .buttons input +input {
@@ -14082,8 +14189,8 @@ div#fight_skill_points_assign >table {
     margin: 0;
     flex-flow: row;
     flex: 1 0 auto;}
-#users_reviews .users_review >h3 {
-    display: none;}
+/* #users_reviews .users_review >h3 {
+    display: none;} */
 
 #users_reviews .head {
 	display: flex;
@@ -14097,8 +14204,8 @@ div#fight_skill_points_assign >table {
 #users_reviews .display_name:not(:last-child) {
     width: calc(100% - 26px);}
 
-#users_reviews .review_date .label {
-    display: none;}
+/* #users_reviews .review_date .label {
+    display: none;} */
 /*#users_reviews .display_name:before {
     content: '';
     display: block;
@@ -14318,8 +14425,8 @@ div#fight_skill_points_assign >table {
     border-top: 9px solid transparent;}
 .timeline__content h2 {
     margin: 0 0 8rem;}
-.timeline__content p {
-    margin-bottom: 10px;}
+/* .timeline__content p {
+    margin-bottom: 10px;} */
 .timeline--horizontal {
     font-size: 0;
     padding: 0 42px;
@@ -14395,9 +14502,9 @@ div#fight_skill_points_assign >table {
 
 
 
-#tools #content >.header {
+/* #tools #content >.header {
     z-index: 1;
-    position: relative;}
+    position: relative;} */
 #tools #content >.header +.thin:last-child {
     line-height: 0;
     padding: 36px 10px 10px 10px;
@@ -14435,17 +14542,17 @@ div#fight_skill_points_assign >table {
 .qtip-shadow {
     -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);}
-.qtip-content {
-    padding: 0;}
+/* .qtip-content {
+    padding: 0;} */
 .qtip-default .box {
     background-color: unset !important;
     -webkit-box-shadow: unset !important;
     box-shadow: unset !important;
     border: unset !important;
     margin: unset !important;}
-.qtip-default .pad.review {
+/* .qtip-default .pad.review {
     font-size: 14px;
-    line-height: var(--p-lh);}
+    line-height: var(--p-lh);} */
 .qtip-default .pad.review p:first-of-type {
     margin-top: 8px;}
 .qtip-default .pad.review p:last-child {
