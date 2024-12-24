@@ -1,4 +1,7 @@
-﻿#index .main_column {
+﻿@keyframes lsfl-pulse-b {
+    0% {background-position: 0 0;} 
+    100% {background-position: 1215px 0;}}
+#index .main_column {
     width: calc(100% - 630px);}
 #index .sidebar {
     flex-flow: row wrap;
@@ -18,9 +21,6 @@
     display: flex;
     flex-flow: row wrap;
     margin: 8px 0 -2px 0;}
-/*#index #stats,
-#index #polcont {
-    display: table;}*/
 #index #upcoming_calendar   {order: 1;}
 #index #blogposts           {order: 2;}
 #index #dailygazelle        {order: 3; max-height: 427px;}

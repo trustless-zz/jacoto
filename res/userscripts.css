@@ -19,8 +19,6 @@ https://github.com/hateradio/wbb
 
 .wbbcode.wbbimg .whutbbutton span,
 .wbbcode.wbbimgless .whutbbutton {
-    -webkit-transition: all .1s linear;
-    -o-transition: all .1s linear;
     transition: all .1s linear;}
 
 #wrapper .wbbcode .wbbbuttons {
@@ -41,7 +39,6 @@ https://github.com/hateradio/wbb
     margin: 0;}
 
 #wrapper .wbbemot {
-    -webkit-box-shadow: none;
     box-shadow: none;
     border: 3px solid var(--c-main-brdr);
     background-color: var(--c-input-obj);
@@ -58,7 +55,6 @@ https://github.com/hateradio/wbb
     float: unset;
     text-shadow: 1px 1px 1px var(--c-body);
     border-radius: unset;
-    -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border: 1px solid var(--c-main-brdr);
     line-height: 1em;
@@ -69,7 +65,6 @@ https://github.com/hateradio/wbb
     margin: 3px;
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%) !important;}
 #wrapper #content .wbbcode.wbbimgless .whutbbutton:hover {
-    -webkit-box-shadow: none;
     box-shadow: none;
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%) !important;}
@@ -116,12 +111,6 @@ https://github.com/hateradio/wbb
     margin: 0;
     height: 18px;
     width: 18px;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: contain;
     background-image: unset;}
 #wrapper .wbbcode.wbbimg .whutbbutton span {
     background: var(--c-txt);}
@@ -131,103 +120,71 @@ https://github.com/hateradio/wbb
     background-color: var(--c-low);}
 
 .wbbcode.wbbimg .whutbbutton .wbb-icon-typeBold {
-    -webkit-mask-image: url('icons/bbbutt/bold.svg');
-    mask-image: url('icons/bbbutt/bold.svg');}
+    mask: var(--s-bb-bold) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-typeUnderline {
-    -webkit-mask-image: url('icons/bbbutt/und.svg');
-    mask-image: url('icons/bbbutt/und.svg');}
+    mask: var(--s-bb-und) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-typeItalic {
-    -webkit-mask-image: url('icons/bbbutt/ita.svg');
-    mask-image: url('icons/bbbutt/ita.svg');}
+    mask: var(--s-bb-italic) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-typeStrikethrough {
-    -webkit-mask-image: url('icons/bbbutt/strk.svg');
-    mask-image: url('icons/bbbutt/strk.svg');}
+    mask: var(--s-bb-strike) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-flag {
     width: 20px;
-    -webkit-mask-image: url('icons/bbbutt/whut/important.svg');
-    mask-image: url('icons/bbbutt/whut/important.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20.78463 18'%3E%3Cpath d='M10.39232,0,0,18H20.78463Zm0,2.3094L18.7847,16.84473H1.99994Z'/%3E%3Cpath d='M9.30663,14.63592a1.04007,1.04007,0,0,1,.27917-.7879,1.13218,1.13218,0,0,1,.81272-.26674,1.09987,1.09987,0,0,1,.7972.273,1.20552,1.20552,0,0,1-.0031,1.55407,1.08024,1.08024,0,0,1-.7941.28228,1.11245,1.11245,0,0,1-.8065-.27608A1.03292,1.03292,0,0,1,9.30663,14.63592Zm1.855-2.12175H9.64785L9.33146,6.453h2.14659Z'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-typeH2 {
-    -webkit-mask-image: url('icons/bbbutt/whut/heading.svg');
-    mask-image: url('icons/bbbutt/whut/heading.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 13.66741 18'%3E%3Cpath d='M13.66741,18H11.57458V9.52941H2.09283V18H0V0H2.09283V7.66387h9.48175V0h2.09283Z'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-codeSlash {
-    -webkit-mask-image: url('icons/bbbutt/whut/code.svg');
-    mask-image: url('icons/bbbutt/whut/code.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 18'%3E%3Cpath d='M4.17245,14.61366a1.78235,1.78235,0,0,0,.58959,1.4916,2.839,2.839,0,0,0,1.72844.48377V18a4.64689,4.64689,0,0,1-2.963-.87682,2.93612,2.93612,0,0,1-1.04816-2.40873V11.66069a1.70416,1.70416,0,0,0-.63494-1.49664A3.18112,3.18112,0,0,0,0,9.71557V8.29451a3.14609,3.14609,0,0,0,1.89474-.48376,1.71545,1.71545,0,0,0,.58454-1.43113v-3.084A2.92906,2.92906,0,0,1,3.56775.86674,4.56082,4.56082,0,0,1,6.49048,0V1.4009q-2.31813.06047-2.318,2.00559V6.37962A2.386,2.386,0,0,1,1.925,8.93953v.12094a2.38606,2.38606,0,0,1,2.24748,2.55991Z'/%3E%3Cpath d='M10.7803,13.51468a3.5434,3.5434,0,0,1-2.79166-1.10985A4.56389,4.56389,0,0,1,7,9.26468,4.70609,4.70609,0,0,1,8.00379,6.045a3.614,3.614,0,0,1,2.85985-1.13636,5.678,5.678,0,0,1,1.197.12878A3.94759,3.94759,0,0,1,13,5.34043l-.38636,1.06819a5.92885,5.92885,0,0,0-.90909-.27652,4.06356,4.06356,0,0,0-.87122-.10985q-2.53045,0-2.5303,3.22727A3.84243,3.84243,0,0,0,8.92045,11.598a2.14789,2.14789,0,0,0,1.82955.81818,5.59327,5.59327,0,0,0,2.12879-.447v1.11364A4.53749,4.53749,0,0,1,10.7803,13.51468Z'/%3E%3Cpath d='M18.05487,8.93953a2.38587,2.38587,0,0,1-2.24748-2.55991V3.40649q0-1.945-2.28779-2.00559V0a4.4533,4.4533,0,0,1,2.91769.87682,2.96519,2.96519,0,0,1,1.06327,2.41881v3.084a1.699,1.699,0,0,0,.59462,1.43617A3.22182,3.22182,0,0,0,20,8.29451V9.71557a3.223,3.223,0,0,0-1.8645.44848,1.70419,1.70419,0,0,0-.63494,1.49664v3.05376a2.95885,2.95885,0,0,1-1.033,2.40369A4.56284,4.56284,0,0,1,13.5196,18V16.589a2.77874,2.77874,0,0,0,1.70324-.48377,1.79011,1.79011,0,0,0,.58455-1.4916V11.62038a2.50718,2.50718,0,0,1,.55431-1.75364,2.91073,2.91073,0,0,1,1.69317-.80627Z'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-dropletHalf {
-    -webkit-mask-image: url('icons/bbbutt/color.svg');
-    mask-image: url('icons/bbbutt/color.svg');}
+    mask: var(--s-bb-color) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-textareaT {
-    -webkit-mask-image: url('icons/bbbutt/whut/size.svg');
-    mask-image: url('icons/bbbutt/whut/size.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 18'%3E%3Cpath d='M3.29459,4.00618v9.98764h1.9676L2.63567,18,0,13.99382H1.97675V4.00618H0L2.63567,0,5.26219,4.00618Z'/%3E%3Cpath d='M14.29959,18h-2.093V1.8591H6.50616V0H20V1.8591H14.29959Z'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-textLeft {
-    -webkit-mask-image: url('icons/bbbutt/lef.svg');
-    mask-image: url('icons/bbbutt/lef.svg');}
+    mask: var(--s-bb-left) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-textCenter {
-    -webkit-mask-image: url('icons/bbbutt/cent.svg');
-    mask-image: url('icons/bbbutt/cent.svg');}
+    mask: var(--s-bb-center) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-textRight {
-    -webkit-mask-image: url('icons/bbbutt/righ.svg');
-    mask-image: url('icons/bbbutt/righ.svg');}
+    mask: var(--s-bb-right) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-listOl {
-    -webkit-mask-image: url('icons/bbbutt/whut/n_list.svg');
-    mask-image: url('icons/bbbutt/whut/n_list.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Crect x='5.4' y='2.5' width='10.8' height='1'/%3E%3Crect x='1.8' y='1.8' width='2.4' height='2.4'/%3E%3Crect x='5.4' y='10.5' width='10.8' height='1'/%3E%3Crect x='1.8' y='9.8' width='2.4' height='2.4'/%3E%3Crect x='5.4' y='14.5' width='10.8' height='1'/%3E%3Crect x='1.8' y='13.8' width='2.4' height='2.4'/%3E%3Crect x='5.4' y='6.5' width='10.8' height='1'/%3E%3Crect x='1.8' y='5.8' width='2.4' height='2.4'/%3E%3Cpath d='M17,0H0V18H18V0Zm0,17H1V1H17Z'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-listUl {
-    -webkit-mask-image: url('icons/bbbutt/list.svg');
-    mask-image: url('icons/bbbutt/list.svg');}
+    mask: var(--s-bb-list) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-link45deg {
-    -webkit-mask-image: url('icons/bbbutt/link.svg');
-    mask-image: url('icons/bbbutt/link.svg');}
+    mask: var(--s-bb-link) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-image {
-    -webkit-mask-image: url('icons/bbbutt/img.svg');
-    mask-image: url('icons/bbbutt/img.svg');}
+    mask: var(--s-bb-img) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-chatSquareQuote {
-    -webkit-mask-image: url('icons/quote.svg');
-    mask-image: url('icons/quote.svg');}
+    mask: var(--s-quote) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-braces {
-    -webkit-mask-image: url('icons/bbbutt/pre.svg');
-    mask-image: url('icons/bbbutt/pre.svg');}
+    mask: var(--s-bb-pre) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-code {
-    -webkit-mask-image: url('icons/bbbutt/whut/source.svg');
-    mask-image: url('icons/bbbutt/whut/source.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 38.41441 18'%3E%3Cpath d='M17.31532,18,0,10.3964V8.63063L17.31532,0V2.68468L3.22523,9.36937l14.09009,5.90991Z'/%3E%3Cpath d='M21.0991,15.27928,35.20721,9.40541,21.0991,2.68468V0L38.41441,8.63063V10.3964L21.0991,18Z'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-eye {
-    -webkit-mask-image: url('icons/bbbutt/spoil.svg');
-    mask-image: url('icons/bbbutt/spoil.svg');}
+    mask: var(--s-bb-spoiler) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-shieldLock {
-    -webkit-mask-image: url('icons/bbbutt/whut/mature.svg');
-    mask-image: url('icons/bbbutt/whut/mature.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18.44077 18'%3E%3Cpolygon points='0 3.893 6.091 2.271 9.567 10.352 9.597 10.342 8.547 1.62 14.637 0 18.441 14.108 14.73 15.093 12.01 5.007 11.979 5.017 13.132 15.517 9.115 16.588 4.829 6.921 4.8 6.929 7.515 17.016 3.804 18 0 3.893'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-musicPlayer {
-    -webkit-mask-image: url('icons/bbbutt/whut/plat.svg');
-    mask-image: url('icons/bbbutt/whut/plat.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M13.5,6.75,18,4.5,9,0,0,4.5,4.5,6.75,0,9l4.5,2.25L0,13.5,9,18l9-4.5-4.5-2.25L18,9ZM9,1.677,14.64592,4.5,9,7.323,3.35411,4.5ZM6.17705,7.58848,9,9l2.823-1.41149L14.64592,9,9,11.823,3.35411,9ZM14.64592,13.5,9,16.323,3.35411,13.5l2.82294-1.41149L9,13.5l2.82293-1.41149Z'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-download {
-    -webkit-mask-image: url('icons/bbbutt/whut/id.svg');
-    mask-image: url('icons/bbbutt/whut/id.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15.1274 18'%3E%3Cpath d='M11.6137,7.274l-.67808,3.50137h3.32876v2.07124H10.52877L9.54247,18H7.348l.9863-5.15342H5.27671L4.29041,18H2.14521l.937-5.15342H0V10.77534H3.489L4.19178,7.274H.937V5.20274H4.54932L5.53562,0H7.75479l-.9863,5.20274H9.87534L10.86164,0h2.14521l-.9863,5.20274H15.1274V7.274ZM5.6589,10.77534H8.7411L9.44384,7.274H6.36164Z'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-personSquare {
-    -webkit-mask-image: url('icons/nav/user.svg');
-    mask-image: url('icons/nav/user.svg');}
+    mask: var(--s-user) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-bookmarks {
-    -webkit-mask-image: url('icons/bbbutt/whut/wiki.svg');
-    mask-image: url('icons/bbbutt/whut/wiki.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 11.5 28'%3E%3Cpath d='M11.00008,22.71854a.39077.39077,0,0,0-.49006-.13312,45.594,45.594,0,0,1-4.53,1.95643.377.377,0,0,1-.05033-.05764.51281.51281,0,0,1-.08622-.314c0-1.08752.8203-4.39582,2.438-9.83253,1.364-4.56795,1.5217-5.51375,1.5217-5.82776a1.48359,1.48359,0,0,0-.53657-1.18458,2.123,2.123,0,0,0-1.38492-.41467,7.25336,7.25336,0,0,0-3.45046,1.131,18.54986,18.54986,0,0,0-4.32976,3.714.391.391,0,0,0,.437.625c.55-.22462,3.31415-1.35765,3.71707-1.6109a1.6948,1.6948,0,0,1,.84889-.312l.02158.00079a.41341.41341,0,0,1,.00547.073,2.95563,2.95563,0,0,1-.14507.83708c-2.35543,7.63653-3.5004,12.318-3.5004,14.312a2.38136,2.38136,0,0,0,.58089,1.68371A2.05788,2.05788,0,0,0,3.64146,28,5.49172,5.49172,0,0,0,6.227,27.112a30.14231,30.14231,0,0,0,4.718-3.88838A.39105.39105,0,0,0,11.00008,22.71854Z'/%3E%3Cpath d='M10.9245.59416A1.96842,1.96842,0,0,0,9.46064,0,2.49053,2.49053,0,0,0,7.571.85805a2.92066,2.92066,0,0,0-.77675,2.0423,2.16094,2.16094,0,0,0,.57213,1.54739,1.91953,1.91953,0,0,0,1.44409.60958A2.4961,2.4961,0,0,0,10.69,4.15117,2.98675,2.98675,0,0,0,11.5,2.087,2.06012,2.06012,0,0,0,10.9245.59416Z'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-infoSquare {
-    -webkit-mask-image: url('icons/bbbutt/whut/rules.svg');
-    mask-image: url('icons/bbbutt/whut/rules.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12.85714 18'%3E%3Crect x='2.57143' y='2.79464' width='7.71429' height='1'/%3E%3Crect x='2.57143' y='5.04464' width='7.71429' height='1'/%3E%3Crect x='2.57143' y='7.29464' width='7.71429' height='1'/%3E%3Crect x='2.57143' y='9.54464' width='7.71429' height='1'/%3E%3Crect x='7.39286' y='11.79464' width='2.89286' height='1'/%3E%3Cpath d='M0,0V16.07143H3.05357v-.72984a2.26984,2.26984,0,0,1-.53815-.55588H1.28571v-13.5H11.57143v13.5H6.16316a2.27058,2.27058,0,0,1-.53817.55591v.72981h7.23215V0Z' opacity='0.85'/%3E%3Cpath d='M4.3442,11.24512a2.25,2.25,0,0,0-1.29065,4.09643V18l1.28571-1.60712L5.625,18V15.34161A2.25,2.25,0,0,0,4.3442,11.24512ZM4.33926,14.4a.9.9,0,1,1,.9-.9A.9.9,0,0,1,4.33926,14.4Z'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-fonts {
-    -webkit-mask-image: url('icons/bbbutt/tex.svg');
-    mask-image: url('icons/bbbutt/tex.svg');}
+    mask: var(--s-bb-tex) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-x {
     width: 24px;
-    -webkit-mask-image: url('icons/bbbutt/whut/nobb.svg');
-    mask-image: url('icons/bbbutt/whut/nobb.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 18'%3E%3Cpath d='M10.21354,12.94507A3.02844,3.02844,0,0,1,9.12925,15.3714a5.34828,5.34828,0,0,1-3.28107.84338H5.27781L2.58292,18H6.27909a6.94332,6.94332,0,0,0,4.56152-1.35431A4.6284,4.6284,0,0,0,12.472,12.87823a4.96689,4.96689,0,0,0-.17822-1.31121Z'/%3E%3Cpath d='M2.09305,14.12622V9.48016H5.67582a7.39816,7.39816,0,0,1,2.7713.43677l1.40692-.932a7.35521,7.35521,0,0,0-1.48193-.41583V8.446a4.29711,4.29711,0,0,0,2.60394-1.34814,3.9129,3.9129,0,0,0,.89264-2.64093,3.78147,3.78147,0,0,0-1.60059-3.3858A9.59459,9.59459,0,0,0,5.08481,0H0V15.51276Zm0-12.31634H5.171a6.77132,6.77132,0,0,1,3.44733.671A2.37369,2.37369,0,0,1,9.70176,4.6662a2.68587,2.68587,0,0,1-.9726,2.34546,5.61243,5.61243,0,0,1-3.18878.69562H2.09305Z'/%3E%3Cpath d='M21.90012,8.56909V8.446a4.29722,4.29722,0,0,0,2.604-1.34814,3.91286,3.91286,0,0,0,.89258-2.64093,4.99581,4.99581,0,0,0-.21338-1.42865L23.19877,4.343c.00952.10839.03106.20746.03106.32324a2.68577,2.68577,0,0,1-.97265,2.34546,5.61234,5.61234,0,0,1-3.18879.69562h-.94824l-4.5921,3.04205V18h6.279a6.94354,6.94354,0,0,0,4.56159-1.35431A4.62835,4.62835,0,0,0,26,12.87823Q26,9.271,21.90012,8.56909Zm.7572,6.80231a5.34848,5.34848,0,0,1-3.28113.84338H15.62107V9.48016h3.58276a6.02189,6.02189,0,0,1,3.42883.788,2.79683,2.79683,0,0,1,1.12659,2.4624A3.11386,3.11386,0,0,1,22.65732,15.3714Z'/%3E%3Cpath d='M15.62107,5.16449V1.80988h3.078a11.2395,11.2395,0,0,1,1.78491.13317L22.62912.522A12.80314,12.80314,0,0,0,18.61289,0H13.52805V6.551Z'/%3E%3Cpolygon points='26 0 24.761 0 0 16.403 0 18 1.239 18 26 1.597 26 0'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-trash {
-    -webkit-mask-image: url('icons/tor/rm.svg');
-    mask-image: url('icons/tor/rm.svg');}
+    mask: var(--s-tor-rm) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-emojiSunglasses {
-    -webkit-mask-image: url('icons/bbbutt/whut/emoticons.svg');
-    mask-image: url('icons/bbbutt/whut/emoticons.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18'%3E%3Cpath d='M15.36727,2.63367a9.00408,9.00408,0,1,0-.00034,12.73293A9.01422,9.01422,0,0,0,15.36727,2.63367ZM14.38478,14.3848a7.61529,7.61529,0,1,1,.00034-10.76949A7.624,7.624,0,0,1,14.38478,14.3848ZM5.64142,6.5631A1.05234,1.05234,0,1,1,6.69384,7.61568,1.05257,1.05257,0,0,1,5.64142,6.5631Zm4.772,0a1.05251,1.05251,0,1,1,1.05276,1.05258A1.05285,1.05285,0,0,1,10.41338,6.5631Zm2.48806,4.31028a4.20168,4.20168,0,0,1-3.89112,2.48277A4.17268,4.17268,0,0,1,5.096,10.86082a.5091.5091,0,1,1,.9404-.39035,3.1585,3.1585,0,0,0,2.974,1.86755,3.18421,3.18421,0,0,0,2.95649-1.86874.50912.50912,0,0,1,.93463.4041Z'/%3E%3C/svg%3E") no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-toggles {
-    -webkit-mask-image: url(icons/nav/useredit.svg);
-    mask-image: url(icons/nav/useredit.svg);}
+    mask: var(--s-user-edit) no-repeat center / contain;}
 .wbbcode.wbbimg .whutbbutton .wbb-icon-command {
-    -webkit-mask-image: url('icons/bbbutt/whut/shortcuts.svg');
-    mask-image: url('icons/bbbutt/whut/shortcuts.svg');}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 36.436 56.01701'%3E%3Cpath d='M17.314,56.00956H17.06a6.7,6.7,0,0,1,.158-13.39h.227a6.7,6.7,0,1,1,.36971,13.3949Q17.56436,56.02138,17.314,56.00956Z'/%3E%3Cpath d='M33.769,23.35056a30.4126,30.4126,0,0,1-5.492,4.916l-2.807,1.938a7.632,7.632,0,0,0-2.82,3.434,7.10818,7.10818,0,0,0-.434,2.88v.451H11.494l.031-.907c.131-3.728.223-5.921,1.768-7.733,2.424-2.846,7.771-6.289,8-6.435a8.4397,8.4397,0,0,0,1.891-1.936,6.814,6.814,0,0,0,1.623-3.972,7.741,7.741,0,0,0-1.471-4.576c-.939-1.323-2.723-1.993-5.3-1.993-2.559,0-4.311.812-5.359,2.478a9.95109,9.95109,0,0,0-1.623,5.35v.457H0l.02-.477c.285-6.769,2.7-11.643,7.178-14.487a18.90014,18.90014,0,0,1,10.4-2.729c5.346,0,9.859,1.3,13.412,3.861,3.6,2.6,5.426,6.484,5.426,11.556A13.22,13.22,0,0,1,33.769,23.35056Z'/%3E%3C/svg%3E") no-repeat center / contain;}
 /***
 /WhutBBCode
 ***/
@@ -240,12 +197,10 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
 ***/
 #quick-crafter {
     width: 100% !important;
-    -webkit-box-sizing: border-box !important;
     box-sizing: border-box !important;
     position: relative !important;
     padding: 10px !important;
     background-color: var(--c-box) !important;
-    -webkit-box-shadow: var(--p-main-shdw) !important;
     box-shadow: var(--p-main-shdw) !important;
     border: 1px solid var(--c-main-brdr) !important;
     margin: 0 0 15px 0 !important;}
@@ -295,7 +250,6 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
     display: none;}
 #quick-crafter >br+br+span {
     display: inline-block;}
-/*#quick-crafter br +br,*/
 #quick-crafter button +br {
     display: block;
     content: '';
@@ -305,9 +259,6 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=119248
 #quick-crafter >br +span,
 #quick-crafter button +br {
     margin-top: 8px;}
-
-/*#quick-crafter #clear_button {
-    color: var(--c-red) !important;}*/
 
 #quick-crafter #current_craft_box:empty {
     display: none;}
@@ -344,12 +295,10 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=16978&postid=1021
 ***/
 #wrapper #userscript-gallery-toggle,
 #wrapper #userscript-gallery-container {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: var(--c-box);
     margin: 0;
     border: 1px solid var(--c-main-brdr);
-    -webkit-box-shadow: none;
     box-shadow: none;
     position: relative;}
 
@@ -360,7 +309,6 @@ really the whole thing is a mess as a result */
     z-index: -2;
     width: calc(100% + 2px);
     left: -1px;
-    -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     position: absolute;
     content: '';}
@@ -404,15 +352,12 @@ really the whole thing is a mess as a result */
     height: fit-content;
     margin: 0 10px 10px 0;
     padding-bottom: 18px;
-    -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-top: 1px solid var(--c-table-brdr);
     border-bottom: 1px solid var(--c-table-brdr);}
 #wrapper .userscript-gallery-title,
 #wrapper .userscript-gallery-details {
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-left: 1px solid var(--c-table-brdr);
     border-right: 1px solid var(--c-table-brdr);}
@@ -426,13 +371,10 @@ really the whole thing is a mess as a result */
     border-color: var(--c-b1);}
 
 #wrapper .userscript-gallery-group:hover {
-    -webkit-box-shadow: none;
     box-shadow: none;}
 
 #wrapper a.userscript-gallery-link,
 #wrapper .userscript-gallery-group {
-    -webkit-transition: all .1s linear;
-    -o-transition: all .1s linear;
     transition: all .1s linear;}
 
 #userscript-gallery-toggle strong {
@@ -443,13 +385,10 @@ really the whole thing is a mess as a result */
     height: 100%;
     margin: 0;
     padding: 9px 10px;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     z-index: 1;}
 
 #userscript-gallery-toggle strong:before {
-    -webkit-transition: all .1s linear;
-    -o-transition: all .1s linear;
     transition: all .1s linear;
     z-index: -1;
     content: '';
@@ -464,8 +403,6 @@ really the whole thing is a mess as a result */
     opacity: 1;}
 #userscript-gallery-toggle:active strong:before {
     background: var(--p-expand-act);
-    -webkit-transition: none;
-    -o-transition: none;
     transition: none;}
 
 #wrapper #userscript-gallery-toggle a {
@@ -488,7 +425,6 @@ really the whole thing is a mess as a result */
 #wrapper .userscript-gallery-details {
     background-color: var(--c-tor-row-hvr);
     background-image: unset;
-    -webkit-box-shadow: none;
     box-shadow: none;
     font-size: 0;
     line-height: 0;
@@ -496,8 +432,6 @@ really the whole thing is a mess as a result */
     bottom: 0;
     left: 0;
     width: 100%;
-    -webkit-transition: max-height .45s ease;
-    -o-transition: max-height .45s ease;
     transition: max-height .45s ease;}
 #wrapper .userscript-gallery-details:hover {
     max-height: 1000%;}
@@ -520,7 +454,6 @@ really the whole thing is a mess as a result */
     line-height: 0;
     padding: 0;
     background: var(--c-edition) linear-gradient(155deg,var(--c-edition),var(--c-tgroup));
-    -webkit-box-shadow: none;
     box-shadow: none;}
 #wrapper .userscript-gallery-image[src="https://ptpimg.me/5975tp.png"] {
     padding-left: 100%;
@@ -536,7 +469,6 @@ really the whole thing is a mess as a result */
     display: inline-block;
     padding: 5px;
     width: 100%;
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     height: 100%;
     overflow: hidden;
@@ -645,8 +577,6 @@ https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-new-uploady.user.js?i
 a#fill_win,
 a#fill_lin,
 a#fill_mac {
-    -webkit-transition: all .1s linear;
-    -o-transition: all .1s linear;
     transition: all .1s linear;
     margin: 0 2px;
     vertical-align: top;
@@ -659,7 +589,6 @@ a#fill_mac {
     padding: 5px 10px;
     color: var(--c-txt);
     text-shadow: 1px 1px 1px var(--c-body);
-    -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border: 1px solid var(--c-main-brdr);
     background: var(--p-btn);
@@ -671,13 +600,10 @@ a#fill_lin:hover,
 a#fill_mac:hover {
     color: var(--c-low);
     background: var(--p-btn-hvr);
-    -webkit-box-shadow: none;
     box-shadow: none;}
 a#fill_win:active,
 a#fill_lin:active,
 a#fill_mac:active {
-    -webkit-transition: none;
-    -o-transition: none;
     transition: none;
     background: var(--p-btn-act);}
 
@@ -691,7 +617,6 @@ h2#non_wiki_editing ~.box.pad input#steamid {
     border: 1px solid var(--c-input-brdr);
     background-color: var(--c-input);
     height: 26px;
-    -webkit-box-shadow: var(--p-input-shdw);
     box-shadow: var(--p-input-shdw);
     color: unset;
     font-size: 14px;
@@ -810,10 +735,8 @@ body >#preview-popup {
     z-index: 999999;}
 body >#cover_container  img,
 body >#preview-popup    img {
-    -webkit-box-sizing: content-box;
     box-sizing: content-box;
     border: 3px solid var(--c-main-brdr);
-    -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     object-fit: unset;
     max-width: calc(40vw - 26px);
@@ -845,7 +768,6 @@ https://greasyfork.org/en/scripts/396545-ggn-steam-portrait-cover-tooltip
     margin: 10px;
     max-width: 278px !important;
     border: 3px solid var(--c-main-brdr);
-    -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 .tooltipster-default #tooltip_steam h3 {
     color: var(--c-txt) !important;
@@ -861,7 +783,6 @@ https://greasyfork.org/en/scripts/396545-ggn-steam-portrait-cover-tooltip
     margin-bottom: 10px;}
 .tooltipster-default #tooltip_steam img:hover {
     border-color: var(--c-b3);
-    -webkit-box-shadow: none;
     box-shadow: none;}
 /**
 /GGn Steam Portrait Cover Tooltip
@@ -907,7 +828,6 @@ https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-description-prettify.
 #mh_bad_shots {
     margin: 0;}
 #mh_bad_shots {
-    -webkit-box-shadow: 0 0 4px var(--c-em-bcg);
     box-shadow: 0 0 4px var(--c-em-bcg);
     padding: calc(30px + var(--p-head)) 11px 1px 11px;
     margin: calc(-19px - var(--p-head)) 0 -1px -1px;
@@ -927,14 +847,11 @@ a#mh_sort_screenshots_button,
     padding: 5px 10px;
     color: var(--c-txt);
     text-shadow: 1px 1px 1px var(--c-body);
-    -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border: 1px solid var(--c-main-brdr);
     background: var(--p-btn);
     background-size: 200% auto !important;
     display: inline-block;
-    -webkit-transition: all .1s linear;
-    -o-transition: all .1s linear;
     transition: all .1s linear;}
 a#steamCoverDo:hover,
 a#steamScreenshotsDo:hover,
@@ -942,15 +859,12 @@ a#mh_sort_screenshots_button:hover,
 #mh_screenshots_post:hover {
     color: var(--c-low);
     background: var(--p-btn-hvr);
-    -webkit-box-shadow: none;
     box-shadow: none;}
 a#steamCoverDo:active,
 a#steamScreenshotsDo:active,
 a#mh_sort_screenshots_button:active,
 #mh_screenshots_post:active {
     background: var(--p-btn-act);
-    -webkit-transition: none;
-    -o-transition: none;
     transition: none;}
 a#steamScreenshotsDo,
 a#mh_sort_screenshots_button {
@@ -997,15 +911,8 @@ h2 a#titleEdit {
     vertical-align: text-bottom;
     width: 18px;
     height: 18px;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: contain;
     background-color: var(--c-anchor);
-    -webkit-mask-image: url('icons/tor/ed.svg');
-    mask-image: url('icons/tor/ed.svg');}
+    mask: var(--s-tor-ed) no-repeat center /contain;}
 h2 a#titleEdit:hover {
     background-color: var(--c-anchor-hvr);}
 h2#display_name input[type="submit"] {
@@ -1013,13 +920,11 @@ h2#display_name input[type="submit"] {
     vertical-align: top;}
 h2#display_name form[method="post"] {
     background-color: var(--c-box);
-    -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: 1px solid var(--c-main-brdr);
     width: calc(100% - 10px);
     padding: 10px;
     background-color: var(--c-box);
-    -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 h2#display_name form[method="post"] input[type="text"] {
     width: calc(100% - 87px);}
@@ -1054,7 +959,6 @@ table#coltable {
     line-height: 0;}
 table#coltable {
     background-color: var(--c-box);
-    -webkit-box-shadow: var(--p-main-shdw);
     box-shadow: var(--p-main-shdw);
     border: 1px solid var(--c-main-brdr);
     margin: 0 0 15px 0;}
@@ -1086,8 +990,6 @@ table#coltable >a#addcolls:before {
 table#coltable a,
 table#coltable tr,
 table#coltable >a#addcolls:before {
-    -webkit-transition: all .1s linear;
-    -o-transition: all .1s linear;
     transition: all .1s linear;}
 table#coltable >a#addcolls:hover:before {
     opacity: 1;}
@@ -1137,22 +1039,14 @@ https://gitlab.com/ZeDoCaixao/ggn-scripts/-/raw/master/ggn-trump-helper.user.js?
 a[title="Trump"],
 a[title="Copy Description"] {
     cursor: pointer;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: contain;
     background-color: var(--c-anchor);
     width: 18px;
     height: 18px;}
 a[title="Copy Description"] {
-    -webkit-mask-image: url(icons/tor/cp.svg);
-    mask-image: url(icons/tor/cp.svg);}
+    mask: var(--s-tor-cp) no-repeat center / contain;}
 a[title="Trump"] {
     transform: scaleX(-1);
-    -webkit-mask-image: url('icons/tor/tr.svg');
-    mask-image: url('icons/tor/tr.svg');}
+    mask: var(--s-tor-tr) no-repeat center / contain;}
 a[title="Trump"]:hover,
 a[title="Copy Description"]:hover {
     background-color: var(--c-anchor-hvr);}
@@ -1201,7 +1095,6 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=165779
     box-sizing: border-box;
     width: 100%;
     background-color: var(--c-box) !important;
-    -webkit-box-shadow: var(--p-main-shdw) !important;
     box-shadow: var(--p-main-shdw) !important;
     border: 1px solid var(--c-main-brdr) !important;
     margin: 0 0 15px 0 !important;
@@ -1228,15 +1121,11 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=165779
     box-sizing: border-box;
     background-color: var(--c-edition) !important;
     border: 3px solid var(--c-main-brdr) !important;
-    -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     font-size: 0;
     line-height: 0;
-    -webkit-transition: all .1s linear;
-    -o-transition: all .1s linear;
     transition: all .1s linear;}
 #equip_gestion div[id^="config_box"]:hover {
-    -webkit-box-shadow: none;
     box-shadow: none;}
 #equip_gestion .flex-container {
     flex-flow: row wrap;
@@ -1264,14 +1153,7 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=412&postid=170664
     margin: 1px 0 0 5px;
     width: 18px;
     height: 18px;
-    -webkit-mask-image: url(icons/upload.svg);
-    mask-image: url(icons/upload.svg);
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: contain;
+    mask: var(--s-upload) no-repeat center / contain;
     background-color: var(--c-anchor);}
 .torrent_table .group a[href^="upload.php?"]:hover {
     background-color: var(--c-anchor-hvr);}
@@ -1286,13 +1168,10 @@ https://openuserjs.org/scripts/SB100/GGn_Equipment_Loadout_Manager
 https://gazellegames.net/forums.php?action=viewthread&threadid=24076#_1995440229
 ***/
 #wrapper .loadout-manager {
-    -webkit-transition: all .1s linear;
-    -o-transition: all .1s linear;
     transition: all .1s linear;
     background-color: var(--c-box);
     color: var(--c-txt);
     z-index: 10;
-    -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);
     border: 1px solid var(--c-main-brdr);
     padding: 10px;}
@@ -1349,32 +1228,20 @@ https://gazellegames.net/forums.php?action=viewthread&threadid=24076#_1995440229
     top: -1px;
     width: calc(100% + 2px);
     height: calc(100% + 2px);
-    -webkit-box-shadow: var(--p-header-shdw);
     box-shadow: var(--p-header-shdw);}
 #wrapper .loadout-manager__arrow:before {
     content:'';
     display: block;
-    -webkit-mask-image: url(icons/show.svg);
-    mask-image: url(icons/show.svg);
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: contain;
+    mask: var(--s-show) no-repeat center / contain;
     background-color: var(--c-text-s);
     width: 100%;
     height: 100%;
     transform: rotate(90deg);
     left: -25px;
-    -webkit-transition: all .1s linear;
-    -o-transition: all .1s linear;
     transition: all .1s linear;}
 #wrapper .loadout-manager__arrow:hover {
     background-color: var(--c-colhead-click);}
 #wrapper .loadout-manager__arrow:active {
-    -webkit-transition: none;
-    -o-transition: none;
     transition: none;
     background-color: var(--c-colhead-act);}
 #wrapper .loadout-manager__arrow:hover:before {

@@ -1,32 +1,33 @@
-﻿/** COLORS **/
-:root {
-    --c-selection:                      rgba(12, 130, 128, .996);
-    --c-selection-i:                    rgba(12, 130, 128, .75);
-    --c-blackout-a:                     rgb(22, 245, 237);
-    --c-unread-s:                       rgb(8, 94, 93);
-    --c-unread-br:                      rgb(9,67,66);
-    --c-fbb-c:                          #0D918D;
+﻿:root {
+    --c-selection:                      rgba(230, 31, 0, .996);
+    --c-selection-i:                    rgba(230, 31, 0, .75);
+    --c-blackout-a:                     #FFD1C9;
+    --c-unread-s:                       #A81600;
+    --c-unread-br:                      #751204;
+    --c-fbb-c:                          #D9513C;
+    --c-lb1: 							#C21A00;
+    --c-lb2: 							#C2212E;
     --c-b1: 							#A81600; /* scarlET */
     --c-b2: 							#A81D28; /* ALIZARin crimson */
-    --c-b3: 							rgb(9,67,66);
-    --c-b4: 							rgb(30,70,57);    
-    --c-sb1:                            rgb(9,56,55);
-    --c-sb2:                            rgb(26,57,47);
-    --c-bg:                             rgb(13,139,136);    
-    --c-anchor: 						rgb(17, 184, 178);
-    --c-anchor-hvr-bcg: 				rgb(11,45,43);
-    --c-anchor-hvr-bcg-obj:             rgb(11,45,43);
+    --c-b3: 							#751204;
+    --c-b4: 							#75171E;    
+    --c-sb1:                            #601105;
+    --c-sb2:                            #60141A;
+    --c-bg:                             #D44B36;    
+    --c-anchor: 						#FF7F6B;
+    --c-anchor-hvr-bcg: 				#37221F;
+    --c-anchor-hvr-bcg-obj:             #37221F;
     --c-on: 							rgb(36, 181, 0);
     --c-bonus:                          rgba(177, 232, 0, .2);
     --c-donate:                         rgb(255, 77, 77);
     --c-yellow: 						rgb(209, 209, 0);
     --c-off: 							rgb(255, 20, 20);
-    --c-em-bcg: 						rgb(140, 25, 13);
-    --c-em-hvr: 						rgb(230, 42, 21);
-    --c-em-act: 						rgb(115, 36, 28);
+    --c-em-bcg: 						#612A94;
+    --c-em-hvr: 						#A442FF;
+    --c-em-act: 						#562683;
     --c-fl: 							rgb(154, 99, 255);
-    --c-btn-b1: 						rgb(9,81,80);
-    --c-btn-b2: 						rgb(35,84,68);
+    --c-btn-b1: 						#8F1402;
+    --c-btn-b2: 						#8F1A24;
     --c-red:                            rgb(255, 10, 10);
     --c-green:                          rgb(0, 180, 0);
     --c-blue:                           rgb(99, 99, 255);
@@ -60,7 +61,3 @@
     --c-type-4:                         rgba(84,    84,     84,     .23);
     --c-type-5:                         rgba(0,     92,     119,    .23);
 }
-/** /COLORS **/
-
-#logo a {
-    background-image: url('icons/a5a5a5/logo.svg');}

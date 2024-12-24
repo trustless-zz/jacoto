@@ -312,14 +312,15 @@ table#requests_list         tr:hover .tags a {
     height: 44px;
     right: 0;
     top: calc(100vh - 49px);
-    -webkit-mask-image: url(icons/toplink.svg);
-    mask-image: url(icons/toplink.svg);
-    opacity: 0.4;}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 54 40'%3E%3Crect width='54' height='4'/%3E%3Cpolygon points='54 37.172 27 10.172 0 37.172 2.828 40 27 15.828 51.172 40 54 37.172'/%3E%3C/svg%3E") no-repeat center / contain;
+    opacity: 0.4;
+    background: var(--c-text-s);}
 #toplink a:hover {
     opacity: 1;
-    background-color: var(--c-txt);}
+    background: var(--c-txt);}
 #toplink a:active {
-    background-color: var(--c-low);}
+    background: var(--c-low);}
+
 /* forum post 'back to top' button
  #quickreplypreview .colhead_dark #barpreview,
  .forum_post .colhead_dark div[style="float: right;"],
@@ -346,7 +347,7 @@ table#requests_list         tr:hover .tags a {
 #extra1,
 #extra2,
 #extra3 {
-    content: '';
+    /* content: ''; */
     position: absolute;
     z-index: 98;
     left: 0;
@@ -357,7 +358,7 @@ table#requests_list         tr:hover .tags a {
     height: 40px;}
 #extra2 { /* #menu */
     top: 40px;
-    background: var(--p-menu);
+    background: var(--c-tor-rowb) linear-gradient(155deg,var(--c-tor-rowb),var(--c-tor-row-hvr));
     height: 34px;}
 #extra3 { /* #userinfo */
     top: 74px;
@@ -504,14 +505,7 @@ table#requests_list         tr:hover .tags a {
     width: 40px;
     height: 40px;
     background-color: var(--c-txt);
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: 20px 20px;
-    -webkit-mask-image: url('icons/toolbox.svg');
-    mask-image: url('icons/toolbox.svg');
-    mask-position: center;
-    mask-repeat: no-repeat;
-    mask-size: 20px 20px;}
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M.54877,16.803a1.87326,1.87326,0,0,0,2.64962,2.64876L9.34791,13.3,6.69829,10.65251Z'/%3E%3Cpolygon points='15.918 5.404 18.597 4.019 19.999 1.308 18.691 0 15.982 1.404 14.595 4.08 11.337 7.342 12.658 8.666 15.918 5.404'/%3E%3Cpath d='M16.50507,12.51329l-.25224-.025a3.71489,3.71489,0,0,0-1.29482.24352L7.27013,5.04154a3.7164,3.7164,0,0,0,.24349-1.295l-.025-.25228A3.70844,3.70844,0,0,0,2.162.37466L4.65049,2.86357a1.22184,1.22184,0,0,1,.281.44959,1.24766,1.24766,0,0,1-2.04652,1.315L.39643,2.14051A3.70928,3.70928,0,0,0,3.51553,7.468l.25224.025a3.7434,3.7434,0,0,0,1.29482-.24225l7.68661,7.68907a3.773,3.773,0,0,0-.241,1.295l.02621.25228a3.73143,3.73143,0,0,0,3.71969,3.49424,3.66671,3.66671,0,0,0,1.60575-.37466l-2.48852-2.48891a1.27516,1.27516,0,0,1-.28346-.44831,1.24481,1.24481,0,0,1,1.16623-1.68341,1.22771,1.22771,0,0,1,.43452.08492,1.19785,1.19785,0,0,1,.44825.281l2.48852,2.48891A3.69442,3.69442,0,0,0,20,16.23487,3.73728,3.73728,0,0,0,16.50507,12.51329Z'/%3E%3C/svg%3E") no-repeat center / 20px 20px;}
 #header #alerts:hover:before {
     background-color: var(--c-low);}
 #header #alerts .blend {
@@ -519,7 +513,7 @@ table#requests_list         tr:hover .tags a {
     line-height: 0;
     z-index: 999;
     opacity: 0;
-    -webkit-box-shadow: var(--p-header-shdw);
+    /* -webkit-box-shadow: var(--p-header-shdw); */
     box-shadow: var(--p-header-shdw);
     border: 1px solid var(--c-table-brdr);
     text-align: center;
@@ -961,9 +955,8 @@ table#requests_list         tr:hover .tags a {
     #nav_userinfo a:before {
         transition-delay: .5s;
         opacity: 1;
-        -webkit-mask-image: url('icons/nav/user.svg');
-        mask-image: url('icons/nav/user.svg');
-        background-color: var(--c-txt);
+        mask: var(--s-user) no-repeat center / contain;
+        background: var(--c-txt);
         content: '';
         right: 26px;
         top: 7px;
