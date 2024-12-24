@@ -1774,6 +1774,9 @@ td.center.cats_col+td,
 
 #tools #content >.header,
 
+#grouplinks #curlinkedgroup,
+#grouplinks #linkedgroup,
+
 #adventureclub .linkbox:first-child +div +div,
 
 .box.box_info span[style="float:right;"],
