@@ -1,4 +1,5 @@
-﻿:root {
+﻿/* currently minifying with https://beautifytools.com/css-minifier.php */
+:root {
     --p-searchbar-grdnt: 				var(--c-b1) linear-gradient(155deg,var(--c-b1),var(--c-b2));
     --p-head-grdnt: 					var(--c-b3) linear-gradient(155deg,var(--c-b3),var(--c-b4));
     /* --p-scroll-grdnt-hvr:               var(--c-b1) linear-gradient(110deg, var(--c-b1), var(--c-b2)); */
@@ -1913,7 +1914,8 @@ html, */
 #searchbars ul li form,
 #staffpm #compose table.comp input#subject,
 #torrents .center.thin >.box.pad input[name="summary"],
-#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input.input_tog,
+/* #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input.input_tog, */
+#user .thin >h2 ~form[method="post"] input[name="groupurl"],
 .thin.top10_tags .linkbox +#ut:last-of-type,
 .thin.top10_tags .linkbox,
 .more_info,
@@ -7004,7 +7006,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     top: calc(50% - 17px);}
 .cats_col   div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 .collicon   div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
-.noticon    div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications)
+input[name="action"]:not([value="delete_notify"]) ~tbody .noticon    div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) /* "Notifications" need this while "Deleted Torrents" don't. Too bad they both share the same table class (.torrent_notifications), and body id (#torrents) for that matter. */
 /* .noticon    div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) - shared class/id mess */
 /* #better .torrent_table td.center.collicon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #bookmarks td.center.collicon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
@@ -7042,9 +7044,10 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     width: 100%;
     height: 100%;
     display: inline-block; /* inline as per request https://gazellegames.net/forums.php?action=viewthread&threadid=19304&postid=2833659#post2833659 */
-    background-size: 28px 28px;
+    /* background-size: 28px 28px;
     background-repeat: no-repeat;
-    background-position: center;}
+    background-position: center; */
+}
 #grouplinks td {
     padding: 1px 2px;}
 #grouplinks td >a,
@@ -9584,30 +9587,34 @@ table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[name="toyear"] {
     margin-left: 0 !important;}
 
-#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#platform_2,
-#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#platform_1 {
+/* #user .thin >h2 ~form[method="post"] input#platform_2,
+#user .thin >h2 ~form[method="post"] input#platform_1 {
     width: calc(100% - 295px);}
-#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#releasetype_1 {
+#user .thin >h2 ~form[method="post"] input#releasetype_1 {
     width: calc(100% - 185px);}
-#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#tags_1 {
+#user .thin >h2 ~form[method="post"] input#tags_1 {
     width: calc(100% - 235px);}
-#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#not_tags_1 {
+#user .thin >h2 ~form[method="post"] input#not_tags_1 {
     width: calc(100% - 375px);}
-#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#releasetype_2 {
+#user .thin >h2 ~form[method="post"] input#releasetype_2 {
     width: calc(100% - 190px);}
-#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#tags_2 {
+#user .thin >h2 ~form[method="post"] input#tags_2 {
     width: calc(100% - 240px);}
-#user .thin >h2 ~form[method="post"] /*>input[value="notify_handle"]:first-child ~table*/ input#not_tags_2 {
-    width: calc(100% - 380px);}
+#user .thin >h2 ~form[method="post"] input#not_tags_2 {
+    width: calc(100% - 380px);} */
 
-#user .thin >h2 ~form[method="post"] input#platform_3 {
+/* #user .thin >h2 ~form[method="post"] input#platform_3, */
+#user .thin >h2 ~form[method="post"] input[name="platform"] {
     width: calc(100% - 291px);}
-#user .thin >h2 ~form[method="post"] input#releasetype_3 {
+/* #user .thin >h2 ~form[method="post"] input#releasetype_3, */
+#user .thin >h2 ~form[method="post"] input[name="releasetype"] {
     width: calc(100% - 183px);}
-#user .thin >h2 ~form[method="post"] input#tags_3 {
-    width: calc(100% - 235px);}
-#user .thin >h2 ~form[method="post"] input#not_tags_3 {
-    width: calc(100% - 375px);}
+/* #user .thin >h2 ~form[method="post"] input#tags_3, */
+#user .thin >h2 ~form[method="post"] input[id^="tags_"] {
+    width: calc(100% - 230px);}
+/* #user .thin >h2 ~form[method="post"] input#not_tags_3, */
+#user .thin >h2 ~form[method="post"] input[name="not_tags"] {
+    width: calc(100% - 370px);}
 
 #user .thin >h2 ~br +br +h3,
 #user .thin >h2 +h3 { /* can not handle more than 1 line */
