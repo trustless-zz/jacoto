@@ -5941,6 +5941,7 @@ strong.mature +strong +br,
 #forums #wrapper .forum_post .avatar >div:only-child:after,
 
 .sidebar #freeleech strong.partial_freeleech_label,
+.sidebar #freeleech strong.freeleech_label,
 
 /** Get More News - duplicate news bug fix **/
 #index .box.news_post:empty,
@@ -6255,6 +6256,7 @@ a[onclick^="similarVote("]:before {
     font-size: 14px;
     line-height: 19px;
     padding: 6px 5px 7px 5px;}
+.torrent_notifications .colhead td,
 #calendar .calendar-row.calendar-heading,
 #user .thin >.header:first-child ~h3 +.box.pad:last-child .colhead td,
 /* #upload #content >div[style="margin:0px auto;width:700px"] .colhead td, */
@@ -6990,7 +6992,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     font-size: 13px;
     line-height: var(--p-lh);}
 
-
+input[value="delete_notify"]
 
 .cats_col   +td #groupplatform,
 .collicon   +td #groupplatform,
