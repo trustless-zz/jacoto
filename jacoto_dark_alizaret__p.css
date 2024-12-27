@@ -1,0 +1,9 @@
+﻿@import url('res/c_dark__core.css');
+@import url('res/c_dark_alizaret.css');
+
+@import url('res/core.css');
+@import url('res/userscripts.css');
+@import url('res/desktop.css') screen and (min-width: 801px);
+@import url('res/mobile.css') screen and (max-width: 800px);
+
+body >div[id^="ghost"] {display: none;}

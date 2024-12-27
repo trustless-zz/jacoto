@@ -1881,7 +1881,7 @@ html {
 body {
     width: 100%;
     color: var(--c-txt);
-    background: var(--c-bcg1);
+    background: var(--c-bcg1) !important; /* !important to override the html style for some profile themes */
     /* background-size: 50px 50px; */
     font-family: OpenSans, Sans-Serif;
     margin: 0;
@@ -15591,6 +15591,9 @@ textarea {/* prevent resizer from disappearing */
     background-repeat: no-repeat;
     background-position: center; */
 }
+textarea::-webkit-scrollbar,
+textarea::-webkit-scrollbar-thumb,
+textarea::-webkit-scrollbar-button {cursor:auto;}
 /** /webkit scrollbar **/
 
 /**
