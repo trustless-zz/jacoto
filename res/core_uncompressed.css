@@ -3435,6 +3435,8 @@ strong.important_text,
     right: 0;
     margin: auto;}
 
+#wrapper #trading_panel .message_box ul.bbbutt,
+#qwebcontainer,
 .review_cell .flextable-cell:first-child img:not(.avatar),
 img#authcode,
 .fancybox-image,
@@ -8127,6 +8129,12 @@ span.size10 {
     line-height: 1em;}
 .user_title span[style="font-family: lucida console;"] {
     line-height: 1em;}
+
+#qwebcontainer >iframe {
+    box-sizing: border-box;
+    filter: none;
+    border: 3px solid var(--c-main-brdr);
+    padding: 0;}
 
 .twitter-tweet {
     /* -webkit-filter: var(--p-post-img); */
@@ -14295,8 +14303,8 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 	margin: 0;
     width: 100% !important;}
 
-#wrapper #trading_panel .message_box ul.bbbutt {
-    border: 3px solid var(--c-main-brdr);}
+/* #wrapper #trading_panel .message_box ul.bbbutt {
+    border: 3px solid var(--c-main-brdr);} */
 
 #wrapper #trading_panel .message_box #buttons input {
 	background-color: unset;
