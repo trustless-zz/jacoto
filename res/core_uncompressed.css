@@ -13745,7 +13745,7 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 /*** Crafting books ***/
 #crafting_recipes {
     position: relative;
-	height: 400px;
+	height: 100%;
 	width: 100%;
     min-width: 300px;
 	padding: 0;
@@ -13757,7 +13757,8 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     margin: 0;
     padding: 10px 0 10px 10px;
     overflow-y: scroll !important;
-    height: calc(100% - 36px);
+    height: 362px;
+    min-height: 180px;
 	margin-top: 0;
 	text-align: center;
 	width: 100%;}
