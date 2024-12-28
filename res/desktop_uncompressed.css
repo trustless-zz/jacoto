@@ -1062,8 +1062,6 @@ table#requests_list         tr:hover .tags a {
 
 /* backpack */
 @media (max-width: 1302px) {
-    #wrapper #backpack  #items {
-        width: 275px;}
     #wrapper .calendar .day-number {
         font-size: 6.75vw;
         /*font-size: 6em;*/}
@@ -1071,16 +1069,35 @@ table#requests_list         tr:hover .tags a {
     #calendar .calendar .calendar-day-np {
         min-height: 9.217vw;
         /*min-height: 100px;*/}
+    #wrapper #backpack  #items {
+        width: 275px;}
 }
 @media (max-width: 1178px) {
-    #wrapper #backpack  #items {
+    /* #wrapper #backpack  #items {
         width: calc(100% - 237px);
         float: right;
         margin: 0 0 15px 0;
         height: 229px;}
     #wrapper #backpack #slots_panel {
         margin: 0 auto 15px auto;
-        float: unset;}
+        float: unset;} */
+    #wrapper #backpack #slots_panel {
+        width: 405px;}    
+}
+@media (max-width: 1052px) {
+    #wrapper #backpack #slots_panel {
+        width: 279px;}
+}
+@media (max-width: 926px) {
+    #wrapper #backpack #slots_panel {
+        width: 531px;}
+    #wrapper #backpack #items {
+        width: 100%;
+        margin-right: 0;
+        order: 9;}
+    #wrapper #backpack #items_navigation {
+        max-width: 222px;
+        width: calc(100% - 546px);}
 }
 
 /* crafting */
@@ -1088,20 +1105,51 @@ table#requests_list         tr:hover .tags a {
     #wrapper #crafting_panel #items {
         width: 399px;}
 }
+@media (min-width: 1173px) and (max-width: 1420px) {
+    #wrapper #crafting_recipes li.item_li {
+        height: calc(100vw / 5.63492);}
+}
 @media (max-width: 1296px) {
     #wrapper #crafting_panel #items {
         width: 275px;}
 }
-@media (max-width: 1172px) {
+@media (min-width: 1049px) and (max-width: 1172px) {
     #wrapper #crafting_panel #items {
-        width: calc(100% - 237px);
+        /* width: calc(100% - 237px);
         float: right;
         margin: 0 0 15px 0;
-        height: 229px;}
-    #wrapper #crafting_panel #slots_panel {
+        height: 229px; */
+        width: 151px;}
+    #crafting_panel #items >span {
+        display: none;}
+    #crafting_panel #items >input {
+        width: calc(100% - 20px);
+        margin: 6px 0 4px 0;}
+    /* #wrapper #crafting_panel #slots_panel {
         margin: 0 auto 15px auto;
         float: unset;
-        display: flow-root;}
+        display: flow-root;} */
+}
+@media (min-width: 997px) and (max-width: 1172px) {
+    #wrapper #crafting_recipes li.item_li {
+        width: calc(100% / 5 - 10px);
+        height: calc(100vw / 4.823);}
+}
+@media (max-width: 1048px) {
+    #wrapper #crafting_panel #items {
+        order: 9;
+        width: 100%;
+        margin-right: 0;}
+}
+@media (max-width: 996px) {
+    #wrapper #crafting_recipes li.item_li {
+        width: calc(100% / 4 - 10px);
+        height: calc(100vw / 3.95238);}
+}
+@media (max-width: 882px) {
+    #wrapper #crafting_panel #items_navigation {
+        max-width: 222px;
+        width: calc(100% - 540px);}
 }
 
 /* equipment */
@@ -1113,15 +1161,32 @@ table#requests_list         tr:hover .tags a {
     #wrapper #equipment #items {
         width: 275px;}
 }
-@media (max-width: 1165px) {
+@media (min-width: 1043px) and (max-width: 1165px) {
     #wrapper #equipment #items {
-        width: calc(100% - 237px);
+        /* width: calc(100% - 237px);
         float: right;
         margin: 0 0 15px 0;
-        height: 229px;}
-    #wrapper #equipment #equip_panel {
+        height: 229px; */
+        width: 151px;
+    }
+    #equipment #items_inner >span {
+        display: none;}
+    #equipment #items_inner >input {
+        width: calc(100% - 20px);
+        margin: 6px 0 4px 0;}
+    /* #wrapper #equipment #equip_panel {
         margin: 0 auto 15px auto;
-        float: unset;}
+        float: unset;} */
+}
+@media (max-width: 1042px) {
+    #wrapper #equipment #items {
+        width: 100%;
+        order: 9;
+        margin-right: 0;}
+}
+@media (max-width: 875px) {
+    #wrapper #equipment #items_navigation {
+        width: calc(100% - 533px);}
 }
 
 /* trading */

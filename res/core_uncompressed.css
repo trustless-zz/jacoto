@@ -2479,7 +2479,6 @@ a[onclick="BBCode.spoiler(this);"],
 
 #tools table[style="width: 960px; text-align: center;"] .colhead td,
 
-#equipment #equip_panel,
 #wrapper .trade_value_inner,
 
 #requests_list.request_table.border .colhead_dark td:first-child >a, /* Request Name / Year */
@@ -4582,9 +4581,10 @@ h3 a[href^="user.php?action=notify_delete&"],
 
 #backpack #slots_panel ul,
 #wrapper #trading_panel .items-wrapper,
-#crafting_panel #items #items-wrapper,
+/* #crafting_panel #items #items-wrapper,
 #equipment #items #items-wrapper,
-#backpack #items-wrapper,
+#backpack #items-wrapper, */
+#items-wrapper,
 
 #donate .box.pad.donation_info,
 
@@ -9279,14 +9279,16 @@ form#tag_add_form >input,
 
 #backpack #slots_panel ul:before,
 #backpack #slots_panel ul:after,
-#crafting_panel #items #items-wrapper:before,
-#equipment #items #items-wrapper:before,
+/* #crafting_panel #items #items-wrapper:before,
+#equipment #items #items-wrapper:before, */
 #trading_panel .items-wrapper:before,
-#backpack #items-wrapper:before,/**/
+/* #backpack #items-wrapper:before,
 #crafting_panel #items #items-wrapper:after,
-#equipment #items #items-wrapper:after,
+#equipment #items #items-wrapper:after, */
 #trading_panel .items-wrapper:after,
-#backpack #items-wrapper:after,/**/
+/* #backpack #items-wrapper:after, */
+#items-wrapper:before,
+#items-wrapper:after,
 /* #bookmarks #collage_table tbody:after,   - outdated bookmarks
 #bookmarks #collage_table tbody:before, */
 #crafting_recipes #items_list:before,
@@ -9309,9 +9311,10 @@ form#tag_add_form >input,
     z-index: 9;}
 #backpack #slots_panel ul:before,
 #trading_panel #items #main-items-wrapper:before,
-#crafting_panel #items #items-wrapper:before,
+/* #crafting_panel #items #items-wrapper:before,
 #equipment #items #items-wrapper:before,
-#backpack #items-wrapper:before,/**/
+#backpack #items-wrapper:before, */
+#items-wrapper:before,
 /* #bookmarks #collage_table tbody:before, - outdated bookmarks */
 .box.screenshots_div:before,
 #crafting_recipes #items_list:before {
@@ -9321,10 +9324,11 @@ form#tag_add_form >input,
 .similar:before {
     top: 0;}
 #backpack #slots_panel ul:after,
-#crafting_panel #items #items-wrapper:after,
-#equipment #items #items-wrapper:after,
+/* #crafting_panel #items #items-wrapper:after,
+#equipment #items #items-wrapper:after, */
 #trading_panel .items-wrapper:after,
-#backpack #items-wrapper:after,/**/
+/* #backpack #items-wrapper:after, */
+#items-wrapper:after,
 /* #bookmarks #collage_table tbody:after, - outdated bookmarks */
 #crafting_recipes #items_list:after,
 .box.screenshots_div:after,
@@ -10890,7 +10894,8 @@ table#downloaded_table              td.center.cats_col +td >span:before {
 /*** Left Navigation Menu ***/
 #wrapper #items_navigation {
 	width: 222px;
-	float: left;
+	/* float: left; */
+    height: 100%;
 	text-align: left;
     margin: 0 15px 15px 0;}
 #wrapper .inventory #items_navigation,
@@ -10966,22 +10971,34 @@ table#downloaded_table              td.center.cats_col +td >span:before {
 
 #backpack #slots_panel ul,
 #wrapper #trading_panel .items-wrapper,
-#crafting_panel #items #items-wrapper,
+/* #crafting_panel #items #items-wrapper,
 #equipment #items #items-wrapper,
-#backpack #items-wrapper {
+#backpack #items-wrapper, */
+#items-wrapper {
     margin-top: 0;
     text-align: center;
-    height: calc(100% - 36px);
+    height: unset;
     width: 100%;
     float: left;
-    padding: 10px 0 0 10px;
+    padding: 10px 0 15px 10px;
+    resize: vertical;
+    min-height: 134px;
     position: initial;
     overflow-y: scroll !important;}
+#equipment #items-wrapper {
+    height: 756px;}
+#backpack #items-wrapper,
+#crafting_panel #items-wrapper {
+    height: 384px;}
+#wrapper #backpack #slots_panel ul {
+    height: 388px;
+    min-height: 136px;}
     
-#crafting_panel #items #items-wrapper li,
-#equipment #items #items-wrapper li,
+/* #crafting_panel #items #items-wrapper li,
+#equipment #items #items-wrapper li, */
 #wrapper #trading_panel .items-wrapper li,
-#backpack #items-wrapper li {
+/* #backpack #items-wrapper li, */
+#items-wrapper li {
 	padding: 4px;}
 
 #wrapper #trading_panel #items div,
@@ -13590,7 +13607,7 @@ pre >code.hljs[class$=" hljs"]:after {
     width: 523px;
 	float: left;
 	margin: 0 15px 15px 0;
-	height: 422px;
+	height: 100%;
 	text-align: center;
 	overflow: hidden;}
 #backpack #items {
@@ -13602,7 +13619,7 @@ pre >code.hljs[class$=" hljs"]:after {
 #crafting_panel #slots_panel {
 	height: 426px;
 	width: 525px;
-	margin-bottom: 15px;}
+	margin: 0 0 15px auto;}
 #equipment #equip_panel:before,
 #crafting_panel #slots_panel:before {
     text-align: left;
@@ -13736,6 +13753,7 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 	overflow: hidden;}
 
 #crafting_recipes #items_list {
+    resize: vertical;
     margin: 0;
     padding: 10px 0 10px 10px;
     overflow-y: scroll !important;
@@ -13810,16 +13828,16 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 **************** Equipment Panel ******************
 **************************************************/
 
-#wrapper #equipment #items {
-    height: 794px;}
+/* #wrapper #equipment #items {
+    height: 794px;} */
 
 /*** Size of items selector ***/
 
 /*** For top and bottom highlights when hovering over item slot ***/
 #equipment #items_inner {
-	position: absolute;
+	/* position: absolute;
 	top: 0;
-	left: 0;
+	left: 0; */
 	width: 100%;
 	height: 100%;}
 
@@ -13916,6 +13934,9 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 	margin-top: 35px;}
 
 #equipment #equip_panel {
+    text-align: center;
+    display: inline-block;
+    margin: 0 0 15px auto;
 	height: 794px;
 	width: 518px;}
 
@@ -13940,9 +13961,13 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 
 /* #equipment .itemslot .item h3 {} */
 
+#backpack,
+#crafting_panel,
 #equipment {
 	margin: 0 auto;
-	text-align: center;}
+    /* z-index: 0; */
+	display: flex;
+    flex-flow: row wrap;}
 
 /* #equipment h2 {
 	text-align: left;} */
@@ -14346,8 +14371,9 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 
 /* The backpack slots */
 #wrapper #backpack #slots_panel {
-    float: right;
-    margin-right: 0;
+    /* float: right;
+    margin-right: 0; */
+    margin: 0 0 15px auto;
     width: 531px;}
 
 #backpack #slots_panel ul li {
