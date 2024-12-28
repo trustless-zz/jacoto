@@ -10894,7 +10894,7 @@ table#downloaded_table              td.center.cats_col +td >span:before {
 /*** Left Navigation Menu ***/
 #wrapper #items_navigation {
 	width: 222px;
-	/* float: left; */
+	float: left;
     height: 100%;
 	text-align: left;
     margin: 0 15px 15px 0;}
