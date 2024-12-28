@@ -3178,6 +3178,11 @@ body >div, /* more info window at #shop */
 #userinfo_username li:not(.sub) a:hover {
     color: var(--c-anchor-hvr);}
 
+#torrents .torrent_notifications .noticon +td >strong +strong:not([class]),
+#wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover,
+#crafting_recipes li.item_li:hover h3,
+#wrapper #trading_panel .message_box #buttons input:hover,
+
 #menu li.active a,
 #userinfo_minor li.active a,
 #userinfo_username .donateico.active a,
@@ -3983,6 +3988,12 @@ table.bbcode_table td,
 #upload #reviews_table td,
 .global_buffs a {
     padding: 5px !important;}
+#users_medals .medal_cell.inactive .medal_name,
+.filter_torrents.advanced td[colspan="7"],
+#wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove,
+#fight_skill_points_assign .points.base_points,
+#fight_skill_points_assign .points.skill_points,
+
 .global_buffs .color_green .fa,
 .global_buffs .color_purple .fa,
 .global_buffs .color_yellow .fa,
@@ -5031,6 +5042,16 @@ select:active {
 .select2-container .select2-selection--single,
 select {
     height: 24px;}
+.torrent_details .torrent_table tr.pad tr td,
+.filter_torrents.advanced label,
+#reviewdate:hover,
+#user .box.box_items #itemsdiv td >div:hover p:first-child,
+.select2-results__option,
+#calendar .day-number:hover:before,
+#fight_skill_points_assign .points.total_points,
+#wrapper table.diff .diff-addedline,
+#wrapper table.diff .diff-deletedline,
+
 .select2-container--default .select2-results__group,
 .select2-container--default .select2-selection--single .select2-selection__rendered,
 .select2-container .select2-selection--single {
@@ -5701,12 +5722,12 @@ body:not(#upload) #artist_tr + tr td.label,
 
 /* #requests table#requests_list tr:not(.colhead_dark) td:not(first-child),
 #torrents .torrent_notifications table.border tr:not(.colhead) td, */
-#users_medals .medal_cell.inactive .medal_name,
+/* #users_medals .medal_cell.inactive .medal_name,
 .filter_torrents.advanced td[colspan="7"] {
-    color: var(--c-text-s);}
-.torrent_details .torrent_table tr.pad tr td,
+    color: var(--c-text-s);} */
+/* .torrent_details .torrent_table tr.pad tr td,
 .filter_torrents.advanced label {
-    color: var(--c-txt);}
+    color: var(--c-txt);} */
 
 #reportsv2 #dynamic_form >table.border td.label,
 #upcoming_calendar,
@@ -6833,8 +6854,8 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     font-size: 12px;
     line-height: var(--p-lh);
     color: var(--c-text-s);}
-#reviewdate:hover {
-    color: var(--c-txt);}
+/* #reviewdate:hover {
+    color: var(--c-txt);} */
 
 /* '#allreviewslink' shouldn't be inside of a review 'tr' */
 /*.box.userreviews_div {
@@ -7110,8 +7131,8 @@ input[name="action"]:not([value="delete_notify"]) ~tbody .noticon    div:not(.ca
 
 #torrents .torrent_notifications .noticon +td >strong +strong {
     font-weight: bold;}
-#torrents .torrent_notifications .noticon +td >strong +strong:not([class]) {    
-    color: var(--c-low);}
+/* #torrents .torrent_notifications .noticon +td >strong +strong:not([class]) {    
+    color: var(--c-low);} */
 
 #requests .main_column >table:first-child {
     position: relative;
@@ -10616,8 +10637,8 @@ span.size5 img {
     margin: 7px 7px 0 7px;
     font-size: 16px;
     line-height: 16px;}
-#user .box.box_items #itemsdiv td >div:hover p:first-child {
-    color: var(--c-txt);}
+/* #user .box.box_items #itemsdiv td >div:hover p:first-child {
+    color: var(--c-txt);} */
 #user .box.box_items #itemsdiv td a {
     background-color: transparent;
     display: flex;
@@ -13380,18 +13401,19 @@ td .log_green {
     width: calc(100% + 9px);
     display: flex;
     flex-flow: row wrap;}
-#wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
-    color: var(--c-text-s);}
+/* #wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: var(--c-text-s);} */
+/* #torrents .torrent_notifications .noticon +td >strong +strong:not([class]),
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover {
-    color: var(--c-low);}
+    color: var(--c-low);} */
 .select2-results__option,
 option {
     /*height: 24px;*/
     line-height: 24px;
     min-height: unset;
     /*padding: 0px 2px;*/}
-.select2-results__option {
-    color: var(--c-txt);}
+/* .select2-results__option {
+    color: var(--c-txt);} */
 .select2-results__option:hover {
     color: var(--c-low) !important;
     background-color: var(--c-tgroup) !important;}
@@ -13801,8 +13823,8 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 	top: 10px;
 	width: calc(100% - 40px);
 	z-index: 1;}
-#crafting_recipes li.item_li:hover h3 {
-    color: var(--c-low);}
+/* #crafting_recipes li.item_li:hover h3 {
+    color: var(--c-low);} */
 
 #crafting_recipes .item_image_div {
 	height: 150px;
@@ -14309,8 +14331,8 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 #wrapper #trading_panel .message_box #buttons input {
 	background-color: unset;
 	color: inherit;}
-#wrapper #trading_panel .message_box #buttons input:hover {
-    color: var(--c-low);}
+/* #wrapper #trading_panel .message_box #buttons input:hover {
+    color: var(--c-low);} */
 
 #wrapper #trading_panel .message_box #buttons input:disabled {
 	box-shadow: inherit;
@@ -14660,8 +14682,8 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     color: var(--c-sticky-id-brdr);}
 #calendar .calendar-day.today .day-number {
     text-shadow: 0 0 3px var(--c-b3);}
-#calendar .day-number:hover:before {
-    color: var(--c-txt);}
+/* #calendar .day-number:hover:before {
+    color: var(--c-txt);} */
 
 #calendar .change_month_links a {
     display: inline-block;}
@@ -14886,11 +14908,11 @@ div#fight_skill_points_assign >table {
     position: relative;
     top: -4px;}
 
-#fight_skill_points_assign .points.base_points,
+/* #fight_skill_points_assign .points.base_points,
 #fight_skill_points_assign .points.skill_points {
-	color: var(--c-text-s);}
-#fight_skill_points_assign .points.total_points {
-	color: var(--c-txt);}
+	color: var(--c-text-s);} */
+/* #fight_skill_points_assign .points.total_points {
+	color: var(--c-txt);} */
 
 #fight_skill_points_assign tr.skill_tr:not(:nth-last-child(2)){
 	border-bottom: 1px solid var(--c-table-brdr);}
@@ -15673,9 +15695,9 @@ table.diff.split_view tr:first-child td {
 #wrapper table.diff .diff-addedline,
 #wrapper table.diff .diff-addedline ins {
     background-color: rgba(0, 255, 0, .2);}
-#wrapper table.diff .diff-addedline,
+/* #wrapper table.diff .diff-addedline,
 #wrapper table.diff .diff-deletedline {
-    color: var(--c-txt);}
+    color: var(--c-txt);} */
 #wrapper table.diff .diff-deletedline del,
 #wrapper table.diff .diff-addedline ins {
     padding: 0 2px;
