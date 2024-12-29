@@ -170,3 +170,7 @@ blockquote, pre {
     filter: drop-shadow(2px 2px 3px var(--c-main-shdw));}
 blockquote code {
     outline: 1px solid var(--c-main-shdw);}
+.userratingdiv img:hover {filter: drop-shadow(2px 2px 5px #000);}
+.tilt {transition: all 0.5s ease;}
+.tilt:hover {transform: rotate(-10deg);}
+#grouplinks a:hover {filter: drop-shadow(0.5px 0.5px 5px #69c077);}
