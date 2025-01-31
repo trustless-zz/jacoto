@@ -5326,7 +5326,7 @@ form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
     font-size: 0;
     line-height: 0;}
 
-#artist .sidebar >.box:first-child >div:last-child,
+#artist .sidebar >.box:first-child >div[style="text-align:center;padding:10px 0px;"]:last-child,
 .box.box_albumart p,
 .box_image_coverart div[align="center"],
 .box_image_avatar div:last-child {
@@ -6080,9 +6080,12 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1):before,
 .box.box_coltags .head span[title="Add Tags"] a:before {
     content: '+';}
 #image_block >a[onclick]:nth-of-type(2):before,
-.box_tags .stats.nobullet div a:nth-child(1):before,
+#wrapper .box_tags .stats.nobullet div a:nth-child(1):before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(2):before {
-    content: '-';}
+    line-height: 22px;
+    content: '–';
+    /* content: '-'; */
+}
 /* .box.box_info.pad a[title="Delete Alias"]:before,
 .box_tags .stats.nobullet div a:nth-child(3):before {
     font-size: 14px;
@@ -9171,7 +9174,7 @@ form#tag_add_form >input,
 #torrents .linkbox a[href*="torrents.php?action=revert&"]:before                {content: 'Revert to this revision';}
 .linkbox a[href^="artist.php?action=history&artistid"]:before,
 .torrent_table tr.pad td >.linkbox >a[onclick^="show_history"]:before,
-#torrents .linkbox a[href^="torrents.php?action=history&"]:before               {content: 'View history';}
+#torrents .linkbox a[href^="torrents.php?action=history&"]:before               {content: 'View History';}
 .linkbox a[href="inbox.php?action=compose"]:before                              {content: 'Compose';}
 .linkbox a[href="inbox.php?action=sentbox"]:before                              {content: 'Sentbox';}
 .linkbox a[href="inbox.php"]:before                                             {content: 'Inbox';}
@@ -10099,11 +10102,16 @@ td >img[title="Gold"] {
     right: 10px;}*/
 /** /going with position:absolute because display:flex needs containers **/
 
-#artist .sidebar >.box:first-child >div:last-child {
+#artist .sidebar >.box:first-child >div[style="text-align:center;padding:10px 0px;"]:last-child {
     padding: 0!important;
     margin: 10px 0 0 0;}
 #artist .sidebar ul.stats.nobullet {
     margin-bottom: 0;}
+
+#artist .sidebar a#tag_show\/hide {
+    align-self: flex-end;
+    /* margin-top: -19px; */
+}
 
 #better .thin >h3 +.box.pad,
 #rules h3#jump +.box.pad {
@@ -10855,6 +10863,34 @@ table#downloaded_table              td.center.cats_col +td >span:before {
     content: none;}
 
 /*** isolating :has() because firefox doesn't fully support it yet ***/
+a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
+    content: 'Hide';}
+.box_coltags:has(~.box_add_tags[style="display: block;"]) .head span[title="Add Tags"] a:before {
+    content: '–';
+    /* content: '-'; */
+}
+
+.pad td >.linkbox:has(~div[id^="peers_"]:not(.hidden)) >a[onclick^="show_peers"]:before {
+    content: 'Hide Peerlist';}
+.pad td >.linkbox:has(~div[id^="downloads_"]:not(.hidden)) >a[onclick^="show_downloads"]:before {
+    content: 'Hide Downloadlist';}
+.pad td >.linkbox:has(~div[id^="snatches_"]:not(.hidden)) >a[onclick^="show_snatches"]:before {
+    content: 'Hide Snatchlist';}
+.pad td >.linkbox:has(~div[id^="files_"]:not(.hidden)) >a[onclick^="show_files"]:before {
+    content: 'Hide Filelist';}
+.pad td >.linkbox:has(~div[id^="history_"]:not(.hidden)) >a[onclick^="show_history"]:before {
+    content: 'Hide History';}
+
+a#toggle_css_gallery:has(~#css_gallery[style="display: block;"]):before {
+    content: 'Hide gallery';}
+
+#artist .sidebar .body:has(a#tag_show\/hide) {
+    line-height: 26px;}
+/* #artist .sidebar .body:has(a#tag_show\/hide) a#tag_show\/hide {
+    margin-top: -26px;} */
+#artist .sidebar .body:has(a#tag_show\/hide) ul {
+    line-height: var(--p-lh);}
+
 .group_torrent:has(strong[class$="freeleech_label"]),
 .group_torrent:has(.reported_label),
 .group_torrent:has(#trumpable_tag),
@@ -11359,7 +11395,9 @@ table#downloaded_table              td.center.cats_col +td >span:before {
 #shop_search tbody#advanced_search tr:first-child td:last-child {
     max-width: 325px;}
 .inventory #shop_search tbody#advanced_search tr:first-child td:last-child {
-    max-width: 230px;}
+    /* max-width: 230px; */
+    max-width: 235px;
+}
 #shop_search tbody#advanced_search tr:first-child td:nth-child(2) {
     line-height: 26px;
     vertical-align: top;}
