@@ -2032,6 +2032,8 @@ ul {
     margin: 0;
     padding: 0 0 0 30px;}
 
+#tools .thin >.box[style="float: left"] ul,
+/* #tools .thin >.box[style="float: left"] ul li, */
 #header,
 #menu ul,
 #menu ul li,
@@ -2051,6 +2053,7 @@ ul {
 .sidebar #polcont .pad,
 #dailygazelle {
     padding:0;}
+#tools .thin >.box[style="float: left"] ul,
 #menu ul,
 #menu ul li a,
 #userinfo_minor,
@@ -2060,6 +2063,8 @@ ul {
 #dailygazelle .colhead_dark {
     margin:0;}
 
+/* #tools .box .pad ul.stats.nobullet, */
+#tools .thin >.box[style="float: left"] ul,
 #menu ul,
 #searchbars ul,
 #userinfo_minor,
@@ -3385,6 +3390,7 @@ a[onclick="showDnu();"]:active:after {
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
 
+.torrent_details .torrent_table tr.pad tr td span[style*="red"], /* example: show peerlist table */
 .calendar a[style="color: red;"],
 #better td span[style="color: red;"],
 tr#reviewrow div[style="color:red;font-weight:bold;text-align:center"],
@@ -3409,6 +3415,7 @@ strong.important_text,
 .torrent_details blockquote#description [style="color: #ff0000;"] {
     color: var(--c-red) !important;}
 
+.torrent_details .torrent_table tr.pad tr td span[style*="green"], /* example: show peerlist table */
 .calendar a[style="color: green;"],
 #better td span[style="color: green;"],
 #user .thin >h2:first-child +.center ~table.border span[style*="green;"] {
@@ -4689,6 +4696,9 @@ blockquote#description img,
     /* -webkit-box-sizing: border-box; */
     box-sizing: border-box;}
 
+#tools #wrapper .thin >.box[style="float: left"] +.box[style="float: left"] {
+    margin-left: 15px;}
+
 /* forcing 16:9 aspect ratio */
 iframe[width="640"][height="385"] {
     height: 360px;}
@@ -4973,7 +4983,9 @@ table#weblinks_edit td:nth-child(odd),
 
 #image_block >span:first-of-type {
     order: -2;
-    width: calc(100% - 71px);}
+    /* width: calc(100% - 71px); */
+    width: calc(100% - 74px);
+}
 
 /* filter/search td */
 #collections .thin form.search_form td,
@@ -5058,6 +5070,8 @@ select {
     color: var(--c-txt);}
 .select2-container .select2-selection--single {
     outline: 0;}
+#wrapper .box_tags .stats.nobullet div a:nth-child(1):before,
+li:not(.suggested_similar) .similar_votes >a:nth-child(2):before,
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     line-height: 22px;}
 .select2-container .select2-selection--single .select2-selection__rendered {
@@ -6011,6 +6025,8 @@ strong.mature +strong +br,
 .avatar .forumstat >strong:first-child,
 .avatar .forumstat >br:first-of-type,
 
+#tools #content >br+br,
+
 #artist #requests .colhead_dark a,
 #userhistory .colhead_dark span[id*="bar"],
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
@@ -6082,7 +6098,7 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1):before,
 #image_block >a[onclick]:nth-of-type(2):before,
 #wrapper .box_tags .stats.nobullet div a:nth-child(1):before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(2):before {
-    line-height: 22px;
+    /* line-height: 22px; */
     content: '–';
     /* content: '-'; */
 }
@@ -10870,6 +10886,27 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     /* content: '-'; */
 }
 
+#tools #content >br:has(+br),
+#tools #content >div:has(>div >#item_stats_table) >br:first-child {
+    display: none;}
+#tools div:has(>#item_stats_table) {
+    background-color: var(--c-box);
+    box-shadow: var(--p-main-shdw);
+    border: 1px solid var(--c-main-brdr);
+    margin: 0 0 15px 0;}
+#tools div:has(>#item_stats_table):before {
+    display: block;
+    text-align: left;
+    width: calc(100% - 20px);
+    padding: 9px 10px;
+    font-size: var(--p-head);
+    height: var(--p-head);
+    line-height: var(--p-head);
+    background: var(--p-head-grdnt);
+    font-weight: 600;
+    content: 'Item Stats';}
+
+
 .pad td >.linkbox:has(~div[id^="peers_"]:not(.hidden)) >a[onclick^="show_peers"]:before {
     content: 'Hide Peerlist';}
 .pad td >.linkbox:has(~div[id^="downloads_"]:not(.hidden)) >a[onclick^="show_downloads"]:before {
@@ -13521,6 +13558,7 @@ table.adventure_table h3 {
     margin-top: 13px;}
 #wrapper #seedtime_tokens >.linkbox {
     margin: 0 0 27px 0;}
+#tools #item_stats_table >tbody >tr[valign="top"] >td:nth-child(n+2),
 #seedtime_tokens #tokens_breakdown td:last-child {
 	border-left: 1px solid var(--c-table-brdr);}
 
