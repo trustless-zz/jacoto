@@ -11991,6 +11991,7 @@ li.item_li /*#clickable */.item_description img {
 	color: var(--c-anchor);}
 
 .ui-widget-header >.ui-dialog-title {
+    overflow: visible;
     display: block;
     font-size: var(--p-head);
     line-height: var(--p-head);
