@@ -3804,6 +3804,8 @@ a[title="Remove"]:before {
     #wrapper #trading_panel div.gold_trade {
         flex-flow: row wrap;
         height: auto;}
+    #wrapper #content #trading_panel #my-items-wrapper-table.items-wrapper {
+        height: 349px;}
     #trading_panel #my_trade_table .items-wrapper:before {
         top: 120px;}
 }

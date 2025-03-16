@@ -11079,7 +11079,7 @@ a#toggle_css_gallery:has(~#css_gallery[style="display: block;"]):before {
 #items-wrapper {
     margin-top: 0;
     text-align: center;
-    height: unset;
+    /* height: unset; */
     width: 100%;
     float: left;
     padding: 10px 0 15px 10px;
@@ -11087,6 +11087,13 @@ a#toggle_css_gallery:has(~#css_gallery[style="display: block;"]):before {
     min-height: 134px;
     position: initial;
     overflow-y: scroll !important;}
+#backpack #slots_panel ul,
+#items-wrapper {
+    height: unset;}
+#wrapper #trading_panel .items-wrapper {
+    height: 391px;}
+#wrapper #trading_panel #main-items-wrapper.items-wrapper {
+    height: 506px;}
 #equipment #items-wrapper {
     height: 756px;}
 #backpack #items-wrapper,
@@ -14134,12 +14141,13 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 	width: 399px;
 	float: left;
 	margin: 0 15px 15px 0;
-	height: 546px;
+	/* height: 546px; */
+    height: 100%;
 	text-align: center;
 	overflow: hidden;
     padding: unset;}
 #wrapper #content #trading_panel .trade_table {
-    height: 537px;
+    /* height: 537px; */
     position: relative;
     display: flex;
     flex-flow: column;
