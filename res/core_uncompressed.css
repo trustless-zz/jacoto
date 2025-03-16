@@ -11740,20 +11740,40 @@ h3 a[href^="user.php?action=notify_delete&"] {
 
 #shop li.item_li.owned:after {
     content: '✔';
-    font-size: 13px;
-    line-height: 14px;
+    font-size: 12px;
+    line-height: 15px;
     top: 7px;
     right: 5px;
     position: absolute;
     text-align: center;
-    width: 14px;
-    height: 14px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    color: var(--c-text-s);
-    border: 2px solid var(--c-text-s);}
+    /* color: var(--c-text-s); */
+    /* border: 2px solid var(--c-text-s); */
+    border: 2px solid var(--c-green);
+    background: var(--c-box);
+    color: var(--c-green);
+
+
+}
 #shop li.item_li.owned:hover:after {
-    color: var(--c-low);
-    border-color: var(--c-low);}
+    /* background: var(--c-high);
+    color: var(--c-green);
+    border-color: var(--c-low); */
+
+    /* color: var(--c-high);
+    background: var(--c-green);
+    border-color: var(--c-low); */
+
+    /* background: var(--c-high);
+    color: var(--c-green);
+    border-color: var(--c-green); */
+
+    background: var(--c-green);
+    color: var(--c-high);
+/* border-color: var(--c-high); */
+}
 
 #shop li.featured {
     border-color: var(--c-input-brdr);
