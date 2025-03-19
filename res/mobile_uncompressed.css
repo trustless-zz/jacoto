@@ -3480,9 +3480,9 @@ a[title="Remove"]:before {
         content: none;}
     #calendar .change_month_links #last_month {
         margin-right: 22px;}    
-    .ui-dialog {
+    /* .ui-dialog {
         max-width: calc(100% - 30px);
-        left: 15px !important;}    
+        left: 15px !important;}     */
     .ui-widget td.label.small_label {
         background-color: unset;
         display: revert;

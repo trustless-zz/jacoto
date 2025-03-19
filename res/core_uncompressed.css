@@ -1098,7 +1098,8 @@ td.read_locked_sticky:before {
     top: 7px;
     left: 5px;
     mask: var(--s-featured) no-repeat center / contain;
-    background: var(--c-text-s);}
+    background: var(--c-text-s);
+    pointer-events: none;}
 
 .torrent_table .show_torrents_link:after {
     top: calc(50% - 10px);
@@ -7491,9 +7492,10 @@ input[name="year"],
 #upload input#tags,
 .thin >#request_form input#tags {
     width: calc(100% - 171px);}
+/* .ui-dialog-titlebar-buttonpane >a,
 .thin >#request_form select#genre_tags,
 #upload select#genre_tags {
-    margin-right: 5px;}
+    margin-right: 5px;} */
 
 #upload #content >div[style="margin:0px auto;width:700px"] {
     position: relative;
@@ -9236,12 +9238,23 @@ form#tag_add_form >input,
     background-color: var(--c-box);
     border: 1px solid var(--c-main-brdr);}
 .ui-dialog {
-    max-width: calc(100% - 106px);
+    /* max-width: calc(100% - 106px); */
     border: 1px solid var(--c-main-brdr);
     padding: 0px;
     /* -webkit-box-shadow: var(--p-main-shdw); */
     box-shadow: var(--p-main-shdw);
 	font-family: OpenSans, Sans-Serif;}
+.ui-dialog[style*="position: fixed"] {
+    box-sizing: border-box;
+    /* width: 100vw !important;
+    height: 100vh !important; */
+}
+#dialog-extend-fixed-container .ui-dialog[style*="width: 200px"] {
+    width: 215px !important}
+/* .ui-dialog.ui-resizable {
+    resize: both;
+    min-width: 10vw;
+    min-height: 10vh;} */
 .ui-dialog .ui-dialog-titlebar {
     padding: 9px 10px;}
 .ui-widget-header {
@@ -9529,6 +9542,10 @@ form#drag_drop_collage_form .drag_drop_save,
 input[class="date_picker"] {
     width: 85px;}
 /* #torrents .center.thin >.box.pad form input[name="image"], */
+.ui-dialog-titlebar-buttonpane >a,
+.thin >#request_form select#genre_tags,
+#upload select#genre_tags,
+
 #upload input#steamid,
 #forums .forums_search .search_form input[class="date_picker"] {
     margin-right: 5px;}
@@ -11754,6 +11771,7 @@ h3 a[href^="user.php?action=notify_delete&"] {
     border: 2px solid var(--c-green);
     background: var(--c-box);
     color: var(--c-green);
+    pointer-events: none;
 
 
 }
@@ -12018,12 +12036,14 @@ li.item_li /*#clickable */.item_description img {
 	color: var(--c-anchor);}
 
 .ui-widget-header >.ui-dialog-title {
-    overflow: visible;
+    overflow: visible !important;
     display: block;
     font-size: var(--p-head);
     line-height: var(--p-head);
     margin: 0;
     float: unset;}
+#dialog-extend-fixed-container .ui-dialog[style*="width: 200px"] .ui-dialog-title {
+    overflow: hidden !important;}
 /* .ui-dialog .ui-dialog-content {
     padding: 10px;} */
 
@@ -15633,14 +15653,14 @@ div#fight_skill_points_assign >table {
 ::-moz-selection {
     text-shadow: none;
     color: var(--c-high-t);
-    background-color: var(--c-selection);}
+    background-color: var(--c-selection) !important;} /* (extended to firefox though I haven't tested it myself) for some reason it doesn't get applied to .ui-dialog.ui-widget's titlebar/header (i.e. inventory item) when the widget window is maximized, !important fixes that */
 img::-moz-selection {
     color: var(--c-high-t);
     background-color: var(--c-selection-i);}
 ::selection {
     text-shadow: none;
     color: var(--c-high-t);
-    background-color: var(--c-selection);}
+    background-color: var(--c-selection) !important;} /* for some reason it doesn't get applied to .ui-dialog.ui-widget's titlebar/header (i.e. inventory item) when the widget window is maximized, !important fixes that */
 img::selection {
     color: var(--c-high-t);
     background-color: var(--c-selection-i);}

@@ -560,6 +560,11 @@ table#requests_list         tr:hover .tags a {
     background-color: var(--c-anchor-hvr-bcg-obj);}
     
 
+
+.ui-dialog.ui-resizable {
+    resize: both;
+    min-width: 10vw;
+    min-height: 10vh;}
 /*
 #nav_logout {
     order: -3;}
