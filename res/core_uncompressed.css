@@ -1366,7 +1366,7 @@ td.unread_locked_sticky:before {
     background: var(--c-anchor);
     display: inline-block;}
 
-#index #freeleech .group_torrent >span:first-child a,               /* new? #torrent_table a[href^="torrents.php?action=download&id="] */
+#freeleech a[href^="torrents.php?action=download&id="],
 #better .thin >table a[href^="torrents.php?action=download&id="],
 a[title="Download"],
 #bookmarks tr.group_torrent a.tooltip[href^="torrents.php?action=download&id="] {
@@ -1506,7 +1506,7 @@ h3 a[href^="user.php?action=notify_delete&"] {
 a[title="Download"]:hover,
 #better .thin >table a[href^="torrents.php?action=download&id="]:hover,
 table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]:hover,
-#index #freeleech .group_torrent >span:first-child a:hover,
+#freeleech a[href^="torrents.php?action=download&id="]:hover,
 #stats_seeding:hover a:before,
 #stats_share_score:hover a:before,
 #requests table.border a[href^="upload.php"]:hover,
@@ -1574,7 +1574,7 @@ img[title="Seeders"],
 img[title="Snatches"],
 #bookmarks img[alt="Snatches"],
 .torrent_table #user_rating_icon img,
-#index #freeleech .group_torrent >span:first-child a,
+#freeleech a[href^="torrents.php?action=download&id="],
 /* #stats_ratio a, */
 #stats_leeching a,
 #stats_seeding a,
@@ -2474,7 +2474,7 @@ a[onclick="BBCode.spoiler(this);"],
 #quickreplypreview .colhead_dark #barpreview >a,
 .forum_post .colhead_dark div[style="float: right;"] >a,
 #newthreadpreview .forum_post .colhead_dark #barpreview a,
-#index #freeleech .group_torrent >span:first-child a,
+#freeleech a[href^="torrents.php?action=download&id="],
 
 .sidebar .box.box_contributors a:not(.username),  /* collage contributors donor icon */
 
@@ -2528,8 +2528,7 @@ h2 .username_badges a {
     float: right;
     height: 100%;
     width: 300px;}
-/* #grouplinks:not(:has(td)) {
-    display: none;} */
+
 #forums .thin table,
 #upload .thin form >table,
 #upload .thin form div >table,
@@ -5985,8 +5984,6 @@ strong.mature +strong +br,
 #index .box.news_post >.head:nth-child(3),
 #index .box.news_post >.head:nth-child(3) +.pad,
 /** /Get More News - duplicate news bug fix **/
-
-#grouplinks:not(:has(td)),
 
 .twitter_post h4,
 .twitter_post >br,
@@ -10902,7 +10899,8 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     content: '–';
     /* content: '-'; */
 }
-
+#grouplinks:not(:has(td)),
+.torrent_details .group_torrent:has(.personal_freeleech_label) a[title="Use a FL Token"], /* removing FL token link from low seed freeleech */
 #tools #content >br:has(+br),
 #tools #content >div:has(>div >#item_stats_table) >br:first-child {
     display: none;}
