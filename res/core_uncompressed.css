@@ -13627,7 +13627,7 @@ table.adventure_table h3 {
 code.hljs {
     font-size: 14px;
     line-height: var(--p-lh);
-    padding: 8px;
+    padding: 12px;
     color: var(--c-hljs-txt);
     background: var(--c-hljs-bcg);}
 pre >code.hljs {
