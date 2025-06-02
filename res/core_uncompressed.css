@@ -1413,8 +1413,9 @@ a[title="Trumpable"] {
     background: var(--c-anchor);}
 
 #deletereview a,
-#users_reviews .delete_review a.remove_review,
-#friends .colhead_dark .remove_friend,
+a[title="Delete"],
+a.remove_review,
+a.remove_friend,
 a[onclick^="deleteTag("],
 .box_coltags a[href^="collections.php?action=delete_tag"],
 .box_info.pad a[title="Delete Alias"],
@@ -1537,20 +1538,21 @@ h3 a[href^="user.php?action=notify_delete&"]:hover,
 .inventory .trash_icon:hover,
 a[title="Remove"]:hover,
 .box_info.pad a[title="Delete Alias"]:hover,
-#friends .colhead_dark .remove_friend:hover,
+a.remove_friend:hover,
 .colhead_dark a[onclick^="Quote"]:hover,
 .head a[onclick^="Quote"]:hover,
 #userhistory .colhead_dark span[style="float:left;"] >span[style="color: red;"] +a:hover img[alt="Last read post"],
 #wrapper .last_read:hover,
 #userhistory .colhead_dark a:hover img[alt="Last read post"],
 td a:hover img[alt="Ratio"],
-#users_reviews .delete_review a.remove_review:hover,
+a.remove_review:hover,
 #stats_ratio >a:hover:before,
 #deletereview a:hover,
  /* {
     background-color: var(--c-anchor-hvr);} */
-.box_coltags a[href^="collections.php?action=delete_tag"]:hover,
-.box_coltags a[href^="user.php?id"]:hover,
+#wrapper a[title="Delete"]:hover,
+#wrapper .box_coltags a[href^="collections.php?action=delete_tag"]:hover,
+#wrapper .box_coltags a[href^="user.php?id"]:hover,
 #wrapper a[onclick^="deleteTag("]:hover {
     background: var(--c-anchor-hvr);}
 
@@ -1564,6 +1566,7 @@ td a:hover img[alt="Ratio"],
 #userinfo_username .sub[style="visibility: visible;"] ~#nav_userinfo a:after {
     background: var(--c-low);}
 
+a[title="Delete"],
 #bookmarks tr.group_torrent a.tooltip,
 img[title="Downloaded"],
 img[title="Uploaded"],
@@ -1595,8 +1598,8 @@ a[title="Remove"],
 .box_coltags a[href^="collections.php?action=delete_tag"],
 .box_coltags a[href^="user.php?id"],
 a[onclick^="deleteTag("],
-#friends .colhead_dark .remove_friend,
-#users_reviews .delete_review a.remove_review,
+a.remove_friend,
+a.remove_review,
 #deletereview a,
 #quickreplypreview .colhead_dark #barpreview >a:nth-child(1),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(1),
@@ -2074,6 +2077,8 @@ ul {
 .sidebar ul {
     list-style:none;}
 
+a[title="Delete"],
+#header #stats_ratio,
 #collections .sidebar .box.box_comment a[href^="reports.php?action=report"],
 #forums .thin>.box.thin.clear .head.colhead_dark a,
 /*#groupplatform,*/
@@ -2105,7 +2110,7 @@ ul {
 .thin.torrent_history>form#torrent_history_search~table tr:not(.colhead) td:nth-child(2),
 .torrent_table .addbookmark,
 .torrent_table .removebookmark {
-    font-size:0;}
+    font-size: 0;}
 
 .bold {
     font-weight: bold;}
@@ -2492,6 +2497,8 @@ a[onclick="BBCode.spoiler(this);"],
 table#uploadsrow a,
 table#snatchesrow a,
 table#likesrow a,
+
+a[title="Delete"],
 
 td .username_badges a,
 h2 .username_badges a {
@@ -3268,7 +3275,7 @@ table#likesrow tr
 .calendar tbody,
 
 #changelog .sidebar .box.issues_labels li a,
-#users_reviews .delete_review a.remove_review,
+a.remove_review,
 #deletereview a,
 /* #grouplinks, */
 #nav_logout,
@@ -4102,8 +4109,6 @@ table.bbcode_table td,
     background: linear-gradient(-65deg, var(--c-lb2) 20%, var(--c-lb1) 65%);
     pointer-events: none;}
 
-#header #stats_ratio {
-    font-size: 0;}
 #stats_ratio >a {
     display: inline-block;
     width: auto;
@@ -5352,8 +5357,6 @@ form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 /*span.username_badges {
     display: inline-block;
     vertical-align: text-bottom;}*/
-.username_badges >a {
-    vertical-align: text-bottom;}
 #friends a[onclick^="edit"],
 #better .thin >table a[href^="torrents.php?action=download&id="] {
     display: inline-block;
@@ -8520,6 +8523,8 @@ input[type="radio"]:active {
     filter: none;
     vertical-align: text-bottom;
     margin-top: -1px; /* bring line-height back to 19px */}
+a[title="Delete"],
+.username_badges >a,
 .item_li #item_type img,
 .torrent_details tr.pad img[title="Gold"],
 #clans td.label img {
@@ -9675,7 +9680,7 @@ table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"]
     width: calc(100% - 291px);}
 /* #user .thin >h2 ~form[method="post"] input#releasetype_3, */
 #user .thin >h2 ~form[method="post"] input[name="releasetype"] {
-    width: calc(100% - 183px);}
+    width: calc(100% - 215px);}
 /* #user .thin >h2 ~form[method="post"] input#tags_3, */
 #user .thin >h2 ~form[method="post"] input[id^="tags_"] {
     width: calc(100% - 230px);}
@@ -12651,6 +12656,7 @@ li.item_li /*#clickable */.item_description img {
 	font-size:1em;
 	height: 45px;}
 /*h2 span.secondary_class,*/
+#content >span[style="float:right;"]:first-child >a[title="Delete"],
 #tm_time input[type="text"] {
 	vertical-align: middle;}
 h2 span.secondary_class {
@@ -15311,7 +15317,7 @@ div#fight_skill_points_assign >table {
 	float: left;
 	/*padding-right: 10px;*/}
 
-/*#users_reviews .delete_review a.remove_review {
+/*a.remove_review {
 	display: inline-block;
     height: 20px;
 	width: 20px;
