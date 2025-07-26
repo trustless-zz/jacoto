@@ -5058,6 +5058,15 @@ select:active {
 #wrapper input[type="text"][required] {
     padding: 0 4px 0 6px;
     box-shadow: inset 2px 0 0 0 var(--c-unread-s), var(--p-input-shdw);}
+#wrapper input[type="text"][required]:active {
+    transition: box-shadow 0s;
+    box-shadow: inset 0 0 3px var(--c-b1), inset 2px 0 0 0 var(--c-unread-s), var(--p-input-shdw);}
+#wrapper input[type="text"].error {
+    padding: 0 4px 0 6px;
+    box-shadow: inset 2px 0 0 0 var(--c-em-hvr), var(--p-input-shdw);}
+#wrapper input[type="text"].error:active {
+    transition: box-shadow 0s;
+    box-shadow: inset 0 0 3px var(--c-b1), inset 2px 0 0 0 var(--c-em-hvr), var(--p-input-shdw);}
 
 .select2-container .select2-selection--single,
 select {

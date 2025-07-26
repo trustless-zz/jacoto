@@ -40,8 +40,11 @@ table#requests_list         tr:hover .tags a {
     color: var(--c-anchor-hvr);}
 
 input#gamedoxvers {
-    min-width: 300px;
-    margin-right: 10px;}
+    width: 100%;
+    max-width: 56ch;
+    margin-right: 5px;}
+input#versionunknown {
+    margin-left: 8px;}
 
 .rating_container {
     margin-top: auto;}
