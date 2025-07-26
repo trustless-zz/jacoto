@@ -1359,6 +1359,7 @@
     #collections #wrapper table#new_collage select,
     #collections #wrapper .center td input[type="text"],
     #collections #wrapper .center td select,
+    #wrapper .filter_torrents #gamedoxvers,
     #wrapper .filter_torrents select,
     #wrapper .filter_torrents.basic input#torrentsbrowsesearch,
     #wrapper .filter_torrents input.inputtext.smaller,

@@ -39,6 +39,10 @@ table#requests_list         tr:hover .tags a {
     background-color: var(--c-anchor-hvr-bcg);
     color: var(--c-anchor-hvr);}
 
+input#gamedoxvers {
+    min-width: 300px;
+    margin-right: 10px;}
+
 .rating_container {
     margin-top: auto;}
 

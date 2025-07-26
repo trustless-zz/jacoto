@@ -10285,6 +10285,7 @@ span.size5 img {
 .hovereffect:hover h2 {
     opacity: 1;
     visibility:visible}
+.unknown_vers,
 .hovereffect h2 div {
     font-size: 12px;
     line-height: var(--p-lh);}
