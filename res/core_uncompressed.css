@@ -8932,66 +8932,88 @@ form#tag_add_form >input,
 
 #tools #content >.header h2, /* OS and Browser Usage */
 #tools .thin >#recommended >form#torrent_form >h2,
-#torrents .center.thin >h2,
-#donate span.donation_info_title h3,
+#torrents .center.thin >h2, /* Edit Description page*/
+#donate .donation_info_title h3,
 #forums .forum_list h3 {
     position: relative;
     text-align: left;
-    width: calc(100% - 22px);
+    /* width: calc(100% - 22px); */
     font-weight: 600;
     background: var(--p-head-grdnt);
     font-size: var(--p-head) !important;
     line-height: var(--p-head);
     padding: 9px 10px;
-    top: 1px;
-    left: 0;
-    margin: 0 auto;}
+    /* top: 1px;
+    left: 0; */
+    margin: 0 auto;
+    z-index: 9;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid var(--c-main-brdr);
+    border-bottom: none;}
 
 #tools #content >.header +table,
 #tools .thin >#recommended >form#torrent_form >h2 +table,
-#donate .box.pad.donation_info,
+/* #donate .box.pad.donation_info, */
 #forums .thin .forum_list .forum_index {
     background: none;
     border: none;
     /* -webkit-box-shadow: none; */
     box-shadow: none;
     position: relative;
-    width: calc(100% - 2px);
-    top: 1px;
-    left: 0;
-    margin: 0 auto 17px auto;}
+    border: 1px solid var(--c-main-brdr);
+    border-top: none;
+    /* width: calc(100% - 2px); */
+    width: 100%;
+    /* top: 1px;
+    left: 0; */
+    margin: 0 auto 15px auto;}
+#donate .donation_info_title +.box.pad.donation_info {
+    background: var(--c-box);
+    /* position: relative; */
+    border: 1px solid var(--c-main-brdr);
+    width: 100%;
+    margin: 0 auto 15px auto;
+    /* padding-top: 46px;
+    margin-top: -36.66px; */
+    box-shadow: var(--p-main-shdw);}
+/* #donate .donation_info_title {
+    z-index: 9;
+    position: relative;} */
 
 #tools #content >.header +table:before,
 #tools .thin >#recommended >form#torrent_form >h2 +table:before,
-#donate .box.pad.donation_info:before,
+/* #donate .box.pad.donation_info:before, */
 #forums .forum_list .forum_index:before {
     /* -webkit-box-sizing: border-box; */
     box-sizing: border-box;
     content: '';
     position: absolute;
-    left: -1px;
-    bottom: -1px;
-    width: calc(100% + 2px);
-    height: calc(100% + 38px);
+    /* left: -1px;
+    bottom: -1px; */
+    left: 0;
+    bottom: 0;
+    width: calc(100% + .66px); /* parent border makes child width shorter, so extra width is needed.     .66px instead of 1px because, with 1px at different DPI settings, rounding errors will affect the appearance. */
+    height: calc(100% + 36.66px);
     background-color: var(--c-box);
     /* -webkit-box-shadow: var(--p-main-shdw); */
     box-shadow: var(--p-main-shdw);
-    border: 1px solid var(--c-main-brdr);
+    /* border: 1px solid var(--c-main-brdr); */
     z-index: -1;}
-#donate #wrapper .box.pad.donation_info:before {
-    /* -webkit-box-sizing: unset; */
+/* #donate #wrapper .box.pad.donation_info:before {
     box-sizing: unset;}
 
 #donate #wrapper .box.pad.donation_info:before {
-    height: calc(100% + 36px);
-    width: 100%;}
+    width: calc(100% + 1.66px);} */
 
-#torrents .center.thin >h2 {
-    z-index: 9;}
-#torrents .center.thin >.box.pad {
+/* #torrents .center.thin >h2 {
+    z-index: 9;} */
+#donate .donation_info_title +.box.pad.donation_info,
+#torrents .center.thin >h2 +.box.pad {
     padding-top: 46px;
     position: relative;
-    top: -36px;}
+    /* border-top: none; */
+    margin-top: -36.66px;}
 
 /** /horrible acrobatics because of lack of containers **/
 
