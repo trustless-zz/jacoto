@@ -5087,7 +5087,7 @@ select {
     color: var(--c-txt);}
 .select2-container .select2-selection--single {
     outline: 0;}
-#wrapper .box_tags .stats.nobullet div a:nth-child(1):before,
+#wrapper #tags_box a[onclick*="'down'"]:before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(2):before,
 .select2-container--default .select2-selection--single .select2-selection__rendered {
     line-height: 22px;}
@@ -5377,9 +5377,9 @@ form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"] {
     display: inline-block;
     vertical-align: bottom;}
-.box_tags .stats.nobullet div a:nth-child(1) {
+#tags_box a[onclick*="'down'"] {
     margin-right: 3px;}
-.box_tags .stats.nobullet div a:nth-child(2) {
+#tags_box a[onclick*="'up'"] {
     margin-left: 4px;}
 /* .box_tags .stats.nobullet div a:nth-child(3), */
 a[onclick^="deleteTag("] {
@@ -5421,7 +5421,7 @@ a[href^="javascript:Vote("]:before,
 .box.box_coltags .head span[title="Add Tags"] a:before {
     font-size: 18px;
     line-height: 14px;}
-/* .box_tags .stats.nobullet div a:nth-child(2):before {
+/* #tags_box a[onclick*="'up'"]:before {
     padding-right: 1px;} */
 #collections .sidebar .box_addtorrent input[value="+"],
 /* #torrents #requests.request_table #requests_list .requestrows a.brackets, */
@@ -6105,12 +6105,12 @@ strong.mature +strong +br,
 a[href^="javascript:IndexVote("]:before,
 a[href^="javascript:Vote("]:before,
 /* #requests table.border td.nobr:nth-child(2) a:before, */
-.box_tags .stats.nobullet div a:nth-child(2):before,
+#tags_box a[onclick*="'up'"]:before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(1):before,
 .box.box_coltags .head span[title="Add Tags"] a:before {
     content: '+';}
 #image_block >a[onclick]:nth-of-type(2):before,
-#wrapper .box_tags .stats.nobullet div a:nth-child(1):before,
+#wrapper #tags_box a[onclick*="'down'"]:before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(2):before {
     /* line-height: 22px; */
     content: '–';
