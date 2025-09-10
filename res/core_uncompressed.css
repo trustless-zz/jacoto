@@ -15706,14 +15706,14 @@ div#fight_skill_points_assign >table {
     background-color: var(--c-selection) !important;} /* (extended to firefox though I haven't tested it myself) for some reason it doesn't get applied to .ui-dialog.ui-widget's titlebar/header (i.e. inventory item) when the widget window is maximized, !important fixes that */
 img::-moz-selection {
     color: var(--c-high-t);
-    background-color: var(--c-selection-i);}
+    background-color: var(--c-selection-i) !important;}
 ::selection {
     text-shadow: none;
     color: var(--c-high-t);
     background-color: var(--c-selection) !important;} /* for some reason it doesn't get applied to .ui-dialog.ui-widget's titlebar/header (i.e. inventory item) when the widget window is maximized, !important fixes that */
 img::selection {
     color: var(--c-high-t);
-    background-color: var(--c-selection-i);}
+    background-color: var(--c-selection-i) !important;}
 
 
 /** webkit scrollbar **/
