@@ -76,13 +76,13 @@ input#versionunknown {
     padding: 5px 10px;
     /*color: var(--c-txt);
     text-shadow: 1px 1px 1px var(--c-body);*/
-    -webkit-box-shadow: var(--p-header-shdw);
+    /* -webkit-box-shadow: var(--p-header-shdw); */
     box-shadow: var(--p-header-shdw);
     border: 1px solid var(--c-main-brdr);
     background-size: 200% auto !important;
     display: inline-block;}
 .filter_torrents.advanced #platcheckbox .flright:hover:before {
-    -webkit-box-shadow: none;
+    /* -webkit-box-shadow: none; */
     box-shadow: none;
     color: var(--c-low);
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
@@ -93,9 +93,11 @@ input#versionunknown {
     flex-direction: column;}
 
 .box_coltags .pad li a:not([href^="torrents.php?taglist="]),
+.group_tag >span a,
 #tags_box div a {
     opacity: .5;}
 .box_coltags .pad li:hover a:not([href^="torrents.php?taglist="]),
+.group_tag:hover >span a,
 #tags_box li:hover div a {
     opacity: 1;}
     
@@ -397,6 +399,7 @@ input#versionunknown {
     margin: 0 auto;
     padding: 2px 0;
     display: flex;}
+.tag_autocomplete >.tag_autocomplete_items div,
 #header #searchbars ul li {
     width: 100%;
     padding: 0 7px;}
@@ -639,10 +642,13 @@ input#versionunknown {
     box-shadow: inset 0 -2px 0px 0px var(--c-em-hvr);}
 #header li[id="notilia nav_notifications"].active strong:before {
     content: none;}*/
+.tag_autocomplete >.tag_autocomplete_items div,
 #header #searchbars .autocomplete_list .highlight {
     color: var(--c-anchor);
-    -webkit-box-shadow: unset;
+    /* -webkit-box-shadow: unset; */
     box-shadow: unset;}
+.tag_autocomplete >.tag_autocomplete_items .tag_autocomplete_active:hover,
+.tag_autocomplete >.tag_autocomplete_items div:hover,
 #header #searchbars .autocomplete_list .highlight:hover,
 #header .highlight:hover,
 /* #header li[id="notilia nav_notifications"]:hover strong, */
@@ -667,7 +673,7 @@ input#versionunknown {
     height: 100%;
     border: 1px solid var(--c-table-brdr);
     border-right: 0;
-    -webkit-box-shadow: var(--p-header-shdw);
+    /* -webkit-box-shadow: var(--p-header-shdw); */
     box-shadow: var(--p-header-shdw);
     left: -1px;
     top: -1px;
@@ -704,7 +710,7 @@ input#versionunknown {
     position: absolute;}
     
 #userinfo_stats li {
-    -webkit-box-sizing: border-box;
+    /* -webkit-box-sizing: border-box; */
     box-sizing: border-box;
     font-size: 15px;
     line-height: 20px;
@@ -924,13 +930,13 @@ input#versionunknown {
         bottom: unset;
         max-height: 500px;}
     #users_medals .flextable-cell.medal_cell:hover {
-        -webkit-box-shadow: none;
+        /* -webkit-box-shadow: none; */
         box-shadow: none;}
     #users_medals .medal_cell:hover .medal_info {
         z-index: 9;
         height: auto;
         overflow-y: auto !important;
-        -webkit-box-shadow: var(--p-header-shdw);
+        /* -webkit-box-shadow: var(--p-header-shdw); */
         box-shadow: var(--p-header-shdw);}
     /*** /Medals ***/
 

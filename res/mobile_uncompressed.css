@@ -495,10 +495,13 @@
         left: 54px;
         top: 42px;
         padding: 0 !important;}
+    #wrapper .tag_autocomplete >.tag_autocomplete_items div,
     #header #searchbars .autocomplete_list li {
         padding-left: 5px;
         font-size: 16px;
         line-height: 32px;}
+    .tag_autocomplete >.tag_autocomplete_items {
+        scrollbar-width: thin;}
     
     
     ul#userinfo_minor li {
@@ -516,7 +519,19 @@
     #userinfo_stats:hover {
         width: 200px;}
 */
-    
+
+#wrapper .sidebar .userratingdiv tr:not(#reviewrow) {
+    flex-flow: row wrap;
+    justify-content: center;}
+#wrapper .box_user_rating .userratingdiv {
+    height: calc(100% - 36px);
+    display: flex;
+    flex-flow: column;}
+#wrapper a#show_recommend_to_friend {
+    margin: auto auto 0 auto;}
+#wrapper .box_recommend_to_friend.shown {
+    margin-top: auto;}
+
     #userinfo_stats .my_buffer,
     ul#userinfo_stats li {
         border: 1px solid var(--c-table-brdr);
@@ -1014,6 +1029,8 @@
     #torrents #requests_list tr:first-child {
         display: none;}
     
+    .freeleech_pot_contribute.shown:after,
+    #wrapper .box_freeleech:after,
     #requests #wrapper .sticky>td:first-child:after {
         content: none;}
     
@@ -1344,6 +1361,9 @@
     /*td.label ~td:last-child {
         padding-bottom: 5px !important;
         margin-bottom: 5px !important;} */
+    #wrapper .group_tag,
+    .tag_type_header:nth-child(n+2),
+    
     #requests table#requests_list .tags,
     tr:not(:first-child) >td.label {
         margin-top: 5px;}

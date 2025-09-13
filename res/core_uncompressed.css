@@ -1417,6 +1417,7 @@ a[title="Delete"],
 a.remove_review,
 a.remove_friend,
 a[onclick^="deleteTag("],
+a[onclick^="tagDelete("],
 .box_coltags a[href^="collections.php?action=delete_tag"],
 .box_info.pad a[title="Delete Alias"],
 a[title="Remove"],
@@ -1425,6 +1426,7 @@ h3 a[href^="user.php?action=notify_delete&"] {
     mask: var(--s-tor-rm) no-repeat center / contain;
     background: var(--c-anchor);}
 
+.group_tag a[href^="user.php?id"],
 .box_coltags a[href^="user.php?id"] {
     mask: var(--s-user) no-repeat center / contain;
     background: var(--c-anchor);}
@@ -1552,7 +1554,9 @@ a.remove_review:hover,
     background-color: var(--c-anchor-hvr);} */
 #wrapper a[title="Delete"]:hover,
 #wrapper .box_coltags a[href^="collections.php?action=delete_tag"]:hover,
+#wrapper .group_tag a[href^="user.php?id"]:hover,
 #wrapper .box_coltags a[href^="user.php?id"]:hover,
+#wrapper a[onclick^="tagDelete("]:hover,
 #wrapper a[onclick^="deleteTag("]:hover {
     background: var(--c-anchor-hvr);}
 
@@ -1596,8 +1600,10 @@ a[onclick^="edit"],
 a[title="Remove"],
 .box_info.pad a[title="Delete Alias"],
 .box_coltags a[href^="collections.php?action=delete_tag"],
+.group_tag a[href^="user.php?id"],
 .box_coltags a[href^="user.php?id"],
 a[onclick^="deleteTag("],
+a[onclick^="tagDelete("],
 a.remove_friend,
 a.remove_review,
 #deletereview a,
@@ -1782,6 +1788,8 @@ td.center.cats_col+td,
 #grouplinks #linkedgroup,
 
 #adventureclub .linkbox:first-child +div +div,
+
+#group_tags,
 
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
@@ -2021,6 +2029,8 @@ form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 
 #user .thin >.header:first-child +.box.pad +.box.pad table.border input[type="text"],
 
+input[name="add_tags_input"],
+
 #torrents #content >script ~form #torrent_link input[name="internallink"],
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad input[type="text"] {
     width: 100%;}
@@ -2114,6 +2124,10 @@ a[title="Delete"],
 .torrent_table .removebookmark {
     font-size: 0;}
 
+#torrents .torrent_notifications .noticon +td >strong +strong,
+.tag_type_header,
+#bookmarks .linkbox.pager,
+b, strong,
 .bold {
     font-weight: bold;}
 .release_title_suffix,
@@ -2122,9 +2136,6 @@ a[title="Delete"],
 
 p {
     margin: 10px 0;}
-#bookmarks .linkbox.pager,
-b, strong {
-    font-weight: bold;}
 ul, ol {
     margin-bottom: 0px;}
 .sidebar .box_series ul,
@@ -2316,6 +2327,7 @@ tr.unreadpm td:first-child:after {
     position: relative;
     width: 100%;}
 
+.tag_autocomplete >.tag_autocomplete_items,
 .autocomplete_list {
     background: var(--c-box);
     border: 1px solid var(--c-main-brdr);
@@ -2325,10 +2337,18 @@ tr.unreadpm td:first-child:after {
     text-align: left;
     top: 40px;
     z-index: -1;}
+#wrapper .tag_autocomplete >.tag_autocomplete_items {
+    overflow-y: auto;
+    max-height: 220px;
+    width: calc(100% - 55px);
+    top: calc(100% + 7px);
+    left: 0;
+    z-index: 9999;}
 #header #searchbars .autocomplete_list {
     padding: 0;
     width: 316px;
     z-index: 999;}
+.tag_autocomplete >.tag_autocomplete_items div,
 .autocomplete_list li {
     cursor: pointer;
     color: var(--c-anchor);
@@ -2336,9 +2356,12 @@ tr.unreadpm td:first-child:after {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;}
+.tag_autocomplete >.tag_autocomplete_items div:nth-child(odd),
 #torrents #torrentsbrowsecomplete li:nth-child(odd),
 .autocomplete_list li:nth-child(odd) {
     background-color: var(--c-tgroup);}
+.tag_autocomplete >.tag_autocomplete_items .tag_autocomplete_active,
+.tag_autocomplete >.tag_autocomplete_items div:hover,
 #torrents #torrentsbrowsecomplete li.highlight,
 #torrents #torrentsbrowsecomplete li:hover,
 .autocomplete_list li.highlight,
@@ -2375,7 +2398,7 @@ tr.unreadpm td:first-child:after {
 
 
 
-#index #freeleech .group_torrent >span:not(:first-child) {
+#index #freeleech .group_torrent >span:nth-child(n+2) {
     padding: 0 2px;}
 
 #collections .sidebar .box.box_comment .head,
@@ -2705,6 +2728,7 @@ div#fight_skill_points_assign >table,
     margin: 0 0 10px 0;}
 .sidebar ul {
     margin: 10px 0;}
+#wrapper #sidebar_group_info:before,
 #user .box.box_gold #box_gold_scrollbar +ul.stats.nobullet,
 .sidebar >div >div:last-child >ul:last-child,
 .sidebar >div >ul:last-child {
@@ -2764,6 +2788,9 @@ div#fight_skill_points_assign >table,
 #better #content >h2 +p,
 #collections .thin >h2:first-child +form:last-child /* edit description page */ {
     padding: 10px;}
+.box .theme_collections,
+#collections .sidebar .pad,
+#wiki .sidebar >.box >.pad,
 .sidebar .body {
     padding: 10px 0 0 0;}
 .sidebar #freeleech li.group_torrent {
@@ -3027,6 +3054,7 @@ input[type=submit],
 #shop .item_description,
 fancybox-button,
 /* .box.box_coltags .pad li a:nth-child(n+2), */
+a#add_tags_link,
 .box.box_coltags .head span[title="Add Tags"] a,
 #collections .sidebar .box_addtorrent .subhead a,
 /*#reviewrow a*/#expand_review,
@@ -3113,13 +3141,15 @@ th[aria-disabled="false"],
 #header .newnoti,
 
 .torrent_table .ignored td.center:first-child:after,
-.torrent_table .ignored >td:not(:first-child):not(:nth-child(11)),
+.torrent_table .ignored >td:nth-child(n+2):not(:nth-child(11)),
 .torrent_table .ignored:after,
 
 #tags_box a#tags_add_toggle,
 .torrent_table tr.pad td >.linkbox >a,
 table#otherop.hidden ~table.otheroptoggle a,
 a#toggle_css_gallery,
+a#freeleech_pot_show,
+a#show_recommend_to_friend,
 a#getmorenews,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 a.toggle_tags,
@@ -3213,6 +3243,7 @@ body >div, /* more info window at #shop */
 img {
     border: 0;
     border-style: none;}
+.box_freeleech .body,
 form#tag_add_form p#tags_add_note,
 tr#reviewrow form#review_form >p,
 #running_freeleech tr.group_torrent td:nth-child(3),
@@ -3276,6 +3307,9 @@ table#likesrow tr
 #adventureclub form[name="realms_search"] table#realms_search,
 #wrapper .calendar,
 .calendar tbody,
+
+.box_recommend_to_friend.shown,
+.freeleech_pot_contribute.shown,
 
 #changelog .sidebar .box.issues_labels li a,
 a.remove_review,
@@ -3352,6 +3386,7 @@ input[type=submit]:active,
 /*#reviewrow a*/#expand_review:active,
 /*#reviewrow a*/#load_edit_review:active,
 #load_edit_review_dialog:active,
+a#add_tags_link:active,
 .box.box_coltags .head span[title="Add Tags"] a:active,
 #collections .sidebar .box_addtorrent .subhead a:active,
 .slides_control,
@@ -3368,6 +3403,8 @@ input[type="radio"]:active,
 .torrent_table tr.pad td >.linkbox >a:active,
 table#otherop.hidden ~table.otheroptoggle a:active,
 a#toggle_css_gallery:active,
+a#freeleech_pot_show:active,
+a#show_recommend_to_friend:active,
 a#getmorenews:active,
 #tags_box a#tags_add_toggle:active,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
@@ -4402,9 +4439,9 @@ table.adventure_table .colhead td {
 #collections #torrent_table .group_torrent >td:not(.edition_info),
 #bookmarks #torrent_table tr.group_torrent td:not(.edition_info) {
     padding: 4px 5px;}
-#artist #torrent_table .group_torrent >td:not(.edition_info):not(:first-child),
-#collections #torrent_table .group_torrent >td:not(.edition_info):not(:first-child),
-#bookmarks #torrent_table tr.group_torrent td:not(.edition_info):not(:first-child),
+#artist #torrent_table .group_torrent >td:not(.edition_info):nth-child(n+2),
+#collections #torrent_table .group_torrent >td:not(.edition_info):nth-child(n+2),
+#bookmarks #torrent_table tr.group_torrent td:not(.edition_info):nth-child(n+2),
 .torrent_details .torrent_table tbody[id*="edition_"] .group_torrent td,
 .torrent_table tr.group_torrent[class*="edition_"] >td {
     padding: 4px 5px;
@@ -4878,6 +4915,7 @@ table#requests_list         tr:hover .tags a {
     font-size: 13px;
     line-height: 1em;
     padding: 2px 3px;}
+.theme_collections div:nth-child(n+2),
 #changelog .labels a {
     margin-top: 4px;}
 #changelog .labels a,
@@ -5087,6 +5125,7 @@ select {
     color: var(--c-txt);}
 .select2-container .select2-selection--single {
     outline: 0;}
+#wrapper .group_tag a[onclick*="'down'"]:before,
 #wrapper #tags_box a[onclick*="'down'"]:before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(2):before,
 .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -5244,12 +5283,14 @@ input[type=submit],
 /* .box.box_info.pad a[title="Delete Alias"], */
 a[href^="javascript:IndexVote("],
 a[href^="javascript:Vote("],
+.tag_vote_button,
 /* #requests table.border td.nobr:nth-child(2) a, */
 /* #torrents #requests.request_table #requests_list .requestrows a.brackets, */
 #image_block a,
 .answers >a[onclick],
 #newthreadform #newthreadtext #answer_block a,
 /* .box.box_coltags .pad li a:nth-child(n+2), */
+a#add_tags_link,
 .box.box_coltags .head span[title="Add Tags"] a,
 #collections .sidebar .box_addtorrent .subhead a,
 #user #userform #platcheckbox +a,
@@ -5259,6 +5300,8 @@ a#tag_show\/hide,
 #adventure_search .flright a[onclick],
 a.toggle_tags,
 a#toggle_css_gallery,
+a#freeleech_pot_show,
+a#show_recommend_to_friend,
 #tags_box a#tags_add_toggle,
 a#getmorenews,
 #group_nofo_bigdiv a#group_quick_edit,
@@ -5339,6 +5382,8 @@ table#snatchesrow/* td*/,
 .box_image_coverart div[align="center"],
 .box_image_avatar div:last-child,*/
 /*.username_badges,*/
+.group_tag >span a,
+#wrapper a#add_tags_link,
 #wrapper .box.box_coltags .pad li a:not([href^="torrents.php?taglist="]),
 .username_badges >a,
 h2 a[href^="feeds.php?"],
@@ -5377,11 +5422,12 @@ form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"] {
     display: inline-block;
     vertical-align: bottom;}
-#tags_box a[onclick*="'down'"] {
+/* #tags_box a[onclick*="'down'"] {
     margin-right: 3px;}
 #tags_box a[onclick*="'up'"] {
-    margin-left: 4px;}
+    margin-left: 4px;} */
 /* .box_tags .stats.nobullet div a:nth-child(3), */
+a[onclick^="tagDelete("],
 a[onclick^="deleteTag("] {
     margin: auto auto auto 8px;}
 .box_tags .stats.nobullet div {
@@ -5414,6 +5460,7 @@ a[onclick^="deleteTag("] {
 #newthreadform #newthreadtext #answer_block a,
 a[href^="javascript:IndexVote("]:before,
 a[href^="javascript:Vote("]:before,
+.tag_vote_button:before,
 /* #requests table.border td.nobr:nth-child(2) a:before, */
 /* #torrents #requests.request_table #requests_list .requestrows a.brackets:before, */
 .box_tags .stats.nobullet div a:before,
@@ -5437,6 +5484,7 @@ input[type=submit]:hover,
 .similar_votes a:hover,
 a[href^="javascript:IndexVote("]:hover,
 a[href^="javascript:Vote("]:hover,
+.tag_vote_button:hover,
 #requests table.border td.nobr:nth-child(2) a:hover,
 /* #torrents #requests.request_table #requests_list .requestrows a.brackets:hover, */
 .box_tags .stats.nobullet div a:hover,
@@ -5460,6 +5508,7 @@ input[type=submit]:active,
 .similar_votes a:active,
 a[href^="javascript:IndexVote("]:active,
 a[href^="javascript:Vote("]:active,
+.tag_vote_button:active,
 /* #requests table.border td.nobr:nth-child(2) a:active, */
 /* #torrents #requests.request_table #requests_list .requestrows a.brackets:active, */
 .box_tags .stats.nobullet div a:active,
@@ -5491,6 +5540,8 @@ a#tag_show\/hide,
 .filter_torrents.advanced .flright,
 #wrapper #image_block >a[onclick],
 a#toggle_css_gallery,
+a#freeleech_pot_show,
+a#show_recommend_to_friend,
 a#getmorenews,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
 table#otherop.hidden ~table.otheroptoggle a,
@@ -5506,6 +5557,7 @@ table#otherop.hidden ~table.otheroptoggle a,
 #wrapper .answers >a[onclick],
 #tags_box a#tags_add_toggle,
 #wrapper .box.box_coltags .head span[title="Add Tags"] a,
+#wrapper a#add_tags_link,
 #collections #wrapper .sidebar .box_addtorrent .subhead a,
 #collections .sidebar .box_addtorrent .subhead a,
 #group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit,
@@ -5554,6 +5606,10 @@ a#tag_show\/hide:before,
     content: 'View';}
 a#getmorenews:before {
     content: 'Get More News';}
+a#freeleech_pot_show:before {
+    content: 'Contribute';}
+a#show_recommend_to_friend:before {
+    content: 'Recommend to a Friend';}
 a#toggle_css_gallery:before {
     content: 'Show gallery';}
 table#otherop.hidden ~table.otheroptoggle a:before {
@@ -5574,6 +5630,8 @@ table#otherop.hidden:not([style="display: table;"]) ~table.otheroptoggle a:befor
 .forum_latest .search #cat_list a[onclick]:after,
 #wrapper #content .torrent_table tr.pad td >.linkbox >a:before,
 table#otherop.hidden ~table.otheroptoggle a:before,
+a#show_recommend_to_friend:before,
+a#freeleech_pot_show:before,
 a#toggle_css_gallery:before,
 a#getmorenews:before,
 #group_nofo_bigdiv a#group_quick_edit:before,
@@ -5587,6 +5645,7 @@ a#tag_show\/hide:before,
     font-size: 14px;
     line-height: 1em;}
 #wrapper .box.box_coltags .head span[title="Add Tags"] a:hover,
+#wrapper a#add_tags_link:hover,
 #collections #wrapper .sidebar .box_addtorrent .subhead a:hover,
 body /*#reviewrow a*/#expand_review:hover,
 body /*#reviewrow a*/#load_edit_review:hover,
@@ -5606,7 +5665,9 @@ button.alertable-cancel:hover,
 .torrent_table tr.pad td >.linkbox >a:not([href*="?action="]):hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
 a.toggle_tags:hover,
+a#show_recommend_to_friend:hover,
 a#toggle_css_gallery:hover,
+a#freeleech_pot_show:hover,
 a#getmorenews:hover,
 #tags_box a#tags_add_toggle:hover,
 #group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit:hover,
@@ -5618,6 +5679,7 @@ a#tag_show\/hide:hover,
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
 #tags_box a#tags_add_toggle:active,
 #wrapper .box.box_coltags .head span[title="Add Tags"] a:active,
+#wrapper a#add_tags_link:active,
 #collections #wrapper .sidebar .box_addtorrent .subhead a:active,
 body /*#reviewrow a*/#expand_review:active,
 body /*#reviewrow a*/#load_edit_review:active,
@@ -5636,7 +5698,9 @@ button.alertable-cancel:active,
 #shop_search .flright a[onclick]:active,
 .torrent_table tr.pad td >.linkbox >a:not([href*="?action="]):active,
 table#otherop.hidden ~table.otheroptoggle a:active,
+a#show_recommend_to_friend:active,
 a#toggle_css_gallery:active,
+a#freeleech_pot_show:active,
 a#getmorenews:active,
 #group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit:active,
 #user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
@@ -5646,6 +5710,9 @@ a#tag_show\/hide:active,
 .filter_torrents.advanced .flright:active {
     background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
 /*#slides >ul.nobullet,*/
+.box_recommend_to_friend.shown,
+.tag_type_header:nth-child(n+2),
+.group_tag,
 form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 #user #content >span[style="float: right;"]:first-child /*sharescore*/{
     margin-top: 3px;}
@@ -6022,13 +6089,18 @@ strong.mature +strong +br,
 #user #itemsdiv div[style="text-align:center;"],
 #user #itemsdiv span[style="text-decoration: underline;"],
 #user #wrapper #itemsdiv p:empty,
-#user #itemsdiv p:not(:first-child),
+#user #itemsdiv p:nth-child(n+2),
 #achievements .spacer,
-#adventureclub #adventure_search table#monsters_search td.label:not(:first-child) br,
+#adventureclub #adventure_search table#monsters_search td.label:nth-child(n+2) br,
 #wrapper #content #trading_panel button#cancel_trade[style="visibility: hidden;"],
 #backpack #slots_header img,
 #users_reviews .users_review >h3,
 #users_reviews .review_date .label,
+
+.tag_autocomplete >.tag_autocomplete_items:empty,
+
+.box_recommend_to_friend,
+.freeleech_pot_contribute,
 
 .thin.torrent_history .linkbox + table[width="100%"] tr:not([class="colhead nobr"]) td:last-child:empty, /** hiding an empty column on the 'Hit 'n' Runs' page, but not on the 'Torrent History' page, since it's being used there **/
 
@@ -6105,17 +6177,23 @@ strong.mature +strong +br,
 a[href^="javascript:IndexVote("]:before,
 a[href^="javascript:Vote("]:before,
 /* #requests table.border td.nobr:nth-child(2) a:before, */
+.group_tag a[onclick*="'up'"]:before,
 #tags_box a[onclick*="'up'"]:before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(1):before,
 .box.box_coltags .head span[title="Add Tags"] a:before {
     content: '+';}
 #image_block >a[onclick]:nth-of-type(2):before,
+.group_tag a[onclick*="'down'"]:before,
 #wrapper #tags_box a[onclick*="'down'"]:before,
 li:not(.suggested_similar) .similar_votes >a:nth-child(2):before {
     /* line-height: 22px; */
     content: '–';
     /* content: '-'; */
 }
+a#add_tags_link:before {
+    font-size: 14px;
+    line-height: 14px;
+    content: 'Add';}
 /* .box.box_info.pad a[title="Delete Alias"]:before,
 .box_tags .stats.nobullet div a:nth-child(3):before {
     font-size: 14px;
@@ -6146,6 +6224,7 @@ a[href^="javascript:IndexVote("],
 a[href^="javascript:Vote("],
 /* .box_tags .stats.nobullet div a, */
 a[onclick^="voteTag("],
+.tag_vote_button,
 /* #wrapper a[onclick^="deleteTag("], */
 a[onclick^="similarVote("] {
     border-radius: 50%;
@@ -6158,6 +6237,7 @@ a[href^="javascript:IndexVote("]:before,
 a[href^="javascript:Vote("]:before,
 /* #wrapper .box_tags .stats.nobullet div a:before, */
 #wrapper a[onclick^="voteTag("]:before,
+#wrapper .tag_vote_button:before,
 /* #wrapper a[onclick^="deleteTag("]:before, */
 a[onclick^="similarVote("]:before {
     position: absolute;
@@ -6353,6 +6433,7 @@ a[onclick^="similarVote("]:before {
 #collections .sidebar .box.box_comment .head a.username {
     font-size: 14px;
     line-height: 19px;}
+.group_tag >a,
 .box.box_coltags .pad li a {
     font-size: 14px;
     line-height: 20px;}
@@ -6540,6 +6621,23 @@ h2 .username_badges {
     height: 100%;
     /*padding-top: 100%;*/}
 
+.box_freeleech .left_status_text {
+    clip-path: polygon(
+        0 0,
+        calc(100% - 30px) 0,
+        calc(100% - 30px) 100%,
+        0% 100%);
+    display: table;
+    margin: auto;
+    text-indent: 20px;}
+.box_freeleech .left_status_text:before {
+    content: '';
+    background: var(--s-gold) no-repeat center / 18px 18px;
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    vertical-align: text-bottom;}
+
 .pad.add_tags .field_div,
 .sidebar .box_freeleech form {
     display: flex;
@@ -6577,6 +6675,12 @@ h2 .username_badges {
 .sidebar .addtagsdiv input#tags {
     width: 100% !important;
     margin-top: 8px;}
+#searchforum tr:nth-child(2),
+#searchforum tr:nth-child(4),
+#image_block ~div input[type="submit"],
+#newthreadform #newthreadtext #answer_block br +input,
+.qtip-default .pad.review p:first-of-type,
+#requests .sidebar .box_votes table,
 .sidebar .box_freeleech form,
 #collections .sidebar ul.postlist,
 #better table#collection_files,
@@ -6642,7 +6746,9 @@ input[type=button]:hover,
 input[type=submit]:hover,
 .forum_latest .search #cat_list a[onclick]:hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
+a#show_recommend_to_friend:hover,
 a#toggle_css_gallery:hover,
+a#freeleech_pot_show:hover,
 a#getmorenews:hover,
 #tags_box a#tags_add_toggle:hover,
 #group_nofo_bigdiv a#group_quick_edit:hover,
@@ -6660,11 +6766,13 @@ a.toggle_tags:hover,
 .torrent_table tr.pad td >.linkbox >a:hover,
 a[href^="javascript:IndexVote("]:hover,
 a[href^="javascript:Vote("]:hover,
+.tag_vote_button:hover,
 /* .box.box_coltags .pad li a:nth-child(n+2):hover, */
 /*#reviewrow a*/#expand_review:hover,
 /*#reviewrow a*/#load_edit_review:hover,
 #wrapper #image_block >a[onclick]:hover,
 #load_edit_review_dialog:hover,
+a#add_tags_link:hover,
 .box.box_coltags .head span[title="Add Tags"] a:hover,
 #collections .sidebar .box_addtorrent .subhead a:hover,
 /* #requests table.border td.nobr:nth-child(2) a:hover, */
@@ -7162,8 +7270,8 @@ input[name="action"]:not([value="delete_notify"]) ~tbody .noticon    div:not(.ca
 
 
 
-#torrents .torrent_notifications .noticon +td >strong +strong {
-    font-weight: bold;}
+/* #torrents .torrent_notifications .noticon +td >strong +strong {
+    font-weight: bold;} */
 /* #torrents .torrent_notifications .noticon +td >strong +strong:not([class]) {    
     color: var(--c-low);} */
 
@@ -7425,8 +7533,6 @@ div#dnu {
 #bookmarks .sidebar ul.stats.nobullet,
 #below_box >p:last-child {
     margin-bottom: 0;}
-#requests .sidebar .box_votes table {
-    margin-top: 8px;}
 #requests td form label[for="anonymous"] {
     margin-top: 3px;
     display: inline-block;}
@@ -7531,7 +7637,7 @@ input[name="year"],
 /* #upload #content >div >table[style] td, */
 #dnu >table td {
     width: auto !important;}
-#upload .thin form table .colhead:not(:first-child) {
+#upload .thin form table .colhead:nth-child(n+2) {
 	border-top: 1px solid var(--c-table-brdr);}
 
 /* (API Keys table, user settings) hack */
@@ -7548,6 +7654,7 @@ input[name="year"],
     border-bottom: 1px solid var(--c-table-brdr);}
 
 
+.box_recommend_to_friend .select2-container,
 form#tag_add_form input#tags,
 #image_block input[type="url"],
 #image_block input[type="text"],
@@ -7608,11 +7715,6 @@ input#meta[type="number"] {
 /* #image_block input[type="url"],
 #image_block input[type="text"] {
     width: calc(100% - 160px) !important;} */
-#image_block ~div input[type="submit"],
-#newthreadform #newthreadtext #answer_block br +input/*,
-#upload td#image_block input[type="text"]:not(#screen0),
-#torrents .center.thin >.box.pad #image_block >span:not(first-child) input[type="text"]*/ {
-    margin-top: 8px;}
 #user h2 +form#userform td.label,
 #upload td.label {
     background-color: var(--c-tgroup);}
@@ -7651,7 +7753,7 @@ input#file {
     width: 50%;}
 #copyright p:nth-child(n+2) {
     margin: 5px 0 0 0;}
-#server_stats >strong:not(:first-child) {
+#server_stats >strong:nth-child(n+2) {
     margin-left: 2px;}
 #server_stats:before {
     content: 'jacoto stylesheet by SilverTea';
@@ -7777,6 +7879,8 @@ tr#reviewrow form#review_form >p,
     justify-content: center;}
 #review_form #textarea_div {
     width: 100%;}
+.box_recommend_to_friend input[value="Send PM"],
+#add_tags_button,
 #reviewrow #review_form >p +p {
     margin-left: 5px;}
 #expanded_review_box >p:first-child {
@@ -8054,7 +8158,7 @@ tr.likes td[id^="likers_"] >strong:nth-of-type(2),
 .inventory #one_time_inputs input,
 #collections .sidebar .box_addtorrent span:last-child,
 #user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table p,
-.sidebar #polcont .pad li:not(.graph):not(:first-child),
+.sidebar #polcont .pad li:not(.graph):nth-child(n+2),
 #torrents #content>script:first-child+h2+form #freerow p,
 #upload p.min_padding,
 #rules .thin >form.search_form span#Index,
@@ -8136,6 +8240,12 @@ table.bbcode_table tbody {
     display: table-row-group !important;}
 table.bbcode_table td {
     word-break: break-word;}
+.group_tag >span {
+    display: flex;
+    margin-left: auto;
+    padding-left: 10px;}
+.group_tag >span >span {
+    margin: auto 4px auto 3px;}
 
 /* #wrapper div[style*="text-align:center;"] table.bbcode_table td {
     text-align: center;} */
@@ -8269,12 +8379,13 @@ blockquote#description img {
     max-width: 710px !important;
     width: auto;
     height: auto;
-    /*-webkit-box-sizing: border-box;
+    /* -webkit-box-sizing: border-box;
     box-sizing: border-box;
     -webkit-filter: var(--p-post-img);
     filter: var(--p-post-img);
     margin: 0;
-    padding: 5px;*/}
+    padding: 5px; */
+}
 .trailer >video {
     width: auto;
     height: auto;
@@ -8561,8 +8672,8 @@ a[title="Delete"],
     line-height: var(--p-lh);
     vertical-align: middle;}
 form#tag_add_form >input,
-#torrents #content>script:first-child+h2+form #freerow td:last-child>input:not(:first-child),
-#torrents #content>script:first-child+h2+form #freerow td:last-child>select:not(:first-child),
+#torrents #content>script:first-child+h2+form #freerow td:last-child>input:nth-child(n+2),
+#torrents #content>script:first-child+h2+form #freerow td:last-child>select:nth-child(n+2),
 #inbox #searchbox label,
 #inbox #searchbox input:not([type="text"]),
 #upload #remaster_true #remaster_year {
@@ -8593,6 +8704,8 @@ form#tag_add_form >input,
 #changelog .box.description_div:before,
 
 #wiki .box.center_revision:before, /* wiki revision compare */
+
+#sidebar_group_info:before,
 
 .thin.torrent_history >form#torrent_history_search:before,
 #user .thin >h2:first-child +.center:before,
@@ -8652,9 +8765,13 @@ form#tag_add_form >input,
     content: 'Create a new thread';}
 #user #wrapper .invitetree.pad:before {
     content: 'Invite Tree';}
+#wrapper #sidebar_group_info:before,
 #tools #content >p:before,
 #better #wrapper #content >h2 +p:before,
-#user #wrapper .thin >.header:first-child +.box.pad:before {
+#user #wrapper .thin >.header:first-child +.box.pad:before,
+.box.pad.box_buffs_info:before,
+.box.pad.box_freeleech_info:before,
+#gazelleview table.gazelleinfo:before {
     content: 'Info';}
 #user #wrapper .thin >.header:first-child +.box.pad +.box.pad:before {
     content: 'Send invite';}
@@ -8669,9 +8786,6 @@ form#tag_add_form >input,
     content: 'Crafting Recipes';}
 /* .thin.torrent_history >form#torrent_history_search:before {
     content: 'Search by Torrent Name';} */
-.box.pad.box_buffs_info:before,
-.box.pad.box_freeleech_info:before {
-    content: 'Info';}
 #user .thin >h2:first-child +.center input[type="text"] {
     margin: 0 !important;
     width: calc(100% - 105px) !important;}
@@ -8873,8 +8987,6 @@ form#tag_add_form >input,
     content: 'Details';}
 #wrapper .collections_art_display:before {
     content: 'Collections';}
-#gazelleview table.gazelleinfo:before {
-    content: 'Info';}
 
 .gallery_slot,
 .forum_post .colhead_dark,
@@ -8896,6 +9008,33 @@ form#tag_add_form >input,
     z-index: 0;
     background-color: var(--c-tgroup);
     border-top: 1px solid var(--c-table-brdr);}
+.freeleech_pot_contribute.shown,
+.box_user_rating {
+    position: relative;
+    z-index: 3;}
+.box_freeleech {
+    position: relative;
+    z-index: 2;}
+#torrents .box_tags {
+    position: relative;
+    z-index: 4;}
+.freeleech_pot_contribute.shown:after, /*d*/
+.box_freeleech:after, /*d*/
+.box_user_rating:after,
+#torrents .box_tags:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 46px;
+    z-index: -1;
+    background-color: var(--c-tgroup);
+    border-top: 1px solid var(--c-table-brdr);}
+.freeleech_pot_contribute.shown:after {
+    height: calc(100% - 9px);
+    width: calc(100% + 20px);
+    left: -10px;}
 
 #gazelleview table.gazelleinfo:after,
 .collections_art_display:after,
@@ -9685,8 +9824,8 @@ input[class="date_picker"] {
 .box.box_info span[style="float:right;"] >img,
 #gazelleview table.gazelleinfo td#tags input[type="submit"],
 #top10 .thin >.center tr:first-child td:last-child,
-#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="text"]:not(:first-child),
-#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="button"]:not(:first-child),
+#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="text"]:nth-child(n+2),
+#user .thin >h2 ~form[method="post"] >input[value="notify_handle"]:first-child ~table input[type="button"]:nth-child(n+2),
 #collections table#new_collage input#art +input[type="button"],
 table[style="width: 600px;"] td:nth-child(2) a[href^="torrents.php?action=edit"],
 .box.box_coltags .pad li a:not([href^="torrents.php?taglist="]) {
@@ -9841,11 +9980,11 @@ ul.poll,
 #torrents .center.thin >.box.pad td.label {
     width: 84px !important;} /* important for mobile */
 .thin.torrent_history >form#torrent_history_search ~table tr.colhead.nobr td:nth-child(n+3),
-#requests table.border .colhead_dark td:not(:first-child),
-#bookmarks table#requests_list .colhead_dark td:not(:first-child),
-#existing_freeleech_pots .colhead td:not(:first-child),
-#existing_buff_pots .colhead td:not(:first-child),
-table.adventure_table .colhead td:not(:first-child) {
+#requests table.border .colhead_dark td:nth-child(n+2),
+#bookmarks table#requests_list .colhead_dark td:nth-child(n+2),
+#existing_freeleech_pots .colhead td:nth-child(n+2),
+#existing_buff_pots .colhead td:nth-child(n+2),
+table.adventure_table .colhead td:nth-child(n+2) {
     font-size: 15px;}
 
 .last_read {
@@ -10057,9 +10196,6 @@ td >img[title="Gold"] {
     margin: 0 0 0 15px;}
 #searchforum tr:nth-child(2){
     width: calc(100% - 67px);}
-#searchforum tr:nth-child(2),
-#searchforum tr:nth-child(4) {
-    margin-top: 8px;}
 #searchforum td,
 #searchthread td {
     display: block;
@@ -10371,7 +10507,7 @@ span.size5 img {
 .collections_art_display tbody {
     margin: 46px 10px 10px 10px;
     display: block;}
-.collections_art_display tr:not(:first-child) td {
+.collections_art_display tr:nth-child(n+2) td {
     margin-top: 10px;}
 
 /* #collections #coverart.box:before { - outdated 1
@@ -10417,18 +10553,40 @@ span.size5 img {
 #css_gallery .preview_image {
     width: 100%;
     height: auto;}
-#collections .sidebar .pad {
-    padding: 10px 0 0 0;}
 #collections .sidebar ul {
     margin: 0;
     padding: 0 !important;}
 /* #collections .sidebar .box_addtorrent .head, */
 /* .box.box_image.box_image_coverart .head {
     margin-bottom: 10px;} */
+a#freeleech_pot_show,
+a#add_tags_link {
+    position: relative;
+    /* float: right; */
+    margin-top: 19px;}
+a#add_tags_link {
+    left: 50%;
+    transform: translateX(-50%);}
+div#add_tags_input {
+    /* z-index: 4; */
+    position: relative;
+    margin-top: 19px;
+    display: flex;
+    flex-flow: row;
+    width: 100%;}
+#group_tags,
 .sidebar #tags_box #tagslist,
 #collections .box.box_comment {
     display: flex;
     flex-flow: column;}
+.group_tag {
+    line-height: 26px;
+    white-space: nowrap;
+    padding-left: 10px;
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    flex-flow: row;}
 .sidebar #tags_box #tagslist {
     min-height: 31px;}    
 #collections .sidebar .box.box_comment .subhead {
@@ -10473,9 +10631,10 @@ span.size5 img {
     flex-flow: row;} */
 /* #collections .box.box_coltags li:hover {
     background-color: var(--c-tgroup);} */
+.group_tag >a,
 #collections .box.box_coltags li a:first-child {
     overflow: hidden;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     text-overflow: ellipsis;
     margin: auto auto auto 0;}
 
@@ -10483,8 +10642,6 @@ span.size5 img {
 #wiki .sidebar ol.navigation_list {
     margin: 0;
     padding: 0 0 0 20px;}
-#wiki .sidebar >.box >.pad {
-    padding: 10px 0 0 0;}
 #wiki .sidebar .box_info.pad:before {
     content: 'Info';
     font-size: var(--p-head);
@@ -10950,6 +11107,7 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     box-shadow: var(--p-main-shdw);
     border: 1px solid var(--c-main-brdr);
     margin: 0 0 15px 0;}
+.trailer_div:not(:has(>.head)):before,
 #tools div:has(>#item_stats_table):before {
     display: block;
     text-align: left;
@@ -10962,6 +11120,11 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     font-weight: 600;
     content: 'Item Stats';}
 
+
+#wrapper .trailer_div:not(:has(>.head)):before {
+    width: 100%;
+    margin: -10px -10px 10px -10px;
+    content: 'Trailer';}
 
 .pad td >.linkbox:has(~div[id^="peers_"]:not(.hidden)) >a[onclick^="show_peers"]:before {
     content: 'Hide Peerlist';}
@@ -12830,7 +12993,7 @@ h2 span.secondary_class:nth-child(n+2) {
 /* #user #itemsdiv div[style="text-align:center;"],
 #user #itemsdiv span[style="text-decoration: underline;"],
 #user #wrapper #itemsdiv p:empty,
-#user #itemsdiv p:not(:first-child) {
+#user #itemsdiv p:nth-child(n+2) {
 	display: none;} */
 .select2-search__field {
 	height: 30px;}
@@ -13281,7 +13444,7 @@ td .log_green {
     overflow: visible;
     font-weight: 600;}
 
-#share_score_breakdown tr:not(:first-child):not(:last-child) {
+#share_score_breakdown tr:nth-child(n+2):not(:last-child) {
 	border-bottom: 1px solid var(--c-table-brdr);}
 
 
@@ -13521,6 +13684,7 @@ td .log_green {
     width: 120px;}
 #adventureclub .inline_list +.inline_list {
     margin-top: 5px;}
+#wrapper .tag_autocomplete >.tag_autocomplete_items div,
 #wrapper .comment_rating p[data-readmore],
 #user #content>#progress_bar~.linkbox,
 #adventureclub table#monsters_search td.label:first-child {
@@ -13530,7 +13694,7 @@ td .log_green {
     line-height: 26px;}
 #adventureclub #adventure_search select +input[type="number"] {
     margin-left: 5px;}
-/* #adventureclub #adventure_search table#monsters_search td.label:not(:first-child) br {
+/* #adventureclub #adventure_search table#monsters_search td.label:nth-child(n+2) br {
     display: none;} */
 #adventureclub #adventure_search tbody:first-child input[type="submit"] {
     vertical-align: bottom;}
@@ -13553,17 +13717,17 @@ td .log_green {
     background-color: var(--c-edition);
     border: 1px solid var(--c-main-brdr);
     padding: 1px 3px 2px 3px;}
-.box_recommend_to_friend .body >.select2 {
+/* .box_recommend_to_friend .body >.select2 {
     margin: 8px 9px 0 0;
     max-width: 100%;
-    min-width: calc(100% - 98px);}
-.box_recommend_to_friend .body >input[type="button"] {
-    margin: 8px 9px 0 0;}
+    min-width: calc(100% - 98px);} */
+/* .box_recommend_to_friend .body >input[type="button"] {
+    margin: 8px 9px 0 0;} */
 .box_recommend_to_friend .body {
-    padding-top: 2px;
-    width: calc(100% + 9px);
+    /* padding-top: 2px; */
+    width: 100%;
     display: flex;
-    flex-flow: row wrap;}
+    flex-flow: row;}
 /* #wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
     color: var(--c-text-s);} */
 /* #torrents .torrent_notifications .noticon +td >strong +strong:not([class]),
@@ -13642,6 +13806,7 @@ table.adventure_table h3 {
 #wrapper #seedtime_tokens >.large_progress_bar:before {
     height: calc(100% + 86px);
     bottom: -41px;}
+a#show_recommend_to_friend,
 #wrapper #seedtime_tokens >h3:first-child {
     margin-top: 13px;}
 #wrapper #seedtime_tokens >.linkbox {
@@ -14986,14 +15151,14 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
     height: 4px;}
 
 .torrent_table .ignored td.center:first-child:after,
-.torrent_table .ignored >td:not(:first-child):not(:nth-child(11)) {
+.torrent_table .ignored >td:nth-child(n+2):not(:nth-child(11)) {
     opacity: .4;}
-.torrent_table .ignored >td:not(:first-child):not(:nth-child(11)) {
+.torrent_table .ignored >td:nth-child(n+2):not(:nth-child(11)) {
     filter: grayscale(.25);}
 .torrent_table .ignored:hover td.center:first-child:after,
-.torrent_table .ignored:hover >td:not(:first-child):not(:nth-child(11)) {
+.torrent_table .ignored:hover >td:nth-child(n+2):not(:nth-child(11)) {
     opacity: 1;}
-.torrent_table .ignored:hover >td:not(:first-child):not(:nth-child(11)) {
+.torrent_table .ignored:hover >td:nth-child(n+2):not(:nth-child(11)) {
     filter: grayscale(0);}
 #displayname s {
     text-decoration: unset;}
@@ -15297,7 +15462,7 @@ div#fight_skill_points_assign >table {
     flex-grow: unset;}
 .review_cell .flextable-cell:first-child,
 .review_cell .flextable-cell:first-child div {
-    align-self:flex-start;
+    align-self: flex-start;
     flex-flow: column;
     display: flex;}
 .review_cell .flextable-cell:first-child {
@@ -15685,8 +15850,6 @@ div#fight_skill_points_assign >table {
 /* .qtip-default .pad.review {
     font-size: 14px;
     line-height: var(--p-lh);} */
-.qtip-default .pad.review p:first-of-type {
-    margin-top: 8px;}
 .qtip-default .pad.review p:last-child {
     margin-bottom: 0;}
 .qtip .qtip-tip,
