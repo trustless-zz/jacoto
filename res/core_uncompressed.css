@@ -2822,6 +2822,7 @@ a {
     border: 0;
     background-color: transparent;}
 a:hover,
+.box_game_ratings .show_link >a:hover:before,
 .box.vertical_space#preview a:hover img, /*inbox*/
 .box.vertical_space .body a:hover img, /*inbox*/
 #wrapper .redacted_bbcode_show a:hover,
@@ -2932,8 +2933,6 @@ a,
 
 #dailygazelle img,
 #slides img,
-#slides >.nobullet a:before,
-/*#more_news >a:before,*/
 
 #header #alerts,
 #header #alerts:before,
@@ -3039,6 +3038,8 @@ td.sign img,
 .torrent_table tr.group_torrent,
 #userinfo_stats,
 .rating_container,
+.box_game_ratings .show_link >a:before,
+#slides >.nobullet a:before,
 .linkbox a:before,
 input,
 select,
