@@ -3205,6 +3205,8 @@ a[onclick="showDnu();"]:after,
 /* #forums #wrapper .forum_post .avatar:hover >div:only-child:after, */
 .tag_autocomplete >.tag_autocomplete_items div,
 
+.select2-selection,
+
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
 #wrapper .reported_label,
@@ -5097,6 +5099,7 @@ input[type="text"]:active,
 #wrapper .select2-container--default .select2-selection--multiple:active,
 input[type="url"]:active,
 .select2-container .select2-selection--single:active,
+.select2-selection:active,
 select:active {
     transition: box-shadow 0s;
     box-shadow:
@@ -9036,10 +9039,14 @@ form#tag_add_form >input,
 #torrents .box_tags {
     position: relative;
     z-index: 4;}
-.freeleech_pot_contribute.shown:after, /*d*/
-.box_freeleech:after, /*d*/
-.box_user_rating:after,
-#torrents .box_tags:after {
+/* .freeleech_pot_contribute.shown:after,
+.box_freeleech:has(a#freeleech_pot_show):after,
+
+.box_user_rating:has(.box_recommend_to_friend.shown):after,
+.box_user_rating:has(a#show_recommend_to_friend):after,
+
+#torrents .box_tags:has(#add_tags_input:not([style="display: none;"])):after,
+#torrents .box_tags:has(#add_tags_link):after {
     content: '';
     position: absolute;
     width: 100%;
@@ -9048,8 +9055,8 @@ form#tag_add_form >input,
     height: 46px;
     z-index: -1;
     background-color: var(--c-tgroup);
-    border-top: 1px solid var(--c-table-brdr);}
-.freeleech_pot_contribute.shown:after {
+    border-top: 1px solid var(--c-table-brdr);} */
+#wrapper .freeleech_pot_contribute.shown:after {
     height: calc(100% - 9px);
     width: calc(100% + 20px);
     left: -10px;}
@@ -11139,6 +11146,24 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     background: var(--p-head-grdnt);
     font-weight: 600;
     content: 'Item Stats';}
+
+.freeleech_pot_contribute.shown:after, /*d*/
+.box_freeleech:has(a#freeleech_pot_show):after, /*d*/
+
+.box_user_rating:has(.box_recommend_to_friend.shown):after,
+.box_user_rating:has(a#show_recommend_to_friend):after,
+
+#torrents .box_tags:has(#add_tags_input:not([style="display: none;"])):after,
+#torrents .box_tags:has(#add_tags_link):after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 46px;
+    z-index: -1;
+    background-color: var(--c-tgroup);
+    border-top: 1px solid var(--c-table-brdr);}
 
 
 #wrapper .trailer_div:not(:has(>.head)):before {
