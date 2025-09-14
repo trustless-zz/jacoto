@@ -2034,12 +2034,15 @@ input[name="add_tags_input"],
 #torrents #content >script ~form #torrent_link input[name="internallink"],
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad input[type="text"] {
     width: 100%;}
+.box_game_ratings .left_status_text,
 #upcoming_calendar a.event_day,
 #content,
 #wrapper,
 #footer
 /* #bookmarks #collage_table td a - outdated bookmarks */ {
     margin: 0 auto;}
+.box_game_ratings .left_status_text {
+    text-indent: 26px;}
 #content,
 #footer {
     max-width: 1300px;
@@ -2068,7 +2071,7 @@ ul {
 .sidebar .head li,
 .sidebar #polcont .pad,
 #dailygazelle {
-    padding:0;}
+    padding: 0;}
 #tools .thin >.box[style="float: left"] ul,
 #menu ul,
 #menu ul li a,
@@ -2077,7 +2080,7 @@ ul {
 #userinfo_username,
 .sidebar .head ul,
 #dailygazelle .colhead_dark {
-    margin:0;}
+    margin: 0;}
 
 /* #tools .box .pad ul.stats.nobullet, */
 #tools .thin >.box[style="float: left"] ul,
@@ -2338,6 +2341,7 @@ tr.unreadpm td:first-child:after {
     top: 40px;
     z-index: -1;}
 #wrapper .tag_autocomplete >.tag_autocomplete_items {
+    background: var(--c-input-obj);
     overflow-y: auto;
     max-height: 220px;
     width: calc(100% - 55px);
@@ -2360,8 +2364,8 @@ tr.unreadpm td:first-child:after {
 #torrents #torrentsbrowsecomplete li:nth-child(odd),
 .autocomplete_list li:nth-child(odd) {
     background-color: var(--c-tgroup);}
-.tag_autocomplete >.tag_autocomplete_items .tag_autocomplete_active,
-.tag_autocomplete >.tag_autocomplete_items div:hover,
+/* .tag_autocomplete >.tag_autocomplete_items .tag_autocomplete_active,
+.tag_autocomplete >.tag_autocomplete_items div:hover, */
 #torrents #torrentsbrowsecomplete li.highlight,
 #torrents #torrentsbrowsecomplete li:hover,
 .autocomplete_list li.highlight,
@@ -3150,8 +3154,9 @@ table#otherop.hidden ~table.otheroptoggle a,
 a#toggle_css_gallery,
 a#freeleech_pot_show,
 a#show_recommend_to_friend,
+/* .box_game_ratings .show_link >a, */
 a#getmorenews,
-#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
+.box_gold a[onclick^="$('#gold_history'"],
 a.toggle_tags,
 #user #userform #platcheckbox +a,
 .filter_torrents.advanced .flright,
@@ -3198,6 +3203,7 @@ a[onclick="showDnu();"]:after,
 .group_torrent [id^="color_"]:before,
 
 /* #forums #wrapper .forum_post .avatar:hover >div:only-child:after, */
+.tag_autocomplete >.tag_autocomplete_items div,
 
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
@@ -3405,9 +3411,10 @@ table#otherop.hidden ~table.otheroptoggle a:active,
 a#toggle_css_gallery:active,
 a#freeleech_pot_show:active,
 a#show_recommend_to_friend:active,
+/* .box_game_ratings .show_link >a:active, */
 a#getmorenews:active,
 #tags_box a#tags_add_toggle:active,
-#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
+.box_gold a[onclick^="$('#gold_history'"]:active,
 a.toggle_tags:active,
 a#tag_show\/hide:active,
 #user #userform #platcheckbox +a:active,
@@ -3629,6 +3636,8 @@ input[disabled] {
     /* -webkit-box-shadow: none; */
     box-shadow: none;}
 
+.tag_autocomplete >.tag_autocomplete_items .tag_autocomplete_active,
+.tag_autocomplete >.tag_autocomplete_items div:hover,
 .fancybox-show-thumbs .fancybox-thumbs {
     background-color: var(--c-box);}
 .fancybox-thumbs>ul>li:before {
@@ -4571,7 +4580,7 @@ th[aria-disabled="false"]:active,
 .edition_info:active +td:before,
 .edition_info:active:before {
     background: linear-gradient(to top,var(--c-b3),var(--c-b4));}
-
+#wrapper .sidebar >.box.box_gold,
 .torrent_table tr.group_torrent {
     background-color: var(--c-tgroup);}
 
@@ -5302,10 +5311,11 @@ a.toggle_tags,
 a#toggle_css_gallery,
 a#freeleech_pot_show,
 a#show_recommend_to_friend,
+/* .box_game_ratings .show_link >a, */
 #tags_box a#tags_add_toggle,
 a#getmorenews,
 #group_nofo_bigdiv a#group_quick_edit,
-#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
+.box_gold a[onclick^="$('#gold_history'"],
 table#otherop.hidden ~table.otheroptoggle a,
 /* .torrent_table tr.pad td >.linkbox >a:not([href*="?action="]), */
 /* .torrent_table tr.pad td >.linkbox >a[href*="action=torrentrevert"], */
@@ -5383,7 +5393,7 @@ table#snatchesrow/* td*/,
 .box_image_avatar div:last-child,*/
 /*.username_badges,*/
 .group_tag >span a,
-#wrapper a#add_tags_link,
+.box_game_ratings .show_link >a,
 #wrapper .box.box_coltags .pad li a:not([href^="torrents.php?taglist="]),
 .username_badges >a,
 h2 a[href^="feeds.php?"],
@@ -5541,9 +5551,11 @@ a#tag_show\/hide,
 #wrapper #image_block >a[onclick],
 a#toggle_css_gallery,
 a#freeleech_pot_show,
+a#add_tags_link,
+/* .box_game_ratings .show_link >a, */
 a#show_recommend_to_friend,
 a#getmorenews,
-#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip,
+.box_gold a[onclick^="$('#gold_history'"],
 table#otherop.hidden ~table.otheroptoggle a,
 .torrent_table tr.pad td >.linkbox >a:not([href*="?action="]) {
     position: relative;
@@ -5557,7 +5569,6 @@ table#otherop.hidden ~table.otheroptoggle a,
 #wrapper .answers >a[onclick],
 #tags_box a#tags_add_toggle,
 #wrapper .box.box_coltags .head span[title="Add Tags"] a,
-#wrapper a#add_tags_link,
 #collections #wrapper .sidebar .box_addtorrent .subhead a,
 #collections .sidebar .box_addtorrent .subhead a,
 #group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit,
@@ -5610,13 +5621,16 @@ a#freeleech_pot_show:before {
     content: 'Contribute';}
 a#show_recommend_to_friend:before {
     content: 'Recommend to a Friend';}
+.box_game_ratings .show_link >a:before,
+a#add_tags_link:before {
+    content: 'Add';}
 a#toggle_css_gallery:before {
     content: 'Show gallery';}
 table#otherop.hidden ~table.otheroptoggle a:before {
     content: 'Hide Other Options';}
 table#otherop.hidden:not([style="display: table;"]) ~table.otheroptoggle a:before {
     content: 'View Other Options';}
-#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:before {
+.box_gold a[onclick^="$('#gold_history'"]:before {
     content: 'Gold History';}
 .forum_latest .search #cat_list a[onclick]:after,
 .filter_torrents.advanced #platdropdown .flright:after {
@@ -5630,12 +5644,14 @@ table#otherop.hidden:not([style="display: table;"]) ~table.otheroptoggle a:befor
 .forum_latest .search #cat_list a[onclick]:after,
 #wrapper #content .torrent_table tr.pad td >.linkbox >a:before,
 table#otherop.hidden ~table.otheroptoggle a:before,
+/* .box_game_ratings .show_link >a:before, */
+a#add_tags_link:before,
 a#show_recommend_to_friend:before,
 a#freeleech_pot_show:before,
 a#toggle_css_gallery:before,
 a#getmorenews:before,
 #group_nofo_bigdiv a#group_quick_edit:before,
-#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:before,
+.box_gold a[onclick^="$('#gold_history'"]:before,
 #taglist:not(.hidden) ~table a.toggle_tags:before,
 #taglist.hidden ~table a.toggle_tags:before,
 .filter_torrents.advanced #platcheckbox .flright:after,
@@ -5645,7 +5661,7 @@ a#tag_show\/hide:before,
     font-size: 14px;
     line-height: 1em;}
 #wrapper .box.box_coltags .head span[title="Add Tags"] a:hover,
-#wrapper a#add_tags_link:hover,
+a#add_tags_link:hover,
 #collections #wrapper .sidebar .box_addtorrent .subhead a:hover,
 body /*#reviewrow a*/#expand_review:hover,
 body /*#reviewrow a*/#load_edit_review:hover,
@@ -5665,13 +5681,14 @@ button.alertable-cancel:hover,
 .torrent_table tr.pad td >.linkbox >a:not([href*="?action="]):hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
 a.toggle_tags:hover,
+/* .box_game_ratings .show_link >a:hover, */
 a#show_recommend_to_friend:hover,
 a#toggle_css_gallery:hover,
 a#freeleech_pot_show:hover,
 a#getmorenews:hover,
 #tags_box a#tags_add_toggle:hover,
 #group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit:hover,
-#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
+.box_gold a[onclick^="$('#gold_history'"]:hover,
 a#tag_show\/hide:hover,
 #user #userform #platcheckbox +a:hover,
 .filter_torrents.advanced .flright:hover {
@@ -5679,7 +5696,7 @@ a#tag_show\/hide:hover,
     background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
 #tags_box a#tags_add_toggle:active,
 #wrapper .box.box_coltags .head span[title="Add Tags"] a:active,
-#wrapper a#add_tags_link:active,
+a#add_tags_link:active,
 #collections #wrapper .sidebar .box_addtorrent .subhead a:active,
 body /*#reviewrow a*/#expand_review:active,
 body /*#reviewrow a*/#load_edit_review:active,
@@ -5698,12 +5715,13 @@ button.alertable-cancel:active,
 #shop_search .flright a[onclick]:active,
 .torrent_table tr.pad td >.linkbox >a:not([href*="?action="]):active,
 table#otherop.hidden ~table.otheroptoggle a:active,
+/* .box_game_ratings .show_link >a:active, */
 a#show_recommend_to_friend:active,
 a#toggle_css_gallery:active,
 a#freeleech_pot_show:active,
 a#getmorenews:active,
 #group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit:active,
-#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:active,
+.box_gold a[onclick^="$('#gold_history'"]:active,
 a.toggle_tags:active,
 a#tag_show\/hide:active,
 #user #userform #platcheckbox +a:active,
@@ -5731,7 +5749,7 @@ a[onclick] {
     cursor: default;} */
 /* #index .sidebar #freeleech .group_torrent a,
 td.body a[onclick^="Quote"], */
-#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip {
+.box_gold a[onclick^="$('#gold_history'"] {
     cursor: pointer;}
 /* #upload #releaseinfo .colhead +tr+tr td.label,
 #upload #rlstitle +tr td.label,
@@ -6190,10 +6208,6 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(2):before {
     content: '–';
     /* content: '-'; */
 }
-a#add_tags_link:before {
-    font-size: 14px;
-    line-height: 14px;
-    content: 'Add';}
 /* .box.box_info.pad a[title="Delete Alias"]:before,
 .box_tags .stats.nobullet div a:nth-child(3):before {
     font-size: 14px;
@@ -6585,7 +6599,7 @@ h2 .username_badges {
 .box_game_ratings a[target="_blank"] {
     width: 100%;
     height: 100%;}
-.box_game_ratings >.body >div {
+.box_game_ratings >.body >div:not([class]) {
     width: calc(100% / 3);
     display: flex;
     align-items:center;}
@@ -6621,6 +6635,9 @@ h2 .username_badges {
     height: 100%;
     /*padding-top: 100%;*/}
 
+.left_status_text {
+    text-align: left;
+    display: inline;}
 .box_freeleech .left_status_text {
     clip-path: polygon(
         0 0,
@@ -6746,13 +6763,14 @@ input[type=button]:hover,
 input[type=submit]:hover,
 .forum_latest .search #cat_list a[onclick]:hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
+/* .box_game_ratings .show_link >a:hover, */
 a#show_recommend_to_friend:hover,
 a#toggle_css_gallery:hover,
 a#freeleech_pot_show:hover,
 a#getmorenews:hover,
 #tags_box a#tags_add_toggle:hover,
 #group_nofo_bigdiv a#group_quick_edit:hover,
-#user .box.box_gold #box_gold_scrollbar+ul.stats.nobullet a.tooltip:hover,
+.box_gold a[onclick^="$('#gold_history'"]:hover,
 .similar_votes a:hover,
 .box_tags .stats.nobullet div a:hover,
 /* .box.box_info.pad a[title="Delete Alias"]:hover, */
@@ -9274,6 +9292,8 @@ form#tag_add_form >input,
 #collections .linkbox a,
 .torrent_details tr.pad div[id^=peers] .linkbox,
 
+.box_game_ratings .show_link >a:before,
+
 .torrent_table tr.pad div >.linkbox,
 .linkbox >strong,
 .linkbox a,
@@ -10561,9 +10581,9 @@ span.size5 img {
     margin-bottom: 10px;} */
 a#freeleech_pot_show,
 a#add_tags_link {
-    position: relative;
     /* float: right; */
     margin-top: 19px;}
+.box_gold a[onclick^="$('#gold_history'"],
 a#add_tags_link {
     left: 50%;
     transform: translateX(-50%);}
@@ -12875,8 +12895,8 @@ h2 span.secondary_class:nth-child(n+2) {
 /*** Fixes Mass Add Torrents to Collections ***/
 #tools  .col_mass_add td.colhead {
 	width: auto;
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 	box-shadow: none;}
 
 /*** User Apps ***/
