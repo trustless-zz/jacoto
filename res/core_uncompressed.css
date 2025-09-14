@@ -9058,9 +9058,10 @@ form#tag_add_form >input,
     background-color: var(--c-tgroup);
     border-top: 1px solid var(--c-table-brdr);} */
 #wrapper .freeleech_pot_contribute.shown:after {
-    height: calc(100% - 9px);
+    height: calc(100% + 1px);
     width: calc(100% + 20px);
-    left: -10px;}
+    left: -10px;
+    bottom: -10px;}
 
 #gazelleview table.gazelleinfo:after,
 .collections_art_display:after,
