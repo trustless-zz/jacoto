@@ -1791,6 +1791,8 @@ td.center.cats_col+td,
 
 #group_tags,
 
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"],
+
 .box.box_info span[style="float:right;"],
 .box.box_likes.box_torrents span.likes_icon.flright,
 #forums .forum_index            tr:not(.colhead) td:first-child,
@@ -3152,9 +3154,9 @@ th[aria-disabled="false"],
 #tags_box a#tags_add_toggle,
 .torrent_table tr.pad td >.linkbox >a,
 table#otherop.hidden ~table.otheroptoggle a,
-a#toggle_css_gallery,
+/* a#toggle_css_gallery,
 a#freeleech_pot_show,
-a#show_recommend_to_friend,
+a#show_recommend_to_friend, */
 /* .box_game_ratings .show_link >a, */
 a#getmorenews,
 .box_gold a[onclick^="$('#gold_history'"],
@@ -3414,6 +3416,7 @@ table#otherop.hidden ~table.otheroptoggle a:active,
 a#toggle_css_gallery:active,
 a#freeleech_pot_show:active,
 a#show_recommend_to_friend:active,
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"]:active,
 /* .box_game_ratings .show_link >a:active, */
 a#getmorenews:active,
 #tags_box a#tags_add_toggle:active,
@@ -5315,6 +5318,7 @@ a.toggle_tags,
 a#toggle_css_gallery,
 a#freeleech_pot_show,
 a#show_recommend_to_friend,
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"],
 /* .box_game_ratings .show_link >a, */
 #tags_box a#tags_add_toggle,
 a#getmorenews,
@@ -5412,6 +5416,7 @@ form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 #changelog td.issue_title +td >span,
 .torrent_table tr.pad td >.linkbox >a[href*="?action="],
 #group_nofo_bigdiv a#group_quick_edit,
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"],
 #torrent_table .group/*.discog*/ td span[style="float:right;"] /* bookmark icon */
 /* /image container size correction */ {
     font-size: 0;
@@ -5489,6 +5494,7 @@ a[href^="javascript:Vote("]:before,
 .similar_votes a[onclick] {
     font-size: 18px;}
 button:hover,
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"]:hover,
 #group_nofo_bigdiv a#group_quick_edit:hover,
 .ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:hover,
 #wrapper #trading_panel button:hover,
@@ -5513,6 +5519,7 @@ a[href^="javascript:Vote("]:hover,
     color: var(--c-low);
     background: var(--p-btn-hvr);}
 button:active,
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"]:active,
 #group_nofo_bigdiv a#group_quick_edit:active,
 .ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:active,
 #wrapper #trading_panel button:active,
@@ -5625,6 +5632,8 @@ a#freeleech_pot_show:before {
     content: 'Contribute';}
 a#show_recommend_to_friend:before {
     content: 'Recommend to a Friend';}
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"]:before {
+    content: 'Delete Group';}
 .box_game_ratings .show_link >a:before,
 a#add_tags_link:before {
     content: 'Add';}
@@ -5651,6 +5660,7 @@ table#otherop.hidden ~table.otheroptoggle a:before,
 /* .box_game_ratings .show_link >a:before, */
 a#add_tags_link:before,
 a#show_recommend_to_friend:before,
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"]:before,
 a#freeleech_pot_show:before,
 a#toggle_css_gallery:before,
 a#getmorenews:before,
@@ -6769,6 +6779,7 @@ input[type=submit]:hover,
 table#otherop.hidden ~table.otheroptoggle a:hover,
 /* .box_game_ratings .show_link >a:hover, */
 a#show_recommend_to_friend:hover,
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"]:hover,
 a#toggle_css_gallery:hover,
 a#freeleech_pot_show:hover,
 a#getmorenews:hover,
@@ -10592,6 +10603,7 @@ a#freeleech_pot_show,
 a#add_tags_link {
     /* float: right; */
     margin-top: 19px;}
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"],
 .box_gold a[onclick^="$('#gold_history'"],
 a#add_tags_link {
     left: 50%;
@@ -11148,6 +11160,9 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     background: var(--p-head-grdnt);
     font-weight: 600;
     content: 'Item Stats';}
+
+.similar_div .similar:not(:has(>ul.nobullet>li)) { /* :empty won't work because it isn't actually empty */
+    display: none;}
 
 .freeleech_pot_contribute.shown:after, /*d*/
 .box_freeleech:has(a#freeleech_pot_show):after, /*d*/
