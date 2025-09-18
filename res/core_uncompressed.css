@@ -8419,13 +8419,19 @@ blockquote#description img {
     margin: 0;
     padding: 5px; */
 }
-.trailer >video {
-    width: auto;
-    height: auto;
+.trailer video {
+    /* width: auto;
+    height: auto; */
     margin: 0;
     padding: 0;
     /* -webkit-filter: none; */
-    filter: none;}
+    filter: none;
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;}
 #inbox #messageform #preview a:hover img, /* inbox compose preview */
 .box.vertical_space#preview a:hover img, /*inbox*/
 .box.vertical_space .body a:hover img, /*inbox*/
