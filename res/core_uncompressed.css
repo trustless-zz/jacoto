@@ -2595,8 +2595,9 @@ form[name="filter"],
 #inbox .thin >.box.pad #messageform,
 #inbox #searchbox,
 #forums .thin >.box.thin.clear,
-#inbox .box.vertical_space +h2 +form,
-#inbox #messageform +h2 +form,
+/* #inbox .box.vertical_space +h2 +form,
+#inbox #messageform +h2 +form, */
+#inbox .thin >h2 +form,
 #reportsv2 #report_table >.box.pad,
 #inbox #messageform,
 
@@ -2729,7 +2730,7 @@ div#fight_skill_points_assign >table,
     box-shadow: var(--p-main-shdw);
     border: 1px solid var(--c-main-brdr);
     margin: 0 0 15px 0;}
-#inbox .box.vertical_space:not(:last-of-type),
+#inbox .box.vertical_space:nth-last-of-type(n+2),
 .forum_post {
     margin: 0 0 10px 0;}
 .sidebar ul {
@@ -2955,7 +2956,7 @@ a,
 /* #upload #content >div >table[style] tr:not(.colhead), */
 #dnu >table tr:not(.colhead),
 #reports .thin >table tr:not(.colhead),
-#manage_collage_table tr:not(.colhead):not(:last-child),
+#manage_collage_table tr:not(.colhead):nth-last-child(n+2),
 #uploaded_table             tr:not(.colhead),
 #seeding_table              tr:not(.colhead),
 #leeching_table             tr:not(.colhead),
@@ -2969,7 +2970,7 @@ a,
 #wiki .thin form:only-child table tr:not(.colhead), /* wiki Revision history */
 #torrents .torrent_notifications table.border tr:not(.colhead),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead),
-.clan_stat_totals table.border tr:not(.colhead):not(:last-child) td,
+.clan_stat_totals table.border tr:not(.colhead):nth-last-child(n+2) td,
 #better table#collection_files tr:not(.colhead),
 
 #wrapper #items_list li.item_li,
@@ -3029,7 +3030,7 @@ td.sign img,
 
 #seedtime_tokens #tokens_breakdown tr:not(.colhead) td:not(.label),
 #user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td:not(.label),
-#achievements tr:not(.colhead):not(:last-child) td:not(.achlabel),
+#achievements tr:not(.colhead):nth-last-child(n+2) td:not(.achlabel),
 
 .torrent_table .show_torrents_link,
 .torrent_table td.center:first-child,
@@ -3274,8 +3275,9 @@ tr#reviewrow form#review_form >p,
 #footer {
     text-align: center;}
 
-#inbox .box.vertical_space +h2 +form >.box.pad tbody,
-#inbox #messageform +h2 +form >.box.pad tbody,
+/* #inbox .box.vertical_space +h2 +form >.box.pad tbody,
+#inbox #messageform +h2 +form >.box.pad tbody, */
+#inbox .thin >h2 +form >.box.pad tbody,
 #index #freeleech .group_torrent,
 
 #grouplinks,
@@ -4694,9 +4696,10 @@ h3 a[href^="user.php?action=notify_delete&"],
 .freeleech_shop_main >div,
 .global_buffs_shop_main >div,
 
-#inbox .box.vertical_space +h2 +form>.box.pad,
+/* #inbox .box.vertical_space +h2 +form>.box.pad,
 #inbox #messageform +h2 +form >.box.pad,
-#inbox h2 +#messageform >.box.pad,
+#inbox h2 +#messageform >.box.pad, */
+#inbox .thin >h2 +form >.box.pad,
 
 #forums #threadpoll,
 
@@ -4876,9 +4879,9 @@ img[title="ThumbsDown"] {
     /*background-color: var(--c-tag);*/
     color: var(--c-text-s);
     /*visibility: visible;*/}
-#changelog .sidebar .box.issues_labels li:not(:last-child),
-#changelog .labels a:not(:last-child),
-.tags a:not(:last-child) {
+#changelog .sidebar .box.issues_labels li:nth-last-child(n+2),
+#changelog .labels a:nth-last-child(n+2),
+.tags a:nth-last-child(n+2) {
     margin-right: 6px;}
 /*#image_block,*/
 #changelog .sidebar .box.issues_labels ul,
@@ -4972,7 +4975,7 @@ table#requests_list         tr:hover .tags a {
     font-size: 12px;
     line-height: var(--p-lh);}
 
-.rating_container:not(:last-of-type) {
+.rating_container:nth-last-of-type(n+2) {
     margin-right: 4px;}
 .rating_container:last-of-type {
     margin-right: 8px;}
@@ -6901,7 +6904,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowa,
 /* #upload #content >div >table[style] tr:not(.colhead):nth-child(odd), */
 #dnu >table tr:not(.colhead):nth-child(odd),
 #reports .thin >table tr:not(.colhead):nth-child(odd),
-#manage_collage_table tr:not(.colhead):not(:last-child):nth-child(odd),
+#manage_collage_table tr:not(.colhead):nth-last-child(n+2):nth-child(odd),
 #uploaded_table             tr:not(.colhead):nth-child(odd),
 #seeding_table              tr:not(.colhead):nth-child(odd),
 #leeching_table             tr:not(.colhead):nth-child(odd),
@@ -6917,8 +6920,8 @@ form#drag_drop_collage_form table#manage_collage_table .rowa,
 #wiki .thin form:only-child table tr:not(.colhead):nth-child(odd), /* wiki Revision history */
 #torrents .torrent_notifications table.border tr:not(.colhead):nth-child(odd),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(odd),
-#wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(odd) td:nth-child(-n+2),
-.clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(even) td:nth-last-child(-n+2) {
+#wrapper .clan_stat_totals table.border tr:not(.colhead):nth-last-child(n+2):nth-child(odd) td:nth-child(-n+2),
+.clan_stat_totals table.border tr:not(.colhead):nth-last-child(n+2):nth-child(even) td:nth-last-child(-n+2) {
     background-color: var(--c-box);}
 .rowb,
 .row_b,
@@ -6936,7 +6939,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 /* #upload #content >div >table[style] tr:not(.colhead):nth-child(even), */
 #dnu >table tr:not(.colhead):nth-child(even),
 #reports .thin >table tr:not(.colhead):nth-child(even),
-#manage_collage_table tr:not(.colhead):not(:last-child):nth-child(even),
+#manage_collage_table tr:not(.colhead):nth-last-child(n+2):nth-child(even),
 #uploaded_table             tr:not(.colhead):nth-child(even),
 #seeding_table              tr:not(.colhead):nth-child(even),
 #leeching_table             tr:not(.colhead):nth-child(even),
@@ -6952,8 +6955,8 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 #wiki .thin form:only-child table tr:not(.colhead):nth-child(even), /* wiki Revision history */
 #torrents .torrent_notifications table.border tr:not(.colhead):nth-child(even),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(even),
-#wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(even) td:nth-child(-n+2),
-.clan_stat_totals table.border tr:not(.colhead):not(:last-child):nth-child(odd) td:nth-last-child(-n+2) {
+#wrapper .clan_stat_totals table.border tr:not(.colhead):nth-last-child(n+2):nth-child(even) td:nth-child(-n+2),
+.clan_stat_totals table.border tr:not(.colhead):nth-last-child(n+2):nth-child(odd) td:nth-last-child(-n+2) {
     background-color: var(--c-trowb);}
 
 /* hovers are located in desktop.css now */
@@ -6969,7 +6972,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 #collages tr:not(.colhead):hover,
 #upload #content >div >table[style] tr:not(.colhead):hover,
 #reports .thin >table tr:not(.colhead):hover,
-#manage_collage_table tr:not(.colhead):not(:last-child):hover,
+#manage_collage_table tr:not(.colhead):nth-last-child(n+2):hover,
 #uploaded_table             tr:not(.colhead):hover,
 #seeding_table              tr:not(.colhead):hover,
 #leeching_table             tr:not(.colhead):hover,
@@ -6983,19 +6986,19 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 #wiki .thin >table tr:not(.colhead):hover,
 #torrents .torrent_notifications table.border tr:not(.colhead):hover,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):hover,
-.clan_stat_totals table.border tr:not(.colhead):not(:last-child):hover td {
+.clan_stat_totals table.border tr:not(.colhead):nth-last-child(n+2):hover td {
     background-color: var(--c-row-hvr) !important;}
 */
 
 #calendar .day-events a:hover,
 #wrapper #content .torrent_table tr.pad table.reportinfo_table tr:not(.colhead_dark),
 #reports .thin>table >tbody >.colhead +tr:last-child,
-#wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td:empty {
+#wrapper .clan_stat_totals table.border tr:not(.colhead):nth-last-child(n+2) td:empty {
     background-color: transparent !important;}
 
 .torrent_table tr.pad div[id^="snatches_"] td:nth-child(2),
 .torrent_table tr.pad div[id^="downloads_"] td:nth-child(2),
-.clan_stat_totals table.border tr:not(.colhead):not(:last-child) td:nth-child(2) {
+.clan_stat_totals table.border tr:not(.colhead):nth-last-child(n+2) td:nth-child(2) {
 	border-right: 1px solid var(--c-table-brdr);}
 
 .box_series li {
@@ -7087,7 +7090,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 #torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) {
     font-size: 0;
     line-height: 0;}
-#torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >a:not(:last-of-type) {
+#torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >a:nth-last-of-type(n+2) {
     display: inline-block;
     margin-right: 3px;}
 /* #torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >a:last-of-type, */
@@ -7449,9 +7452,10 @@ input[name="action"]:not([value="delete_notify"]) ~tbody .noticon    div:not(.ca
 #rules .thin >h2.center:first-child,
 #rules .thin >h3,
 #chat .thin >h3,
-#inbox .box.vertical_space +h2,
+/* #inbox .box.vertical_space +h2,
 #inbox #messageform +h2,
-#inbox .box.vertical_space +h2,
+#inbox .box.vertical_space +h2, */
+#inbox .thin >h2:nth-child(n+2),
 #reports .thin >h3,
 #reportsv2 #dynamic_form >table.border:before,
 #reportsv2 #report_table >h3,
@@ -7676,7 +7680,7 @@ input[name="year"],
 /* (API Keys table, user settings) hack */
 #user #wrapper #content td table .colhead {
     border: 1px solid var(--c-table-brdr);}
-#user #wrapper #content td table .colhead:not(:last-child) {
+#user #wrapper #content td table .colhead:nth-last-child(n+2) {
     border-bottom: none;}
 #user #wrapper #content td table .colhead ~.rowa,
 #user #wrapper #content td table .colhead ~.rowb {
@@ -7858,7 +7862,7 @@ tr#reviewrow form#review_form >p,
 #forums h4 {
     margin: 0;
     padding: 0;}
-#existing_freeleech_pots tr:not(.colhead) td:nth-child(n+2):not(:last-child),
+#existing_freeleech_pots tr:not(.colhead) td:nth-child(n+2):nth-last-child(n+2),
 #bookmarks span.time {
     font-size: 13px;}
 /* floating (32px to 34px) colhead height fix */
@@ -8148,9 +8152,10 @@ form#drag_drop_collage_form .drag_drop_save:first-child {
     margin: 1px auto 0 auto;
     position: relative;
     z-index: 9;}
-#inbox .box.vertical_space +h2 +form,
+/* #inbox .box.vertical_space +h2 +form,
 #inbox #messageform +h2 +form,
-#inbox h2 +#messageform,
+#inbox h2 +#messageform, */
+#inbox #wrapper .thin >h2 +form,
 #reports .thin >.box.pad,
 #forums #reply_box,
 #reportsv2 #report_table >.box.pad {
@@ -8201,7 +8206,7 @@ tr.likes td[id^="likers_"] >strong:nth-of-type(2),
 #request_form >strong ~#new_ratio +#button,
 #request_form >strong ~#new_gold +#button {
     margin-top: 2px;}
-.box_coltags li:not(:last-of-type),
+.box_coltags li:nth-last-of-type(n+2),
 .box_tags .stats.nobullet li,
 #collections table#new_collage input#art,
 #collections table#new_collage input#art ~input,
@@ -8262,7 +8267,7 @@ tr.likes td[id^="likers_"]:hover {
 #user #wrapper #content td table .rowa td, /* (API Keys table, user settings) #wrapper #content to override the table padding hack */
 .screenshots_div .body,
 .box.screenshots_div #image_block,
-#wrapper .clan_stat_totals table.border tr:not(.colhead):not(:last-child) td,
+#wrapper .clan_stat_totals table.border tr:not(.colhead):nth-last-child(n+2) td,
 #running_freeleech td.center.cats_col,
 #inbox .colhead >td:first-child,
 .bbcode_table_div,
@@ -8717,9 +8722,10 @@ form#tag_add_form >input,
 #inbox #searchbox input:not([type="text"]),
 #upload #remaster_true #remaster_year {
     margin-top: 5px;}
-#inbox .box.vertical_space +h2 +form>.box.pad,
+/* #inbox .box.vertical_space +h2 +form>.box.pad,
 #inbox #messageform +h2 +form >.box.pad,
-#inbox h2 +#messageform >.box.pad {
+#inbox h2 +#messageform >.box.pad, */
+#inbox .thin >h2 +form >.box.pad {
     padding: 46px 10px 10px 10px;
     position: relative;}
 #collections .thin >h2:first-child +form:last-child:before, /* edit description page */
@@ -8837,9 +8843,10 @@ form#tag_add_form >input,
 #inbox #messageform table+input,
 #torrents #content>script:first-child+h2+form #specialed {
     margin-left: 10px;}
-#inbox .box.vertical_space +h2,
+/* #inbox .box.vertical_space +h2,
 #inbox #messageform +h2,
-#inbox .box.vertical_space +h2 {
+#inbox .box.vertical_space +h2, */
+#inbox .thin >h2:nth-child(n+2) {
     position: relative;
     margin: 1px auto 0 auto;
     width: calc(100% - 22px);}
@@ -8849,14 +8856,16 @@ form#tag_add_form >input,
 	border: 1px solid var(--c-table-brdr);
     /* -webkit-box-shadow: var(--p-header-shdw); */
     box-shadow: var(--p-header-shdw);}
-#inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child),
-#inbox #messageform +h2 +form >.box.pad tr:not(:last-child) {
+/* #inbox .box.vertical_space +h2 +form >.box.pad tr:nth-last-child(n+2),
+#inbox #messageform +h2 +form >.box.pad tr:nth-last-child(n+2), */
+#inbox .thin >h2 +form >.box.pad tr:nth-last-child(n+2) {
     width: calc(100% - 180px);}
-/* #inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child) td,
-#inbox #messageform +h2 +form >.box.pad tr:not(:last-child) td {
+/* #inbox .box.vertical_space +h2 +form >.box.pad tr:nth-last-child(n+2) td,
+#inbox #messageform +h2 +form >.box.pad tr:nth-last-child(n+2) td {
     vertical-align: bottom;} */
-#inbox .box.vertical_space +h2 +form >.box.pad tr:not(:last-child) td:not(.label),
-#inbox #messageform +h2 +form >.box.pad tr:not(:last-child) td:not(.label) {
+/* #inbox .box.vertical_space +h2 +form >.box.pad tr:nth-last-child(n+2) td:not(.label),
+#inbox #messageform +h2 +form >.box.pad tr:nth-last-child(n+2) td:not(.label), */
+#inbox .thin >h2 +form >.box.pad tr:nth-last-child(n+2) td:not(.label) {
     padding-right: 20px;
     padding-left: 0;}
 
@@ -9037,7 +9046,7 @@ form#tag_add_form >input,
 
 .sidebar #tags_box #tagging_rules {
     top: 3px;}
-.sidebar #tags_box #tagslist:not(:last-child):after {
+.sidebar #tags_box #tagslist:nth-last-child(n+2):after {
     content: '';
     position: absolute;
     width: calc(100% + 20px);
@@ -9506,7 +9515,7 @@ form#tag_add_form >input,
     width: calc(20% - 8px);
     align-self: center;
     margin-bottom: 10px;}
-#bookmarks #collage_table td:not(:last-child) {
+#bookmarks #collage_table td:nth-last-child(n+2) {
     margin-right: 10px;}
 #bookmarks #collage_table:before {
     content: 'Collage';
@@ -10185,7 +10194,7 @@ table#likesrow a {
     font-weight: 600;
     line-height: var(--p-head);
     background: var(--p-head-grdnt);}
-#todo .thin >form tr:not(.colhead):not(:last-child) td:first-child {
+#todo .thin >form tr:not(.colhead):nth-last-child(n+2) td:first-child {
     text-align: right;
     width: 100px;}
 
@@ -10795,7 +10804,7 @@ div#add_tags_input {
     line-height: 16px;}
 #seedtime_tokens #tokens_breakdown tr:not(.colhead) td:not(.label):hover,
 #user .box.box_gold #box_gold_scrollbar tr:not(.colhead) td:not(.label):hover,
-#achievements tr:not(.colhead):not(:last-child) td:not(.achlabel):hover {
+#achievements tr:not(.colhead):nth-last-child(n+2) td:not(.achlabel):hover {
     background-color: var(--c-row-hvr);}
 
 .sidebar .secondary_classes {
@@ -13512,7 +13521,7 @@ td .log_green {
     overflow: visible;
     font-weight: 600;}
 
-#share_score_breakdown tr:nth-child(n+2):not(:last-child) {
+#share_score_breakdown tr:nth-child(n+2):nth-last-child(n+2) {
 	border-bottom: 1px solid var(--c-table-brdr);}
 
 
@@ -13843,7 +13852,7 @@ table.adventure_table h3 {
      display: inline-block;}
 /* .attacks_manager #attributes ul li input:checked + label,
 .monsters_manager ul.inline_list li input:checked + label {} */
-/* .monsters_manager #attributes_div tr:not(:last-child) td {} */
+/* .monsters_manager #attributes_div tr:nth-last-child(n+2) td {} */
 
 #adventureclub ul.inline_list {margin-top: 0;}
 /* #adventureclub .linkbox {} */
@@ -15566,7 +15575,7 @@ div#fight_skill_points_assign >table {
 	padding-bottom: 0.4em;*/}
 /*#users_reviews .display_name { flex: 0 0 95%; }
 #users_reviews .delete_review { flex: 1; }*/
-#users_reviews .display_name:not(:last-child) {
+#users_reviews .display_name:nth-last-child(n+2) {
     width: calc(100% - 26px);}
 
 /* #users_reviews .review_date .label {
