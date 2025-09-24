@@ -3665,7 +3665,7 @@ input[disabled] {
     position: relative;
     display: flex;}
 .box .head .newsdate,
-.box.news_post .head .time {
+#wrapper .box.news_post .head .time {
     font-weight: normal;
     font-size: 14px;
     line-height: 15px;
@@ -3693,7 +3693,7 @@ input[disabled] {
 /* reverse text indent */
 .box.news_post .head strong:before {
     content: '';
-    width: 160px;
+    width: 170px;
     float: right;
     height: 15px;}
 #bookmarks td#sorting_head:before,
@@ -11153,6 +11153,9 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     content: '–';
     /* content: '-'; */
 }
+
+.box_main_info .box_links:not(:has(>ul.nobullet >li)),
+.similar_div .similar:not(:has(>ul.nobullet >li)), /* :empty won't work because it isn't actually empty */
 #grouplinks:not(:has(td)),
 .torrent_details .group_torrent:has(.personal_freeleech_label) a[title="Use a FL Token"], /* removing FL token link from low seed freeleech */
 #tools #content >br:has(+br),
@@ -11176,8 +11179,8 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     font-weight: 600;
     content: 'Item Stats';}
 
-.similar_div .similar:not(:has(>ul.nobullet>li)) { /* :empty won't work because it isn't actually empty */
-    display: none;}
+#wrapper .box.news_post .head:has(>.newsdate) strong:before {
+    width: 100px;}
 
 .freeleech_pot_contribute.shown:after, /*d*/
 .box_freeleech:has(a#freeleech_pot_show):after, /*d*/
@@ -11221,8 +11224,6 @@ a#toggle_css_gallery:has(~#css_gallery[style="display: block;"]):before {
     line-height: 26px;}
 /* #artist .sidebar .body:has(a#tag_show\/hide) a#tag_show\/hide {
     margin-top: -26px;} */
-#artist .sidebar .body:has(a#tag_show\/hide) ul {
-    line-height: var(--p-lh);}
 
 .group_torrent:has(strong[class$="freeleech_label"]),
 .group_torrent:has(.reported_label),
@@ -13316,6 +13317,8 @@ td .log_green {
 #achievements td.achlabel .bold {
     font-weight: 600;}
 
+#blog .head .time,
+#artist .sidebar .body:has(a#tag_show\/hide) ul,
 .book span,
 #achievements .colhead span.italic {
     line-height: var(--p-lh);}
