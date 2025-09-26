@@ -1238,7 +1238,7 @@
     .tags_ratings .tags:before,
     #torrents #torrentbrowse td#displayname:before {
         content: '';
-        width: 72px;
+        width: 74px;
         float: right;
         height: 24.5px;}
     #wrapper .tags_ratings .tags:before {
