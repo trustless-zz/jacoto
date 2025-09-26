@@ -804,6 +804,10 @@ input#versionunknown {
 */
 #nav_useredit a:hover {
     background-color: var(--c-anchor-hvr);}
+.torrent_table .addbookmark:hover {
+    background: var(--c-on);}
+.collections_art_display .remove_bookmark_div:hover,
+.torrent_table .removebookmark:hover,
 #nav_logout a:hover {
     background-color: var(--c-off);}
 #nav_donate a:hover {

@@ -1059,8 +1059,10 @@
 	#torrents .rowa td {background-color: transparent;}
 
 	.group:hover, .torrent:hover {background-color: inherit;} */
+    .group.rowa .tags a,
     .torrent_table .group.rowb {
         background-color: var(--c-input-obj);}
+    .torrent_table .group.sticky .tags a,
     .torrent_table .group.rowa {
         background-color: var(--c-tgroup);}
     .torrent_table .group.sticky {
@@ -1244,8 +1246,10 @@
 		margin-left: 0px;
         padding: 0 2px;
 		line-height: 19px;}
-    .tags a {
-        background-color: var(--c-tag);}
+    #torrents #torrentbrowse .torrent_table td:nth-of-type(3) .rating_container +.tags a:first-child {
+        margin-left: 4px;}
+    .group.rowb .tags a {
+        background-color: var(--c-edition);}
     /* #top10 .tags a,
     table#requests_list .tags a {
         background-color: var(--c-tag-2);} */

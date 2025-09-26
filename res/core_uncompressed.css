@@ -1115,15 +1115,15 @@ td.read_locked_sticky:before {
 .torrent_table .addbookmark {
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 22'%3E%3Cpath d='M0,0V22H1.06067L8,15.06067,14.93933,22H16V0ZM14.5,19.43933l-6.5-6.5-6.5,6.5V6.5h13ZM1.5,5V1.5h13V5Z'/%3E%3C/svg%3E") no-repeat center / contain;
     background: var(--c-text-s);}
-.torrent_table .addbookmark:hover {
-    background: var(--c-on);}
+/* .torrent_table .addbookmark:hover {
+    background: var(--c-on);} */
 .collections_art_display .remove_bookmark_div,
 .torrent_table .removebookmark {
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 22'%3E%3Cpolygon points='0 22 1.061 22 8 15.061 14.939 22 16 22 16 6.5 0 6.5 0 22'/%3E%3Crect width='16' height='5'/%3E%3C/svg%3E") no-repeat center / contain;
     background: var(--c-text-s);}
-.collections_art_display .remove_bookmark_div:hover,
+/* .collections_art_display .remove_bookmark_div:hover,
 .torrent_table .removebookmark:hover {
-    background: var(--c-off);}
+    background: var(--c-off);} */
 
 .ui-icon-circle-triangle-e,
 .ui-icon-circle-triangle-w,
@@ -2531,6 +2531,8 @@ table#snatchesrow a,
 table#likesrow a,
 
 a[title="Delete"],
+
+.tags_ratings,
 
 td .username_badges a,
 h2 .username_badges a {
@@ -4975,10 +4977,6 @@ table#requests_list         tr:hover .tags a {
     font-size: 12px;
     line-height: var(--p-lh);}
 
-.rating_container:nth-last-of-type(n+2) {
-    margin-right: 4px;}
-.rating_container:last-of-type {
-    margin-right: 8px;}
 /*#wrapper #trading_panel div.gold_trade,
 #wrapper #trading_panel .gold_trade .gold_trade_buttons,
 #wrapper #trading_panel .gold_trade .gold_trade_box,*/
@@ -4987,16 +4985,18 @@ table#requests_list         tr:hover .tags a {
 #wiki .sidebar .box.box_addalias .add_form,
 #user .thin >.header:first-child +.box.pad +.box.pad table.border td:not(.label),
 /*.box.screenshots_div #image_block >span,*/
-#collections .sidebar .add_torrent .field_div,
-.tags_ratings {
+/* .tags_ratings, */
+#collections .sidebar .add_torrent .field_div {
     display: flex;
     flex-flow: row;}
 .rating_container {
+    float: left;
     opacity: .8;
     height: 100%;
     padding: 0 2px;
     font-size: 13px;
-    line-height: var(--p-lh);}
+    line-height: var(--p-lh);
+    margin-right: 4px;}
 .rating_container:hover {
     opacity: 1;
     background-color: var(--c-box);}
@@ -15347,6 +15347,7 @@ div#fight_skill_points_assign >table {
 	padding: 10px;} */
 #fight_skill_points_assign tr.submit_section #assignable_skill_points {
 	font-size: 24px;}
+.rating_container +.tags a:first-child,
 #fight_skill_points_assign .buttons input +input {
     margin-left: 4px;}
 
