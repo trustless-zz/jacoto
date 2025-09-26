@@ -2413,15 +2413,15 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(2),
 #index #freeleech .group_torrent >span:first-child {
     order: 1;}
 #collections .sidebar .box.box_comment .pad,
-.rating_container:nth-child(1),
+/* .rating_container:nth-child(1), */
 #index #freeleech .group_torrent span.tor_size {
     order: 2;}
 #collections .sidebar .box.box_comment .subhead,
 li:not(.suggested_similar) .similar_votes >a:nth-child(1),
-.rating_container:nth-child(2),
+/* .rating_container:nth-child(2), */
 #index #freeleech .group_torrent >a {
     order: 3;}
-.rating_container:nth-child(3),
+/* .rating_container:nth-child(3), */
 #index #freeleech .group_torrent span.platform {
     order: 4;}
 #index #freeleech .group_torrent span.tor_info {
@@ -4873,6 +4873,7 @@ img[title="ThumbsDown"] {
     /*visibility: hidden;*/
     /*line-height: var(--p-lh);*/}
 .tags a {
+    margin-top: 2px;
     font-size: 12px;
     line-height: 1em;
     /*margin-top: calc(12px * var(--p-lh) - 16px);*/

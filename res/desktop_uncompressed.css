@@ -14,7 +14,7 @@ body {
 
 .tags a {
     /*margin-top: calc(12px * var(--p-lh) - 16px);*/
-    margin-top: 2px;
+    /* margin-top: 2px; */
     padding: 2px;}
 
 tr:hover .tags a {
