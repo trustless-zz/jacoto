@@ -1800,6 +1800,8 @@ td.center.cats_col+td,
 
 #group_tags,
 
+.tag_autocomplete,
+
 .box_torrent_checking a[href^="torrents.php?action=deletegroup&"],
 
 .box.box_info span[style="float:right;"],
@@ -2040,7 +2042,8 @@ form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 
 #user .thin >.header:first-child +.box.pad +.box.pad table.border input[type="text"],
 
-input[name="add_tags_input"],
+/* input[name="add_tags_input"], */
+.tag_autocomplete >input[type="text"],
 
 #torrents #content >script ~form #torrent_link input[name="internallink"],
 #tools .thin >#recommended >.head.colhead_dark:first-child +form.pad input[type="text"] {
@@ -2355,7 +2358,8 @@ tr.unreadpm td:first-child:after {
     background: var(--c-input-obj);
     overflow-y: auto;
     max-height: 220px;
-    width: calc(100% - 55px);
+    width: auto;
+    max-width: calc(100% - 55px);
     top: calc(100% + 7px);
     left: 0;
     z-index: 9999;}
@@ -10633,9 +10637,9 @@ a#add_tags_link {
 a#add_tags_link {
     left: 50%;
     transform: translateX(-50%);}
-div#add_tags_input {
+.sidebar .tag_autocomplete {
     /* z-index: 4; */
-    position: relative;
+    /* position: relative; */
     margin-top: 19px;
     display: flex;
     flex-flow: row;
