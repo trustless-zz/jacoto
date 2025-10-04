@@ -3392,8 +3392,8 @@ a[onclick="showDnu();"]:after,
 
 .select2-selection,
 
-.weblink label:before,
-.weblink label:after,
+/* .weblink label:before,
+.weblink label:after, */
 
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
@@ -3595,6 +3595,7 @@ table#snatchesrow a,
 table#uploadsrow a,
 .group_torrent td:first-child >a span,
 .box_game_ratings a[target="_blank"],
+.forum_cat a.forum_category:active, /* forum search - check all */
 input[type="checkbox"]:active,
 input[type="radio"]:active,
 .torrent_table tr.pad td >.linkbox >a:active,
@@ -3920,8 +3921,8 @@ input[disabled] {
     padding: 9px 10px;
     width: calc(100% - 20px);
     height: var(--p-head);}
-#wrapper .weblink:hover label:after,
-#wrapper .weblink:hover label:before,
+/* #wrapper .weblink:hover label:after,
+#wrapper .weblink:hover label:before, */
 #bookmarks td#sorting_head:hover:before,
 #forums .thin >.box.thin.clear .head.colhead_dark:hover:before,
 #newthreadpreview #pollpreview .head.colhead_dark:hover:before,
@@ -5466,6 +5467,7 @@ input:focus,
     outline: none;}
 .select2-container--open .select2-dropdown--below {
     border-color: var(--c-b1);}
+.forum_cat a.forum_category,
 input[type="checkbox"],
 input[type="radio"],
 #requests table.border a[href^="upload.php"],
@@ -5609,6 +5611,7 @@ form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 .torrent_table tr.pad td >.linkbox >a[href*="?action="],
 #group_nofo_bigdiv a#group_quick_edit,
 .box_torrent_checking a[href^="torrents.php?action=deletegroup&"],
+.forum_cat a.forum_category,
 #torrent_table .group/*.discog*/ td span[style="float:right;"] /* bookmark icon */
 /* /image container size correction */ {
     font-size: 0;
@@ -5649,6 +5652,7 @@ a[onclick^="deleteTag("] {
 .box_tags .stats.nobullet {
     margin-top: 0;
     line-height: 26px;}
+#torrents .center.thin >.box.pad table ~input[type="submit"]:last-child,
 .box_image_avatar .head,
 #expanded_review_box #load_edit_review_dialog,
 #threadpoll #poll_results,
@@ -7520,6 +7524,9 @@ input[name="action"]:not([value="delete_notify"]) ~tbody .noticon    div:not(.ca
 #upload #groupinfo tr:not(.colhead) td:first-child, */
 #upload #dynamic_form tr:not(.colhead) td:first-child,
 
+/* #torrents .center.thin >.box.pad .border >tbody >tr >td:first-child, */
+#torrents .center.thin >.box.pad td.label,
+
 #upload #torrent_properties tr:not(.colhead) td:first-child,
 .thin >#request_form >table td:first-child,
 #requests .main_column >table:first-child td:first-child,
@@ -7536,6 +7543,9 @@ input[name="action"]:not([value="delete_notify"]) ~tbody .noticon    div:not(.ca
 #user .thin >h2 +form#userform >table.border tr:not(.colhead_dark) td:last-child,
 #reportsv2 #dynamic_form >table.border td:last-child,
 #upload #dynamic_form + table.border.slice td:last-child,
+
+/* #torrents .center.thin >.box.pad .border >tbody >tr >td:last-child, */
+#torrents .center.thin >.box.pad td.label ~td:last-child,
 
 /* #upload #releaseinfo tr:not(.colhead) td:last-child,
 #upload #groupinfo tr:not(.colhead) td:last-child, */
@@ -7555,6 +7565,7 @@ input[name="action"]:not([value="delete_notify"]) ~tbody .noticon    div:not(.ca
 #reportsv2 #dynamic_form >table.border tr:first-child td,
 #upload #dynamic_form + table.border.slice tr:first-child td,
 
+#torrents .center.thin >.box.pad tr:first-child td.center, /* edit description page */
 /* #upload #releaseinfo tr:nth-child(2) td,
 #upload #groupinfo tr:nth-child(2) td,
 #upload #groupinfo .colhead +tr td, */
@@ -7945,6 +7956,7 @@ input#meta[type="number"], */
 /* #image_block input[type="url"],
 #image_block input[type="text"] {
     width: calc(100% - 160px) !important;} */
+#torrents .center.thin >.box.pad td.label,
 #user h2 +form#userform td.label,
 #upload td.label {
     background-color: var(--c-tgroup);}
@@ -8749,7 +8761,11 @@ input[type="button"][value="Hide"]:hover,
 a[onclick="BBCode.spoiler(this);"]:hover {
     color: var(--c-anchor-hvr);
     background-color: var(--c-anchor-hvr-bcg) !important;}
-
+.forum_cat a.forum_category {
+    margin: 3px 6px 3px 4px;
+    float: left;
+    cursor: default;}
+.forum_cat a.forum_category,
 input[type="checkbox"],
 input[type="radio"] {
     position: relative;
@@ -8761,6 +8777,7 @@ input[type="radio"] {
     box-shadow: var(--p-input-shdw);
     /* -webkit-appearance: none; */
     appearance: none;}
+.forum_cat a.forum_category,
 input[type="checkbox"] {
     border-color: var(--c-input-brdr);}
 input[type="radio"] {
@@ -8786,10 +8803,12 @@ input[type="checkbox"]:checked:after {
     left: 2px;
     width: 7px;
     height: 7px;}
+.forum_cat a.forum_category:hover,
 input[type="checkbox"]:hover,
 input[type="radio"]:hover {
     border-color: var(--c-b1);
     background-color: var(--c-input-focus);}
+.forum_cat a.forum_category:active,
 input[type="checkbox"]:active,
 input[type="radio"]:active {
     border-color: var(--c-b1);
@@ -11375,6 +11394,9 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     /* content: '-'; */
 }
 
+#torrents .center.thin >.box.pad:has(#weblinks_edit) {
+    padding: 36px 0 0 0;}
+
 /* .weblinksTitle +td:has(#metauri):before {
     content: 'Metacritic Link';}
 .weblinksTitle +td:has(#ignuri):before {
@@ -11429,7 +11451,16 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     z-index: -1;
     background-color: var(--c-tgroup);
     border-top: 1px solid var(--c-table-brdr);}
-
+tr:has(+tr input[checked="checked"]) .forum_cat a.forum_category {
+    box-shadow: inset 0 0 2px var(--c-header-shdw);}
+tr:has(+tr input[checked="checked"]) .forum_cat a.forum_category:after {
+    content: '';
+    position: absolute;
+    background: var(--c-txt);
+    top: 2px;
+    left: 2px;
+    width: 7px;
+    height: 7px;}
 
 #wrapper .trailer_div:not(:has(>.head)):before {
     width: 100%;
@@ -11480,8 +11511,8 @@ a#toggle_css_gallery:has(~#css_gallery[style="display: block;"]):before {
 .group_torrent:has(.trumpable_label) td:first-child:after{
     cursor: default;
     opacity: .8;}
-#wrapper .weblink label:has(~input:focus):before,
-#wrapper .weblink label:has(~input:focus):after,
+/* #wrapper .weblink label:has(~input:focus):before,
+#wrapper .weblink label:has(~input:focus):after, */
 #wrapper .group_torrent:hover:has(strong[class$="freeleech_label"]) td:first-child:before,
 .group_torrent:hover:has(.reported_label) td:first-child:after,
 .group_torrent:hover:has(#trumpable_tag) td:first-child:after,
