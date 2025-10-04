@@ -11394,6 +11394,9 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     /* content: '-'; */
 }
 
+#artist .sidebar .body:has(a#tag_show\/hide) ul {
+    line-height: var(--p-lh);}
+
 #torrents .center.thin >.box.pad:has(#weblinks_edit) {
     padding: 36px 0 0 0;}
 
@@ -13578,7 +13581,6 @@ td .log_green {
     font-weight: 600;}
 
 #blog .head .time,
-#artist .sidebar .body:has(a#tag_show\/hide) ul,
 .book span,
 #achievements .colhead span.italic {
     line-height: var(--p-lh);}
