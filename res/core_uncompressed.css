@@ -10393,7 +10393,7 @@ th#check_all span,
     padding: 0 5px;}
 
 h2#username span#tip_user img {
-    background: var(--s-gold-plus) no-repeat center / 28px 28px;
+    background: var(--s-gold-plus) no-repeat center / 28px 28px, var(--s-gold) no-repeat left center / 24.954999px 28px;
     padding-left: 28px;
     width: 28px;
     height: 28px;
@@ -14945,9 +14945,9 @@ https://greasyfork.org/en/scripts/392904-ggn-trade-item-count-editor
 	width: 26px;
     padding-left: 26px;}
 #wrapper #trading_panel .gold_trade a#gold_trade_add img {
-    background: var(--s-gold-plus) no-repeat center / contain;}
+    background: var(--s-gold-plus) no-repeat center / contain, var(--s-gold) no-repeat left center / contain;}
 #wrapper #trading_panel .gold_trade a#gold_trade_subtract img {
-    background: var(--s-gold-minus) no-repeat center / contain;}
+    background: var(--s-gold-minus) no-repeat center / contain, var(--s-gold) no-repeat left center / contain;}
 
 /*** Value ***/
 #wrapper .trade_value {

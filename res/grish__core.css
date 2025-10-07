@@ -1,10 +1,4 @@
-﻿@import url('res/core.css');
-@import url('res/userscripts.css');
-@import url('res/desktop.css') screen and (min-width: 801px);
-@import url('res/mobile.css') screen and (max-width: 800px);
-@import url('res/large_sidebar.css') screen and (min-width: 1387px);
-
-:root {
+﻿:root {
     --c-selection:                      rgba(69, 120, 168, .996);
     --c-selection-i:                    rgba(69, 120, 168, .75);
     --c-blackout:                       rgb(0, 0, 0);
@@ -200,5 +194,3 @@ blockquote code {
 .tilt {transition: all 0.5s ease;}
 .tilt:hover {transform: rotate(-10deg);}
 #grouplinks a:hover {filter: drop-shadow(0.5px 0.5px 5px #69c077);}
-
-body >div[id^="ghost"] {display: none;}
