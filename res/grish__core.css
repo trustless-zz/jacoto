@@ -193,4 +193,8 @@ blockquote code {
 .userratingdiv img:hover {filter: drop-shadow(2px 2px 5px #000);}
 .tilt {transition: all 0.5s ease;}
 .tilt:hover {transform: rotate(-10deg);}
+.cats_col +td #groupplatform a:hover,
+.collicon +td #groupplatform a:hover,
+.noticon +td #groupplatform a:hover,
 #grouplinks a:hover {filter: drop-shadow(0.5px 0.5px 5px #69c077);}
+#tip_user a:hover {filter: drop-shadow(0px 0px 5px #fff1a5cc);}
