@@ -6097,6 +6097,8 @@ body:not(#upload) #artist_tr + tr td.label,
 
 #user #trades_table .colhead strong, /* Your Trades */
 
+b>#footer, /* chat.php bug - when IFC key hasn't been yet */
+
 #changelog form.search_form td.label strong,
 
 #content >.torrent_notifications .colhead strong,
