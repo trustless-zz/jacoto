@@ -3645,6 +3645,7 @@ a[onclick="showDnu();"]:active:after {
     color: var(--c-gold) !important;
     text-shadow: var(--p-gold);}
 
+#userform span[style="color: red; font-weight: bold"], /* user settings, message about keeping IRC key unique */
 #specifylanguage,
 .torrent_details .torrent_table tr.pad tr td span[style*="red"], /* example: show peerlist table */
 .calendar a[style="color: red;"],
