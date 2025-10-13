@@ -1,4 +1,5 @@
 ﻿:root {
+    color-scheme: dark;
     --c-blackout:                       rgb(60, 60, 60);
     --c-blackout-show:                  rgb(220, 220, 220);
     --c-post-img:                       rgb(55, 55, 55);
