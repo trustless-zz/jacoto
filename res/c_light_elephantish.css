@@ -138,6 +138,17 @@
     --s-scroll-resizer:                 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 15 15'%3E%3Cpolygon points='10.111 14 11.879 14 14 11.879 14 10.111 10.111 14' fill='%23646464'/%3E%3Cpolygon points='6.111 14 7.879 14 14 7.879 14 6.111 6.111 14' fill='%23646464'/%3E%3C/svg%3E");
 }
 
+#user .box.box_items #itemsdiv td >div:hover,
+.sidebar .box.box_image_coverart img:hover,
+table#uploadsrow img:hover,
+table#snatchesrow img:hover,
+table#likesrow img:hover,
+#recommended #vanityhouse img:hover,
+.hovereffect:hover,
+.collage_images li a:hover,
+.similar img:hover {
+    border-color: var(--c-anchor-hvr);}
+
 a:has(>.tilt):hover,
 a:has(>#linkedgroup):hover,
 #torrents .body.center.userratingdiv .vote:hover,
