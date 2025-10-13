@@ -2410,6 +2410,7 @@ td >input#file {
 .spoilerbox,
 blockquote,
 pre {
+    color: var(--c-txt);
     padding: 10px;
 	border-radius: 0 !important;
     /* -webkit-box-shadow: var(--p-header-shdw); */
@@ -4562,7 +4563,7 @@ li.graph {
     background-color: var(--c-body);}
 .torrent_table .group.rowb {
     background-color: var(--c-tor-rowb);}
-.torrent_table tr:not(.colhead):not(.colhead_dark) td {
+.torrent_table tr:not(.colhead):not(.colhead_dark) >td {
 	border-top: 1px solid var(--c-table-brdr);
     color: var(--c-text-s);
     vertical-align: middle;}
@@ -7216,6 +7217,8 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 	border: 1px solid var(--c-table-brdr);
     margin: 0 10px 15px 10px;
     width: calc(100% - 20px);}
+#wrapper .torrent_details .reportinfo_table {
+    border-color: var(--c-red);}
 
 /* #wrapper #usersreviewimage img,
 #wrapper img[src="static/common/thumbsdown.png"],
