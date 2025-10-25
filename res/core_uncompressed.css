@@ -2613,9 +2613,6 @@ li:not(.suggested_similar) .similar_votes >a:nth-child(1),
     order: 4;}
 #index #freeleech .group_torrent span.tor_info {
     order: 5;}
-
-#index #freeleech .group_torrent span.platform {
-    margin-left: 2px;}
 #index #freeleech .group_torrent span.platform:before {
     content: '- ';}
 #friends table.forum_post.vertical_margin .colhead span.time:before {
@@ -4974,7 +4971,12 @@ td img[alt="Ratio"] {
 .box.box_info .head.tooltip span[style="float:right;"] img[alt="Banned"],
 .box.box_info .head.tooltip span[style="float:right;"] img[alt="Warned"] {
     padding-left: 20px;}
-.sidebar .userratingdiv img {
+.overall_user_ratings img.rating_image {
+    margin-right: 4px;
+    padding: 0 0 0 26px;
+    width: 26px;
+    height: 26px;}
+.sidebar .userratingdiv img.vote {
     border-radius: 50%;
     cursor: pointer;
     padding: 0 0 0 56px;
@@ -6795,10 +6797,10 @@ h2 .username_badges {
     font-size: 30px;
     line-height: 56px;
     display: flex;}
-#users_reviews .overall_user_ratings strong {
-    vertical-align: top;
-    font-size: 30px;
-    line-height: 36px;}
+.overall_user_ratings strong {
+    /* vertical-align: top; */
+    font-size: 26px;
+    line-height: 1em;}
 
 #wrapper #grouplinks {
     width: 100%;
@@ -8037,6 +8039,8 @@ input#file {
     width: 50%;}
 #copyright p:nth-child(n+2) {
     margin: 5px 0 0 0;}
+.users_review +.game_info h3,
+#index #freeleech .group_torrent span.platform,
 #server_stats >strong:nth-child(n+2) {
     margin-left: 2px;}
 #server_stats:before {
@@ -9691,7 +9695,7 @@ form#tag_add_form >input,
 .collicon +td #groupplatform a:hover,
 .noticon +td #groupplatform a:hover,
 
-#wrapper .sidebar .userratingdiv img:hover,
+#wrapper .sidebar .userratingdiv img.vote:hover,
 
 #slides >.nobullet a:hover:before,
 .linkbox a:hover:before {
@@ -15913,10 +15917,13 @@ div#fight_skill_points_assign >table {
     padding-left: 0.8em; }
 #users_reviews .game_info li {
     list-style: none; }
-#users_reviews .overall_user_ratings li {
-    display: inline-block;
-    margin-right: 20px;
-    padding-top: 0; }
+.overall_user_ratings li {
+    display: inline-flex;
+    padding: 0; }
+.overall_user_ratings li:nth-last-of-type(n+2) {
+    margin-right: 20px;}
+.overall_user_ratings {
+    margin-bottom: 12px;}
 /*#users_reviews .game_info img.rating_image { height: 18px; padding-right: 0.5em; }*/
 /*#users_reviews .overall_user_ratings .upvote strong { color: var(--upVote); }
 #users_reviews .overall_user_ratings .downvote strong { color: var(--downVote); }*/
