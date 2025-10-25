@@ -445,8 +445,12 @@
         width: 100%;
         height: 100%;
         z-index: -1;}
+    /* #wrapper #users_reviews .review_cell,
     .sub span:before {
-        width: 100%;}
+        width: 100%;} */
+    #wrapper .flextable-cell.box.review_cell .center img[style] {
+        max-width: 220px !important;
+    }
 /*
     #header #userinfo_minor li:before {
         width: 128px;}
@@ -745,6 +749,35 @@
         height: -moz-fit-content;
         height: fit-content;}
     
+    #rules .before_rules,
+    #bookmarks .main_column,
+	#inbox form,
+	#log .center,
+    #wrapper #content #trading_panel #other_trade_table .gold_trade_box,
+    #wrapper .freeleech_shop_main,
+    #wrapper .global_buffs_shop_main,
+
+    #dailygazelle,
+	.sidebar .box,
+	#torrents .main_column_bg,
+	#torrents .sidebar,
+	.torrent_edit form,
+	#forums .pad,
+    #inbox .thin >h2 +form,
+    #reports .thin>.box.pad,
+    #reportsv2 #report_table>.box.pad,
+	#forums .forums_search .search_form .cat_list td,
+	#collections .sidebar div:nth-of-type(10),
+	#collections .sidebar #reply_box .box,
+	#gazelle_images form,
+	#wiki .main_column,
+	#wiki .header,
+	#user .thin form,
+	#snatchesrow td, #uploadsrow td, #likesrow td,
+
+    #wrapper #users_reviews .review_cell,
+    .sub span:before,
+
     #newthreadpreview,
     .inventory #wrapper .save_message,
     #reportsv2 form#report_table div#dynamic_form table.border tr,
@@ -970,8 +1003,8 @@
 		display:none !important;}
 
 	/*** Side bar ***/
-	.sidebar .box {
-		width: 100%;}
+	/* .sidebar .box {
+		width: 100%;} */
 
 	/* .sidebar .colhead_dark,
 	.head {
@@ -979,7 +1012,7 @@
     #index #stats,
     #polcont,
 	#slides,
-	#dailygazelle {width: 100%;}
+	/* #dailygazelle {width: 100%;} */
 	#dailygazelle a {margin: 3px 0px;}
     #dailygazelle img {max-height: 100% !important;}
     #wrapper #dailygazelle img,
@@ -1571,13 +1604,13 @@
 	#torrents .groupoptions {top: -7px;} */
 
 	/**** Layout of main column vs. sidebar ****/
-	#torrents .main_column_bg {
-        width: 100%;}
+	/* #torrents .main_column_bg {
+        width: 100%;} */
 	#torrents .main_column {
         width: 100%;
         padding: 0;}
-	#torrents .sidebar {
-        width: 100%;}
+	/* #torrents .sidebar {
+        width: 100%;} */
 	/* #torrents h2 {font-size: 1.2em;} */
 	#torrents .sidebar .box {
         width: calc(50% - 7.5px);}
@@ -1781,7 +1814,8 @@
         width: -moz-fit-content;
         width: fit-content;
         margin-bottom: 5px;
-		/* background-color: transparent !important */;}
+		/* background-color: transparent !important; */
+    }
 
 	#torrents .main_column tr.group_torrent td:nth-child(1) >span:not(.new_status) a {
 		display: none;
@@ -2125,7 +2159,7 @@ a[title="Remove"]:before {
         display: inline}
 
 	/*Torrent Edit Page*/
-	.torrent_edit form {width: 100%;}
+	/* .torrent_edit form {width: 100%;} */
 	/* #torrents .torrent_edit td {color: white;} */
 	/* #torrents .torrent_edit td:nth-child(1) {
         display: block;
@@ -2340,7 +2374,7 @@ a[title="Remove"]:before {
         margin: -15px !important;}*/
 
 	/* #forums h2 {font-size: 1.2em;} */
-	#forums .pad {width: 100%;}
+	/* #forums .pad {width: 100%;} */
 	#forums #content .thin table {word-break:break-word;}
 	.linkbox {
         margin-left: auto;
@@ -2406,10 +2440,10 @@ a[title="Remove"]:before {
     /* #forums #reply_box, #inbox #messageform+h2+form,
     #inbox .box.vertical_space+h2+form,
     #inbox h2+#messageform, */
-    #inbox .thin >h2 +form,
+    /* #inbox .thin >h2 +form,
     #reports .thin>.box.pad,
     #reportsv2 #report_table>.box.pad {
-        width: 100%;}
+        width: 100%;} */
     
     tr.likes td[id^=likers_] {
         opacity: .65;}
@@ -2456,7 +2490,7 @@ a[title="Remove"]:before {
 		width: 100%; max-width: 100% !important;}
 
 	#forums .forums_search .search_form .cat_list td[colspan="5"] {height: auto;}
-	#forums .forums_search .search_form .cat_list td {width: 100%;}
+	/* #forums .forums_search .search_form .cat_list td {width: 100%;} */
 	#forums .forums_search .forum_list td:nth-of-type(3),
 	#forums .forums_search .forum_list td:nth-of-type(4) {
 		display: none;}
@@ -2531,8 +2565,8 @@ a[title="Remove"]:before {
         height: auto;
         width: calc(100% - 10px);
         font-weight: bold;}
-	#collections .sidebar div:nth-of-type(10) {width: 100%;}
-	#collections .sidebar #reply_box .box {width: 100%;}
+	/* #collections .sidebar div:nth-of-type(10) {width: 100%;}
+	#collections .sidebar #reply_box .box {width: 100%;} */
 
 	/* #collections .box_addtorrent .subhead {padding: 10px 0 0 5px;} */
 
@@ -2649,7 +2683,7 @@ a[title="Remove"]:before {
 
 	/*Gazelle Manager */
 	input[name="addGazelle"], input[name="gazelleTitle"] {max-width: 250px;}
-	#gazelle_images form {width: 100%;}
+	/* #gazelle_images form {width: 100%;} */
 	#gazelle_images table th:nth-of-type(3),
 	#gazelle_images table th:nth-of-type(4),
 	#gazelle_images table th:nth-of-type(5),
@@ -2794,8 +2828,8 @@ a[title="Remove"]:before {
 /*****************************************
 *****************WIKI*********************
 *****************************************/
-	#wiki .main_column {width: 100%;}
-	#wiki .header {width: 100%;}
+	/* #wiki .main_column {width: 100%;}
+	#wiki .header {width: 100%;} */
 	#wiki ol {margin: 15px auto;}
 	.wiki_index .wiki_article ul li {width: 90%; padding: 5px 0;}
 
@@ -2820,7 +2854,7 @@ a[title="Remove"]:before {
 	#user .avatar {float: none;}
 
 	#user .thin table td {display: block; }
-	#user .thin form {width: 100%;}
+	/* #user .thin form {width: 100%;} */
 
 	/* #user td.label {} */
 	#user select {min-width: auto; width: 95% !important}
@@ -2836,7 +2870,7 @@ a[title="Remove"]:before {
 
 	/* Snatches, Likes, Uploads boxes */
 	#user .likes_icon img {width: 20px; float: right;}
-	#snatchesrow td, #uploadsrow td, #likesrow td {width: 100%;}
+	/* #snatchesrow td, #uploadsrow td, #likesrow td {width: 100%;} */
 	/* #snatchesrow img, #uploadsrow img,  #likesrow img {
 		min-width: 0%;
 		width: 24%;
@@ -3031,13 +3065,13 @@ a[title="Remove"]:before {
 ****************RULES*********************
 *****************************************/
 	#rules #content .search_form {height: 100%;}
-	#rules .before_rules {width: 100%;}
+	/* #rules .before_rules {width: 100%;} */
 
 /*****************************************
 **************BOOKMARKS*******************
 ***************************************** revisit */
-    #bookmarks .main_column {
-        width: 100%;}
+    /* #bookmarks .main_column {
+        width: 100%;} */
 	#bookmarks .sidebar {display: none;}
     /* #bookmarks table#collage_table td {width: 32%; float: left; display: block; height: 160px; padding:7px 1px;} */
 	/* #bookmarks table#collage_table tr {display:inline;} */
@@ -3060,8 +3094,8 @@ a[title="Remove"]:before {
 	#inbox .box, #inbox .pad {
         padding: 0;
         width: 100%;}
-	#inbox form {
-        width: 100%;}
+	/* #inbox form {
+        width: 100%;} */
 	#inbox #messageform td {
         display: block;
         padding: 0 10px;}
@@ -3163,7 +3197,7 @@ a[title="Remove"]:before {
 *****************LOG**********************
 *****************************************/
 	#log form table:nth-of-type(2) td {float: left;}
-	#log .center {width: 100%;}
+	/* #log .center {width: 100%;} */
 
 /*****************************************
 ****************FRIENDS*******************
@@ -3264,8 +3298,8 @@ a[title="Remove"]:before {
     
     #shop_search #item_search tbody:not(#advanced_search) td:last-child {
         margin: -26px 0 0 auto;}
-    #wrapper #content #trading_panel #other_trade_table .gold_trade_box {
-        width: 100%;}
+    /* #wrapper #content #trading_panel #other_trade_table .gold_trade_box {
+        width: 100%;} */
     
     #wrapper #content #items_navigation {
         width: 0;
@@ -3458,9 +3492,9 @@ a[title="Remove"]:before {
 		content: "Uploading is disabled on mobile.";}
 
 	/***Freeleech Shop***/
-    #wrapper .freeleech_shop_main,
+    /* #wrapper .freeleech_shop_main,
     #wrapper .global_buffs_shop_main {
-        width: 100%;}
+        width: 100%;} */
 
 	.freeleech_shop .box_add_freeleech {height: auto;}
 /*	.box_add_freeleech .body {margin-top: 10px;}*/
