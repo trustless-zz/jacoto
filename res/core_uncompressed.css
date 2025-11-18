@@ -5886,40 +5886,7 @@ a#tag_show\/hide:before,
 .filter_torrents.advanced .flright:after {
     font-size: 14px;
     line-height: 1em;}
-#wrapper .box.box_coltags .head span[title="Add Tags"] a:hover,
-a#add_tags_link:hover,
-#collections #wrapper .sidebar .box_addtorrent .subhead a:hover,
-body /*#reviewrow a*/#expand_review:hover,
-body /*#reviewrow a*/#load_edit_review:hover,
-body #load_edit_review_dialog:hover,
-button.alertable-cancel:hover,
-#wrapper button#AvatarPreview:hover,
-#wrapper .timeline-nav-button:hover,
-#wrapper [type="button"][value="Editor"]:hover,
-#wrapper [type="button"][value="Preview"]:hover,
-#wrapper [type="button"][value="Cancel"]:hover,
-#wrapper .answers >a[onclick]:hover,
-#wrapper #image_block >a[onclick]:hover,
-#wrapper .forum_latest .search #cat_list a[onclick]:hover,
-#wrapper #newthreadform #newthreadtext #answer_block a:hover,
-#adventure_search .flright a[onclick]:hover,
-#shop_search .flright a[onclick]:hover,
-.torrent_table tr.pad td >.linkbox >a:not([href*="?action="]):hover,
-table#otherop.hidden ~table.otheroptoggle a:hover,
-a.toggle_tags:hover,
-/* .box_game_ratings .show_link >a:hover, */
-a#show_recommend_to_friend:hover,
-a#toggle_css_gallery:hover,
-a#freeleech_pot_show:hover,
-a#getmorenews:hover,
-#tags_box a#tags_add_toggle:hover,
-#group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit:hover,
-.box_gold a[onclick^="$('#gold_history'"]:hover,
-a#tag_show\/hide:hover,
-#user #userform #platcheckbox +a:hover,
-.filter_torrents.advanced .flright:hover {
-    color: var(--c-low);
-    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+
 #tags_box a#tags_add_toggle:active,
 #wrapper .box.box_coltags .head span[title="Add Tags"] a:active,
 a#add_tags_link:active,
@@ -6180,6 +6147,7 @@ b>#footer, /* chat.php bug - when IFC key hasn't been yet */
 .screenshots {
     display: flex;
     flex-flow: wrap;
+    justify-content: center;
     /*margin-bottom: -10px;*/}
 .screenshots a {
     /*width: calc(25% - (30px / 4));
@@ -6188,9 +6156,9 @@ b>#footer, /* chat.php bug - when IFC key hasn't been yet */
     margin: 5px;
     align-self: center;
     cursor: default;}
-#top10 .cats_col +td >span:not([id]):first-child >a:last-child,
-#css_gallery .preview_wrapper:nth-child(4n),
-.screenshots a:nth-child(4n) {
+/* #css_gallery .preview_wrapper:nth-child(4n),
+.screenshots a:nth-child(4n), */
+#top10 .cats_col +td >span:not([id]):first-child >a:last-child {
     margin-right: 0;}
 #css_gallery .preview_image,
 .screenshots img {
@@ -6984,62 +6952,13 @@ img#authcode,
     /* -webkit-box-shadow: var(--p-header-shdw); */
     box-shadow: var(--p-header-shdw);}
 /* #bookmarks #collage_table td img:hover, - outdated bookmarks */
-button:hover,
-.timeline-nav-button:hover,
-.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:hover,
-#wrapper #trading_panel button:hover,
-.alertable button:hover,
-input[type=button]:hover,
-input[type=submit]:hover,
-.forum_latest .search #cat_list a[onclick]:hover,
-table#otherop.hidden ~table.otheroptoggle a:hover,
 /* .box_game_ratings .show_link >a:hover, */
-a#show_recommend_to_friend:hover,
-.box_torrent_checking a[href^="torrents.php?action=deletegroup&"]:hover,
-a#toggle_css_gallery:hover,
-a#freeleech_pot_show:hover,
-a#getmorenews:hover,
-#tags_box a#tags_add_toggle:hover,
-#group_nofo_bigdiv a#group_quick_edit:hover,
-.box_gold a[onclick^="$('#gold_history'"]:hover,
-.similar_votes a:hover,
-.box_tags .stats.nobullet div a:hover,
 /* .box.box_info.pad a[title="Delete Alias"]:hover, */
-#user #userform #platcheckbox +a:hover,
-a#tag_show\/hide:hover,
-.filter_torrents.advanced .flright:hover,
-#newthreadform #newthreadtext #answer_block a:hover,
-#adventure_search .flright a[onclick]:hover,
-#shop_search .flright a[onclick]:hover,
-a.toggle_tags:hover,
-.torrent_table tr.pad td >.linkbox >a:hover,
-a[href^="javascript:IndexVote("]:hover,
-a[href^="javascript:Vote("]:hover,
-.tag_vote_button:hover,
 /* .box.box_coltags .pad li a:nth-child(n+2):hover, */
-/*#reviewrow a*/#expand_review:hover,
-/*#reviewrow a*/#load_edit_review:hover,
-#wrapper #image_block >a[onclick]:hover,
-#load_edit_review_dialog:hover,
-a#add_tags_link:hover,
-.box.box_coltags .head span[title="Add Tags"] a:hover,
-#collections .sidebar .box_addtorrent .subhead a:hover,
 /* #requests table.border td.nobr:nth-child(2) a:hover, */
 /* #torrents #requests.request_table #requests_list .requestrows a.brackets:hover, */
-.similar img:hover,
-#css_gallery .preview_image:hover,
-.screenshots img:hover,
-#calendar .calendar-day:hover,
-.box_albumart img:hover,
-.gallery_row a:hover,
-.sidebar img:hover,
-.userratingdiv img,
-.timeline__content__wrap:hover,
 /*.hovereffect:hover,*/
-.collections_art_display td:hover .hovereffect,
-#wrapper .calendar .calendar-day:hover,
-.filelist_title a.brackets:hover,
-.review_cell .flextable-cell:first-child img:not(.avatar):hover {
+.userratingdiv img {
     /* -webkit-box-shadow: none; */
     box-shadow: none;}
 
@@ -13048,9 +12967,9 @@ li.item_li /*#clickable */.item_description img {
 	overflow-y: scroll;}*/
 
 #css_gallery .preview_wrapper {
-    width: calc(25% - (30px / 4));
+    width: calc(25% - 10px);
     height: auto;
-    margin: 5px 10px 5px 0;}
+    margin: 5px;}
 #css_gallery {
     overflow: visible;
     margin: 5px 0;

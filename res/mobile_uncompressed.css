@@ -1968,7 +1968,7 @@ a[title="Remove"]:before {
         padding: 0 0 0 5px;}
 
 	#torrents .main_column .screenshots {
-        padding: 5px 10px 5px 0;
+        padding: 5px 5px 5px 0;
         position: relative;
         max-height: 300px;
         overflow-y: auto;}
@@ -3517,8 +3517,8 @@ a[title="Remove"]:before {
 	#existing_freeleech_pots tr:nth-of-type(even) {background-color: rgba(27, 47, 63, 0.85);}
 */
     
-    #site_style_tr .preview_wrapper {
-        width: calc(25% - 13px);}
+    /* #site_style_tr .preview_wrapper {
+        width: calc(25% - 13px);} */
     
     #user #wrapper .thin >.header:first-child +.box.pad +.box.pad table.border td:not(.label) {
         flex-flow: row wrap;}
@@ -3766,9 +3766,9 @@ a[title="Remove"]:before {
         width: calc(100% / 2 - 10px);}
     #shop #wrapper #content li.item_li {
         width: calc(100% - 10px);}
-    #site_style_tr .preview_wrapper {
+    /* #site_style_tr .preview_wrapper {
         width: calc(50% - 12px);
-        margin: 5px;}
+        margin: 5px;} */
     #requests .forum_post .colhead_dark div[style="float: left;"] >strong,
     #torrents .forum_post .colhead_dark div[style="float: left;"] >strong {
         flex: 1 1 0%;}
