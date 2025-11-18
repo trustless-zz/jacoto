@@ -3517,8 +3517,8 @@ a[title="Remove"]:before {
 	#existing_freeleech_pots tr:nth-of-type(even) {background-color: rgba(27, 47, 63, 0.85);}
 */
     
-    /* #site_style_tr .preview_wrapper {
-        width: calc(25% - 13px);} */
+    #site_style_tr .preview_wrapper {
+        width: calc(50% - 10px);}
     
     #user #wrapper .thin >.header:first-child +.box.pad +.box.pad table.border td:not(.label) {
         flex-flow: row wrap;}
