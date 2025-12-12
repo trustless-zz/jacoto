@@ -416,6 +416,8 @@ a[href^="javascript:Vote("]:hover,
 .group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(#trumpable_tag):has([id^="color_"]),
 .group_torrent td:first-child:has(strong[class$="freeleech_label"]):has(.trumpable_label):has([id^="color_"]) {
     padding-left: 9px;}
+#group_nofo_bigdiv .head:has(+.body[style="display: block;"]) >a#group_quick_edit:hover {
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
 
 
 
@@ -1076,7 +1078,7 @@ a[href^="javascript:Vote("]:hover,
 @media (max-width: 1421px) {
     .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after,
     .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):before {
-        width: 100%;}
+        width: calc(100vw - 436px);}
 }
 @media (max-width: 1280px) {
     #header #nav_userinfo a.username {

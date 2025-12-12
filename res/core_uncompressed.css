@@ -11313,6 +11313,18 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     /* content: '-'; */
 }
 
+
+.group:has(+.group_torrent.hidden) .hide_torrents .show_torrents_link:after {
+    transform: rotate(-90deg);}
+
+
+#group_nofo_bigdiv .head:has(+.body[style="display: none;"]) >a#group_quick_edit:before                   {content: 'Submit';}
+#group_nofo_bigdiv .head:has(+.body[style="display: block;"]) >a#group_quick_edit:before                  {content: 'Edit';}
+#group_nofo_bigdiv .head:has(+.body[style="display: block;"]) >a#group_quick_edit {
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);}
+#wrapper #group_nofo_bigdiv .head:has(+.body[style="display: block;"]) >a#group_quick_edit:active {
+    background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
+
 #artist .sidebar .body:has(a#tag_show\/hide) ul {
     line-height: var(--p-lh);}
 
