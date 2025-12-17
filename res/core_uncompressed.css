@@ -3424,7 +3424,7 @@ body >div, /* more info window at #shop */
 
 #userinfo_username .sub a:hover,
 #menu a:hover,
-#userinfo_minor a:hover,
+#wrapper #header #userinfo_minor a:hover, /* #wrapper #header because of the Notifications and Deleted Torrents "fix" */ 
 #userinfo_username li:not(.sub) a:hover {
     color: var(--c-anchor-hvr);}
 
@@ -4226,6 +4226,12 @@ table#likesrow img:hover,
 .similar img:hover {
     border-color: var(--c-b1);
     /* -webkit-box-shadow: none; */
+    box-shadow: none;}
+
+/* "fix" for Notifications and Deleted Torrents nav menus being .active at the same time when viewing Notifications */
+#notilia\ nav_notifications.active ~#nav_del_notifications.active a {
+    color: var(--c-anchor);
+    font-weight: normal;
     box-shadow: none;}
 
 .box.box_tags ul.stats.nobullet div {
@@ -11306,6 +11312,13 @@ table#downloaded_table              td.center.cats_col +td >span:before {
     content: none;}
 
 /*** isolating :has() because firefox doesn't fully support it yet ***/
+
+/* making Deleted Torrents .active -able */
+#torrents:has(.torrent_notifications .group_torrent strong +a[href*="/log.php?search="]) a.deltornotifsico {
+    font-weight: 600 !important;
+    color: var(--c-low);
+    box-shadow: inset var(--p-selected);}
+
 a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
     content: 'Hide';}
 .box_coltags:has(~.box_add_tags[style="display: block;"]) .head span[title="Add Tags"] a:before {
@@ -13148,7 +13161,7 @@ h2 span.secondary_class:nth-child(n+2) {
 	padding-left: 5px;}
 
 /*** Fixes Mass Add Torrents to Collections ***/
-#tools  .col_mass_add td.colhead {
+#tools .col_mass_add td.colhead {
 	width: auto;
 	margin: 0;
 	padding: 0;
