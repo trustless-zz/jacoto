@@ -1062,6 +1062,12 @@ a[href^="javascript:Vote("]:hover,
 
 
 @media (min-width: 1300px) {
+    #shop_search tbody:not(#advanced_search) input[type="submit"] +input[type="submit"] {
+        margin: 0 10px 0 3px;}
+    .inventory #shop_search #search_query {
+        margin: 0;
+        width: calc(100% - 425px);}
+    #shop_search tbody:not(#advanced_search) td[colspan="2"] ~td,
     #forums .forum_latest >.search.box.pad table#forumlist {
         white-space: nowrap;}
 }

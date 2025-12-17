@@ -524,6 +524,9 @@
         width: 200px;}
 */
 
+#wrapper #shop_search input[name="setdefault"] {
+    margin-left: 7px;}
+
 #wrapper .sidebar .userratingdiv tr:not(#reviewrow) {
     flex-flow: row wrap;
     justify-content: center;}

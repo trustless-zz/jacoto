@@ -4605,6 +4605,8 @@ body#requests table#requests_list tr:not(.colhead):not(.colhead_dark) td {
 
 #existing_freeleech_pots .colhead,
 
+#shop_search .flright a[onclick],
+
 #uploaded_table             td:nth-child(n+3),
 #seeding_table              td:nth-child(n+3),
 #leeching_table             td:nth-child(n+3),
@@ -4968,6 +4970,7 @@ blockquote#description img,
     /* -webkit-box-sizing: border-box; */
     box-sizing: border-box;}
 
+#shop_search input[name="setdefault"],
 #tools #wrapper .thin >.box[style="float: left"] +.box[style="float: left"] {
     margin-left: 15px;}
 
@@ -10035,7 +10038,6 @@ input[class="date_picker"] {
 #user .thin >.header:first-child +.box.pad +.box.pad table.border input[type="submit"],
 .box.box_info.pad a[title="Delete Alias"],
 #wiki .sidebar .box.box_addalias input[type="submit"],
-#shop_search input[name="setdefault"],
 #better .thin >.center:first-child input[type="submit"],
 #better form#torrentid_input input[type="submit"],
 #tools #content >span +form[action="tools.php"]:nth-child(2) input[type="submit"],
@@ -11931,7 +11933,9 @@ a#toggle_css_gallery:has(~#css_gallery[style="display: block;"]):before {
 #shop_search #search_query {
     width: calc(100% - 405px);}
 .inventory #shop_search #search_query {
-    width: calc(100% - 425px);}
+    /* width: calc(100% - 425px); */
+    margin-bottom: 8px;
+    width: 100%;}
 
 #shop_search td.label strong {
     font-weight: normal;}
@@ -11943,15 +11947,19 @@ a#toggle_css_gallery:has(~#css_gallery[style="display: block;"]):before {
     padding-right: 5px;}
 #shop_search tbody:not(#advanced_search) input[type="submit"] {
     vertical-align: bottom;}
+#shop_search tbody:not(#advanced_search) input[type="submit"] +input[type="submit"] {
+    margin: 8px 0 0 15px;}
 #shop_search tbody#advanced_search tr:first-child td:last-child {
     max-width: 325px;}
-.inventory #shop_search tbody#advanced_search tr:first-child td:last-child {
-    /* max-width: 230px; */
-    max-width: 235px;
-}
+/* .inventory #shop_search tbody#advanced_search tr:first-child td:last-child {
+    max-width: 235px;} */
 #shop_search tbody#advanced_search tr:first-child td:nth-child(2) {
     line-height: 26px;
     vertical-align: top;}
+#shop_search tbody#advanced_search tr:first-child td:last-child label {
+    white-space: pre;}
+#shop_search tbody#advanced_search tr:first-child td:last-child label:after {
+    content: "\a";}
 
 .inventory #content li.no_items,
 #shop #content li.no_items,
@@ -13143,6 +13151,7 @@ li.item_li /*#clickable */.item_description img {
 	font-size: 1em;
 	height: 45px;}
 /*h2 span.secondary_class,*/
+#shop_search tbody#advanced_search tr:first-child td.label:nth-last-child(2),
 #content >span[style="float:right;"]:first-child >a[title="Delete"],
 #tm_time input[type="text"] {
 	vertical-align: middle;}
