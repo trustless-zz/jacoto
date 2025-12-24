@@ -1657,8 +1657,8 @@ img[title="Gold"] {
     z-index: 1;
     opacity: .75;
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 22'%3E%3Cpath d='M18.8,2A5.20589,5.14133,0,0,1,18.8,2m0-2A7.17083,7.17083,0,0,0,13,2.95312,7.19064,7.19064,0,0,0,0,7.2C0,18.08331,13,22,13,22S26,18.08331,26,7.2A7.2,7.2,0,0,0,18.8,0Z'/%3E%3C/svg%3E") no-repeat center / auto 19.5px;}
-#nav_donate:hover span {
-    opacity: 1;}
+/* #nav_donate:hover span {
+    opacity: 1;} */
 #nav_donate span:before {
     content: '';
     position: absolute;
@@ -2565,6 +2565,18 @@ tr.unreadpm td:first-child:after {
 .autocomplete_list li:hover {
     background-color: var(--c-anchor-hvr-bcg-obj);}
 
+.tag_autocomplete >.tag_autocomplete_items div,
+#header #searchbars .autocomplete_list .highlight {
+    color: var(--c-anchor);
+    box-shadow: unset;}
+.tag_autocomplete >.tag_autocomplete_items .tag_autocomplete_active:hover,
+.tag_autocomplete >.tag_autocomplete_items div:hover,
+#header #searchbars .autocomplete_list .highlight:hover,
+#header .highlight:hover,
+#header .notificationsico:hover .newnoti,
+#header .deltornotifsico:hover .newnoti {
+    color: var(--c-anchor-hvr);}
+
 #torrents #autocomplete {
     position: absolute;
     margin-top: -56px;
@@ -2747,6 +2759,15 @@ h2 .username_badges a {
 .flright,
 .next {
     float: right;}
+
+.box_coltags .pad li a:not([href^="torrents.php?taglist="]),
+.group_tag >span a,
+#tags_box div a {
+    opacity: .5;}
+/* .box_coltags .pad li:hover a:not([href^="torrents.php?taglist="]),
+.group_tag:hover >span a,
+#tags_box li:hover div a {
+    opacity: 1;} */
 
 .thin {
     margin: 0 auto;
@@ -3673,6 +3694,10 @@ strong.important_text,
 .torrent_details blockquote#description [style="color: #ff0000;"] {
     color: var(--c-red) !important;}
 
+.wiki_article span[style="color: yellow;"] {
+    color: var(--c-yellow) !important;}
+
+.wiki_article span[style="color: lime;"],
 .torrent_details .torrent_table tr.pad tr td span[style*="green"], /* example: show peerlist table */
 .calendar a[style="color: green;"],
 #better td span[style="color: green;"],
@@ -3931,17 +3956,7 @@ input[disabled] {
     padding: 9px 10px;
     width: calc(100% - 20px);
     height: var(--p-head);}
-/* #wrapper .weblink:hover label:after,
-#wrapper .weblink:hover label:before, */
-#bookmarks td#sorting_head:hover:before,
-#forums .thin >.box.thin.clear .head.colhead_dark:hover:before,
-#newthreadpreview #pollpreview .head.colhead_dark:hover:before,
-.head[title="Click to expand/collapse"]:hover:before,
-#torrents #requests.request_table .colhead:hover span:before,
-.head[onclick]:hover:before,
-#index #recommended .head:hover:before,
-.box.news_post .head:hover:before {
-    opacity: 1;}
+
 a[onclick="hideDnu();"]:active:after,
 a[onclick="showDnu();"]:active:after,
 #bookmarks td#sorting_head:active::before,
@@ -3995,9 +4010,7 @@ a[onclick="showDnu();"]:after {
     height: var(--p-head);
     padding: 9px 0;}
 
-a[onclick="hideDnu();"]:hover:after,
-a[onclick="showDnu();"]:hover:after {
-    opacity: 1;}
+
 /** /close/expand head **/
 
 /* #torrents .center.thin >h2#non_wiki_editing ~.box.pad form input[type="text"][name="name"], - doesn't affect app description editing */ 
@@ -4294,9 +4307,6 @@ table.bbcode_table td,
     opacity: .9;
     display: block;
     height: 100%;}
-#header .global_buffs a:hover,
-#header .clan_trophy:hover img {
-    opacity: 1;}
 
 /* desktop/mobile duplicate merge */
 #stats_ratio,
@@ -4793,9 +4803,7 @@ th[aria-disabled="false"]:active,
     top: 0;
     background: linear-gradient(to top,var(--c-b3),var(--c-edition));
     opacity: 0;}
-.edition_info:hover +td:before,
-.edition_info:hover:before {
-    opacity: 1;}
+
 .edition_info:active +td:before,
 .edition_info:active:before {
     background: linear-gradient(to top,var(--c-b3),var(--c-b4));}
@@ -5717,29 +5725,54 @@ a[href^="javascript:Vote("]:before,
 .similar_votes a[onclick] {
     font-size: 18px;}
 
-#wrapper button:active,
-#wrapper .box_torrent_checking a[href^="torrents.php?action=deletegroup&"]:active,
-#wrapper #group_nofo_bigdiv a#group_quick_edit:active,
-#wrapper .ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:active,
-#wrapper #content #trading_panel button:active,
-#wrapper .alertable button:active,
-#wrapper input[type=button]:active,
-#wrapper input[type=submit]:active,
-#wrapper .similar_votes a:active,
-#wrapper a[href^="javascript:IndexVote("]:active,
-#wrapper a[href^="javascript:Vote("]:active,
-#wrapper .tag_vote_button:active,
+button:hover,
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"]:hover,
+#group_nofo_bigdiv a#group_quick_edit:hover,
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:hover,
+#wrapper #trading_panel button:hover,
+.alertable button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.similar_votes a:hover,
+a[href^="javascript:IndexVote("]:hover,
+a[href^="javascript:Vote("]:hover,
+.tag_vote_button:hover,
+#requests table.border td.nobr:nth-child(2) a:hover,
+/* #torrents #requests.request_table #requests_list .requestrows a.brackets:hover, */
+.box_tags .stats.nobullet div a:hover,
+/* .box.box_info.pad a[title="Delete Alias"]:hover, */
+#image_block a:hover,
+#newthreadform #newthreadtext #answer_block a:hover,
+/* .box.box_coltags .pad li a:nth-child(n+2):hover, */
+/*.box.box_coltags .head span[title="Add Tags"] a:hover,*/
+#collections .sidebar .box_addtorrent .subhead a:hover,
+.torrent_table tr.pad td >.linkbox >a[href*="?action="]:hover,
+.filelist_title a.brackets:hover {
+    color: var(--c-low);
+    background: var(--p-btn-hvr);}
+button:active,
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"]:active,
+#group_nofo_bigdiv a#group_quick_edit:active,
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:active,
+#wrapper #trading_panel button:active,
+.alertable button:active,
+input[type=button]:active,
+input[type=submit]:active,
+.similar_votes a:active,
+a[href^="javascript:IndexVote("]:active,
+a[href^="javascript:Vote("]:active,
+.tag_vote_button:active,
 /* #requests table.border td.nobr:nth-child(2) a:active, */
 /* #torrents #requests.request_table #requests_list .requestrows a.brackets:active, */
-#wrapper .box_tags .stats.nobullet div a:active,
+.box_tags .stats.nobullet div a:active,
 /* .box.box_info.pad a[title="Delete Alias"]:active, */
-#wrapper #image_block a:active,
-#wrapper #newthreadform #newthreadtext #answer_block a:active,
+#image_block a:active,
+#newthreadform #newthreadtext #answer_block a:active,
 /* .box.box_coltags .pad li a:nth-child(n+2):active, */
 /*.box.box_coltags .head span[title="Add Tags"] a:active,*/
-#collections #wrapper .sidebar .box_addtorrent .subhead a:active,
-#wrapper .torrent_table tr.pad td >.linkbox >a[href*="?action="]:active,
-#wrapper .filelist_title a.brackets:active {
+#collections .sidebar .box_addtorrent .subhead a:active,
+.torrent_table tr.pad td >.linkbox >a[href*="?action="]:active,
+.filelist_title a.brackets:active {
     background: var(--p-btn-act);}
 
 /* .filter_torrents .submit {
@@ -5874,38 +5907,73 @@ a#tag_show\/hide:before,
     font-size: 14px;
     line-height: 1em;}
 
-#wrapper #tags_box a#tags_add_toggle:active,
-#wrapper #content .box.box_coltags .head span[title="Add Tags"] a:active,
-#wrapper a#add_tags_link:active,
-#collections #wrapper #content .sidebar .box_addtorrent .subhead a:active,
-body #wrapper /*#reviewrow a*/#expand_review:active,
-body #wrapper /*#reviewrow a*/#load_edit_review:active,
-body #wrapper #load_edit_review_dialog:active,
-#wrapper button.alertable-cancel:active,
-#wrapper #content button#AvatarPreview:active,
-#wrapper #content .timeline-nav-button:active,
-#wrapper #content [type="button"][value="Editor"]:active,
-#wrapper #content [type="button"][value="Preview"]:active,
-#wrapper #content [type="button"][value="Cancel"]:active,
-#wrapper #content .answers >a[onclick]:active,
-#wrapper #content #image_block >a[onclick]:active,
-#wrapper #content .forum_latest .search #cat_list a[onclick]:active,
-#wrapper #content #newthreadform #newthreadtext #answer_block a:active,
-#wrapper #adventure_search .flright a[onclick]:active,
-#wrapper #shop_search .flright a[onclick]:active,
-#wrapper .torrent_table tr.pad td >.linkbox >a:not([href*="?action="]):active,
-#wrapper table#otherop.hidden ~table.otheroptoggle a:active,
+#wrapper .box.box_coltags .head span[title="Add Tags"] a:hover,
+a#add_tags_link:hover,
+#collections #wrapper .sidebar .box_addtorrent .subhead a:hover,
+body /*#reviewrow a*/#expand_review:hover,
+body /*#reviewrow a*/#load_edit_review:hover,
+body #load_edit_review_dialog:hover,
+button.alertable-cancel:hover,
+#wrapper button#AvatarPreview:hover,
+#wrapper .timeline-nav-button:hover,
+#wrapper [type="button"][value="Editor"]:hover,
+#wrapper [type="button"][value="Preview"]:hover,
+#wrapper [type="button"][value="Cancel"]:hover,
+#wrapper .answers >a[onclick]:hover,
+#wrapper #image_block >a[onclick]:hover,
+#wrapper .forum_latest .search #cat_list a[onclick]:hover,
+#wrapper #newthreadform #newthreadtext #answer_block a:hover,
+#adventure_search .flright a[onclick]:hover,
+#shop_search .flright a[onclick]:hover,
+.torrent_table tr.pad td >.linkbox >a:not([href*="?action="]):hover,
+table#otherop.hidden ~table.otheroptoggle a:hover,
+a.toggle_tags:hover,
+/* .box_game_ratings .show_link >a:hover, */
+a#show_recommend_to_friend:hover,
+a#toggle_css_gallery:hover,
+a#freeleech_pot_show:hover,
+a#getmorenews:hover,
+#tags_box a#tags_add_toggle:hover,
+#group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit:hover,
+.box_gold a[onclick^="$('#gold_history'"]:hover,
+a#tag_show\/hide:hover,
+#user #userform #platcheckbox +a:hover,
+.filter_torrents.advanced .flright:hover {
+    color: var(--c-low);
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-box) 100%);}
+
+#tags_box a#tags_add_toggle:active,
+#wrapper .box.box_coltags .head span[title="Add Tags"] a:active,
+a#add_tags_link:active,
+#collections #wrapper .sidebar .box_addtorrent .subhead a:active,
+body /*#reviewrow a*/#expand_review:active,
+body /*#reviewrow a*/#load_edit_review:active,
+body #load_edit_review_dialog:active,
+button.alertable-cancel:active,
+#wrapper button#AvatarPreview:active,
+#wrapper .timeline-nav-button:active,
+#wrapper [type="button"][value="Editor"]:active,
+#wrapper [type="button"][value="Preview"]:active,
+#wrapper [type="button"][value="Cancel"]:active,
+#wrapper .answers >a[onclick]:active,
+#wrapper #image_block >a[onclick]:active,
+#wrapper .forum_latest .search #cat_list a[onclick]:active,
+#wrapper #newthreadform #newthreadtext #answer_block a:active,
+#adventure_search .flright a[onclick]:active,
+#shop_search .flright a[onclick]:active,
+.torrent_table tr.pad td >.linkbox >a:not([href*="?action="]):active,
+table#otherop.hidden ~table.otheroptoggle a:active,
 /* .box_game_ratings .show_link >a:active, */
-#wrapper a#show_recommend_to_friend:active,
-#wrapper a#toggle_css_gallery:active,
-#wrapper a#freeleech_pot_show:active,
-#wrapper a#getmorenews:active,
-#wrapper #group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit:active,
-#wrapper .box_gold a[onclick^="$('#gold_history'"]:active,
-#wrapper a.toggle_tags:active,
-#wrapper a#tag_show\/hide:active,
-#user #ontent #userform #platcheckbox +a:active,
-#wrapper .filter_torrents.advanced .flright:active {
+a#show_recommend_to_friend:active,
+a#toggle_css_gallery:active,
+a#freeleech_pot_show:active,
+a#getmorenews:active,
+#group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit:active,
+.box_gold a[onclick^="$('#gold_history'"]:active,
+a.toggle_tags:active,
+a#tag_show\/hide:active,
+#user #userform #platcheckbox +a:active,
+.filter_torrents.advanced .flright:active {
     background: linear-gradient(to bottom, var(--c-row-hvr) 0%, var(--c-box) 100%);}
 /*#slides >ul.nobullet,*/
 .box_recommend_to_friend.shown,
@@ -6099,8 +6167,7 @@ b>#footer, /* chat.php bug - when IFC key hasn't been yet */
 .torrent_details .torrent_table >tbody >.colhead_dark td:nth-child(1):after {
     background: transparent !important;
     z-index: 3;}
-.torrent_details .torrent_table >tbody >.colhead_dark td[onclick]:hover:before {
-    opacity: 1;}
+
 .torrent_details .torrent_table >tbody >.colhead_dark strong,
 .torrent_details .torrent_table >tbody >.colhead_dark img {
     position: absolute;
@@ -6468,8 +6535,7 @@ a[onclick^="similarVote("]:before {
     clip-path: unset;}*/
 /*#wrapper #content .sub {
     visibility: hidden !important;}*/
-.sub[style="visibility: visible;"] {
-    opacity: 1;}
+
 /*#wrapper #content .sub {
     height: 0;
     margin-bottom: unset;}*/
@@ -6938,14 +7004,63 @@ img#authcode,
 .sidebar img {
     /* -webkit-box-shadow: var(--p-header-shdw); */
     box-shadow: var(--p-header-shdw);}
-/* #bookmarks #collage_table td img:hover, - outdated bookmarks */
+
+button:hover,
+.timeline-nav-button:hover,
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:hover,
+#wrapper #trading_panel button:hover,
+.alertable button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.forum_latest .search #cat_list a[onclick]:hover,
+table#otherop.hidden ~table.otheroptoggle a:hover,
 /* .box_game_ratings .show_link >a:hover, */
+a#show_recommend_to_friend:hover,
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"]:hover,
+a#toggle_css_gallery:hover,
+a#freeleech_pot_show:hover,
+a#getmorenews:hover,
+#tags_box a#tags_add_toggle:hover,
+#group_nofo_bigdiv a#group_quick_edit:hover,
+.box_gold a[onclick^="$('#gold_history'"]:hover,
+.similar_votes a:hover,
+.box_tags .stats.nobullet div a:hover,
 /* .box.box_info.pad a[title="Delete Alias"]:hover, */
+#user #userform #platcheckbox +a:hover,
+a#tag_show\/hide:hover,
+.filter_torrents.advanced .flright:hover,
+#newthreadform #newthreadtext #answer_block a:hover,
+#adventure_search .flright a[onclick]:hover,
+#shop_search .flright a[onclick]:hover,
+a.toggle_tags:hover,
+.torrent_table tr.pad td >.linkbox >a:hover,
+a[href^="javascript:IndexVote("]:hover,
+a[href^="javascript:Vote("]:hover,
+.tag_vote_button:hover,
 /* .box.box_coltags .pad li a:nth-child(n+2):hover, */
+/*#reviewrow a*/#expand_review:hover,
+/*#reviewrow a*/#load_edit_review:hover,
+#wrapper #image_block >a[onclick]:hover,
+#load_edit_review_dialog:hover,
+a#add_tags_link:hover,
+.box.box_coltags .head span[title="Add Tags"] a:hover,
+#collections .sidebar .box_addtorrent .subhead a:hover,
 /* #requests table.border td.nobr:nth-child(2) a:hover, */
 /* #torrents #requests.request_table #requests_list .requestrows a.brackets:hover, */
+.similar img:hover,
+#css_gallery .preview_image:hover,
+.screenshots img:hover,
+#calendar .calendar-day:hover,
+.box_albumart img:hover,
+.gallery_row a:hover,
+.sidebar img:hover,
+.userratingdiv img,
+.timeline__content__wrap:hover,
 /*.hovereffect:hover,*/
-.userratingdiv img {
+.collections_art_display td:hover .hovereffect,
+#wrapper .calendar .calendar-day:hover,
+.filelist_title a.brackets:hover,
+.review_cell .flextable-cell:first-child img:not(.avatar):hover {
     /* -webkit-box-shadow: none; */
     box-shadow: none;}
 
@@ -7286,8 +7401,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     overflow-x: hidden;
 	border-top: 1px solid var(--c-table-brdr);
     opacity: 0.65;}
-.forum_post .comment_rating:hover {
-    opacity: 1;}
+
 .forum_post .comment_rating .flleft {
     margin: 1px 5px 0 0;
     width: 36px;
@@ -8268,8 +8382,7 @@ h2 marquee {
     max-height: 75px;
     overflow-y: auto;
     overflow-x: hidden;}
-#forums .forum_signature td > div:hover {
-    opacity: 1;}
+
 #slides >ul.nobullet,
 #users_reviews .review_date,
 form#drag_drop_collage_form .drag_drop_save ~.drag_drop_save,
@@ -8387,8 +8500,7 @@ tr.likes td[id^="likers_"] >strong:after {
     float: right;}
 tr.likes td[id^="likers_"] {
     opacity: .85;}
-tr.likes td[id^="likers_"]:hover {
-    opacity: 1;}
+
 
 .forum_post.forum_unread .colhead_dark {
     background: var(--p-head-grdnt);}
@@ -11056,9 +11168,7 @@ a#add_tags_link {
 	opacity: 0.9;
 	margin-top: -10px;
     flex: 0 0 100%;}
-.profile .box_stats:hover .offline,
-.profile .box_stats:hover #last_seen {
-    opacity: 1;}
+
 
 .profile .box_stats #user_stats li {
 	width: 50%;
@@ -11132,9 +11242,7 @@ a#add_tags_link {
     color: var(--c-txt);
     padding: 10px;
     opacity: 0;}
-#user .box.box_items #itemsdiv td >div:hover >div,
-#user .box.box_items #itemsdiv td >div:hover p:last-child {
-    opacity: 1;}
+
 
 #user .box.box_requests #requests td:nth-child(2) a {
     vertical-align: inherit;}
@@ -11284,12 +11392,7 @@ tr.unreadpm td:first-child:after,
 #color_downloaded:before {
     cursor: default;
     opacity: .8;}
-tr:hover #color_leeching:before,
-tr:hover #color_seeding:before,
-tr:hover #color_uploaded:before,
-tr:hover #color_snatched:before,
-tr:hover #color_downloaded:before {
-    opacity: 1;}
+
 #requests #requests_list .sticky >td:first-child:after,
 .torrent_table .sticky td.center:first-child:after,
 td.unread:after,
@@ -11460,13 +11563,7 @@ a#toggle_css_gallery:has(~#css_gallery[style="display: block;"]):before {
 .group_torrent:has(.trumpable_label) td:first-child:after{
     cursor: default;
     opacity: .8;}
-/* #wrapper .weblink label:has(~input:focus):before,
-#wrapper .weblink label:has(~input:focus):after, */
-#wrapper .group_torrent:hover:has(strong[class$="freeleech_label"]) td:first-child:before,
-.group_torrent:hover:has(.reported_label) td:first-child:after,
-.group_torrent:hover:has(#trumpable_tag) td:first-child:after,
-.group_torrent:hover:has(.trumpable_label) td:first-child:after {
-    opacity: 1;}
+
 #wrapper .group_torrent:has(strong[class$="freeleech_label"]) [id^="color_"]:before,
 #wrapper .group_torrent:has(.reported_label) [id^="color_"]:before,
 #wrapper .group_torrent:has(#trumpable_tag) [id^="color_"]:before,
@@ -12420,9 +12517,7 @@ li.item_li /*#clickable */.item_description img {
     left: 0;
     width: 100%;
     text-align: center;}
-#shop li.item_li.no_access:hover .item_description:after,
-#shop li.item_li.nostock:hover .item_description:before {
-    opacity: 1;}
+
 
 /* #shop li.item_li.no_access #clickable:hover .item_description:after {
     opacity: 1;} */
@@ -15459,9 +15554,7 @@ progress::-webkit-progress-value {
     opacity: .4;}
 .torrent_table .ignored >td:nth-child(n+2):not(:nth-child(11)) {
     filter: grayscale(.25);}
-.torrent_table .ignored:hover td.center:first-child:after,
-.torrent_table .ignored:hover >td:nth-child(n+2):not(:nth-child(11)) {
-    opacity: 1;}
+
 .torrent_table .ignored:hover >td:nth-child(n+2):not(:nth-child(11)) {
     filter: grayscale(0);}
 #displayname s {
@@ -15717,8 +15810,6 @@ div#fight_skill_points_assign >table {
 #users_medals .medal_info .description_item strong {
     padding-right: 2px; }
 
-#users_medals .medal_cell:hover .medal_info {
-    opacity: 1;}
 
 /* Hover animation */
 /* #users_medals .primary {
@@ -15920,12 +16011,74 @@ div#fight_skill_points_assign >table {
 #wrapper /*.users_review*/[data-readmore][aria-expanded="true"] +[data-readmore-toggle]:before {
     opacity: 0;}
 
+
+
+.box_coltags .pad li:hover a:not([href^="torrents.php?taglist="]),
+.group_tag:hover >span a,
+#tags_box li:hover div a,
+
+#nav_donate:hover span,
+
+#bookmarks td#sorting_head:hover:before,
+#forums .thin >.box.thin.clear .head.colhead_dark:hover:before,
+#newthreadpreview #pollpreview .head.colhead_dark:hover:before,
+.head[title="Click to expand/collapse"]:hover:before,
+#torrents #requests.request_table .colhead:hover span:before,
+.head[onclick]:hover:before,
+#index #recommended .head:hover:before,
+.box.news_post .head:hover:before,
+
+a[onclick="hideDnu();"]:hover:after,
+a[onclick="showDnu();"]:hover:after,
+
+#header .global_buffs a:hover,
+#header .clan_trophy:hover img,
+
+.edition_info:hover +td:before,
+.edition_info:hover:before,
+
+.torrent_details .torrent_table >tbody >.colhead_dark td[onclick]:hover:before,
+
+.sub[style="visibility: visible;"],
+
+.forum_post .comment_rating:hover,
+
+#forums .forum_signature td > div:hover,
+
+tr.likes td[id^="likers_"]:hover,
+
+.profile .box_stats:hover .offline,
+.profile .box_stats:hover #last_seen,
+
+#user .box.box_items #itemsdiv td >div:hover >div,
+#user .box.box_items #itemsdiv td >div:hover p:last-child,
+
+tr:hover #color_leeching:before,
+tr:hover #color_seeding:before,
+tr:hover #color_uploaded:before,
+tr:hover #color_snatched:before,
+tr:hover #color_downloaded:before,
+
+#wrapper .group_torrent:hover:has(strong[class$="freeleech_label"]) td:first-child:before,
+.group_torrent:hover:has(.reported_label) td:first-child:after,
+.group_torrent:hover:has(#trumpable_tag) td:first-child:after,
+.group_torrent:hover:has(.trumpable_label) td:first-child:after,
+
+#shop li.item_li.no_access:hover .item_description:after,
+#shop li.item_li.nostock:hover .item_description:before,
+
+.torrent_table .ignored:hover td.center:first-child:after,
+.torrent_table .ignored:hover >td:nth-child(n+2):not(:nth-child(11)),
+
+#users_medals .medal_cell:hover .medal_info,
+
 /*** aria-expand incorrect height bug fix, ruins transition ***/
 #wrapper #content /*.users_review*/[data-readmore][aria-expanded="true"][style*="height: 96px"] +[data-readmore-toggle]:before {
     opacity: 1;}
 [data-readmore][aria-expanded="true"]:not([style*="height: 96px"]) {
     height: unset !important;}
 /*** /aria-expand incorrect height bug fix, ruins transition ***/
+
 
 /*.userreviews tr:last-child:not(:only-child),*/
 /*.users_review +*/[data-readmore-toggle] {
@@ -16350,6 +16503,68 @@ table.diff.split_view tr:first-child td {
     color: var(--c-low);}
 /** /split view **/
 
+/* revert hover declarations for touch devices (refraining from @layer for now) */
+@media (pointer: coarse) {
+.box_coltags:hover .pad li a:not([href^="torrents.php?taglist="]),
+.box_tags:hover .group_tag >span a,
+#tags_box div a {
+    opacity: 1;}
+button:hover,
+.box_torrent_checking a[href^="torrents.php?action=deletegroup&"]:hover,
+#group_nofo_bigdiv a#group_quick_edit:hover,
+.ui-dialog[aria-describedby="expanded_review_box"] .ui-dialog-buttonset button:hover,
+#wrapper #trading_panel button:hover,
+.alertable button:hover,
+input[type=button]:hover,
+input[type=submit]:hover,
+.similar_votes a:hover,
+a[href^="javascript:IndexVote("]:hover,
+a[href^="javascript:Vote("]:hover,
+.tag_vote_button:hover,
+#requests table.border td.nobr:nth-child(2) a:hover,
+.box_tags .stats.nobullet div a:hover,
+#image_block a:hover,
+#newthreadform #newthreadtext #answer_block a:hover,
+#collections .sidebar .box_addtorrent .subhead a:hover,
+.torrent_table tr.pad td >.linkbox >a[href*="?action="]:hover,
+.filelist_title a.brackets:hover {
+    color: var(--c-txt);
+    background: var(--p-btn);}
+#wrapper .box.box_coltags .head span[title="Add Tags"] a:hover,
+a#add_tags_link:hover,
+#collections #wrapper .sidebar .box_addtorrent .subhead a:hover,
+body #expand_review:hover,
+body #load_edit_review:hover,
+body #load_edit_review_dialog:hover,
+button.alertable-cancel:hover,
+#wrapper button#AvatarPreview:hover,
+#wrapper .timeline-nav-button:hover,
+#wrapper [type="button"][value="Editor"]:hover,
+#wrapper [type="button"][value="Preview"]:hover,
+#wrapper [type="button"][value="Cancel"]:hover,
+#wrapper .answers >a[onclick]:hover,
+#wrapper #image_block >a[onclick]:hover,
+#wrapper .forum_latest .search #cat_list a[onclick]:hover,
+#wrapper #newthreadform #newthreadtext #answer_block a:hover,
+#adventure_search .flright a[onclick]:hover,
+#shop_search .flright a[onclick]:hover,
+.torrent_table tr.pad td >.linkbox >a:not([href*="?action="]):hover,
+table#otherop.hidden ~table.otheroptoggle a:hover,
+a.toggle_tags:hover,
+a#show_recommend_to_friend:hover,
+a#toggle_css_gallery:hover,
+a#freeleech_pot_show:hover,
+a#getmorenews:hover,
+#tags_box a#tags_add_toggle:hover,
+#group_nofo_bigdiv .head:nth-last-child(2) a#group_quick_edit:hover,
+.box_gold a[onclick^="$('#gold_history'"]:hover,
+a#tag_show\/hide:hover,
+#user #userform #platcheckbox +a:hover,
+.filter_torrents.advanced .flright:hover {
+    color: var(--c-txt);
+    background: linear-gradient(to bottom, var(--c-tgroup) 0%, var(--c-body) 100%);}
+}
+
 /** firefox only **/
 @-moz-document url-prefix() {
     /* #bookmarks tags br requires an extra 1px of line-height */
@@ -16370,7 +16585,6 @@ table.diff.split_view tr:first-child td {
     
     :root {
         scrollbar-color: var(--c-b3) var(--c-input-obj);
-        scrollbar-height: 15px;
         scrollbar-width: 15px;}
     html * {
         scrollbar-width: thin;}

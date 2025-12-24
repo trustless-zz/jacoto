@@ -504,6 +504,8 @@
         padding-left: 5px;
         font-size: 16px;
         line-height: 32px;}
+    #wrapper .tag_autocomplete >.tag_autocomplete_items div {
+        padding-right: 5px;}
     .tag_autocomplete >.tag_autocomplete_items {
         scrollbar-width: thin;}
     
@@ -523,6 +525,23 @@
     #userinfo_stats:hover {
         width: 200px;}
 */
+.box_freeleech .body {
+    position: relative;
+    height: calc(100% - 26px);
+    min-height: 64px;}
+#group_tags {
+    padding-bottom: 45px;}
+a#freeleech_pot_show,
+a#add_tags_link {
+    left: 50%;
+    position: absolute;
+    bottom: 10px;
+    transform: translateX(-50%);}
+.box_game_ratings .left_status_text {
+    text-indent: 0;
+    text-align: center;}
+.box_game_ratings .left_status_text ~.show_link {
+    text-align: center;}
 
 #wrapper #shop_search input[name="setdefault"] {
     margin-left: 7px;}
@@ -531,6 +550,7 @@
     flex-flow: row wrap;
     justify-content: center;}
 #wrapper .box_user_rating .userratingdiv {
+    min-height: 102px;
     height: calc(100% - 36px);
     display: flex;
     flex-flow: column;}
@@ -1065,10 +1085,20 @@
     #torrents #requests_list tr:first-child {
         display: none;}
     
-    .freeleech_pot_contribute.shown:after,
+    /* .freeleech_pot_contribute.shown:after, */
     #wrapper .box_freeleech:after,
     #requests #wrapper .sticky>td:first-child:after {
         content: none;}
+    #wrapper .freeleech_pot_contribute.shown {
+        position: unset;}
+    #wrapper .freeleech_pot_contribute.shown:after {
+        height: calc(100% - 38px);
+        bottom: 0;}
+    .sidebar .tag_autocomplete {
+        position: absolute;
+        width: calc(100% - 20px);
+        bottom: 10px;
+        left: 10px;}
     
     #torrents #requests_list tr.requestrows {
         display: flex;
