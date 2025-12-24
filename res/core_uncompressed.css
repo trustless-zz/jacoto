@@ -2569,9 +2569,9 @@ tr.unreadpm td:first-child:after {
 #header #searchbars .autocomplete_list .highlight {
     color: var(--c-anchor);
     box-shadow: unset;}
-.tag_autocomplete >.tag_autocomplete_items .tag_autocomplete_active:hover,
+.tag_autocomplete >.tag_autocomplete_items .tag_autocomplete_active,
 .tag_autocomplete >.tag_autocomplete_items div:hover,
-#header #searchbars .autocomplete_list .highlight:hover,
+#header #searchbars .autocomplete_list .highlight,
 #header .highlight:hover,
 #header .notificationsico:hover .newnoti,
 #header .deltornotifsico:hover .newnoti {
