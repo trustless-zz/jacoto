@@ -2261,6 +2261,7 @@ ul {
 #userinfo_stats li,
 .sidebar .head li,
 .sidebar #polcont .pad,
+#slides >ul.nobullet.staff_pick,
 #dailygazelle {
     padding: 0;}
 #tools .thin >.box[style="float: left"] ul,
@@ -3253,7 +3254,7 @@ td.sign img,
 #userinfo_stats,
 .rating_container,
 .box_game_ratings .show_link >a:before,
-#slides >.nobullet a:before,
+#slides >.nobullet a[href*="forums.php"]:before,
 .linkbox a:before,
 input,
 select,
@@ -3499,6 +3500,8 @@ tr#reviewrow form#review_form >p,
 #grouplinks tr,
 
 .sidebar .box.box_pack .body.center,
+
+#slides >ul.nobullet.staff_pick >img,
 
 #searchforum tr,
 #searchforum tbody,
@@ -5982,6 +5985,8 @@ a#tag_show\/hide:active,
 form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 #user #content >span[style="float: right;"]:first-child /*sharescore*/{
     margin-top: 3px;}
+#slides >ul.nobullet.staff_pick >.center +.center,
+#slides >ul.nobullet.staff_pick >a +.center,
 #slides >ul.nobullet {
     padding: 7px 0 12px 0;}
 .torrent_notifications table.border .colhead strong,
@@ -6943,6 +6948,8 @@ h2 .username_badges {
 .sidebar .addtagsdiv input#tags {
     width: 100% !important;
     margin-top: 8px;}
+#slides >ul.nobullet.staff_pick >.center +.center,
+#slides >ul.nobullet.staff_pick >a +.center,
 #searchforum tr:nth-child(2),
 #searchforum tr:nth-child(4),
 #image_block ~div input[type="submit"],
@@ -7121,6 +7128,7 @@ h3 {
 
 .rowa,
 .row_a,
+.box#slides,
 #better .torrent_table tr.torrent.torrent_row:nth-child(odd),
 #better table#collection_files tr:not(.colhead):nth-child(odd),
 #better .thin >.center +table[width="100%"]:nth-child(2) tr:not(.colhead):nth-child(odd),
@@ -8384,6 +8392,8 @@ h2 marquee {
     overflow-x: hidden;}
 
 #slides >ul.nobullet,
+#slides >ul.nobullet.staff_pick >.center +.center,
+#slides >ul.nobullet.staff_pick >a +.center,
 #users_reviews .review_date,
 form#drag_drop_collage_form .drag_drop_save ~.drag_drop_save,
 #collections table#manage_collage_table tbody tr:last-child,
@@ -9551,7 +9561,7 @@ form#tag_add_form >input,
 .linkbox a[href^="torrents.php?action=editgroup&groupid"],
 .linkbox a[href^="?type=viewseed&userid"],
 .linkbox a[href^="?type=hitnrun&userid"],
-#slides >.nobullet a,
+#slides >.nobullet a[href*="forums.php"],
 .linkbox a[onclick^="popup_add("],
 .linkbox a[href="collections.php"],
 .linkbox a[href^="collections.php?action=manage&collageid"],
@@ -9624,7 +9634,7 @@ form#tag_add_form >input,
     white-space: nowrap;
     margin: 0 5px;}
 
-#slides >.nobullet a:before {
+#slides >.nobullet a[href*="forums.php"]:before {
     font-size: 14px;
     line-height: var(--p-lh);
     margin-top: 2px;
@@ -9664,7 +9674,7 @@ form#tag_add_form >input,
 .linkbox a[href^="torrents.php?type=hitnrun&userid"]:before,
 .linkbox a[href^="?type=hitnrun&userid"]:before                                 {content: "Hit 'n' Runs";}
 .linkbox a[href^="torrents.php?type=potential_hnr&userid"]:before               {content: "Potential HnR's"}
-#slides >.nobullet a:before                                                     {content: 'See the Current Pick';}
+#slides >.nobullet a[href*="forums.php"]:before                                                     {content: 'See the Current Pick';}
 .linkbox a[onclick^="popup_add("]:before                                        {content: 'Add a user';}
 .linkbox a[href="collections.php"]:before                                       {content: 'List of collections';}
 .linkbox a[href^="collections.php?action=manage&collageid"]:before              {content: 'Manage torrents';}
@@ -9720,7 +9730,7 @@ form#tag_add_form >input,
 
 #wrapper .sidebar .userratingdiv img.vote:hover,
 
-#slides >.nobullet a:hover:before,
+#slides >.nobullet a[href*="forums.php"]:hover:before,
 .linkbox a:hover:before {
     background-color: var(--c-anchor-hvr-bcg);}
 
