@@ -22,6 +22,7 @@ tr:hover .tags a {
 #better tr.torrent.torrent_row:hover .tags a,
 #running_freeleech          tr:hover .tags a,
 #requests                   tr:hover .tags a,
+.delete_notifications       tr:hover .tags a,
 .torrent_notifications      tr:hover .tags a,
 #uploaded_table             tr:hover .tags a,
 #seeding_table              tr:hover .tags a,
@@ -131,6 +132,8 @@ input#versionunknown {
 #tools #mastergroups table tr:not(.colhead):hover,
 #wiki .thin >table tr:not(.colhead):hover,
 #wiki .thin form:only-child table tr:not(.colhead):hover, /* wiki Revision history */
+#torrents .delete_notifications table.border tr:not(.colhead):hover,
+#torrents .delete_notifications table.border tr:not(.colhead):hover .noticon +td #groupplatform a,
 #torrents .torrent_notifications table.border tr:not(.colhead):hover,
 #torrents .torrent_notifications table.border tr:not(.colhead):hover .noticon +td #groupplatform a, /* shared class/id mess */
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):hover,

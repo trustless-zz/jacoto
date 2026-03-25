@@ -2319,6 +2319,7 @@ a[title="Delete"],
 .torrent_table .removebookmark {
     font-size: 0;}
 
+#torrents .delete_notifications .noticon +td >strong +strong,
 #torrents .torrent_notifications .noticon +td >strong +strong,
 .tag_type_header,
 #bookmarks .linkbox.pager,
@@ -2824,6 +2825,7 @@ form[name="filter"],
 /* #bookmarks #collage_table, - outdated bookmarks */
 #torrents #requests.request_table,
 #user .thin >h2 ~form[method="post"],
+.delete_notifications table.border,
 .torrent_notifications table.border,
 #chat .thin >.box.pad,
 #rules .thin >.box.pad,
@@ -3180,6 +3182,7 @@ a,
 #extlink_table              tr:not(.colhead),
 #wiki .thin >table tr:not(.colhead),
 #wiki .thin form:only-child table tr:not(.colhead), /* wiki Revision history */
+#torrents .delete_notifications table.border tr:not(.colhead),
 #torrents .torrent_notifications table.border tr:not(.colhead),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead),
 .clan_stat_totals table.border tr:not(.colhead):nth-last-child(n+2) td,
@@ -3450,6 +3453,7 @@ body >div, /* more info window at #shop */
 #userinfo_username li:not(.sub) a:hover {
     color: var(--c-anchor-hvr);}
 
+#torrents .delete_notifications .noticon +td >strong +strong:not([class]),
 #torrents .torrent_notifications .noticon +td >strong +strong:not([class]),
 #wrapper .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover,
 #crafting_recipes li.item_li:hover h3,
@@ -4077,6 +4081,7 @@ a[onclick="showDnu();"]:after {
 #wrapper a.hidden_item img,
 #wrapper .pad img[style^="max-height: 64px; transition: all 0.5s ease-in-out"], /* hidden item */
 
+#torrents #wrapper .delete_notifications .noticon +td,
 #torrents #wrapper .torrent_notifications .noticon +td,
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead) td:nth-child(2) >a {
     margin: 0;}
@@ -4648,6 +4653,7 @@ table.adventure_table .colhead td {
 #collections #torrent_table .group_torrent td[colspan="3"] >a,
 #bookmarks #torrent_table td[colspan="3"] >a,
 #torrents .group_torrent td:first-child >a,
+#torrents .delete_notifications .noticon +td,
 #torrents .torrent_notifications .noticon +td {
     font-size: 13px;
     line-height: 18px;
@@ -5990,6 +5996,7 @@ form[method="post"][action="tools.php?action=trivia_suggestions"] .answers,
 #slides >ul.nobullet.staff_pick >a +.center,
 #slides >ul.nobullet {
     padding: 7px 0 12px 0;}
+.delete_notifications table.border .colhead strong,
 .torrent_notifications table.border .colhead strong,
 #forums #forum_search_cat_list td.forum_cat strong,
 #platcheckbox td[colspan="5"] strong {
@@ -6150,6 +6157,7 @@ b>#footer, /* chat.php bug - when IFC key hasn't been yet */
 
 #changelog form.search_form td.label strong,
 
+#content >.delete_notifications .colhead strong,
 #content >.torrent_notifications .colhead strong,
 #staff .thin >.box.pad table .colhead strong,
 #torrents .thin >h2:first-child +.center td.label strong,
@@ -6159,6 +6167,7 @@ b>#footer, /* chat.php bug - when IFC key hasn't been yet */
 #top10 td.center.cats_col +td >strong,
 #log table#log_table .colhead strong,
 #torrent_history_search #th_search strong,
+#torrents .delete_notifications .noticon +td >strong,
 #torrents .torrent_notifications .noticon +td >strong,
 #torrents #content >#newlink td strong,
 #collections table#edit_collage td.label strong {
@@ -6667,6 +6676,7 @@ a[onclick^="similarVote("]:before {
     font-size: 14px;
     line-height: 19px;
     padding: 6px 5px 7px 5px;}
+.delete_notifications .colhead td,
 .torrent_notifications .colhead td,
 #calendar .calendar-row.calendar-heading,
 #user .thin >.header:first-child ~h3 +.box.pad:last-child .colhead td,
@@ -7166,6 +7176,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowa,
 #tools #mastergroups table tr:not(.colhead):nth-child(odd),
 #wiki .thin >table tr:not(.colhead):nth-child(odd),
 #wiki .thin form:only-child table tr:not(.colhead):nth-child(odd), /* wiki Revision history */
+#torrents .delete_notifications table.border tr:not(.colhead):nth-child(odd),
 #torrents .torrent_notifications table.border tr:not(.colhead):nth-child(odd),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(odd),
 #wrapper .clan_stat_totals table.border tr:not(.colhead):nth-last-child(n+2):nth-child(odd) td:nth-child(-n+2),
@@ -7201,6 +7212,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
 #tools #mastergroups table tr:not(.colhead):nth-child(even),
 #wiki .thin >table tr:not(.colhead):nth-child(even),
 #wiki .thin form:only-child table tr:not(.colhead):nth-child(even), /* wiki Revision history */
+#torrents .delete_notifications table.border tr:not(.colhead):nth-child(even),
 #torrents .torrent_notifications table.border tr:not(.colhead):nth-child(even),
 .thin.torrent_history >form#torrent_history_search ~table tr:not(.colhead):nth-child(even),
 #wrapper .clan_stat_totals table.border tr:not(.colhead):nth-last-child(n+2):nth-child(even) td:nth-child(-n+2),
@@ -7302,12 +7314,13 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     float: right;
     margin-top: -14px;}
 */
-
+#torrents .delete_notifications >table.border,
 #torrents .torrent_notifications >table.border {
     position: relative;
     /* -webkit-box-shadow: none; */
     box-shadow: none;
     border-top: none;}
+#torrents .delete_notifications >table.border:before,
 #torrents .torrent_notifications >table.border:before {
     content: '';
     left: 0;
@@ -7319,6 +7332,7 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     z-index: -1;
     /* -webkit-box-shadow: var(--p-main-shdw); */
     box-shadow: var(--p-main-shdw);}
+#torrents .delete_notifications >span.center,
 #torrents .torrent_notifications >span.center {
     display: flex;
     width: 100%;
@@ -7326,8 +7340,10 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     box-sizing: border-box;
     border: 1px solid var(--c-main-brdr);
     border-bottom: 1px solid var(--c-table-brdr);}
+#torrents .delete_notifications >span.center >input,
 #torrents .torrent_notifications >span.center >input {
     margin: 10px 0 10px 10px;}
+#torrents .delete_notifications >span.center >a,
 #torrents .torrent_notifications >span.center >a {
     margin: auto 10px auto auto;}
 /***** more mess because Notifications and Deleted Torrents share the same classes/ids *****/
@@ -7335,20 +7351,25 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     background-color: var(--c-trowb);}
 #torrents .torrent_notifications table.border tr:not(.colhead):nth-child(odd) .noticon +td #groupplatform a {
     background-color: var(--c-box);} */
+#torrents #wrapper .delete_notifications table.border tr:not(.colhead) .noticon +td #groupplatform a:hover,
 #torrents #wrapper .torrent_notifications table.border tr:not(.colhead) .noticon +td #groupplatform a:hover {
     background-color: var(--c-anchor-hvr-bcg) !important;}
+#torrents .delete_notifications .group_torrent td:nth-child(6):not([style]),
 #torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) {
     font-size: 0;
     line-height: 0;}
+#torrents .delete_notifications .group_torrent td:nth-child(6):not([style]) >a:nth-last-of-type(n+2),
 #torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >a:nth-last-of-type(n+2) {
     display: inline-block;
     margin-right: 3px;}
 /* #torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >a:last-of-type, */
+#torrents .delete_notifications .group_torrent td:nth-child(6):not([style]) >a[href^="torrents.php?torrentid="],
 #torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >a[href^="torrents.php?torrentid="] {
     vertical-align: text-top;
     font-size: 14px;
     line-height: var(--p-lh);
     display: inline;}
+#torrents .delete_notifications .group_torrent td:nth-child(6):not([style]) >br+a,
 #torrents .torrent_notifications .group_torrent td:nth-child(6):not([style]) >br+a {
     margin-top: 5px;}
 
@@ -7454,9 +7475,10 @@ form#drag_drop_collage_form table#manage_collage_table .rowb,
     position: absolute;
     left: -36px;
     top: calc(50% - 17px);}
-.cats_col   div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
-.collicon   div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
-input[name="action"]:not([value="delete_notify"]) ~tbody .noticon    div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) /* "Notifications" need this while "Deleted Torrents" don't. Too bad they both share the same table class (.torrent_notifications), and body id (#torrents) for that matter. */
+.cats_col                           div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+.collicon                           div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
+.torrent_notifications .noticon     div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications)
+/* input[name="action"]:not([value="delete_notify"]) ~tbody .noticon    div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) */ /* "Notifications" need this while "Deleted Torrents" don't. Too bad they both share the same table class (.torrent_notifications), and body id (#torrents) for that matter.            /no longer relevant, it seems*/
 /* .noticon    div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications) - shared class/id mess */
 /* #better .torrent_table td.center.collicon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
 #bookmarks td.center.collicon div:not(.cats_ost):not(.cats_ebooks):not(.cats_applications),
@@ -11335,6 +11357,7 @@ a#add_tags_link {
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label {
     color: var(--c-fl);}
+#torrents .delete_notifications .noticon+td >.trumpable_label,
 #torrents .torrent_notifications .noticon+td >.trumpable_label,
 .linkbox a[onclick^="show_reported("],
 #wrapper .reported_label,
@@ -11439,7 +11462,7 @@ table#downloaded_table              td.center.cats_col +td >span:before {
     height: calc(2em * var(--p-lh));}
 
 /* making Deleted Torrents .active -able */
-#torrents:has(.torrent_notifications .group_torrent strong +a[href*="/log.php?search="]) a.deltornotifsico {
+#torrents:has(.delete_notifications .group_torrent strong +a[href*="/log.php?search="]) a.deltornotifsico {
     font-weight: 600 !important;
     color: var(--c-low);
     box-shadow: inset var(--p-selected);}

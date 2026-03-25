@@ -1512,14 +1512,19 @@ a#add_tags_link {
 	#torrents .torrent_notifications td:nth-child(5),
 	#torrents .torrent_notifications td:nth-child(6)
 		{display: none !important;} */
+    #torrents .delete_notifications .colhead td,
     #torrents .torrent_notifications .colhead td {
         font-size: 14px;
         line-height: 16px;}
+    #torrents .delete_notifications td:nth-child(4),
     #torrents .torrent_notifications td:nth-child(4) {
         text-align: center;}
+    #torrents .delete_notifications td:nth-child(5),
+    #torrents .delete_notifications td:nth-child(7),
     #torrents .torrent_notifications td:nth-child(5),
     #torrents .torrent_notifications td:nth-child(7) {
         display: none;}
+    #torrents .delete_notifications tr.group_torrent >td,
     #torrents .torrent_notifications tr.group_torrent >td {
         position: relative;}
 
@@ -1759,6 +1764,7 @@ a#add_tags_link {
     #collections #wrapper #torrent_table .group_torrent td[colspan="3"] >a,
     #bookmarks #wrapper #torrent_table td[colspan="3"] >a,
     #torrents #wrapper .group_torrent td:first-child >a,
+    #torrents #wrapper .delete_notifications .noticon +td,
     #torrents #wrapper .torrent_notifications .noticon +td {
         font-size: 14px;
         line-height: var(--p-lh);}
