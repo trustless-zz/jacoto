@@ -2261,6 +2261,7 @@ ul {
 #userinfo_stats li,
 .sidebar .head li,
 .sidebar #polcont .pad,
+.ost_groups li,
 #slides >ul.nobullet.staff_pick,
 #dailygazelle {
     padding: 0;}
@@ -2495,6 +2496,10 @@ li.active,
 #forums td.unread_locked_sticky ~td h4.min_padding {
     font-weight: 600 !important;}
 
+
+abbr {
+    cursor: help;}
+
 /* #requests #requests_list .sticky >td:first-child:after,
 .torrent_table .sticky td.center:first-child:after,
 td.unread:after,
@@ -2524,6 +2529,45 @@ tr.unreadpm td:first-child:after {
     position: relative;
     width: 100%;}
 
+#wrapper .ost_dropdown_indicator {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0;
+    color: var(--c-anchor);
+    font-size: 0;
+    line-height: 0;}
+.ost_dropdown_indicator:before {
+    content: "▼";
+    font-size: 12px;
+    line-height: 12px;}
+#wrapper .ost_groups:hover .ost_dropdown_indicator {
+    color: var(--c-text);}
+.ost_groups {
+    width: 40px;
+    anchor-name: --ost-popover-trigger;
+    position: relative;}
+#wrapper .ost_groups ul {
+    /* box-shadow: none; */
+    list-style: none;
+    max-width: 550px;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    max-height: 30vh;
+    top: anchor(--ost-popover-trigger bottom);
+    left: anchor(--ost-popover-trigger left);}
+#wrapper .ost_groups ul.flow-left {
+    left: unset;
+    right: anchor(--ost-popover-trigger right);}
+.ost_groups li a {
+    display: block;
+    box-sizing: border-box;
+    /* text-overflow: ellipsis;
+    overflow: hidden; */
+}
+
+.ost_groups ul,
 .tag_autocomplete >.tag_autocomplete_items,
 .autocomplete_list {
     background: var(--c-box);
@@ -2547,6 +2591,7 @@ tr.unreadpm td:first-child:after {
     padding: 0;
     width: 316px;
     z-index: 999;}
+.ost_groups li a,
 .tag_autocomplete >.tag_autocomplete_items div,
 .autocomplete_list li {
     cursor: pointer;
@@ -2555,12 +2600,14 @@ tr.unreadpm td:first-child:after {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;}
+.ost_groups li:nth-child(odd) a,
 .tag_autocomplete >.tag_autocomplete_items div:nth-child(odd),
 #torrents #torrentsbrowsecomplete li:nth-child(odd),
 .autocomplete_list li:nth-child(odd) {
     background-color: var(--c-tgroup);}
 /* .tag_autocomplete >.tag_autocomplete_items .tag_autocomplete_active,
 .tag_autocomplete >.tag_autocomplete_items div:hover, */
+.ost_groups li:hover a,
 #torrents #torrentsbrowsecomplete li.highlight,
 #torrents #torrentsbrowsecomplete li:hover,
 .autocomplete_list li.highlight,
@@ -3039,6 +3086,7 @@ a {
     border: 0;
     background-color: transparent;}
 a:hover,
+.ost_groups li:hover a,
 .box_game_ratings .show_link >a:hover:before,
 .box.vertical_space#preview a:hover img, /*inbox*/
 .box.vertical_space .body a:hover img, /*inbox*/
@@ -3428,6 +3476,9 @@ a[onclick="showDnu();"]:after,
 
 /* .weblink label:before,
 .weblink label:after, */
+.ost_groups,
+.ost_dropdown_indicator:before,
+.ost_groups li,
 
 #wrapper .personal_freeleech_label,
 #wrapper .freeleech_label,
@@ -6853,12 +6904,14 @@ h2 .username_badges {
     width: 100%;
     background: var(--c-tgroup) linear-gradient(155deg,var(--c-tgroup),var(--c-box));
     min-height: 38px;}
+#grouplinks .ost_groups,
 #grouplinks a div {
     opacity: .55;
     filter: grayscale(.4);
     /* padding: 3px;
     margin: -3px; */
 }
+#grouplinks .ost_groups:hover,
 #grouplinks a:hover div {
     opacity: 1;
     filter: none;

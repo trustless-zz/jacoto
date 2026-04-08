@@ -403,6 +403,7 @@ input#versionunknown {
     margin: 0 auto;
     padding: 2px 0;
     display: flex;}
+.ost_groups li a,
 .tag_autocomplete >.tag_autocomplete_items div,
 #header #searchbars ul li {
     width: 100%;

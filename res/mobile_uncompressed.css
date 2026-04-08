@@ -499,15 +499,23 @@
         left: 54px;
         top: 42px;
         padding: 0 !important;}
+    .ost_groups li a,
     #wrapper .tag_autocomplete >.tag_autocomplete_items div,
     #header #searchbars .autocomplete_list li {
         padding-left: 5px;
         font-size: 16px;
         line-height: 32px;}
+    .ost_groups li a,
     #wrapper .tag_autocomplete >.tag_autocomplete_items div {
         padding-right: 5px;}
+    .ost_groups ul,
     .tag_autocomplete >.tag_autocomplete_items {
         scrollbar-width: thin;}
+    #wrapper .ost_groups ul {
+        box-sizing: border-box;
+        max-width: calc(100vw - 60px);
+        right: unset !important;
+        left: 30px !important;}
     
     
     ul#userinfo_minor li {
@@ -1703,6 +1711,8 @@ a#add_tags_link {
 	#torrents .main_column table:not(.forum_post):not(#collages) td:nth-child(9) {
 		padding-bottom:0px;
 		/* color: var(--white); */}
+    #torrents #wrapper #content .ost_groups {
+        width: 30px;}
 
 	/****Group Links****/
 	#grouplinks {height: auto;}
