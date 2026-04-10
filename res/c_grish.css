@@ -197,5 +197,5 @@ blockquote code {
 .cats_col +td #groupplatform a:hover,
 .collicon +td #groupplatform a:hover,
 .noticon +td #groupplatform a:hover,
-#grouplinks a:hover {filter: drop-shadow(0.5px 0.5px 5px #69c077);}
+#grouplinks td >a:hover {filter: drop-shadow(0.5px 0.5px 5px #69c077);}
 #tip_user a:hover {filter: drop-shadow(0px 0px 5px #fff1a5cc);}

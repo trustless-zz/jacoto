@@ -2607,7 +2607,7 @@ tr.unreadpm td:first-child:after {
     background-color: var(--c-tgroup);}
 /* .tag_autocomplete >.tag_autocomplete_items .tag_autocomplete_active,
 .tag_autocomplete >.tag_autocomplete_items div:hover, */
-.ost_groups li:hover a,
+#wrapper .ost_groups li:hover a,
 #torrents #torrentsbrowsecomplete li.highlight,
 #torrents #torrentsbrowsecomplete li:hover,
 .autocomplete_list li.highlight,
