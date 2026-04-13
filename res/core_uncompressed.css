@@ -8368,6 +8368,7 @@ tr.likes td[id^="likers_"]:hover {
 
 
 #forums .forum_post .avatar >div:first-child:after {
+    text-align: center;
     content: 'User Stats';
     font-weight: 600;
     font-size: 13px;

@@ -729,6 +729,16 @@ a#add_tags_link {
         left: -170px;
         top: -6px;}
     /* #content .sub span a {} */
+    #wrapper #content .sub:has(+.sticky_post) {
+        left: calc(100% - 35px);}
+    #wrapper #content .sub:hover {
+        z-index: 9999;}
+    .forum_post.sticky_post td.body >div[id^="content"]:before {
+        content: '';
+        width: 20px;
+        display: block;
+        float: right;
+        height: 29px;}
     
     
     
