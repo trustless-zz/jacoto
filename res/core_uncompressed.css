@@ -8031,7 +8031,7 @@ input[name="year"],
 
 .box_recommend_to_friend .select2-container,
 form#tag_add_form input#tags,
-#image_block input[type="url"], /* will not work as long as there's an inline !important, as it will always be prioritized over the external css. Why is it even there, you may ask? ¯\_(ツ)_/¯ */
+/* #image_block input[type="url"], - will not work as long as there's an inline !important, as it will always be prioritized over the external css. Why is it even there, you may ask? ¯\_(ツ)_/¯ */
 #image_block input[type="text"],
 /*.box.screenshots_div #image_block input[type="url"],
 .box.screenshots_div #image_block input[type="text"],*/
@@ -8042,6 +8042,9 @@ form#tag_add_form input#tags,
 /* #upload */input#title,
 /* #upload */#announce_uri input {
     width: 100% !important;}
+#image_block input[type="url"] {
+    flex-grow: 1;
+    flex-shrink: 1;}
 /* #upload */input#remaster_title {
     width: calc(100% - 40px);}
 /* table#weblinks_edit td:nth-child(odd),
