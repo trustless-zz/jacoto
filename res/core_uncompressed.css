@@ -4399,7 +4399,7 @@ table.bbcode_table td,
 #nav_donate {
     position: relative;
     order: -2;}
-#image_block >a[onclick],
+/* #image_block >a[onclick], */
 #nav_useredit {
     order: -1;}
 
@@ -5271,6 +5271,7 @@ table#requests_list         tr:hover .tags a {
 #user .thin >.header:first-child +.box.pad +.box.pad table.border td:not(.label),
 /*.box.screenshots_div #image_block >span,*/
 /* .tags_ratings, */
+#image_block span >input +span,
 #collections .sidebar .add_torrent .field_div {
     display: flex;
     flex-flow: row;}
@@ -5333,7 +5334,7 @@ div.breadcrumbs,
 #image_block >span:first-of-type {
     order: -2;
     /* width: calc(100% - 71px); */
-    width: calc(100% - 74px);
+    width: calc(100% - 179px);
 }
 
 /* filter/search td */
@@ -5881,7 +5882,7 @@ body #load_edit_review_dialog,
 button.alertable-cancel,
 #wrapper button#AvatarPreview,
 #wrapper .timeline-nav-button,
-.ggnimgup_button,
+#wrapper .ggnimgup_button,
 #wrapper [type="button"][value="Editor"],
 #wrapper [type="button"][value="Preview"],
 #wrapper [type="button"][value="Cancel"],
@@ -5977,7 +5978,7 @@ body #load_edit_review_dialog:hover,
 button.alertable-cancel:hover,
 #wrapper button#AvatarPreview:hover,
 #wrapper .timeline-nav-button:hover,
-.ggnimgup_button:hover,
+#wrapper .ggnimgup_button:hover,
 #wrapper [type="button"][value="Editor"]:hover,
 #wrapper [type="button"][value="Preview"]:hover,
 #wrapper [type="button"][value="Cancel"]:hover,
@@ -6014,7 +6015,7 @@ body #load_edit_review_dialog:active,
 button.alertable-cancel:active,
 #wrapper button#AvatarPreview:active,
 #wrapper .timeline-nav-button:active,
-.ggnimgup_button:active,
+#wrapper .ggnimgup_button:active,
 #wrapper [type="button"][value="Editor"]:active,
 #wrapper [type="button"][value="Preview"]:active,
 #wrapper [type="button"][value="Cancel"]:active,
@@ -6806,7 +6807,8 @@ a[onclick^="similarVote("]:before {
 #user .thin >h3:first-child +.linkbox +form input[type="submit"],
 #log .thin form.search_form input[type="submit"],
 #collections .sidebar .box.box_addtorrent .pad.add_torrent input[type="submit"],
-#torrents .center.thin >.box.pad form input[value="GGnimg It"] {
+#torrents .center.thin >.box.pad form input[value="GGnimg It"],
+#torrents .center.thin >.box.pad form input[value="GGnImg All!"] {
     vertical-align: bottom;}
 /*#quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
@@ -7892,6 +7894,7 @@ div#dnu {
 #upload input[type="submit"],
 #upload input[type="button"],
 .thin >#request_form input[value="GGnimg It"],
+.thin >#request_form input[value="GGnImg All!"],
 #requests td form input[value="Fill request"],
 #requests #voting input[type="button"],
 .similar_div .head .flright input[type="submit"],
@@ -8027,7 +8030,7 @@ input[name="year"],
 
 .box_recommend_to_friend .select2-container,
 form#tag_add_form input#tags,
-#image_block input[type="url"],
+#image_block input[type="url"], /* will not work as long as there's an inline !important, as it will always be prioritized over the external css. Why is it even there, you may ask? ¯\_(ツ)_/¯ */
 #image_block input[type="text"],
 /*.box.screenshots_div #image_block input[type="url"],
 .box.screenshots_div #image_block input[type="text"],*/
@@ -8067,6 +8070,7 @@ input#meta[type="number"], */
 #newthreadform #newthreadtext #answer_block a,
 #image_block a,
 #torrents .center.thin >.box.pad form input[value="GGnimg It"],
+#torrents .center.thin >.box.pad form input[value="GGnImg All!"],
 #upload input[type="button"],
 #upload input[type="submit"] {
     margin-left: 5px !important;}
@@ -8076,7 +8080,7 @@ input#meta[type="number"], */
     width: 165px;}
 #torrents .center.thin >.box.pad form input[name="image"],
 #upload input#image {
-    width: calc(100% - 93px);}
+    width: calc(100% - 189px);}
 /* #upload #weblinks tr td:nth-child(3) {
     padding-left: 20px;} */
 #upload input#trailer {
@@ -8198,7 +8202,8 @@ input#file {
     margin-bottom: 8px;}
 #image_block >a[onclick] {
     margin-bottom: auto;}
-.box.screenshots_div #image_block input[value="GGnimg It"] {
+.box.screenshots_div #image_block input[value="GGnimg It"],
+.box.screenshots_div #image_block input[value="GGnImg All!"] {
     padding: 5px 10px !important;
     margin: 0 0 8px 5px !important;}
 /*.box.screenshots_div #image_block >a[onclick] {
@@ -16641,7 +16646,7 @@ body #load_edit_review_dialog:hover,
 button.alertable-cancel:hover,
 #wrapper button#AvatarPreview:hover,
 #wrapper .timeline-nav-button:hover,
-.ggnimgup_button:hover,
+#wrapper .ggnimgup_button:hover,
 #wrapper [type="button"][value="Editor"]:hover,
 #wrapper [type="button"][value="Preview"]:hover,
 #wrapper [type="button"][value="Cancel"]:hover,
