@@ -6807,8 +6807,9 @@ a[onclick^="similarVote("]:before {
 #user .thin >h3:first-child +.linkbox +form input[type="submit"],
 #log .thin form.search_form input[type="submit"],
 #collections .sidebar .box.box_addtorrent .pad.add_torrent input[type="submit"],
-#torrents .center.thin >.box.pad form input[value="GGnimg It"],
-#torrents .center.thin >.box.pad form input[value="GGnImg All!"] {
+/* #torrents .center.thin >.box.pad form */ .ggnimgit_button,
+.ggnimgup_button,
+/* #torrents .center.thin >.box.pad form */ input[value="GGnImg All!"] {
     vertical-align: bottom;}
 /*#quickreplypreview .colhead_dark #barpreview >a:nth-child(2),
 .forum_post .colhead_dark div[style="float: right;"] >a:nth-child(2),
@@ -7893,8 +7894,8 @@ div#dnu {
 /*#image_block a,*/
 #upload input[type="submit"],
 #upload input[type="button"],
-.thin >#request_form input[value="GGnimg It"],
-.thin >#request_form input[value="GGnImg All!"],
+/* .thin >#request_form .ggnimgit_button,
+.thin >#request_form input[value="GGnImg All!"], */
 #requests td form input[value="Fill request"],
 #requests #voting input[type="button"],
 .similar_div .head .flright input[type="submit"],
@@ -8069,8 +8070,9 @@ input#meta[type="number"], */
 #collections .sidebar .box_addtorrent input[value="+"],
 #newthreadform #newthreadtext #answer_block a,
 #image_block a,
-#torrents .center.thin >.box.pad form input[value="GGnimg It"],
-#torrents .center.thin >.box.pad form input[value="GGnImg All!"],
+/* #torrents .center.thin >.box.pad form */ .ggnimgit_button,
+.ggnimgup_button,
+/* #torrents .center.thin >.box.pad form */ input[value="GGnImg All!"],
 #upload input[type="button"],
 #upload input[type="submit"] {
     margin-left: 5px !important;}
@@ -8192,7 +8194,7 @@ input#file {
 #user .thin >.header:first-child +.box.pad +.box.pad table.border tr:nth-last-child(n+2) input,
 .pad.add_tags .field_div,
 #torrents .torrent_edit >.thin select#groupremasters,
-#image_block >span input,
+#image_block /* >span */ input,
 .answers >input[type="text"],
 /*#image_block >a[onclick],*/
 #better form#torrentid_input,
@@ -8202,8 +8204,9 @@ input#file {
     margin-bottom: 8px;}
 #image_block >a[onclick] {
     margin-bottom: auto;}
-.box.screenshots_div #image_block input[value="GGnimg It"],
-.box.screenshots_div #image_block input[value="GGnImg All!"] {
+.box.screenshots_div /* #image_block */ .ggnimgit_button,
+.box.screenshots_div .ggnimgup_button,
+.box.screenshots_div /* #image_block */ input[value="GGnImg All!"] {
     padding: 5px 10px !important;
     margin: 0 0 8px 5px !important;}
 /*.box.screenshots_div #image_block >a[onclick] {
