@@ -8593,7 +8593,7 @@ tr.likes td[id^="likers_"] >strong:nth-of-type(2),
 #torrents .center.thin >.box.pad input#metauri,
 #torrents .center.thin >.box.pad input#ignuri,
 #torrents .center.thin >.box.pad input#gamespotscoreuri,
-#torrents .center.thin >.box.pad form input[name="image"],
+/* #torrents .center.thin >.box.pad form input[name="image"], */
 #request_form input[type="text"],
 #collections table#edit_collage input#art {
     margin-bottom: 2px;}
@@ -11523,6 +11523,10 @@ table#downloaded_table              td.center.cats_col +td >span:before {
 
 /*** isolating :has() because firefox doesn't fully support it yet ***/
 
+#torrents .center.thin >.box.pad form span:has(>input[name="image"]) {
+    display: flex;
+    margin-bottom: 2px;}
+
 #slides >ul.nobullet.staff_pick >img +.center:has(+.center) {
     height: calc(2em * var(--p-lh));}
 
@@ -11566,6 +11570,7 @@ a#tag_show\/hide:has(~ #tag_list[style="display: block;"]):before {
 /* #reviews_table .weblinksTitle +td:has(input[type="url"]:focus):before {
     content: none;} */
 
+#torrents .center.thin >.box.pad form span:has(>input[name="image"]) +br,
 .box_main_info .box_links:not(:has(>ul.nobullet >li)),
 .similar_div .similar:not(:has(>ul.nobullet >li)), /* :empty won't work because it isn't actually empty */
 #grouplinks:not(:has(td)),
